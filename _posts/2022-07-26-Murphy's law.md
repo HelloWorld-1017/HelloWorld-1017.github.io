@@ -16,9 +16,11 @@ Murphy's law is an adage or epigram that is typically stated as: "Anything that 
 <br>
 
 从数理统计的角度看 $^{[2]}$，假设某意外事件在一次实验（活动）中发生的概率 $p$（$p>0$），则在 $n$ 次实验（活动）中至少有一次发生的概率 $P$ 为
+
 $$
 P=1-(1-p)^n\notag
 $$
+
 当 $n\rightarrow\infty$ 时，$P=1$。
 
 <br>

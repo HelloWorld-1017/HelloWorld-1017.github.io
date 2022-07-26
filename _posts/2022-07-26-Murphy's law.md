@@ -2,6 +2,9 @@
 layout: single
 title: Anything that can go wrong will go wrong.
 date: 2022-07-26 13:01:33 +0800
+categories: 
+ - Psychology
+ - Mathematics
 tags: 
  - Probability theory and mathematical statistics
  - Psychology

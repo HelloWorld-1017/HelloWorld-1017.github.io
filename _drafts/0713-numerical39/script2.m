@@ -1,7 +1,6 @@
 a = 0.4; % lower limits
 b = 1;    % upper limits
 theta = 5e-7; % the minimum interval length
-epsilon  = 5e-7;
 maxIteration = 200;
 func = @(x) (x-2/3)^3;
 
@@ -36,7 +35,7 @@ while (b-a)/2 > theta
     range_list(num+1) = abs(a-b);
     num = num + 1;
 
-    if abs(func(c)) <= eps
+    if abs(func(c)) <= 0.5*eps
         root = c;
         return
     end

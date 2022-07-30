@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 在MATLAB中通过变量获得结构体的字段值(getfield函数)
+title: 在MATLAB中通过变量使用结构体的字段
 date: 2022-07-30 20:17:27 +0800
 categories: 
  - Program
@@ -30,7 +30,7 @@ variable = 'e';
 Unrecognized field name "eval".
 ```
 
-后来找到，应该使用 MATLAB 的 `getfield()` 函数：
+后来找到可以使用 MATLAB 的 `getfield()` 函数 $^{[1]}$：
 
 ```matlab
 >> getfield(s, variable)
@@ -38,3 +38,24 @@ Unrecognized field name "eval".
 ans =
     3
 ```
+
+但是，其实 MATLAB 提供了一种更简单的方法通过变量来创建或使用字段 $^{[2]}$
+
+```matlab
+>> s.(variable)
+
+ans =
+     3
+```
+
+
+
+<br>
+
+**参考**
+
+[1] [getfield - MATLAB Documentation](https://ww2.mathworks.cn/help/matlab/ref/getfield.html?searchHighlight=getfield%28%29&s_tid=srchtitle_getfield%2528%2529_1)
+
+[2] [Generate Field Names from Variables](https://ww2.mathworks.cn/help/matlab/matlab_prog/generate-field-names-from-variables.html)
+
+ 

@@ -10,7 +10,7 @@ tags:
 
 <br>
 
-# Introduction
+# 示例介绍
 
 [**Share Data in Multiwindow Apps**](https://ww2.mathworks.cn/help/matlab/creating_guis/multiwindow-app-gui-in-app-designer.html)
 
@@ -32,7 +32,7 @@ Copyright 2018 The MathWorks, Inc.
 
 <br>
 
-# MainAppExample.mlapp
+# （一）MainAppExample.mlapp
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731172154853.png" alt="image-20220731172154853" style="zoom: 50%;" />
 
@@ -224,7 +224,7 @@ app.DialogApp = DialogAppExample(app, app.CurrentSize, app.CurrentColormap);
 
 <br>
 
-# DialogAppExample.mlapp
+# （二）DialogAppExample.mlapp
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731172122056.png" alt="image-20220731172122056" style="zoom:67%;" />
 
@@ -331,13 +331,9 @@ end
   app.DropDown.Value = c;
   ```
 
-
-
 ### ButtonPushed
 
 回调函数 `ButtonPushed()` 是 DialogAppExample 中 OK 按钮的回调函数。当点击 OK 按钮时，回调函数 `ButtonPushed()` 会调用主 app 的 `updateplot(app, sz, c)` ⭐**公用方法**⭐，更新主 app 中的图像，并删除对话框程序。
-
-
 
 ### DialogAppCloseRequest
 
@@ -441,6 +437,26 @@ end
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731222002303.png" alt="image-20220731222002303" style="zoom: 67%;" />
 
 public function 主要用于多窗口的 app ，以减少代码的冗余，具体的信息可以查看文档： [Reuse Code Using Helper Functions](https://ww2.mathworks.cn/help/matlab/creating_guis/code-and-call-app-functions-in-app-designer.html)。
+
+<br>
+
+# 总结
+
+制作这种多窗口的 app，重点就在于做好三个方面的代码实现 $^{[2]}$ ：
+
+- 主 app 传递参数给对话框 app：写好主 app 的嗲用函数，以及对话框 app 的  `StartupFcn()` 函数
+- 对话框 app 返回信息给主 app：
+- 定义主 app 和对话框 app 关闭时的行为
+
+
+
+> 注意 $^{[2]}$ ：
+>
+> If you plan to deploy your app as a web app (requires MATLAB® Compiler™), **creating multiple app windows** is not supported. Instead, consider **creating a single-window app with multiple tabs.** For more information, see [Web App Limitations and Unsupported Functionality](https://ww2.mathworks.cn/help/compiler/webapps/unsupported-functionality.html) (MATLAB Compiler).
+
+
+
+
 
 <br>
 

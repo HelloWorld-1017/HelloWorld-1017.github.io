@@ -1,12 +1,13 @@
-a = 0.4; % lower limits
-b = 1;    % upper limits
-theta = 5e-7; % the minimum interval length
+a = 0; 
+b = 1; 
+epsilon = 5e-7; 
 maxIteration = 200;
-func = @(x) (x-2/3)^3;
+func = @(x) (x-2/3).^3;
 
-[root, num, list_x, range_list] = BisectionMethod(func, a, b, theta, maxIteration);
+[root, num, list_x, range_list] = BisectionMethod(func, a, b, epsilon, maxIteration);
 
-function [root, num, list_x, range_list] = BisectionMethod(func, a, b, theta, maxIteration)
+
+function [root, num, list_x, range_list] = BisectionMethod(func, a, b, epsilon, maxIteration)
 % Record the convergence process of x0
 list_x = [];
 % Record the interval length of each iteration
@@ -14,7 +15,7 @@ range_list = [];
 num = 0;
 
 % If upper and lower bounds of interval are wrong
-if a > b || func(a) * func(b) > 0 || abs(a - b) < theta
+if a > b || func(a) * func(b) > 0 || abs(a - b) < epsilon
     warning('Boundary setting error.')
     return
 end
@@ -29,13 +30,14 @@ if func(a) * func(b) == 0
     end
 end
 
-while (b-a)/2 > theta
+while (b-a)/2 > epsilon
     c = (a + b) / 2;
     list_x(num+1) = c;
     range_list(num+1) = abs(a-b);
     num = num + 1;
-
-    if abs(func(c)) <= 0.5*eps
+    
+%     if func(c) == 0
+    if abs(func(c)-0) <= 0.5*eps
         root = c;
         return
     end

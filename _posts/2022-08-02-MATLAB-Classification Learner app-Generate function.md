@@ -6,6 +6,7 @@ categories:
  - Program
 tags:
  - MATLAB 
+toc: false
 ---
 
 <br>
@@ -180,11 +181,11 @@ validationAccuracy = 1 - kfoldLoss(partitionedModel, 'LossFun', 'ClassifError');
 
 这部分的代码依赖于一开始的交叉验证设置，比如上述代码就是使用下图所示的 **k 折交叉验证法**
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802223550857.png" alt="image-20220802223550857" style="zoom: 67%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802223550857.png" alt="image-20220802223550857" style="zoom: 80%;" />
 
 如果改变改变一下交叉验证策略，比如使用**留出法**
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802223818251.png" alt="image-20220802223818251" style="zoom:67%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802223818251.png" alt="image-20220802223818251" style="zoom: 80%;" />
 
 则相应的代码为
 
@@ -233,7 +234,7 @@ validationAccuracy = sum(correctPredictions)/length(correctPredictions);
 
 如果训练集和验证集使用的是同一个数据集
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802224513049.png" alt="image-20220802224513049" style="zoom:67%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802224513049.png" alt="image-20220802224513049" style="zoom: 80%;" />
 
 则
 

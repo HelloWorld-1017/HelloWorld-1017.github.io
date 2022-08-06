@@ -1,16 +1,18 @@
 ---
 layout: single
-title: (Incremental Learning)Implement Incremental Learning for Classification Using Flexible Workflow
+title: 【MATLAB Statistics and Machine Learning Toolbox】增量学习模型
 date: 2022-07-15 00:15:57
-categories: ["Machine Learning"]
-tags: ["MATLAB"]
+categories: 
+ - Program
+tags: 
+ - MATLAB
 ---
 
 
 
 # 示例介绍
 
-本博客中的实例来自 MATLAB 官方案例：[Implement Incremental Learning for Classification Using Flexible Workflow](https://ww2.mathworks.cn/help/stats/implement-incremental-learning-using-flexible-workflow-classification.html?searchHighlight=Implement%20Incremental%20Learning%20for%20Classification%20Using%20Flexible%20Workflow&s_tid=srchtitle_Implement%2520Incremental%2520Learning%2520for%2520Classification%2520Using%2520Flexible%2520Workflow_1)
+本博客中的实例来自 MATLAB 官方案例：[Implement Incremental Learning for Classification Using Flexible Workflow](https://ww2.mathworks.cn/help/stats/implement-incremental-learning-using-flexible-workflow-classification.html)
 
 > This example shows how to use the **flexible workflow** to implement incremental learning for binary classification with prequential evaluation. A traditionally trained model initializes the incremental model. 
 

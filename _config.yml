@@ -131,7 +131,7 @@ defaults:
       layout: single
       author_profile: true
       show_date: true
-      date_format: "%Y-%m-%d "
+      date_format: "%Y-%m-%d HH:MM:SS"
       # read_time: true
       # words_per_minute: 250
       toc: true

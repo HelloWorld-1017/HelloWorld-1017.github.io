@@ -2,7 +2,9 @@
 layout: single
 title: 【随机数与蒙特卡洛模拟】引子
 date: 2022-08-06 14:28:59 +0800
-categories: 
+categories:
+ - Mathematics
+tags: 
  - Numerical analysis
 toc: false
 ---

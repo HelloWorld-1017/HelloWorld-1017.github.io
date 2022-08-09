@@ -23,7 +23,7 @@ if ~exist(fullfile(pwd,'Data'),'dir')
     mkdir(fullfile(pwd,'Data')) % Create directory to store results
 end
 
-runAll = true;
+runAll = false;
 if runAll
     [ok,e] = generateSimulationEnsemble(gridSimulationInput, fullfile(pwd,'Data'),'UseParallel', false);
 else

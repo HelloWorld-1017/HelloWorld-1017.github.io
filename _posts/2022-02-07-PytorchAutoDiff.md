@@ -2,10 +2,11 @@
 layout: single
 title: 使用PyTorch自动求导机制编写多元牛顿迭代法（PyTorch向量对向量求导）
 date: 2022-02-07
-categories: Program
+categories: Programming
 tags: 
  - PyTorch
  - Python
+toc: false
 ---
 
 

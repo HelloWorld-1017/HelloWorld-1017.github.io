@@ -3,7 +3,7 @@ layout: single
 title: 【MATLAB Simulink】设置 Signal Logging
 date: 2022-08-08 18:23:43 +0800
 categories:
- - Program
+ - Programming
 tags: 
  - MATLAB
 toc: true

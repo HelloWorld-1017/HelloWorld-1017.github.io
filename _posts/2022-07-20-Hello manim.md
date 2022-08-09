@@ -3,7 +3,7 @@ layout: single
 title: Hello, manim!
 date: 2022-07-20 21:23:43 +0800
 categories: 
- - Program
+ - Programming
 tags: 
  - manim
  - Python

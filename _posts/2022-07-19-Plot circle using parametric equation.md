@@ -2,8 +2,10 @@
 layout: single
 title: 基于参数方程绘制圆的图像
 date: 2022-07-19 23:53:23 +0800
-categories: ["Program"]
-tags: ["MATLAB"]
+categories: 
+ - Programming
+tags: 
+ - MATLAB
 toc: false
 ---
 

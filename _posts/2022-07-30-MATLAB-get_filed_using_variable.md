@@ -1,9 +1,9 @@
 ---
 layout: single
-title: 在MATLAB中通过变量使用结构体的字段
+title: 【MATLAB Language Fundamentals】通过变量使用结构体的字段
 date: 2022-07-30 20:17:27 +0800
 categories: 
- - Program
+ - Programming
 tags:
  - MATLAB
 toc: false

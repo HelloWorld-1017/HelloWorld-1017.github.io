@@ -1,0 +1,52 @@
+---
+layout: single
+title: 【MATLAB Programming】 eval 函数：计算 MATLAB 表达式
+date: 2022-08-09 12:59:35 +0800
+categories:
+ - Program
+tags: 
+ - MATLAB
+toc: false
+---
+<br>
+首先创建两个结构体
+
+```matlab
+% Buid two structures
+Stru1.Type = 'Integer';
+Stru1.Value = 10;
+
+Stru2.Type = 'Decimal';
+Stru2.Value = 1.7;
+```
+
+
+
+![image-20220809124625224](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809124625224.png)
+
+想要通过循环的形式实现——将结构体的 Type 值作为变量名，并将结构体的 Value 值作为该变量的值，例如：
+
+![image-20220809125024864](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809125024864.png)
+
+可以借助 `eval` 函数实现：
+
+```matlab
+for i = 1:2
+    eval(['type = ', 'Stru', num2str(i), '.Type']);
+    % e.g. ['type = Stru1.Type']
+
+    eval([ type, ' = ','Stru', num2str(i), '.Value']) 
+    % e.g. ['Integer = Stru1.Value']
+end
+```
+
+
+
+`eval` 函数的基本语法是 `eval(expression)` ，一定要保证 `experssion` 是个字符串。
+
+<br>
+
+**参考**
+
+[1] [eval - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/eval.html).
+

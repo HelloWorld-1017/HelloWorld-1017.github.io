@@ -1,9 +1,11 @@
 ---
 layout: single
-title: MATLAB中UI figure和Axes的位置和大小设定
+title: 【MATLAB App Building】UI figure和Axes的位置和大小设定
 date: 2022-06-23
-categories: Program
-tags: [MATLAB]
+categories: 
+ - Programming
+tags: 
+ - MATLAB
 ---
 
 ## UI figure的位置和大小设定

@@ -1,9 +1,11 @@
 ---
 layout: single
-title: MATLAB中imagesc函数的使用
+title: 【MATLAB Graphics】imagesc 函数
 date: 2022-07-18 19:09:19 +0800
-categories: ["Program"]
-tags: ["MATLAB"]
+categories: 
+ - Programming
+tags:
+ - MATLAB
 toc: false
 ---
 

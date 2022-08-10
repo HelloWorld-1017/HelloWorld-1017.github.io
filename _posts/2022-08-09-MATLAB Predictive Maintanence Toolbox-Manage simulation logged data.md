@@ -367,6 +367,7 @@ writeToLastMemberRead(ens, addData);
 ![image-20220809200658430](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809200658430.png)
 
 不涉及其他文件：
+
 ![image-20220809200819844](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809200819844.png)
 
 可以将上述过程封装成 `preparedata` 函数，并写作循环形式，对每一个 .mat 文件进行操作：

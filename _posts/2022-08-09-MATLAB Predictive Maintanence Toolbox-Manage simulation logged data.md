@@ -19,7 +19,7 @@ toc: true
 
 它们的幅值和角频率分别由变量 `A1` 、`f1` 和 `A2` 、`f2` 控制，默认值在 `PreLoadFcn` 中进行设置。它们的波形经过 Plus 模块相加后，输出到 Sum 示波器中进行显示。
 
-
+<br>
 
 # 设置 Signal Logging
 
@@ -31,7 +31,7 @@ toc: true
 
 ![image-20220809161907262](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809161907262.png)
 
-
+<br>
 
 # 批量运行仿真：`generateSimulationEnsemble` 函数
 
@@ -76,7 +76,7 @@ end
 
 ![image-20220809163751150](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809163751150.png)
 
-
+<br>
 
 # .mat 仿真信息文件概览
 
@@ -156,11 +156,11 @@ ans =
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809165209339.png"/>
 
-
+<br>
 
 # 创建并读取 Simulation ensemble datastore
 
-## 创建 ：`simulationEnsembleDatasotre()` 函数
+## 创建 ：`simulationEnsembleDatastore()` 函数
 
 函数 `simulationEnsembleDatasotre` 提供了一种批量管理、操作上述 .mat 文件的方式。
 
@@ -240,7 +240,7 @@ ans =
 
 ⚠注意： `reset()` 函数并不会重置 `ens.SelectedVariables` 。
 
-
+<br>
 
 # 借助 ens 向 .mat 文件写入数据：`writeToLastMemberRead` 函数
 
@@ -434,13 +434,42 @@ end
 6. 创建包含新增变量及其值的 table，`addData = table({XX},{XX},XX,XX,'VariableNames', {'XX','XX','XX','XX'});`；
 7. 将 `addData` 写入 .mat 文件：`writeToLastMemberRead(ens, addData)`
 
-
-
 <br>
 
-⚠⚠⚠ 注意 ⚠⚠⚠
+# 删除变量
 
-上述过程中创建 ensemble 时都使用的是 `ens=simulationEnsembleDatastore()` ，这个函数是处理Simulink 仿真中产生的数据构成的 .mat 文件。其他类型的 .mat 文件也可以用类似的工作流进行管理，但是需要使用 `fensemble = fileEnsembleDatastore()` 创建 ensemble，并且需要自定义 `fensemble.ReadFcn` 函数和 `fensemble.WriteToMemberFcn` 函数，例如：
+## 问题
+
+现在，.mat 文件中保存的变量：
+
+```matlab
+>> whos('-file', 'model_log_1.mat')
+
+  Name                    Size             Bytes  Class                        
+
+  A1                      1x1                  8  double                                       
+  A2                      1x1                  8  double                                       
+  CompositeWave            -               81303  timetable                                    
+  CosineWave               -               81303  timetable                                    
+  Maximum                 1x1                  8  double                                       
+  PMSignalLogName         1x7                 14  char                                         
+  SimulationInput         1x1               1061  Simulink.SimulationInput                     
+  SimulationMetadata      1x1               6632  Simulink.SimulationMetadata                  
+  SineWave                 -               81303  timetable                                    
+  f1                      1x1                  8  double                                       
+  f2                      1x1                  8  double                                       
+  logsout                 1x1             244801  Simulink.SimulationData.Dataset    
+```
+
+假如我们想要删除每一个 .mat 文件中的 `A1` 、`f1` 、`A2` 、`f2` 应该怎么做呢？
+
+目前，我还没有找到很好的官方办法，但是大概知道问题出现在哪里。
+
+## 基于数据文件创建 ensemble 的一般化方法：`ens = fileEnsembleDatastore`
+
+上述过程中创建 ensemble 时都使用的是 `ens = simulationEnsembleDatastore()` ，这个函数是处理Simulink 仿真中产生的数据构成的 .mat 文件。由于处理的是固定类型的数据，它的灵活性就较低，不支持用户自定义读取函数和写入函数。
+
+如果我们想使用类似的工作流管理其他类型的 .mat 文件，则需要使用 `fensemble = fileEnsembleDatastore()` 创建 ensemble，此时我们可以也必须自定义 `fensemble.ReadFcn` 函数和 `fensemble.WriteToMemberFcn` 函数，例如：
 
 ```matlab
 % set custom ReadFcn & WriteToMemberFcn function
@@ -448,7 +477,190 @@ fensemble.ReadFcn = @readData;
 fensemble.WriteToMemberFcn = @writeNewData;
 ```
 
-详见：[fileEnsembleDatastore - MathWorks](https://ww2.mathworks.cn/help/predmaint/ref/fileensembledatastore.html).
+而官方提供的一个 `writeNewData` 函数为：
+
+```matlab
+function writeNewData(filename,data)
+save(filename, '-append', '-struct', 'data');
+end
+```
+
+这里定义写入行为和上面的 `simulationEnsembleDatastore` 所对应的写入行为是一致的，flag 都是`-append`，但是 `fileEnsembleDatastore` 允许我们对此进行修改。
+
+## save 函数的 `-append` flag 
+
+我们可以对比一下在 save 函数中是否使用 `-append` flag 之间的区别：
+
+**（1）使用  `-append` flag** 
+
+```matlab
+% create 'test.mat'
+p = rand(1,10);
+q = ones(10);
+save('test.mat','p','q')
+
+% List variables in 'test.mat'
+whos('-file','test.mat')
+
+% append 'a' in 'test.mat'
+a = 50;
+save('test.mat','a','-append')
+
+% List varibles in new 'test.mat'
+whos('-file','test.mat')
+```
+
+结果
+
+```matlab
+>> script5
+  Name       Size            Bytes  Class     Attributes
+
+  p          1x10               80  double              
+  q         10x10              800  double              
+
+  Name       Size            Bytes  Class     Attributes
+
+  a          1x1                 8  double              
+  p          1x10               80  double              
+  q         10x10              800  double  
+```
+
+**（2）不使用  `-append` flag** 
+
+```matlab
+% create 'test.mat'
+p = rand(1,10);
+q = ones(10);
+save('test.mat','p','q')
+
+% List variables in 'test.mat'
+whos('-file','test.mat')
+
+% append 'a' in 'test.mat'
+a = 50;
+save('test.mat','a')
+
+% List varibles in new 'test.mat'
+whos('-file','test.mat')
+```
+
+结果：
+
+```matlab
+>> script6
+  Name       Size            Bytes  Class     Attributes
+
+  p          1x10               80  double              
+  q         10x10              800  double              
+
+  Name      Size            Bytes  Class     Attributes
+
+  a         1x1                 8  double       
+```
+
+## 一种实现“删除变量”操作的方式
+
+根据上述的分析，可以得到一种比较麻烦的实现删除变量操作的方式，即使用 `fileEnsembleDatastore` 为现有的 .mat 文件创建 ensemble，并自定义 `fensemble.WriteToMemberFcn` 函数，使 `save` 的行为只是简单的保存，而不是 append。之后，读取每一个 .mat 文件的所有变量构成一个 table，然后使用 `removevars`函数删除不必要的列，之后将删除后的 table 写入到原来的 .mat 文件中，实现删除操作。
+
+注意，我们的重点是自定义`fensemble.WriteToMemberFcn` 函数，但是函数 `fensemble.ReadFcn` 也需要预先定义，才能实现 `read` 操作。
+
+假如，如果我们想要实现删除掉每一个 .mat 文件中的变量  `A1` 、`f1` 、`A2` 、`f2` ：
+
+```matlab
+fens = fileEnsembleDatastore(fullfile(pwd,'Data'),'.mat');
+fens.ReadFcn = @readVars;
+fens.WriteToMemberFcn = @writeNewData;
+
+fens.DataVariables = ["SineWave"; "CosineWave"; "CompositeWave"; "PMSignalLogName";
+    "logsout";"SimulationInput"; "SimulationMetadata"; "A1"; "f1"; "A2"; "f2"; "Maximum"];
+fens.SelectedVariables = fens.DataVariables;
+
+data = read(fens);
+data = removevars(data, {'A1', 'f1', 'A2', 'f2'});
+
+writeToLastMemberRead(fens, data)
+
+function data = readVars(filename,variables)
+data = table();
+mfile = matfile(filename); % Allows partial loading
+for ct=1:numel(variables)
+    val = mfile.(variables{ct});
+    if numel(val) > 1
+        val = {val};
+    end
+    data.(variables{ct}) = val;
+end
+end
+
+function writeNewData(filename,data)
+save(filename, '-struct', 'data');
+end
+```
+
+此时：
+
+```matlab
+>> whos('-file', 'model_log_1.mat')
+  Name                    Size             Bytes  Class                             
+
+  CompositeWave            -               81303  timetable                                    
+  CosineWave               -               81303  timetable                                    
+  Maximum                 1x1                  8  double                                       
+  PMSignalLogName         1x7                 14  char                                         
+  SimulationInput         1x1               1061  Simulink.SimulationInput                     
+  SimulationMetadata      1x1               6632  Simulink.SimulationMetadata                  
+  SineWave                 -               81303  timetable                                    
+  logsout                 1x1             244801  Simulink.SimulationData.Dataset    
+```
+
+虽然有些僵硬，但是 bingo~ 🥰
+
+之后，对所有 .mat 进行批量删除操作，但是和批量写入不同的是，重复的写入并不会报错，但是重复的删除会出现报错，比如刚才我们对第一个 .mat 文件进行了删除操作，这些变量已经没有了，再次删除（甚至是再次读取都会报错，因为我们设置的 `fens.DataVariables` 中包含 `A1` 那几个变量）就会报错，因此在整个流程之前先简单设置一个 `fens.SelectedVariables` ，先 `read` 一下，跳过第一个文件：
+
+```matlab
+fens = fileEnsembleDatastore(fullfile(pwd,'Data'),'.mat');
+fens.ReadFcn = @readVars;
+fens.WriteToMemberFcn = @writeNewData;
+
+fens.DataVariables = ["SineWave"; "CosineWave"; "CompositeWave"; "PMSignalLogName";
+    "logsout";"SimulationInput"; "SimulationMetadata"; "A1"; "f1"; "A2"; "f2"; "Maximum"];
+
+% Skip the first .mat file
+reset(fens);
+fens.SelectedVariables = "SineWave";
+data = read(fens);
+
+% Operate on the remaining files
+fens.SelectedVariables = fens.DataVariables;
+while hasdata(fens)
+    data = read(fens);
+    data = removevars(data, {'A1', 'f1', 'A2', 'f2'});
+    writeToLastMemberRead(fens, data)
+end
+
+function data = readVars(filename,variables)
+data = table();
+mfile = matfile(filename); % Allows partial loading
+for ct=1:numel(variables)
+    val = mfile.(variables{ct});
+    if numel(val) > 1
+        val = {val};
+    end
+    data.(variables{ct}) = val;
+end
+end
+
+function writeNewData(filename,data)
+save(filename, '-struct', 'data');
+end
+```
+
+或者比较简单的方式，使用 `subset()` 函数将剩余的 .mat 文件作为 fens 的子集，之后进行删除操作。
+
+Bingo~
+
+总的来说，“删除”操作比“写入”操作更加麻烦，因为就像上面所遇到的情况，重复删除是会报错的，必须重新定义`fens.SelectedVariables`。所以，如果不是 .mat 文件中的变量特别多或者特别复杂，不用删除掉那些变量，只需要设置好 `ens.SelectedVariables` ，用什么取什么即可。
 
 <br>
 
@@ -458,3 +670,4 @@ fensemble.WriteToMemberFcn = @writeNewData;
 
 [2] [Using Simulink to Generate Fault Data - MathWorks](https://ww2.mathworks.cn/help/predmaint/ug/Use-Simulink-to-Generate-Fault-Data.html).
 
+[3] [fileEnsembleDatastore - MathWorks](https://ww2.mathworks.cn/help/predmaint/ref/fileensembledatastore.html).

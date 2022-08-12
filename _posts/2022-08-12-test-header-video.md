@@ -28,7 +28,17 @@ header:
 
 # 网页内嵌入视频
 
-## 方式1
+## 方式1：使用 liquid （推荐）
+
+```liquid
+{% raw %}{% include video id="BV1pC4y1a7QP" provider="bilibili" %}{% endraw %}
+```
+
+{% include video id="BV1pC4y1a7QP" provider="bilibili" %}
+
+
+
+## 方式2：使用 iframe 标签
 
 ```html
 <iframe src="//player.bilibili.com/player.html?aid=795997075&bvid=BV1pC4y1a7QP&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="100%" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
@@ -38,13 +48,7 @@ header:
 
 <br>
 
-## 方式2
 
-```liquid
-{% raw %}{% include video id="BV1pC4y1a7QP" provider="bilibili" %}{% endraw %}
-```
-
-{% include video id="BV1pC4y1a7QP" provider="bilibili" %}
 
 
 

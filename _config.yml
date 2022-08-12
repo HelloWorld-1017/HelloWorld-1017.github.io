@@ -140,6 +140,7 @@ defaults:
       # words_per_minute: 250
       toc: true
       toc_label: "Table of Contents"
+      toc_icon: "heart"
       toc_sticky: true
       author_profile: true # Enable/Disable author sidebar 
       # classes: wide
@@ -151,6 +152,7 @@ defaults:
       layout: single
       author_profile: true
       classes: wide
+      
       # toc: true
       # toc_label: "Table of Contents"
       # toc_sticky: true

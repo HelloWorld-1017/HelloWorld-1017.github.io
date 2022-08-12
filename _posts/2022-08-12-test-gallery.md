@@ -37,6 +37,10 @@ gallery2:
    image_path: /images/PeakyBlinders3.jpg
    alt: "placeholder image 3"
    title: "Peaky Blinders 3"
+ - url: /images/PeakyBlinders4.jpg
+   image_path: /images/PeakyBlinders4.jpg
+   alt: "placeholder image 4"
+   title: "Peaky Blinders 4"
 gallery3:
  - url: /images/PeakyBlinders1.jpg
    image_path: /images/PeakyBlinders1.jpg
@@ -46,6 +50,14 @@ gallery3:
    image_path: /images/PeakyBlinders2.jpg
    alt: "placeholder image 2"
    title: "Peaky Blinders 2"
+ - url: /images/PeakyBlinders3.jpg
+   image_path: /images/PeakyBlinders3.jpg
+   alt: "placeholder image 3"
+   title: "Peaky Blinders 3"
+ - url: /images/PeakyBlinders4.jpg
+   image_path: /images/PeakyBlinders4.jpg
+   alt: "placeholder image 4"
+   title: "Peaky Blinders 4"
 ---
 
 <br>

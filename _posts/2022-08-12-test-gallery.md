@@ -24,40 +24,6 @@ gallery:
    image_path: /images/PeakyBlinders4.jpg
    alt: "placeholder image 4"
    title: "Peaky Blinders 4"
-gallery2:
- - url: /images/PeakyBlinders1.jpg
-   image_path: /images/PeakyBlinders1.jpg
-   alt: "placeholder image 1"
-   title: "Peaky Blinders 1"
- - url: /images/PeakyBlinders2.jpg
-   image_path: /images/PeakyBlinders2.jpg
-   alt: "placeholder image 2"
-   title: "Peaky Blinders 2"
- - url: /images/PeakyBlinders3.jpg
-   image_path: /images/PeakyBlinders3.jpg
-   alt: "placeholder image 3"
-   title: "Peaky Blinders 3"
- - url: /images/PeakyBlinders4.jpg
-   image_path: /images/PeakyBlinders4.jpg
-   alt: "placeholder image 4"
-   title: "Peaky Blinders 4"
-gallery3:
- - url: /images/PeakyBlinders1.jpg
-   image_path: /images/PeakyBlinders1.jpg
-   alt: "placeholder image 1"
-   title: "Peaky Blinders 1"
- - url: /images/PeakyBlinders2.jpg
-   image_path: /images/PeakyBlinders2.jpg
-   alt: "placeholder image 2"
-   title: "Peaky Blinders 2"
- - url: /images/PeakyBlinders3.jpg
-   image_path: /images/PeakyBlinders3.jpg
-   alt: "placeholder image 3"
-   title: "Peaky Blinders 3"
- - url: /images/PeakyBlinders4.jpg
-   image_path: /images/PeakyBlinders4.jpg
-   alt: "placeholder image 4"
-   title: "Peaky Blinders 4"
 ---
 
 <br>
@@ -78,7 +44,7 @@ And place it like so:
 {% raw %}{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
 ```
 
-{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}
+{% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
 
 ---
 

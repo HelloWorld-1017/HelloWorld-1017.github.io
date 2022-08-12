@@ -141,7 +141,7 @@ defaults:
       toc: true
       toc_label: "Table of Contents"
       toc_sticky: true
-      author_profile: false # Enable/Disable author sidebar 
+      author_profile: true # Enable/Disable author sidebar 
       # classes: wide
   # _pages
   - scope:

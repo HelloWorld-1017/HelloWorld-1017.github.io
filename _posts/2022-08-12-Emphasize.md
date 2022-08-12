@@ -11,39 +11,35 @@ classes: wide
 
 <br>
 
-注意1：在段落后 `Shift + Enter` 后添加 `{: .notice} `
+注意1：在段落后 `Shift + Enter` 并添加代码 `{: .notice} `
 {: .notice} 
 
 
 
-注意2：在段落后 `Shift + Enter` 后添加 `{: .notice} `
+注意2：在段落后 `Shift + Enter` 并添加代码 `{: .notice} `
 {: .notice--primary}
 
 
 
-注意3：在段落后 `Shift + Enter` 后添加 `{: .notice--info} `
+注意3：在段落后 `Shift + Enter` 并添加代码 `{: .notice--info} `
 {: .notice--info}
 
 
 
-注意4：在段落后 `Shift + Enter` 后添加 `{: .notice--warning} `
+注意4：在段落后 `Shift + Enter` 并添加代码 `{: .notice--warning} `
 {: .notice--warning}
 
 
 
-注意5：在段落后 `Shift + Enter` 后添加 `{: .notice--danger} `
+注意5：在段落后 `Shift + Enter` 并添加代码 `{: .notice--danger} `
 {: .notice--danger}
 
 
 
-注意6：在段落后 `Shift + Enter` 后添加 `{: .notice--success} `
+注意6：在段落后 `Shift + Enter` 并添加代码 `{: .notice--success} `
 {: .notice--success}
 
-
-
-
-
-
+<br>
 
 **参考**
 

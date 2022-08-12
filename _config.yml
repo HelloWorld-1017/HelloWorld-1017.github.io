@@ -46,6 +46,10 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: https://github.com/QinghuaMa
+
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:starrynight1921@163.com"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   # url: "https://your-website.com"
@@ -145,10 +149,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      # classes: wide
-      toc: true
-      toc_label: "Table of Contents"
-      toc_sticky: true
+      classes: wide
+      # toc: true
+      # toc_label: "Table of Contents"
+      # toc_sticky: true
 
   
   # # _foo

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 引用 BiliBili 视频外链
+title: BiliBili 视频外链引用
 date: 2022-08-12 13:44:15 +0800
 categories: 
  - Github Pages
@@ -10,11 +10,12 @@ header:
   video:
     id: BV1pC4y1a7QP
     provider: bilibili
+classes: wide
 ---
 
 
 
-# 使用 YAML 代码构建 Header Video
+# 使用 YAML 嵌入 Header Video
 
 ```yaml
 header:
@@ -23,15 +24,16 @@ header:
     provider: bilibili
 ```
 
+<br>
 
-
-# 使用嵌入代码
+# 网页内嵌入视频
 
 ## 方式1
 
-```html
+```yaml
 <iframe src="//player.bilibili.com/player.html?aid=795997075&bvid=BV1pC4y1a7QP&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
 ```
+
 
 
 <iframe src="//player.bilibili.com/player.html?aid=795997075&bvid=BV1pC4y1a7QP&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
@@ -40,7 +42,7 @@ header:
 
 ## 方式2
 
-```html
+```yaml
 {% include video id="BV1pC4y1a7QP" provider="bilibili" %}
 ```
 

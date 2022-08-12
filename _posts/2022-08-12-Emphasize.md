@@ -44,3 +44,5 @@ classes: wide
 **参考**
 
 [1] [Markup: HTML Tags and Formatting - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/#top)
+
+[2] [Layout: Post with Sticky Table of Contents - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/layout-table-of-contents-sticky/)

@@ -41,7 +41,7 @@ And then drop-in the gallery include --- gallery `caption` is optional.
 And place it like so: 
 
 ```liquid
-{% raw %}{% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
+{% raw %}{% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}{% endraw %}
 ```
 
 {% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
@@ -50,7 +50,7 @@ And place it like so:
 
 And for giggles one more gallery just to make sure this works. To fill page content container add `class="full"`.
 
-{% include gallery id="gallery3" class="full" caption="This is a third gallery example with two images and fills the entire content container." %}
+{% include gallery id="gallery" class="full" caption="This is a third gallery example with two images and fills the entire content container." %}
 
 ---
 

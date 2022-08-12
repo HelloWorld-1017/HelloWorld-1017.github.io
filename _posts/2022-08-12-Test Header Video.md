@@ -40,7 +40,9 @@ header:
 
 ## 方式2
 
-![image-20220812151230533](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220812151230533.png)
+```liquid
+{% raw %}{% include video id="BV1pC4y1a7QP" provider="bilibili" %}{% endraw %}
+```
 
 {% include video id="BV1pC4y1a7QP" provider="bilibili" %}
 

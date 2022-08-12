@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 强调段落
+title: 段落强调
 date: 2022-08-12 17:03:13 +0800
 categories: 
  - Github Pages
@@ -11,9 +11,40 @@ classes: wide
 
 <br>
 
-强调1
+注意1：在段落后 `Shift + Enter` 后添加 `{: .notice} `
 {: .notice} 
 
 
 
-[Markup: HTML Tags and Formatting - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/#top)
+注意2：在段落后 `Shift + Enter` 后添加 `{: .notice} `
+{: .notice--primary}
+
+
+
+注意3：在段落后 `Shift + Enter` 后添加 `{: .notice--info} `
+{: .notice--info}
+
+
+
+注意4：在段落后 `Shift + Enter` 后添加 `{: .notice--warning} `
+{: .notice--warning}
+
+
+
+注意5：在段落后 `Shift + Enter` 后添加 `{: .notice--danger} `
+{: .notice--danger}
+
+
+
+注意6：在段落后 `Shift + Enter` 后添加 `{: .notice--success} `
+{: .notice--success}
+
+
+
+
+
+
+
+**参考**
+
+[1] [Markup: HTML Tags and Formatting - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/#top)

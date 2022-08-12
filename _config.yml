@@ -137,7 +137,7 @@ defaults:
       toc: true
       toc_label: "Table of Contents"
       toc_sticky: true
-      classes: wide
+      # classes: wide
   # _pages
   - scope:
       path: ""

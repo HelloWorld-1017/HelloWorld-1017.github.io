@@ -11,5 +11,5 @@ classes: wide
 
 <br>
 
-尝试强调 {: .notice}
+{: .notice} 尝试强调 
 

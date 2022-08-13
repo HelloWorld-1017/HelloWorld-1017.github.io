@@ -68,7 +68,7 @@ gallery:
 
 {% include gallery id="gallery" caption="This is a sample gallery with **Markdown support**." %}
 
-并且可以使用 COS 图床，只需要替换掉 `url` 即可。
+并且可以使用 COS 图床，只需要更换为相应的 `url` 即可。
 
 <br>
 

@@ -12,8 +12,6 @@ sidebar:
   nav: sidebar-sample
 ---
 
-<br>
-
 首先在根目录的 `_data/navigation.yml` 文件中写入：
 
 ```yaml

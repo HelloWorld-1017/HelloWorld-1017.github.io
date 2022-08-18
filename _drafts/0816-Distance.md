@@ -2,7 +2,7 @@
 
 # 度量
 
-## 引言
+## 背景
 
 [Metric (mathematics) - Wikipedia](https://en.wikipedia.org/wiki/Metric_(mathematics)) 
 
@@ -152,6 +152,24 @@ $$
 > 数学空间(mathematical spaces)的层次结构。赋范向量空间是内积空间的超集(superset)，是度量空间的子集(subset)。
 
 # 度量与测度
+
+## 背景
+
+在数学中，测度(measure)的概念是几何度量（如长度、面积、体积）和其他常见概念（如质量和事件概率）的推广和形式化。这些看似不同的的概念有许多相似之处，能够在同一个数学背景下进行对待和处理。
+
+测度是概率理论，积分理论的基本概念，并且可以推广到负值，如电荷(electrical charge)。测度的进一步推广（如谱测度(spectral measures)和投影值测度(projection-valued measures)）被广泛应用于量子物理学(quantum physics)和一般物理学中。
+
+测度背后的直觉见解(intuition)可以追溯到古希腊(ancient Greece)阿基米德(Archimedes) 尝试计算圆的面积。但是直到19世纪末20世纪初期，测度理论才成为数学的一个分支。 [Émile Borel](https://en.wikipedia.org/wiki/Émile_Borel)、[Henri Lebesgue](https://en.wikipedia.org/wiki/Henri_Lebesgue)、[Nikolai Luzin](https://en.wikipedia.org/wiki/Nikolai_Luzin)、[Johann Radon](https://en.wikipedia.org/wiki/Johann_Radon)、 [Constantin Carathéodory](https://en.wikipedia.org/wiki/Constantin_Carathéodory) 和 [Maurice Fréchet](https://en.wikipedia.org/wiki/Maurice_Fréchet) 等人的工作奠定了现代测度理论的基础。
+
+
+
+## $\sigma$-代数
+
+在数学分析(mathematical analysis)和概率论(probability theory)中， $\sigma$-代数或者称$\sigma$-场($\sigma$-algebra or  $\sigma$-field)定义为一个在集合 $X$ 上的非空子集 $\Sigma$ ，该子集满足在补集运算(complement)，可数个并集运算(unions)和可数个交集操作(intersections)下满足封闭性(closed)。$(X,\Sigma)$ 被称为可测空间(measurable space)。
+
+$\sigma$-代数是集合代数(set algebras)的子集。集合代数只需要满足在有限多个子集的并集运算和交集运算下封闭，这是一个比较弱的条件。
+
+$\sigma$-代数的主要用在测度的定义中，
 
 
 

@@ -1,21 +1,20 @@
 ---
-title: "Layout: Sidebar with Navigation List"
-excerpt: "A post with a sidebar navigation list."
-author_profile: false
+layout: single
+title: 测试 Sidebar with Navigation List
+date: 2022-08-18 11:36:13 +0800
+categories: 
+ - Github Pages
+tags: Jekyll
+toc: false
+classes: wide
 sidebar:
   title: "Sample Title"
   nav: sidebar-sample
 ---
 
-This post has a custom navigation list set in the post's YAML Front Matter.
+<br>
 
-```yaml
-sidebar:
-  title: "Sample Title"
-  nav: sidebar-sample
-```
-
-Along with navigation elements set in `_data/navigation.yml`.
+首先在根目录的 `_data/navigation.yml` 文件中写入：
 
 ```yaml
 sidebar-sample:
@@ -60,3 +59,17 @@ sidebar-sample:
       - title: "Child Page D2"
         url: /
 ```
+
+之后，在 YAML Front Matter 中写入：
+
+```yaml
+sidebar:
+  title: "Sample Title"
+  nav: sidebar-sample
+```
+
+<br>
+
+参考
+
+[1] [Layout: Sidebar with Navigation List - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/layout-sidebar-nav-list/)

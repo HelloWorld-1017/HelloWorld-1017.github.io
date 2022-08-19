@@ -86,7 +86,22 @@ $$
 \right.
 $$
 
-当电路闭合时，由于 $u_c(0_+)=u_c(0_-)=U_0\ \mathrm{V}$，$i_L(0_+)=i_L(0_-)=0\ \mathrm{A}$；又在 $0_+$ 时刻，有 $u_c = L\dfrac{\mathrm{d}i_L}{\mathrm{d}t}+i_LR$，因此 $\dfrac{\mathrm{d}i_L}{\mathrm{d}t}\Big\vert_{0_+}=\dfrac{U_0}L$，即 $x_2(0)=\dfrac{U_0}L$，于是可以得到初始条件：
+当电路闭合时，由于
+
+$$
+\begin{align*}
+u_c(0_{+})=u_c(0_{-})=U_0\\
+i_L(0_+)=i_ L(0_ {-})=0
+\end{align*}
+$$
+
+又因为在 $0_{+}$ 时刻，有 
+
+$$
+u_c = L\dfrac{\mathrm{d}i_L}{\mathrm{d}t}+i_LR\notag
+$$
+
+因此 $\dfrac{\mathrm{d}i_L}{\mathrm{d}t}\Big\vert_{0_+}=\dfrac{U_0}L$，即 $x_2(0)=\dfrac{U_0}L$，于是可以得到初始条件：
 
 $$
 \left\{\begin{split}

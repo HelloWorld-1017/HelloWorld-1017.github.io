@@ -1,0 +1,169 @@
+---
+layout: single
+title: 混沌电路：蔡氏电路
+date: 2022-08-19 15:07:21 +0800
+categories: 
+ - Uncertainty
+tags: 
+ - Signals and Systems
+---
+
+# 蔡氏电路
+
+蔡氏电路(Chua's circuit)的电路结构如下图所示：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819130711336.png" alt="image-20220819130711336" style="zoom:50%;" />
+
+该电路是由两个线性电容、一个线性电感、一个线性电阻和一个非线性电阻构成的三阶自治动态电路。非线性电阻的伏安特性是 $i_R=g(u_R)$ ，是一个**电压控制型非线性电阻**，它所对应的伏安特性曲线是一个分段线性曲线。
+
+设电压电容 $u_{C1}$、$u_{C2}$ 和电感电流 $i_L$ 为状态变量，根据基尔霍夫定律可以得到电路的状态方程：
+
+$$
+\left\{
+\begin{split}
+C_1\dfrac{\mathrm{d}u_{C1}}{\mathrm{d}t}&=\dfrac1{R_0}(u_{C2}-u_{C1})-g(u_R)\\
+C_2\dfrac{\mathrm{d}u_{C2}}{\mathrm{d}t}&=\dfrac1{R_0}(u_{C1}-u_{C2})+i_L\\
+L\dfrac{\mathrm{d}i_L}{\mathrm{d}t}&=-u_{C2}
+\end{split}
+\right.\notag
+$$
+
+为了简化表示，我们令：$u_{C1}=x$ ，$u_{C2}=y$，$i_L=z$，则有：
+
+$$
+\left\{
+\begin{split}
+\dfrac{\mathrm{d}x}{\mathrm{d}t}&=\alpha(y-x-f(x))\\
+R_0C_2\dfrac{\mathrm{d}y}{\mathrm{d}t}&=(x-y)+R_0z\\
+\dfrac{\mathrm{d}z}{\mathrm{d}t}&=-\beta y
+\end{split}
+\right.\label{chua's}
+$$
+
+其中，$\alpha=\dfrac1{R_0C_1}$ ，$f=\dfrac1{C_1}g$，$\beta=\dfrac1L$。
+
+这是一个三阶非线性自治方程组。蔡氏电路在不同的参数条件下会发生丰富多样的自激励震荡过程，并有混沌出现，同时其所对应的方程 $\eqref{chua's}$ 的解对初始条件非常敏感。根据不同的参数值和不同的初始条件，根据方程 $\eqref{chua's}$ 可以计算出以 $x$， $y$， $z$  为坐标的状态空间的相轨道和它们的时域波形。
+
+<br>
+
+# 数值仿真
+
+网站 [http://www.chuacircuits.com/matlabsim.php](http://www.chuacircuits.com/matlabsim.php) 提供了其中一种情形。
+
+其中， $\alpha=15.6$ ，$\beta=28$，$R_0=1$，$C_2=1$ 。非线性电阻的伏安特性曲线为：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819142621984.png" alt="image-20220819142621984" style="zoom:50%;" />
+
+```matlab
+% The voltage-current profile of the nonlinear resistance
+x = -2:0.01:2;
+
+m0 = -1.143;
+m1 = -0.714;
+
+h = m1*x+0.5*(m0-m1)*(abs(x+1)-abs(x-1));
+f = @(x)m1*x+0.5*(m0-m1)*(abs(x+1)-abs(x-1));
+
+figure, axes
+hold(gca, 'on')
+plot(x, h, LineWidth=1.7);
+scatter(0, 0, 'filled')
+scatter(-1, f(-1), 'filled');
+scatter(1, f(1), 'filled');
+xlabel('$u_R$', Interpreter='latex')
+ylabel('$i_R$', Interpreter='latex')
+title('The voltage-current profile of the nonlinear resistance')
+```
+
+其相轨迹为：
+
+![image-20220819142832191](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819142832191.png)
+
+```matlab
+[t,y] = ode45(@chua,[0 100],[0.7 0 0]);
+plot3(y(:,1),y(:,2),y(:,3))
+grid
+
+function out = chua(t,in)
+
+x = in(1);
+y = in(2);
+z = in(3);
+
+alpha  = 15.6;
+beta   = 28; 
+m0     = -1.143;
+m1     = -0.714;
+
+h = m1*x+0.5*(m0-m1)*(abs(x+1)-abs(x-1));
+
+xdot = alpha*(y-x-h);
+ydot = x - y+ z;
+zdot  = -beta*y;
+
+out = [xdot ydot zdot]';
+end
+```
+
+观察它的相轨迹绘制过程：
+
+![Chua1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/Chua1.gif)
+
+```matlab
+gifFile = 'Chua1.gif';
+if exist(gifFile, 'file')
+    delete(gifFile)
+end
+
+figure, axes, view(-6.9,37.1)
+xlabel('x'), ylabel('y'), zlabel('z')
+axis([-3, 3, -0.4, 0.4, -4, 4])
+h = animatedline(gca, LineWidth=1.3);
+grid
+
+[t,y] = ode45(@chua,[0 100],[0.7 0 0]);
+
+for i = 1:numel(y(:,1))
+    addpoints(h, y(i,1), y(i,2), y(i,3))
+    drawnow
+    exportgraphics(gcf, gifFile, 'Append', true);
+end
+
+function out = chua(t,in)
+x = in(1);
+y = in(2);
+z = in(3);
+
+alpha  = 15.6;
+beta   = 28;
+m0     = -1.143;
+m1     = -0.714;
+
+h = m1*x+0.5*(m0-m1)*(abs(x+1)-abs(x-1));
+
+xdot = alpha*(y-x-h);
+ydot = x - y+ z;
+zdot  = -beta*y;
+
+out = [xdot ydot zdot]';
+end
+```
+
+整个相轨迹呈现出“双涡卷”形状，因此也有称这个蔡氏电路为“双涡卷”电路，它的相轨道永远也不会重复，表现为混沌振荡的非周期性。
+
+由于非线性电路中混沌解的特殊性，分析研究混沌的主要方法有：
+
+（1）使用计算机对非线性电路进行数值计算，从得到的相图和频域波形等来判断混沌特征的信息；
+
+（2）对电路直接进行实验，在实验中对混沌现象进行观察和分析。
+
+<br>
+
+**参考**
+
+[1] 邱关源. 电路（第5版）.
+
+[2] [http://www.chuacircuits.com/matlabsim.php](http://www.chuacircuits.com/matlabsim.php)
+
+[3] [Chua's circuit - Wikipedia](https://en.wikipedia.org/wiki/Chua%27s_circuit)
+

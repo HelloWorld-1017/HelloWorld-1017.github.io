@@ -15,7 +15,6 @@ ylabel("$x_2$", Interpreter="latex")
 title("$\delta^2<\omega_0^2$ ($U_0=1$) ", Interpreter="latex")
 
 function dydt = StateFunction(t, y)
-% R = 1.5, L=1, C=1
 R=0.1;
 L=1;
 C=1;

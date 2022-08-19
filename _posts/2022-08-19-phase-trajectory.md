@@ -1,4 +1,17 @@
+---
+layout: single
+title: 二阶非线性电路的状态方程和相图
+date: 2022-08-19 09:17:37 +0800
+categories: 
+ - Uncertainty
+tags: 
+ - Signals and Systems
+---
+
+# 状态方程、状态平面、相轨道
+
 二阶非线性电路方程的一般形式可以写作
+
 $$
 \left\{
 \begin{split}
@@ -6,9 +19,11 @@ $$
 \dfrac{\mathrm{d}x_2}{\mathrm{d}t}=f_2(x_1,x_2,t)\\
 \end{split}\right.\label{eqs1}
 $$
+
 其中，$x_1(t)$ 和 $x_2(t)$ 为状态变量，我们称式 $\eqref{eqs1}$ 为**状态方程**。 
 
 如果式 $\eqref{eqs1}$ 中自变量 $t$ 除了在 $\dfrac{\mathrm{d}x}{\mathrm{d}t}$ 中以隐含形式存在之外，不以任何显式形式存在，即：
+
 $$
 \left\{
 \begin{split}
@@ -16,6 +31,7 @@ $$
 \dfrac{\mathrm{d}x_2}{\mathrm{d}t}=f_2(x_1,x_2)\\
 \end{split}\right.\label{eqs2}
 $$
+
 类似公式 $\eqref{eqs2}$ 这种自变量 $t$ 不以任何显式形式存在的方程称为**自治方程**，与之相对的公式 $\eqref{eqs1}$ 称为**非自治方程**。
 
 注：变量 $t$ 仅仅是不以任何显式形式存在，$x_1(t)$ 和 $x_2(t)$ 仍然是随着自变量 $t$ 的变化而变化的。
@@ -23,7 +39,7 @@ $$
 
 时变电路或者电路中包含随时间变化的外施激励，那么就会得到非自治方程；而在<u>零输入或者在直流激励下的非线性二阶电路</u>的方程是自治方程，对应的电路就是自治电路。
 
-一般来说，求解非线性非线性方程式 $\eqref{eqs1}$ 和式 $\eqref{eqs2}$ 是比较困难的，它们通常没有闭式解。
+一般来说，求解非线性方程式 $\eqref{eqs1}$ 和式 $\eqref{eqs2}$ 是比较困难的，它们通常没有闭式解。
 
 注：闭式解（closed form solution），即解析解（analytical solution）。
 {: .notice}
@@ -36,25 +52,32 @@ $$
 相轨道还可以通过实验的方法观察，例如只要把 $x_1(t)$ 和 $x_2(t)$ 作为信号电压，把它们加到示波器的水平输入和垂直输入，就可以显示出相应的相轨道。
 {: .notice--danger}
 
+<br>
 
+# 二阶 RLC 串联电路放电的动态过程（线性元件）
 
 下面用状态平面讨论二阶 RLC 串联电路放电的动态过程，其电路图如下图所示。为了简化假设，假设电阻 R、电感 L 和电容 C 都是线性元件。
 
-![image-20220818193442974](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818193442974.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818193442974.png" alt="image-20220818193442974" style="zoom: 33%;" />
 
 假设电容电压的初始值为 $u_C(0_-)=U_0$，电感的初始值为 $i_L(0_-)=0$，在 0 时刻开关闭合。电路的方程为：
+
 $$
 LC\dfrac{\mathrm{d}^2i}{\mathrm{d}t^2}+RC\dfrac{\mathrm{d}i}{\mathrm{d}t}+i=0\notag
 $$
+
 令 $x_1=i$，$x_2=\dfrac{\mathrm{d}i}{\mathrm{d}t}=\dfrac{\mathrm{d}x_1}{\mathrm{d}t}$，则上式可以改写为状态方程的形式：
+
 $$
 \left\{\begin{split}
 &\dfrac{\mathrm{d}x_1}{\mathrm{d}t}=x_2\\
 &\dfrac{\mathrm{d}x_2}{\mathrm{d}t}=-\dfrac1{LC}x_1-\dfrac{R}{L}x_2
 \end{split}
-\right.
+\right.\notag
 $$
+
 令 $\omega_0^2=\dfrac1{LC}$，$\delta=\dfrac{R}{2L}$，则上式可化为：
+
 $$
 \left\{\begin{split}
 &\dfrac{\mathrm{d}x_1}{\mathrm{d}t}=x_2\\
@@ -62,28 +85,25 @@ $$
 \end{split}\label{eqs4}
 \right.
 $$
-对式 $\eqref{eqs4}$ 直接积分，可以求得相轨道的方程，这里主要用状态平面来讨论。
 
-## 当 $\delta^2<\omega_0^2$ 时：衰减振荡放电（欠阻尼）
+当电路闭合时，由于 $u_c(0_+)=u_c(0_-)=U_0\ \mathrm{V}$，$i_L(0_+)=i_L(0_-)=0\ \mathrm{A}$；又在 $0_+$ 时刻，有 $u_c = L\dfrac{\mathrm{d}i_L}{\mathrm{d}t}+i_LR$，因此 $\dfrac{\mathrm{d}i_L}{\mathrm{d}t}\Big\vert_{0_+}=\dfrac{U_0}L$，即 $x_2(0)=\dfrac{U_0}L$，于是可以得到初始条件：
 
-当 $\delta^2<\omega_0^2$ 时，即当 $R<2\sqrt{\dfrac{L}{C}}$ 时，电路中的放电过程为衰减振荡过程。假设 $R=1\ \Omega$，$L=1\ \mathrm{H}$，$C=1\ \mathrm{F}$ ，$u_c(0_-)=1\ \mathrm{V}$，$i_L(0_-)=0\ \mathrm{A}$ ，此时状态方程为：
-$$
-\left\{\begin{split}
-&\dfrac{\mathrm{d}x_1}{\mathrm{d}t}=x_2\\
-&\dfrac{\mathrm{d}x_2}{\mathrm{d}t}=-x_1-x_2
-\end{split}
-\right.
-$$
-
-由于 $u_c(0_+)=u_c(0_-)=U_0\ \mathrm{V}$，$i_L(0_+)=i_L(0_-)=0\ \mathrm{A}$，又在 $0_+$ 时刻，有 $u_c = L\dfrac{\mathrm{d}i_L}{\mathrm{d}t}+i_LR$，因此 $\dfrac{\mathrm{d}i_L}{\mathrm{d}t}\Big\vert_{0_+}=\dfrac{U_0}L=U_0$，即 $x_2(0)=U_0$，于是可以得到初始条件：
 $$
 \left\{\begin{split}
 &x_1(0) = 0\\
-&x_2(0) = U_0\\
-\end{split}
+&x_2(0) = \dfrac{U_0}L\\
+\end{split}\label{initials}
 \right.
 $$
-使用 MATLAB 的 `ode45` 函数求该状态方程的数值解。
+
+对式 $\eqref{eqs4}$ 直接积分，在根据式 $\eqref{initials}$ 的初始条件，就可以求得相轨道的方程，这里主要用状态平面来讨论。
+
+在下面的讨论中，均假设 $L=1\ \mathrm{H}$，$C=1\ \mathrm{F}$ ，使用 MATLAB 的 `ode45` 函数求状态方程的数值解，以观察不同的初始条件 $U_0$ 对于相轨迹的影响，以及通过改变电阻 $R$ 讨论不同阻尼程度对于相轨迹的影响。
+{: .notice--primary}
+
+## 当 $\delta^2<\omega_0^2$ 时：衰减振荡放电（欠阻尼）
+
+当 $\delta^2<\omega_0^2$ 时，即当 $R<2\sqrt{\dfrac{L}{C}}=2$ 时，电路中的放电过程为衰减振荡过程。
 
 ### 不同初值对于相轨迹的影响（相图）
 
@@ -117,15 +137,20 @@ legend("Phase Trajectory: U_0=1", "Initial point: U_0=1", "Terminal point: U_0=1
    "Phase Trajectory: U_0=10", "Initial point: U_0=10", "Terminal point: U_0=10")
 xlabel("$x_1$", Interpreter="latex")
 ylabel("$x_2$", Interpreter="latex")
-title("$\delta^2<\omega_0^2$ ($R=1\ \Omega$, $L=1\ \mathrm{H}$, $C=1\ \mathrm{F}$)", Interpreter="latex")
+title("$\delta^2<\omega_0^2$ ($R=1$)", Interpreter="latex")
 
 
 function dydt = StateFunction(t, y)
-dydt = [y(2); -y(1)-y(2)];
+R=1;
+L=1;
+C=1;
+delta = R/(2*L);
+omega_s = 1/(L*C);
+dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-![image-20220818222100522](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818222100522.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819085650207.png" alt="image-20220819085650207" style="zoom:50%;" />
 
 上图展现了在衰减振荡状态的情况下不同初值的相轨迹，这组相轨迹就是一个相图。
 
@@ -164,7 +189,6 @@ title("$\delta^2<\omega_0^2$ ($U_0=1$) ", Interpreter="latex")
 
 
 function dydt = StateFunction1(t, y)
-% R=0.5, L=1, C=1
 R=0.5;
 L=1;
 C=1;
@@ -174,7 +198,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction2(t, y)
-% R=1, L=1, C=1
 R=1;
 L=1;
 C=1;
@@ -184,7 +207,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction3(t, y)
-% R = 1.5, L=1, C=1
 R=1.5;
 L=1;
 C=1;
@@ -194,15 +216,13 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-
-
-![image-20220818223605884](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818223605884.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818223605884.png" alt="image-20220818223605884" style="zoom:50%;" />
 
 螺旋线的圈间距离表征了振荡的衰减率，而每一圈对应于震荡的周期。
 
 当 $R=0.1$ 时，欠阻尼的程度更加严重，则可以看到很多圈的螺旋线。
 
-![image-20220818230034482](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818230034482.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818230034482.png" alt="image-20220818230034482" style="zoom:50%;" />
 
 ```matlab
 clc, clear, close
@@ -222,7 +242,6 @@ ylabel("$x_2$", Interpreter="latex")
 title("$\delta^2<\omega_0^2$ ($U_0=1$) ", Interpreter="latex")
 
 function dydt = StateFunction(t, y)
-% R = 1.5, L=1, C=1
 R=0.1;
 L=1;
 C=1;
@@ -232,21 +251,11 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-
-
-### 总结
-
 无论是初值不同还是元件参数不同，电路状态方程所对应的相轨迹都表现为螺旋线，并且以原点为其渐近点，该原点就是方程 $\eqref{eqs4}$ 的“平衡点”。
-
-### 解析解
-
-
-
-
 
 ## 当 $\delta^2>\omega_0^2$ 时：非周期衰减放电（过阻尼）
 
-当 $\delta^2>\omega_0^2$ 即当 $R>2\sqrt{\dfrac{L}{C}}$ 时，电路中的放电过程为非周期衰减性质。
+当 $\delta^2>\omega_0^2$ 即当 $R>2\sqrt{\dfrac{L}{C}}=2$ 时，电路中的放电过程为非周期衰减性质。
 
 ### 不同初值的对于相轨迹的影响（相图）
 
@@ -256,9 +265,9 @@ clc, clear, close
 [t2, y2] = ode45(@StateFunction, [0, 100], [0; 5]);
 [t3, y3] = ode45(@StateFunction, [0, 100], [0; 10]);
 
-[t1, y4] = ode45(@StateFunction, [0, 100], [0; -1]);
-[t2, y5] = ode45(@StateFunction, [0, 100], [0; -5]);
-[t3, y6] = ode45(@StateFunction, [0, 100], [0; -10]);
+[t4, y4] = ode45(@StateFunction, [0, 100], [0; -1]);
+[t5, y5] = ode45(@StateFunction, [0, 100], [0; -5]);
+[t6, y6] = ode45(@StateFunction, [0, 100], [0; -10]);
 
 LineWidth = 1.7;
 
@@ -296,11 +305,10 @@ legend("Phase Trajectory: U_0=1", "Initial point: U_0=1", "Terminal point: U_0=1
    "Phase Trajectory: U_0=-10", "Initial point: U_0=-10", "Terminal point: U_0=-10")
 xlabel("$x_1$", Interpreter="latex")
 ylabel("$x_2$", Interpreter="latex")
-title("$\delta^2>\omega_0^2$ ($R=3\ \Omega$, $L=1\ \mathrm{H}$, $C=1\ \mathrm{F}$)", Interpreter="latex")
+title("$\delta^2>\omega_0^2$ ($R=3$)", Interpreter="latex")
 
 
 function dydt = StateFunction(t, y)
-% R = 1.5, L=1, C=1
 R=3;
 L=1;
 C=1;
@@ -310,9 +318,9 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-![image-20220818231257168](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818231257168.png)
+![image-20220819085851220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819085851220.png)
 
-对应于不同的初始条件，相图时一组变形的抛物线，原点是它们的渐近点，相点的运动是趋于原点的。
+对应于不同的初始条件，相图是一组变形的抛物线，原点是它们的渐近点，相点的运动是趋于原点的。
 
 ### 不同元件参数对于相轨迹的影响
 
@@ -355,7 +363,6 @@ title("$\delta^2>\omega_0^2$ ($U_0=1$) ", Interpreter="latex")
 
 
 function dydt = StateFunction1(t, y)
-% R=0.5, L=1, C=1
 R=3;
 L=1;
 C=1;
@@ -365,7 +372,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction2(t, y)
-% R=1, L=1, C=1
 R=4;
 L=1;
 C=1;
@@ -375,7 +381,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction3(t, y)
-% R = 1.5, L=1, C=1
 R=5;
 L=1;
 C=1;
@@ -385,7 +390,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction4(t, y)
-% R = 1.5, L=1, C=1
 R=100;
 L=1;
 C=1;
@@ -395,11 +399,7 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-![image-20220818232101598](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818232101598.png)
-
-### 解析解
-
-
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818232101598.png" alt="image-20220818232101598" style="zoom:50%;" />
 
 ## 当 $\delta=0$ 时：不衰减的正弦振荡
 
@@ -407,14 +407,53 @@ end
 
 ### 不同初值的对于相轨迹的影响（相图）
 
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819090011968.png" alt="image-20220819090011968" style="zoom:50%;" />
+
+```matlab
+clc, clear, close
+[t1, y1] = ode45(@StateFunction, [0, 100], [0; 1]);
+[t2, y2] = ode45(@StateFunction, [0, 100], [0; 5]);
+[t3, y3] = ode45(@StateFunction, [0, 100], [0; 10]);
+
+LineWidth = 1.7;
+
+figure, axes
+hold(gca, 'on');
+plot(y1(:,1), y1(:,2), LineWidth=LineWidth);
+scatter(y1(1,1), y1(1,2), "filled");
+scatter(y1(end, 1), y1(end, 2), "filled");
+
+plot(y2(:,1), y2(:,2), LineWidth=LineWidth);
+scatter(y2(1,1), y2(1,2), "filled");
+scatter(y2(end, 1), y2(end, 2), "filled");
+
+plot(y3(:,1), y3(:,2), LineWidth=LineWidth);
+scatter(y3(1,1), y3(1,2), "filled");
+scatter(y3(end, 1), y3(end, 2), "filled");
 
 
+legend("Phase Trajectory: U_0=1", "Initial point: U_0=1", "Terminal point: U_0=1",...
+   "Phase Trajectory: U_0=5", "Initial point: U_0=5", "Terminal point: U_0=5",...
+   "Phase Trajectory: U_0=10", "Initial point: U_0=10", "Terminal point: U_0=10")
+xlabel("$x_1$", Interpreter="latex")
+ylabel("$x_2$", Interpreter="latex")
+title("$\delta^2>\omega_0^2$ ($R=0$)", Interpreter="latex")
+axis equal
 
+function dydt = StateFunction(t, y)
+R=0;
+L=1;
+C=1;
+delta = R/(2*L);
+omega_s = 1/(L*C);
+dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
+end
+```
 
+该相图是一族椭圆，它对应于不衰减的正弦振荡，震荡的幅值与初始条件有关。
 
+<br>
 
+**参考**
 
-
-
-实际上类似t的参数方程
-
+[1] 邱关源. 电路（第5版）. 

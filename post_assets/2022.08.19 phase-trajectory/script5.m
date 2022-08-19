@@ -3,9 +3,9 @@ clc, clear, close
 [t2, y2] = ode45(@StateFunction, [0, 100], [0; 5]);
 [t3, y3] = ode45(@StateFunction, [0, 100], [0; 10]);
 
-[t1, y4] = ode45(@StateFunction, [0, 100], [0; -1]);
-[t2, y5] = ode45(@StateFunction, [0, 100], [0; -5]);
-[t3, y6] = ode45(@StateFunction, [0, 100], [0; -10]);
+[t4, y4] = ode45(@StateFunction, [0, 100], [0; -1]);
+[t5, y5] = ode45(@StateFunction, [0, 100], [0; -5]);
+[t6, y6] = ode45(@StateFunction, [0, 100], [0; -10]);
 
 LineWidth = 1.7;
 
@@ -43,11 +43,10 @@ legend("Phase Trajectory: U_0=1", "Initial point: U_0=1", "Terminal point: U_0=1
    "Phase Trajectory: U_0=-10", "Initial point: U_0=-10", "Terminal point: U_0=-10")
 xlabel("$x_1$", Interpreter="latex")
 ylabel("$x_2$", Interpreter="latex")
-title("$\delta^2>\omega_0^2$ ($R=3\ \Omega$, $L=1\ \mathrm{H}$, $C=1\ \mathrm{F}$)", Interpreter="latex")
+title("$\delta^2>\omega_0^2$ ($R=3$)", Interpreter="latex")
 
 
 function dydt = StateFunction(t, y)
-% R = 1.5, L=1, C=1
 R=3;
 L=1;
 C=1;

@@ -2,7 +2,7 @@
 layout: single
 title: 自然界存在不确定性
 date: 2022-07-25 23:15:03 +0800
-tags: 
+categories: 
  - Uncertainty
 toc: false
 ---

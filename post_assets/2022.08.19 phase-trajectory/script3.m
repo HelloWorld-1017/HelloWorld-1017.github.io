@@ -28,7 +28,6 @@ title("$\delta^2<\omega_0^2$ ($U_0=1$) ", Interpreter="latex")
 
 
 function dydt = StateFunction1(t, y)
-% R=0.5, L=1, C=1
 R=0.5;
 L=1;
 C=1;
@@ -38,7 +37,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction2(t, y)
-% R=1, L=1, C=1
 R=1;
 L=1;
 C=1;
@@ -48,7 +46,6 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 
 function dydt = StateFunction3(t, y)
-% R = 1.5, L=1, C=1
 R=1.5;
 L=1;
 C=1;

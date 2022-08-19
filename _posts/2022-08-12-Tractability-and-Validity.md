@@ -4,9 +4,9 @@ title: 从易处理性和有效性的角度看待问题与模型
 date: 2022-08-12 12:20:13 +0800
 categories:
  - Mathematics
+ - Uncertainty
 tags: 
  - Operations Research
- - Uncertainty
 toc: true
 ---
 

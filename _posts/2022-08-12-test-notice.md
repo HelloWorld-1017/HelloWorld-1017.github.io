@@ -16,7 +16,7 @@ classes: wide
 
 
 
-注意2：在段落后 `Shift + Enter` 并添加代码 `{: .notice} `
+注意2：在段落后 `Shift + Enter` 并添加代码 `{: .notice--primary} `
 {: .notice--primary}
 
 

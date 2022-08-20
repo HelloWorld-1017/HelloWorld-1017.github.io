@@ -6,4 +6,5 @@ _site
 .idea
 .vscode
 .idea
+.gif
 __pycache__

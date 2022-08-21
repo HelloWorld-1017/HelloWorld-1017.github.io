@@ -4,13 +4,17 @@
 
 ### -er/-or
 
-用来表示进行某种活动的人，比如：writer, painter, worker, shopper, teacher.
+用来表示进行某种活动的人，比如：writer, painter, worker, shopper, teacher, lawer.
+
+cricketer(cricket): someone who plays cricket.
+
+stockbroker(stock)：a person or organization whose jobis to buy and sell shares, bonds etc for people.
 
 在许多动词后面可以加上 -er，变成名词。
 
 maker: showmaker, sorrymaker 😂
 
-有时，-er 后缀也可以写作 -er。这类单词有：actor, operator, sailor, supervisor.
+有时，-er 后缀也可以写作 -or。这类单词有：actor, operator, sailor, supervisor.
 
 -er/-or 也可以用来表示有某种特定功能的物体，比如：pencil-sharpener, projector.
 
@@ -53,6 +57,10 @@ e.g. The fact that the plane was late added a further complication to our journe
 ### -ist, -ism
 
 determinism, ==indeterminism?,== 
+
+
+
+**egotism**(ego): the belief that you are much better or more important than other people.
 
 
 

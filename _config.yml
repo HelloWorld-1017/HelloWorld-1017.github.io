@@ -83,9 +83,6 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-
-
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -154,12 +151,17 @@ defaults:
       layout: single
       author_profile: true
       classes: wide
-      
       # toc: true
       # toc_label: "Table of Contents"
       # toc_sticky: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
 
-  
   # # _foo
   # - scope:
   #     path: ""
@@ -167,10 +169,6 @@ defaults:
   #   valus:
   #     layout: single
     
-
-
-
-
 # footer:
 #   links:
 #     - label: "Twitter"
@@ -196,14 +194,12 @@ tag_archive:
   path: /tags/
 
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -215,3 +211,9 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+# collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/

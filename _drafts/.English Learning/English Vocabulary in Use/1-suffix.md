@@ -52,6 +52,8 @@ e.g. The fact that the plane was late added a further complication to our journe
 
 **admission**(admit): a statement in which you admit that something is true or that you have done something wrong.
 
+**obsession**(obsess): an extreme unhealthy interest in something or worry about something, which stops you from thinking about anything else, eg *Prime Obsession*.
+
 ---
 
 ### -ist, -ism

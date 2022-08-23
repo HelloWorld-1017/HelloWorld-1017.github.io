@@ -140,7 +140,7 @@ defaults:
       toc_icon: "heart"
       toc_sticky: true
       author_profile: true # Enable/Disable author sidebar 
-      # classes: wide
+      classes: wide
       # share: true 
       # comments: true
   # _pages

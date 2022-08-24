@@ -12,3 +12,6 @@ decrease,
 
 **deprecate**: to strongly disapprove of or criticize something.
 
+para-
+
+paradoxes: 

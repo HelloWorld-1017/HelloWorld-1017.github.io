@@ -70,3 +70,6 @@ determinism, ==indeterminism?,==
 
 ## 形容词后缀
 
+-ic
+
+**mnemonic**: something such as a poem or a sentence that you use to help you remember a rule, a name etc. eg He talked about the effective use of time, mnemonic tricks, and various kinds of tests.

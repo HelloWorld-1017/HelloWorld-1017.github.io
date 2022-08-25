@@ -4,6 +4,7 @@ title: 【MATLAB Deep Learning Toolbox】 MATLAB error, Deep Learning Toolbox, I
 date: 2022-06-08
 categories: 
  - Programming
+ - Machine Learning
 tags:
  - MATLAB
 toc: false

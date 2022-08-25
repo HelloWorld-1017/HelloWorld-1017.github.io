@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【MATLAB Simscape】电磁铁的电气-机械模型
+title: 【MATLAB Simscape】电磁铁的电路-机械模型
 date: 2022-08-25 17:03:51 +0800
 categories: 
  - Programming

@@ -144,9 +144,9 @@ $$
 
 可以看到，这与动铁芯的位置曲线是一致的。
 
-根据磁阻的计算公式 $\eqref{reluctance}$ ， $\mathrm{d}R/\mathrm{d}x$ 实际上是个常数，就是 $\dfrac1{\mu_0S}$，我们可以验证一下简单验证一下这个想法：
+根据磁阻的计算公式 $\eqref{reluctance}$ ，以及 [Reluctance Force Actuator - MathWorks](https://ww2.mathworks.cn/help/physmod/simscape/ref/reluctanceforceactuator.html) 中的描述
 
-==用mmf和phi计算出R，然后R的差分除以x的差分，看看是否等于 $\dfrac1{\mu_0S}$==，script1
+在运动过程中，$\mathrm{d}R/\mathrm{d}x$ 实际上是个常数，就是 $\dfrac1{\mu_0S}$，
 
 ## 系统方程
 

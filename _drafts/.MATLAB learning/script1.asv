@@ -1,8 +1,5 @@
-% This script is to verify whether the dR/dx is equal to 1/(mu0*CSA) 
-% for Reluctance_Force_Actuator according to eq. R=g/(mu0*mur*CSA).
-% https://ww2.mathworks.cn/help/physmod/simscape/ref/reluctanceforceactuator.html
-% However, the answer is likely 'no'.
-
+% This script is to verify whether the dR/dx is equal to 1/(mu0*CSA) for Reluctance_Force_Actuator
+% But the result is likel
 clc, clear
 
 sym = 'ssc_solenoid_magnetic';
@@ -13,11 +10,11 @@ sim(sym)
 mmf = simlog_ssc_solenoid_magnetic.Solenoid_with_Magnetic_Effects.Reluctance_Force_Actuator.mmf.series.values;
 phi = simlog_ssc_solenoid_magnetic.Solenoid_with_Magnetic_Effects.Reluctance_Force_Actuator.phi.series.values;
 x = simlog_ssc_solenoid_magnetic.Solenoid_with_Magnetic_Effects.Reluctance_Force_Actuator.x.series.values;
-% mmf(1:100)=[];
-% phi(1:100) = [];
-% x(1:100) = [];
+mmf(1:100)=[];
+phi(1:100) = [];
+x(1:100) = [];
 
-% Calculate R using mmf and phi, according to magnetic Ohm's law.
+% Calculate R using mmf and phi
 R = mmf./phi;
 
 % Calculate dR/dx
@@ -25,4 +22,4 @@ diffR = diff(R);
 diffx = diff(x);
 DRDx = diffR./diffx;
 
-result = DRDx - 1/(4*pi*1e-7*4*1e-4);
+% resu = DRDx - 1/(4*pi*10^(-7)*4*10^(-4));

@@ -57,13 +57,13 @@ $$
 
 <br>
 
-#  $\boldsymbol{\mathrm{M}}$-场(磁化强度)
+#  $\boldsymbol{\mathrm{M}}$ 场(磁化强度)
 
-$\boldsymbol{\mathrm{M}}$-场，即磁化强度。在经典电磁学中，磁化强度(magnetization)是用于描述磁性材料中永久磁偶极矩或感应磁偶极矩(permanent or induced magnetic dipole moments)密度的矢量场。在这个矢量场中的运动由方向描述，并且要么是轴向的(Axial)要么是径向的(Diametric)。负责磁化的磁矩来源于原子中电子运动产生的微观电流，或者是来源于电子或原子核的自旋(nuclei)。静磁化强度(net magnetization)由材料对外部磁场的响应产生。在磁场中，顺磁性物质(paramagnetic materials)只会产生很微弱的感应磁化强度，并在外部磁场移除后消失；而铁磁和铁磁材料(ferromagnetic and ferrimagnetic materials)在电场中会产生强烈的磁化强度，并且在移除外部磁场后，仍然保持磁化状态成为永磁体(permanent magnetic)。物质内的磁化强度不一定是一致的，并且在不同的点之间进行变化。**磁化强度不仅描述了物质对外施磁场的响应，还描述了物质是如何改变磁场的，并且可以用于计算这些交互过程中产生的力。**
+$\boldsymbol{\mathrm{M}}$ 场，即磁化强度。在经典电磁学中，磁化强度(magnetization)是用于描述磁性材料中永久磁偶极矩或感应磁偶极矩(permanent or induced magnetic dipole moments)密度的矢量场。在这个矢量场中的运动由方向描述，并且要么是轴向的(Axial)要么是径向的(Diametric)。负责磁化的磁矩来源于原子中电子运动产生的微观电流，或者是来源于电子或原子核的自旋(nuclei)。静磁化强度(net magnetization)由材料对外部磁场的响应产生。在磁场中，顺磁性物质(paramagnetic materials)只会产生很微弱的感应磁化强度，并在外部磁场移除后消失；而铁磁和铁磁材料(ferromagnetic and ferrimagnetic materials)在电场中会产生强烈的磁化强度，并且在移除外部磁场后，仍然保持磁化状态成为永磁体(permanent magnetic)。物质内的磁化强度不一定是一致的，并且在不同的点之间进行变化。**磁化强度不仅描述了物质对外施磁场的响应，还描述了物质是如何改变磁场的，并且可以用于计算这些交互过程中产生的力。**
 
 <br>
 
-物理学家和工程师通常将磁化强度定义为单位体积的磁矩(the quantity of magnetic moment per unit volume)，用伪矢量(pseudovector) $\boldsymbol{\mathrm{M}}$ 表示。$\boldsymbol{\mathrm{M}}$-场，可以用下面的公式进行定义：
+物理学家和工程师通常将磁化强度定义为单位体积的磁矩(the quantity of magnetic moment per unit volume)，用伪矢量(pseudovector) $\boldsymbol{\mathrm{M}}$ 表示。$\boldsymbol{\mathrm{M}}$ 场，可以用下面的公式进行定义：
 
 $$
 \boldsymbol{\mathrm{M}}=\dfrac{\mathrm{d}\boldsymbol{\mathrm{m}}}{\mathrm{d}\boldsymbol{V}}\notag
@@ -71,7 +71,7 @@ $$
 
 式中，$\mathrm{d}\boldsymbol{\mathrm{m}}$ 表示磁矩微元，$\mathrm{d}\boldsymbol{V}$ 表示体积微元。 
 
-$\boldsymbol{\mathrm{M}}$-场实际上就是在某一区域或者流形中磁矩的分布，下面的公式可以更好地反应这个特点：
+$\boldsymbol{\mathrm{M}}$ 场实际上就是在某一区域或者流形中磁矩的分布，下面的公式可以更好地反应这个特点：
 
 $$
 \boldsymbol{\mathrm{m}}=\iiint\boldsymbol{\mathrm{M}}\ \mathrm{d}\mathrm{V}\notag
@@ -84,7 +84,7 @@ $$
 
 
 
-磁化强度和概念可以类比于静电学中电极化(electric polarization)的概念，电极化是电场对物质影响的测量。电极化场(electric polarisation field)，即$\boldsymbol{\mathrm{P}}$-场，$\boldsymbol{\mathrm{P}}$-场决定了表征区域或流形内电极极化的电偶极矩(electric dipole moment) $\boldsymbol{\mathrm{p}}$ ：
+磁化强度和概念可以类比于静电学中电极化(electric polarization)的概念，电极化是电场对物质影响的测量。电极化场(electric polarisation field)，即 $\boldsymbol{\mathrm{P}}$ 场，$\boldsymbol{\mathrm{P}}$ 场决定了表征区域或流形内电极极化的电偶极矩(electric dipole moment) $\boldsymbol{\mathrm{p}}$ ：
 
 $$
 \boldsymbol{\mathrm{P}}=\dfrac{\mathrm{d}\boldsymbol{\mathrm{p}}}{\mathrm{d}\boldsymbol{V}},\ \boldsymbol{\mathrm{p}}=\iiint\boldsymbol{\mathrm{P}}\ \mathrm{d}\mathrm{V}\notag

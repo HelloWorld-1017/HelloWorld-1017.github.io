@@ -45,56 +45,58 @@ R = 14;
 xmax = x(end);
 xmin = x(1);
 
+
 % Calculate partial derivatives for block parameterization in terms of
 % dPhi(i,x)/dx and dPhi(i,x)/di. To do this, use least squares to find
 % a smooth differentiable function fit to flux.
-[b,a]=meshgrid(x,current+1e-5); % 1e-5 offset to avoid zero current
-a=a(:); b=b(:); data_coeff = flux_linkage(:);
-X = [a.^3 b.*a.^2 a.^2 a b a.*b];
-Coeff = (X'*X)\(X'*data_coeff);
-flux_linkage2 = reshape(X*Coeff,length(current),length(x));
+[b,a]=meshgrid(x,current+1e-5); % 1e-5 offset to avoid zero current; b and a, 11-by-5
+a=a(:); b=b(:); data_coeff = flux_linkage(:);% Unwrapped to column vectors
+X = [a.^3 b.*a.^2 a.^2 a b a.*b]; % X, 55-by-6
+Coeff = (X'*X)\(X'*data_coeff);% Solve normal equation to get least square solution, ie Coeff; Coeff, 6-by-1
+flux_linkage2 = reshape(X*Coeff,length(current),length(x));% flux_linkage2, 11-by-5.
 
+
+% Figure 1
 if ~exist('h2_ee_solenoid_fem', 'var') || ...
         ~isgraphics(h2_ee_solenoid_fem, 'figure')
     h2_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
 end
 figure(h2_ee_solenoid_fem)
 clf(h2_ee_solenoid_fem)
-
-%subplot(211)
+hold(gca, "on")
+view(-37.5,30)
+% Plot 'Flux linkage'
 surf(x,current,flux_linkage,'FaceColor',[1 0 0],'FaceAlpha',0.5);
-xlabel('Displacement (m)')
-ylabel('Current (A)')
-zlabel('Flux linkage (Wb)')
-%title('Flux linkage')
-axis([0 2e-4 0 1 0 0.06])
-%subplot(212)
-hold on
+% Plot 'Polynomial fit'
 surf(x,current,flux_linkage2,'FaceColor',[0 0 1],'FaceAlpha',0.5);
+% Plot settings
+title('Flux Linkage vs. Current and Displacement')
 xlabel('Displacement (m)')
 ylabel('Current (A)')
 zlabel('Flux linkage (Wb)')
-%title('Polynomial fit')
-title('Flux Linkage vs. Current and Displacement')
-zz = zeros(length(b),1);
-oo = ones(length(b),1);
-hold off
 axis([0 2e-4 0 1 0 0.06])
 legend({'Flux Linkage Data','Polynomial Fit'},'Location','Best')
+grid on
+hold(gca, "off")
+
 
 
 % Calculate partial derivatives
-dfluxdx = reshape([zz a.^2 zz zz oo a]*Coeff,length(current),length(x));
-dfluxdi = reshape([3.*a.^2 2.*b.*a 2.*a oo zz b]*Coeff,length(current),length(x));
-dfluxdx(1,:)=zeros(1,5); % Set partial derivative to exactly zero for zero current
+zeros_like_b = zeros(length(b),1);
+ones_like_b = ones(length(b),1);
 
+dfluxdx = reshape([zeros_like_b, a.^2, zeros_like_b, zeros_like_b, ones_like_b, a]*Coeff,length(current),length(x));
+dfluxdi = reshape([3.*a.^2, 2.*b.*a, 2.*a, ones_like_b, zeros_like_b, b]*Coeff,length(current),length(x));
+dfluxdx(1,:)=zeros(1,5); % Set partial derivative to exactly zero for zero current, according to official document.
+
+
+% Figure 2
 if ~exist('h3_ee_solenoid_fem', 'var') || ...
         ~isgraphics(h3_ee_solenoid_fem, 'figure')
     h3_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
 end
 figure(h3_ee_solenoid_fem)
 clf(h3_ee_solenoid_fem)
-
 surf(x,current,dfluxdi);
 xlabel('Displacement (m)')
 ylabel('Current (A)')
@@ -102,13 +104,14 @@ zlabel('\partial\Phi/\partiali (Wb/A)')
 title('Partial Derivative of Flux with Respect to Current')
 axis([0 2e-4 0 1 0 0.1])
 
+
+% Figure 3
 if ~exist('h4_ee_solenoid_fem', 'var') || ...
         ~isgraphics(h4_ee_solenoid_fem, 'figure')
     h4_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
 end
 figure(h4_ee_solenoid_fem)
 clf(h4_ee_solenoid_fem)
-
 surf(x,current,dfluxdx);
 xlabel('Displacement (m)')
 ylabel('Current (A)')
@@ -116,9 +119,11 @@ zlabel('\partial\Phi/\partialx (Wb/m)')
 title('Partial Derivative of Flux with Respect to Distance')
 axis([0 2e-4 0 1 -35 0])
 
+
+
 % Calculate L and dL/dx for i=0.1A - used by simplified solenoid
 L = dfluxdi(2,:);
-dLdx = reshape([zz 2.*a zz zz zz oo]*Coeff,length(current),length(x));
+dLdx = reshape([zeros_like_b 2.*a zeros_like_b zeros_like_b zeros_like_b ones_like_b]*Coeff,length(current),length(x));
 dLdx = dLdx(2,:);
 
 % Other initialization data
@@ -148,6 +153,7 @@ for i=2:length(current)
     force2(i,:) = force_x;
 end
 
+% Figure 4
 if ~exist('h5_ee_solenoid_fem', 'var') || ...
         ~isgraphics(h5_ee_solenoid_fem, 'figure')
     h5_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');

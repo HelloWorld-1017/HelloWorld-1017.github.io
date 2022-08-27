@@ -123,7 +123,7 @@ axis([0 2e-4 0 1 -35 0])
 
 % Calculate L and dL/dx for i=0.1A - used by simplified solenoid
 L = dfluxdi(2,:);
-dLdx = reshape([zeros_like_b 2.*a zeros_like_b zeros_like_b zeros_like_b ones_like_b]*Coeff,length(current),length(x));
+dLdx = reshape([zeros_like_b, 2.*a, zeros_like_b, zeros_like_b, zeros_like_b, ones_like_b]*Coeff,length(current),length(x));
 dLdx = dLdx(2,:);
 
 % Other initialization data
@@ -139,7 +139,7 @@ ord = 2; % Use 2nd order polynomial to fit dPhi/dx
 p = zeros(length(current),ord+1);
 for i=2:length(current)
     flux_x = flux_linkage(i,:);
-    p(i,:) = polyfit(x,flux_x,ord); % Use 4th order polynomial
+    p(i,:) = polyfit(x,flux_x,ord); % Use 2th order polynomial
 end
 force2 = zeros(size(flux_linkage));
 force_x = zeros(size(x));
@@ -160,21 +160,22 @@ if ~exist('h5_ee_solenoid_fem', 'var') || ...
 end
 figure(h5_ee_solenoid_fem)
 clf(h5_ee_solenoid_fem)
-
+view(-37.5,30)
+hold(gca, "on")
+% Plot force imported from FEM tool
 surf(x,current,abs(force),'FaceColor',[0 0 1],'FaceAlpha',0.5)
-xlabel('Displacement (m)')
-ylabel('Current (A)')
-zlabel('Force (N)')
-axis([0 2e-4 0 1 0 30])
-hold on
+% Plot force calculated by numerical integration
 surf(x,current,abs(force2),'FaceColor',[1 0 0],'FaceAlpha',0.5)
+% Plot settings
 xlabel('Displacement (m)')
 ylabel('Current (A)')
 zlabel('Force (N)')
 title('Force Magnitude vs. Current and Displacement')
 axis([0 2e-4 0 1 0 30])
-hold off
 legend({'Data from FEM','Calculated'},'Location','Best')
+grid on
+hold(gca, "off")
+
 
 
 

@@ -1,6 +1,8 @@
 【MATLAB Simscape Electrical】
 
-# 简介
+# 模型简介
+
+## 简介
 
 [Solenoid Parameterized with FEM Data - MATLAB & Simulink - MathWorks 中国](https://ww2.mathworks.cn/help/physmod/sps/ug/solenoid-parameterized-with-fem-data.html)
 
@@ -59,9 +61,7 @@ current =
          0    0.1000    0.2000    0.3000    0.4000    0.5000    0.6000    0.7000    0.8000    0.9000    1.0000
 ```
 
-
-
-（2）变量 `x`，`xmin`，`xmax`
+（2）变量 `x`，`xmin`，`xmax`，`x0`
 
 ```matlab
 x =
@@ -77,20 +77,40 @@ xmin =
 xmax =
    2.0000e-04
 ```
+```matlab
+x0 =
+   1.0000e-04
+```
 
+变量`x`，`xmin`，`xmax` 和`x0`都是和位移有关的变量，它们所代表的含义如下图所示：
 
+![image-20220827213343394](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213343394.png)
 
-（3）变量 `dfluxdi` 
+其中，`x0`是设置在模块的`Initial Targets`部分。
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213551308.png" alt="image-20220827213551308" style="zoom:50%;" />
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213612440.png" alt="image-20220827213612440" style="zoom:50%;" />
+
+（3）变量 `flux_linkage`
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826201555904.png" alt="image-20220826201555904" style="zoom:50%;" />
+
+后面可以看到，FEM-Parameterized Linear Actuator组件有两种使用磁链的方式，当选择直接使用磁链数据时，需要用到该变量。
+
+（4）变量 `dfluxdi`，`dfluxdx`
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200111158.png" alt="image-20220826200111158" style="zoom:50%;" />
 
-（4）变量 `dfluxdx`
-
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200450424.png" alt="image-20220826200450424" style="zoom:50%;" />
+
+同样地，FEM-Parameterized Linear Actuator组件有两种使用磁链的方式，当选择使用磁链对于电流和位移的偏导数时，需要用到这两个变量。
 
 （5）变量`force`
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200620400.png" alt="image-20220826200620400" style="zoom:50%;" />
+
+FEM-Parameterized Linear Actuator组件电磁力的计算方式也有两种，一种是直接使用导入数据，一种是模块自动计算。该模型使用的是第一种，需要用到变量`force`。在后面会再提及这一点，并且会对两种方式得到的Force matirx结果进行对比分析。
 
 （6）变量 `R`
 
@@ -99,32 +119,40 @@ R =
     14
 ```
 
-（7）变量 `lambda`
+变量`R`作为线圈电阻输入到两个模型之中。
+
+（7）变量 `lambda`，`mass`
+```matlab
+mass =
+    0.1000
+```
 
 ```matlab
 lambda =
     20
 ```
 
-（8）变量 `mass`
+变量`mass`和`lambda`分别作为Mass-Spring-Damper系统的动铁芯质量Mass和Damper系数输入到两个模型之中。
 
-```matlab
-mass =
-    0.1000
-```
-
-（9）变量 `flux_linkage`
-
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826201555904.png" alt="image-20220826201555904" style="zoom:50%;" />
-
-（10）变量 `L`
+（8）变量 `L` 和 `dLdx`
 
 ```matlab
 L =
     0.0877    0.0828    0.0780    0.0732    0.0683
 ```
 
-# FEM-Parameterized Linear Actuator 组件
+变量`L`用于输入到`ee_solenoid_fem/Linear Solenoid/Calculate Force and Current`中的`LUT PtoL`模块，与变量`x`对应，表示L(x)。
+
+```matlab
+dLdx =
+  -96.8551  -96.8551  -96.8551  -96.8551  -96.8551
+```
+
+同样地，变量`dLdx`用于输入到`ee_solenoid_fem/Linear Solenoid/Calculate Force and Current`中的`LUT P to dL/dx`模块，与变量`x`对应，表示dL(x)/dx。
+
+<br>
+
+# FEM-Parameterized Linear Actuator组件
 
 <figure>
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827111006159.png">
@@ -208,6 +236,12 @@ $$
 
 在模型初始化时，该模式基于模块的磁链信息计算Force matrix，计算方法方式是对$\eqref{eq3}$进行数值积分。
 
+#### 本示例模型的电磁力计算方法
+
+本示例模型所采用的电磁力计算方法是第一种，直接使用FEM仿真导出的电磁力数据。
+
+在后面，在`ee_solenoid_fem_params.m`代码文件中，对比了两种方式得到的结果。
+
 ### （3）`Flux dependence on displacement`参数
 
 为了对linear motor with a repeated flux pattern进行建模，需要将`Flux dependence on displacement`参数设置为`Cyclic`：
@@ -288,6 +322,8 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 因此，理解好FEM-Parameterized Linear Actuator组件的运行原理就掌握了这个电磁铁模型。
 
+<br>
+
 # Linear Solenoid模型
 
 该示例的另一个模型是Linear Solenoid模型：
@@ -321,15 +357,13 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825135053982.png">
     <figcaption><a href="http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/" title="(1) Profile of L(x); (2) Profile of dL/dx">(1) Profile of L(x); (2) Profile of dL/dx</a></figcaption>
 </figure>
-
 这里显然后者更为合理。
 
-# 代码文件
+<br>
 
-Simulink模型文件中的两个`See Code`超链接分别指向了两个.m绘图文件，分别是：`ee_solenoid_fem_plot1position.m`和`ee_solenoid_fem_params.m`文件。第一个文件用于绘制仿真结果，第二个文件则用于可视化磁链和其他相关数据。
+# 绘图代码文件
 
-## `ee_solenoid_fem_plot1position.m`文件
-
+Simulink模型文件中的两个`See Code`超链接分别指向了两个.m绘图文件，分别是：`ee_solenoid_fem_plot1position.m`和`ee_solenoid_fem_params.m`文件。第一个文件用于绘制仿真结果，第二个文件则用于可视化磁链和其他相关数据，后者并不依赖于模型的运行，因此我们首先介绍`ee_solenoid_fem_params.m`所实现的功能。
 
 
 ## `ee_solenoid_fem_params.m`文件
@@ -400,7 +434,7 @@ xmin = x(1);
 
 首先，该文件所选择了一个多项式函数：
 $$
-f(x,i)=a_0i^3+a_1xi^2+a_2i^2+a_3i+a_4x+a_0xi\label{eq4}
+f(x,i)=a_0i^3+a_1xi^2+a_2i^2+a_3i+a_4x+a_5xi\label{eq4}
 $$
 之后求解了一个超定方程所对应的法线方程，得到系数向量的最小二乘解：
 
@@ -449,13 +483,255 @@ hold(gca, "off")
 
 ### Part 3：计算并分别绘制$\partial\Psi/\partial i$和$\partial\Psi/\partial x$的图像
 
-根据原有的磁链数据`flux_linkage`肯定是不能进行求偏导的，因为`flux_linkage`只是一些散点。但是根据上一部分使用MLE所拟合出的多项式函数$\eqref{eq4}$就可以求偏导。
+根据原有的磁链数据`flux_linkage`肯定是不能进行求偏导的，因为`flux_linkage`只是一些散点。但是根据上一部分使用MLE所拟合出的多项式函数$\eqref{eq4}$就可以求偏导，并且多项式求偏导是很简单的，这也是选多项式为插值函数的原因之一。
 
 由式$\eqref{eq4}$可以得到：
 $$
-\dfrac{\partial f(x,i)}{\partial x}=
+\dfrac{\partial f(x,i)}{\partial x}=a_1x^2+a_4+a_5x
 $$
 
+$$
+\dfrac{\partial f(x,i)}{\partial i}=3a_0i^2+2a_1xi+2a_2i+a_3+a_5x\label{eq6}
+$$
+
+```matlab
+% Calculate partial derivatives
+zeros_like_b = zeros(length(b),1);
+ones_like_b = ones(length(b),1);
+
+dfluxdx = reshape([zeros_like_b, a.^2, zeros_like_b, zeros_like_b, ones_like_b, a]*Coeff,length(current),length(x));
+dfluxdi = reshape([3.*a.^2, 2.*b.*a, 2.*a, ones_like_b, zeros_like_b, b]*Coeff,length(current),length(x));
+dfluxdx(1,:)=zeros(1,5); % Set partial derivative to exactly zero for zero current, according to official document.
+
+
+% Figure 2
+if ~exist('h3_ee_solenoid_fem', 'var') || ...
+        ~isgraphics(h3_ee_solenoid_fem, 'figure')
+    h3_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
+end
+figure(h3_ee_solenoid_fem)
+clf(h3_ee_solenoid_fem)
+surf(x,current,dfluxdi);
+xlabel('Displacement (m)')
+ylabel('Current (A)')
+zlabel('\partial\Phi/\partiali (Wb/A)')
+title('Partial Derivative of Flux with Respect to Current')
+axis([0 2e-4 0 1 0 0.1])
+
+
+% Figure 3
+if ~exist('h4_ee_solenoid_fem', 'var') || ...
+        ~isgraphics(h4_ee_solenoid_fem, 'figure')
+    h4_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
+end
+figure(h4_ee_solenoid_fem)
+clf(h4_ee_solenoid_fem)
+surf(x,current,dfluxdx);
+xlabel('Displacement (m)')
+ylabel('Current (A)')
+zlabel('\partial\Phi/\partialx (Wb/m)')
+title('Partial Derivative of Flux with Respect to Distance')
+axis([0 2e-4 0 1 -35 0])
+```
+
+![image-20220827194947911](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194947911.png)
+
+![image-20220827194953964](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194953964.png)
+
+其中需要注意的一行代码是：
+
+```matlab
+dfluxdx(1,:)=zeros(1,5); % Set partial derivative to exactly zero for zero current, according to official document.
+```
+
+这个操作是很有必要的，因为这里的电流只有非负值，在上面提到过，这种情况下零电流处的各个值要额外注意。
+
+### Part 4：计算在i=0.1A时的L值和dL/dx值
+
+代码的第4部分计算i=0.1A时的L值和dL/dx值，这两个值是用于上面提到的`ee_solenoid_fen/Linear Solenoid/Calculate Force and Current`中的两个`PS Lookup Table(1D)`中的。
+
+因为有关系式：
+$$
+\Psi=L(x)i
+$$
+上式两边对i求导，可以得到：
+$$
+\dfrac{\partial\Psi}{\partial i}=L(x)\label{eq8}
+$$
+因此：
+$$
+\dfrac{\partial\Psi}{\partial i}\Big\vert_{i=0.1}=L(x)\Big\vert_{i=0.1}
+$$
+另一方面，根据式$\eqref{eq6}$和式$\eqref{eq8}$可以得到：
+$$
+\dfrac{\mathrm{d}L(x)}{\mathrm{d}x}\Big\vert_{i=0.1}=(2a_1i+a_5)\Big\vert_{i=0.1}
+$$
+
+```matlab
+% Calculate L and dL/dx for i=0.1A - used by simplified solenoid
+L = dfluxdi(2,:);
+dLdx = reshape([zeros_like_b, 2.*a, zeros_like_b, zeros_like_b, zeros_like_b, ones_like_b]*Coeff,length(current),length(x));
+dLdx = dLdx(2,:);
+```
+
+### Part 5：模型其他参数值
+
+这一部分和预加载文件`ee_solenoid_fem_data.mat`中的数据是也是一致的：
+
+```matlab
+x0 = 0.1e-3; % Initial plunger position
+lambda = 20; % Plunger damping (N/(m/s))
+mass = 0.1;  % Plunger mass (kg)
+f_c = 1e6;   % Frequency up to which flux is differentiated
+```
+
+### Part 6：计算电磁力
+
+如果FEM仿真软件只给出了磁链，而没有给出电磁力的值，那么需要根据式$\eqref{eq3}$进行数值积分。
+
+此处在进行数值积分的时候，并没有使用之前最小二乘得到的结果，而是采用了一个二阶多项式拟合$\dfrac{\partial\Psi(x,i)}{\partial x}$，之后进行数值积分。
+
+```matlab
+% If the finite element only gives flux and not force, then force can be
+% found by integrating the partial derivative of flux with respect to
+% distance over current.
+ord = 2; % Use 2nd order polynomial to fit dPhi/dx
+p = zeros(length(current),ord+1);
+for i=2:length(current)
+    flux_x = flux_linkage(i,:);
+    p(i,:) = polyfit(x,flux_x,ord); % Use 2th order polynomial
+end
+force2 = zeros(size(flux_linkage));
+force_x = zeros(size(x));
+for i=2:length(current)
+    % Take average dPhi/dx for the two adjacent currents
+    dflux_dx1 = polyval(polyder(p(i-1,:)),x);
+    dflux_dx2 = polyval(polyder(p(i,:)),x);
+    dflux_dx = (dflux_dx1+dflux_dx2)/2;
+    % Integrate dPhi/dx over current to get incremental force
+    force_x = force_x + (current(i)-current(i-1))*dflux_dx;
+    force2(i,:) = force_x;
+end
+```
+
+之后将FEM提供的电磁力与数值积分得到的电磁力做对比：
+
+```matlab
+% Figure 4
+if ~exist('h5_ee_solenoid_fem', 'var') || ...
+        ~isgraphics(h5_ee_solenoid_fem, 'figure')
+    h5_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
+end
+figure(h5_ee_solenoid_fem)
+clf(h5_ee_solenoid_fem)
+view(-37.5,30)
+hold(gca, "on")
+% Plot force imported from FEM tool
+surf(x,current,abs(force),'FaceColor',[0 0 1],'FaceAlpha',0.5)
+% Plot force calculated by numerical integration
+surf(x,current,abs(force2),'FaceColor',[1 0 0],'FaceAlpha',0.5)
+% Plot settings
+xlabel('Displacement (m)')
+ylabel('Current (A)')
+zlabel('Force (N)')
+title('Force Magnitude vs. Current and Displacement')
+axis([0 2e-4 0 1 0 30])
+legend({'Data from FEM','Calculated'},'Location','Best')
+grid on
+hold(gca, "off")
+```
+
+![image-20220827204556104](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827204556104.png)
+
+## `ee_solenoid_fem_plot1position.m`文件
+
+`ee_solenoid_fem_plot1position.m`文件用于绘制仿真结果，包括动铁芯的位置以及电流的情况，这正是我们关心的两个量。
+
+但Scope和该代码文件所绘制的位置曲线是不一致的：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213742434.png" alt="image-20220827213742434" style="zoom:50%;" />
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213826818.png" alt="image-20220827213826818" style="zoom:50%;" />
+
+示波器纵坐标（位置）的范围是和我们预期是相同的。但是在代码中并没有看到将信号减去一个“偏置”：
+
+```matlab
+simlog_t = simlog_ee_solenoid_fem.Spring_FEM.x.series.time;
+simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm');
+```
+
+这些语句都是直接基于Workspace中的`simlog_ee_solenoid_fem`变量进行操作的，这是一个[simscape.logging.Node](https://ww2.mathworks.cn/help/physmod/simscape/ref/simscape.logging.node.html)的数据类型，只要是基于Simscape模块进行的仿真，都会在工作空间加载这样一个变量。
+
+不清楚它会和Scope记录的数据有所差异，但是还是想要以Scope记录的数据为主，因此我们将其加上一个偏置，即`x0`的值。最终的代码为：
+
+```matlab
+% Code to plot simulation results from ee_solenoid_fem
+%% Plot Description:
+%
+% The plot below shows the difference in behavior between a linear solenoid
+% model and a solenoid model parameterized with data provided from a finite
+% element magnetic field modeling tool.
+
+% Copyright 2016-2021 The MathWorks, Inc.
+
+% Generate new simulation results if they don't exist or if they need to be updated
+if ~exist('simlog_ee_solenoid_fem', 'var') || ...
+        simlogNeedsUpdate(simlog_ee_solenoid_fem, 'ee_solenoid_fem') 
+    sim('ee_solenoid_fem')
+    % Model StopFcn callback adds a timestamp to the Simscape simulation data log
+end
+
+% Reuse figure if it exists, else create new figure
+if ~exist('h1_ee_solenoid_fem', 'var') || ...
+        ~isgraphics(h1_ee_solenoid_fem, 'figure')
+    h1_ee_solenoid_fem = figure('Name', 'ee_solenoid_fem');
+end
+figure(h1_ee_solenoid_fem)
+clf(h1_ee_solenoid_fem)
+
+% Get simulation results
+simlog_t = simlog_ee_solenoid_fem.Spring_FEM.x.series.time;
+simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm')+0.1;
+simlog_xlin = simlog_ee_solenoid_fem.Spring_lin.x.series.values('mm')+0.1;
+simlog_iFEM = simlog_ee_solenoid_fem.FEM_Parameterized_Linear_Actuator.i.series.values('A');
+simlog_ilin = simlog_ee_solenoid_fem.Linear_Solenoid.R1.i.series.values('A');
+
+% Plot results
+simlog_handles(1) = subplot(2, 1, 1);
+plot(simlog_t, simlog_xFEM, 'LineWidth', 1)
+hold on
+plot(simlog_t, simlog_xlin, 'LineWidth', 1)
+hold off
+grid on
+title('Solenoid Extension')
+ylabel('Extension (mm)')
+legend({'FEM','Linear'},'Location','Best');
+
+simlog_handles(2) = subplot(2, 1, 2);
+plot(simlog_t, simlog_iFEM, 'LineWidth', 1)
+hold on
+plot(simlog_t, simlog_ilin, 'LineWidth', 1)
+hold off
+grid on
+title('Solenoid Current')
+ylabel('Current (A)')
+xlabel('Time (s)')
+legend({'FEM','Linear'},'Location','Best');
+
+linkaxes(simlog_handles, 'x')
+
+% Remove temporary variables
+clear simlog_t simlog_handles
+clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
+```
+
+![image-20220827220151500](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827220151500.png)
+
+
+
+# 模型结果分析
+
+==分析初始位置和最终位置的保持力==
 
 
 

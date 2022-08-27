@@ -24,8 +24,8 @@ clf(h1_ee_solenoid_fem)
 
 % Get simulation results
 simlog_t = simlog_ee_solenoid_fem.Spring_FEM.x.series.time;
-simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm');
-simlog_xlin = simlog_ee_solenoid_fem.Spring_lin.x.series.values('mm');
+simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm')+0.1;
+simlog_xlin = simlog_ee_solenoid_fem.Spring_lin.x.series.values('mm')+0.1;
 simlog_iFEM = simlog_ee_solenoid_fem.FEM_Parameterized_Linear_Actuator.i.series.values('A');
 simlog_ilin = simlog_ee_solenoid_fem.Linear_Solenoid.R1.i.series.values('A');
 

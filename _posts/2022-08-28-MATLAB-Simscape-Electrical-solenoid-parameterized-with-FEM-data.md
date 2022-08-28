@@ -1,39 +1,37 @@
-【MATLAB Simscape Electrical】
+---
+layout: single
+title: 【MATLAB Simscape】基于FEM数据的电磁铁模型
+date: 2022-08-28 14:49:01 +0800
+categories: 
+ - Programming
+ - Signals and Systems
+ - Electromagnetism
+tags:
+ - MATLAB
+ - Numerical analysis
+ - Signals and Systems
+---
 
-# 模型简介
+# 模型介绍
 
 ## 简介
 
 [Solenoid Parameterized with FEM Data - MATLAB & Simulink - MathWorks 中国](https://ww2.mathworks.cn/help/physmod/sps/ug/solenoid-parameterized-with-fem-data.html)
 
-这个模型展示了一个连接了复位弹簧(return spring)的有限行程电磁铁(limited travel solenoid)。当线圈回路不通电时，弹簧将铁芯保持在0.1mm处；在0.01s时，线圈通电，铁芯会运动到0mm处；在0.06s时，向动铁芯施加一个比保持力更大的力(10N)，在这个力的作用下，动铁芯会向反向运动，直到0.2mm处。
+该示例展示了一个连接了复位弹簧(return spring)的有限行程电磁铁(limited travel solenoid)。当线圈回路不通电时，弹簧将铁芯保持在0.1mm处；在0.01s时，线圈通电，铁芯会运动到0mm处；在0.06s时，向动铁芯施加一个比保持力更大的力(50N)，在这个力的作用下，动铁芯会向反向运动，直到0.2mm处。
 
-电磁力(solenoid force)和反电动势特征(back emf characteristics)通过模型中的 `FEM-Parameterized Linear Actuator block`模块进行定义。该模块可以调用由有限元磁场建模工具输出的格式化数据。
-
-
+电磁力(solenoid force)和反电动势特征(back emf characteristics)通过模型中的 `FEM-Parameterized Linear Actuator`组件进行定义。该模块可以调用由有限元磁场建模工具输出的格式化数据。
 
 这个模型和[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)最主要的差别是本模型可以很好地捕捉磁饱和效应(magnetic saturation effects)，相反，后者假设电流和电磁力是线性关系。这个线性假设也是[Simscape Electrical™ Solenoid](https://ww2.mathworks.cn/help/physmod/sps/ref/solenoid.html)构建的基础。
 
 原文： Conversely the Simscape example assumes a linear relationship between current and magnetic force. 这里表述不准确，电磁力$F$和电流$i$之间的关系是：$F=\dfrac12i^2\Big(\mathrm{d}L(x)/\mathrm{d}x\Big)$。
 {: .notice--danger}
 
-在这个模型中，子系统`Simplified solenoid with no saturation effects`是基于0.1A时的电磁铁电感数据进行参数化的。这个电感时磁链关于电流的偏导数（==所以是关于位置的函数？==），同样是通过初始文件进行计算的。
-
-
+在这个示例中，子系统`Linear Solenoid`是基于0.1A时的电磁铁电感数据进行参数化的。这个电感是磁链关于电流的偏导数，同样是通过初始文件进行计算的。
 
 将该模型的结果与电磁铁线性模型作比较，可以看出磁饱和效应。
 
-
-
-如果将供电电压从12V减少到1.4V，最终电流会稳定到0.1A，一旦电流稳定到这个值，那么两个模型的曲线将保持一致。
-
-
-
-
-
-
-
-
+## 模型文件
 
 在电脑中找到`ee_solenoid_fem.slx`文件复制到当前文件夹中即可运行、编辑并保存。
 
@@ -84,7 +82,7 @@ x0 =
 
 变量`x`，`xmin`，`xmax` 和`x0`都是和位移有关的变量，它们所代表的含义如下图所示：
 
-![image-20220827213343394](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213343394.png)
+![image-20220828132634721](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828132634721.png)
 
 其中，`x0`是设置在模块的`Initial Targets`部分。
 
@@ -110,7 +108,7 @@ x0 =
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200620400.png" alt="image-20220826200620400" style="zoom:50%;" />
 
-FEM-Parameterized Linear Actuator组件电磁力的计算方式也有两种，一种是直接使用导入数据，一种是模块自动计算。该模型使用的是第一种，需要用到变量`force`。在后面会再提及这一点，并且会对两种方式得到的Force matirx结果进行对比分析。
+FEM-Parameterized Linear Actuator组件电磁力的计算方式也有两种，一种是直接使用导入数据，一种是模块自动计算。该模型使用的是第一种，需要用到变量`force`。在后面会再提及这一点，并且在代码文件中会对两种方式得到的Force matirx结果进行对比分析。
 
 （6）变量 `R`
 
@@ -154,6 +152,12 @@ dLdx =
 
 # FEM-Parameterized Linear Actuator组件
 
+该示例中基于FEM仿真数据的电磁铁模型仅仅包含这样一个FEM-Parameterized Linear Actuator组件和一个Spring组件：
+
+![image-20220827151257870](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827151257870.png)
+
+因此，理解好FEM-Parameterized Linear Actuator组件的运行原理就掌握了这个电磁铁模型。
+
 <figure>
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827111006159.png">
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827111019193.png">
@@ -182,6 +186,7 @@ dLdx =
 ![image-20220827134608116](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827134608116.png)
 
 这种方式依据的就是法拉第电磁感应定律：
+
 $$
 U=iR+\dfrac{\mathrm{d}\Psi(x,i)}{\mathrm{d}t}\label{eq1}
 $$
@@ -195,9 +200,11 @@ $$
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827134802234.png" alt="image-20220827134802234"  />
 
 基于链式求导法则对式$\eqref{eq1}$进行展开：
+
 $$
 U=iR+\dfrac{\partial\Psi}{\partial x}\dfrac{\mathrm{d}x}{\mathrm{d}t}+\dfrac{\partial\Psi}{\partial i}\dfrac{\mathrm{d}i}{\mathrm{d}t}\label{eq2}
 $$
+
 该式就是第二种方式所依据的计算方程。
 
 用户通过向`Flux partial derivative wrt current, dPhi(i,x)/di`参数和`Flux partial wrt displacement, dPhi(i,x)/dx`参数提供$\dfrac{\partial\Psi}{\partial x}$和$\dfrac{\partial\Psi}{\partial x}$即可。
@@ -226,9 +233,7 @@ $$
 F=\int^i_0\dfrac{\partial\Psi(x,i)}{\partial x}\mathrm{d}i\label{eq3}
 $$
 
-==这个公式什么原理？==
-
-#### 模块自动计算force matrix
+#### 模块自动计算Force matrix
 
 将`Calculate force matrix`设置为`Yes`，表示令模块自动计算Force matrix：
 
@@ -314,14 +319,6 @@ $$
 
 thermal port的使用可以参考另一个示例：[Simulating Thermal Effects in Rotational and Translational Actuators](https://ww2.mathworks.cn/help/physmod/sps/ug/simulating-thermal-effects-in-rotational-and-translational-actuators.html)。
 
-## 总结
-
-该示例中基于FEM仿真数据的电磁铁模型仅仅包含这样一个FEM-Parameterized Linear Actuator组件和一个Spring组件：
-
-![image-20220827151257870](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827151257870.png)
-
-因此，理解好FEM-Parameterized Linear Actuator组件的运行原理就掌握了这个电磁铁模型。
-
 <br>
 
 # Linear Solenoid模型
@@ -336,7 +333,7 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 第一点是该实例的这个电磁铁模型构建了双端的Hard Stop，以模拟撞击停止：
 
-![image-20220827160825839](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827160825839.png) 
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827160825839.png" alt="image-20220827160825839" style="zoom:67%;" /> 
 
 ![image-20220827160844674](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827160844674.png)
 
@@ -433,9 +430,11 @@ xmin = x(1);
 代码的第二部分是根据给定点的电流`current`和位移`x`，以及`flux_linkage`进行最小二乘拟合。
 
 首先，该文件所选择了一个多项式函数：
+
 $$
 f(x,i)=a_0i^3+a_1xi^2+a_2i^2+a_3i+a_4x+a_5xi\label{eq4}
 $$
+
 之后求解了一个超定方程所对应的法线方程，得到系数向量的最小二乘解：
 
 ```matlab
@@ -479,13 +478,14 @@ grid on
 hold(gca, "off")
 ```
 
-![image-20220827164330777](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827164330777.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827164330777.png" alt="image-20220827164330777" style="zoom:67%;" />
 
 ### Part 3：计算并分别绘制$\partial\Psi/\partial i$和$\partial\Psi/\partial x$的图像
 
 根据原有的磁链数据`flux_linkage`肯定是不能进行求偏导的，因为`flux_linkage`只是一些散点。但是根据上一部分使用MLE所拟合出的多项式函数$\eqref{eq4}$就可以求偏导，并且多项式求偏导是很简单的，这也是选多项式为插值函数的原因之一。
 
 由式$\eqref{eq4}$可以得到：
+
 $$
 \dfrac{\partial f(x,i)}{\partial x}=a_1x^2+a_4+a_5x
 $$
@@ -534,9 +534,9 @@ title('Partial Derivative of Flux with Respect to Distance')
 axis([0 2e-4 0 1 -35 0])
 ```
 
-![image-20220827194947911](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194947911.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194947911.png" alt="image-20220827194947911" style="zoom:67%;" />
 
-![image-20220827194953964](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194953964.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194953964.png" alt="image-20220827194953964" style="zoom:67%;" />
 
 其中需要注意的一行代码是：
 
@@ -551,18 +551,25 @@ dfluxdx(1,:)=zeros(1,5); % Set partial derivative to exactly zero for zero curre
 代码的第4部分计算i=0.1A时的L值和dL/dx值，这两个值是用于上面提到的`ee_solenoid_fen/Linear Solenoid/Calculate Force and Current`中的两个`PS Lookup Table(1D)`中的。
 
 因为有关系式：
+
 $$
 \Psi=L(x)i
 $$
+
 上式两边对i求导，可以得到：
+
 $$
 \dfrac{\partial\Psi}{\partial i}=L(x)\label{eq8}
 $$
+
 因此：
+
 $$
 \dfrac{\partial\Psi}{\partial i}\Big\vert_{i=0.1}=L(x)\Big\vert_{i=0.1}
 $$
+
 另一方面，根据式$\eqref{eq6}$和式$\eqref{eq8}$可以得到：
+
 $$
 \dfrac{\mathrm{d}L(x)}{\mathrm{d}x}\Big\vert_{i=0.1}=(2a_1i+a_5)\Big\vert_{i=0.1}
 $$
@@ -588,6 +595,9 @@ f_c = 1e6;   % Frequency up to which flux is differentiated
 ### Part 6：计算电磁力
 
 如果FEM仿真软件只给出了磁链，而没有给出电磁力的值，那么需要根据式$\eqref{eq3}$进行数值积分。
+
+本示例给出了电磁力数据`force`，这里只是将数值计算的结果与真实的网格数据做一个比较，并展现数值积分的过程。
+{: .notice--primary}
 
 此处在进行数值积分的时候，并没有使用之前最小二乘得到的结果，而是采用了一个二阶多项式拟合$\dfrac{\partial\Psi(x,i)}{\partial x}$，之后进行数值积分。
 
@@ -641,7 +651,7 @@ grid on
 hold(gca, "off")
 ```
 
-![image-20220827204556104](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827204556104.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827204556104.png" alt="image-20220827204556104" style="zoom:67%;" />
 
 ## `ee_solenoid_fem_plot1position.m`文件
 
@@ -725,55 +735,84 @@ clear simlog_t simlog_handles
 clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 ```
 
-![image-20220827220151500](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827220151500.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827220151500.png" alt="image-20220827220151500" style="zoom:67%;" />
 
-
+<br>
 
 # 模型结果分析
 
-## 磁滞效应
+## 磁饱和效应
+
+这个模型和[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)最主要的差别是本模型可以很好地捕捉磁饱和效应。
+{: .notice--primary}
+
+这个示例的目的就是为了展现磁饱和效应。磁饱和效应最明显的现象就是，需要更大的电流才能产生和线性情况相同的磁场：
+
+![image-20220828143915042](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828143915042.png)
+
+以及当50N推到动铁芯时的电磁力变化：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828144415581.png" alt="image-20220828144415581" style="zoom: 67%;" />
 
 
 
-## 电磁力与保持力
+## 虚假的保持力(数值计算的误差)
 
 [【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁体模型有一个很重要的特点就是它在最终的位置没有保持力，当电磁铁停止通电后，动铁芯就会在弹簧力的作用下迅速向反方向运动。
 
 在该示例的模型中，我们将开关换为一个方波信号，使电路在0.01s通电，在0.02s断电：
 
-![image-20220828114347407](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114347407.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114347407.png" alt="image-20220828114347407" style="zoom:67%;" />
 
 并且去掉在0.06s添加的50N的作用力。之后，观察结果：
 
-![image-20220828114706220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114706220.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114706220.png" alt="image-20220828114706220" style="zoom:67%;" />
 
 可以看到在0.02s断电后，电磁力能够在最终位置保持，但是也仅仅是保持一会儿，之后就会缓慢地向反方向移动。
 
 如果我们延长仿真时间到2s（并且相应修改Pulse开关的参数），则结果：
 
-![image-20220828114950237](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114950237.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114950237.png" alt="image-20220828114950237" style="zoom:67%;" />
 
 可以看到，动铁芯最终会返回并且稳定在初始位置。
 
-这个电磁力是通过数据文件中的`force`变量所定义的，在初始时刻$x_0=0.1$，$i_0=0$，
+🙅‍♂️🙅‍♂️🙅‍♂️但是这里的保持力并不是我们所期望的保持力（永磁体所提供的保持力），因为电磁力是通过数据文件中的`force`变量所定义的，`force`变量的行表示电流，列表示位移：
 
-![image-20220828115518353](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828115518353.png)
+![image-20220828133727244](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828133727244.png)
 
-此时对应的电磁力为-0.6N，弹簧弹力约为0N：
+我们可以看到当电流切断，即电流$i=0$时，电磁力一定为零，并不存在保持力。
 
-![image-20220828120023796](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828120023796.png)
+之所以我们可以看到一小段的保持现象，我认为有两部分原因：
 
-合力为-0.6N的力作用在Mass-Spring-Damper系统上，质量并不会运动。比如我们将代表Damper的`lambda`变量修改为0，观察一下结果：
+（1）是数值计算的问题，因为FEM-Parameterized Linear Actuator组件采用了内插算法，因此在不是给定点的位置的值不是很准确。
 
+（2）因为电磁力是施加于Mass-Spring-Damper系统的，因此它们之间的交互使得上述数值计算的问题进行了进一步的放大。
 
+我们也可以通过FEM-Parameterized Linear Actuator组件电磁力的曲线看到这一点：
 
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828134509587.png" alt="image-20220828134509587" style="zoom:67%;" />
 
+当切断电流后，电磁力并没有立即变为0。
 
+🙋‍♂️🙋‍♂️🙋‍♂️如果想要得到例如永磁体所产生的保持力，`force`变量的第一行一定不能都是零值：
 
+![image-20220828134739949](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828134739949.png)
 
+## 线圈电流的双峰以及振荡现象
 
+[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁铁模型得到结果：
 
-==分析初始位置和最终位置的保持力==
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825133727626.png" alt="image-20220825133727626" style="zoom:50%;" />
 
+其线圈电流表现出明显的双峰现象，并且电流曲线和位移曲线都表现出振荡的现象，而本示例的结果并没有很明显。
 
+但是我们仔细观察本示例的结果，其实也可以看到类似的现象：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828142332932.png" alt="image-20220828142332932" style="zoom: 67%;" />
+
+只是很不明显。不明显的原因的原因有两个方面：
+
+（1）本示例的模型的运动距离是0.1mm，而前者的运动距离5mm，这使得双峰现象很不明显；
+
+（2）由于运动距离过小，就导致速度很小，于是Mass-Spring-Damper系统的振荡现象就不明显；
 

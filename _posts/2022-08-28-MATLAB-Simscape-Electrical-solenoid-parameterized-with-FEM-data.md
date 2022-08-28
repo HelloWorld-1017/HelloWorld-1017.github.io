@@ -655,24 +655,11 @@ hold(gca, "off")
 
 ## `ee_solenoid_fem_plot1position.m`文件
 
-`ee_solenoid_fem_plot1position.m`文件用于绘制仿真结果，包括动铁芯的位置以及电流的情况，这正是我们关心的两个量。
+`ee_solenoid_fem_plot1position.m`文件用于绘制仿真结果，包括**弹簧的**的位置以及电流的情况：
 
-但Scope和该代码文件所绘制的位置曲线是不一致的：
+![image-20220828191913588](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828191913588.png)
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213742434.png" alt="image-20220827213742434" style="zoom:50%;" />
-
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213826818.png" alt="image-20220827213826818" style="zoom:50%;" />
-
-示波器纵坐标（位置）的范围是和我们预期是相同的。但是在代码中并没有看到将信号减去一个“偏置”：
-
-```matlab
-simlog_t = simlog_ee_solenoid_fem.Spring_FEM.x.series.time;
-simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm');
-```
-
-这些语句都是直接基于Workspace中的`simlog_ee_solenoid_fem`变量进行操作的，这是一个[simscape.logging.Node](https://ww2.mathworks.cn/help/physmod/simscape/ref/simscape.logging.node.html)的数据类型，只要是基于Simscape模块进行的仿真，都会在工作空间加载这样一个变量。
-
-不清楚它会和Scope记录的数据有所差异，但是还是想要以Scope记录的数据为主，因此我们将其加上一个偏置，即`x0`的值。最终的代码为：
+但是我们更关心动铁芯的位移和电流的情况，因此我们修改一下代码：
 
 ```matlab
 % Code to plot simulation results from ee_solenoid_fem
@@ -701,8 +688,8 @@ clf(h1_ee_solenoid_fem)
 
 % Get simulation results
 simlog_t = simlog_ee_solenoid_fem.Spring_FEM.x.series.time;
-simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm')+0.1;
-simlog_xlin = simlog_ee_solenoid_fem.Spring_lin.x.series.values('mm')+0.1;
+simlog_xFEM = simlog_ee_solenoid_fem.FEM_Parameterized_Linear_Actuator.x.series.values('mm');
+simlog_xlin = simlog_ee_solenoid_fem.Linear_Solenoid.Position_Velocity_Force_Interface.Translational_Motion_Sensor.P.series.values('mm');
 simlog_iFEM = simlog_ee_solenoid_fem.FEM_Parameterized_Linear_Actuator.i.series.values('A');
 simlog_ilin = simlog_ee_solenoid_fem.Linear_Solenoid.R1.i.series.values('A');
 
@@ -713,8 +700,8 @@ hold on
 plot(simlog_t, simlog_xlin, 'LineWidth', 1)
 hold off
 grid on
-title('Solenoid Extension')
-ylabel('Extension (mm)')
+title('Plunger Position')
+ylabel('x(mm)')
 legend({'FEM','Linear'},'Location','Best');
 
 simlog_handles(2) = subplot(2, 1, 2);
@@ -735,7 +722,9 @@ clear simlog_t simlog_handles
 clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827220151500.png" alt="image-20220827220151500" style="zoom:67%;" />
+
+
+![image-20220828192245220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828192245220.png)
 
 <br>
 

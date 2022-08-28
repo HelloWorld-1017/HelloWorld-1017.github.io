@@ -24,8 +24,8 @@ clf(h1_ee_solenoid_fem)
 
 % Get simulation results
 simlog_t = simlog_ee_solenoid_fem.Spring_FEM.x.series.time;
-simlog_xFEM = simlog_ee_solenoid_fem.Spring_FEM.x.series.values('mm')+0.1;
-simlog_xlin = simlog_ee_solenoid_fem.Spring_lin.x.series.values('mm')+0.1;
+simlog_xFEM = simlog_ee_solenoid_fem.FEM_Parameterized_Linear_Actuator.x.series.values('mm');
+simlog_xlin = simlog_ee_solenoid_fem.Linear_Solenoid.Position_Velocity_Force_Interface.Translational_Motion_Sensor.P.series.values('mm');
 simlog_iFEM = simlog_ee_solenoid_fem.FEM_Parameterized_Linear_Actuator.i.series.values('A');
 simlog_ilin = simlog_ee_solenoid_fem.Linear_Solenoid.R1.i.series.values('A');
 
@@ -36,8 +36,8 @@ hold on
 plot(simlog_t, simlog_xlin, 'LineWidth', 1)
 hold off
 grid on
-title('Solenoid Extension')
-ylabel('Extension (mm)')
+title('Plunger Position')
+ylabel('x(mm)')
 legend({'FEM','Linear'},'Location','Best');
 
 simlog_handles(2) = subplot(2, 1, 2);

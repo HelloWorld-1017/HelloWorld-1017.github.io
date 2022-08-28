@@ -731,6 +731,48 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 # 模型结果分析
 
+## 磁滞效应
+
+
+
+## 电磁力与保持力
+
+[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁体模型有一个很重要的特点就是它在最终的位置没有保持力，当电磁铁停止通电后，动铁芯就会在弹簧力的作用下迅速向反方向运动。
+
+在该示例的模型中，我们将开关换为一个方波信号，使电路在0.01s通电，在0.02s断电：
+
+![image-20220828114347407](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114347407.png)
+
+并且去掉在0.06s添加的50N的作用力。之后，观察结果：
+
+![image-20220828114706220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114706220.png)
+
+可以看到在0.02s断电后，电磁力能够在最终位置保持，但是也仅仅是保持一会儿，之后就会缓慢地向反方向移动。
+
+如果我们延长仿真时间到2s（并且相应修改Pulse开关的参数），则结果：
+
+![image-20220828114950237](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114950237.png)
+
+可以看到，动铁芯最终会返回并且稳定在初始位置。
+
+这个电磁力是通过数据文件中的`force`变量所定义的，在初始时刻$x_0=0.1$，$i_0=0$，
+
+![image-20220828115518353](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828115518353.png)
+
+此时对应的电磁力为-0.6N，弹簧弹力约为0N：
+
+![image-20220828120023796](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828120023796.png)
+
+合力为-0.6N的力作用在Mass-Spring-Damper系统上，质量并不会运动。比如我们将代表Damper的`lambda`变量修改为0，观察一下结果：
+
+
+
+
+
+
+
+
+
 ==分析初始位置和最终位置的保持力==
 
 

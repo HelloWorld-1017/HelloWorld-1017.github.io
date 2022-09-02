@@ -1,14 +1,14 @@
 ---
 layout: single
-title: 【MATLAB Graphics】imagesc 函数
+title: 【MATLAB Graphics】`imagesc` 函数
 date: 2022-07-18 19:09:19 +0800
 categories: 
  - Programming
 tags:
  - MATLAB
-toc: false
 ---
 
+# 基本语法
 
 > **imagesc**
 > Display image with scaled color
@@ -50,27 +50,49 @@ colorbar
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718185509146.png" alt="image-20220718185509146" style="zoom:50%;" />
 
----
+<br>
 
-另外，**imagesc** 函数可以设置色卡最低端（最顶端）所所对应的最小（最大）值，矩阵 $C$ 中小于最小值（大于最大值）的数值都会被设置为色卡最低端（最顶端）所对应的颜色。
+# 改变横纵坐标
+
+上面的图像中，横坐标都是递增，而纵坐标是递减的。如果想改变这种设置，需要设置：
+
+```matlab
+clc, clear, close all
+
+x = [5 8];
+y = [3 6];
+C = [0 2 4 6; 8 10 12 14; 16 18 20 22];
+imagesc('xData', x, 'yData', y,'CData', C)
+colorbar
+```
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220902084705663.png" alt="image-20220902084705663" style="zoom:67%;" />
+
+<br>
+
+# clims
+
+**imagesc** 函数可以设置色卡最低端（最顶端）所所对应的最小（最大）值，矩阵 $C$ 中小于最小值（大于最大值）的数值都会被设置为色卡最低端（最顶端）所对应的颜色。
 
 ```matlab
 C = [0 2 4 6; 8 10 12 14; 16 18 20 22];
-clims = [4 18];
-imagesc(C,clims)
+clims = [4 18];% [limit_min, limit_max]
+imagesc(C, clims)
 colorbar
 ```
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718190512349.png" alt="image-20220718190512349" style="zoom:50%;" />
 
-----
+<br>
 
-MATLAB 所采用的默认色卡是 ‘Parula’，用户可以自己设置，如：
+# 色卡
+
+MATLAB 所采用的默认色卡是 `Parula`，用户可以自己设置，如：
 
 ```matlab
 C = [0 2 4 6; 8 10 12 14; 16 18 20 22];
-clims = [4 18];
-imagesc(C,clims)
+clims = [4 18];% [limit_min, limit_max]
+imagesc(C, clims)
 colormap('Jet')
 colorbar
 ```
@@ -81,7 +103,7 @@ MATLAB 内建的色卡有以下几种：
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718190340288.png" alt="image-20220718190340288" style="zoom:50%;" />
 
----
+<br>
 
 **参考**
 

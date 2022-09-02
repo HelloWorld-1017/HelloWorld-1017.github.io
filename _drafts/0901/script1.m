@@ -1,6 +1,6 @@
 clc, clear, close all
 
-x = [0, 0; 2, 0];
+
 
 interval = linspace(0, 2, 100);
 [xGrid, yGrid] = meshgrid(interval, interval);
@@ -13,6 +13,11 @@ D = [d1, d2];
 % contourf(xGrid, yGrid, ...
 %     reshape(idx, size(xGrid, 1), size(yGrid, 2)));
 
-imagesc(x, y, ...
-    reshape(idx, size(xGrid, 1), size(yGrid, 2)));% Top to down
-colorbar 
+imagesc('XData', [0, 2], 'Ydata', [2, 0], ...
+    'CData', reshape(idx, size(xGrid, 1), size(yGrid, 2)));% Top to down
+% colorbar
+
+
+axis([0, 2, 0, 2])
+grid on
+xlabel('haode')

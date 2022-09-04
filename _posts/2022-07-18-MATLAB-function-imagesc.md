@@ -52,9 +52,9 @@ colorbar
 
 <br>
 
-# 改变横纵坐标
+# 改变纵坐标
 
-上面的图像中，横坐标都是递增，而纵坐标是递减的。如果想改变这种设置，需要设置：
+上面的图像中，横坐标都是递增，而纵坐标是递减的。如果想改变这种设置，可以用两种方式，更推荐其中第2种方式，因为可以保留下坐标Ticks的竖线：
 
 ```matlab
 clc, clear, close all
@@ -62,11 +62,13 @@ clc, clear, close all
 x = [5 8];
 y = [3 6];
 C = [0 2 4 6; 8 10 12 14; 16 18 20 22];
-imagesc('xData', x, 'yData', y,'CData', C)
+imagesc(x, y, C)
+% imagesc('xData', x, 'yData', y,'CData', C) % Method 1
+set(gca, 'yDir', 'normal') % Method 2
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220902084705663.png" alt="image-20220902084705663" style="zoom:67%;" />
+![image-20220904154245136](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904154245136.png)
 
 <br>
 

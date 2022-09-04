@@ -7,4 +7,5 @@ _site
 .vscode
 .idea
 .gif
+.avi
 __pycache__

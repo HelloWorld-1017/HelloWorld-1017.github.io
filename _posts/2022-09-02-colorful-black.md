@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【MATLAB Graphics】眼前的黑不是黑
+title: 【MATLAB Graphics】Colourful Black
 date: 2022-09-02 19:19:19 +0800
 categories: 
  - Programming

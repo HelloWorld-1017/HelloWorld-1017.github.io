@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【MATLAB Graphics】title 
+title: 【MATLAB Graphics】`sprintf` Function and `title` Function
 date: 2022-09-12 14:42:37 +0800
 categories: 
  - Programming
@@ -29,9 +29,11 @@ box on
 grid on
 ```
 
-<img src="../AppData/Roaming/Typora/typora-user-images/image-20220912141740327.png" alt="image-20220912141740327" style="zoom:50%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912231156922.png" alt="image-20220912231156922" style="zoom:50%;" />
 
 但是🤦‍♂️！`sprintf`函数的目的是为了向命令行中打印文本，所以它不支持LaTeX解释器，这一点使得这种用法其实不是很实用。
+
+但是🙆‍♂️！受此启发，可以使用`sprintf`函数向`eval`函数传递参数，可以提高代码的可读性。
 
 顺便学习了一下`title`函数的用法，`title`函数是可以支持双行标题和子标题的。
 

@@ -2,14 +2,13 @@
 layout: single
 title: Gamma函数和Beta函数的定义及性质
 date: 2022-07-07
-categories: Mathematics
+categories: 
+ - Mathematics
 tags: 
-  - Probability theory and mathematical statistics
+ - Probability theory and mathematical statistics
 ---
 
-
-
-## Gamma函数
+# Gamma函数
 
 $\Gamma$ 函数（读作Gamma函数）$\Gamma(x)$，通过积分
 
@@ -67,9 +66,9 @@ $$
 \end{aligned}
 $$
 
----
+<br>
 
-## Beta函数
+# Beta函数
 $\mathrm{B}$ 函数（读作Beta函数）$\mathrm{B}(x,y)$，通过积分
 
 $$
@@ -78,7 +77,7 @@ $$
 
 来定义。此积分在 $x\gt0$ 且 $y\gt0$ 时有意义。
 
-
+<br>
 
 $\Gamma$ 函数与 $\mathrm{B}$ 函数之间有着重要的关系式：
 
@@ -86,8 +85,8 @@ $$
 \mathrm{B}(x,y)=\dfrac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}
 $$
 
+<br>
 
----
 **参考**
 
 [1] 概率论与数理统计. 陈希孺编著. 合肥: 中国科学技术大学出版社, 2009.2(2019.8重印).

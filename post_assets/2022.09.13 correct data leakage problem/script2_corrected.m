@@ -11,8 +11,8 @@ accu_std = std(accus);
 
 sprintf('Average of accuracies is %.4f,\n Standard diviation of accuracies is %.4f', ...
     accu_ave, accu_std)
-% 'Average of accuracies is 85.7857,
-%   Standard diviation of accuracies is 4.0679'
+% 'Average of accuracies is 0.8660,
+%   Standard diviation of accuracies is 0.0359'
 
 function accu = TrainAndTest(X, Y)
 % Split features of different class 
@@ -62,6 +62,6 @@ Y_test = [repmat("g", rowsg, 1); repmat("b", rowsb, 1)];
 
 % Make prediction
 pred = mdl.predict(Features_test);
-% Calculate accuracies
-accu = sum(strcmp(pred, Y_test))/numel(Y_test)*100;
+% Calculate accuracie
+accu = sum(strcmp(pred, Y_test))/numel(Y_test);
 end

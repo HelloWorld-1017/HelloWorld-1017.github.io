@@ -10,6 +10,7 @@ end
 accu_ave = mean(accus);
 accu_std = std(accus);
 
+
 sprintf('Average of accuracies is %.4f,\n Standard diviation of accuracies is %.4f', ...
     accu_ave, accu_std)
 % 'Average of accuracies is 0.9767,

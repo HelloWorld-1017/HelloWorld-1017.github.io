@@ -1,19 +1,19 @@
 function [X_train, Y_train, X_test, Y_test] = helperConstructTrainAndTestSet(Features, Labels, numPerClass)
-Labels = categorical(Labels);
-% https://ww2.mathworks.cn/help/matlab/ref/categorical.html
-tbl = tabulate(Labels);
+
+classes = unique(Labels);
+if isa(classes, "double")
+    classes = string(classes);
+end
+
 
 X_train = []; Y_train = [];
 X_generate = []; Y_generate = [];
 X_test = []; Y_test = [];
 
-
-
-
-for i = 1:height(tbl)
-    class = string(tbl{i});
+for i = 1:numel(classes)
+    class = string(classes{i});
     % Split the features of different classes
-    eval(['idx = strcmp(Labels, ', class, ');']);
+    eval(['idx = strcmp(Labels, ', char(class), ');']);
     eval(sprintf('Features_%s = Features(idx, :);', class));
 
     % Split train and test set

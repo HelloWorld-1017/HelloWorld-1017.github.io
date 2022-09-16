@@ -7,6 +7,11 @@ Features = meas;
 numPerClass = 5e2;
 
 [CategoricalVariable, Classes] = findgroups(Labels);
+
+
+
+% Try: trainDataFused = cellfun(@(data) degradationSensorFusion(data, sensorToFuse, weights), trainDataNormalized, ...
+%     'UniformOutput', false);
 % for i = 1:unique(CategoricalVariable)
 %     
 % end

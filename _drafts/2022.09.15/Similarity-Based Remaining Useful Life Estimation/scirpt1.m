@@ -21,7 +21,7 @@ dataVariables = varNames(6:26);
 
 % Visualize a sample of the ensemble data
 nsample = 10;
-figure('Units', 'pixels', 'Position', [609, 265,1306, 990])
+figure('Units', 'pixels', 'Position', [299, 101, 1100, 789])
 helperPlotEnsemble(trainData, timeVariable, [conditionVariables(1:2) dataVariables(1:2)], nsample)
 
 
@@ -60,6 +60,158 @@ figure(4)
 helperPlotEnsemble(trainDataNormalized, timeVariable, dataVariables(1:4), nsample)
 
 %% Trendability Analysis
+numSensors = length(dataVariables);
+signalSlope = zeros(numSensors, 1);
+warn = warning('off');
+for ct = 1:numSensors
+    tmp = cellfun(@(tbl) tbl(:, cellstr(dataVariables(ct))), trainDataNormalized, 'UniformOutput', false);
+    mdl = linearDegradationModel(); % create model
+    fit(mdl, tmp); % train mode
+    signalSlope(ct) = mdl.Theta;
+end
+warning(warn);
+
+[~, idx] = sort(abs(signalSlope), 'descend');
+sensorTrended = sort(idx(1:8));
+
+figure(5)
+helperPlotEnsemble(trainDataNormalized, timeVariable, dataVariables(sensorTrended(3:6)), nsample)
+
+
+%% Construct Health Indicator
+for j=1:numel(trainDataNormalized)
+    data = trainDataNormalized{j};
+    rul = max(data.time)-data.time;
+    data.health_condition = rul / max(rul);
+    trainDataNormalized{j} = data;
+end
+
+figure(6)
+helperPlotEnsemble(trainDataNormalized, timeVariable, "health_condition", nsample)
+
+trainDataNormalizedUnwrap = vertcat(trainDataNormalized{:});
+
+sensorToFuse = dataVariables(sensorTrended);
+X = trainDataNormalizedUnwrap{:, cellstr(sensorToFuse)};
+y = trainDataNormalizedUnwrap.health_condition;
+regModel = fitlm(X, y);
+bias = regModel.Coefficients.Estimate(1);
+weights = regModel.Coefficients.Estimate(2:end);
+
+% Construct a single health indicator by multiplying the sensor measurements with their associated weights
+trainDataFused = cellfun(@(data) degradationSensorFusion(data, sensorToFuse, weights), trainDataNormalized, ...
+    'UniformOutput', false);% trainDataFused, 208x1 cell
+
+% Visualize the fused health indicator for training data
+figure(7)
+helperPlotEnsemble(trainDataFused, [], 1, nsample)
+xlabel('Time')
+ylabel('Health Indicator')
+title('Training Data')
+
+%% Apply same operation to validation data
+validationDataNormalized = cellfun(@(data) regimeNormalization(data, centers, centerstats), ...
+    validationData, 'UniformOutput', false);
+validationDataFused = cellfun(@(data) degradationSensorFusion(data, sensorToFuse, weights), ...
+    validationDataNormalized, 'UniformOutput', false);
+
+figure(8)
+helperPlotEnsemble(validationDataFused, [], 1, nsample)
+xlabel('Time')
+ylabel('Health Indicator')
+title('Validation Data')
+%% Build similarity RUL Model
+mdl = residualSimilarityModel(...
+    'Method', 'poly2',...
+    'Distance', 'absolute',...
+    'NumNearestNeighbors', 50,...
+    'Standardize', 1);
+
+fit(mdl, trainDataFused);
+
+%% Perfomance Evaluation
+% To evaluate the similarity RUL model, use 50%, 70% and 90% of a sample validation data to predict its RUL.
+breakpoint = [0.5, 0.7, 0.9];
+validationDataTmp = validationDataFused{3}; % use one validation data for illustration
+
+% Use the validation data before the first breakpoint, which is 50% of the lifetime
+bpidx = 1;
+validationDataTmp50 = validationDataTmp(1:ceil(end*breakpoint(bpidx)),:);
+trueRUL = length(validationDataTmp) - length(validationDataTmp50);
+[estRUL, ciRUL, pdfRUL] = predictRUL(mdl, validationDataTmp50);
+
+% Visualize the validation data truncated at 50% 
+% and its nearest neighbors.
+figure(9)
+compare(mdl, validationDataTmp50);
+
+% Visualize the estimated RUL compared to the true RUL and the probability distribution of the estimated RUL.
+figure(10)
+helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
+
+% 
+bpidx = 2;
+validationDataTmp70 = validationDataTmp(1:ceil(end*breakpoint(bpidx)), :);
+trueRUL = length(validationDataTmp) - length(validationDataTmp70);
+[estRUL,ciRUL,pdfRUL] = predictRUL(mdl, validationDataTmp70);
+figure(11)
+compare(mdl, validationDataTmp70);
+figure(12)
+helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
+
+% 
+bpidx = 3;
+validationDataTmp90 = validationDataTmp(1:ceil(end*breakpoint(bpidx)), :);
+trueRUL = length(validationDataTmp) - length(validationDataTmp90);
+[estRUL,ciRUL,pdfRUL] = predictRUL(mdl, validationDataTmp90);
+
+figure
+compare(mdl, validationDataTmp90);
+
+% Repeat the same evaluation procedure fo the whole validation data set
+numValidation = length(validationDataFused);
+numBreakpoint = length(breakpoint);
+error = zeros(numValidation, numBreakpoint);
+
+for dataIdx = 1:numValidation
+    tmpData = validationDataFused{dataIdx};
+    for bpidx = 1:numBreakpoint
+        tmpDataTest = tmpData(1:ceil(end*breakpoint(bpidx)), :);
+        trueRUL = length(tmpData) - length(tmpDataTest);
+        [estRUL, ~, ~] = predictRUL(mdl, tmpDataTest);
+        error(dataIdx, bpidx) = estRUL - trueRUL;
+    end
+end
+
+[pdf50, x50] = ksdensity(error(:, 1));
+[pdf70, x70] = ksdensity(error(:, 2));
+[pdf90, x90] = ksdensity(error(:, 3));
+
+figure
+ax(1) = subplot(3,1,1);
+hold on
+histogram(error(:, 1), 'BinWidth', 5, 'Normalization', 'pdf')
+plot(x50, pdf50)
+hold off
+xlabel('Prediction Error')
+title('RUL Prediction Error using first 50% of each validation ensemble member')
+
+ax(2) = subplot(3,1,2);
+hold on
+histogram(error(:, 2), 'BinWidth', 5, 'Normalization', 'pdf')
+plot(x70, pdf70)
+hold off
+xlabel('Prediction Error')
+title('RUL Prediction Error using first 70% of each validation ensemble member')
+
+ax(3) = subplot(3,1,3);
+hold on
+histogram(error(:, 3), 'BinWidth', 5, 'Normalization', 'pdf')
+plot(x90, pdf90)
+hold off
+xlabel('Prediction Error')
+title('RUL Prediction Error using first 90% of each validation ensemble member')
+linkaxes(ax)
 
 
 %% Custom Functions
@@ -196,4 +348,38 @@ dataFused = movmean(dataFusedRaw, [stepBackward stepForward]);
 
 % Offset the data to 1
 dataFused = dataFused + 1 - dataFused(1);
+end
+
+function helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
+% HELPERPLOTRULDISTRIBUTION Plot RUL distribution
+%
+% This function supports the Similarity-based Remaining Useful Life
+% Estimation example. It may change in a future release.
+
+%  Copyright 2017-2018 The MathWorks, Inc.
+
+hold on
+plot(pdfRUL.RUL, pdfRUL.ProbabilityDensity, 'b');
+idx = find(pdfRUL.RUL > trueRUL, 1, 'first');
+if isempty(idx)
+    y = pdfRUL.ProbabilityDensity(end);
+else
+    y = pdfRUL.ProbabilityDensity(idx);
+end
+plot([trueRUL, trueRUL], [0, y], 'r');
+idx = find(pdfRUL.RUL > estRUL, 1, 'first');
+if isempty(idx)
+    y = pdfRUL.ProbabilityDensity(end);
+else
+    y = pdfRUL.ProbabilityDensity(idx);
+end
+plot([estRUL, estRUL], [0, y], 'g');
+idx = pdfRUL.RUL >= ciRUL(1) & pdfRUL.RUL<=ciRUL(2);
+area(pdfRUL.RUL(idx), pdfRUL.ProbabilityDensity(idx), ...
+    'FaceAlpha', 0.2, 'FaceColor', 'y', 'EdgeColor', 'none');
+hold off
+legend('Probability Density Function', 'True RUL', 'Estimated RUL', '90% Confidence Inteval');
+xlabel('Cycle')
+ylabel('Probability Density')
+title('RUL Estimation')
 end

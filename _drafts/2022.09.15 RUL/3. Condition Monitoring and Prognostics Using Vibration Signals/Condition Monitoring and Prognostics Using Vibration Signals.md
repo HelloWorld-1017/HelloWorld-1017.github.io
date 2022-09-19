@@ -2,9 +2,17 @@
 
 
 
+系统辨识
+
+
+
 # Introduction
 
 也是从健康状态到故障状态全过程的数据
+
+系统辨识
+
+<br>
 
 # Work Flow
 
@@ -253,4 +261,219 @@ threshold = 2000;
 samplingTime = 60*(expTime(2)-expTime(1));                  % unit: seconds
 ```
 
-==iddata函数==
+之后使用`iddata`函数将`meanPeakFreq`前`tStart`（200个）数据转换为`iddata`类型的变量`tsFeature`：
+
+```matlab
+tsFeature = iddata(meanPeakFreq(1:tStart), [], samplingTime);
+```
+
+`iddata`函数将数据转换为可以在时域和频域内进行system identification(系统辨识)的数据类型。[iddata - MathWorks](https://ww2.mathworks.cn/help/ident/ref/iddata.html).
+{: .notice--primary}
+
+之后绘制出这200个initial mean peak frequency data：
+
+```matlab
+plot(tsFeature.y)
+```
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220919091520424.png" alt="image-20220919091520424" style="zoom:50%;" />
+
+图像表明，初始数据大致是常数加上一定的噪声。这是预期内的，因为在初始时刻轴承是健康的，mean peak frequency不会大幅度地变化。
+
+然后，使用前200个数据去拟合一个second-order state-space model：
+
+```matlab
+past_sys = ssest(tsFeature, 2, 'Ts', samplingTime, 'Form', 'canonical')
+```
+
+```
+past_sys =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + K e(t)
+       y(t) = C x(t) + e(t)
+ 
+  A = 
+            x1       x2
+   x1        0        1
+   x2   0.9605  0.03942
+ 
+  C = 
+       x1  x2
+   y1   1   0
+ 
+  K = 
+              y1
+   x1  -0.003899
+   x2   0.003656
+ 
+Sample time: 600 seconds
+  
+Parameterization:
+   CANONICAL form with indices: 2.
+   Disturbance component: estimate
+   Number of free coefficients: 4
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+   
+Status:                                               
+Estimated using SSEST on time domain data "tsFeature".
+Fit to estimation data: 0.2763% (prediction focus)    
+FPE: 640, MSE: 602.7  
+```
+
+`ssest`函数：[ssest - MathWorks](https://ww2.mathworks.cn/help/ident/ref/ssest.html).
+{: .notice--primary}
+
+可以看到，这个initial estimated dynamic model的拟合效果不好。拟合效果的评判指标是normalized root mean square error (NRMSE)（即上面的`Fit to estimation data: 0.2763%(prediction focus)`，计算公式为：
+$$
+NRMSE=1-\dfrac{\vert\vert x_{true}-x_{pred}\vert\vert}{\vert\vert x_{true}-mean(x_{true})\vert\vert}\notag
+$$
+这个数值越大越好。而初始的前200个数据点大致是常数和噪声的叠加，此时$x_{pred}\approx mean(x_{true})$，此时NRMSE接近于0。
+
+为了验证这个模型，绘制autocorrelation of residuals：
+
+```matlab
+resid(tsFeature, past_sys)
+```
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220919094941951.png" alt="image-20220919094941951" style="zoom:50%;" />
+
+图像表明，残差是不相关的，得到的模型是有效的。
+
+之后，使用该模型`past_sys`预测未来10个点并计算标准差：
+
+```matlab
+[yF, ~, ~, yFSD] = forecast(past_sys, tsFeature, forecastLen);
+```
+
+并绘制图像（过去值，预测值，故障阈值，95%置信区间）：
+
+```matlab
+tHistory = expTime(1:tStart); % The initial 200 time stamps
+forecastTimeIdx = (tStart+1):(tStart+forecastLen); 
+tForecast = expTime(forecastTimeIdx);% 200~210 time stamps
+
+% Plot historical data, forecast value and 95% confidence interval.
+plot(tHistory, meanPeakFreq(1:tStart), 'b',...
+     tForecast, yF.OutputData, 'kx',...
+     [tHistory; tForecast], threshold*ones(1,length(tHistory)+forecastLen), 'r--',...
+     tForecast, yF.OutputData+1.96*yFSD, 'g--',...
+     tForecast, yF.OutputData-1.96*yFSD, 'g--');
+
+ylim([400, 1.1*threshold]);
+ylabel('Mean peak frequency (Hz)');
+xlabel('Time (min)');
+legend({'Past Data', 'Forecast', 'Failure Threshold', '95% C.I'},...
+    'Location', 'northoutside', 'Orientation', 'horizontal');
+grid on
+```
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220919095904057.png" alt="image-20220919095904057" style="zoom:50%;" />
+
+注：这里在计算95%置信区间时使用的方式是直接乘上1.96，这是查正态分布表得到的。这里默认的区间估计的对象是什么？具体是如何查找的？目前还不是很清楚。
+{: .notice--warning}
+
+之后，随着出现新的观测点（10个）而更新模型参数，并且重新估计预测值，并且创建一个alarm，如果信号或者预测值超过了故障阈值（2000 Hz）就报警：
+
+```matlab
+figure
+ax = subplot(1, 1, 1);
+
+for tCur = tStart:batchSize:numSamples % batchSize = 10;
+
+    %  latest features into iddata object.
+    tsFeature = iddata(meanPeakFreq((tCur-timeSeg+1):tCur), [], samplingTime);
+
+    % Update system parameters when new data comes in. Use previous model
+    % parameters as initial guesses.
+    sys = ssest(tsFeature, past_sys);
+    past_sys = sys;
+
+    % Forecast the output of the updated state-space model. Also compute
+    % the standard deviation of the forecasted output.
+    [yF, ~, ~, yFSD]  = forecast(sys, tsFeature, forecastLen);
+
+    % Find the time corresponding to historical data and forecasted values.
+    tHistory = expTime(1:tCur);
+    forecastTimeIdx = (tCur+1):(tCur+forecastLen);
+    tForecast = expTime(forecastTimeIdx);
+
+    cla(ax)
+    hold(ax, 'on')
+    % Plot historical data, forecasted mean peak frequency value and 95%
+    % confidence interval.
+    plot(ax, tHistory, meanPeakFreq(1:tCur),'b',...
+        tForecast, yF.OutputData,'kx',...
+        [tHistory; tForecast], threshold*ones(1,length(tHistory)+forecastLen), 'r--',...
+        tForecast, yF.OutputData+1.96*yFSD,'g--',...
+        tForecast, yF.OutputData-1.96*yFSD,'g--');
+
+    ylim([400, 1.1*threshold]);
+    ylabel('Mean peak frequency (Hz)');
+    xlabel('Time (min)');
+    legend({'Past Data', 'Forecast', 'Failure Threshold', '95% C.I'},...
+        'Location','northoutside','Orientation','horizontal');
+    grid on;
+
+    % Display an alarm when actual monitored variables or forecasted values exceed
+    % failure threshold.
+    if(any(meanPeakFreq(tCur-batchSize+1:tCur)>threshold))
+        disp('Monitored variable exceeds failure threshold');
+        break;
+    elseif(any(yF.y>threshold))
+        % Estimate the time when the system will reach failure threshold.
+        tAlarm = tForecast(find(yF.y>threshold,1));
+        disp(['Estimated to hit failure threshold in ' num2str(tAlarm-tHistory(end)) ' minutes from now.']);
+        break;
+    end
+    %     pause(0.1)
+end
+```
+
+![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/gif1.gif)
+
+此时的时间序列模型：
+
+```matlab
+sys
+```
+
+```
+sys =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + K e(t)
+       y(t) = C x(t) + e(t)
+ 
+  A = 
+           x1      x2
+   x1       0       1
+   x2  0.2624   0.746
+ 
+  C = 
+       x1  x2
+   y1   1   0
+ 
+  K = 
+           y1
+   x1  0.3902
+   x2  0.3002
+ 
+Sample time: 600 seconds
+  
+Parameterization:
+   CANONICAL form with indices: 2.
+   Disturbance component: estimate
+   Number of free coefficients: 4
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                               
+Estimated using SSEST on time domain data "tsFeature".
+Fit to estimation data: 92.53% (prediction focus)     
+FPE: 499.3, MSE: 442.7    
+```
+
+可以看到，模型的预测拟合优度达到92.53%，并且正确地捕捉了趋势。
+
+# Conclusion
+
+在这个例子中，时间序列预测模型实际上就是一个second-order state-space model，其中的核心是根据数据使用`ssest`拟合出这个动态模型的参数，实际上就是拟合出一个二阶函数。
+

@@ -1,0 +1,65 @@
+component R_table
+% R_table
+% Models a resistor where the resistance value (R) depends on an external
+% physical signal inputs SOC and T.
+
+% Copyright 2012-2013 The MathWorks, Inc.
+    
+    nodes
+        p = foundation.electrical.electrical; % +:left
+        n = foundation.electrical.electrical; % -:right
+    end
+
+    inputs
+        T = {293.15,'K'};  %T:left
+        SOC = {1,'1'}; %SOC:left
+    end
+    
+    outputs
+        pow = {0,'W'}; % POW:right
+    end
+    
+    parameters (Size=variable)
+        R_Table = {1e-3*ones(5,3),'Ohm'};   % Matrix of resistance values, R(SOC,T)
+        SOC_Table = {[0;0.1;0.5;0.9;1],'1'} % State of charge (SOC) breakpoints
+        Temp_Table = {[273.15 293.15 313.15],'K'} % Temperature (T) breakpoints
+    end
+    
+    variables(Access=private)
+        i = { 0, 'A' }; % Current
+        v = { 0, 'V' }; % Voltage
+    end
+    
+    function setup %#simple
+    
+        % Check parameter values
+        if any(any(value(R_Table,'Ohm')<=0))
+            pm_error('simscape:GreaterThanZero','Matrix of resistance values, R(SOC,T)');
+        end
+        if any(value(SOC_Table,'1')<0)
+            pm_error('simscape:GreaterThanOrEqualToZero','State of charge (SOC) breakpoints');
+        end
+        if any(value(Temp_Table,'K')<0)
+            pm_error('simscape:GreaterThanOrEqualToZero','Temperature (T) breakpoints');
+        end
+    
+    end
+    
+    branches
+        i : p.i -> n.i;
+    end
+    
+    equations
+        v == p.v - n.v;
+        let
+            % Perform the table lookup
+            R = tablelookup(SOC_Table,Temp_Table,R_Table,SOC,T,...
+                interpolation=linear,extrapolation=nearest)
+        in
+            % Electrical Equations
+            v == i*R;
+            pow == v*i;
+        end
+    end
+    
+end

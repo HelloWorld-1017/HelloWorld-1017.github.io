@@ -1,0 +1,87 @@
+component Em_table
+% Em_table
+% This block implements the cell's main branch voltage source, and determines
+% values state of charge (SOC). The defining equations
+% depend on cell temperature, T. This block also allows changes in the 
+% capacity (C) to simulate effect of degradation
+    
+% Copyright 2012-2015 The MathWorks, Inc.
+    
+    nodes
+        p = foundation.electrical.electrical; % +:left
+        n = foundation.electrical.electrical; % -:right
+    end
+
+    inputs
+        T = {293.15,'K'} % T:right
+        CurCapacity = {30,'A*hr'}  % Capacity
+    end
+    
+    outputs
+        SOC = {1,'1'}   %SOC:left
+    end
+    
+    parameters (Size=variable)
+        Em_Table = {3.8*ones(5,3),'V'} % Matrix of voltage values, Em(SOC,T)
+        SOC_Table = {[0;0.1;0.5;0.9;1],'1'} % State of charge (SOC) breakpoints
+        Temp_Table = {[273.15 293.15 313.15],'K'} % Temperature (T) breakpoints
+    end
+    
+    parameters
+        Qinit = {0,'A*hr'} % Initial charge deficit
+    end
+    
+    variables(Access=private)
+        i = { 0, 'A' };  % Current
+        v = { 0, 'V' };  % Voltage
+        Qe = {0,'A*hr'}; % Charge deficit
+        C = {30,'A*hr'} %C:left
+    end
+    
+    function setup
+        if any(any(value(Em_Table,'V')<=0))
+            pm_error('simscape:GreaterThanZero','Matrix of voltage values, Em(SOC,T)');
+        end
+        if any(value(SOC_Table,'1')<0)
+            pm_error('simscape:GreaterThanOrEqualToZero','State of charge (SOC) breakpoints');
+        end
+        if any(value(Temp_Table,'K')<0)
+            pm_error('simscape:GreaterThanOrEqualToZero','Temperature (T) breakpoints');
+        end
+        if value(Qinit,'A*hr')<0
+            pm_error('simscape:GreaterThanOrEqualToZero','Initial charge deficit');
+        end
+
+        % Set initial charge deficit
+        Qe = {value=Qinit, priority=priority.high};
+        
+    end
+    
+    branches
+        i : p.i -> n.i;
+    end
+    
+    equations
+        
+        v == p.v - n.v;
+        
+        % Charge deficit calculation, preventing SOC>1
+        if Qe<0 && i>0
+            Qe.der == 0;
+        else
+            Qe.der == -i;
+        end
+        
+        % Perform the capacity table lookup
+        C == CurCapacity;
+        
+        % SOC Equation
+        SOC == 1 - Qe/C;
+        
+        % Electrical equation by table lookup
+        v == tablelookup(SOC_Table,Temp_Table,Em_Table,SOC,T,...
+            interpolation=linear,extrapolation=nearest)
+        
+    end
+    
+end

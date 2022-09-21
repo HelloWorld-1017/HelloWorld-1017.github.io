@@ -1,4 +1,16 @@
-
+---
+layout: single
+title: MATLAB Example--Similarity-Based Remaining Useful Life Estimation
+date: 2022-09-21 19:28:29 +0800
+categories: 
+ - Programming
+ - Machine Learning
+tags:
+ - Probability theory and mathematical statistics
+ - MATLAB
+ - MATLAB Predictive Maintenance Toolbox
+ - RUL
+---
 
 # Introduction
 
@@ -614,10 +626,6 @@ helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154126424.png" alt="image-20220917154126424" style="zoom:50%;" />
 
-
-
-
-
 对于得到的结果需要有几点说明。
 
 #### Explanation 1: `'NumNearestNeighbors'`
@@ -749,10 +757,11 @@ figure(12)
 helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
 ```
 
-<figure class="halr">
+<figure class="half">
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154718923.png" alt="image-20220917154718923" style="zoom:50%;" />
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154753728.png" alt="image-20220917154753728" style="zoom:50%;" />
 </figure>
+
 
 ### Use 90% of a sample validation data
 
@@ -768,10 +777,11 @@ figure
 helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
 ```
 
-<figure>
+<figure class="half">
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917155027647.png" alt="image-20220917155027647" style="zoom:50%;" />
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917155035903.png" alt="image-20220917155035903" style="zoom:50%;" />
 </figure>
+
 
 ### Conclusion
 

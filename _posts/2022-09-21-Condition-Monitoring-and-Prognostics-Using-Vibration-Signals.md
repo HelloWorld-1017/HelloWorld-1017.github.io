@@ -1,16 +1,24 @@
-[Condition Monitoring and Prognostics Using Vibration Signals](https://ww2.mathworks.cn/help/predmaint/ug/condition-monitoring-and-prognostics-using-vibration-signals.html)
-
-
-
-系统辨识
-
-
+---
+layout: single
+title: MATLAB Example--Condition Monitoring and Prognostics Using Vibration Signals
+date: 2022-09-21 19:46:45 +0800
+categories: 
+ - Programming
+ - Machine Learning
+tags:
+ - Probability theory and mathematical statistics
+ - MATLAB
+ - MATLAB Predictive Maintenance Toolbox
+ - System Identification
+ - Time Series Analysis
+ - RUL
+---
 
 # Introduction
 
-也是从健康状态到故障状态全过程的数据
+本示例来自MATLAB Predictive Maintenance Toolbox：[Condition Monitoring and Prognostics Using Vibration Signals](https://ww2.mathworks.cn/help/predmaint/ug/condition-monitoring-and-prognostics-using-vibration-signals.html)。本示例使用振动信号的频域特征（mean peak frequency）进行轴承的故障诊断和预测，使用的模型是一个**时间序列二阶模型**，本质上也是拟合参数的问题，即不断使用新数据进行参数估计，估计完模型参数后进行预测。这个例子更像是系统辨识的例子，官方原文：This example uses functionality from Signal Processing Toolbox™ and System Identification Toolbox™, and does not require Predictive Maintenance Toolbox™。
 
-系统辨识
+另外，该示例使用的训练数据也是从健康状态到故障状态全过程的数据。
 
 <br>
 
@@ -471,7 +479,9 @@ Fit to estimation data: 92.53% (prediction focus)
 FPE: 499.3, MSE: 442.7    
 ```
 
-可以看到，模型的预测拟合优度达到92.53%，并且正确地捕捉了趋势。
+可以看到，模型的预测拟合优度达到92.53%，并且正确地捕捉了趋势。用训练集训练出的最终的这个模型，就可以进行实际的预测。
+
+<br>
 
 # Conclusion
 

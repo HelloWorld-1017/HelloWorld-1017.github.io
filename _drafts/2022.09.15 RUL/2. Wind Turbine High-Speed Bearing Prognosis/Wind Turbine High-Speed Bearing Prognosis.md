@@ -1,8 +1,12 @@
-[Wind Turbine High-Speed Bearing Prognosis](https://ww2.mathworks.cn/help/predmaint/ug/wind-turbine-high-speed-bearing-prognosis.html)
+
 
 
 
 # Introduction
+
+本示例来自MATLAB Predictive Maintenance Toolbox：[Wind Turbine High-Speed Bearing Prognosis](https://ww2.mathworks.cn/help/predmaint/ug/wind-turbine-high-speed-bearing-prognosis.html)
+
+
 
 也是从健康到故障的全过程数据
 
@@ -22,10 +26,6 @@
   tach             2461x1               19688  double              
   vibration      585936x1             4687488  double       
 ```
-
-
-
-
 
 使用`fileEnsembleDatastore`来装载并处理`WindTurbineHighSpeedBearingPrognosis-Data-main`文件夹中的.mat文件。
 
@@ -474,7 +474,7 @@ for currentDay = 1:totalDay
 end
 ```
 
-![gif1](gif1.gif)
+![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/gif1.gif)
 
 也就是说，模型每观测到一个观测量（ie Health indicator）都会对模型更新（使用`update`函数），并且使用`predictRUL`函数对目前的RUL进行预测。**更新的过程实际上就是对指数函数参数估计的过程**。
 
@@ -563,7 +563,7 @@ predictRUL for 退化模型。
 
 [1] [Wind Turbine High-Speed Bearing Prognosis - MathWorks](https://ww2.mathworks.cn/help/predmaint/ug/wind-turbine-high-speed-bearing-prognosis.html).
 
-[2] 
+
 
 
 

@@ -154,5 +154,63 @@ $$
 
 如果我们单独对第二件物体的质量$\mu_2$做一样本t区间估计。
 
-首先有$\overline{Y}=5.425$，$S_y=\sqrt{\dfrac1{4-1}\sum_{j=1}^m(Y_j-\overline{Y})^2}=\sqrt{1/3\times0.01570}=0.0723$，$t_3(0.025)=3.182$，代入公式$\eqref{eq3}$可以得到$\mu_2$的置信系数为0.95的区间估计为：
+首先有$\overline{Y}=5.425$，$S_y=\sqrt{\dfrac1{4-1}\sum_{j=1}^m(Y_j-\overline{Y})^2}=\sqrt{1/3\times0.01570}=0.0723$，$t_3(0.025)=3.182$，代入公式$\eqref{eq3}$可以得到$\mu_2$的置信系数为0.95的区间估计为：$[5.3100, 5.5400]$。
 
+综上，物体一的质量$\mu_1$的置信系数为95%的区间估计是：$[5.4195, 5.6125]$，物体二的质量$\mu_2$的置信系数为95%的区间估计是$[5.3100, 5.5400]$，而$\mu_1-\mu_2$的置信系数为95%的区间估计是$[-0.2106, 0.0286]$，它们之间并不是区间端点直接加减的关系。
+
+另外，需要说明的是，在实际问题中国魂，两个总体方差相等的假定往往只是近似成立，当方差之比接近1时，使用$\eqref{eq4}$产生的误差不大（这里的误差是指实际的置信系数与名义的置信系数$1-\alpha$有出入。如果差别较大，则必须假定两个正态分布总体分别有方差$\sigma_1^2$和$\sigma_1^2$，$\sigma_1^2$和$\sigma_1^2$都未知。在这样的假定下，求$\mu_1-\mu_2$的区间估计问题，是数理统计学上一个著名的问题，称为**贝伦斯—费歇尔问题**，因为这两位学者分别在1929年和1930年研究过这个问题，他们以及后来的研究者提出过一些解法，但还没有一个被公认为是最满意的。
+
+我觉得可能是因为在这种情况下$\mu_1-\mu_2$太难构造出来了。
+{: .notice--primary}
+
+## Example 3
+
+假设从正态分布$N(\mu,\sigma^2)$中抽取样本$X_1,\cdots, X_n$，$\mu$和$\sigma^2$都未知，求$\sigma^2$的区间估计。
+
+解：
+
+根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution](http://whatastarrynight.com/mathematics/programming/Chi-square-and-t-and-F-Distribution/#chi-square-distribution-students-t-distribution-f-distribution)提到的卡方分布的性质（性质1），有：
+$$
+(n-1)S^2/\sigma^2\sim \chi_{n-1}^2\notag
+$$
+因此，根据轴枢变量法，$\sigma^2$的置信系数为$1-\alpha$的区间估计为：
+$$
+[(n-1)S^2/\chi_{n-1}^2(\alpha/2),\ (n-1)S^2/\chi_{n-1}^2(1-\alpha/2)]
+$$
+
+## Example 4
+
+假设从正态分布$N(\mu_1,\sigma_1^2)$中抽取样本$X_1,\cdots, X_n$，从分布$N(\mu_2, \sigma_2^2)$从中抽出样本$Y_1,\cdots,Y_m$，要做方差比$\sigma_1^2/\sigma_2^2$的区间估计。
+
+解：
+
+记$S_1^2$和$S_2^2$分别为$X_1,\cdots,X_n$和$Y_1,\cdots,Y_n$的样本方差，根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution](http://whatastarrynight.com/mathematics/programming/Chi-square-and-t-and-F-Distribution/#chi-square-distribution-students-t-distribution-f-distribution)提到的F分布的性质（性质3），有：
+$$
+(S_2^2/\sigma_1^2)/(S_1^2/\sigma_2^2)\sim F_{m-1,n-1}\notag
+$$
+则$\sigma_1^2/\sigma_2^2$的置信系数为$1-\alpha$的区间估计为：
+$$
+[(S_1^2/S_2^2)F_{m-1,n-1}(1-\alpha/2),\ (S_1^2/S_2^2)F_{m-1,n-1}(\alpha/2)]
+$$
+
+## Example 5
+
+设$X_1,\cdots,X_n$为抽自指数分布总体的样本，要求其参数$\lambda$的区间估计。
+
+解：
+
+根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution - What a starry night~](http://whatastarrynight.com/mathematics/programming/Chi-square-and-t-and-F-Distribution/#properties-of-chi-square-distribution)提到的卡方分布的性质（性质2），有：
+$$
+2n\lambda\overline{X}\sim\chi_{2n}^2\notag
+$$
+因此$2n\lambda\overline{X}$可以做轴枢变量，于是得到参数$\lambda$的置信系数为$1-\alpha$的区间估计为：
+$$
+[\chi_{2n}^2(1-\alpha/2)(2n\overline{X}),\ \chi_{2n}^2(\alpha/2)(2n\overline{X})]
+$$
+
+
+## Conclusion
+
+从这些例子中可以看出“轴枢变量法”这个名称的由来，该变量起到了一个“轴心”的作用，把一个变量介于某两个界限之间的不等式轻轻一转，就成为未知参数介于某两个界限之间的不等式。
+
+对离散型变量

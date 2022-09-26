@@ -1,4 +1,20 @@
+---
+layout: single
+title: MATLAB `movmean` and `movmedian` Function
+date: 2022-09-26 14:18:45 +0800
+categories:
+ - Programming
+ - Signals and Systems
+tags:
+ - MATLAB
+ - MATLAB Data Import and Analysis
+---
 
+# Introduction
+
+MATLAB提供移动（局部）均值和移动（局部）中值的计算函数`movmean`和`movmedian`，它们的属性设置基本一致。本文以`movmean`函数为例进行详细地解释。
+
+<br>
 
 # Examples
 
@@ -88,7 +104,7 @@ M5 =
     6.0000    6.0000    4.2500    2.7500         0   -1.7500   -0.7500    0.7500    2.7500    4.0000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925232343863.png" alt="image-20220925232343863" style="zoom:50%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220926124803586.png" alt="image-20220926124803586" style="zoom:67%;" />
 
 ### Example 2: `movmean(A, [2, 1], 'Endpoints', 'discard')`
 
@@ -118,7 +134,7 @@ M7 =
     4.0000    6.0000    6.0000    4.3333    1.0000   -2.0000   -2.0000   -0.3333    2.0000    4.0000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925232831311.png" alt="image-20220925232831311" style="zoom:50%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220926124906435.png" alt="image-20220926124906435" style="zoom:67%;" />
 
 ### Example 4: `movmean(A, [2, 0], 'Endpoints', 'discard')`
 
@@ -135,19 +151,11 @@ M8 =
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925233522871.png" alt="image-20220925233522871" style="zoom:50%;" />
 
+<br>
 
+**参考**
 
+[1] [movmean - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/movmean.html).
 
-
-
-
-
-
-
-
-
-
-
-
-[movmean - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/movmean.html).
+[2] [movmedian - MathWork](https://ww2.mathworks.cn/help/matlab/ref/movmedian.html).
 

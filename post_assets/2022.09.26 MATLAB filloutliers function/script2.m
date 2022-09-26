@@ -31,9 +31,9 @@ plot(center, "k", "LineWidth", 1.5, "DisplayName", "Outlier center")
 title("Number of outliers cleaned: " + nnz(outlierIndices))
 legend('Location', 'best')
 
-% movmedian(A, 15) == center
+contrast1 = movmedian(A, 15) == center;
 c = -1/(sqrt(2)*erfcinv(3/2));
-ans1 = center+3*c*movmedian(abs(A - movmedian(A, 15)), 15)-thresholdH;
-ans2 = center-3*c*movmedian(abs(A - movmedian(A, 15)), 15)-thresholdL;
-
+contrast2 = center+3*c*movmedian(abs(A - movmedian(A, 15)), 15)-thresholdH;
+contrast3 = center-3*c*movmedian(abs(A - movmedian(A, 15)), 15)-thresholdL;
+nnz(contrast1), nnz(contrast2), nnz(contrast3)
 

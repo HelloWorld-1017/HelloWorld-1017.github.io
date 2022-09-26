@@ -375,7 +375,7 @@ legend({'Past Data', 'Forecast', 'Failure Threshold', '95% C.I'},...
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220919095904057.png" alt="image-20220919095904057" style="zoom:50%;" />
+![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/gif1.gif)
 
 注：这里在计算95%置信区间时使用的方式是直接乘上1.96，这是查正态分布表得到的。这里默认的区间估计的对象是什么？具体是如何查找的？目前还不是很清楚。
 {: .notice--warning}

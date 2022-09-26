@@ -1,0 +1,9 @@
+# ninja log v5
+2	59	6858913016750186	CMakeFiles/project1.dir/main.c.obj	d5f633949eb45598
+54	134	6858923763462556	project1.exe	295e9828dfe750c6
+1	106	6858924713940091	build.ninja	927f8a74749674b1
+4	82	6858923438119410	CMakeFiles/project1.dir/names_st.c.obj	2b964be1421cf0cb
+2	53	6858923762681825	CMakeFiles/project1.dir/useheader.c.obj	588d37717e0fb430
+4	59	6858929859620736	CMakeFiles/project1.dir/useheader.c.obj	588d37717e0fb430
+1	60	6858929859777004	CMakeFiles/project1.dir/names_st.c.obj	2b964be1421cf0cb
+60	149	6858929860558220	project1.exe	295e9828dfe750c6

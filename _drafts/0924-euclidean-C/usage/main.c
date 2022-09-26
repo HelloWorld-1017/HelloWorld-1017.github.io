@@ -1,8 +1,7 @@
-
 /* Include Files */
 #include "main.h"
 #include "euclidean.h"
-#include "euclidean_terminate.h"
+//#include "euclidean_terminate.h"
 
 /* Function Declarations */
 static void argInit_d3x1_real_T(double result_data[], int *result_size);
@@ -10,7 +9,8 @@ static void argInit_d3x216_real_T(double result_data[], int result_size[2]);
 static double argInit_real_T(void);
 static void main_euclidean(void);
 
-/* Function Definitions */
+
+
 static void argInit_d3x1_real_T(double result_data[], int *result_size)
 {
   int idx0;
@@ -24,7 +24,6 @@ Change this value to the value that the application requires. */
     result_data[idx0] = argInit_real_T();
   }
 }
-
 
 static void argInit_d3x216_real_T(double result_data[], int result_size[2])
 {
@@ -44,12 +43,10 @@ Change this value to the value that the application requires. */
   }
 }
 
-
 static double argInit_real_T(void)
 {
   return 0.0;
 }
-
 
 static void main_euclidean(void)
 {
@@ -74,7 +71,6 @@ static void main_euclidean(void)
             idx, distance);
 }
 
-
 int main(int argc, char **argv)
 {
   (void)argc;
@@ -86,12 +82,6 @@ You can call entry-point functions multiple times. */
   main_euclidean();
   /* Terminate the application.
 You do not need to do this more than one time. */
-  euclidean_terminate();
+//  euclidean_terminate();
   return 0;
 }
-
-/*
- * File trailer for main.c
- *
- * [EOF]
- */

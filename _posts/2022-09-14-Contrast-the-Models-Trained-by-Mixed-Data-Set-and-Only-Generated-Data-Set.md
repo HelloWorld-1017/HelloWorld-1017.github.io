@@ -143,7 +143,7 @@ Loop(X5, Y5, numTimes, numPerClass, "digitTrainCellArrayData");
 
 <br>
 
-# Results
+# Results and Conclusion
 
 执行的代码主体部分，得到结果：
 

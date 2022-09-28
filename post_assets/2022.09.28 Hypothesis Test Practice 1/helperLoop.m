@@ -21,6 +21,5 @@ for i = 1:numel(accus_mix)
     % Calculate the accuracies
     accus_mix(i) = sum(pred_mix==Y_test)/numel(Y_test);
     accus_generate(i) = sum(pred_generate==Y_test)/numel(Y_test);
-    disp(i)
 end
 accus_mix_minus_generate = accus_mix-accus_generate;

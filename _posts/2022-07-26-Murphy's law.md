@@ -8,6 +8,7 @@ categories:
 tags: 
  - Probability theory and mathematical statistics
  - Psychology
+ - Wisdom
 toc: false
 ---
 <br>

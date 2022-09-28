@@ -6,6 +6,7 @@ categories:
  - Mathematics
 tags:
  - Probability theory and mathematical statistics
+ - Experiment
 ---
 
 # Introduction

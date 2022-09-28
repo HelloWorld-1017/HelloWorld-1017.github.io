@@ -1,6 +1,15 @@
-tags: Wisdom
-
-"When a measure becomes a target, it cease to a good measure. "
+---
+layout: single
+title: When a measure becomes a target, it cease to a good measure. (p-hacking) 
+date: 2022-09-28 23:42:17 +0800
+categories: 
+ - Mathematics
+tags:
+ - Probability theory and mathematical statistics
+ - Experiment
+ - Wisdom
+toc: false
+---
 
 When a measure becomes a target, it cease to a good measure. —— British economist Charles Goodhart.
 {: .notice--warning}

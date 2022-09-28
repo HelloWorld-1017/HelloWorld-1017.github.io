@@ -1,6 +1,6 @@
 clc, clear, close all
 
-numTimes = 1e3;
+numTimes = 1e2;
 numPerClass = 1e3;
 
 load fisheriris

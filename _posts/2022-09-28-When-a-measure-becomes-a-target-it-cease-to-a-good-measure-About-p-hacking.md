@@ -1,6 +1,9 @@
 ---
 layout: single
-title: When a measure becomes a target, it cease to a good measure. (p-hacking) 
+title: When a measure becomes a target, it cease to a good measure. 
+tagline: p-hacking
+header:
+  overlay_color: "#333"
 date: 2022-09-28 23:42:17 +0800
 categories: 
  - Mathematics

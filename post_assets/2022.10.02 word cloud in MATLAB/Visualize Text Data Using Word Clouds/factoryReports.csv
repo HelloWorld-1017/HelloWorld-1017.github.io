@@ -1,0 +1,481 @@
+Description,Category,Urgency,Resolution,Cost
+Items are occasionally getting stuck in the scanner spools.,Mechanical Failure,Medium,Readjust Machine,45
+Loud rattling and banging sounds are coming from assembler pistons.,Mechanical Failure,Medium,Readjust Machine,35
+There are cuts to the power when starting the plant.,Electronic Failure,High,Full Replacement,16200
+Fried capacitors in the assembler.,Electronic Failure,High,Replace Components,352
+Mixer tripped the fuses.,Electronic Failure,Low,Add to Watch List,55
+Burst pipe in the constructing agent is spraying coolant.,Leak,High,Replace Components,371
+A fuse is blown in the mixer.,Electronic Failure,Low,Replace Components,441
+Things continue to tumble off of the belt.,Mechanical Failure,Low,Readjust Machine,38
+Falling items from the conveyor belt.,Mechanical Failure,Low,Readjust Machine,41
+"The scanner reel is split, it will soon begin to curve.",Mechanical Failure,Medium,Replace Components,407
+Fuses are blown in the scanner.,Electronic Failure,High,Replace Components,445
+Shrill cry from the scanner computer.,Electronic Failure,Low,Add to Watch List,77
+Sorter controller neglects to interface.,Software Failure,Low,Update Firmware,119
+Clunky sounds made by the sorting pistons.,Mechanical Failure,Low,Add to Watch List,63
+Assembler will produce bent products.,Mechanical Failure,Medium,Readjust Machine,43
+Piston assembly makes a strong banging sound.,Mechanical Failure,Medium,Readjust Machine,35
+There are cracks appearing in the outer plate of the mixer.,Mechanical Failure,High,Full Replacement,2700
+The mixing software crashed.,Software Failure,Low,Add to Watch List,50
+Scanner frequently shuts down unexpectedly.,Electronic Failure,High,Full Replacement,8100
+Fuse is blown in the assembly mixer device.,Electronic Failure,Low,Replace Components,441
+The assembler will not move from time to time.,Mechanical Failure,Low,Add to Watch List,67
+Fuse is blown in the assembler.,Electronic Failure,High,Replace Components,445
+Abnormal electrical sounds from the scanner.,Electronic Failure,Low,Add to Watch List,80
+Assembling software fails to connect to the network.,Software Failure,Medium,Update Firmware,94
+Mixer is hot to the touch.,Electronic Failure,Low,Add to Watch List,77
+A slamming sound is heard in the cylinder agent.,Mechanical Failure,Medium,Readjust Machine,35
+Slight ticking sound emitted from the mixer.,Mechanical Failure,Low,Add to Watch List,66
+Robot arm power supply is burnt out.,Electronic Failure,High,Replace Components,402
+The controller programming continues crashing.,Software Failure,Low,Update Firmware,130
+Sharp high-pitched sound coming from the blender.,Electronic Failure,Low,Replace Components,452
+Blending coolant spilling on the floor.,Leak,High,Replace Components,372
+A fuse in the controller assembly is blown.,Electronic Failure,Low,Replace Components,348
+Assembled products have some rough edges.,Mechanical Failure,Low,Readjust Machine,45
+A big rattling sound heard inside the mixer.,Mechanical Failure,Low,Add to Watch List,72
+Mechanical arrangement software freezes at times.,Software Failure,Low,Update Firmware,144
+Mixer is hot to the touch.,Electronic Failure,Low,Add to Watch List,77
+Sorter power supply has failed.,Electronic Failure,High,Replace Components,431
+The mixer start-up trips some fuses.,Electronic Failure,Low,Add to Watch List,63
+Transport line is stuck.,Mechanical Failure,Medium,Readjust Machine,39
+Some assembled products are cracked.,Mechanical Failure,Low,Readjust Machine,45
+Overheating of the sorting plant machines.,Leak,High,Full Replacement,9000
+Strange electrical sounds from the scanner.,Electronic Failure,Low,Add to Watch List,80
+Scanner reel will begin cracking.,Mechanical Failure,Low,Replace Components,547
+Rattling sound caused by the robot arm.,Mechanical Failure,Low,Add to Watch List,71
+Mixing software has crashed.,Software Failure,Low,Add to Watch List,50
+Scanner spools are starting to crack.,Mechanical Failure,Low,Replace Components,547
+The mixer is hot to the touch.,Electronic Failure,Low,Add to Watch List,77
+Rattling clunky sounds heard inside assembler pistons.,Mechanical Failure,Low,No Action Planned,0
+Robot arm is emitting black smoke.,Electronic Failure,High,Full Replacement,4050
+Blender coolant pipe spilling.,Leak,High,Replace Components,373
+Weird whirring sound heard inside the construction agent.,Mechanical Failure,Low,Add to Watch List,72
+Blender coolant spilling all over the place.,Leak,High,Replace Components,395
+Things stuck in spool scanner.,Mechanical Failure,Medium,Readjust Machine,45
+High pitch coil whine heard in the mixer.,Electronic Failure,Low,Replace Components,452
+Things are falling from the conveyor line.,Mechanical Failure,Low,Readjust Machine,41
+Jammed conveyor belt.,Mechanical Failure,Medium,Readjust Machine,39
+Weird liquid on the ground of the bottom of the mixer.,Leak,Medium,Replace Components,443
+Dents in product is caused by the robot arm.,Mechanical Failure,Low,Add to Watch List,71
+Fuse to the mixer assembly tripped.,Electronic Failure,Low,Replace Components,441
+Regular power cuts when starting plant.,Electronic Failure,High,Full Replacement,16200
+Things will fall off the transportation line.,Mechanical Failure,Low,Add to Watch List,73
+Assembler is overheating.,Leak,Low,Add to Watch List,62
+Items falling off conveyor belt.,Mechanical Failure,Low,Readjust Machine,41
+Products are sometimes stuck to the scanner of the reel.,Mechanical Failure,Medium,Readjust Machine,45
+"Software controller, will fail to interface with the mixer.",Software Failure,Low,Update Firmware,139
+mixer is overheating.,Leak,Low,Add to Watch List,79
+Sorter controller does not connect.,Software Failure,Low,Update Firmware,119
+Robot arms giving slight indications of wear.,Mechanical Failure,Medium,Add to Watch List,69
+The products occasionally leave the scanner cracked.,Mechanical Failure,Low,Add to Watch List,74
+The mixer is smoking during operation.,Electronic Failure,High,Replace Components,394
+Strange sound was produced from mixer.,Electronic Failure,Low,Add to Watch List,62
+Construction of the assembler agent gets turned off.,Electronic Failure,High,Replace Components,323
+Constantly overheating mixer.,Leak,Low,Add to Watch List,67
+Smoke is emitted of the robot arm.,Electronic Failure,High,Replace Components,453
+breaks appearing in the scanner roller.,Mechanical Failure,Low,Add to Watch List,52
+Stuck mixer output.,Electronic Failure,Low,Add to Watch List,55
+Scanner programming frozen.,Software Failure,Low,Update Firmware,129
+assembler backup power burnt out.,Electronic Failure,High,Replace Components,341
+Mixer is releasing smoke.,Electronic Failure,High,Full Replacement,8550
+Mixer has been smoking while running.,Electronic Failure,High,Replace Components,394
+High pitched coil whine from scanner computer.,Electronic Failure,Low,Add to Watch List,77
+Strange rattling sound heard inside mixer.,Mechanical Failure,Medium,Readjust Machine,42
+quiet rattle inside the mixer.,Mechanical Failure,Low,Add to Watch List,72
+Transport line stuck.,Mechanical Failure,Medium,Readjust Machine,45
+Scanner spools beginning to split and curve.,Mechanical Failure,Medium,Replace Components,407
+Mixer start up tripped fuse.,Electronic Failure,Low,Add to Watch List,63
+The items periodically leave the scanner broke.,Mechanical Failure,Low,Add to Watch List,74
+slight ticking sound emitted from the mixer.,Mechanical Failure,Low,Add to Watch List,66
+strange high-pitched sound coming from assembler.,Electronic Failure,Low,Add to Watch List,68
+Power cut in factory at start up.,Electronic Failure,High,Full Replacement,16200
+cracks appearing in the scanner roller.,Mechanical Failure,Low,Add to Watch List,52
+Some of the material output by the assembler is bent.,Mechanical Failure,Low,Readjust Machine,44
+Backup power supply of the mixer failed.,Electronic Failure,High,Replace Components,400
+Extreme coolant spill underneath mixer.,Leak,High,Replace Components,414
+Scanner software frozen.,Software Failure,Low,Update Firmware,129
+Occasional power cuts when beginning plant.,Electronic Failure,High,Full Replacement,16200
+Ringing sound in the electrical scanner.,Electronic Failure,Low,Add to Watch List,80
+Material has been bent by the assembler.,Mechanical Failure,Medium,Readjust Machine,43
+Scanner shut down unexpectedly.,Electronic Failure,Medium,Full Replacement,4500
+Extraordinary overheating of sorter plant.,Leak,High,Full Replacement,9000
+Scanner spools get stuck.,Mechanical Failure,Low,Add to Watch List,63
+Burst pipe in the cooling structure when the agent is engaged.,Leak,High,Replace Components,371
+The cooling water in the mixer spills all over the place.,Leak,High,Replace Components,395
+Some liquid pooling underneath output of assembler.,Leak,High,Replace Components,369
+The material stuck in a mixer.,Mechanical Failure,Medium,Readjust Machine,31
+Returned products from assembler is cracked.,Mechanical Failure,Medium,Readjust Machine,42
+liquid reservoir leaking under construction agent.,Leak,High,Replace Components,369
+Back up mixer power supply failed.,Electronic Failure,High,Replace Components,400
+Product jammed in scanner spools.,Mechanical Failure,Low,Readjust Machine,33
+Mixer is overheating.,Leak,Low,Add to Watch List,79
+Software unexpectedly closed the scanner.,Electronic Failure,Medium,Full Replacement,4500
+Controller software crashed.,Software Failure,Low,Update Firmware,135
+The materials get stuck in the blender.,Mechanical Failure,Medium,Readjust Machine,31
+Sorter interface controller fails to connect.,Software Failure,Low,Update Firmware,119
+loud sound made by the piston in assembler.,Mechanical Failure,Low,Add to Watch List,63
+Things periodically fall out in scanner spools.,Mechanical Failure,Medium,Readjust Machine,45
+Some materials output by the assembler are bent.,Mechanical Failure,Low,Readjust Machine,44
+Slight ticking sound emitted from blender.,Mechanical Failure,Low,Add to Watch List,66
+Lots of mess on the floor under mixer.,Leak,Medium,Replace Components,443
+scanner is radiating heat then gets stuck.,Electronic Failure,High,Full Replacement,10800
+Blending programming smashed.,Software Failure,Low,Add to Watch List,50
+Product leaves out of scanner damaged.,Mechanical Failure,High,Readjust Machine,43
+Programming neglects to interface with sorter.,Software Failure,Medium,Update Firmware,112
+Items sometimes fall off the belt.,Mechanical Failure,Low,Add to Watch List,73
+Mixer will overheat occasionally.,Leak,Low,Add to Watch List,67
+unusual sound coming from a mixer.,Mechanical Failure,Low,Add to Watch List,72
+Some drips of liquid are appearing underneath the assembler.,Leak,Medium,Add to Watch List,63
+The scanner spools are sometimes jamming.,Mechanical Failure,Low,Add to Watch List,44
+Things once in a while tumble off transport line.,Mechanical Failure,Low,No Action Planned,0
+Spools bowed in scanner.,Mechanical Failure,Medium,Replace Components,265
+article will come out broken from scanner,Mechanical Failure,High,Readjust Machine,43
+strange electric sound in the scanner.,Electronic Failure,Low,Add to Watch List,80
+Sorter motor seriously overheating.,Electronic Failure,Medium,Replace Components,416
+Mixer suffers extreme overheating.,Leak,High,Full Replacement,12600
+Mixer trips the fuse.,Electronic Failure,Low,Add to Watch List,55
+Conveyor belt starting to split,Mechanical Failure,Medium,Replace Components,429
+Cracks appearing on outer panels of mixer.,Mechanical Failure,High,Full Replacement,2700
+Extreme overheating of sorter plant.,Leak,High,Full Replacement,9000
+element affixed to the spool classifier smashed,Mechanical Failure,Low,Add to Watch List,54
+Mixer is emitting smoke.,Electronic Failure,High,Full Replacement,8550
+Loud churning sound from the mixer.,Mechanical Failure,Low,Add to Watch List,63
+Mixer sparks and smokes at startup.,Electronic Failure,High,Full Replacement,9000
+Software fails to connect to sorter.,Software Failure,Medium,Update Firmware,112
+A few dribbles of fluid are showing up underneath the constructing agent.,Leak,Medium,Add to Watch List,63
+Rattling noise was heard in the assembler.,Mechanical Failure,Low,Add to Watch List,53
+Dark smoke comes from the construction agent.,Electronic Failure,High,Full Replacement,8100
+The first product gets jammed in the spool classifier from time to time.,Mechanical Failure,Low,Add to Watch List,54
+Materials here and there stall out in robot arm.,Mechanical Failure,Low,Add to Watch List,63
+Jammed conveyor belt.,Mechanical Failure,Medium,Readjust Machine,45
+Some of the output accumulates liquid in the bottom of the assembler.,Leak,High,Replace Components,369
+The scanner is too hot to touch.,Electronic Failure,Medium,Add to Watch List,69
+Breaker blown in constructing agent.,Electronic Failure,High,Replace Components,445
+Reel scanner starts cracking or bending.,Mechanical Failure,Medium,Replace Components,407
+Scanner spools beginning to break.,Mechanical Failure,Low,Replace Components,547
+Launch of the robot arm trips fuse.,Electronic Failure,Low,Add to Watch List,61
+high-pitched cry in the mixer.,Electronic Failure,Low,Replace Components,452
+Mixer is smoking.,Electronic Failure,High,Full Replacement,8550
+Item comes out scanner broken.,Mechanical Failure,High,Readjust Machine,43
+Scanner spools get jammed.,Mechanical Failure,Low,Add to Watch List,63
+"Once things go offline, the fuses trip.",Mechanical Failure,Low,No Action Planned,0
+Sharp electronic sound heard in the internal assembler.,Electronic Failure,Low,Add to Watch List,74
+Uproarious shaking sounds in blender.,Mechanical Failure,Low,Add to Watch List,72
+Consistent power cuts when beginning sorter plant.,Electronic Failure,High,Full Replacement,13050
+items broken when leaving scanner.,Mechanical Failure,Low,Add to Watch List,74
+mixer software will continue freeze.,Software Failure,Low,Update Firmware,111
+Mixer is smoking.,Electronic Failure,High,Full Replacement,8550
+The sorter motor keeps getting jammed.,Mechanical Failure,High,Readjust Machine,44
+Spool bent in the scanner.,Mechanical Failure,Medium,Replace Components,265
+Robot arm control supply wore out.,Electronic Failure,High,Replace Components,402
+Combining software neglects to interface with sorter.,Software Failure,Medium,Update Firmware,94
+Burst pipe in assembler is spraying coolant.,Leak,High,Replace Components,371
+Blender start up ruined meld.,Electronic Failure,Low,Add to Watch List,63
+Fuse blown in scanner.,Electronic Failure,High,Replace Components,445
+Things will keep falling off belt,Mechanical Failure,Low,Readjust Machine,38
+Leaking coolant in the mixer.,Leak,High,Replace Components,328
+combination of software faults interacting with classifier.,Software Failure,Medium,Update Firmware,94
+First item in some cases stuck in sorter spools.,Mechanical Failure,Low,Add to Watch List,54
+Items return from assembler cracked.,Mechanical Failure,Medium,Readjust Machine,42
+Odd shrill sounds from constructing agent.,Electronic Failure,Low,Add to Watch List,68
+Scanner shut down unexpectedly.,Electronic Failure,Medium,Full Replacement,4500
+Extraordinary overheating of blender.,Leak,High,Full Replacement,12600
+Peculiar shaking sound heard inside blender.,Mechanical Failure,Medium,Readjust Machine,42
+Shaking sounds heard in constructing agent.,Mechanical Failure,Low,Add to Watch List,53
+crashed mixing software.,Software Failure,Low,Add to Watch List,50
+Defects showing in assembled products.,Mechanical Failure,Medium,Readjust Machine,37
+Weird sounds produced from blender.,Electronic Failure,Low,Add to Watch List,62
+Constructing agent at times getting stuck.,Mechanical Failure,Low,Add to Watch List,67
+Burst pipe is spraying coolant in the assembler.,Leak,High,Replace Components,371
+Assembler now and again overheating.,Mechanical Failure,Low,No Action Planned,0
+Some collected items are split.,Mechanical Failure,Low,Readjust Machine,45
+Blender is overheating.,Leak,Low,Add to Watch List,79
+Robot arms showing slight signs of wear.,Mechanical Failure,Medium,Add to Watch List,69
+Overheating in the sorter engine.,Electronic Failure,Medium,Replace Components,416
+Fine breaks appearing on constructing agent rollers.,Mechanical Failure,Low,Add to Watch List,70
+Defects that have been shown in the assembled product.,Mechanical Failure,Medium,Readjust Machine,37
+Sharp electrical sounds heard inside constructing agent.,Electronic Failure,Low,Add to Watch List,74
+Item stuck in scanner spools.,Mechanical Failure,Low,Readjust Machine,33
+Smoke is emitted by the robot arm.,Electronic Failure,High,Replace Components,453
+mixer will overheat occasionally.,Electronic Failure,Low,Add to Watch List,70
+Mixing coolant leaking on floor.,Leak,High,Replace Components,372
+Sorter control supply fizzled.,Electronic Failure,High,Replace Components,431
+Can hear a moaning coil in the classifier.,Electronic Failure,Low,Add to Watch List,63
+Blender now and then turning off.,Electronic Failure,Low,Add to Watch List,67
+Scanner is extremely hot to contact.,Electronic Failure,Medium,Add to Watch List,69
+Rattling sounds heard in assembler.,Mechanical Failure,Low,Add to Watch List,53
+Blender now and again overheats.,Electronic Failure,Low,Add to Watch List,70
+mixer smokes at time of start-up.,Electronic Failure,High,Full Replacement,9000
+Fried capacitor in the assembler.,Electronic Failure,High,Replace Components,352
+Mixer will start then trip fuse.,Electronic Failure,Low,Add to Watch List,63
+Fuse blown in assembly motor.,Electronic Failure,Low,Replace Components,388
+assembler keeps switching off.,Electronic Failure,High,Replace Components,323
+Scanner spools starting to crack and bend.,Mechanical Failure,Medium,Replace Components,407
+Classification software freezes occasionally.,Software Failure,Low,Update Firmware,144
+"Readers is smoking at the time of start-up, emits a spark.",Electronic Failure,High,Full Replacement,10800
+Sorter yields bent products.,Mechanical Failure,Medium,Readjust Machine,43
+Blender is hot to contact.,Electronic Failure,Low,Add to Watch List,77
+Blending programming continues freezing.,Software Failure,Low,Update Firmware,111
+sorter control power failure.,Electronic Failure,High,Replace Components,431
+Some fluid pooling underneath yield of constructing agent.,Leak,High,Replace Components,369
+Coolant leaking from mixer.,Leak,High,Replace Components,328
+Material gets twisted by the construction agent.,Mechanical Failure,Medium,Readjust Machine,43
+Fuse is blown in the scanner.,Electronic Failure,High,Replace Components,445
+Constant power cuts when starting sorter plant.,Electronic Failure,High,Full Replacement,13050
+Noisy sounds heard out of blender.,Mechanical Failure,Low,Add to Watch List,68
+Liquid discharge in the bottom of the sorting agent.,Leak,Medium,Add to Watch List,63
+"Rattling, annoying sound in the piston assembly.",Mechanical Failure,Low,No Action Planned,0
+Smoke shows up when constructing agent is powered on.,Electronic Failure,High,Replace Components,334
+Extreme coolant spill under mixer.,Leak,High,Replace Components,414
+fine cracks appearing on the roller assembly.,Mechanical Failure,Low,Add to Watch List,70
+The assembler trips the fuse.,Electronic Failure,Low,Add to Watch List,68
+Fuse blown in get mixing blender.,Electronic Failure,Low,Replace Components,441
+Software driver is still failing.,Software Failure,Low,Update Firmware,130
+Loud sounds emerging from mixer.,Mechanical Failure,Low,Add to Watch List,68
+Mixer spoils output.,Electronic Failure,Low,Add to Watch List,55
+Constructing agent is giving indications of wear.,Mechanical Failure,Medium,Add to Watch List,50
+Pipe in the mixer has spraying the coolant everywhere.,Leak,High,Replace Components,420
+Slight shaking sound inside constructing agent.,Mechanical Failure,Low,Add to Watch List,72
+Transport line keeps bending items.,Mechanical Failure,Medium,Replace Components,439
+Clogged transport line.,Mechanical Failure,Medium,Readjust Machine,45
+Conveyor belt jammed.,Mechanical Failure,Medium,Readjust Machine,39
+Smoke is being emitted from robot arm.,Electronic Failure,High,Replace Components,453
+There are some high-pitched electrical sounds emitted by the mixer.,Electronic Failure,Low,Add to Watch List,70
+Items stuck in scanner spools.,Mechanical Failure,Medium,Readjust Machine,45
+Capacitor blown in the scanner.,Electronic Failure,High,Replace Components,484
+Things some of the time tumble off the belt.,Mechanical Failure,Low,Add to Watch List,73
+Scanner is very hot to touch.,Electronic Failure,Medium,Add to Watch List,69
+Crack appearing on outer panel of robot arm.,Mechanical Failure,Medium,Add to Watch List,67
+Loud whine sound from sorter PC.,Electronic Failure,Low,Add to Watch List,63
+Classifier engine continues to get stuck.,Mechanical Failure,High,Readjust Machine,44
+Sorter controller fails to connect.,Software Failure,Low,Update Firmware,119
+Sorting software occasionally freezes.,Software Failure,Low,Update Firmware,144
+Rattling sound heard inside scanner.,Mechanical Failure,Low,No Action Planned,0
+Assembler is showing signs of wear.,Mechanical Failure,Medium,Add to Watch List,50
+The materials get jammed in the mixer.,Mechanical Failure,Medium,Readjust Machine,31
+spilled material in the mixer.,Leak,Medium,No Action Planned,0
+High pitched noise emitted from mixer.,Electronic Failure,Low,Add to Watch List,62
+Things tumbling off transport line.,Mechanical Failure,Low,Readjust Machine,41
+scanner program is frozen.,Software Failure,Low,Update Firmware,129
+Conveyor belt starting to split and bend.,Mechanical Failure,Medium,Replace Components,439
+Sorter yields browned items.,Mechanical Failure,Medium,Readjust Machine,43
+Robot arm power supply burnt out.,Electronic Failure,High,Replace Components,402
+Strange high-pitched sounds from assembler.,Electronic Failure,Low,Add to Watch List,68
+Quiet rattling sound inside assembler.,Mechanical Failure,Low,Add to Watch List,72
+Unexpected shutdown of scanner.,Electronic Failure,High,Full Replacement,8100
+Conveyor belt has stated to divide,Mechanical Failure,Medium,Replace Components,429
+Many defects are shown in the assembled product.,Mechanical Failure,High,Readjust Machine,45
+Severe overheating in the mixer.,Leak,High,Full Replacement,12600
+Robot arm has generated a black smoke.,Electronic Failure,High,Full Replacement,4050
+Corrosion of the capacitor in the construction agent.,Electronic Failure,High,Replace Components,352
+Robot arm start up tripped fuse.,Electronic Failure,Low,Add to Watch List,61
+Construction agent sometimes stuck.,Mechanical Failure,Low,Add to Watch List,67
+Products keep falling off the belt.,Mechanical Failure,Low,Readjust Machine,38
+"Some of the liquid droplets, are collected in the bottom of the assembler.",Leak,Medium,Add to Watch List,63
+Mixer under strict coolant leakage.,Leak,High,Replace Components,414
+Severe coolant leak underneath mixer.,Leak,High,Replace Components,414
+Material is stuck in a mixer.,Mechanical Failure,Medium,Readjust Machine,31
+mixer does not turn off.,Electronic Failure,Low,Add to Watch List,67
+Assembler is overheating.,Leak,Low,Add to Watch List,62
+Startup is consistently causing a power failure the sorting plant.,Electronic Failure,High,Full Replacement,13050
+controls of feeding robot arm jammed.,Electronic Failure,High,Replace Components,402
+The scanner spools are once in a while sticking.,Mechanical Failure,Low,Add to Watch List,44
+There is a slight ticking sound from the mixer.,Mechanical Failure,Low,Add to Watch List,66
+Power failures in the building cooling agents.,Leak,low,Replace Components,453
+Robot arm gives slight signs of wear.,Mechanical Failure,Medium,Add to Watch List,69
+Cracks appearing on scanner rollers.,Mechanical Failure,Low,Add to Watch List,52
+Article trapped in the reel scanner.,Mechanical Failure,Low,Readjust Machine,33
+Strange rattle sound in the internal mixer.,Mechanical Failure,Medium,Readjust Machine,42
+Coolant leaking on the floor.,Leak,High,Replace Components,372
+Some of the material is twisted inside scanner.,Mechanical Failure,Low,Readjust Machine,44
+Spools bent in scanner.,Mechanical Failure,Medium,Replace Components,265
+Sorter engine is massively overheating.,Electronic Failure,Medium,Replace Components,416
+Assembler is smoking when turned on.,Electronic Failure,High,Replace Components,334
+Fuses blown in get coupling engine.,Electronic Failure,Low,Replace Components,388
+"After installation of the software, you will not be able to connect to the network.",Software Failure,Medium,Update Firmware,94
+Leaking of coolant in the mixer.,Leak,High,Replace Components,328
+Flooding on the floor under the mixer.,Leak,Medium,Replace Components,443
+Scanner gives off sparks and then smokes during startup.,Electronic Failure,High,Full Replacement,10800
+Build agent emits an odd sound.,Electronic Failure,Low,Add to Watch List,68
+Fine cracks appearing on assembler rollers.,Mechanical Failure,Low,Add to Watch List,70
+Fuse to the motor assembly blown.,Electronic Failure,Low,Replace Components,388
+High pitched whine from mixer.,Electronic Failure,Low,Replace Components,452
+The sorter engine continues getting stuck.,Mechanical Failure,High,Readjust Machine,44
+Mixing software keeps freezing.,Software Failure,Low,Update Firmware,111
+Software driver has crashed.,Software Failure,Low,Update Firmware,135
+Numerous variations appearing on the collected objects.,Mechanical Failure,High,Readjust Machine,45
+assembler cracked some of the products.,Mechanical Failure,Low,Readjust Machine,45
+The scanner unexpectedly powers down,Electronic Failure,High,Full Replacement,8100
+Constant power reduction when start sorting plant.,Electronic Failure,High,Full Replacement,13050
+Pipe in mixer is spraying coolant everywhere.,Leak,High,Replace Components,420
+Constructing agent bands are intertwined.,Electronic Failure,Low,Add to Watch List,68
+The blender is smoking during activity.,Electronic Failure,High,Replace Components,394
+Controller software fails to interface with mixer.,Software Failure,Low,Update Firmware,139
+Items sometimes fall off conveyor belt.,Mechanical Failure,Low,No Action Planned,0
+Back up constructing agent control supply wore out.,Electronic Failure,High,Replace Components,341
+Mixer disconnected at times.,Electronic Failure,Low,Add to Watch List,67
+Blown fuse in controller constructing agent.,Electronic Failure,Low,Replace Components,348
+Coolant leaking from blender.,Leak,High,Replace Components,328
+Imperfections appearing in gathered items.,Mechanical Failure,Medium,Readjust Machine,37
+The cooling agent smokes when it is on the construction line.,Electronic Failure,High,Replace Components,334
+Blown fuses in controller mixer.,Electronic Failure,Low,Replace Components,493
+Products are stuck in a spool scanner.,Mechanical Failure,Low,Readjust Machine,33
+Mixer sometimes switching off.,Electronic Failure,Low,Add to Watch List,67
+Materials get twisted by constructing agent.,Mechanical Failure,Medium,Readjust Machine,43
+Quiet coil whine from sorter computer.,Electronic Failure,Low,Add to Watch List,63
+spilled coolant in the mixer.,Leak,Medium,No Action Planned,0
+The assembler has caused a power cut.,Electronic Failure,High,Replace Components,323
+Mixer is overheated.,Leak,Low,Add to Watch List,79
+There are some sharp electrical sounds discharged by the mixer.,Electronic Failure,Low,Add to Watch List,70
+Assembler is overheating.,Leak,Low,Add to Watch List,62
+There are loud noises heard from the mixer.,Mechanical Failure,Low,Add to Watch List,63
+Build agent bands are intertwined.,Electronic Failure,Low,Add to Watch List,68
+Assembler over time will overheat.,Mechanical Failure,Low,No Action Planned,0
+Break appearing on external board of robot arm.,Mechanical Failure,Medium,Add to Watch List,67
+Fuse blown by the controller mixer.,Electronic Failure,Low,Replace Components,493
+Shrill cry from scanner PC.,Electronic Failure,Low,Add to Watch List,77
+Assembled products are cracked.,Mechanical Failure,Low,Readjust Machine,45
+Controller app continues to freeze.,Software Failure,Low,Update Firmware,135
+The controller software keeps crashing.,Software Failure,Low,Update Firmware,130
+Splits appearing on external boards of blender.,Mechanical Failure,High,Full Replacement,2700
+Blown capacitors in scanner.,Electronic Failure,High,Replace Components,484
+Scanner radiates heat and afterward smokes during startup.,Electronic Failure,High,Full Replacement,10800
+Software unexpectedly closed the scanner.,Electronic Failure,Medium,Full Replacement,4500
+Loud rattling sounds in mixer.,Mechanical Failure,Low,Add to Watch List,72
+There are several high-pitched sounds that are emitted from electric mixer.,Electronic Failure,Low,Add to Watch List,70
+Loud thrashing sounds heard from mixer.,Mechanical Failure,Low,Add to Watch List,63
+Switch blowing the construction agent fuse.,Electronic Failure,High,Replace Components,445
+Smoke is being emitted from robot arm.,Electronic Failure,High,Replace Components,453
+Mixer sometimes overheats.,Electronic Failure,Low,Add to Watch List,70
+Numerous deformities appearing in collected items.,Mechanical Failure,High,Readjust Machine,45
+Shaking sound brought about by robot arm.,Mechanical Failure,Low,Add to Watch List,71
+Conveyor belt is bending the products.,Mechanical Failure,Medium,Replace Components,439
+Scanner reel begins to break.,Mechanical Failure,Low,Replace Components,547
+Minor break from constructing agent coolant.,Leak,low,Replace Components,453
+Dark smoke shows up when constructing agent engine is fueled on.,Electronic Failure,High,Full Replacement,8100
+Crack Appearing on the outside panel of the robot arm.,Mechanical Failure,Medium,Add to Watch List,67
+High pitched electrical sounds heard inside assembler.,Electronic Failure,Low,Add to Watch List,74
+Blender every so often overheats.,Leak,Low,Add to Watch List,67
+Power failure has occurred to the classifier.,Electronic Failure,High,Replace Components,431
+Smoke appears when assembler is powered on.,Electronic Failure,High,Replace Components,334
+The assembler of the fuse tripped.,Electronic Failure,High,Replace Components,445
+Tiny leak from assembler coolant.,Leak,low,Replace Components,453
+Products will fall from time to time the conveyor.,Mechanical Failure,Low,No Action Planned,0
+A few materials yield by the constructing agent are twisted.,Mechanical Failure,Low,Readjust Machine,44
+Big sound comes out of the mixer.,Mechanical Failure,Low,Add to Watch List,68
+Products will fall from time to time from the belt.,Mechanical Failure,Low,Add to Watch List,73
+Materials sometimes get stuck in robot arm.,Mechanical Failure,Low,Add to Watch List,63
+Transport line beginning to part and curve.,Mechanical Failure,Medium,Replace Components,439
+Sorter will yield broken items.,Mechanical Failure,Medium,Readjust Machine,43
+Assembler sometimes overheating.,Mechanical Failure,Low,No Action Planned,0
+Mixer coolant leakage.,Leak,High,Replace Components,395
+Controller programming neglects to interface with blender.,Software Failure,Low,Update Firmware,139
+transmission line starting to split,Mechanical Failure,Medium,Replace Components,429
+Products caught in spool scanner.,Mechanical Failure,Medium,Readjust Machine,45
+Robot arm fire up stumbled combine.,Electronic Failure,Low,Add to Watch List,61
+Noisy whipping sounds coming from mixer.,Mechanical Failure,Low,Add to Watch List,63
+Rattling sound heard on the inside of the scanner.,Mechanical Failure,Low,No Action Planned,0
+very loud whine sound coming from PC.,Electronic Failure,Low,Add to Watch List,63
+Blown fuse in controller assembler.,Electronic Failure,Low,Replace Components,348
+Backup power supply control mixer is dead.,Electronic Failure,High,Replace Components,400
+Robotic arm showing slight signs of wear.,Mechanical Failure,Medium,Add to Watch List,69
+Reel of the scanner will not move from time to time.,Mechanical Failure,Low,Add to Watch List,44
+Small leak in the cooled assembly.,Leak,low,Replace Components,453
+Capacitor blown in the scanner.,Electronic Failure,High,Replace Components,484
+splits appearing at external connections of mixer.,Mechanical Failure,High,Full Replacement,2700
+Reel is stuck in the scanner.,Mechanical Failure,Low,Add to Watch List,63
+Gathered items are broken.,Mechanical Failure,Low,Readjust Machine,45
+Shaking sound heard inside scanner.,Mechanical Failure,Low,No Action Planned,0
+Bunches of chaos on the floor under blender.,Leak,Medium,Replace Components,443
+Loud noise released from acute mixer.,Electronic Failure,Low,Add to Watch List,62
+Many defects showing in assembled products.,Mechanical Failure,High,Readjust Machine,45
+The scanner is a very hot to the touch.,Electronic Failure,Medium,Add to Watch List,69
+Distinctive rattling sound was heard on the inside of the mixer.,Mechanical Failure,Medium,Readjust Machine,42
+Uproarious shaking and slamming sound from constructing agent cylinders.,Mechanical Failure,Medium,Readjust Machine,35
+Assembler tripped fuse.,Electronic Failure,Low,Add to Watch List,68
+Rattling sounds inside constructing agent cylinders.,Mechanical Failure,Low,No Action Planned,0
+"Robot arm, black smoke is released.",Electronic Failure,High,Full Replacement,4050
+Reel of the scanner stuck from time to time.,Mechanical Failure,Low,Add to Watch List,44
+Awkward sounds made by arranging cylinders.,Mechanical Failure,Low,Add to Watch List,63
+Coil whine from the computer scanner.,Electronic Failure,Low,Add to Watch List,77
+rattling sounds coming from assembler agents.,Mechanical Failure,Low,No Action Planned,0
+Spool bent in the scanner.,Mechanical Failure,Medium,Replace Components,265
+fine cracks appearing in the construction of the roller agent.,Mechanical Failure,Low,Add to Watch List,70
+Frozen mixing software.,Software Failure,Low,Update Firmware,111
+Transport line beginning to part.,Mechanical Failure,Medium,Replace Components,429
+Mixer coolant leaking everywhere.,Leak,High,Replace Components,395
+Programming has refused to interface with the classifier.,Software Failure,Medium,Update Firmware,112
+Black smoke appears when assembler motor is powered on.,Electronic Failure,High,Full Replacement,8100
+Controller programming freezes.,Software Failure,Low,Update Firmware,135
+Fuse blown in the controller mixer.,Electronic Failure,Low,Replace Components,493
+Material spillage in mixer.,Leak,Medium,No Action Planned,0
+Assembler occasionally getting jammed.,Mechanical Failure,Low,Add to Watch List,67
+The assembler has been showing signs of wear.,Mechanical Failure,Medium,Add to Watch List,50
+First product sometimes jammed in sorter spools.,Mechanical Failure,Low,Add to Watch List,54
+acute electrical sound heard in the work agent.,Electronic Failure,Low,Add to Watch List,74
+Back up blender control supply frazzled.,Electronic Failure,High,Replace Components,400
+Collected imperfections appear on the item.,Mechanical Failure,Medium,Readjust Machine,37
+Back up assembler power supply burnt out.,Electronic Failure,High,Replace Components,341
+Corroded capacitors in constructing agent.,Electronic Failure,High,Replace Components,352
+Programming controller refuses to connect to the mixer.,Software Failure,Low,Update Firmware,139
+mixer is smoking when operating.,Electronic Failure,High,Replace Components,394
+Things come back from assembler split.,Mechanical Failure,Medium,Readjust Machine,42
+Some of the electrical sounds discharged in the mixer.,Electronic Failure,Low,Add to Watch List,70
+Blender starts and smokes at startup.,Electronic Failure,High,Full Replacement,9000
+Mixer leakage of cooling water.,Leak,High,Replace Components,373
+Mixer will sometimes overheat.,Electronic Failure,Low,Add to Watch List,70
+Things regularly fall into the spool scanner.,Mechanical Failure,Medium,Readjust Machine,45
+he robot arm stalls here and there.,Mechanical Failure,Low,Add to Watch List,63
+Collected item is corrupted.,Mechanical Failure,Low,Readjust Machine,45
+Mixer coolant pipe leaking.,Leak,High,Replace Components,373
+Items will be break and collect in filter.,Mechanical Failure,Low,Readjust Machine,45
+Mixer refrigerant has spilled on the floor.,Leak,High,Replace Components,372
+Sometimes material is stuck in the arm of the robot.,Mechanical Failure,Low,Add to Watch List,63
+"Reel of the sorter, will continue to torque.",Mechanical Failure,Medium,Readjust Machine,39
+Fuse of the scanner tripped.,Electronic Failure,High,Replace Components,445
+loud sounds created by the arrangement of the cylinder agents.,Mechanical Failure,Low,Add to Watch List,63
+Materials get bent by assembler.,Mechanical Failure,Medium,Readjust Machine,43
+Blown fuses in controller blender.,Electronic Failure,Low,Replace Components,493
+Shaking sound heard in the mixing agent.,Mechanical Failure,Low,Add to Watch List,53
+Extreme overheating of mixer.,Leak,High,Full Replacement,12600
+Sorting engine fails.,Mechanical Failure,High,Readjust Machine,44
+Assembler is overheating.,Leak,Low,Add to Watch List,62
+Sorter engine truly overheating.,Electronic Failure,Medium,Replace Components,416
+heard a big sound coming from mixer.,Mechanical Failure,Low,Add to Watch List,68
+Robot arm is yielding dark smoke.,Electronic Failure,High,Full Replacement,4050
+Material spillage in mixer.,Leak,Medium,No Action Planned,0
+Engine sends out black smoke when you are running the assembler.,Electronic Failure,High,Full Replacement,8100
+the outside of the scanner is damaged.,Mechanical Failure,High,Readjust Machine,43
+Abnormal overheating of the sorting plant.,Leak,High,Full Replacement,9000
+blown fuse in the controller agent.,Electronic Failure,Low,Replace Components,348
+Breaks appearing on scanner rollers.,Mechanical Failure,Low,Add to Watch List,52
+Blown capacitors in scanner.,Electronic Failure,High,Replace Components,484
+Clogged transport line.,Mechanical Failure,Medium,Readjust Machine,39
+Reel is stuck in the scanner.,Mechanical Failure,Low,Add to Watch List,63
+Assembler is overheating.,Mechanical Failure,Low,No Action Planned,0
+constructing agent continues turning off.,Electronic Failure,High,Replace Components,323
+Conveyor belt jammed.,Mechanical Failure,Medium,Readjust Machine,45
+"Occasionally, emerging products was stuck in the scanner.",Mechanical Failure,Low,Add to Watch List,74
+The sorter spools continue twisting.,Mechanical Failure,Medium,Readjust Machine,39
+Scanner regularly powers down unexpectedly.,Electronic Failure,High,Full Replacement,8100
+backup power supply to control agent failed,Electronic Failure,High,Replace Components,341
+Items keep falling off the belt.,Mechanical Failure,Low,Readjust Machine,38
+Fuse blown in the engine coupling.,Electronic Failure,Low,Replace Components,388
+mixer has burst refrigerant pipes.,Leak,High,Replace Components,373
+Mixer occasionally overheats.,Leak,Low,Add to Watch List,67
+Robot arm binding not activated.,Electronic Failure,Low,Add to Watch List,61
+Frozen scanner software.,Software Failure,Low,Update Firmware,129
+Hose in the mixer is spraying coolant everywhere.,Leak,High,Replace Components,420
+Heard rattling inside the scanner.,Mechanical Failure,Low,No Action Planned,0
+Software of the organization will sometimes freeze.,Software Failure,Low,Update Firmware,144
+Defects appearing in the robot arm on the external board.,Mechanical Failure,Medium,Add to Watch List,67
+Software not able to connect to the classifier.,Software Failure,Medium,Update Firmware,112
+Controller of programming continues to crash.,Software Failure,Low,Update Firmware,130
+Controller agents giving signs of wear.,Mechanical Failure,Medium,Add to Watch List,50
+Channel in blender is spraying coolant all over the place.,Leak,High,Replace Components,420
+Assembler will return broken items.,Mechanical Failure,Medium,Readjust Machine,42
+Things stuck in scanner spools.,Mechanical Failure,Medium,Readjust Machine,45
+Robot arm is rattling.,Mechanical Failure,Low,Add to Watch List,71
+Qualifying reel keeps bending.,Mechanical Failure,Medium,Readjust Machine,39
+Sparks and smoke in the mixer at startup.,Electronic Failure,High,Full Replacement,9000
+The sorter spools keep bending.,Mechanical Failure,Medium,Readjust Machine,39

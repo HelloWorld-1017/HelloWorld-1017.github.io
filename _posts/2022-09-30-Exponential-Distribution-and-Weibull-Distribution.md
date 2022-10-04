@@ -11,7 +11,7 @@ tags:
  - Statistics and Machine Learning Toolbox
 ---
 
-# 1Introduction
+# Introduction
 
 指数分布(Exponential Distribution)是一种常见的连续性随机变量分布，记为$E(\lambda)$。它有一个重要的性质，即“无记忆性”。指数分布的引出可以从两个不同的视角：
 
@@ -20,7 +20,7 @@ tags:
 
 <br>
 
-# Exponential Distribution
+# Exponential Distribution(One-parameter Family of  Curves)
 
 ## Deduce from A Constructed Function
 
@@ -175,7 +175,7 @@ grid on
 
 <br>
 
-# Weibull Distribution
+# Weibull Distribution(Two-parameter Family of Curves)
 
 ## Deduce from Exponential Distribution
 

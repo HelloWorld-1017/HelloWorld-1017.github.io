@@ -177,7 +177,6 @@ p =
 
 ```matlab
 function p = helperSignificanceTest(accus_mix_minus_generate, numTimes)
-sum_obs = sum(accus_mix_minus_generate);
 left = arrayfun(@(x) sprintf("x_%s", num2str(x)), 1:1:numTimes);
 left = char(join(left, ','));
 right = repmat("[1, -1]", 1, numTimes);
@@ -188,13 +187,17 @@ expression = arrayfun(@(x) sprintf("x_%s(:)", num2str(x)), 1:1:numTimes);
 expression = char(join(expression, ','));
 eval(sprintf('x = [%s];', expression))
 
-sum_prob = x*accus_mix_minus_generate';
+sum_prob = x*accus_mix_minus_generate;
 
 sum_prob = sort(abs(sum_prob), 'descend');
 
-p = sum(sum_prob>=sum_obs)/numel(sum_prob);
+sum_obs = sum(accus_mix_minus_generate);
+p = sum(sum_prob>=abs(sum_obs))/numel(sum_prob);
 end
 ```
+
+注意：上面代码的倒数第二行同样需要对`sum_obs`取绝对值，否则，若`sum_obs`的值为负数，那么算出来的`p`值始终是1。一定注意！！！
+{: .notice--warning}
 
 计算A方法和B方法应用于不同数据集的$p$值（15次试验）：
 
@@ -244,22 +247,24 @@ fprintf('p5: %.4f\n', p5)
 结果为：
 
 ```matlab
-p1: 1.0000
-p2: 1.0000
-p3: 0.2500
+p1: 0.5000
+p2: 0.0312
+p3: 0.5000
 p4: 0.0001
 p5: 0.0001
 ```
 
 ```matlab
->> mean(accus_mix_minus_generate4), mean(accus_mix_minus_generate5)
+>> mean(accus_mix_minus_generate2), mean(accus_mix_minus_generate4), mean(accus_mix_minus_generate5)
 ans =
-    0.0116
+    0.0086
 ans =
-    0.0374
+    0.0121
+ans =
+    0.0393
 ```
 
-因此，我们可以说在$\alpha=0.05$的显著性水平下，对于数据集fisheriris、ionosphere、ovariancancer，接受假设$H$，即认为方法A与方法B的效果是一致的；对于数据集simulatedDataset、digitTrainCellArrayData，拒绝假设$H$，并且均认为方法A的效果优于方法B。
+因此，我们可以说在$\alpha=0.05$的显著性水平下，对于数据集fisheriris、ovariancancer，接受假设$H$，即认为方法A与方法B的效果是一致的；对于数据集、ionosphere、simulatedDataset、digitTrainCellArrayData，拒绝假设$H$，并且均认为方法A的效果优于方法B。
 
 <br>
 

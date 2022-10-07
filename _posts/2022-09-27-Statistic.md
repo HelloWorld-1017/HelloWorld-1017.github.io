@@ -20,7 +20,7 @@ tags:
 
 # Common Statistics
 
-**（一）Sample Mean**
+## Sample Mean
 
 设样本为 $X_1, \cdots, X_n$ ，则 
 
@@ -32,7 +32,7 @@ $$
 
 
 
-**（二）Sample Variance**
+## Sample Variance
 
 设样本为 $X_1, \cdots, X_n$ ，则
 
@@ -52,13 +52,13 @@ $$
 
 
 
-**（三）Order Statistics**
+## Order Statistics
 
 各种次序统计量，如样本中位数、样本$p$分位数($0<p<1$)、极值、极差等等。
 
 
 
-**（四）Sample Moment**
+## Sample Moment
 
 有一类重要的统计量叫做样本矩，分为**样本原点矩**和**样本中心矩**。
 

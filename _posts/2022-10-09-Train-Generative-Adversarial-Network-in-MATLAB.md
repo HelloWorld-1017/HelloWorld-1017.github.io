@@ -1,4 +1,14 @@
-
+---
+layout: single
+title: Train Generative Adversarial Network(GAN) in MATLAB
+date: 2022-10-09 08:10:11 +0800
+categories: 
+ - Programming
+ - Machine Learning
+tags:
+ - MATLAB
+ - MATLAB Deep Learning Toolbox
+---
 
 # Introduction
 
@@ -21,7 +31,7 @@ GAN包含两个部分结构：
 
 训练GAN，就是同时提升Generator和Discriminator的表现：
 
-- 训练Generator，使得其生成数据能够骗过Discriminator。因此，为了优化Generator的性能，需要在向Discriminator输入生成数据时，最大化Discriminator的损失函数值；
+- 训练Generator，使得其生成数据能够骗过Discriminator。因此，为了优化Generator的性能，需要在向Discriminator输入生成数据时，最小化Discriminator的损失函数值；
 - 训练Discriminator，使得其能有效分辨真实数据和生成数据。因此，为了优化Discriminator的性能，需要在向Discriminator输入真实数据和生成数据时，最小化Discriminator的损失值函数。
 
 在理想情况下，使用这样的训练策略能够使Generator生成足够真实的数据，使Discriminator学习到训练数据的强特征表示(strong feature representations)。
@@ -338,6 +348,7 @@ end
 - `YGenerated`表示Discriminator认为<u>**生成图片**</u>为真实的概率，`1-YGenerated`表示Discriminator认为<u>**生成图片**</u>为生成的概率；
 
 正如前文所述，Generator的训练目标是使其生成的数据骗过Discriminator，使后者认为生成的数据是真实的，因此Generator需要最大化`YGenerated`，即最小化损失函数negative log likelihood function：
+
 $$
 \mathrm{lossGenerator = -mean(log(Y_{Generated}))}\notag
 $$
@@ -348,6 +359,7 @@ lossG = -mean(log(YGenerated));
 ```
 
 Discriminator的训练目标是使其能有效分辨真实数据和生成数据，因此Discriminator需要最大化`Yreal`和`1-YGenerated`，即最小化损失函数negative log likelihood function：
+
 $$
 \mathrm{lossDiscriminator=-mean(log(Y_{Real}))-mean(log(1-Y_{Generated}))}\notag
 $$
@@ -365,6 +377,7 @@ Generator和Discriminator网络的Scores计算路径示意图如下图所示：
 在计算scores时，`YReal`和`YGenerated`的含义和计算losses是一致的，计算方法和意义也是类似的，只是多了一个负号但是能够更有效地反映相同的信息(The score is inversely proportional to the loss but effectively contains the same information)。
 
 Generator的score：
+
 $$
 \mathrm{scoreGenerator=mean(Y_{Generated})}\notag
 $$
@@ -375,6 +388,7 @@ scoreG = mean(YGenerated);
 ```
 
 Discriminator的score：
+
 $$
 \mathrm{scoreDiscriminator=\dfrac12\Big[mean(Y_{Real})+mean(1-Y_{Generated})\Big]}\notag
 $$
@@ -407,7 +421,7 @@ flipProb = 0.35;
 
 每训练100次展示generated validation images：
 
-注意：这里的100次不是指训练轮数，而是指100个mini-batch训练。
+注意：这里的100次不是指epoch，而是指100个mini-batch训练。
 {: .notice--warning}
 
 ```matlab
@@ -664,3 +678,8 @@ title("Generated Images")
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008210046431.png" alt="image-20221008210046431" style="zoom:80%;" />
 
 <br>
+
+**Reference**
+
+[1] [Train Generative Adversarial Network(GAN) - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/train-generative-adversarial-network.html).
+

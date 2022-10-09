@@ -1,79 +1,62 @@
 ---
 layout: single
-title: Mathematical Fonts
+title: LaTeX Symbol
 date: 2022-10-06 23:09:11 +0800
 categories: 
  - LaTeX
-tags:
 ---
 
-# Normal
+# Mathematical Fonts
+
+## Normal
 
 正常字体（Normal）`\mathnormal`：
 
 ![image-20221006233711187](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006233711187.png)
 
-<br>
-
-# Roman
+## Roman
 
 罗马体（Roman，ie 正体）`\mathrm`：
 
 ![image-20221006232600311](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006232600311.png)
 
-<br>
-
-# Italic
+## Italic
 
 意大利体（Italic，ie 斜体）`\mathit`：
 
 ![image-20221006233918076](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006233918076.png)
 
-<br>
-
-# Script
+## Script
 
 书写体（Script，ie 花体）`\mathsrc`：
 
 ![image-20221006232433346](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006232433346.png)
 
-<br>
-
-
-
-# Blackboard
+## Blackboard
 
 黑板体（Blackboard）`\mathbb`：
 
 ![image-20221006232745862](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006232745862.png)
 
-<br>
-
-# Gothic
+## Gothic
 
 哥特体（Gothic）`\mathfrak`
 
 ![image-20221006233024510](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006233024510.png)
 
-<br>
-
-# Sans serif
+## Sans serif
 
 无衬线体（sans serif）`\mathsf`：
 
 ![image-20221006233141799](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006233141799.png)
 
-<br>
-
-# Typewriter type
+## Typewriter type
 
 打字机体（typewriter type）`\mathtt`：
 
 ![image-20221006233305998](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006233305998.png)
 
-<br>
-
-# Calligraphy
+## Calligraphy
 
 美术体（Calligraphy）`\mathcal`：
 
@@ -81,6 +64,21 @@ tags:
 
 <br>
 
+# Greek Alphabet
+
+## Lowercase
+
+![image-20221009143801381](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221009143801381.png)
+
+## Capital
+
+![image-20221009143814222](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221009143814222.png)
+
+<br>
+
 **Reference**
 
 [1] [LaTex 常用的数学字体](https://blog.csdn.net/sdnuwjw/article/details/119920649).
+
+[2] 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
+

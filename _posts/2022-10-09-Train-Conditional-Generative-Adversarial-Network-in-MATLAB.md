@@ -1,6 +1,18 @@
+---
+layout: single
+title: Train Conditional Generative Adversarial Network(CGAN) in MATLAB
+date: 2022-10-09 08:15:17 +0800
+categories: 
+ - Programming
+ - Machine Learning
+tags:
+ - MATLAB
+ - MATLAB Deep Learning Toolbox
+---
+
 # Introduction
 
-文章XX分析了MATLAB关于GAN的一个示例，但实际上，GAN有很多变种，MATLAB还提供了一个CGAN(Conditional Generative Adversarial Network，条件生成对抗网络)的示例：[Train Conditional Generative Adversarial Network(CGAN) - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/train-conditional-generative-adversarial-network.html)。前者可以视为一个无监督学习模型，而后者是一个使用带标签数据集训练的有监督学习模型。
+文章[Train Generative Adversarial Network(GAN) in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Generative-Adversarial-Network-in-MATLAB/)分析了MATLAB关于GAN的一个示例，但实际上，GAN有很多很多变种，MATLAB还提供了一个CGAN(Conditional Generative Adversarial Network，条件生成对抗网络)的示例：[Train Conditional Generative Adversarial Network(CGAN) - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/train-conditional-generative-adversarial-network.html)。前者可以视为一个无监督学习模型，而后者是一个使用带标签数据集训练的有监督学习模型。
 
 两个示例使用的是同一个训练集，其代码也非常类似，本文主要分析两者实现之间的差异，相同的部分从略。
 
@@ -136,7 +148,7 @@ Y = dlarray(Y,'SSCB');
 end
 ```
 
-这个层的作用就是将一个CB类型的数据reshape成一个SSCB的数据，对应于RGB图像。
+这个层的作用是将一个CB类型的数据reshape成一个SSCB的数据，对应于RGB图像。
 
 #### `concatenationLayer`Built-in Layer
 
@@ -232,7 +244,7 @@ end
 
 ### The structure of Discriminator
 
-CGAN和GAN的Discriminator之间的差异还是体现在前面一部分：
+同样地，CGAN和GAN的Discriminator之间的差异仍体现在前面一部分：
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008144604573.png" alt="image-20221008144604573" style="zoom:80%;" />
 
@@ -339,8 +351,6 @@ CGAN的Generator和Discriminator网络的losses和scores计算路径示意图如
 
 ![image-20221008154014613](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008154014613.png)
 
-
-
 与GAN相比：
 
 ![image-20221008153243800](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008153243800.png)
@@ -405,7 +415,7 @@ XGeneratedNew = predict(netG,ZNew,TNew);
 
 ![image-20221008231021799](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008231021799.png)
 
-查看训练好的生成器生成daisy图像的效果：
+查看训练好的生成器生成daisy花图像的效果：
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008231146582.png" alt="image-20221008231146582" style="zoom:80%;" />
 
@@ -457,3 +467,7 @@ title("Class: daisy")
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008231718465.png" alt="image-20221008231718465" style="zoom: 80%;" />
 
 <br>
+
+**Reference**
+
+[1] [Train Conditional Generative Adversarial Network(CGAN) - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/train-conditional-generative-adversarial-network.html).

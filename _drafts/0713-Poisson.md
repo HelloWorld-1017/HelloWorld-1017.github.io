@@ -1,10 +1,4 @@
----
-layout: single
-title: 泊松分布
-date: 2022-XX-XX XX:XX:XX
-categories: [Mathematics]
-tags: [Probability] 
----
+
 
 # 泊松分布
 

@@ -1,3 +1,5 @@
+
+
 # Introduction
 
 文章XX和XX介绍了MATLAB官方提供的关于GANs的两个示例，前者介绍了无监督学习的GAN，后者介绍了有监督学习的CGAN。两个示例采用的都是来自http://download.tensorflow.org/example_images/flower_photos.tgz的鲜花数据集。本文所介绍的WGAN-BP模型([Train Wasserstein GAN with Gradient Penalty (WGAN-GP) - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/trainwasserstein-gan-with-gradient-penalty-wgan-gp.html))同样采用的也是该数据集，并且采用的是无监督的GAN模型。但是，本文的WGAN-BP对XX中的GAN做了两方面的改进：

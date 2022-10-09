@@ -57,7 +57,7 @@ numClasses =
 
 ## Difference 2: Define the structures of Generator and Discriminator
 
-<figure>
+
 <figure>
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008133932054.png" alt="image-20221008133932054" style="zoom: 80%;" />
     <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008134014138.png" alt="image-20221008134014138" style="zoom:80%;" />
@@ -131,7 +131,7 @@ netG = dlnetwork(lgraphGenerator)
 plot(lgraphGenerator)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008142317431.png" alt="image-20221008142317431" style="zoom:80%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008142317431.png" alt="image-20221008142317431" style="zoom: 80%;" />
 
 其中，比较陌生的层是`feature2image`层、`concatenationLayer`层和`embeddingLayer`层。
 

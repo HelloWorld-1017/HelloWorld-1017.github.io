@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 测试 Header Image(External URL)
+title: Test Header Image(External URL)
 date: 2022-08-12 18:14:13 +0800
 categories: 
  - Github Pages

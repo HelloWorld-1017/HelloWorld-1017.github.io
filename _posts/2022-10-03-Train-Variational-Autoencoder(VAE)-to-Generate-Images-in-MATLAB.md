@@ -250,13 +250,13 @@ numLatentChannels = 16;
 imageSize = [28 28 1];
 
 layersE = [
-    imageInputLayer(imageSize, Normalization="none")    % 'ImageInputLayer', input size, [28, 28, 1]
-    convolution2dLayer(3, 32, Padding="same", Stride=2) % 'Convolution2DLayer'
-    reluLayer                                           % 'ReLULayer'
-    convolution2dLayer(3, 64, Padding="same", Stride=2) % 'Convolution2DLayer'
-    reluLayer                                           % 'ReLULayer'
-    fullyConnectedLayer(2*numLatentChannels)            % 'FullyConnectedLayer', input size, 'auto'; output size, 32;
-    samplingLayer                                       % custom 'samplingLayer'
+    imageInputLayer(imageSize, Normalization="none")    % Output size, [28, 28, 1, 1]
+    convolution2dLayer(3, 32, Padding="same", Stride=2) % Output size, [14, 14, 32, 1]
+    reluLayer                                           % Output size, [14, 14, 32, 1]                   
+    convolution2dLayer(3, 64, Padding="same", Stride=2) % Output size, [7, 7, 64, 1]
+    reluLayer                                           % Output size, [7, 7, 64, 1]
+    fullyConnectedLayer(2*numLatentChannels)            % Output size, [32, 1]
+    samplingLayer                                       % Output siez, [16, 1]
     ];
 ```
 
@@ -287,7 +287,6 @@ classdef samplingLayer < nnet.layer.Layer
             % [Z,mu,logSigmaSq] = predict(~,Z) Forwards input data through
             % the layer at prediction and training time and output the
             % result.
-            %
             % Inputs:
             %         X - Concatenated input data where X(1:K,:) and 
             %             X(K+1:end,:) correspond to the mean and 
@@ -315,14 +314,16 @@ classdef samplingLayer < nnet.layer.Layer
 end
 ```
 
-该layer：
+该layer实现的功能如下图所示：
 
-- 输出latent vector，作为decoder网络的输入；
-- 输出mean vector $\mu$和log-variance vector $\log(\sigma^2)$，用于计算网络损失函数中的KL散度。
+![image-20221010104647823](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221010104647823.png)
+
+- 输出latent vector，即变量`Z`，作为decoder网络的输入；
+- 输出mean vector $\mu$和log-variance vector $\log(\sigma^2)$，即变量`mu`和`logSigmaSq`，用于计算网络损失函数中的KL散度。
 
 ### Define Decoder Network Architecture
 
-本示例的decoder网络结构将16-by-1的latent vectors重构为28-by-28-by1的图像：
+本示例的decoder网络结构将16-by-1的latent vectors重构为28-by-28-by-1的图像，即最终输出的是生成图像：
 
 ![image-20221003111905924](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221003111905924.png)
 
@@ -337,16 +338,16 @@ end
 ```matlab
 projectionSize = [7 7 64];
 numInputChannels = size(imageSize,1);
-
+    
 layersD = [
-    featureInputLayer(numLatentChannels)                       % 'FeatureInputLayer', input size, 16;
-    projectAndReshapeLayer(projectionSize, numLatentChannels)  % 'projectAndReshapeLayer', output size, [7, 7, 64]
-    transposedConv2dLayer(3, 64, Cropping="same",Stride=2)     % 'TransposedConvolution2DLayer'
-    reluLayer                                                  % 'ReLULayer'
-    transposedConv2dLayer(3, 32, Cropping="same",Stride=2)     % 'TransposedConvolution2DLayer'
-    reluLayer                                                  % 'ReLULayer'
-    transposedConv2dLayer(3, numInputChannels, Cropping="same")% 'TransposedConvolution2DLayer'
-    sigmoidLayer                                               % 'SigmoidLayer'
+    featureInputLayer(numLatentChannels)                       % Output size, [16, 1]
+    projectAndReshapeLayer(projectionSize, numLatentChannels)  % Output size, [7, 7, 64, 1]
+    transposedConv2dLayer(3, 64, Cropping="same",Stride=2)     % Output size, [14, 14, 64, 1]
+    reluLayer                                                  % Output size, [14, 14, 64, 1]
+    transposedConv2dLayer(3, 32, Cropping="same",Stride=2)     % Output size, [28, 28, 32, 1]
+    reluLayer                                                  % Output size, [28, 28, 32, 1]
+    transposedConv2dLayer(3, numInputChannels, Cropping="same")% Output size, [28, 28, 1, 1]
+    sigmoidLayer                                               % Output size, [28, 28, 1, 1]
     ];
 ```
 
@@ -459,7 +460,6 @@ Y = forward(netD, Z);
 % Calculate loss and gradients.
 loss = elboLoss(Y, X, mu, logSigmaSq);
 [gradientsE, gradientsD] = dlgradient(loss, netE.Learnables, netD.Learnables);
-
 end
 ```
 
@@ -496,8 +496,11 @@ end
 - `X`，训练图像；
 - `mu`和`logSigmaSq`，分别是encoder的mean和log-variances；
 
-该函数基于以上输入计算evidence lower bound(ELBO) loss。ELBO损失总体上可以分为两个损失项：
+该函数基于以上输入计算evidence lower bound(ELBO) loss。该损失函数的计算路径如下图所示：
 
+![image-20221010132050967](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221010132050967.png)
+
+ELBO损失总体上可以分为两个损失项：
 $$
 \mathrm{ELBO\ loss}=\mathrm{reconstrcution\ loss}+\mathrm{KL\ loss}\notag
 $$
@@ -510,7 +513,7 @@ $$
 
 $\mathrm{KL\ loss}$，或者称为Kullback–Leibler divergence(KL 散度)，衡量了两个概率分布之间的差异。在这里最小化KL散度，意味着保证学习到的means和variances尽可能接近目标分布（ie 正态分布）。
 
-🙆‍♂️🙆‍♂️🙆‍♂️注意🙆‍♀️🙆‍♀️🙆‍♀️：这里展现了VAE一个重要的假设，即假设encoder所输出的coding是服从**正态分布**的。
+🙆‍♂️注意🙆‍♀️：这里展现了VAE一个重要的假设，即假设encoder所输出的coding是服从**正态分布**的。
 {: .notice--warning}
 
 对于具有K个维度的latent vector，其KL散度的计算公式为：

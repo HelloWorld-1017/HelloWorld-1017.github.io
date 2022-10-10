@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "测试 `{: .notice}`"
+title: "Test `{: .notice}`"
 date: 2022-08-12 17:03:13 +0800
 categories: 
  - Github Pages

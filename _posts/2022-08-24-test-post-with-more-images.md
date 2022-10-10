@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 测试 Post with more images(HTML `<figure>` 标签)
+title: Test Post with more images(HTML `<figure>` tag)
 date: 2022-08-24 10:07:19 +0800
 categories: 
  - Github Pages

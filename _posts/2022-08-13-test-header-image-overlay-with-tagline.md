@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 测试 Header Image Overlay with Custom Tagline
+title: Test Header Image Overlay with Custom Tagline
 tagline: Peaky Blinders
 header:
   overlay_image: /images/PeakyBlinders1.jpg

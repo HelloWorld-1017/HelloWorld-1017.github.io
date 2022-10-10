@@ -95,30 +95,33 @@ filterSize = 5;
 projectionSize = [4 4 1024];
 
 layersGenerator = [
-    featureInputLayer(numLatentInputs)
-    fullyConnectedLayer(prod(projectionSize))
-    functionLayer(@(X) feature2image(X,projectionSize),Formattable=true)
-    concatenationLayer(3,2,Name="cat");
+    featureInputLayer(numLatentInputs)               % Output size, [100, 1]
+    fullyConnectedLayer(prod(projectionSize))        % Output size, [16384, 1]
+    functionLayer(@(X) feature2image(X,projectionSize),Formattable=true) % Output size, [4, 4, 1024, 1]
+    concatenationLayer(3,2,Name="cat");              % Output size, [4, 4, 1025, 1]
 
-    transposedConv2dLayer(filterSize,4*numFilters)
-    batchNormalizationLayer
-    reluLayer
-    transposedConv2dLayer(filterSize,2*numFilters,Stride=2,Cropping="same")
-    batchNormalizationLayer
-    reluLayer
-    transposedConv2dLayer(filterSize,numFilters,Stride=2,Cropping="same")
-    batchNormalizationLayer
-    reluLayer
-    transposedConv2dLayer(filterSize,3,Stride=2,Cropping="same")
-    tanhLayer];
+    transposedConv2dLayer(filterSize,4*numFilters)   % Output size, [8, 8, 256, 1]
+    batchNormalizationLayer                          % Output size, [8, 8, 256, 1]
+    reluLayer                                        % Output size, [8, 8, 256, 1]
+    transposedConv2dLayer(filterSize,2*numFilters,Stride=2,Cropping="same") % Output size, [16, 16, 128, 1]
+    batchNormalizationLayer                          % Output size, [16, 16, 128, 1]
+    reluLayer                                        % Output size, [16, 16, 128, 1]
+    transposedConv2dLayer(filterSize,numFilters,Stride=2,Cropping="same") % Output size, [32, 32, 64, 1]
+    batchNormalizationLayer                          % Output size, [32, 32, 64, 1]
+    reluLayer                                        % Output size, [32, 32, 64, 1]
+    transposedConv2dLayer(filterSize,3,Stride=2,Cropping="same")% Output size, [64, 64, 3, 1]
+    tanhLayer                                        % Output size, [64, 64, 3, 1]
+    ];
 
 lgraphGenerator = layerGraph(layersGenerator);
 
 layers = [
-    featureInputLayer(1)
-    embeddingLayer(embeddingDimension,numClasses)
-    fullyConnectedLayer(prod(projectionSize(1:2)))
-    functionLayer(@(X) feature2image(X,[projectionSize(1:2) 1]),Formattable=true,Name="emb_reshape")];
+    featureInputLayer(1)                           % Output size, [1, 1]
+    embeddingLayer(embeddingDimension,numClasses)  % Output size, [50, 1]
+    fullyConnectedLayer(prod(projectionSize(1:2))) % Output size, [16, 1]
+    functionLayer(@(X) feature2image(X,[projectionSize(1:2) 1]), ...
+    Formattable=true,Name="emb_reshape")           % Output size, [4, 4, 1, 1]
+    ];
 
 lgraphGenerator = addLayers(lgraphGenerator,layers);
 lgraphGenerator = connectLayers(lgraphGenerator,"emb_reshape","cat/in2");
@@ -259,29 +262,36 @@ inputSize = [64 64 3];
 filterSize = 5;
 
 layersDiscriminator = [
-    imageInputLayer(inputSize,Normalization="none")
-    dropoutLayer(dropoutProb)
-    concatenationLayer(3,2,Name="cat")
-    convolution2dLayer(filterSize,numFilters,Stride=2,Padding="same")
-    leakyReluLayer(scale)
-    convolution2dLayer(filterSize,2*numFilters,Stride=2,Padding="same")
-    batchNormalizationLayer
-    leakyReluLayer(scale)
-    convolution2dLayer(filterSize,4*numFilters,Stride=2,Padding="same")
-    batchNormalizationLayer
-    leakyReluLayer(scale)
-    convolution2dLayer(filterSize,8*numFilters,Stride=2,Padding="same")
-    batchNormalizationLayer
-    leakyReluLayer(scale)
-    convolution2dLayer(4,1)];
+    imageInputLayer(inputSize,Normalization="none")   % Output size, [64, 64, 3, 1]
+    dropoutLayer(dropoutProb)                         % Output size, [64, 64, 3, 1]
+    concatenationLayer(3,2,Name="cat")                % Output size, [64, 64, 4, 1]
+    convolution2dLayer(filterSize,numFilters, ...     
+    Stride=2,Padding="same")                          % Output size, [32, 32, 64, 1]
+    leakyReluLayer(scale)                             % Output size, [32, 32, 64, 1]
+    convolution2dLayer(filterSize,2*numFilters, ...   
+    Stride=2,Padding="same")                          % Output size, [16, 16, 128, 1]
+    batchNormalizationLayer                           % Output size, [16, 16, 128, 1]
+    leakyReluLayer(scale)                             % Output size, [16, 16, 128, 1]
+    convolution2dLayer(filterSize,4*numFilters, ...
+    Stride=2,Padding="same")                          % Output size, [8, 8, 256, 1]
+    batchNormalizationLayer                           % Output size, [8, 8, 256, 1]
+    leakyReluLayer(scale)                             % Output size, [8, 8, 256, 1]
+    convolution2dLayer(filterSize,8*numFilters, ...
+    Stride=2,Padding="same")                          % Output size, [4, 4, 512, 1]
+    batchNormalizationLayer                           % Output size, [4, 4, 512, 1]
+    leakyReluLayer(scale)                             % Output size, [4, 4, 512, 1]
+    convolution2dLayer(4,1)                           % Output size, [1, 1, 1, 1]
+    ];
 
 lgraphDiscriminator = layerGraph(layersDiscriminator);
 
 layers = [
-    featureInputLayer(1)
-    embeddingLayer(embeddingDimension,numClasses)
-    fullyConnectedLayer(prod(inputSize(1:2)))
-    functionLayer(@(X) feature2image(X,[inputSize(1:2) 1]),Formattable=true,Name="emb_reshape")];
+    featureInputLayer(1)                                   % Output size, [1, 1]
+    embeddingLayer(embeddingDimension,numClasses)          % Output size, [50, 1]
+    fullyConnectedLayer(prod(inputSize(1:2)))              % Output size, [4096, 1]
+    functionLayer(@(X) feature2image(X,[inputSize(1:2) 1]), ...
+    Formattable=true,Name="emb_reshape")                   % Output size, [64, 64, 1, 1]
+    ]; 
 
 lgraphDiscriminator = addLayers(lgraphDiscriminator,layers);
 lgraphDiscriminator = connectLayers(lgraphDiscriminator,"emb_reshape","cat/in2");

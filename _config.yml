@@ -27,7 +27,7 @@ locale                   : "en-US" # "zh-CN"
 title                    : "What a starry night~"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "花魑" # can override the site author with different ones on specific posts, pages, or collection documents.
+name                     : "Ma Qinghua" # can override the site author with different ones on specific posts, pages, or collection documents.
 description              : "An amazing website."
 url                      : http://whatastarrynight.com
 baseurl                  : # https://mademistakes.com/mastering-jekyll/site-url-baseurl/

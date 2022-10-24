@@ -1,7 +1,7 @@
 ---
 layout: single
 title: An Example of Extracting Frequency-domain and Time-domain Statistical Features
-date: 2022-10-24 14:58:76 +0800
+date: 2022-10-24 14:58:46 +0800
 categories: 
  - Programming
  - Signals and Systems

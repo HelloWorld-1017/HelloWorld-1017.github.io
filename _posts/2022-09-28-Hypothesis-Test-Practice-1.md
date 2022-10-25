@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Hypothesis Test Practice 1
+title: 【Hypothesis Test 2】Hypothesis Test Practice 1
 date: 2022-09-28 23:38:35 +0800
 categories: 
  - Mathematics

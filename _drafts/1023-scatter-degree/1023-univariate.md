@@ -1,12 +1,18 @@
+# For Univariate
+
+## Variance
+
 有一类数字特征可以**刻画随机变量在其中心位置附近散布(scatter)程度的数字特征**，其中最重要的是方差。
 
 设随机变量$X$有均值$a=E(X)$。试验中，$X$的取值不一定恰好是$a$，而会有所偏离。因为$X$随机的，因此偏离量$X-a$也是随机的。我们要取偏离$X-a$的某种具有代表性的数字，来刻画这个偏离**即散布的程度的大小**。我们不能取$X-a$的均值，因为$E(X-a)=E(X)-a=0$，这表明正负偏离彼此抵消了。一种解决的办法是取$\vert X-a\vert$以消除符号的影响，再取其平均值$E(\vert X-a\vert)$，作为变量$X$取值的散布程度的数字特征。这个量$E(\vert X-a\vert)$叫做$X$(或其分布)的**平均绝对差**，是常用于刻画散布程度的数字特征之一。但是，由于绝对值在数学上不太方便，人们就考虑了另一种做法：先把$X-a$平方以消去符号，然后取其均值得到$E(X-a)^2$，把它作为$X$取值散布度的衡量。这个量就叫做$X$的**方差**(“差”的“方”)。
 
-定义1(方差，Variance；标准差，Standard deviation)：设$X$为随机变量，分布为$F$，则：
-$$
-\mathrm{Var}(X)=E(X-EX)^2\label{variance}
-$$
-称为$X$(或其分布)的**方差**，其平方根$\sqrt{\mathrm{Var}(X)}$(取正值)称为$X$(或其分布)的标准差。
+> 定义1(方差，Variance；标准差，Standard deviation)
+>
+> 设$X$为随机变量，分布为$F$，则：
+> $$
+> \mathrm{Var}(X)=E(X-EX)^2\label{variance}
+> $$
+> 称为$X$(或其分布)的**方差**，其平方根$\sqrt{\mathrm{Var}(X)}$(取正值)称为$X$(或其分布)的标准差。
 
 暂记$EX=a$，由于$(X-a)^2=X^2-2aX+a^2$，则按照期望的性质，有：
 $$
@@ -18,22 +24,20 @@ $$
 $$
 方差的这个形式在计算上往往比较方便。
 
-性质
-
 方差之所以称为刻画散布度的最重要的数字特征，原因之一就是它具有一些优良的数学性质，反映在以下几个重要的定理之中。
 
-定理1
+> 定理1
+>
+> 1. 常数的方差为0；
+> 2. 若$c$为常数，则$\mathrm{Var}(X+c)=\mathrm{Var}(X)$；
+> 3. 若$c$为常数，则$\mathrm{Var}(cX)=c^2\mathrm{Var}(X)$
 
-1. 常数的方差为0；
-2. 若$c$为常数，则$\mathrm{Var}(X+c)=\mathrm{Var}(X)$；
-3. 若$c$为常数，则$\mathrm{Var}(cX)=c^2\mathrm{Var}(X)$
-
-定理2
-
-**独立**随机变量之和的方差等于各变量的方差之和，即：
-$$
-\mathrm{Var}(X_1+X_2+\cdots+X_n)=\mathrm{Var}(X_1)+\cdots+\mathrm{Var}(X_n)
-$$
+> 定理2
+>
+> **独立**随机变量之和的方差等于各变量的方差之和，即：
+> $$
+> \mathrm{Var}(X_1+X_2+\cdots+X_n)=\mathrm{Var}(X_1)+\cdots+\mathrm{Var}(X_n)
+> $$
 
 
 另外，假设$X$为一个随机变量，且有$E(X)=a$，而$\mathrm{Var}(X)=\sigma^2$。记$Y=(X-a)/\sigma$，则容易得到$E(Y)=0$，并且按照定理1可以得到$\mathrm{Var}(Y)=1$。这样，对$X$做一个线性变换后，得到一个具有均值0、方差1的随机变量$Y$，常称为$Y$是$X$的**标准化**。
@@ -41,21 +45,25 @@ $$
 注：这种操作在数据处理时经常使用。
 {: .notice--primary}
 
-# Moments
+## Moments
+
+### Definition
 
 在博客[Point Estimation - What a starry night ~](http://whatastarrynight.com/mathematics/Point-Estimation/)中提到过使用经验矩估计理论矩的点估计方式，其中的理论矩就是指随机变量的矩。
 
-定义2：
-
-设 $X$ 为随机变量，$c$ 为常数，$k$ 为正整数，则量 $E[(X-c)^k]$ 称为 $X$ 关于 $c$ 点的 $k$ 阶矩。
-
-比较重要的有两种情况：
-
-（1）$c=0$，这时 $\alpha_k=E(X^k)$ 称为 $X$ 的 **$k$ 阶原点矩**；
-
-（2）$c=E(X)$，这时 $\mu_k=E[(X-EX)^k]$ 称为 $X$ 的 **$k$ 阶中心矩**；
+> 定义2：
+>
+> 设 $X$ 为随机变量，$c$ 为常数，$k$ 为正整数，则量 $E[(X-c)^k]$ 称为 $X$ 关于 $c$ 点的 $k$ 阶矩。
+>
+> 比较重要的有两种情况：
+>
+> （1）$c=0$，这时 $\alpha_k=E(X^k)$ 称为 $X$ 的 **$k$ 阶原点矩**；
+>
+> （2）$c=E(X)$，这时 $\mu_k=E[(X-EX)^k]$ 称为 $X$ 的 **$k$ 阶中心矩**；
 
 一阶原点矩就是期望。一阶中心矩 $\mu_1=0$，二阶中心矩 $\mu_2=E[(X-EX)^2]$ 就是 $X$ 的方差 $\mathrm{Var}(X)$。在统计学中，高于四阶的矩极少使用，三、四阶矩有些应用，但是也不是很多。
+
+### 三阶中心矩,  Skewness
 
 3阶中心矩$\mu_3$的应用之一就是用它去衡量**分布**是否有偏。假设$X$的概率密度函数为$f(x)$，若$f(x)$关于某点$a$对称，即：
 $$
@@ -69,6 +77,8 @@ $$
 $$
 称为$X$或其分布的**偏度系数**。
 
+### 四阶中心矩, Kurtosis
+
 4阶中心矩$\mu_4$的应用之一是衡量分布(密度)在均值附近的陡峭程度。因为$\mu_4=E[(X-EX)^4]$，容易看出，若$X$的取值在概率上很集中在$E(X)$附近，则$\mu_4$将倾向于小，否则就倾向于大。为抵消尺度影响，类似$\mu_3$的情况，以标准差的四次方即$\mu_2^2$去除，得到：
 $$
 \beta_2=\mu_4/\mu_2^2\label{kurtosis}
@@ -79,7 +89,9 @@ $$
 
 “峰度”这个名词，单从表面上看，易引起误解。比如，我们都知道，就正态分布$N(\mu,\sigma^2)$而言，$\sigma^2$越小，密度函数在$\mu$点处的“高峰”就越高且越陡峭，那么，为什么所有的正态分布又都有同一风度系数？这岂不是不与这个名词的直觉含义不符？原因在于：$\mu_4$在除以$\mu_2$后已失去了因次，即与$X$的直觉含义不符？原因在于：$\mu_4$在除以$\mu_2$后已经失去了因次，即与$X$的单位无关。或者换句话说，两个变量$X$，$Y$，谁的峰度大，**不能直接比其密度函数，而要调整到方差为$1$后再去比较**。也就是说，找两个常数$c_1$，$c_2$，使$c_1X$和$c_2Y$的方差为1，再比较其密度的“陡峭程度”如何。在这个共同的标准之下，“峰度”这一个词语就好理解了。
 
-但其实，对于偏度系数和峰度系数的计算，可以从分布函数推广到任意一个序列，只是计算的是样本矩。MATLAB就提供了计算偏度的函数：[skewness - MathWorks](https://ww2.mathworks.cn/help/stats/skewness.html)，以及用于计算峰度的函数：[kurtosis - MathWorks](https://ww2.mathworks.cn/help/stats/kurtosis.html)，下面将分别介绍。
+### Calculate skewness and kutosis in MATLAB
+
+MATLAB就提供了计算数值序列偏度的函数：[skewness - MathWorks](https://ww2.mathworks.cn/help/stats/skewness.html)，以及用于计算峰度的函数：[kurtosis - MathWorks](https://ww2.mathworks.cn/help/stats/kurtosis.html)，下面将分别介绍。
 
 需要注意的是，下面所算出的偏度和峰度仍是序列所属分布的属性，并不是将序列直接`plot`出来的图像的属性。
 {: .notice--primary}
@@ -136,6 +148,8 @@ disp(sk2)
 
 <br>
 
+# For Multivariate
+
 那么，描述多维随机变量散布程度的数字特征是什么呢？
 
 以二维情况为例，设$(X,Y)$为二维随机变量。$X$和$Y$本身都是一维随机变量，可以定义其均值和方差，在本小节，我们记：
@@ -144,7 +158,11 @@ E(X)=m_1,\ E(Y)=m_2,\ \mathrm{Var}(X)=\sigma_1^2,\ \mathrm{Y}=\sigma_2^2\label{e
 $$
 在多维随机变量的情形，我们更感兴趣的数字特征是**反映分量之间的关系的那种量**，其中最重要的是协方差和相关系数。
 
-定义3(协方差，Covariance)：定义$E[(X-m_1)(Y-m_2)]$为$X$，$Y$的协方差，并记为$\mathrm{Cov}(X,Y)$。
+## Covariance
+
+> 定义3(协方差，Covariance)
+>
+> 定义$E[(X-m_1)(Y-m_2)]$为$X$，$Y$的协方差，并记为$\mathrm{Cov}(X,Y)$。
 
 “协”即“协同”的意思。式$\eqref{variance}$所定义的单随机变量$X$的方差是$X-m_1$与$X-m_1$的乘积的期望，现在把一个$X-m_1$换成$Y-m_2$，其形式接近方差，又有二者的参与，由此得出协方差的名称。由定义也可以看出，$\mathrm{Cov}(X,Y)$与$X$与$Y$的数学无关，即：
 $$
@@ -152,37 +170,65 @@ $$
 $$
 由定义也可以直接得出协方差的一些简单的性质。
 
-（1）若$c_1$，$c_2$，$c_3$，$c_4$都是常数，则：
-$$
-\mathrm{Cov}(c_1X+c_2,c_3Y+c_4)=c_1c_2\mathrm{Cov}(X,Y)
-$$
-（2）
-$$
-\mathrm{Cov}(X,Y)=E(XY)-m_1m_2\label{eq1}
-$$
-定理3：
+> 协方差的性质
+>
+> （1）若$c_1$，$c_2$，$c_3$，$c_4$都是常数，则：
+> $$
+> \mathrm{Cov}(c_1X+c_2,c_3Y+c_4)=c_1c_2\mathrm{Cov}(X,Y)
+> $$
+> （2）
+> $$
+> \mathrm{Cov}(X,Y)=E(XY)-m_1m_2\label{eq1}
+> $$
 
-1. 若$X$，$Y$独立，则$\mathrm{Cov}(X,Y)=0$；
-2. $[\mathrm{Cov}(X,Y)]^2\le\sigma_1^2\sigma_2^2$。等号当且仅当$X$，$Y$之间具有严格的线性关系(即存在常数$a$和$b$，使得$Y=a+bX$)时成立。
+> 定理3：
+>
+> 1. 若$X$，$Y$独立，则$\mathrm{Cov}(X,Y)=0$；
+> 2. $[\mathrm{Cov}(X,Y)]^2\le\sigma_1^2\sigma_2^2$。等号当且仅当$X$，$Y$之间具有严格的线性关系(即存在常数$a$和$b$，使得$Y=a+bX$)时成立。
 
 ==matlab==
 
+## Covariance Matrix
+
+上面介绍的协方差描述了两个随机变量，或者说多维随机向量分量之间的关系，但是得到一个标量，并不能**完全**表征出分量之间的相关关系，因此就引出了协方差矩阵(covariance matrix, AKA auto-covariance matrix, dispersion matrix, variance matrix, or variance-covariance matrix)的概念。
+
+随机向量的协方差矩阵通常表示为$\mathrm{K_{XX}}$或者$\Sigma$。假设有一随机(列)向量$X=(X_1,X_2,\cdots,X_n)^T$，其中$X_i$为单个的随机变量，则协方差矩阵$\mathrm{K_{XX}}$中每一个元素为：
+$$
+\mathrm{K}_{X_iX_j}=\mathrm{Cov}(X_i,X_j)=E\Big[(X_i-EX_i)(X_j-EX_j)\Big]\label{covariancematrix}
+$$
+比如，对于二维随机向量$X=(X_1,X_2)^T$，有：
+$$
+\mathrm{K_{XX}}=\begin{bmatrix}
+\mathrm{Cov}(X_1,X_1)&\mathrm{Cov}(X_1,X_2)\\
+\mathrm{Cov}(X_2,X_1)&\mathrm{Cov}(X_2,X_2)\\
+\end{bmatrix}\notag
+$$
+
+
+
+
+
+
+
+
 ==wikipedia关于单值无法双变量的阐述==
 
-
+## Correlation
 
 定理3给“相关系数”的定义打下了基础。
 
-定义4(相关系数，Correlation)：定义$\mathrm{Cov}(X,Y)/(\sigma_1\sigma_2)$为$X$，$Y$的相关系数，并记作$\mathrm{Corr}(X,Y)$。
+>  定义4(相关系数，Correlation)
+>
+> 定义$\mathrm{Cov}(X,Y)/(\sigma_1\sigma_2)$为$X$，$Y$的相关系数，并记作$\mathrm{Corr}(X,Y)$。
 
 形式上，可以把相关系数看作“标准尺度下的协方差”。变量$X$，$Y$作为$(X-m_1)(Y-m_2)$的均值，依赖于$X$和$Y$的度量单位，选择适当的单位使$X$，$Y$的方差都为1，则协方差就是相关系数。这样就能更好地反映$X$，$Y$之间的关系，不受单位的影响。
 
 由定理3可以立即得到：
 
-定理4：
-
-1. 若$X$，$Y$独立，则$\mathrm{Corr}(X,Y)=0$；
-2. $-1\le \mathrm{Corr}(X,Y)\le1$，或$\vert\mathrm{Corr}(X,Y)\vert\le1$，等号当且仅当$X$和$Y$有严格线性关系时达到。
+> 定理4
+>
+> 1. 若$X$，$Y$独立，则$\mathrm{Corr}(X,Y)=0$；
+> 2. $-1\le \mathrm{Corr}(X,Y)\le1$，或$\vert\mathrm{Corr}(X,Y)\vert\le1$，等号当且仅当$X$和$Y$有严格线性关系时达到。
 
 下面对这个定理，做出一些重要的解释。
 
@@ -236,3 +282,11 @@ $$
 $$
 E[(Y-a-bX)^2]=E[(Y-m_2)-b(X-m_1)-c]^2
 $$
+
+
+<br>
+
+**Reference**
+
+[1] 概率论与数理统计. 陈希孺编著. 合肥: 中国科学技术大学出版社, 2009.2(2019.8重印).
+

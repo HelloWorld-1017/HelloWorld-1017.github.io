@@ -7,7 +7,7 @@ categories:
  - Machine Learning
 tags:
  - MATLAB
- - MATLAB Learning Toolbox
+ - MATLAB Deep Learning Toolbox
 toc: false
 ---
 

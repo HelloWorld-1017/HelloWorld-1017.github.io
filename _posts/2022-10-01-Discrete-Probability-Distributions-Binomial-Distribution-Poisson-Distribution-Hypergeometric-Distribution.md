@@ -8,7 +8,7 @@ categories:
 tags:
  - Probability theory and mathematical statistics
  - MATLAB
- - Statistics and Machine Learning Toolbox
+ - MATLAB Statistics and Machine Learning Toolbox
 ---
 
 # Binomial Distribution

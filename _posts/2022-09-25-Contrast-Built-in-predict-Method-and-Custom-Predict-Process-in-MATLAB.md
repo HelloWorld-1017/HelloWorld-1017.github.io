@@ -7,7 +7,7 @@ categories:
  - Machine Learning
 tags:
  - MATLAB
- - Statistics and Machine Learning Toolbox
+ - MATLAB Statistics and Machine Learning Toolbox
 ---
 
 # Introduction

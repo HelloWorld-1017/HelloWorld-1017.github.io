@@ -128,7 +128,7 @@ $$
 $$
 其中 $n$ 为样本大小。
 
-不等式(2-5)的右边$\textcolor{red} {\bigr(g^{\prime}(\theta)\bigl)^2/(nI\bigr(\theta)\bigr)}$给出了 $g(\theta)$ 的无偏估计的方差的一个下界。如果 $g(\theta)$ 的某个无偏估计的方差正好达到了不等式(2-5)的有段，那它就是 $g(\theta)$ 的MVU估计。
+不等式(2-5)的右边$\textcolor{red} {\bigr(g^{\prime}(\theta)\bigl)^2/(nI\bigr(\theta)\bigr)}$给出了 $g(\theta)$ 的无偏估计的方差的一个下界。如果 $g(\theta)$ 的某个无偏估计的方差正好达到了不等式(2-5)的右端，那它就是 $g(\theta)$ 的MVU估计。
 
 
 > 记

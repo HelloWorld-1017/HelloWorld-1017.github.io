@@ -1,13 +1,11 @@
 ---
 layout: single
-title: 超定方程的定义和求解
+title: Solve Over-determined Equations
 date: 2022-07-10
 categories: Mathematics
 tags: 
   - Matrix 
 ---
-
-
 
 # 超定方程组的定义
 

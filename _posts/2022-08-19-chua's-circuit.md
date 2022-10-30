@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 混沌电路：蔡氏电路
+title: Chaotic Circuit, Chua's Circuit
 date: 2022-08-19 15:07:21 +0800
 categories: 
  - Uncertainty

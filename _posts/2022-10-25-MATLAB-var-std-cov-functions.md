@@ -130,8 +130,9 @@ std_custom =
 >定义(协方差矩阵，Covariance Matrix)
 >
 >随机向量的协方差矩阵通常表示为$\mathrm{K_{XX}}$或者$\Sigma$。假设有一随机(列)向量$X=(X_1,X_2,\cdots,X_n)^T$，其中$X_i$为单个的随机变量，则协方差矩阵$\mathrm{K_{XX}}$中每一个元素为：
+>
 >$$
->\mathrm{K}_{X_iX_j}=\mathrm{Cov}(X_i,X_j)=E\Big[(X_i-EX_i)(X_j-EX_j)\Big]\label{cov}
+>\mathrm{K}_{X_iX_j}=\mathrm{Cov}(X_i,X_j)=E\Big[(X_i-EX_i)(X_j-EX_j)\Big]
 >$$
 >
 >比如，对于二维随机向量$X=(X_1,X_2)^T$，有：
@@ -140,7 +141,7 @@ std_custom =
 >\mathrm{K_{XX}}=\begin{bmatrix}
 >\mathrm{Cov}(X_1,X_1)&\mathrm{Cov}(X_1,X_2)\\
 >\mathrm{Cov}(X_2,X_1)&\mathrm{Cov}(X_2,X_2)\\
->\end{bmatrix}\notag
+>\end{bmatrix}\label{cov}
 >$$
 >
 >MATLAB的`cov`函数用于计算输入的协方差矩阵，同样地，在默认情况下，`cov`函数`Normalization weight`为`0`，表示计算无偏的协方差矩阵，同样验证在默认情况下(无偏)进行验证：

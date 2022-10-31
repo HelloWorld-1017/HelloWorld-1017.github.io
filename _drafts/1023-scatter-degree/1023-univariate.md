@@ -45,6 +45,8 @@ $$
 注：这种操作在数据处理时经常使用。
 {: .notice--primary}
 
+关于方差和标准差的MATLAB计算，详见博客[MATLAB var, std, and cov Functions - What a starry night ~](http://whatastarrynight.com/programming/mathematics/MATLAB-var-std-cov-functions/)
+
 ## Moments
 
 ### Definition
@@ -186,8 +188,6 @@ $$
 > 1. 若$X$，$Y$独立，则$\mathrm{Cov}(X,Y)=0$；
 > 2. $[\mathrm{Cov}(X,Y)]^2\le\sigma_1^2\sigma_2^2$。等号当且仅当$X$，$Y$之间具有严格的线性关系(即存在常数$a$和$b$，使得$Y=a+bX$)时成立。
 
-==matlab==
-
 ## Covariance Matrix
 
 上面介绍的协方差描述了两个随机变量，或者说多维随机向量分量之间的关系，但是得到一个标量，并不能**完全**表征出分量之间的相关关系，因此就引出了协方差矩阵(covariance matrix, AKA auto-covariance matrix, dispersion matrix, variance matrix, or variance-covariance matrix)的概念。
@@ -204,7 +204,7 @@ $$
 \end{bmatrix}\notag
 $$
 
-
+关于协方差矩阵的MATLAB计算，详见博客[MATLAB var, std, and cov Functions - What a starry night ~](http://whatastarrynight.com/programming/mathematics/MATLAB-var-std-cov-functions/)
 
 
 
@@ -269,15 +269,51 @@ $$
 
 仍沿用$\eqref{eq2}$的记号：
 $$
-E[(Y-a-bX)^2]=E[(Y-m_2)-b(X-m_1)-(a-(bm_1-m_2))]^2
+E[(Y-a-bX)^2]=E\Big\{[(Y-m_2)-b(X-m_1)-(a-(m_2-bm_1))]^2\Big\}
 $$
-令$c=a-(bm_1-m_2)$
+令$c=a-(m_2-bm_1)$
 
 则有：
 $$
-E[(Y-a-bX)^2]=E[(Y-m_2)-b(X-m_1)-c]^2
+\begin{split}
+E[(Y-a-bX)^2]=&E[(Y-m_2)-b(X-m_1)-c]^2\\
+=&E\Big[(Y-m_2)^2+b^2(X-m_1)^2+c^2-\\
+&2b(Y-m_2)(X-m_1)+2bc(X-m_1)-2c(Y-m_2)\Big]\\
+=&\sigma_2^2+b^2\sigma_1^2-2b\mathrm{Cov}(X,Y)+c^2
+\end{split}\label{eq3}
 $$
 
+为了使这个式子达到最小，需要取：
+$$
+\begin{split}
+&c=0\Rightarrow a=m_2-bm_1\\
+&b=\mathrm{Cov}(X,Y)/\sigma_1^2=\sigma_1\sigma_2\mathrm{Corr}(X,Y)/\sigma_1^2=\sigma_1^{-1}\sigma_2\mathrm{Corr}(X,Y)
+\end{split}
+$$
+记$\mathrm{Corr}(X,Y)$为$\rho$，则得到的最佳线性逼近为：
+$$
+\begin{split}
+L(X)&=(m_2-bm_1)+bX\\
+&=m_2-\sigma_1^{-1}\sigma_2\rho m_1+\sigma_1^{-1}\sigma_2\rho X
+\end{split}\label{eq2}
+$$
+由式$\eqref{eq3}$，这一逼近的剩余是：
+$$
+\begin{split}
+E\Big[(Y-L(X))^2\Big]=&\sigma_2^2+b^2\sigma_1^2-2b\mathrm{Cov}(X,Y)\\
+=&\sigma_2^2(1-\rho^2)
+\end{split}
+$$
+如果$\rho=\pm1$，则$E\Big[(Y-L(X))^2\Big]=0$，而$Y=L(X)$。这时，$X$与$Y$就有严格的线性关系。正如前文所述：
+
+- 若$0<\vert\rho\vert<1$，则$\vert\rho\vert$越接近1，则剩余越小，说明$L(X)$与$Y$的接近程度越大，即$X$、$Y$之间的线性关系的“程度”越大；
+- 反之，$\vert\rho\vert$越小，则二者的线性关系程度越小；
+- 当$\rho=0$时，剩余为$\sigma_2^2$，这时$X$的线性作用已毫不存在。因为仅取一个与$X$无关的常数$m_2$，已经可以把$Y$逼近到$\sigma_2^2$的剩余，因为$E(Y-m_2)^2=\sigma_2^2$。
+
+由于相关系数只能刻画线性关系的程度，而不能刻画一般关系的函数相依关系的程度，在概率论中还引进了另外一些相关指标，以补救这个缺点。但是，这些指标都未能在应用中推开，究其原因，除了这些指标在性质上比较复杂之外，还有一个重要的原因：在统计学应用中，最重要二维分布时二维正态分布。而对二维正态分布而言，相关系数是$X$、$Y$的相关性的一个完美的刻画，没有上面指出的缺点，其根据有两条：
+
+- 若$(X,Y)$为二维正态分布，则即使允许使用任何函数$M(X)$去逼近$Y$（仍然以$E\Big[(Y-M(X))^2\Big]$最小为准则），则所得到的最佳逼近仍然是由式$\eqref{eq2}$决定的$L(X)$。因此，在这个场合下，只需要考虑线性逼近已经足够，而这种逼近的程度完全由相关系数所决定；
+- 当$(X,Y)$为二维正态分布时，由$\mathrm{Corr}(X,Y)=0$就能够推出$X$、$Y$独立。即在这一场合，独立与不相关是一回事，而前文指出，这在一般情况下并不成立。
 
 <br>
 

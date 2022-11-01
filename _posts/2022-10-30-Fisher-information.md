@@ -120,6 +120,7 @@ $$
 $$
 
 也就是说“score附近的方差”可以使用$-E\Big[\dfrac{\partial^2 L(\theta;x )}{\partial\theta^2}\Big]$来描述，这个值就称为Fisher information，定义为：
+
 $$
 I(\theta)=E\Big[-\dfrac{\partial^2}{\partial\theta^2}L(\theta;x)\Big]
 $$
@@ -176,6 +177,7 @@ I(\sigma^2)&=E\Big[-\dfrac{\partial^2}{\partial (\sigma^2)^2}L(\sigma^2;x)\Big]\
 &=\dfrac1{2(\sigma^2)^2}
 \end{split}\label{eq3}
 $$
+
 <br>
 
 # Some Questions

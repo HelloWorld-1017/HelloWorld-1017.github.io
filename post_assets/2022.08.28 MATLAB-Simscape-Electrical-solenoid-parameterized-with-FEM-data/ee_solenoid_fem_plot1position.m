@@ -33,23 +33,23 @@ simlog_ilin = simlog_ee_solenoid_fem.Linear_Solenoid.R1.i.series.values('A');
 simlog_handles(1) = subplot(2, 1, 1);
 plot(simlog_t, simlog_xFEM, 'LineWidth', 1)
 hold on
-plot(simlog_t, simlog_xlin, 'LineWidth', 1)
-hold off
+% plot(simlog_t, simlog_xlin, 'LineWidth', 1)
+% hold off
 grid on
 title('Plunger Position')
 ylabel('x(mm)')
-legend({'FEM','Linear'},'Location','Best');
+% legend({'FEM','Linear'},'Location','Best');
 
 simlog_handles(2) = subplot(2, 1, 2);
 plot(simlog_t, simlog_iFEM, 'LineWidth', 1)
 hold on
-plot(simlog_t, simlog_ilin, 'LineWidth', 1)
-hold off
+% plot(simlog_t, simlog_ilin, 'LineWidth', 1)
+% hold off
 grid on
 title('Solenoid Current')
 ylabel('Current (A)')
 xlabel('Time (s)')
-legend({'FEM','Linear'},'Location','Best');
+% legend({'FEM','Linear'},'Location','Best');
 
 linkaxes(simlog_handles, 'x')
 

@@ -41,7 +41,7 @@ scatter(1:numel(data), data, 200, 'rx', LineWidth=2)
 
 # `'filled'`参数
 
-当使用类似`x`这样只有只有face没有edges的marker，使用`filled`参数将会什么也绘制。
+当使用类似`x`这样只有只有face没有edges的marker，使用`filled`参数将会什么也不绘制。
 
 ```matlab
 clc, clear, close

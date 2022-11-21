@@ -10,6 +10,7 @@ tags:
 toc: false
 ---
 
+
 前两天看到了一个很漂亮、很有启发性的关于使用MATLAB生成色卡的工作。该工作来自slandarer，实现原理和代码都记录在他的CSDN博客中，详见：[还在纠结配色问题？手把手教你用MATLAB一键生成高质量色卡 - slandarer](https://slandarer.blog.csdn.net/article/details/119056214)。
 
 提取图片颜色及生成色卡的代码如下：

@@ -186,13 +186,13 @@ $$
 
 令curve segment的长度为$s$，我们可以用$f(u)$参数化这条曲线，$u$表示曲线上的点到初始点$f(0)$的距离，其中$u$从0取到$s$。通过这种arc length参数化的方式，随着$u$从0移动到$s$，$f(u)$以相同的速度从曲线的$f(0)$移动$f(s)$。因此，衡量速度的tangent vector就是unit-length。不仅如此，很多公式都能得到简化。
 
-那么，为什么我们不使用arc length parameterization来简化计算呢？答案也非常简单。尽管arc length parameterization非常简单，并且在理论上是elegant，但是它的计算繁琐，不切实际。人们可以很容易地在一些方便地参数化中设计曲线，但是有时候用arc length重新参数化是极其困难的。也就是说，找到arc length并不是一件简单的事情，因为这涉及到包含平方根的函数进行积分。比如说，一个很简单的椭圆，它的周长是没有解析解的，需要用到椭圆积分的知识。
+那么，为什么我们不使用arc length parameterization来简化计算呢？答案也非常简单。尽管arc length parameterization非常简单，并且在理论上是elegant，但是它的计算繁琐，不切实际。人们可以很容易地在一些方便地参数化中设计曲线，但是有时候用arc length重新参数化是极其困难的。也就是说，找到arc length并不是一件简单的事情，因为这涉及到包含平方根的函数进行积分。比如说，椭圆这个看起来很简单的图形，它的周长没有解析解，需要用到椭圆积分。
 
 因此，即使non-arc length的参数化方式会导致一些问题，我们也不会使用arc length参数化的方式。
 
 <br>
 
-# Geometric Continuity(Geometrically Continuity)
+# Geometric Continuity
 
 我们上面提到说，$\boldsymbol{C^2}$ continuous可以保证curvature continuous，但是curvature continuous不能够保证$\boldsymbol{C^2}$ continuous。事实上，许多$\boldsymbol{C^1}$ continuous并且curvature continuous的曲线并不满足$\boldsymbol{C^2}$ continuous，甚至这些曲线中的许多曲线甚至不是二阶可导的。这些曲线在连接点处看起来是很平滑的，并且在从一条曲线过渡到另一条曲线时(movement)也是很平滑的，甚至其中的一些曲线在更改变量后，可以在连接点处做到$\boldsymbol{C^2}$ continuous。但是，能够做到这一点的reparameterization方法事实上时非常难找到的。因此，我们会放松$\boldsymbol{C^2}$ continuous的要求：
 

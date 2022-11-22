@@ -8,14 +8,15 @@ categories:
 tags:
  - MATLAB
  - MATLAB Deep Learning Toolbox
+ - MATLAB Errors and Warnings
 toc: false
 ---
 
-
-
-**报错记录：MATLAB Deep Learning Toolbox，报错: Invalid input data. Invalid number of spatial dimensions. Layer expects 0 but received 1.**
-
-
+> **报错记录**
+>
+> 工具箱：MATLAB Deep Learning Toolbox
+>
+> 报错: Invalid input data. Invalid number of spatial dimensions. Layer expects 0 but received 1.
 
 
 在使用MATLAB Deep Learning Toolbox在构建神经网络时，想要使用featureInputLayer函数构建神经网络的特征输入层，用于接收数值特征，但是在进行custom training loop过程中使用forward函数时报错。
@@ -60,3 +61,5 @@ dlarray函数使用错误。根据MATLAB的 [dlarray函数官方文档](https://
 ```matlab
 input = dlarray(input, 'CB');
 ```
+
+<br>

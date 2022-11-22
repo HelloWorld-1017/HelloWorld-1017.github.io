@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Gaussian Mixture Model
+title: Gaussian Mixture Model(GMM)
 date: 2022-09-12 12:28:37 +0800
 categories: 
  - Mathematics

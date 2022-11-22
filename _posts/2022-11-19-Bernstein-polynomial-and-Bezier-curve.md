@@ -192,6 +192,7 @@ f = @(x)rectangularPulse(1/4,3/4,x);
 Bernstein多项式是Bézier curve的数学基础。Bézier curve是由P. de Casteljau和Bézier分别于1959年和1962年独立提出并发展出。
 
 类似于Bernstein多项式，Bézier curve可以定义为：
+
 $$
 C(t)=\sum_{i=0}^n b_{i,n}(t)P_i\label{B1}
 $$

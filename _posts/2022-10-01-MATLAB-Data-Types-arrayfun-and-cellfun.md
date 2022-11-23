@@ -6,6 +6,7 @@ categories:
  - Programming
 tags:
  - MATLAB
+ - MATLAB Graphics
  - MATLAB Language Fundamentals
 ---
 

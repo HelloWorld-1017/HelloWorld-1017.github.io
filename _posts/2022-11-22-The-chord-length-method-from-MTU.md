@@ -99,6 +99,7 @@ t_k&=a+L_k\times(b-a)\\
 t_n&=b\\
 \end{split}
 $$
+
 chord length method应用广泛，并且通常表现良好。多项式曲线不能参数化为具有单位速度(即弧长参数化)(由R. Farouki证明，常见于几何学)，因此chord length是一个很好的近似。
 
 <br>

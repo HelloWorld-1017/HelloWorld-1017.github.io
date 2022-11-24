@@ -151,16 +151,17 @@ defaults:
       # toc: true
       # toc_label: "Table of Contents"
       # toc_sticky: true
-  # _life
-  - scope:
-      path: ""
-      type: life
-    values:
-      layout: single
-      author_profile: true
-      # show_date: true
-      # date_format: "%Y-%m-%d HH:MM:SS"
-      classes: wide
+  # _life ---------------------------------------------------------------------------
+  # - scope:
+  #     path: ""
+  #     type: life
+  #   values:
+  #     layout: single
+  #     author_profile: true
+  #     # show_date: true
+  #     # date_format: "%Y-%m-%d HH:MM:SS"
+  #     classes: wide
+  # _life ---------------------------------------------------------------------------
 
   # # _foo
   # - scope:
@@ -193,12 +194,13 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# collections
-collections:
-  life:
-    output: true
-    permalink: /:collection/:path/
-    
+
+# collections ------------------------------------------------------
+# collections:
+#   life:
+#     output: true
+#     permalink: /:collection/:path/
+# collections ------------------------------------------------------
 
 # Conversion
 markdown: kramdown

@@ -2,8 +2,6 @@
 layout: single
 title: 其实才没有
 date: 2022-08-05 16:57:05 +0800
-categories: 
- - Life
 toc: false
 ---
 

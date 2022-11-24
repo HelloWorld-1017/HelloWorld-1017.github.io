@@ -2,7 +2,6 @@
 layout: single
 title: "I hadn't spent a day without thinking about you."
 date: 2022-07-16 13:59:11
-categories: [Life]
 toc: false
 ---
 

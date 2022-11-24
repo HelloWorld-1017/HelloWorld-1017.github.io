@@ -141,7 +141,7 @@ defaults:
       toc_sticky: true
       author_profile: true # Enable/Disable author sidebar 
       classes: wide
-      # share: true 
+      # share: true
       # comments: true
   # _pages
   - scope:
@@ -154,13 +154,16 @@ defaults:
       # toc: true
       # toc_label: "Table of Contents"
       # toc_sticky: true
-  # _portfolio
+  # _Life
   - scope:
       path: ""
-      type: portfolio
+      type: Life
     values:
-      layout: single
       author_profile: true
+      show_date: true
+      date_format: "%Y-%m-%d HH:MM:SS"
+      layout: single
+      classes: wide
 
   # # _foo
   # - scope:
@@ -214,6 +217,6 @@ kramdown:
 
 # collections
 collections:
-  portfolio:
+  Life:
     output: true
     permalink: /:collection/:path/

@@ -2,7 +2,8 @@
 layout: single
 title: The Man Who Knew Infinity
 date: 2022-07-15 00:30:19
-categories: [Life]
+tags:
+ - Wisdom
 toc: false
 ---
 

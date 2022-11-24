@@ -2,8 +2,6 @@
 layout: single
 title: 出门是为了回家~
 date: 2022-07-31 15:04:09 +0800
-categories: 
- - Life
 toc: false
 ---
 <br>

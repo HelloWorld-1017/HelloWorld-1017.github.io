@@ -2,8 +2,8 @@
 layout: single
 title: Connect the dots
 date: 2022-07-14 12:41:59
-categories: 
-  - Life
+tags: 
+  - Wisdom
 toc: false
 ---
 

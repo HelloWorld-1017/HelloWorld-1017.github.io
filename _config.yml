@@ -64,7 +64,6 @@ author:
 include:
   - _pages
 
-
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate

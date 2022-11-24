@@ -1,7 +1,7 @@
 ---
 title: Life
 layout: collection
-permalink: /Life/
+permalink: /life/
 collection: Life
 classes: wide
 sort_by: date

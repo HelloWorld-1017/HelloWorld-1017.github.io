@@ -151,10 +151,10 @@ defaults:
       # toc: true
       # toc_label: "Table of Contents"
       # toc_sticky: true
-  # _Life
+  # _life
   - scope:
       path: ""
-      type: Life
+      type: life
     values:
       author_profile: true
       show_date: true
@@ -214,6 +214,6 @@ kramdown:
 
 # collections
 collections:
-  Life:
+  life:
     output: true
     permalink: /:collection/:path/

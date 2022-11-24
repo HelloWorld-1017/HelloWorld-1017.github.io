@@ -156,10 +156,10 @@ defaults:
       path: ""
       type: life
     values:
+      layout: single
       author_profile: true
       show_date: true
       date_format: "%Y-%m-%d HH:MM:SS"
-      layout: single
       classes: wide
 
   # # _foo
@@ -193,6 +193,12 @@ tag_archive:
   type: liquid
   path: /tags/
 
+# collections
+collections:
+  life:
+    output: true
+    permalink: /:collection/:path/
+    
 
 # Conversion
 markdown: kramdown
@@ -211,9 +217,3 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-# collections
-collections:
-  life:
-    output: true
-    permalink: /:collection/:path/

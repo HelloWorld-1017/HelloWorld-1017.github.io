@@ -1,5 +1,5 @@
 ---
-title: Life
+title: What a starry life ~
 layout: collection
 permalink: /life/
 collection: life

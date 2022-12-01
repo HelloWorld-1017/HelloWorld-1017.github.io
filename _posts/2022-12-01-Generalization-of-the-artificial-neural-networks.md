@@ -1,28 +1,34 @@
-Probability theory and mathematical statistics
+---
+layout: single
+title: Generalization of the Artificial Neural Networks
+date: 2022-12-01 17:14:11 +0800
+categories: 
+ - Machine Learning
+---
 
-Machine learning
+# Capacity, underfitting, and overfitting
 
+## Training error, and test error(generalization error)
 
-
-机器学习算法的主要挑战是：我们所使用的算法模型必须能够在先前未观测到的新输入上表现良好，而不只是在训练集上表现良好。这种“在先前未观测到的输入上表现良好的能力被称为”泛化(generalization)。
+机器学习算法的主要挑战是：我们所使用的算法模型必须能够在先前未观测到的新输入上表现良好，而不只是在训练集上表现良好。这种“在先前未观测到的输入上表现良好”的能力被称为泛化(generalization)。
 
 在通常情况下，训练机器学习模型时，我们可以使用某个训练集，在训练集上计算一些被称作训练误差(training error)的度量误差(即损失函数，目标函数)，训练的目标就是降低训练误差。对于优化问题而言，我们只需要降低训练误差即可，而机器学学习算法和优化算法不同的地方在于，我们在降低训练误差的同时，也希望泛化误差(generalization error, 有时也被称为测试误差(test error))很低。泛化误差被定义为新输入的误差期望。
 
 通常，我们度量模型在训练集中分出来的测试集(test set，按照作者在此处所述，称其为验证集(validation set)更为确切)样本上的性能，来评估机器学习模型的泛化误差。例如，在对于简单的线性回归示例中，我们通过最小化training error来训练模型：
+
 $$
 \dfrac{1}{m^{(\mathrm{train})}}\vert\vert X^{(\mathrm{train})}w-y^{\mathrm{(train)}}\vert\vert_2^2
 $$
+
 但实际上，我们真正关注的是generalization error：
+
 $$
 \dfrac{1}{m^{(\mathrm{test})}}\vert\vert X^{(\mathrm{test})}w-y^{\mathrm{(test)}}\vert\vert_2^2
 $$
-<br>
 
 但是，严谨地讲，test set的“未知性”意味着我们无法直接观测到测试集。那么，当我们只能观测到训练集时，如何才能提高测试集的性能呢？
 
 统计学习理论(statistical learning theory)提供了一些答案。如果training test和test set的数据是任意收集的，那么我们能做的的确很有限；但是，如果对training test和test set的收集方式做出一些假设，那么我们就能够对算法做出一些改进。
-
-==那个网站==
 
 我们可以将training set和test set看作通过数据集上被称作数据生成过程(data generating process)的概率分布生成。通常，我们会做一系列被统称为独立同分布假设(i.i.d. assumption)。该假设的含义是，每个数据集中的样本都是彼此相互独立的(independent)，并且training set和test set是同分布的(identically distributed)，采样自相同的分布。我们称这个共享的潜在分布为数据生成分布(data generating distribution)，记作$p_{data}$。这个概率框架和独立同分布假设允许我们从数学上研究训练误差和测试误差之间的关系。
 
@@ -33,41 +39,47 @@ $$
 - 尽可能地降低training error；
 - 尽可能缩小training error和test error之间的差距；
 
+## Underfitting, overfitting, and capacity
+
 我们在这两个方面的努力对应着在训练机器学习算法时所面临的两个主要挑战：欠拟合(underfitting)和过拟合(overfitting)。欠拟合是指模型不能够在训练集上获得足够低的误差，而过拟合则是指训练误差和测试误差之间的差距过大。
 
 我们可以通过调整模型的容量(capacity)来控制模型是否偏向于过拟合或者欠拟合。通俗地讲，模型的容量是指其拟合各种函数的能力。容量低的模型可能很难拟合训练集，因而training error就较大；而容量高的模型可能会过拟合，因为记住了不适用于测试集的训练集性质(噪声)，导致training error和test error之间的差距较大。
 
-
-
 一种控制算法容量的方法是选择假设空间(hypothesis space)，即学习算法可以选择为解决方案的函数集。例如，线性回归算法将关于其输入的所有线性函数作为假设空间；广义线性回归的假设空间包括多项式函数，而非仅有线性函数，后者就增加了模型的容量。
 
 比如，一次多项式提供了线性回归模型：
+
 $$
 \hat{y}=b+wx
 $$
+
 通过引入$x^2$作为线性回归模型的另一个特征，我们能够学习关于特征$x$的二次函数模型：
+
 $$
 \hat{y}=b+w_1x+w_2x
 $$
+
 我们可以继续添加$x$的更高次幂作为额外的特征，比如使用下面的9次多项式：
+
 $$
 \hat{y}=b+\sum_{i=1}^9w_ix^i
 $$
+
 从上面的讨论我们可以知道，当算法的容量过高或过低都不合适，当机器学习算法的容量适用于**(1)所执行任务的复杂度**和**(2)所提供训练数据的数量**时，算法效果通常会最佳。容量不足的模型不能解决复杂任务，而容量高的模型虽然能够解决复杂的任务，但是当其容量高于任务所需时，有可能会过拟合。下图就展示了这个原理的使用情况。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221129184302678.png" alt="image-20221129184302678" style="zoom:50%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221129184302678.png" alt="image-20221129184302678"  />
 
 上图中比较了线性、二次和九次函数拟合真实二次函数函数的效果。可以看到，线性函数无法刻画真实函数的曲率，所以是欠拟合的；九次函数能够表示正确的函数，但是由于**训练的参数比训练样本还多**，它能够表示无限多个刚好穿过训练样本点的很多函数，我们不太可能从很多不同的解中选出一个泛化良好的解。在这个问题中，二次模型就非常符合任务的真实结构，因此它可以很好地泛化到新数据上。
 
-<br>
+## Representational capacity(of the model family), and effective capacity(of the learning algorithms)
 
 上述改变模型容量的方式，是通过改变输入特征的数目和加入这些特征对应的参数实现的。实际上，这只是其中一种方式，还有很多方法可以改变模型的容量。容量不仅仅取决于模型的选择。当选定了一个模型后，我们需要使用某种特定的学习算法来拟合模型的参数。模型的选择规定了学习算法可以从哪些函数族中选取函数，这称为模型的**表示容量(representational capacity)**。但是在很多情况下，从这些函数中学习出最优的函数是非常困难的优化问题。实际中，学习算法不会真的找到最优函数，而仅仅是找到了一个可以大大降低训练误差的函数。其他的额外的限制因素，比如说优化算法的不完美，<u>可能意味着学习算法的有效容量(learning algorithm’s **eﬀective capacity**)可能小于函数族的表示容量(the representational capacity of the model family)</u>。
 
-<br>
+## Occam’s razor
 
 提高机器学习模型的现代思想可以追溯到托勒密使其的哲学家的思想。许多早期的学者提出一个简约的原则，现在被广泛地称为奥卡姆提到(Occam’s razor)。该原则指出，在同样能够解释一致观测现象的假设中，我们应该挑选出“最简单”的那一个。
 
-<br>
+## Quantifying the capacity of the model(VC dimension)
 
 统计机器学习理论提供了**量化**模型容量的不同方法。在这些方法中，最有名的是Vapnik-Chervonenkis维度(Vapnik-Chervonenkis dimension, VC)，简称VC维。VC维度量二元分类器的容量。VC维定义为该分类器能够分类的训练样本的最大数目。假设存在$m$个不同的$x$点的训练集，分类器可以任意地标记该$m$个不同的$x$点，VC维被定义为$m$的最大可能值。
 
@@ -104,13 +116,15 @@ $$
 
 在前文中，我们通过改变学习算法可选假设空间的函数来改变模型的容量，但实际上，算法的效果不仅受假设空间的函数数量的影响，也取决于这些函数的具体形式。比如，线性回归学习算法具有包含其输入的线性函数集的假设空间。对于输入和输出确实接近线性相关的问题，这些线性函数是有用的。但是，对于完全非线性的问题，它们就不太有效。例如，我们用线性回归，从$x$预测$\sin(x)$，效果不太好。但是，我们可以通过两种方法控制算法的性能，一是允许使用的函数种类，二是这些函数的数量。
 
-**在假设空间中，相比与某一种学习算法，我们可能更偏好另一种学习算法，这意味着两个函数都是符合条件的，但是我们更偏好其中一个。**（==MAP与MLE==）只有非偏好函数比偏好函数在训练数据集上效果明显好得多时，我们才会考虑非偏好函数。
+**在假设空间中，相比与某一种学习算法，我们可能更偏好另一种学习算法，这意味着两个函数都是符合条件的，但是我们更偏好其中一个。**只有非偏好函数比偏好函数在训练数据集上效果明显好得多时，我们才会考虑非偏好函数。
 
 例如，我们可以加入线性衰减(weight decay，也就是常说的岭回归)来**修改线性回归的训练标准**。带权重衰减的线性回归最小化训练集上的均方误差和正则项的和$J(w)$，其偏好于平方$L^2$范数较小的权重。具体如下：
+
 $$
 J(w)=\mathrm{MSE_{train}}+\lambda w^Tw
 $$
-其中，$\lambda$为提前挑选的值，控制我们偏好范数权重的程度。当$\lambda=0$时，我们没有任何偏好。越大的$\lambda$偏好范数越小的权重。最小化$J(w)$可以看作拟合数据和偏好最小权重范数之间的权衡。这会使得解的斜率较小，或是将权重放在较小的特征上。我们可以训练具有不同$\lambda$值得高次多项式回归模型，来说明权重衰减对于模型欠拟合和过拟合的控制，如下图所示。
+
+其中，$\lambda$为提前挑选的值，**控制我们偏好范数权重的程度**。当$\lambda=0$时，我们没有任何偏好。越大的$\lambda$偏好范数越小的权重。最小化$J(w)$可以看作拟合数据和偏好最小权重范数之间的权衡。这会使得解的斜率较小，或是将权重放在较小的特征上。我们可以训练具有不同$\lambda$值得高次多项式回归模型，来说明权重衰减对于模型欠拟合和过拟合的控制，如下图所示。
 
 ![image-20221130173015166](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221130173015166.png)
 
@@ -128,7 +142,5 @@ $$
 
 **Reference**
 
-[1] https://www.deeplearningbook.org/.
-
-[2] 
+[1]  Ian Goodfellow and Yoshua Bengio and Aaron Courville. [Deep Learning](https://www.deeplearningbook.org/). MIT Press. 
 

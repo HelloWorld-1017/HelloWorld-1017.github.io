@@ -28,7 +28,7 @@ categories:
 
 ## Script
 
-书写体（Script，ie 花体）`\mathsrc`：
+书写体（Script，ie 花体）`\mathscr`：
 
 ![image-20221006232433346](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006232433346.png)
 

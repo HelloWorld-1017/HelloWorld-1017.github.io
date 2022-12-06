@@ -281,4 +281,12 @@ $$
 
 可以看到，编写该函数的时候已经考虑到了特征"can have perfect correlation"的情况，因而使用了Cholesky因子分解的方式将SCM分解，之后对`randn`生成的随机数进行计算等操作，从而避免了对SCM求逆的操作，是一个很好的trick。
 
+该方法的原理如下(参考：[linear algebra - Generating multivariate normal samples - why Cholesky? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/2079137/generating-multivariate-normal-samples-why-cholesky))：
+
+假设$n$维随机变量服从多维正态分布，即$X\sim\mathcal{MVN}(\tau,\Lambda)$，其中$\tau\in\mathbb{R}^n$，$\Lambda\in\mathbb{R}^{n\times n}$，则经过仿射变换$Y=BX+b$之后，随机变量$Y$的分布为：$Y\sim\mathcal{MVN}(B\tau+b,B\Lambda B^T)$。
+
+因此，如果我们从多维**标准**正态分布中进行采样，即$X\sim\mathcal{MVN}(0,I)$，则经过仿射变换$Y=BX+b$后有$Y\sim\mathcal{MVN}(b,BB^T)$。即若我们想要得到$Y\sim\mathcal{MVN}(\mu,\Sigma)$，则我们需要的仿射变换为$Y=BX+\mu$，其中$\Sigma=BB^T$，而是用Cholesky分解则可以很方便地将$\Sigma$分解为$BB^T$的形式。
+
+但其实，$\Sigma=BB^T$并不保证分解的唯一性，但是Cholesky分解是一种高效的数值计算方法。
+
 <br>

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 使用PyTorch自动求导机制编写多元牛顿迭代法（PyTorch向量对向量求导）
+title: Multivariate Newton Iteration Method Based on PyTorch (Vector to Vector Derivative)
 date: 2022-02-07
 categories: 
  - Programming

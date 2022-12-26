@@ -2,7 +2,8 @@
 layout: single
 title: 向量点积的代数定义和几何定义
 date: 2022-06-09
-categories: Mathematics
+categories: 
+ - Mathematics
 tags: 
  - Matrix
 ---

@@ -1,8 +1,9 @@
 ---
 layout: single
-title: 线性方程组求解的几何意义
+title: Geometric significance of Solving Linear Equations
 date: 2022-06-14
-categories: Mathematics
+categories: 
+ - Mathematics
 tags: 
   - Matrix
 ---

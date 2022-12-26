@@ -1,15 +1,17 @@
 ---
 layout: single
-title: 行列式的定义
+title: Determinant
 date: 2022-06-13
-categories: Mathematics
-tags: [Matrix]
+categories: 
+ - Mathematics
+tags: 
+ - Matrix
 ---
 
 
 
 
-# 行列式的定义
+# Determinant Definition
 
 有的线性变换会将空间向外拉伸，有的则将空间内挤压，那么**如何测量某特定线性变换对一块给定区域的缩放比例呢？**
 
@@ -33,7 +35,8 @@ tags: [Matrix]
 比如，在进行线性变换前，用右手食指指向$\hat{i}$的方向，中指指向$\hat{j}$的方向，大拇指指向$\hat{k}$的方向，如果在变换后仍然可以这么做，那么三维空间的定向就没有发生变化，行列式为正数；否则，如果在变换后只能用左手这么做，则说明定向发生了变化，行列式为负数。
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707175459078.png" alt="image-20220707175459078" style="zoom:67%;" />
 
----
+<br>
+
 # 计算行列式
 以二维空间中的线性变换为例，设矩阵
 
@@ -67,7 +70,8 @@ $$
 \det (A)=ad-bc
 $$
 
----
-**参考资料**
+<br>
+
+**Reference**
 
 [1] [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)

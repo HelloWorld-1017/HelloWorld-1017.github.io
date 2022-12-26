@@ -1,11 +1,13 @@
 ---
 layout: single
-title: 【MATLAB App Building】UI figure和Axes的位置和大小设定
+title: Position Settings of UI Figure and Axes in MATLAB
 date: 2022-06-23
 categories: 
  - Programming
 tags: 
  - MATLAB
+ - MATLAB Graphics
+ - MATLAB App Building
 ---
 
 ## UI figure的位置和大小设定

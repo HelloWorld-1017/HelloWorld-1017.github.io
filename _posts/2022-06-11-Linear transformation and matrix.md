@@ -1,10 +1,11 @@
 ---
 layout: single
-title: 线性变换的概念及其与矩阵之间的关系
+title: Matrix and its Relation to Linear Transformation
 date: 2022-06-11
-categories: Mathematics
+categories: 
+ - Mathematics
 tags: 
-  - Matrix
+ - Matrix
 ---
 
 

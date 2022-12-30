@@ -1,0 +1,2 @@
+C:\Users\m\Desktop\2022.12.30 Write Waveforms to File in LabVIEW\Folder3\Waveform - Write Waveforms to File.vi (Waveform - Write Waveforms to File.vi)
+    - VI预期位置是"C:\Users\m\Desktop\2022.12.30 Write Waveforms to File in LabVIEW\Folder3\Support VIs\Acquire Array of Waveforms (simulated).vi"，但实际从"C:\Users\m\Desktop\2022.12.30 Write Waveforms to File in LabVIEW\Folder3\Acquire Array of Waveforms (simulated).vi"进行加载。

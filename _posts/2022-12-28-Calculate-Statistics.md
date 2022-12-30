@@ -4,8 +4,10 @@ title: Calculate Statistics
 date: 2022-12-28 18:55:52 +0800
 categories: 
  - Programming
+ - Mathematics
 tags:
  - LabVIEW
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Introduction

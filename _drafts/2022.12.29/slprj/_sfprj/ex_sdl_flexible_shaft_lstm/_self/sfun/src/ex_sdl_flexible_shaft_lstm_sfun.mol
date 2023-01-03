@@ -1,0 +1,27 @@
+ex_sdl_flexible_shaft_lstm_sfun.obj
+c2_ex_sdl_flexible_shaft_lstm.obj
+ex_sdl_flexible_shaft_lstm_sfun_registry.obj
+c_mexapi_version.obj
+half_type.obj
+"C:\Program Files\MATLAB\R2022a\sys\cuda\win64\cudnn\lib\x64\cudnn.lib"
+"C:\Program Files\MATLAB\R2022a\lib\win64\shared_layers.lib"
+"C:\Program Files\MATLAB\R2022a\lib\win64\cudnn_layers.lib"
+
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\sf_runtime.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmx.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmex.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmat.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libfixedpoint.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libut.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwstringutil.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwmathutil.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libemlrt.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwsl_log_load_blocks.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwsimulink.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwsl_sfcn_cov_bridge.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libcovrt.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwsl_simtarget_core.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwsl_simtarget_instrumentation.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwslexec_simlog.lib"
+"C:\Program Files\MATLAB\R2022a\extern\lib\win64\microsoft\libmwslccrt.lib"
+"C:\Program Files\MATLAB\R2022a\lib\win64\libmwipp.lib"

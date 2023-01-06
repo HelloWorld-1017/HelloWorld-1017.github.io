@@ -3,11 +3,10 @@ layout: single
 title: The processing methods for ill-conditioned SCM in MATLAB `fitgimdist`, `mahal` and `mvnrnd` functions in case of extremely small sample
 date: 2022-11-22 19:27:21 +0800
 categories: 
- - Programming
+ - MATLAB
  - Mathematics
 tags:
- - MATLAB
- - MATLAB Errors and Warnings
+ - MATLAB Warnings and Errors
  - Matrix
  - Numerical analysis
 ---

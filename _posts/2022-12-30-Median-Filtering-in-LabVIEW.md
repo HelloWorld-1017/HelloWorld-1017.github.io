@@ -3,10 +3,8 @@ layout: single
 title: Median Filtering in LabVIEW
 date: 2022-12-30 08:23:21 +0800
 categories: 
- - Programming
- - Signals and Systems
-tags:
  - LabVIEW
+ - Signals and Systems
 ---
 
 # Introduction

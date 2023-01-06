@@ -3,9 +3,8 @@ layout: single
 title: Write Waveforms to File in LabVIEW
 date: 2022-12-30 20:35:43 +0800
 categories: 
- - Programming
-tags:
  - LabVIEW
+tags:
  - LabVIEW Warnings and Errors
 ---
 

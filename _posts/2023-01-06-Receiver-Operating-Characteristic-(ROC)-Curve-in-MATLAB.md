@@ -802,3 +802,106 @@ end
 三种方式的结果是一致的~ Niceヾ(≧▽≦*)o
 
 <br>
+
+# Custom Plotting Based on Results of `rocmetrics` 
+
+通过上文自定义计算的过程，我们确认了ROC曲线的计算思路，之后我们就可以放心地使用`rocmetrics`函数计算。但是，在绘制ROC曲线时，上文使用object function绘制曲线的方式——`plot(rocObj)`——有些僵硬，无法适用于更加灵活的绘图需求，因此我们需要掌握基于`rocmetrics`中保存的计算结果绘制ROC曲线的方法。想要复刻代码`plot(rocObj)`的绘制效果，主要获取以下信息：
+
+- ROC曲线和AUC值
+
+  ```matlab
+  idx = rocObj.Metrics.ClassName==categorical("setosa");
+  FPR = rocObj.Metrics.FalsePositiveRate(idx);
+  TPR = rocObj.Metrics.TruePositiveRate(idx);
+  plot(FPR, TPR, DisplayName="setosa AUC="+num2str(rocObj.AUC(1)), Color="r")
+  ```
+
+- Model operating point（[rocmatrics: Find Model Operating Point and Optimal Operating Point - MathWorks](https://ww2.mathworks.cn/help/stats/rocmetrics.html#mw_19cecf83-7dec-48be-85ce-858315887dbe)）：
+
+  ```matlab
+  X = rocObj.Metrics(idx,:).FalsePositiveRate;
+  Y = rocObj.Metrics(idx,:).TruePositiveRate;
+  T = rocObj.Metrics(idx,:).Threshold;
+  idx_model = find(T>=0, 1, "last");
+  scatter(X(idx_model), Y(idx_model), "filled", ...
+      MarkerFaceColor="r", DisplayName="setosa Model Operating Point")
+  ```
+
+仍然以三分类数据集`fisheriris`为例展示上述绘图代码的效果：
+
+```matlab
+clc, clear, close all
+
+load fisheriris.mat
+rng("default")
+
+% Convert to categorical data type
+species = categorical(species);
+
+% Train a classification tree
+Mdl = fitctree(meas, species, Crossval="on");
+
+% Compute the classification scores for validation-fold observations
+[~, Scores] = kfoldPredict(Mdl);
+
+rocObj = rocmetrics(species, Scores, ...
+    [categorical("setosa"), categorical("versicolor"), categorical("virginica")]);
+
+figure("Units", "pixels", "Position", [400,326,1096,440])
+tiledlayout(1, 2)
+nexttile
+plot(rocObj)
+xlim([0,1])
+ylim([0,1])
+box(gca, "on")
+
+nexttile
+hold(gca, "on")
+box(gca, "on")
+set(gca, 'PlotBoxAspectRatio', [1 1 1])
+% For class "setosa"
+idx = rocObj.Metrics.ClassName==categorical("setosa");
+FPR = rocObj.Metrics.FalsePositiveRate(idx);
+TPR = rocObj.Metrics.TruePositiveRate(idx);
+plot(FPR, TPR, DisplayName="setosa AUC="+num2str(rocObj.AUC(1)), Color="r")
+% Get model operating point
+X = rocObj.Metrics(idx,:).FalsePositiveRate;
+Y = rocObj.Metrics(idx,:).TruePositiveRate;
+T = rocObj.Metrics(idx,:).Threshold;
+idx_model = find(T>=0, 1, "last");
+scatter(X(idx_model), Y(idx_model), "filled", ...
+    MarkerFaceColor="r", DisplayName="setosa Model Operating Point")
+
+% For class "versicolor"
+idx = rocObj.Metrics.ClassName==categorical("versicolor");
+FPR = rocObj.Metrics.FalsePositiveRate(idx);
+TPR = rocObj.Metrics.TruePositiveRate(idx);
+plot(FPR, TPR, DisplayName="versicolor AUC="+num2str(rocObj.AUC(2)), Color="g")
+% Get model operating point
+X = rocObj.Metrics(idx,:).FalsePositiveRate;
+Y = rocObj.Metrics(idx,:).TruePositiveRate;
+T = rocObj.Metrics(idx,:).Threshold;
+idx_model = find(T>=0, 1, "last");
+scatter(X(idx_model), Y(idx_model), "filled", ...
+    MarkerFaceColor="g", DisplayName="versicolor Model Operating Point")
+
+% For class "virginica"
+idx = rocObj.Metrics.ClassName==categorical("virginica");
+FPR = rocObj.Metrics.FalsePositiveRate(idx);
+TPR = rocObj.Metrics.TruePositiveRate(idx);
+plot(FPR, TPR, DisplayName="virginica AUC="+num2str(rocObj.AUC(3)), Color="b")
+% Get model operating point
+X = rocObj.Metrics(idx,:).FalsePositiveRate;
+Y = rocObj.Metrics(idx,:).TruePositiveRate;
+T = rocObj.Metrics(idx,:).Threshold;
+idx_model = find(T>=0, 1, "last");
+scatter(X(idx_model), Y(idx_model), "filled", ...
+    MarkerFaceColor="b", DisplayName="virginica Model Operating Point")
+
+legend("Location", "southeast")
+```
+
+![image-20230106194839612](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106194839612.png)
+
+<br>
+

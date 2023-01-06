@@ -437,7 +437,7 @@ end
 
 ### Convert  the layer arrays to `dlnetwork` objects
 
-在MATLAB中为了使用自定义的训练过程，并且使用MATLAB提供的自动微分技术，需要将网络结构转换为`delnetwork`对象：
+在MATLAB中为了使用自定义的训练过程，并且使用MATLAB提供的自动微分技术，需要将网络结构转换为`dlnetwork`对象：
 
 ```matlab
 netE = dlnetwork(layersE);

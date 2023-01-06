@@ -277,7 +277,7 @@ The National Television Systems Committee (NTSC) defines a color space known as 
 
 # Supplement
 
-在学习YIQ色彩空间时，感觉I和Q所代表的的含义——In-phase和Quadrature——陌生但熟悉。找了一下之前学习的文献，发现论文 [3] 就使用了这个信号。这篇论文将electromagnetic in-phase and quadrature signal data作为训练集训练了一个semi-supervised GAN，实现了end-to-end electromagnetic signal classification。
+在学习YIQ色彩空间时，感觉I和Q所代表的的含义——In-phase和Quadrature——陌生但熟悉。找了一下之前学习的文献，发现这两个概念出现在参考 [3] 中。这篇论文将electromagnetic in-phase and quadrature signal data作为训练集训练了一个semi-supervised GAN，实现了end-to-end electromagnetic signal classification。
 
 ![image-20230103222341337](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103222341337.png)
 

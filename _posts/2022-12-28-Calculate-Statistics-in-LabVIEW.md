@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Calculate Statistics
+title: Calculate Statistics in LabVIEW
 date: 2022-12-28 18:55:52 +0800
 categories: 
  - Programming

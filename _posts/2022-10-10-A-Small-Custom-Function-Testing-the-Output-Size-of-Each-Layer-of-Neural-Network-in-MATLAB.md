@@ -31,7 +31,9 @@ end
 end
 ```
 
-其功能是通过循环选取网络图`Layers`的前`idx`个层，转换为`dlnetwork`对象，之后使用随机生成的输入进行前馈过程，最后将输出的大小展示在命令行中。下面以[Train Variational Autoencoder(VAE) to Generate Images in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Variational-Autoencoder(VAE)-to-Generate-Images-in-MATLAB/)中VAE所使用的Encoder网络和Decoder网络进行测试。
+其功能是通过循环选取网络图`Layers`的前`idx`个层，转换为`dlnetwork`对象，之后使用随机生成的输入进行前馈过程，最后将输出的大小展示在命令行中。
+
+下面以[Train Variational Autoencoder(VAE) to Generate Images in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Variational-Autoencoder(VAE)-to-Generate-Images-in-MATLAB/)中VAE所使用的Encoder网络和Decoder网络进行测试。
 
 对于Encoder网络：
 
@@ -48,7 +50,7 @@ layersE = [
     convolution2dLayer(3, 64, Padding="same", Stride=2) % Output size, [7, 7, 64, 1]
     reluLayer                                           % Output size, [7, 7, 64, 1]
     fullyConnectedLayer(2*numLatentChannels)            % Output size, [32, 1]
-    samplingLayer                                       % Output siez, [16, 1]
+    samplingLayer                                       % Output size, [16, 1]
     ];
 
 Input = randn(imageSize);
@@ -139,3 +141,73 @@ The output size of the 8 layer is:     28    28     1     1
 ```
 
 Bingo~
+
+<br>
+
+**2023年1月4日**
+
+今天在学习示例[Compare Deep Learning Model Using ROC Curves - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/compare-deep-learning-models-using-ROC-curves.html)时发现Deep Learning Toolbox其实提供了类似的且更为强大的`analyzeNetwork`函数（[analyzeNetwork - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/analyzenetwork.html)）来实现上面的功能。
+
+```matlab
+clc, clear, close all
+
+imageSize = [28 28 1];
+
+% For Encoder
+numLatentChannels = 16;
+layersE = [
+    imageInputLayer(imageSize, Normalization="none")   
+    convolution2dLayer(3, 32, Padding="same", Stride=2) 
+    reluLayer                                                              
+    convolution2dLayer(3, 64, Padding="same", Stride=2) 
+    reluLayer                                          
+    fullyConnectedLayer(2*numLatentChannels)            
+    samplingLayer                                       
+    ];
+
+% For Decoder
+projectionSize = [7 7 64];
+numInputChannels = size(imageSize,1);
+layersD = [
+    featureInputLayer(numLatentChannels)                       
+    projectAndReshapeLayer(projectionSize, numLatentChannels)  
+    transposedConv2dLayer(3, 64, Cropping="same",Stride=2)    
+    reluLayer                                                  
+    transposedConv2dLayer(3, 32, Cropping="same",Stride=2)    
+    reluLayer                                                  
+    transposedConv2dLayer(3, numInputChannels, Cropping="same")
+    sigmoidLayer                                              
+    ];
+
+NetE = layerGraph(layersE);
+NetD = layerGraph(layersD);
+
+analyzeNetwork(NetE)
+analyzeNetwork(NetD)
+```
+
+![image-20230104121358730](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104121358730.png)
+
+![image-20230104121412683](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104121412683.png)
+
+可以看到，每一层输出的size和之前写的小函数得到的结果是一致的。但与此同时，软件还检测出神经网络的一些errors。但是，这两个神经网络结构同样来自官方示例[Train Variational Autoencoder(VAE) to Generate Images in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Variational-Autoencoder(VAE)-to-Generate-Images-in-MATLAB/)，完全可以运行并且没有报错，这是怎么回事呢？
+
+进一步查看[analyzeNetwork](https://ww2.mathworks.cn/help/deeplearning/ref/analyzenetwork.html)的官方文档，可以看到实际上该函数对于`target`做出了区分：
+
+![image-20230104122219070](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104122219070.png)
+
+简单地讲，使用`trainNetwork`训练的神经网络（比如示例[Compare Deep Learning Model Using ROC Curves - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/compare-deep-learning-models-using-ROC-curves.html)中定义的神经网络）都是比较经典的结构或者采用通用的训练策略和设置；而如果用户想要自定义cusom trianing loop（比如示例[Train Variational Autoencoder(VAE) to Generate Images in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Variational-Autoencoder(VAE)-to-Generate-Images-in-MATLAB/)中的VAE），需要在定义好layers后，使用`dlnetwork`函数将其转换为`dlnetwork`对象，再创建自定义循环。对于后者，分析神经网络时需要使用语法`analyzeNetwork(layers,TargetUsage="dlnetwork")`。
+
+因此，对于上面所构建的Encoder和Decoder，需要使用下面的代码进行分析：
+
+```matlab
+...
+analyzeNetwork(NetE, TargetUsage="dlnetwork")
+analyzeNetwork(NetD, TargetUsage="dlnetwork")
+```
+
+![image-20230104124812740](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104124812740.png)
+
+![image-20230104124822084](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104124822084.png)
+
+此时就没有errors了。

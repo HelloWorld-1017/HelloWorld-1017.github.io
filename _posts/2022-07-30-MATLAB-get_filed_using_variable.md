@@ -1,15 +1,14 @@
 ---
 layout: single
-title: 【MATLAB Language Fundamentals】通过变量使用结构体的字段
+title: 通过变量使用结构体的字段
 date: 2022-07-30 20:17:27 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
+ - MATLAB Language Fundamentals
 toc: false
 ---
 
-<br>
 在MATLAB中，通过变量获得结构体的字段值。比如，有一个结构体 s ，它分别有a，b，e 三个字段，字段值分别为1.0，2.0，3.0。现在想借助一个变量来获得字段 e 的值：
 
 ```matlab

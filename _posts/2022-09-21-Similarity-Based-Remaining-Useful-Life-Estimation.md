@@ -3,11 +3,10 @@ layout: single
 title: MATLAB Example--Similarity-Based Remaining Useful Life Estimation
 date: 2022-09-21 19:28:29 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
  - MATLAB Predictive Maintenance Toolbox
  - RUL
 ---

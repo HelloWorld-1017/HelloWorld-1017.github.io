@@ -4,10 +4,9 @@ title: The Gradient is Perpendicular to the Tangent of the Contour Line
 date: 2022-11-07 11:12:11 +0800
 categories: 
  - Mathematics
- - Programming
+ - MATLAB
 tags:
  - Calculus
- - MATLAB
  - MATLAB Graphics
 toc: false
 ---

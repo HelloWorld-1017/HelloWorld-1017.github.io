@@ -1,15 +1,13 @@
 ---
 layout: single
-title: 【MATLAB Classification Learner app】自动生成机器学习模型函数代码文件
+title: 自动生成机器学习模型函数代码文件
 date: 2022-08-02 23:11:21 +0800
 categories: 
- - Programming
+ - MATLAB
 tags:
- - MATLAB 
+ - MATLAB Classification Learner App
 toc: false
 ---
-
-<br>
 
 MATLAB Classification Learner app 提供了方便的、图形化操作的训练机器学习模型的手段，并且可以将整个的训练过程自动生成为函数代码或者模型代码
 

@@ -3,10 +3,9 @@ layout: single
 title: An Unexpected Problem Happening in Conversion Between Categorical and Single or Double Data Types in MATLAB
 date: 2022-10-13 12:20:17 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Language Fundamentals
 toc: false
 ---

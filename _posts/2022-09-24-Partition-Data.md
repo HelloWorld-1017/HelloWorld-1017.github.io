@@ -3,10 +3,9 @@ layout: single
 title: Partition Data
 date: 2022-09-24 13:47:45 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

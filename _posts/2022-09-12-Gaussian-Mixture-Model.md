@@ -2,13 +2,12 @@
 layout: single
 title: Gaussian Mixture Model(GMM)
 date: 2022-09-12 12:28:37 +0800
-categories: 
+categories:
  - Mathematics
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Gaussian Mixture Model(GMM)

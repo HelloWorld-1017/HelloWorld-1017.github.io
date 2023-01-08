@@ -3,10 +3,9 @@ layout: single
 title: Contrast Training Error and Test Error (or Validation Error) of the AI Model
 date: 2022-12-02 12:26:23 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

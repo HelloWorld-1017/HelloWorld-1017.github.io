@@ -5,8 +5,8 @@ date: 2022-10-21 14:17:17 +0800
 categories: 
  - Mathematics
 tags:
- - Probability theory and mathematical statistics
- - Bayesian probability
+ - Probability Theory and Mathematical Statistics
+ - Bayesian Probability
 toc: false
 ---
 

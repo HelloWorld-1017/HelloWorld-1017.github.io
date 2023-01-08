@@ -4,10 +4,9 @@ title: Chi-square Distribution, Student's t Distribution, and F Distribution
 date: 2022-09-13 17:34:37 +0800
 categories: 
  - Mathematics
- - Programming
-tags:
- - Probability theory and mathematical statistics
  - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

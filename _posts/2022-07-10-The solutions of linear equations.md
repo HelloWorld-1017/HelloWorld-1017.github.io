@@ -2,7 +2,8 @@
 layout: single
 title: 线性方程组解的判定
 date: 2022-07-10
-categories: Mathematics
+categories: 
+ - Mathematics
 tags: 
  - Matrix
 ---

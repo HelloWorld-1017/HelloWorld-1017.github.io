@@ -3,10 +3,9 @@ layout: single
 title: MATLAB `movmean` and `movmedian` Function
 date: 2022-09-26 14:18:45 +0800
 categories:
- - Programming
+ - MATLAB
  - Signals and Systems
 tags:
- - MATLAB
  - MATLAB Data Import and Analysis
 ---
 

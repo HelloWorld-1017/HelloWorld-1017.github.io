@@ -1,12 +1,11 @@
 ---
 layout: single
-title: 【MATLAB Predictive Maintenance Toolbox】Simulink 批量仿真以及使用 simulationEnsembleDatastore 管理仿真中记录的数据
+title: Simulink 批量仿真以及使用 simulationEnsembleDatastore 管理仿真中记录的数据
 date: 2022-08-09 21:31:07  +0800
 categories:
- - Programming
-tags: 
  - MATLAB
-toc: true
+tags: 
+ - MATLAB Predictive Maintenance Toolbox
 ---
 
 <br>

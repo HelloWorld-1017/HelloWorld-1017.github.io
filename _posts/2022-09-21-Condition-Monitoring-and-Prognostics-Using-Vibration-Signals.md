@@ -3,11 +3,10 @@ layout: single
 title: MATLAB Example--Condition Monitoring and Prognostics Using Vibration Signals
 date: 2022-09-21 19:46:45 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
  - MATLAB Predictive Maintenance Toolbox
  - System Identification
  - Time Series Analysis

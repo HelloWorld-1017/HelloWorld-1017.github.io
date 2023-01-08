@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 【MATLAB Simscape】Foundation Domain的物理常数
+title: Physical Constants of Foundation Domain in MATLAB Simscape
 date: 2022-08-26 10:35:17 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
+ - MATLAB Simscape
 toc: false
 tagline: ""
 header: 

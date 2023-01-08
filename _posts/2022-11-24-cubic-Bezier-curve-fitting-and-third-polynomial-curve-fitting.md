@@ -4,11 +4,10 @@ title: Cubic Bezier Curve Fitting and Third Polynomial Curve Fitting
 date: 2022-11-24 16:36:32 +0800
 categories: 
  - Mathematics
- - Programming
-tags:
  - MATLAB
+tags:
  - Geometry
- - Numerical analysis
+ - Numerical Analysis
  - Operations Research
 ---
 

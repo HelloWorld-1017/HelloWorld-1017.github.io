@@ -3,10 +3,9 @@ layout: single
 title: An Example of Extracting Frequency-domain and Time-domain Statistical Features
 date: 2022-10-24 14:58:46 +0800
 categories: 
- - Programming
+ - MATLAB
  - Signals and Systems
 tags:
- - MATLAB
  - MATLAB Signal Processing Toolbox
 ---
 

@@ -3,9 +3,8 @@ layout: single
 title: Show Only Part of Plot Legends in MATLAB
 date: 2022-12-02 12:50:47 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Graphics
 toc: false
 ---

@@ -1,16 +1,16 @@
 ---
 layout: single
-title: 使用MATLAB绘制Mandelbrot Set
+title: Plot Mandelbrot Set in MATLAB
 date: 2022-09-04 15:45:23 +0800
 categories: 
  - Mathematics
  - Uncertainty
  - Signals and Systems
- - Programming
-tags:
  - MATLAB
+tags:
  - Complex function
  - Fractal
+ - MATLAB Graphics
 ---
 
 # Mandelbrot Set 

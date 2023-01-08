@@ -1,9 +1,11 @@
 ---
 layout: single
-title: 在 Github Pages 使用 minimal-mistakes-jekyll 主题
+title: Install the minimal-mistakes-jekyll Theme in Github Pages
 date: 2022-07-17 12:25:11 +0800
-categories: ["Github Pages"]
-tags: ["Jekyll"]
+categories: 
+ - Github Pages
+tags: 
+ - Jekyll
 toc: false
 ---
 

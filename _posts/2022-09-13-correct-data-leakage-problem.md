@@ -4,11 +4,10 @@ title: Correct Data Leakage Problem
 date: 2022-09-13 18:14:17 +0800
 categories: 
  - Mathematics
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Introduction

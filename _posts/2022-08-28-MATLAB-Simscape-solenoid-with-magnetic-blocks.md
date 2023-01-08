@@ -1,15 +1,14 @@
 ---
 layout: single
-title: 【MATLAB Simscape】电磁铁的电路-磁路-机械系统模型
+title: 电磁铁的电路-磁路-机械系统模型
 date: 2022-08-28 18:41:41 +0800
 categories: 
- - Programming
+ - MATLAB
  - Signals and Systems
  - Electromagnetism
 tags:
- - MATLAB
  - Numerical analysis
- - Signals and Systems
+ - MATLAB Simulink
 ---
 
 

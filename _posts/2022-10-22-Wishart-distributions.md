@@ -4,11 +4,10 @@ title: Wishart Distribution, Inverse-Wishart Distribution, Normal-Inverse-Wishar
 date: 2022-10-22 14:29:56 +0800
 categories: 
  - Mathematics
- - Programming
-tags:
- - Probability theory and mathematical statistics
- - Bayesian probability
  - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
+ - Bayesian probability
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

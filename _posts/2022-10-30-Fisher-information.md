@@ -5,7 +5,7 @@ date: 2022-10-30 17:32:31 +0800
 categories: 
  - Mathematics
 tags:
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
 ---
 
 # What is Fisher Information?

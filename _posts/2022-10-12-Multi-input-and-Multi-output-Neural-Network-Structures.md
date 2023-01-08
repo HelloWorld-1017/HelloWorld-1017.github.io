@@ -1,12 +1,11 @@
 ---
 layout: single
-title: Multi-input and Multi-output Neural Network Structures
+title: Multi-input and Multi-output Neural Network Structures in MATLAB
 date: 2022-10-12 13:09:07 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 toc: false
 ---

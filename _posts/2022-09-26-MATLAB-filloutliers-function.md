@@ -3,10 +3,9 @@ layout: single
 title: MATLAB `filloutliers` function
 date: 2022-09-26 15:43:44 +0800
 categories:
- - Programming
+ - MATLAB
  - Signals and Systems
 tags:
- - MATLAB
  - MATLAB Data Import and Analysis
 ---
 

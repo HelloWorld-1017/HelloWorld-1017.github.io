@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 【MATLAB Graphics】`imagesc` 函数
+title: MATLAB `imagesc` Function
 date: 2022-07-18 19:09:19 +0800
 categories: 
- - Programming
+ - MATLAB 
 tags:
- - MATLAB
+ - MATLAB Graphics
 ---
 
 # 基本语法

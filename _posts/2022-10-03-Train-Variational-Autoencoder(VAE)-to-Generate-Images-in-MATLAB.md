@@ -3,10 +3,9 @@ layout: single
 title: Train Variational Autoencoder(VAE) to Generate Images in MATLAB
 date: 2022-10-03 14:18:19 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 ---
 

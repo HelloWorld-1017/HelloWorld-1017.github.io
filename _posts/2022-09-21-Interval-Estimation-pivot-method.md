@@ -5,7 +5,7 @@ date: 2022-09-21 19:15:11 +0800
 categories: 
  - Mathematics
 tags:
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Definition
@@ -131,8 +131,29 @@ $$
 \end{align*}
 $$
 
-在MATLAB中，方差使用`std`函数进行计算。
-{: .notice--primary}
+> MATLAB代码：
+>
+> ```matlab
+> [lowerCI, upperCI] = helperGetCI([5.52, 5.48, 5.64,5.51,5.43], 0.95)
+> 
+> function [lowerCI, upperCI] = helperGetCI(X, alpha)
+> num = numel(X);
+> X_bar = mean(X);
+> S = std(X);
+> t_nminus1 = tinv((1-alpha)/2, num-1);
+> 
+> lowerCI = X_bar-S*t_nminus1/sqrt(num);
+> upperCI = X_bar+S*t_nminus1/sqrt(num);
+> end
+> ```
+>
+> ```matlab
+> lowerCI =
+>     5.6124
+> 
+> upperCI =
+>     5.4196
+> ```
 
 查“t分布上侧分位点$t_n(\alpha)$表”，可以得到$t_4(0.025)=2.776$，将这些数值代入到$\eqref{eq3}$可以得到$\mu$的置信度为0.95的区间估计为$[5.4195, 5.6125]$。
 

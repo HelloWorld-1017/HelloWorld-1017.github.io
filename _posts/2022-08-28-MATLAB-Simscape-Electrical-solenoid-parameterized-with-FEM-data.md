@@ -1,15 +1,14 @@
 ---
 layout: single
-title: 【MATLAB Simscape】基于FEM数据的电磁铁模型
+title: Solenoid Parameterized with FEM Data in MATLAB Simulink
 date: 2022-08-28 14:49:01 +0800
-categories: 
- - Programming
+categories:
+ - MATLAB
  - Signals and Systems
  - Electromagnetism
 tags:
- - MATLAB
- - Numerical analysis
- - Signals and Systems
+ - Numerical Analysis
+ - MATLAB Simulink
 ---
 
 # 模型介绍

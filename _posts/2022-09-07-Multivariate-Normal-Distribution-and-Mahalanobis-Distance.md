@@ -4,11 +4,10 @@ title: Multivariate Normal Distribution and Mahalanobis Distance
 date: 2022-09-07 13:26:02 +0800
 categories: 
  - Mathematics
- - Programming
+ - MATLAB
 tags:
  - Matrix
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Multivariate Normal Distribution

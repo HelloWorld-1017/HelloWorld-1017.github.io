@@ -3,10 +3,9 @@ layout: single
 title: Train Conditional Generative Adversarial Network(CGAN) in MATLAB
 date: 2022-10-09 08:15:17 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 ---
 

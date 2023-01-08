@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 【MATLAB App Building】实现两个App之间的数据传输
+title: 实现两个App之间的数据传输
 date: 2022-07-31 22:04:04 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
+ - MATLAB App Building
 ---
 
 <br>

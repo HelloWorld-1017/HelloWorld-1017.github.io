@@ -1,15 +1,15 @@
 ---
 layout: single
-title: 【MATLAB Deep Learning Toolbox】使用 Neural ODE 求解动态系统
+title: Solving Dynamical System Using Neural ODE
 date: 2022-08-23 16:48:25 +0800
 categories: 
+ - MATLAB
  - Uncertainty
  - Signals and Systems
  - Machine Learning
- - Programming
 tags:
- - MATLAB
  - Signals and Systems
+ - MATLAB Deep Learning Toolbox
 classes: wide
 ---
 

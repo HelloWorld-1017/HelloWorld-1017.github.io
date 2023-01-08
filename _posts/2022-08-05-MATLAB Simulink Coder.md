@@ -3,11 +3,10 @@ layout: single
 title: 自动生成 Simulink 模型的 C 语言代码和可执行程序
 date: 2022-08-05 16:22:29 +0800
 categories: 
- - Programming
-tags:
  - MATLAB 
+tags:
  - MATLAB Simulink Coder
- - MATLAB Errors and Warnings
+ - MATLAB Warnings and Errors
 toc: true
 ---
 

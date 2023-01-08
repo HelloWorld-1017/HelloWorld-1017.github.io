@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 代数基本定理(fundamental theorem of algebra)
+title: Fundamental Theorem of Algebra)
 date: 2022-07-21 11:17:55 +0800
 categories: 
  - Mathematics
@@ -8,7 +8,7 @@ tags:
  - Algebra
 ---
 
-# 内容
+# Content
 
 The **fundamental theorem of algebra**, also known as d'Alembert's theorem, or the d'Alembert–Gauss theorem, states that <u>every non-constant single-variablepolynomial with complex coefficients has at least one complex root</u>. This includes polynomials with real coefficients, since every real number is a complex number with its imaginary part equal to zero.
 
@@ -26,10 +26,9 @@ There are several equivalent formulations of the theorem:
 > Despite its name, there is no purely algebraic proof of the theorem, since any proof must use some form of the analytic **completeness of the real numbers**, which is not an algebraic concept. Additionally, it is not fundamental for <u>modern algebra</u>; its name was given at a time when algebra was synonymous with theory of equations.
 > 
 
----
 <br>
 
-# 理解
+# Personal Understanding
 
 简单地讲，**在复数域内**，任意一个 $n$ 次一元多项式都有 $n$ 个根。
 
@@ -75,11 +74,9 @@ $$
 
 因此，代数基本定理表明，上面这个二元三次方程组有且仅有3组解。
 
+<br>
 
-
----
-
-**参考**
+**Reference**
 
 [1] [Fundamental theorem of algebra-Wikipedia](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra)
 

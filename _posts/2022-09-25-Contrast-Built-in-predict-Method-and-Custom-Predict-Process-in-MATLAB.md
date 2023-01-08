@@ -3,10 +3,9 @@ layout: single
 title: Contrast Built-in `predict` Method and Custom Predict Process in MATLAB
 date: 2022-09-25 14:18:45 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

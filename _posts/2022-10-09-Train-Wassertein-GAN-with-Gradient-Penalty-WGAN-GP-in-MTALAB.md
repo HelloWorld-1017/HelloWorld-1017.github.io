@@ -3,10 +3,9 @@ layout: single
 title: Train Wassertein GAN with Gradient with Gradient Penalty(WGAN-GP) in MATLAB
 date: 2022-10-09 21:28:21 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 ---
 

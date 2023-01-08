@@ -3,9 +3,8 @@ layout: single
 title: Position Settings of UI Figure and Axes in MATLAB
 date: 2022-06-23
 categories: 
- - Programming
-tags: 
  - MATLAB
+tags: 
  - MATLAB Graphics
  - MATLAB App Building
 ---

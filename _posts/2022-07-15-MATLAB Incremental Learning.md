@@ -1,23 +1,23 @@
 ---
 layout: single
-title: 【MATLAB Statistics and Machine Learning Toolbox】增量学习模型
+title: Incremental Learning in MATLAB
 date: 2022-07-15 00:15:57
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags: 
- - MATLAB
+ - MATLAB Statistics and Machine Learning Toolbox
 ---
 
 
 
-# 示例介绍
+# Introduction
 
 本博客中的实例来自 MATLAB 官方案例：[Implement Incremental Learning for Classification Using Flexible Workflow](https://ww2.mathworks.cn/help/stats/implement-incremental-learning-using-flexible-workflow-classification.html)
 
 > This example shows how to use the **flexible workflow** to implement incremental learning for binary classification with prequential evaluation. A traditionally trained model initializes the incremental model. 
 
-## MATLAB 中 Incremental Learning 的工作流
+## Incremental Learning Workflow in MATLAB
 
 MATLAB 的 Incremental Learning 主要分为两种工作流：Flexible workflow 和 Succinct workflow. 
 
@@ -39,7 +39,7 @@ When a data chunk is available, supply the incoming chunk and a configured incre
 
 
 
-## Cold start 和 Warm start
+## Cold start and Warm start
 
 **Cold start**
 Little information might be known about the population before incremental learning starts.
@@ -56,7 +56,7 @@ When enough information is known before learning begins (for example, you have g
 
 
 
-## 数据集介绍
+## Dataset
 
 **Human Activity Data**
 The humanactivity data set contains 24,075 observations of five different physical human activities: Sitting, Standing, Walking, Running, and  Dancing. Each observation has 60 features extracted from acceleration data measured by smartphone accelerometer sensors. The data set contains the following variables: 
@@ -247,11 +247,9 @@ Plot a trace plot of the performance metrics and estimated coefficient $\beta_{6
 - The cumulative loss is stable and decreases gradually, whereas the window loss jumps.
 - $\beta_{60}$ changes abruptly at first, and then gradually levels off as fit processes more chunks of observations.
 
----
-
 <br>
 
-# 总结
+# Conclusion
 
 (1)  该示例是一个二分类 Incremental Learning 模型, 但是可以拓展到多分类的情形;
 

@@ -1,11 +1,10 @@
 ---
 layout: single
-title: 【MATLAB Graphics】`sprintf` Function and `title` Function
+title: MATLAB `sprintf` Function and `title` Function
 date: 2022-09-12 14:42:37 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Graphics
 toc: false
 ---

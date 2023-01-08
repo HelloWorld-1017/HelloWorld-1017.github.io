@@ -8,7 +8,7 @@ date: 2022-09-29 10:43:21 +0800
 categories: 
  - Mathematics
 tags:
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
  - Experiment
 toc: false
 ---

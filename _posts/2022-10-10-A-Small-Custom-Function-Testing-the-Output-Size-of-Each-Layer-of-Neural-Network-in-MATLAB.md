@@ -3,10 +3,9 @@ layout: single
 title: A Small Custom Function, Testing the Output Size of Each Layer of Neural Network in MATLAB
 date: 2022-10-10 13:51:38 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 toc: false
 ---

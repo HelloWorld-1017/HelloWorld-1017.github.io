@@ -3,8 +3,6 @@ layout: single
 title: C Language, Char type and Char string type.
 date: 2022-09-11 14:36:37 +0800
 categories: 
- - Programming
-tags:
  - C
 ---
 

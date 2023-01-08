@@ -4,10 +4,9 @@ title: Exponential Distribution and Weibull Distribution
 date: 2022-09-30 10:32:31 +0800
 categories: 
  - Mathematics
- - Programming
-tags:
- - Probability theory and mathematical statistics
  - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

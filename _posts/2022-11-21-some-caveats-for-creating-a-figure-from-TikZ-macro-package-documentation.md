@@ -6,6 +6,7 @@ categories:
  - LaTeX
 tags:
  - Wisdom
+ - Graphic Design and Typography
 ---
 
 # Introduction

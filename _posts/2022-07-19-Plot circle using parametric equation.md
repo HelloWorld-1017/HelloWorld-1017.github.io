@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 基于参数方程绘制圆的图像
+title: Plot Circle Based on Parametric Equation
 date: 2022-07-19 23:53:23 +0800
 categories: 
- - Programming
-tags: 
  - MATLAB
+tags: 
+ - MATLAB Graphics
 toc: false
 ---
 

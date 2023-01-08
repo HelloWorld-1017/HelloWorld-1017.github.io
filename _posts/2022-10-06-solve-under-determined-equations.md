@@ -6,7 +6,7 @@ categories:
  - Mathematics
 tags:
  - Matrix
- - Numerical analysis
+ - Numerical Analysis
  - Operations Research
 ---
 

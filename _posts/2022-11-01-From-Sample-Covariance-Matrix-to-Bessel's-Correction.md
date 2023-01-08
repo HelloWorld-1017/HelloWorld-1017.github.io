@@ -5,7 +5,7 @@ date: 2022-11-01 18:37:31 +0800
 categories: 
  - Mathematics
 tags:
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Introduction

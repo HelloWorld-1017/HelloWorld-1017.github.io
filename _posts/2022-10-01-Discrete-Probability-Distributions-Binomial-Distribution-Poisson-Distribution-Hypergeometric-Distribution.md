@@ -4,10 +4,9 @@ title: Discrete Probability Distributions(Binomial Distribution, Poisson Distrib
 date: 2022-10-01 18:38:39 +0800
 categories: 
  - Mathematics
- - Programming
-tags:
- - Probability theory and mathematical statistics
  - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

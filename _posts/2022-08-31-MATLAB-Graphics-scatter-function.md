@@ -1,11 +1,10 @@
 ---
 layout: single
-title: 【MATLAB Graphics】`scatter` function
+title: MATLAB `scatter` Function
 date: 2022-08-31 11:09:01 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Graphics
 ---
 

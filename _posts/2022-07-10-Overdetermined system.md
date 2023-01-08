@@ -2,7 +2,8 @@
 layout: single
 title: Solve Over-determined Equations
 date: 2022-07-10
-categories: Mathematics
+categories: 
+ - Mathematics
 tags: 
   - Matrix 
 ---

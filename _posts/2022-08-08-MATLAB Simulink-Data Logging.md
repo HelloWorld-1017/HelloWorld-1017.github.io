@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 【MATLAB Simulink】设置 Signal Logging
+title: Set Signal Logging
 date: 2022-08-08 18:23:43 +0800
 categories:
- - Programming
-tags: 
  - MATLAB
+tags: 
+ - MATLAB Simulink
 toc: true
 ---
 

@@ -3,10 +3,9 @@ layout: single
 title: Sequence Classification Using LSTM and 1-D Convolutions in MATLAB
 date: 2022-12-10 15:22:11 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 ---
 

@@ -1,11 +1,10 @@
 ---
 layout: single
-title: 【MATLAB Graphics】Colourful Black
+title: Colorful Black
 date: 2022-09-02 19:19:19 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Graphics
 toc: false
 ---

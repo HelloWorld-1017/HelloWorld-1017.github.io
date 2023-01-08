@@ -1,15 +1,14 @@
 ---
 layout: single
-title: 【MATLAB Programming】 eval 函数：计算 MATLAB 表达式
+title: 【】 eval 函数：计算 MATLAB 表达式
 date: 2022-08-09 12:59:35 +0800
 categories:
- - Programming
-tags: 
  - MATLAB
+tags: 
+ - MATLAB Programming
 toc: false
 ---
 
-<br>
 首先创建两个结构体
 
 ```matlab

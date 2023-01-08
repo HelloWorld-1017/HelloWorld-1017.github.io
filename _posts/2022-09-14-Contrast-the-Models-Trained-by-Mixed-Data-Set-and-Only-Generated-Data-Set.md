@@ -4,11 +4,10 @@ title: Contrast the Models Trained by Mixed Data Set and Only Generated Data Set
 date: 2022-09-14 12:47:45 +0800
 categories: 
  - Mathematics
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Introduction

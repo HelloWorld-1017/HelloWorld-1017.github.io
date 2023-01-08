@@ -3,12 +3,11 @@ layout: single
 title: MATLAB `var`, `std`, and `cov` Functions
 date: 2022-10-25 19:31:35 +0800
 categories: 
- - Programming
+ - MATLAB
  - Mathematics
 tags:
- - MATLAB
  - MATLAB Data Import and Analysis
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Introduction

@@ -1,11 +1,10 @@
 ---
 layout: single
-title: 【MATLAB Graphics】`tiledlayout`函数和`subplot`函数
+title: MATLAB `tiledlayout` Function and `subplot` Function
 date: 2022-09-04 20:02:01 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Graphics
 ---
 

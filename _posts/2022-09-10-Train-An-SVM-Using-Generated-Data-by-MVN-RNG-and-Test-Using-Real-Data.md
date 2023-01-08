@@ -4,11 +4,10 @@ title: Train an SVM Using Generated Data by MVN-RNG, and Test with Real Data
 date: 2022-09-10 11:37:41 +0800
 categories: 
  - Mathematics
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
- - MATLAB
+ - Probability Theory and Mathematical Statistics
 ---
 
 Warning⚠️⚠️⚠️ ：本文所有的示例都存在严重的**数据泄露**现象，当时没有进行考虑，之后会对针对这一问题进行修改。

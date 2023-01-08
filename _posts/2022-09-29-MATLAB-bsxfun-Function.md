@@ -3,12 +3,10 @@ layout: single
 title: MATLAB `bsxfun` Function
 date: 2022-09-29 18:46:47 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Language Fundamentals
  - MATLAB Graphics
-
 ---
 
 # Syntax

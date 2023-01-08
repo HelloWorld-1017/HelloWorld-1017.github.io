@@ -2,8 +2,10 @@
 layout: single
 title: 向量求导公式
 date: 2022-07-13 17:45:25
-categories: [Mathematics]
-tags: [Matrix]
+categories: 
+ - Mathematics
+tags: 
+ - Matrix
 ---
 
 # 标量对向量求导

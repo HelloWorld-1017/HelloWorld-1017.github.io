@@ -3,10 +3,9 @@ layout: single
 title: Train Generative Adversarial Network(GAN) in MATLAB
 date: 2022-10-09 08:10:11 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 ---
 

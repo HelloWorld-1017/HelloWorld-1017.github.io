@@ -8,7 +8,7 @@ categories:
 tags:
  - MATLAB Warnings and Errors
  - Matrix
- - Numerical analysis
+ - Numerical Analysis
 ---
 
 # "X must have more rows than columns." error in `fitgmdist` function 

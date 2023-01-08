@@ -3,9 +3,8 @@ layout: single
 title: Batch Modify File Names
 date: 2022-10-06 22:35:37 +0800
 categories: 
- - Programming
+  - MATLAB
 tags:
- - MATLAB
  - MATLAB Language Fundamentals
  - Regular Expression
 toc: false

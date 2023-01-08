@@ -6,7 +6,7 @@ categories:
  - Mathematics
  - Machine Learning
 tags:
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
 ---
 
 # Introduction

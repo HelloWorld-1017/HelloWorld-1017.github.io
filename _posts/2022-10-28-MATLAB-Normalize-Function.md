@@ -3,9 +3,8 @@ layout: single
 title: MATLAB `Normalize` Function
 date: 2022-10-28 20:50:03 +0800
 categories: 
- - Programming
-tags:
  - MATLAB
+tags:
  - MATLAB Data Import and Analysis
 toc: false
 ---

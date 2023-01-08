@@ -5,7 +5,7 @@ date: 2022-09-27 16:47:51 +0800
 categories: 
  - Mathematics
 tags:
- - Probability theory and mathematical statistics
+ - Probability Theory and Mathematical Statistics
  - Experiment
 ---
 

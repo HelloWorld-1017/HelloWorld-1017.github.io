@@ -6,8 +6,7 @@ categories:
  - Psychology
  - Mathematics
 tags: 
- - Probability theory and mathematical statistics
- - Psychology
+ - Probability Theory and Mathematical Statistics
  - Wisdom
 toc: false
 ---
@@ -29,7 +28,7 @@ $$
 
 <br>
 
-**参考**
+**Reference**
 
 [1] [Murphy's law-Wikipedia](https://en.wikipedia.org/wiki/Murphy%27s_law)
 

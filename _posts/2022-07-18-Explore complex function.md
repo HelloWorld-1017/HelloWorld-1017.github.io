@@ -2,8 +2,10 @@
 layout: single
 title: 初探复变函数
 date: 2022-07-18 22:53:33 +0800
-categories: ["Mathematics"]
-tags: ["Complex function"]
+categories: 
+ - Mathematics
+tags: 
+ - Complex function
 ---
 
 > 迄今为止，虚数这个引发许多纠缠不清的问题，在很大程度上可以认为是不恰当的记法系统导致的。比如，如果把 $+1$、$-1$、$\sqrt{-1}$ 称为正、逆和侧的单位，而不是正、负、虚（甚至不可能）的单位，就不有这样的麻烦了。

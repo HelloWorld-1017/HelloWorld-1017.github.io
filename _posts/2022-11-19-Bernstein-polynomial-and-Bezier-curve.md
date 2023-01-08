@@ -4,10 +4,9 @@ title: Bernstein polynomial and Bézier curve
 date: 2022-11-19 13:26:23 +0800
 categories: 
  - Mathematics
- - Programming
-tags:
- - Numerical analysis
  - MATLAB
+tags:
+ - Numerical Analysis
  - MATLAB Graphics
 ---
 

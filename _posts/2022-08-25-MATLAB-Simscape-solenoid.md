@@ -1,13 +1,13 @@
 ---
 layout: single
-title: 【MATLAB Simscape】电磁铁的电路-机械模型
+title: Simulate Solenoid in MATLAB Simulink
 date: 2022-08-25 17:03:51 +0800
 categories: 
- - Programming
+ - MATLAB
  - Signals and Systems
  - Electromagnetism
 tags:
- - MATLAB
+ - MATLAB Simscape
 ---
 
 # 电磁铁的电路-机械模型

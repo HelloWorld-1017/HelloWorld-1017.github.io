@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 【MATLAB App Building】使用 App 向 Simulink 模型传递参数
+title: 使用 App 向 Simulink 模型传递参数
 date: 2022-08-08 11:50:23 +0800
 categories:
- - Programming
-tags: 
  - MATLAB
+tags: 
+ - MATLAB App Building
 toc: false
 ---
 <br>

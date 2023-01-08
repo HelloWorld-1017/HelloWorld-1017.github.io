@@ -1,11 +1,11 @@
 ---
 layout: single
-title: 【MATLAB App Building】组件的 Parent container
+title: Parent Container of Components
 date: 2022-08-07 13:59:01 +0800
 categories:
- - Programming
-tags: 
  - MATLAB
+tags: 
+ - MATLAB App Building
 toc: false
 ---
 

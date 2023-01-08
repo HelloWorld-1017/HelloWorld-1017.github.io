@@ -1,6 +1,6 @@
 ---
 layout: single
-title: B场，H场，M场
+title: B Filed, H Filed, and M Filed
 date: 2022-08-24 13:02:47 +0800
 categories: 
  - Electromagnetism

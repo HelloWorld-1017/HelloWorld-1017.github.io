@@ -7,7 +7,7 @@ categories:
  - Machine Learning
 tags:
  - MATLAB Statistics and Machine Learning Toolbox
- - Deep Learning Toolbox
+ - MATLAB Deep Learning Toolbox
  - Transfer Learning
 ---
 

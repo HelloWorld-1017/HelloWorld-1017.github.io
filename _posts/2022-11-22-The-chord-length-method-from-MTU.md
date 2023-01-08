@@ -6,7 +6,7 @@ categories:
  - Mathematics
 tags:
  - Geometry
- - Numerical analysis
+ - Numerical Analysis
 ---
 
 # Introduction

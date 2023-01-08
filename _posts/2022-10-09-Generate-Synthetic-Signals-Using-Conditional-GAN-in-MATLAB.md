@@ -3,10 +3,9 @@ layout: single
 title: Generate Synthetic Signals Using Conditional GAN in MATLAB
 date: 2022-10-09 23:20:57 +0800
 categories: 
- - Programming
+ - MATLAB
  - Machine Learning
 tags:
- - MATLAB
  - MATLAB Deep Learning Toolbox
 ---
 

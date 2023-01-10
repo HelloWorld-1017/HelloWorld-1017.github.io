@@ -34,7 +34,7 @@ char类型变量的声明和初始化的基本语法为：`char grade = 'A';`。
 测试代码：
 
 
-```C
+```c
 #include<stdio.h>
 
 int main(void)

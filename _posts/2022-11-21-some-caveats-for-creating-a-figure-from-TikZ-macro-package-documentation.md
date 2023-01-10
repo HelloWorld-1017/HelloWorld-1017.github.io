@@ -4,9 +4,9 @@ title: Some Caveats for Creating a Figure from TikZ Macro Package Documentation
 date: 2022-11-21 10:43:41 +0800
 categories: 
  - LaTeX
+ - Graphic Design and Typography
 tags:
  - Wisdom
- - Graphic Design and Typography
 ---
 
 # Introduction

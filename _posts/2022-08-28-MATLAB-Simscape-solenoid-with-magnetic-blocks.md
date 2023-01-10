@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 电磁铁的电路-磁路-机械系统模型
+title: Building a Solenoid with Magnetic Blocks Using MATLAB Simulink
 date: 2022-08-28 18:41:41 +0800
 categories: 
  - MATLAB

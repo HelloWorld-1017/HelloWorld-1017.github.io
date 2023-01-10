@@ -1,6 +1,6 @@
 ---
 layout: single
-title: MATLAB Example--Similarity-Based Remaining Useful Life Estimation
+title: Similarity-Based Remaining Useful Life Estimation in MATLAB
 date: 2022-09-21 19:28:29 +0800
 categories: 
  - MATLAB

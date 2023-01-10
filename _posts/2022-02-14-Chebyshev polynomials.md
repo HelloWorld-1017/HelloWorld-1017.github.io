@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 切比雪夫多项式及切比雪夫插值
+title: Chebyshev Polynomials and Chebyshev Interpolation
 date: 2022-02-14
 categories: 
  - Mathematics

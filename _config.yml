@@ -21,7 +21,7 @@
 
 
 # theme                    : minimal-mistakes-jekyll  # "minimal-mistakes-jekyll" # "minimal-mistakes-jekyll"
-minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 locale                   : "en-US" # "zh-CN"
 title                    : "What a starry night~"
 title_separator          : "-"
@@ -117,9 +117,13 @@ breadcrumbs: true  # disabled by default
 
 # search
 search: true
-search_provider: lunr # algolia
+search_provider:  # lunr(default, most compatible), algolia(not free), google(not good)
 lunr:
   search_within_pages: true
+  search_full_content: true
+# google: 
+#   search_engine_id: a5f56bd35f26746d2
+
 
 defaults:
   # _posts

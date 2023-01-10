@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Solenoid Parameterized with FEM Data in MATLAB Simulink
+title: Buid a Solenoid Parameterized with FEM Data Using MATLAB Simulink
 date: 2022-08-28 14:49:01 +0800
 categories:
  - MATLAB

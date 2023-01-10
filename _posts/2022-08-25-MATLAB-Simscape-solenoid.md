@@ -7,7 +7,7 @@ categories:
  - Signals and Systems
  - Electromagnetism
 tags:
- - MATLAB Simscape
+ - MATLAB Simulink
 ---
 
 # 电磁铁的电路-机械模型

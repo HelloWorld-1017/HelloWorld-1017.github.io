@@ -8,7 +8,6 @@ categories:
  - Signals and Systems
  - Machine Learning
 tags:
- - Signals and Systems
  - MATLAB Deep Learning Toolbox
 classes: wide
 ---

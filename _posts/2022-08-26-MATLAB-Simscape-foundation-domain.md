@@ -1,11 +1,11 @@
 ---
 layout: single
-title: Physical Constants of Foundation Domain in MATLAB Simscape
+title: Physical Constants of Foundation Domain of MATLAB Simulink Simscape Components
 date: 2022-08-26 10:35:17 +0800
 categories: 
  - MATLAB
 tags:
- - MATLAB Simscape
+ - MATLAB Simulink
 toc: false
 tagline: ""
 header: 

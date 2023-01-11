@@ -26,15 +26,15 @@ locale                   : "en-US" # "zh-CN"
 title                    : "What a starry night~"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Ma Qinghua" # can override the site author with different ones on specific posts, pages, or collection documents.
+name                     : "Qinghua Ma" # can override the site author with different ones on specific posts, pages, or collection documents.
 description              : "An amazing website."
 url                      : http://whatastarrynight.com
 baseurl                  : # https://mademistakes.com/mastering-jekyll/site-url-baseurl/
-repository               : QinghuaMa/QinghuaMa.github.io
+repository               : Ma1017/Ma1017.github.io
 
 
 author:
-  name: "Ma Qinghua"
+  name: "Qinghua Ma"
   avatar: "/images/huachi.jpg"
   bio: "The only mistakes are things done in ignorance." # Note: Markdown is allowed
   location: "Xi'an, China"
@@ -44,7 +44,7 @@ author:
     #   url: qinghua7717@stu.xjtu.edu.cn
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: https://github.com/QinghuaMa
+      url: https://github.com/Ma1017
 
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

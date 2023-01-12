@@ -6,7 +6,7 @@ categories:
  - Mathematics
  - Uncertainty 
 tags: 
- - Numerical analysis
+ - Numerical Analysis
 toc: false
 ---
 

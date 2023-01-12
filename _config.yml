@@ -189,7 +189,7 @@ defaults:
 
 permalink: /:categories/:title/
 paginate_path: /page:num/
-paginate: 7
+paginate: 3
 timezone: Asia/Shanghai
 
 category_archive:

@@ -5,7 +5,7 @@ date: 2022-07-23 20:12:29 +0800
 categories: 
  - Mathematics
 tags: 
- - Numerical analysis
+ - Numerical Analysis
 ---
 
 <br>

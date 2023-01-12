@@ -7,7 +7,7 @@ categories:
  - Signals and Systems
  - Electromagnetism
 tags:
- - Numerical analysis
+ - Numerical Analysis
  - MATLAB Simulink
 ---
 

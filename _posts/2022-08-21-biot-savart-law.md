@@ -69,7 +69,7 @@ $$
 
 <br>
 
-**参考**
+**References**
 
 [1] [Biot–Savart law - Wikipedia](https://en.wikipedia.org/wiki/Biot–Savart_law).
 

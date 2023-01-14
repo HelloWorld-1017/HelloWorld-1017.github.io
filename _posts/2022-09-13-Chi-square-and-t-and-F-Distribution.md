@@ -10,8 +10,6 @@ tags:
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 
-
-
 # Chi-square  Distribution
 
 ## PDF

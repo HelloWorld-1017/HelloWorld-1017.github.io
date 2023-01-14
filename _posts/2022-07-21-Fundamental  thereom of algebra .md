@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Fundamental Theorem of Algebra)
+title: Fundamental Theorem of Algebra
 date: 2022-07-21 11:17:55 +0800
 categories: 
  - Mathematics

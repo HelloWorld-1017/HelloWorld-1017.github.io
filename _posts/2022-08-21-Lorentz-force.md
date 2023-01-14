@@ -90,7 +90,7 @@ $$
 
 <br>
 
-**参考**
+**References**
 
 [1] [Lorentz force - Wikipedia](https://en.wikipedia.org/wiki/Lorentz_force#Lorentz_force_law_as_the_definition_of_E_and_B).
 

@@ -62,7 +62,6 @@ manim script1.py --format=gif
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/CreateCircle_ManimCE_v0.16.0.post0.gif" alt="CreateCircle_ManimCE_v0.16.0.post0" style="zoom:67%;" />
 
----
 <br>
 
 # 在 construct 函数中创建多个 sections，并分别渲染
@@ -148,7 +147,6 @@ def construct(self):
     # play some animations that won't get skipped...
 ```
 
----
 <br>
 
 # CLI中的command和flags
@@ -323,7 +321,6 @@ Options:
 
 Made with <3 by Manim Community developers.
 ```
----
 <br>
 
 # ManimConfig 类

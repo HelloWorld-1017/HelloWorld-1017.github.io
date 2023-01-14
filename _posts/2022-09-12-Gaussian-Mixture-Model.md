@@ -8,6 +8,7 @@ categories:
  - Machine Learning
 tags:
  - Probability Theory and Mathematical Statistics
+ - MATLAB Statistics and Machine Learning Toolbox
 ---
 
 # Gaussian Mixture Model(GMM)

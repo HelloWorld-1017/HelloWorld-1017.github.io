@@ -8,6 +8,7 @@ categories:
 tags:
  - Matrix
  - Probability Theory and Mathematical Statistics
+ - MATLAB Statistics and Machine Learning Toolbox
 ---
 
 # Multivariate Normal Distribution

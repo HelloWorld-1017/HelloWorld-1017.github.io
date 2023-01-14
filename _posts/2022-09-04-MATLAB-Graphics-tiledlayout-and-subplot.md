@@ -8,7 +8,7 @@ tags:
  - MATLAB Graphics
 ---
 
-# `tiledlayout`函数
+# `tiledlayout` Function
 
 `tiledlayout`函数一般结合`nexttile`函数一起使用：
 
@@ -76,7 +76,7 @@ title(t, 'April Bowling League Data')
 
 <br>
 
-# `subplot`函数
+# `subplot` Function
 
 `subplot`函数最常用的语法是：
 

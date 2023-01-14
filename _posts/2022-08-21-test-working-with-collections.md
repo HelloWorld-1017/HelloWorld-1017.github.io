@@ -92,7 +92,7 @@ title: Portfolio3
 
 <br>
 
-**参考**
+**References**
 
 [1] [Working with Collections - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/docs/collections/)
 

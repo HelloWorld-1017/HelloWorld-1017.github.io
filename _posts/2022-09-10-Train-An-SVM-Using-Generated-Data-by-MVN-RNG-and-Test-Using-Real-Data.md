@@ -8,6 +8,7 @@ categories:
  - Machine Learning
 tags:
  - Probability Theory and Mathematical Statistics
+ - MATLAB Statistics and Machine Learning Toolbox
 ---
 
 Warning⚠️⚠️⚠️ ：本文所有的示例都存在严重的**数据泄露**现象，当时没有进行考虑，之后会对针对这一问题进行修改。

@@ -1,5 +1,5 @@
 main:
-  - title: "Posts"
+  - title: "Archive"
     url: /posts/
   - title: "Categories"
     url: /categories/

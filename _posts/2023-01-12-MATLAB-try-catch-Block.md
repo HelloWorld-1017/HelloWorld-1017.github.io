@@ -233,7 +233,7 @@ end
 
 <br>
 
-# Example 4: ExeWhen there exist no mistakes
+# Example 4: When There Exist No Mistakes
 
 当语句不存在错误时，`try/catch`是捕捉不到任何错误的，并且不会执行`catch`块中的内容。例如运行代码：
 

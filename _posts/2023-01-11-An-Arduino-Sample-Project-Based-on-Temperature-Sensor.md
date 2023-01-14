@@ -7,11 +7,9 @@ categories:
  - C
 ---
 
-本博客学习使用Grove套件的温度传感模块搭建示例项目[Grove - Temperature Sensor: With Arduino](https://wiki.seeedstudio.com/Grove-Temperature_Sensor/#with-arduino)。
-
 # Introduction
 
-本项目所采用的温度传感器模块（[Grove - Temperature Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Sensor/)）：
+本博客学习使用Grove套件的温度传感模块搭建示例项目[Grove - Temperature Sensor: With Arduino](https://wiki.seeedstudio.com/Grove-Temperature_Sensor/#with-arduino)，该项目采用的温度传感器模块（[Grove - Temperature Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Sensor/)）：
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111095119452.png" alt="image-20230111095119452" style="zoom: 50%;" />
 

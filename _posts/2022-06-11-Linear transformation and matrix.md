@@ -6,9 +6,8 @@ categories:
  - Mathematics
 tags: 
  - Matrix
+toc: false
 ---
-
-
 
 变换(transformation)实际上可以看作是一种函数(function)，它接收一个向量，对其进行运算后输出一个向量。
 
@@ -25,7 +24,7 @@ tags:
 
 即，线性变换就是“保持网格线平行且等距分布(Grid lines remain parallel and evenly spaced)”的变换，并且在变换过程中原点的位置保持不动。
 
----
+
 
 实际上，线性变换具有的“网格线在变换前后保持平行且等距分布”的特性有一个重要的推论：
 
@@ -93,9 +92,9 @@ $$
 
 同样地，从一个矩阵出发，我们也可以想象出它所对应的线性变换是什么样子的。
 
----
+<br>
 
-# 总结
+**总结**
 
 1. 线性变换就是操纵空间的一种手段，它保持网格线平行且等距分布，且保持坐标原点不动；
 
@@ -105,8 +104,8 @@ $$
 
 4. 每看到一个矩阵，都可以把它解读为对空间的一种特定的线性变换。
 
+<br>
 
----
-**参考资料**
+**References**
 
-[1] 3Blue1Brown. [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)
+[1]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)

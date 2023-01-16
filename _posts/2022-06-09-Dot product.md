@@ -15,8 +15,6 @@ tags:
 
 向量点积(dot product)可以从**代数角度**和**几何角度**两个角度来定义。这两种定义在欧几里得空间的笛卡尔坐标系中是等效的。
 
----
-
 ## 向量点积的代数定义
 长度相等的两个向量$\boldsymbol{a}=[a_1,a_2,\cdots, a_n]$和$\boldsymbol{b}=[b_1,b_2,\cdots, b_n]$的内积可以定义为：
 
@@ -50,7 +48,6 @@ $$
 \boldsymbol{a}\cdot \boldsymbol{b}=\begin{bmatrix}0\\2\end{bmatrix} \cdot \begin{bmatrix}2\\2 \end{bmatrix}=0\times2+2\times2=4
 $$
 
----
 ## 向量点积的几何定义
 在欧几里得空间，欧几里得向量(Euclidean vector)是一个既有大小又有方向的几何量。两个欧几里得向量$\boldsymbol{a}$和$\boldsymbol{b}$的点积(亦称为内积，inner product)定义为
 
@@ -88,8 +85,8 @@ $$
 则两个向量点积的几何解释如下图所示：
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232637512.png" alt="image-20220707232637512" style="zoom: 50%;" />
-(向量$\boldsymbol{a}$与$\boldsymbol{b}$的点积的结果等于向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影和$\boldsymbol{b}$模长的乘积)
 
+(向量$\boldsymbol{a}$与$\boldsymbol{b}$的点积的结果等于向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影和$\boldsymbol{b}$模长的乘积)
 $$
 \begin{aligned}\boldsymbol{a}\cdot \boldsymbol{b}
 &=a_b||\boldsymbol{b}||=\sqrt{2}\times2\sqrt{2}=4\\\end{aligned}
@@ -104,8 +101,7 @@ $$
 &=b_a||\boldsymbol{a}||=2\times2=4\\\end{aligned}
 $$
 
----
-
+<br>
 
 # 两种定义之间的联系
 
@@ -144,9 +140,8 @@ $$
 
 > "在任何时候看到一个线性变换，它的输出空间是一维数轴，无论它是怎么定义的，空间中会存在唯一的向量$\hat{u}$与之相关，将向量$\vec{v}$线性变换到$\hat{u}$所在数轴的操作与$\hat{u}$和$\vec{v}$做点积是一样的。"
 
+<br>
 
-
----
 # 对偶性
 投影变换必然会与某个二维向量相关，这实际上是数学中**“对偶性(duality)”**的一个实例。对偶性贯穿数学始终，在多个方面均有体现，而实际定义对偶性却很难，直观地讲，对偶性是指两种数学事物之间自然而又出乎意料的对应关系(Natural-but-surprising correspondence)。
 
@@ -156,10 +151,9 @@ $$
 
 **“所以有时你会意识到，不把向量看作空间中的箭头，而是把它看作线性变换的物质载体，会更容易理解向量，这时候，向量就仿佛是一个特定变换的概念性记号。”**
 
+<br>
 
+**Reference**
+[1]  [Dot product - Wikipedia](https://en.wikipedia.org/wiki/Dot_product).
 
----
-
-**参考**
-[1] Wikipedia. [Dot product](https://en.wikipedia.org/wiki/Dot_product)
-[2] 3Blue1Brown. [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)
+[2]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)

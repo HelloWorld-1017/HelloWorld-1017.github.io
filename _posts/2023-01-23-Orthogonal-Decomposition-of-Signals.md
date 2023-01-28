@@ -283,7 +283,7 @@ $$
 
 <br>
 
-References
+**References**
 
 [1] [信号与线性系统分析 吴大正 郭宝龙 - bilibili](https://www.bilibili.com/video/BV16E411E7PA/?spm_id_from=333.337.search-card.all.click)
 

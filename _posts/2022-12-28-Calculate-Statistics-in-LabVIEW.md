@@ -70,9 +70,7 @@ $$
 
 ![image-20221228135910373](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20221228135910373.png)
 
-需要注意的是，第三个`创建矩阵`函数需要右键将其设置为“按行添加”的模式：
-
-![image-20221228140035393](C:\Users\m\AppData\Roaming\Typora\typora-user-images\image-20221228140035393.png)
+需要注意的是，第三个`创建矩阵`函数需要右键将其设置为“按行添加”的模式。
 
 之后，就是将两部分矩阵进行计算，得到协方差矩阵(covariance matrix)$\Sigma$：
 
@@ -121,7 +119,7 @@ $$
 
 ![image-20221228160958157](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20221228160958157.png)
 
-> 注：上述生成服从多维正态分布随机数的过程可以参见博客：[The processing methods for ill-conditioned SCM in MATLAB `fitgimdist`, `mahal` and `mvnrnd` functions in case of extremely small sample: Cholesky factorization for semi-definite matrix in `mvnrnd` function](http://whatastarrynight.com/programming/mathematics/The-processing-method-for-ill-conditioned-SCM-in-MATLAB-fitgmdist-mahal-and-mvnrnd-functions-in-case-of-extremely-small-sample/#cholesky-factorization-for-semi-definite-matrix-in-mvnrnd-function). 
+> 注：上述生成服从多维正态分布随机数的过程可以参见博客：[The processing methods for ill-conditioned SCM in MATLAB fitgimdist, mahal and mvnrnd functions in case of extremely small sample - What a starry night~](http://whatastarrynight.com/matlab/mathematics/The-processing-method-for-ill-conditioned-SCM-in-MATLAB-fitgmdist-mahal-and-mvnrnd-functions-in-case-of-extremely-small-sample/).
 
 这些输出的值，就可以用于计算统计量和绘制统计图像。
 

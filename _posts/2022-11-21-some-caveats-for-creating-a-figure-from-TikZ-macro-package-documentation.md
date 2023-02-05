@@ -11,7 +11,7 @@ tags:
 
 # Introduction
 
-一直觉得有两句话说得很有富有哲学，“Every rule can be broken, as long as you are aware of that you are breaking a rule”，“The only mistakes are things done in ignorance”，最初看到这两句话是在2019年大三学习LaTeX的TikZ宏包官方文档时看到的，之后就一直记在心里。最近在绘制论文图像的时候，虽然也画了一些图像，但是总觉得思路不清晰，讲不出自己如此作图的原因，没有一些“原则”。于是就重新找到了TikZ宏包的官方文档，重新学习了一下作图的原则，记录在这里。原文档见：[PGF/TikZ Manual : Guidelines on Graphics](https://tikz.dev/guidelines).
+一直觉得有两句话说得很有富有哲学，“Every rule can be broken, as long as you are aware of that you are breaking a rule”，“The only mistakes are things done in ignorance”，这两句话最初是在2019年大三学习LaTeX的TikZ宏包官方文档时看到的，之后就一直记在心里。最近在绘制论文图像的时候，虽然也画了一些图像，但是总觉得思路不清晰。于是，我就又找到了TikZ宏包的官方文档，重新学习了一下作图的原则，记录在这里。LaTeX的TikZ宏包的官方文档见：[PGF/TikZ Manual : Guidelines on Graphics](https://tikz.dev/guidelines).
 
 <br>
 

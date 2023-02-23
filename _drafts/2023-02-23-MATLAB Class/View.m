@@ -1,59 +1,37 @@
 classdef View < handle
     properties
-        % UIs
         hfig
+        viewSize
+        text
+        BalanceBox
+        numBox
         drawButton
         depositButton
-        balanceBox
-        numBox
-        text
-        % UI settings
-        viewSize
-        % Model handle and Controller handle
-        modelObj
-        controlObj
     end
-    properties(Dependent)
-        input
-    end
-
     methods
-        function obj = View(modelObj)
-            obj.modelObj = modelObj;
-            obj.modelObj.addlistener('balanceChanged', @obj.updateBalance);
+        function obj = View()
+            obj.viewSize = [100,100,300,200];
             obj.buildUI();
-            obj.controlObj = obj.makeController();
-            obj.attachToController(obj.controlObj);
-        end
-        function input = get.input(obj)  % Get 中间层？
-            input = get(obj.numBox, 'string');
-            input = str2double(input);
         end
         function buildUI(obj)
-            obj.hfig = figure('pos', [100, 100, 300, 200]);
-            obj.drawButton = uicontrol('parent', obj.hfig, 'string', 'withdraw', ...
-                'pos', [60, 28, 60, 28]);
-            obj.depositButton = uicontrol('parent', obj.hfig, 'string', 'deposit', ...
-                'pos', [180, 28, 60, 28]);
-            obj.numBox = uicontrol('parent', obj.hfig, 'style', 'edit', ...
-                'pos', [60, 85, 180, 28], 'tag', 'numBox');
-            obj.text = uicontrol('parent', obj.hfig, 'style', 'text', 'string',...
-                'Balance', 'pos', [60, 142, 60, 28]);
-            obj.balanceBox = uicontrol('Parent', obj.hfig, 'Style', 'edit','String', 'Balance', ...
-                'pos', [180, 142, 60, 28], 'tag', 'balanceBox');
-            obj.updateBalance();
-        end
-        function updateBalance(obj)
-            set(obj.balanceBox, 'string', num2str(obj.modelObj.balance));
-        end
-        function controlObj = makeController(obj)
-            controlObj = Controller(obj, obj.modelObj);
-        end
-        function attachToController(obj, controller)
-            funcH = @controller.callback_drawbutton;
-            set(obj.drawButton, 'callback', funcH); 
-            funcH = @controller.callback_depositbutton;
-            set(obj.depositButton, 'callback', funcH);
+            obj.hfig = figure('pos', obj.viewSize, 'NumberTitle', 'off', 'Menubar', 'none', ...
+                'Toolbar', 'none');
+            mainLayout = uiextras.VBox('Parent', obj.hfig, 'Padding', 5, 'Spacing', 10);
+            topLayout = uiextras.HBox('Parent', mainLayout, 'Spacing', 5);
+            middleLayout = uiextras.HBox('Parent', mainLayout, 'Spacing', 5);
+            lowerLayout = uiextras.HBox('Parent', mainLayout, 'Spacing', 5);
+
+            % Top
+            obj.text = uicontrol('Parent', topLayout, 'style', 'text', 'String', 'Balance');
+            obj.BalanceBox = uicontrol('Parent', topLayout, 'Style', 'edit', 'background', 'w');
+            % Middle
+            obj.numBox = uicontrol('Parent', middleLayout, 'Style', 'edit', 'background', 'w');
+            % Lower
+            obj.drawButton = uicontrol('Parent', lowerLayout, 'style', 'pushbutton', 'String', 'Draw');
+            obj.depositButton = uicontrol('Parent', lowerLayout, 'style', 'pushbutton', 'String', 'Deposit');
+            set(topLayout, 'Sizes', [-1,-1]);
+            set(lowerLayout, 'Sizes', [-1,-1]);
+
         end
     end
 end

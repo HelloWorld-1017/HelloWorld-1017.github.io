@@ -9,10 +9,10 @@ classdef Controller < handle
             obj.viewObj = viewObj;
             obj.modelObj = modelObj;
         end
-        function callback_drawbutton(obj)
+        function callback_drawbutton(obj,scr,event)
             obj.modelObj.withdraw(obj.viewObj.input);
         end
-        function callback_depositbutton(obj)
+        function callback_depositbutton(obj,scr,event)
             obj.modelObj.deposit(obj.viewObj.input);
         end
     end

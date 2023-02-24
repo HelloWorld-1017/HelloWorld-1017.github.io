@@ -2,10 +2,10 @@ clc,clear,close all
 
 f = figure('MenuBar','none','ToolBar','none','pos',[200 200 500 300]);
 mainLayout = uiextras.HBox('Parent',f,'Spacing',10);
-LeftLayout = uiextras.VBox('Parent',mainLayout,'Spacing',10,'Padding',5);
-LUpperLayout = uiextras.HBox('Parent',LeftLayout);
-LLowerLayout = uiextras.Grid('Parent',LeftLayout);
-RightLayout = uiextras.VBox('Parent',mainLayout,'Spacing',10);
+LeftLayout = uiextras.VBox('Parent',mainLayout,'Spacing',10,'Padding',10);
+LUpperLayout = uiextras.HBox('Parent',LeftLayout,'Padding',10);
+LLowerLayout = uiextras.Grid('Parent',LeftLayout,'Padding',10);
+RightLayout = uiextras.VBox('Parent',mainLayout,'Spacing',20,'Padding',10);
 
 % For Upper Left
 uicontrol('Parent',LUpperLayout,'Style','text','String','Find what:','FontSize',10);
@@ -25,11 +25,11 @@ uicontrol('Parent',LLowerLayout,'Style','radio','String','Whole word','FontSize'
 set(LLowerLayout,'RowSizes',[25,25,25,25],'ColumnSizes',[120,150],'Spacing',5);
 
 % For Right
-uicontrol('style', 'pushbutton', 'String', 'Button1', 'Parent', RightLayout);
-uicontrol('style', 'pushbutton', 'String', 'Button2', 'Parent', RightLayout);
-uicontrol('style', 'pushbutton', 'String', 'Button3', 'Parent', RightLayout);
-uicontrol('style', 'pushbutton', 'String', 'Button4', 'Parent', RightLayout);
-uicontrol('style', 'pushbutton', 'String', 'Button5', 'Parent', RightLayout);
+uicontrol('style', 'pushbutton', 'String', 'Find Next', 'Parent', RightLayout);
+uicontrol('style', 'pushbutton', 'String', 'Find Previous', 'Parent', RightLayout);
+uicontrol('style', 'pushbutton', 'String', 'Replace', 'Parent', RightLayout);
+uicontrol('style', 'pushbutton', 'String', 'Replace All', 'Parent', RightLayout);
+uicontrol('style', 'pushbutton', 'String', 'Close', 'Parent', RightLayout);
 
 
 

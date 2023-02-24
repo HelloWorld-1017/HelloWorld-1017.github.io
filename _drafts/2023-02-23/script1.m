@@ -33,7 +33,6 @@ disp('Device information:-')
 disp(unitInfo);
 %% Channel setup
 % All channels are enabled by default - switch off all except Channels A and B. 
-
 % Channel A
 channelSettings(1).enabled          = PicoConstants.TRUE;
 channelSettings(1).coupling         = ps4000aEnuminfo.enPS4000ACoupling.PS4000A_DC;
@@ -100,7 +99,7 @@ end
 % Obtain the maximum Analog Digital Converter Count value from the driver
 % - this is used for scaling values returned from the driver when data is
 % collected.
-maxADCCount = double(get(ps4000aDeviceObj, 'maxADCValue'));
+maxADCCount = double(get(ps4000aDeviceObj, 'maxADCValue'));% 32767
 
 %% Set data buffers
 % Data buffers for Channel A and B - buffers should be set with the
@@ -113,30 +112,26 @@ segmentIndex        = 0;
 ratioMode           = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE;
 
 % Buffers to be passed to the driver
-pDriverBufferChA = libpointer('int16Ptr', zeros(overviewBufferSize, 1, 'int16'));
-pDriverBufferChB = libpointer('int16Ptr', zeros(overviewBufferSize, 1, 'int16'));
+pDriverBufferChA = libpointer('int16Ptr',zeros(overviewBufferSize,1,'int16'));
+pDriverBufferChB = libpointer('int16Ptr',zeros(overviewBufferSize,1,'int16'));
 
 status.setDataBufferChA = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
-    channelA, pDriverBufferChA, overviewBufferSize, segmentIndex, ratioMode);
-
+    channelA, pDriverBufferChA, overviewBufferSize, segmentIndex, ratioMode);% status.setDataBufferChA = 0;
 status.setDataBufferChB = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
-   channelB, pDriverBufferChB, overviewBufferSize, segmentIndex, ratioMode);
+   channelB, pDriverBufferChB, overviewBufferSize, segmentIndex, ratioMode);% status.setDataBufferChB = 0;
 
 % Application Buffers - these are for temporarily copying data from the driver.
-pAppBufferChA = libpointer('int16Ptr', zeros(overviewBufferSize, 1));
-pAppBufferChB = libpointer('int16Ptr', zeros(overviewBufferSize, 1));
+pAppBufferChA = libpointer('int16Ptr',zeros(overviewBufferSize,1));
+pAppBufferChB = libpointer('int16Ptr',zeros(overviewBufferSize,1));
 
 % Streaming properties and functions are located in the Instrument
 % Driver's Streaming group.
-
 streamingGroupObj = get(ps4000aDeviceObj, 'Streaming');
 streamingGroupObj = streamingGroupObj(1);
 
 % Register application buffer and driver buffers (with the wrapper driver).
-
 status.setAppAndDriverBuffersA = invoke(streamingGroupObj, 'setAppAndDriverBuffers', channelA, ...
     pAppBufferChA, pDriverBufferChA, overviewBufferSize);
-
 status.setAppAndDriverBuffersB = invoke(streamingGroupObj, 'setAppAndDriverBuffers', channelB, ...
    pAppBufferChB, pDriverBufferChB, overviewBufferSize);
 
@@ -153,7 +148,7 @@ status.setAppAndDriverBuffersB = invoke(streamingGroupObj, 'setAppAndDriverBuffe
 % For 200 kS/s, specify 5 us
 %set(streamingGroupObj, 'streamingInterval', 5e-6);
 
-% For 10 MS/s, specify 100 ns
+% For 10 MS/s, specify 100 ns (0.1 us)
 %set(streamingGroupObj, 'streamingInterval', 100e-9);
 
 % Set the number of pre- and post-trigger samples
@@ -166,7 +161,7 @@ set(ps4000aDeviceObj, 'numPostTriggerSamples', 2000000);
 
 % Set other streaming parameters
 downSampleRatio     = 1;
-downSampleRatioMode = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE;
+downSampleRatioMode = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE; % downSampleRatioMode = 0;
 
 % Defined buffers to store data collected from the channels.
 % If capturing data without using the autoStop flag, or if using a trigger 
@@ -186,15 +181,10 @@ pBufferChBFinal = libpointer('int16Ptr', zeros(maxSamples, 1, 'int16'));
 
 % Prompt User to indicate if they wish to plot live streaming data.
 plotLiveData = questionDialog('Plot live streaming data?', 'Streaming Data Plot');
-
 if (plotLiveData == PicoConstants.TRUE)
-   
     disp('Live streaming data collection with second plot on completion.');
-    
 else
-    
     disp('Streaming data plot on completion.');
-    
 end
 
 % Start streaming data collection.
@@ -258,12 +248,10 @@ end
 % to getStreamingLatestValues does not return an error code (check for STOP
 % button push inside loop).
 while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues == PicoStatus.PICO_OK)
-    ready = PicoConstants.FALSE;
+    ready = PicoConstants.FALSE;% PicoConstants.FALSE = 0;
    
     while (ready == PicoConstants.FALSE)
-
        status.getStreamingLatestValues = invoke(streamingGroupObj, 'getStreamingLatestValues');
-       
        ready = invoke(streamingGroupObj, 'isReady');
 
        % Give option to abort from here
@@ -271,17 +259,13 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
        drawnow;
 
        if (flag == 0)
-
             disp('STOP button clicked - aborting data collection.')
             break;
-
        end
 
        if (plotLiveData == PicoConstants.TRUE)
-
             drawnow;
-
-        end
+       end
 
     end
     
@@ -381,13 +365,11 @@ if (plotLiveData == PicoConstants.TRUE)
     hold off;
     movegui(figure1, 'west');
 end
-
 fprintf('\n');
 
 %% Stop the device
 % This function should be called regardless of whether the |autoStop|
 % property is enabled or not.
-
 status.stop = invoke(ps4000aDeviceObj, 'ps4000aStop');
 
 %% Find the number of samples

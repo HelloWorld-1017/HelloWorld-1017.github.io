@@ -550,3 +550,7 @@ The value of 'r' cannot be assigned directly
 上文程序向后兼容的例子就根据需要“向后兼容”的需要定义了Dependent属性`date`的`set`方法。
 
 <br>
+
+**References**
+
+[1] 徐潇. MATLAB 面向对象编程: 从入门到设计模式. 北京航空航天大学出版社, 2017.

@@ -85,7 +85,7 @@ set(mainLayout,'Sizes',[-1,-1],'Spacing',10);
 
 <br>
 
-# TabePanel Class
+# TabPanel Class
 
 ```matlab
 clc, clear, close all

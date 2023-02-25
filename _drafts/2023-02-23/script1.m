@@ -10,7 +10,7 @@ channelA = ps4000aEnuminfo.enPS4000AChannel.PS4000A_CHANNEL_A;
 channelB = ps4000aEnuminfo.enPS4000AChannel.PS4000A_CHANNEL_B;
 
 %% Device connection
-if (exist('ps4000aDeviceObj', 'var') && ps4000aDeviceObj.isvalid && strcmp(ps4000aDeviceObj.status, 'open'))
+if (exist('ps4000aDeviceObj','var') && ps4000aDeviceObj.isvalid && strcmp(ps4000aDeviceObj.status,'open'))
     openDevice = questionDialog(['Device object ps4000aDeviceObj has an open connection. ' ...
         'Do you wish to close the connection and continue?'], ...
         'Device Object Connection Open');
@@ -23,7 +23,7 @@ if (exist('ps4000aDeviceObj', 'var') && ps4000aDeviceObj.isvalid && strcmp(ps400
         return;
     end
 end
-ps4000aDeviceObj = icdevice('picotech_ps4000a_generic', ''); 
+ps4000aDeviceObj = icdevice('picotech_ps4000a_generic','ObjectVisibility','on'); 
 % Connect device
 connect(ps4000aDeviceObj);
 %% Display unit information

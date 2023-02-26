@@ -207,22 +207,18 @@ triggeredAtIndex    = 0; % The index in the overall buffer where the trigger occ
 status.getStreamingLatestValues = PicoStatus.PICO_OK; % OK
 
 % Display a 'Stop' button.
-[stopFig.h, stopFig.h] = stopButton();             
+[stopFig.h, stopFig.h] = stopButton(); % `stopButton` from PicoScope Support Toolbox        
              
 flag = 1; % Use flag variable to indicate if the stop button has been clicked (0).
 setappdata(gcf, 'run', flag);
 
 % Plot Properties - these are for displaying data as it is collected. In
-% this example, data is displayed in millivolts. For other probes,
-% including when using PicoConnect 442 or current probes with the PicoScope
-% 4444, use the appropriate units for the vertical axes.
+% this example, data is displayed in millivolts. 
 
 if (plotLiveData == PicoConstants.TRUE)
-    
     % Plot on a single figure 
     figure1 = figure('Name','PicoScope 4000 Series (A API) Example - Streaming Mode Capture', ...
          'NumberTitle','off');
-
      axes1 = axes('Parent', figure1);
 
     % Estimate x-axis limit to try and avoid using too much CPU resources
@@ -248,7 +244,7 @@ end
 % to getStreamingLatestValues does not return an error code (check for STOP
 % button push inside loop).
 while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues == PicoStatus.PICO_OK)
-    ready = PicoConstants.FALSE;% PicoConstants.FALSE = 0;
+    ready = PicoConstants.FALSE; % PicoConstants.FALSE = 0;
    
     while (ready == PicoConstants.FALSE)
        status.getStreamingLatestValues = invoke(streamingGroupObj, 'getStreamingLatestValues');
@@ -260,7 +256,7 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
 
        if (flag == 0)
             disp('STOP button clicked - aborting data collection.')
-            break;
+            break
        end
 
        if (plotLiveData == PicoConstants.TRUE)

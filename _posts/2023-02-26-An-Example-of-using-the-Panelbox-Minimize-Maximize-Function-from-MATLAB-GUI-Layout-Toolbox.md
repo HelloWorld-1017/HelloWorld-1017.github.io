@@ -1,4 +1,14 @@
-0223-02-23 An example of using the panelbox minimize (or maximize)
+---
+layout: single
+title: An Example of using the Panelbox Minimize/Maximize Function from MATLAB GUI Layout Toolbox
+date: 2023-02-26 19:47:42 +0800
+categories: 
+ - MATLAB
+tags:
+ - MATLAB App Building
+---
+
+# Introduction
 
 MATLAB GUI Layout Toolbox所提供的Panel类`uix.BoxPanel`具有“折叠/展开”（即minimize/maximize）的功能，并且提供了一个该属性的示例：`minimizeexample`。该示例创建了如下图所示的GUI界面：
 
@@ -106,6 +116,10 @@ end
 
 <br>
 
+# Callbacks `nMinimize()`
+
+## Hook up callbacks
+
 由于三个Panel是类似的，并且折叠/展开的功能也是类似，因此在程序中仅仅创建了一个回调函数`nMinimize`，将其通过输入不同的参数将其绑定到不同的`uix.BoxPanel`上。绑定回调函数时使用的语法是：
 
 ```matlab
@@ -171,9 +185,9 @@ a =
 >     {@xsquare}    {[5]}
 > ```
 
-在官方文档[Anonymous Functions - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/anonymous-functions.html)和[Create Function Handle - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/creating-a-function-handle.html)也没有找到类似的用法和有关这一特性的介绍。因此，我就暂且将其理解为一种为**“多个类似的”**组件创建类似的回调函数的特殊用法，cell数组中的`1`，`2`或`3`当作形参`whichpanel`传入到回调函数`nMinimize`中。
+在官方文档[Anonymous Functions - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/anonymous-functions.html)和[Create Function Handle - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/creating-a-function-handle.html)也没有找到类似的用法和有关这一特性的介绍。因此，我就暂且将其理解为一种为**“多个类似的”**组件创建类似回调函数的特殊用法，cell数组中的`1`，`2`或`3`当作形参`whichpanel`传入到回调函数`nMinimize`中。
 
-<br>
+## Callbacks formal parameters: `eventSource` and `eventData`
 
 观察回调函数`nMinimize`的形参，可以看到在上面提到的`whichpanel`之前还有两个形参`eventSource`和`eventData`：
 
@@ -218,7 +232,9 @@ eventData =
     EventName: 'Action'
 ```
 
-但可以看到，在整个回调函数的定义中，并没有使用这两个变量，**但是作为回调函数的定义，这两个变量是必须的！！！**如果删去这两个变量，在运行时调用回调函数时会提示Error：
+但可以看到，在整个回调函数的定义中，并没有使用这两个变量，**但是作为回调函数的定义，这两个变量是必须的！！！**
+
+如果删去这两个变量，在调用回调函数时会提示Error：
 
 ```matlab
 Error using minimizeexample/nMinimize
@@ -227,11 +243,13 @@ Too many input arguments.
 Error while evaluating UIControl Callback.
 ```
 
-在函数定义中没有使用这两个变量，但是MATLAB Code Analyzer并没有进行提示，是因为在函数声明的后面添加了一条特殊的注释`%#ok<INUSL>`：
+## Code annotation `%#ok<INUSL>`
+
+在函数定义中没有使用形参`eventSource` and `eventData`，但同时MATLAB Code Analyzer并没有进行提示，是因为在函数声明的后面添加了一条特殊的注释`%#ok<INUSL>`：
 
 ![image-20230226174152490](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226174152490.png)
 
-用以提示Code Analyzer: *It means MATLAB editor will not issue warning at this line of code. It does not have any effect at the run time.* （[%#ok -> What's the meaning? (narkive.com)](https://comp.soft-sys.matlab.narkive.com/KETqSEbs/ok-inusl-what-s-the-meaning)），删除掉这条注释后，看到Code Analyzer就会像往常一样“输入参数可能在函数定义中进行使用”：
+用以提示Code Analyzer: *It means MATLAB editor will not issue warning at this line of code. It does not have any effect at the run time.* （参考：[%#ok -> What's the meaning? (narkive.com)](https://comp.soft-sys.matlab.narkive.com/KETqSEbs/ok-inusl-what-s-the-meaning)），删除掉这条注释后，可以看到Code Analyzer就会像往常一样提示“输入参数可能未在函数定义中进行使用”：
 
 ![image-20230226174326526](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226174326526.png)
 
@@ -247,15 +265,13 @@ Error while evaluating UIControl Callback.
 
 总的来讲，我认为本博客中的这个示例的处理方式是更加规范的。
 
-<br>
-
-# Whether Resize the Figure
+## Whether Resize the Figure
 
 回调函数定义的部分没有什么复杂的地方，需要提一点的是，原代码会根据Panel的折叠情况来调整figure的大小：
 
 ![image-20230226180336598](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226180336598.png)
 
-但我认为固定住figure的大小是更合理的，只需要注释掉下面的代码即可：
+但我个人认为固定住figure的大小是更合理的，只需要注释掉下面的代码即可：
 
 ```matlab
     ...
@@ -271,21 +287,9 @@ Error while evaluating UIControl Callback.
 
 # Conclusion
 
-如何创建类似的回调函数
+最后，需要提醒一点，GUI Layout Toolbox所提供的`uix.VBox`类和`uix.VBoxFlex`类也具有类似折叠/展开的功能：
 
-关于src，data，event的输入参数的理解
-
-如何最大化最小化控件内容的操作
-
-Note that minimizing a panel to its title-bar only really makes sense inside a `uix.VBox` or `uix.VBoxFlex`.
-
-
-
-<br>
-
-简单拓展一下，拓展到菜单的折叠
-
-
+> Note that minimizing a panel to its title-bar only really makes sense inside a `uix.VBox` or `uix.VBoxFlex`.
 
 <br>
 
@@ -345,12 +349,6 @@ set(panel{3},'MinimizeFcn',{@nMinimize, 3});
 
 end % EOF
 ```
-
-
-
-
-
-2.简单的一个拓展的代码
 
 
 

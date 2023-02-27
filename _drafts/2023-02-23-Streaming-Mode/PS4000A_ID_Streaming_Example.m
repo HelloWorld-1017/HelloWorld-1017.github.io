@@ -1,3 +1,4 @@
+
 %% PicoScope 4000 Series (A API) Instrument Driver Oscilloscope Streaming Data Capture Example
 % This is an example of an instrument control session using a device 
 % object. The instrument control session comprises all the steps you 

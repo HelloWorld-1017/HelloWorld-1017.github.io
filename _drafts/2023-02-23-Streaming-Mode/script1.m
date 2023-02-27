@@ -34,9 +34,9 @@ disp(unitInfo);
 %% Channel setup
 % All channels are enabled by default - switch off all except Channels A and B. 
 % Channel A
-channelSettings(1).enabled          = PicoConstants.TRUE;
-channelSettings(1).coupling         = ps4000aEnuminfo.enPS4000ACoupling.PS4000A_DC;
-channelSettings(1).range            = ps4000aEnuminfo.enPS4000ARange.PS4000A_2V;
+channelSettings(1).enabled          = PicoConstants.TRUE; % 1
+channelSettings(1).coupling         = ps4000aEnuminfo.enPS4000ACoupling.PS4000A_DC;% 1
+channelSettings(1).range            = ps4000aEnuminfo.enPS4000ARange.PS4000A_2V;% 7
 channelSettings(1).analogueOffset   = 0.0;
 
 % Channel B
@@ -91,15 +91,14 @@ for ch = 1:numChannels
         channelSettings(ch).analogueOffset);
 end
 
-% Obtain the range and units for each enabled channel. For the PicoScope
-% 4824, this will be in millivolts.
+% Obtain the range and units for each enabled channel. For the PicoScope 4824, this will be in millivolts.
 [chARange, chAUnits] = invoke(ps4000aDeviceObj, 'getChannelInputRangeAndUnits', ps4000aEnuminfo.enPS4000AChannel.PS4000A_CHANNEL_A);
 [chBRange, chBUnits] = invoke(ps4000aDeviceObj, 'getChannelInputRangeAndUnits', ps4000aEnuminfo.enPS4000AChannel.PS4000A_CHANNEL_B);
 
 % Obtain the maximum Analog Digital Converter Count value from the driver
 % - this is used for scaling values returned from the driver when data is
 % collected.
-maxADCCount = double(get(ps4000aDeviceObj, 'maxADCValue'));% 32767
+maxADCCount = double(get(ps4000aDeviceObj, 'maxADCValue'));
 
 %% Set data buffers
 % Data buffers for Channel A and B - buffers should be set with the
@@ -124,8 +123,7 @@ status.setDataBufferChB = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
 pAppBufferChA = libpointer('int16Ptr',zeros(overviewBufferSize,1));
 pAppBufferChB = libpointer('int16Ptr',zeros(overviewBufferSize,1));
 
-% Streaming properties and functions are located in the Instrument
-% Driver's Streaming group.
+% Streaming properties and functions are located in the Instrument Driver's Streaming group.
 streamingGroupObj = get(ps4000aDeviceObj, 'Streaming');
 streamingGroupObj = streamingGroupObj(1);
 
@@ -157,7 +155,7 @@ set(ps4000aDeviceObj, 'numPreTriggerSamples', 0);
 set(ps4000aDeviceObj, 'numPostTriggerSamples', 2000000);
 
 % The autoStop parameter can be set to false (0).
-%set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);
+% set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);
 
 % Set other streaming parameters
 downSampleRatio     = 1;
@@ -168,16 +166,14 @@ downSampleRatioMode = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE
 % with the autoStop flag, allocate sufficient space (1.5 times the size is 
 % shown below) to allow for pre-trigger data. Pre-allocating the array is 
 % more efficient than using vertcat to combine data.
-
 maxSamples = get(ps4000aDeviceObj, 'numPreTriggerSamples') + ...
     get(ps4000aDeviceObj, 'numPostTriggerSamples');
 
 % Take into account the downsampling ratio mode - required if collecting
 % data without a trigger and using the autoStop flag. 
 % finalBufferLength = round(1.5 * maxSamples / downSampleRatio);
-
-pBufferChAFinal = libpointer('int16Ptr', zeros(maxSamples, 1, 'int16'));
-pBufferChBFinal = libpointer('int16Ptr', zeros(maxSamples, 1, 'int16'));
+pBufferChAFinal = libpointer('int16Ptr',zeros(maxSamples,1,'int16'));
+pBufferChBFinal = libpointer('int16Ptr',zeros(maxSamples,1,'int16'));
 
 % Prompt User to indicate if they wish to plot live streaming data.
 plotLiveData = questionDialog('Plot live streaming data?', 'Streaming Data Plot');
@@ -207,14 +203,13 @@ triggeredAtIndex    = 0; % The index in the overall buffer where the trigger occ
 status.getStreamingLatestValues = PicoStatus.PICO_OK; % OK
 
 % Display a 'Stop' button.
-[stopFig.h, stopFig.h] = stopButton(); % `stopButton` from PicoScope Support Toolbox        
+[~, stopFig.h] = stopButton(); % `stopButton` from PicoScope Support Toolbox        
              
 flag = 1; % Use flag variable to indicate if the stop button has been clicked (0).
 setappdata(gcf, 'run', flag);
 
 % Plot Properties - these are for displaying data as it is collected. In
 % this example, data is displayed in millivolts. 
-
 if (plotLiveData == PicoConstants.TRUE)
     % Plot on a single figure 
     figure1 = figure('Name','PicoScope 4000 Series (A API) Example - Streaming Mode Capture', ...
@@ -224,7 +219,6 @@ if (plotLiveData == PicoConstants.TRUE)
     % Estimate x-axis limit to try and avoid using too much CPU resources
     % when drawing - use max voltage range selected if plotting multiple
     % channels on the same graph.
-
     xlim(axes1, [0 (actualSampleInterval * maxSamples)]);
 
     yRange = max(chARange, chBRange);
@@ -237,7 +231,6 @@ if (plotLiveData == PicoConstants.TRUE)
     xLabelStr = strcat('Time (', sampleIntervalTimeUnitsStr, ')');
     xlabel(axes1, xLabelStr);
     ylabel(axes1, getVerticalAxisLabel(chAUnits));
-
 end
 
 % Collect samples as long as the autoStop flag has not been set or the call
@@ -248,12 +241,14 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
    
     while (ready == PicoConstants.FALSE)
        status.getStreamingLatestValues = invoke(streamingGroupObj, 'getStreamingLatestValues');
+
+       % Chek whether ready
        ready = invoke(streamingGroupObj, 'isReady');
 
        % Give option to abort from here
        flag = getappdata(gcf, 'run');
        drawnow;
-
+       
        if (flag == 0)
             disp('STOP button clicked - aborting data collection.')
             break
@@ -262,7 +257,6 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
        if (plotLiveData == PicoConstants.TRUE)
             drawnow;
        end
-
     end
     
     % Check for new data values
@@ -273,34 +267,28 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
         [triggered, triggeredAt] = invoke(streamingGroupObj, 'isTriggerReady');
 
         if (triggered == PicoConstants.TRUE)
-            % Adjust trigger position as MATLAB does not use zero-based
-            % indexing.
+            % Adjust trigger position as MATLAB does not use zero-based indexing.
             bufferTriggerPosition = triggeredAt + 1;
-            
             fprintf('Triggered - index in buffer: %d\n', bufferTriggerPosition);
-
             hasTriggered = triggered;
 
-            % Set the total number of samples at which the device
-            % triggered.
+            % Set the total number of samples at which the device triggered.
             triggeredAtIndex = totalSamples + bufferTriggerPosition;
         end
 
         previousTotal = totalSamples;
         totalSamples  = totalSamples + newSamples;
 
-        % Printing to console can slow down acquisition - use for
-        % demonstration.
+        % Printing to console can slow down acquisition - use for demonstration.
         fprintf('Collected %d samples, startIndex: %d total: %d.\n', newSamples, startIndex, totalSamples);
         
         % Position indices of data in the buffer(s).
         firstValuePosn = startIndex + 1;
         lastValuePosn = startIndex + newSamples;
         
-        % Convert data values from the application buffer(s) - in this
-        % example
-        bufferChAmV = adc2mv(pAppBufferChA.Value(firstValuePosn:lastValuePosn), chARange, maxADCCount);
-        bufferChBmV = adc2mv(pAppBufferChB.Value(firstValuePosn:lastValuePosn), chBRange, maxADCCount);
+        % Convert data values from the application buffer(s) - in this example
+        bufferChAmV = adc2mv(pAppBufferChA.Value(firstValuePosn:lastValuePosn),chARange,maxADCCount);
+        bufferChBmV = adc2mv(pAppBufferChB.Value(firstValuePosn:lastValuePosn),chBRange,maxADCCount);
 
         % Process collected data further if required - this example plots
         % the data if the User has selected 'Yes' at the prompt.
@@ -313,7 +301,6 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
             % Time axis
             % Multiply by ratio mode as samples get reduced.
             time = (double(actualSampleInterval) * double(downSampleRatio)) * (previousTotal:(totalSamples - 1));
-
             plot(time, bufferChAmV, time, bufferChBmV);
         end
 
@@ -324,21 +311,18 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
    
     % Check if auto stop has occurred.
     isAutoStopSet = invoke(streamingGroupObj, 'autoStopped');
-
     if (isAutoStopSet == PicoConstants.TRUE)
        disp('AutoStop: TRUE - exiting loop.');
-       break;
+       break
     end
    
     % Check if 'STOP' button pressed.
     flag = getappdata(gcf, 'run');
     drawnow;
-
     if (flag == 0)
         disp('STOP button clicked - aborting data collection.')
-        break;
+        break
     end
- 
 end
 
 
@@ -349,7 +333,7 @@ if (exist('stopFig', 'var'))
 end
 
 if (plotLiveData == PicoConstants.TRUE)
-    drawnow;
+    drawnow
 end
 
 if (hasTriggered == PicoConstants.TRUE)
@@ -372,7 +356,6 @@ status.stop = invoke(ps4000aDeviceObj, 'ps4000aStop');
 % This is the number of samples held in the |(lib)ps4000a| shared library itself. The actual
 % number of samples collected when using a trigger is likely to be greater.
 [status.noOfStreamingValues, numStreamingValues] = invoke(streamingGroupObj, 'ps4000aNoOfStreamingValues');
-
 fprintf('Number of samples available from the driver: %u.\n\n', numStreamingValues);
 
 %% Process data

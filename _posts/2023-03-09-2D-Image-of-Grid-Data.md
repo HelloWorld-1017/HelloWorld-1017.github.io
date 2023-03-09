@@ -1,8 +1,15 @@
-
-
-
-
-
+---
+layout: single
+title: 【Idea 3】2D Image of Grid Data
+date: 2023-03-09 22:24:25 +0800
+categories: 
+ - Ideas
+ - Uncertainty
+ - MATLAB
+ - Circuit Breaker
+tags:
+ - MATLAB Graphics
+---
 
 博客[Build a Solenoid Parameterized with FEM Data Using MATLAB Simulink](http://whatastarrynight.com/matlab/signals and systems/electromagnetism/circuit breaker/MATLAB-Simscape-Electrical-solenoid-parameterized-with-FEM-data/)介绍了MATLAB提供的一个示例[Solenoid Parameterized with FEM Data - MathWorks](https://ww2.mathworks.cn/help/sps/ug/solenoid-parameterized-with-fem-data.html)，该示例使用在建模Solenoid时，使用了外部导入的FEM数据，包括磁链数据`flux_linkage`和电磁力数据`force`：
 
@@ -100,7 +107,9 @@ hold(gca, "off")
 
 <br>
 
-但是今天看了一篇文献[PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182)，这篇论文为使用机器学习技术求解PDEs（Partial Differential Equations），即*Scientific Machine Learning*领域（or *machine learning for physical sciences* or *data driven science*），提供了一个新的benchmark，很有意思。这篇论文在描述类似的一个因变量随两个自变量变化时，采用的是用颜色区分的二维图像，例如：
+但是今天看了一篇文献[PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182)，这篇论文为使用机器学习技术求解PDEs（Partial Differential Equations），即*Scientific Machine Learning*领域（or *machine learning for physical sciences* or *data driven science*），提供了一个新的benchmark，很有意思。
+
+这篇论文在描述类似的一个因变量随两个自变量变化时，采用的是用颜色区分的二维图像，例如：
 
 ![image-20230309193928500](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230309193928500.png)
 
@@ -165,36 +174,16 @@ set(gca, "YDir", "normal")
 
 ![image-20230309194820001](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230309194820001.png)
 
-这种图形的表现形式更加得紧凑，并且将数据转化成这样的图像后，就可能有更多的应用。例如，
+这种图形的表现形式更加得紧凑；并且将数据表现为这样的图像后，就可能有更多的应用。
 
+例如，文献[Encoding Time Series as Images for Visual Inspection and Classification Using Tiled Convolutional Neural Networks](https://www.researchgate.net/publication/275970614_Encoding_Time_Series_as_Images_for_Visual_Inspection_and_Classification_Using_Tiled_Convolutional_Neural_Networks)就将时间序列编码成矩阵数据后，将其表示为图像（利用Gramian Angular Fields（GAF）和Markov Transition Fields （MTF）方法），之后依据图像信息训练了一个CNN分类器：
 
+![image-20230309222100713](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230309222100713.png)
 
+![image-20230309222119453](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230309222119453.png)
 
+![image-20230309222136502](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230309222136502.png)
 
+还是一个比较有意思的工作。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-提一下那篇论文。
+<br>

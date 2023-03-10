@@ -9,6 +9,7 @@ categories:
  - Circuit Breaker
 tags:
  - MATLAB Graphics
+toc: false
 ---
 
 博客[Build a Solenoid Parameterized with FEM Data Using MATLAB Simulink](http://whatastarrynight.com/matlab/signals and systems/electromagnetism/circuit breaker/MATLAB-Simscape-Electrical-solenoid-parameterized-with-FEM-data/)介绍了MATLAB提供的一个示例[Solenoid Parameterized with FEM Data - MathWorks](https://ww2.mathworks.cn/help/sps/ug/solenoid-parameterized-with-fem-data.html)，该示例使用在建模Solenoid时，使用了外部导入的FEM数据，包括磁链数据`flux_linkage`和电磁力数据`force`：

@@ -106,7 +106,7 @@ maxADCCount = double(get(ps4000aDeviceObj, 'maxADCValue'));
 % buffers to the wrapper shared library. This will ensure that data is
 % correctly copied from the shared library buffers for later processing.
 
-overviewBufferSize  = 250000; % Size of the buffer(s) to collect data from the driver's buffer(s).
+overviewBufferSize  = 250000*2; % Size of the buffer(s) to collect data from the driver's buffer(s).
 segmentIndex        = 0;   
 ratioMode           = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE;
 
@@ -152,10 +152,10 @@ status.setAppAndDriverBuffersB = invoke(streamingGroupObj, 'setAppAndDriverBuffe
 % Set the number of pre- and post-trigger samples
 % If no trigger is set 'numPreTriggerSamples' is ignored
 set(ps4000aDeviceObj, 'numPreTriggerSamples', 0);
-set(ps4000aDeviceObj, 'numPostTriggerSamples', 2000000);
+set(ps4000aDeviceObj, 'numPostTriggerSamples', 1000000);
 
 % The autoStop parameter can be set to false (0).
-% set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);
+set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);
 
 % Set other streaming parameters
 downSampleRatio     = 1;

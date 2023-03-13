@@ -1,4 +1,15 @@
+---
+layout: single
+title: Collecting Streaming Data in MATLAB via PicoScope 4824A 
+date: 2023-03-13 13:35:31 +0800
+categories: 
+ - MATLAB
+tags:
+ - MATLAB Instrument Control Toolbox
+ - Experiment
+---
 
+本博客学习 [PicoScope 4000 Series A API MATLAB Generic Instrument Driver - Github](https://github.com/picotech/picosdk-ps4000a-matlab-instrument-driver) 所提供的一个收集Streaming data的示例：`PS4000A_ID_Streaming_Example.m`.
 
 # Load configuration information
 
@@ -192,7 +203,7 @@ end
 
 ## `getChannelInputRangeAndUnits` function
 
-这部分代码的功能是获取通道A和通道B的输出范围和输出单位，供后续使用：
+获取通道A和通道B的输出范围和输出单位，供后续使用：
 
 ```matlab
 % Obtain the range and units for each enabled channel. For the PicoScope 4824, this will be in millivolts.
@@ -245,6 +256,8 @@ maxADCCount =
 
 从PicoScope中读取出的数据是模拟量，是由整数表示的。在后面的代码中，会使用`adc2mv`函数转换为单位为mv的、以浮点数表示的值，在转换时就会用到`maxADCCount`的值。
 
+<br>
+
 # Set Data Buffers
 
 设置数据缓存区。
@@ -265,7 +278,7 @@ segmentIndex        = 0;
 ratioMode           = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE; % rationMode = 0;
 ```
 
-## Buffers to be passed to the driver: `pDriverBufferChA`, `pDriverBufferChB`
+## 📌Buffers to be passed to the driver: `pDriverBufferChA`, `pDriverBufferChB`
 
 ```matlab
 % Buffers to be passed to the driver
@@ -283,7 +296,7 @@ pDriverBufferChB =
 libpointer
 ```
 
-这两个变量都是`lib.pointer`类的变量，即指针：
+这两个变量都是指针`lib.pointer`类的变量：
 
 ```matlab
 >> whos pDriverBufferChA pDriverBufferChB
@@ -301,7 +314,7 @@ status.setDataBufferChB = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
    channelB, pDriverBufferChB, overviewBufferSize, segmentIndex, ratioMode);% status.setDataBufferChB = 0;
 ```
 
-## Application Buffers: `pAppBufferChA` and `pAppBufferChB`
+## 📌Application Buffers: `pAppBufferChA` and `pAppBufferChB`
 
 前面一步设置了Driver buffer，接下来需要设置Application buffer，这个buffer保存着从driver中暂时复制出的数据。设置与前面的一步也是类似的，但是需要特别针对Streaming mode进行设置：
 
@@ -365,20 +378,18 @@ set(ps4000aDeviceObj, 'numPreTriggerSamples', 0);
 set(ps4000aDeviceObj, 'numPostTriggerSamples', 2000000);
 ```
 
-如果没有使用trigger，则不需要设置`'numPreTriggerSamples'`属性；
+如果没有使用trigger，则不需要设置`'numPreTriggerSamples'`属性，但是`'numPostTriggerSamples'`仍然是需要的，后面会再一次提到这一点，这里的设置是和streaming mode的auto stop的行为（即和`maxSamples`）有关。
 
 ## `autoStop` property
 
-设置Streaming mode是否停止
+可以设置Streaming mode是否停止（默认是自动停止）
 
 ```matlab
 % The autoStop parameter can be set to false (0).
 %set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);
 ```
 
-默认情况的Streaming mode，会在收集到1 s的数据后就会自动停止，
-
-==默认情况下。。。如果设置，则需要按停止按钮==；
+默认情况的Streaming mode，会在收集到`maxSamples`（后面会讲到）个样本点后停止；如果使用`set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);`的代码，则数据收集是不会停止的，直到点击`stop`按钮（示例后面会设置一个GUI的`stop`按钮）。
 
 ## `downSampleRatio` and `downSampleRatioMode`
 
@@ -420,7 +431,7 @@ maxSamples =
 
 虽然注释中提到预分配的空间要是sufficient，采用1.5倍的设置的大小，但是实际的代码中并没有这么做，在下一节创建Final buffer时直接采用与预期的大小一样的数组大小，即`maxSamples = 2000000`。
 
-## Create final data buffers: `pBufferChAFinal` and `pBufferChAFinal`
+## 📌Create final data buffers: `pBufferChAFinal` and `pBufferChAFinal`
 
 上面在创建Application buffer时提到，Application buffer只是暂时的一个buffer，它其中的数据需要传入到Final buffer中保存，因此同样需要为A通道和B通道创建指针：
 
@@ -724,7 +735,7 @@ while (isAutoStopSet == PicoConstants.FALSE && status.getStreamingLatestValues =
 end
 ```
 
-我们假定内层循环中的`getStreamingLatestValues`收集到了数据，并计入到`if`条件结构中进行处理。
+我们假定内层循环中的`getStreamingLatestValues`收集到了数据，并进入到`if`条件结构中进行处理。
 
 ## `isTriggerReady` function
 
@@ -906,13 +917,234 @@ delete(ps4000aDeviceObj);
 
 <br>
 
-# Other Instructions
+# 📌Discussion about Buffers
 
-总结一下两个buffer；
+以上就是整个示例的所有代码，其中比较难理解的部分是buffer的设置和使用。对于A和B两个通道，代码都设置了三个buffer，分别是driver buffer（data buffer），application buffer和final buffer，并且设置的方式都是一样的，我们这里就以A通道为例整理一下这些buffer的作用。
 
+## Driver buffer `pDriverBufferChA`: `ps4000aSetDataBuffer` function
 
+在设置Data buffer时，使用了`ps4000aSetDataBuffer`函数：
 
-`maxSamples`
+```matlab
+overviewBufferSize  = 250000; % Size of the buffer(s) to collect data from the driver's buffer(s).
+segmentIndex        = 0;   
+ratioMode           = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE;
 
+% Buffers to be passed to the driver
+pDriverBufferChA = libpointer('int16Ptr',zeros(overviewBufferSize,1,'int16'));
 
+status.setDataBufferChA = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
+    channelA, pDriverBufferChA, overviewBufferSize, segmentIndex, ratioMode);
+```
 
+![image-20230313124731594](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230313124731594.png)
+
+改代码将buffer size设置为250000。
+
+## Application buffer `pAppBufferChA`: `setAppAndDriverBuffers` function
+
+在设置application buffer时，使用的是函数 `setAppAndDriverBuffers`：
+
+```matlab
+% Application Buffers - these are for temporarily copying data from the driver.
+pAppBufferChA = libpointer('int16Ptr',zeros(overviewBufferSize,1));
+
+% Streaming properties and functions are located in the Instrument Driver's Streaming group.
+streamingGroupObj = get(ps4000aDeviceObj, 'Streaming');
+streamingGroupObj = streamingGroupObj(1);
+
+% Register application buffer and driver buffers (with the wrapper driver).
+status.setAppAndDriverBuffersA = invoke(streamingGroupObj, 'setAppAndDriverBuffers', channelA, ...
+    pAppBufferChA, pDriverBufferChA, overviewBufferSize);
+```
+
+`setAppAndDriverBuffers`函数需要将data buffer和driver buffer都作为输入函数。
+
+## Final buffer `pBufferChAFinal`
+
+创建A通道的final buffer：
+
+```matlab
+maxSamples = get(ps4000aDeviceObj, 'numPreTriggerSamples') + ...
+    get(ps4000aDeviceObj, 'numPostTriggerSamples');
+
+pBufferChAFinal = libpointer('int16Ptr',zeros(maxSamples,1,'int16'));
+```
+
+创建一个指针变量即可，其中`maxSamples`的值为：
+
+```matlab
+>> maxSamples
+maxSamples =
+     2000000
+```
+
+## Collect data
+
+### `overviewBufferSize`
+
+在收集数据的时候，仅仅需要使用到的是application buffer`pAppBufferChA`和final buffer`pBufferChAFinal`，两者的关系上文中已经介绍过，不再赘述。需要注意的是，当运行程序时，代码会在命令行窗口打印相关的信息：
+
+```
+Collected 139264 samples, startIndex: 0 total: 139264.
+Collected 110736 samples, startIndex: 139264 total: 250000.
+
+Collected 237424 samples, startIndex: 0 total: 487424.
+Collected 12576 samples, startIndex: 237424 total: 500000.
+
+Collected 126688 samples, startIndex: 0 total: 626688.
+Collected 69632 samples, startIndex: 126688 total: 696320.
+Collected 53680 samples, startIndex: 196320 total: 750000.
+
+Collected 15952 samples, startIndex: 0 total: 765952.
+Collected 69632 samples, startIndex: 15952 total: 835584.
+Collected 69632 samples, startIndex: 85584 total: 905216.
+Collected 69632 samples, startIndex: 155216 total: 974848.
+Collected 25152 samples, startIndex: 224848 total: 1000000.
+
+Collected 44480 samples, startIndex: 0 total: 1044480.
+Collected 69632 samples, startIndex: 44480 total: 1114112.
+Collected 69632 samples, startIndex: 114112 total: 1183744.
+Collected 66256 samples, startIndex: 183744 total: 1250000.
+
+Collected 3376 samples, startIndex: 0 total: 1253376.
+Collected 69632 samples, startIndex: 3376 total: 1323008.
+Collected 69632 samples, startIndex: 73008 total: 1392640.
+Collected 69632 samples, startIndex: 142640 total: 1462272.
+Collected 37728 samples, startIndex: 212272 total: 1500000.
+
+Collected 31904 samples, startIndex: 0 total: 1531904.
+Collected 69632 samples, startIndex: 31904 total: 1601536.
+Collected 69632 samples, startIndex: 101536 total: 1671168.
+Collected 69632 samples, startIndex: 171168 total: 1740800.
+Collected 9200 samples, startIndex: 240800 total: 1750000.
+
+Collected 60432 samples, startIndex: 0 total: 1810432.
+Collected 69632 samples, startIndex: 60432 total: 1880064.
+Collected 69632 samples, startIndex: 130064 total: 1949696.
+Collected 50304 samples, startIndex: 199696 total: 2000000.
+AutoStop: TRUE - exiting loop.
+
+Number of samples available from the driver: 2000000.
+```
+
+可以看到，当使用application buffer收集数据时，每一次收集到的数据量是不同的，但是当收集到`250000`个数据点时，就会清掉之前buffer中的数据，重新利用这一块application buffer进行收集，这一过程重复了8次。这个点数是由`overviewBufferSize`变量决定的。如果修改`overviewBufferSize`值为`500000`，则会发生相应的改变：
+
+```
+Collected 139264 samples, startIndex: 0 total: 139264.
+Collected 278528 samples, startIndex: 139264 total: 417792.
+Collected 69632 samples, startIndex: 417792 total: 487424.
+Collected 12576 samples, startIndex: 487424 total: 500000.
+
+Collected 126688 samples, startIndex: 0 total: 626688.
+Collected 69632 samples, startIndex: 126688 total: 696320.
+Collected 69632 samples, startIndex: 196320 total: 765952.
+Collected 69632 samples, startIndex: 265952 total: 835584.
+Collected 69632 samples, startIndex: 335584 total: 905216.
+Collected 69632 samples, startIndex: 405216 total: 974848.
+Collected 25152 samples, startIndex: 474848 total: 1000000.
+
+Collected 44480 samples, startIndex: 0 total: 1044480.
+Collected 69632 samples, startIndex: 44480 total: 1114112.
+Collected 69632 samples, startIndex: 114112 total: 1183744.
+Collected 69632 samples, startIndex: 183744 total: 1253376.
+Collected 69632 samples, startIndex: 253376 total: 1323008.
+Collected 69632 samples, startIndex: 323008 total: 1392640.
+Collected 69632 samples, startIndex: 392640 total: 1462272.
+Collected 37728 samples, startIndex: 462272 total: 1500000.
+
+Collected 31904 samples, startIndex: 0 total: 1531904.
+Collected 69632 samples, startIndex: 31904 total: 1601536.
+Collected 69632 samples, startIndex: 101536 total: 1671168.
+Collected 69632 samples, startIndex: 171168 total: 1740800.
+Collected 69632 samples, startIndex: 240800 total: 1810432.
+Collected 69632 samples, startIndex: 310432 total: 1880064.
+Collected 69632 samples, startIndex: 380064 total: 1949696.
+Collected 50304 samples, startIndex: 449696 total: 2000000.
+AutoStop: TRUE - exiting loop.
+```
+
+### `maxSamples`
+
+同样地，代码为final buffer也设置了指定的长度，即`maxSamples`的值，长度为2000000，这个值是由`numPreTriggerSamples`和`numPostTriggerSamples`的值共同决定的：
+
+```matlab
+maxSamples = get(ps4000aDeviceObj, 'numPreTriggerSamples') + ...
+    get(ps4000aDeviceObj, 'numPostTriggerSamples');
+```
+
+当收集到这个数量的值时，程序就会停止收集数据（auto stop），这一点在官方文档中也可以看到：
+
+![image-20230313132544155](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230313132544155.png)
+
+如果我们想要修改`maxSamples`的值，则需要修改前面对应的设置这两个值的代码，例如修改为收集300000个点：
+
+```matlab
+% Set the number of pre- and post-trigger samples
+% If no trigger is set 'numPreTriggerSamples' is ignored
+set(ps4000aDeviceObj, 'numPreTriggerSamples', 0);
+set(ps4000aDeviceObj, 'numPostTriggerSamples', 1000000);
+...
+maxSamples = get(ps4000aDeviceObj, 'numPreTriggerSamples') + ...
+    get(ps4000aDeviceObj, 'numPostTriggerSamples');
+```
+
+则效果为：
+
+```
+Collected 208896 samples, startIndex: 0 total: 208896.
+Collected 278528 samples, startIndex: 208896 total: 487424.
+Collected 12576 samples, startIndex: 487424 total: 500000.
+
+Collected 57056 samples, startIndex: 0 total: 557056.
+Collected 69632 samples, startIndex: 57056 total: 626688.
+Collected 69632 samples, startIndex: 126688 total: 696320.
+Collected 69632 samples, startIndex: 196320 total: 765952.
+Collected 69632 samples, startIndex: 265952 total: 835584.
+Collected 69632 samples, startIndex: 335584 total: 905216.
+Collected 69632 samples, startIndex: 405216 total: 974848.
+Collected 25152 samples, startIndex: 474848 total: 1000000.
+AutoStop: TRUE - exiting loop.
+
+Number of samples available from the driver: 1000000.
+```
+
+但是这一值仅仅只是针对auto stop这一行为而设定的。如果我们将`autostop`关掉：
+
+```matlab
+% The autoStop parameter can be set to false (0).
+set(streamingGroupObj, 'autoStop', PicoConstants.FALSE);
+```
+
+虽然此时仍然是将final buffer的长度设置为100000，但是如果我们不点击停止按钮，则就会一直收集数据：
+
+```
+...
+
+Collected 499744 samples, startIndex: 0 total: 35999744.
+Collected 256 samples, startIndex: 499744 total: 36000000.
+
+Collected 487168 samples, startIndex: 0 total: 36487168.
+Collected 12832 samples, startIndex: 487168 total: 36500000.
+
+Collected 474592 samples, startIndex: 0 total: 36974592.
+Collected 25408 samples, startIndex: 474592 total: 37000000.
+
+Collected 462016 samples, startIndex: 0 total: 37462016.
+Collected 37984 samples, startIndex: 462016 total: 37500000.
+
+Collected 449440 samples, startIndex: 0 total: 37949440.
+Collected 50560 samples, startIndex: 449440 total: 38000000.
+
+Collected 449439 samples, startIndex: 0 total: 38449439.
+STOP button clicked - aborting data collection.
+
+Collected 50561 samples, startIndex: 449439 total: 38500000.
+STOP button clicked - aborting data collection.
+
+Number of samples available from the driver: 1000000.
+```
+
+并不会报错。
+
+<br>

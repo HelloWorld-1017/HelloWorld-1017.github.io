@@ -6,6 +6,7 @@ categories:
  - Mathematics
 tags: 
  - Matrix
+ - Calculus
 ---
 
 # 标量对向量求导

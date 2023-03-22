@@ -1,8 +1,13 @@
-
-
-Analysis for Figure Classification Benchmark CIFAR-10 and CIFAR-100 Datasets
-
-
+---
+layout: single
+title: Analysis for Image Classification Benchmark CIFAR-10 and CIFAR-100 Datasets
+date: 2023-03-22 12:41:23 +0800
+categories: 
+ - MATLAB
+ - Machine Learning
+tags:
+ - MATLAB Deep Learning Toolbox
+---
 
 # Introduction
 
@@ -399,6 +404,84 @@ disp(nums_class')
 ```
 
 对于测试集，每个Class都有100张图片，因此，每个Superclass都有500张图片，一共具有10,000张图片的数据。
+
+<br>
+
+# Datasets Merge
+
+在某些情况下，将训练集和测试集的数据合并成一整个数据集是更加方便的。可以参照MATLAB示例对于CIFAR-10数据集的处理方式，将CIFAR-10和CIFAR-100数据集的训练集数据和测试集数据分别合并起来。
+
+注：以下的脚本文件需要与数据集放在相同的工作文件夹中。
+{: .notice--warning}
+
+对于CIFAR-10数据集：
+
+```matlab
+clc,clear,close all
+
+[XTrain,YTrain,XTest,YTest] = loadCIFARData(pwd);
+
+data = cat(4,XTrain,XTest);
+labels = [YTrain;YTest];
+
+save("CIFAR-10.mat","data","labels")
+
+function [XTrain,YTrain,XTest,YTest] = loadCIFARData(location)
+[XTrain1,YTrain1] = loadBatchAsFourDimensionalArray(location,'data_batch_1.mat');
+[XTrain2,YTrain2] = loadBatchAsFourDimensionalArray(location,'data_batch_2.mat');
+[XTrain3,YTrain3] = loadBatchAsFourDimensionalArray(location,'data_batch_3.mat');
+[XTrain4,YTrain4] = loadBatchAsFourDimensionalArray(location,'data_batch_4.mat');
+[XTrain5,YTrain5] = loadBatchAsFourDimensionalArray(location,'data_batch_5.mat');
+XTrain = cat(4,XTrain1,XTrain2,XTrain3,XTrain4,XTrain5);
+YTrain = [YTrain1;YTrain2;YTrain3;YTrain4;YTrain5];
+
+[XTest,YTest] = loadBatchAsFourDimensionalArray(location,'test_batch.mat');
+end
+
+function [XBatch,YBatch] = loadBatchAsFourDimensionalArray(location,batchFileName)
+s = load(fullfile(location,batchFileName));
+XBatch = s.data';
+XBatch = reshape(XBatch,32,32,3,[]);
+XBatch = permute(XBatch,[2 1 3 4]);
+YBatch = convertLabelsToCategorical(location,s.labels);
+end
+
+function categoricalLabels = convertLabelsToCategorical(location,integerLabels)
+s = load(fullfile(location,'batches.meta.mat'));
+categoricalLabels = categorical(integerLabels,0:9,s.label_names);
+end
+```
+
+对于CIFAR-100数据集：
+
+```matlab
+clc,clear,close all
+
+[X_train,Y_train_coarse,Y_train_fine,filenames_train] = loadBatchAsFourDimensionalArray('train.mat');
+[X_test,Y_test_coarse,Y_test_fine,filenames_test] = loadBatchAsFourDimensionalArray('test.mat');
+data = cat(4,X_train,X_test);
+coarse_labels = [Y_train_coarse;Y_test_coarse];
+fine_labels = [Y_train_fine;Y_test_fine];
+filenames = [filenames_train;filenames_test];
+
+save("CIFAR-100.mat","data","coarse_labels","fine_labels","filenames")
+
+function [XBatch,coarse_categoricalLabels,fine_categoricalLabels,filenames] = loadBatchAsFourDimensionalArray(filename)
+s = load(filename);
+XBatch = s.data';
+XBatch = reshape(XBatch,32,32,3,[]);
+XBatch = permute(XBatch,[2 1 3 4]);
+[coarse_categoricalLabels,fine_categoricalLabels] = convertLabelsToCategorical(s.coarse_labels,s.fine_labels);
+filenames = s.filenames;
+end
+
+function [coarse_categoricalLabels,fine_categoricalLabels] = ...
+    convertLabelsToCategorical(coarse_integerLabels,fine_integerLabels)
+s = load("meta.mat");
+coarse_categoricalLabels = categorical(coarse_integerLabels,0:19,s.coarse_label_names);
+fine_categoricalLabels = categorical(fine_integerLabels,0:99,s.fine_label_names);
+end
+```
 
 <br>
 

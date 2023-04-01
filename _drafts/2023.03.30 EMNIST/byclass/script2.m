@@ -24,5 +24,7 @@ hold(gca,"on")
 
 b2 = bar(nums);
 b2(1).FaceColor = [7,84,213]/255;
+legend("Whole dataset")
+set(gca,"FontSize",15)
 
 

@@ -8,6 +8,7 @@ categories:
  - MATLAB
  - Circuit Breaker
  - Computational Fluid Dynamics
+ - Machine Learning
 tags:
  - MATLAB Graphics
 toc: false

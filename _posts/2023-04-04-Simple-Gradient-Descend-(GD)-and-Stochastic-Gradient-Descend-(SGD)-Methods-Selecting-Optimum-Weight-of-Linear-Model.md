@@ -6,6 +6,8 @@ categories:
  - Machine Learning
  - Operation Research
  - Python
+tags:
+ - PyTorch
 ---
 
 # Gradient Descend
@@ -216,6 +218,115 @@ plt.show()
 
 <br>
 
+# Calculate Gradients and Thereby Backward by PyTorch
+
+上文所实现的计算损失值的过程（forward）和更新权重的过程（backward），可以使用PyTorch所提供的Tensor类以及相应的函数进行实现，具体代码如下：
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt 
+import torch
+
+x_s = [1.0, 2.0, 3.0]
+y_s = [2.0, 4.0, 6.0]
+
+w = torch.Tensor([1.0])
+w.requires_grad = True   
+
+def forward(x):
+    return x * w  
+
+def loss(x, y):
+    y_pred = forward(x)
+    return (y_pred - y) ** 2
+
+print("predict (before training)", 4, forward(4).item())
+
+for epoch in range(100):      
+    for x, y in zip(x_s, y_s):
+        l = loss(x, y)
+        l.backward() # Calculate gradients (where needed) in the calculation graph
+        print('\t grad', x, y, w.grad.item())
+        w.data = w.data - 0.01 * w.grad.data
+        
+        w.grad.data.zero_()
+        
+    print("progress", epoch, l.item())
+print("predict (after training)", 4, forward(4).item())
+```
+
+需要说明的有以下几点：
+
+**（1）Tensor类**
+
+```python
+w = torch.Tensor([1.0])
+w.requires_grad = True 
+```
+
+在PyTorch中，最基本的一个数据类就是Tensor。它可以保存标量，向量，矩阵，甚至是更高维度的张量。Tensor中有两个比较重要的成员，一个是`data`，一个是`grad`，分别用来保存它本身的值，以及损失函数对权重的导数：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230404174511345.png" alt="image-20230404174511345" style="zoom:67%;" />
+
+默认的创建的`torch.Tensor`是不需要进行计算梯度的，只有设置了`w.reauires_grad = True`，即表示我们希望计算关于该变量的梯度时，才会进行计算梯度。
+
+**（2）动态计算图**
+
+```python
+def forward(x):
+    return x * w  
+```
+
+`w`是一个Tensor，因此在forward过程中当`w`遇到乘法运算符`*`时，`*`就已经被重载了，它要进行的是Tensor和Tensor的数乘运算，同时变量`x`也被自动地转换成了Tensor，并且它们相乘的结果`x*w`同样是Tensor，并且和`w`一样，也需要计算梯度；
+
+注：如果我们定义了Tensor，就可以去建立计算图。实际上，用PyTorch在构建神经网络时，看到关于Tensor的计算就要意识到是在构建计算图。
+{: .notice--primary}
+
+**（3）`l.backward()`**
+
+```python
+l = loss(x, y)
+l.backward()
+```
+
+由于自定义函数`loss`的计算过程使用到了我们上面所提到的`forward`函数，因此计算出来的损失值`l`同样是一个Tensor，可以调用这个Tensor的成员函数`backward`。它就可以自动地把这个计算图链路上的梯度都求出来，然后把这个梯度保存在Tensor中（对于这个例子，就是将梯度保存在变量`w`中）。梯度保存在`w`之后，计算图就被释放了。
+
+**只要一使用`backward`，计算图就被释放了。下一次进行loss计算，就会建立一个新的计算图。**这么做的原因，是有的时候我们构建的神经网络，我们每一次构建的计算图可能是不一样的（例如存在随机的Dropout）。这是一种非常灵活的方式，也是PyTorch的核心竞争力。
+
+**（4）更新梯度时要使用`w.grad.data`**
+
+```python
+w.data = w.data - 0.01 * w.grad.data
+```
+
+在更新梯度时，不要拿`w.grad`直接进行操作。因为`w.grad`也是一个Tensor，如果直接使用`w.grad`进行梯度更新，那么这实际上就是在构建计算图，而我们想要做的仅仅是一个纯数值的更新，因此要使用`w.grad.data`，防止产生计算图。
+
+**（5）`.item()`**
+
+```python
+print('\t grad', x, y, w.grad.item())
+```
+
+`w.grad.item()`是用来把梯度里面的数值直接拿出来，变成python中的标量。这么做是为了防止产生计算图，造成困扰。同理，想要计算每一个训练Epoch的损失值之和，要使用`l.item()`，否则就会一直构建计算图。在样本非常多、BatchSize比较小的情况下，就会导致内存占用非常严重。
+
+**（6）`w.grad.data.zero_()`**
+
+在根据梯度值更新完权重后，需要将权重`w`里面梯度的数据全部清零：
+
+```python
+w.grad.data.zero_()
+```
+
+如果不清零，则下一次对损失函数对权重求导的值会加在上一次的结果之上（The grad computed by `.backward()` will be accumulated）。那么，为什么PyTorch不直接把它清零呢？这是因为对于权重`w`，我们有时候会使用很多模型的设计技巧，就是需要`w`做一个累加，这是我们需要的。所以如果清零，则一定要使用显式代码。
+
+注：这里只是清零计算的权重梯度的data（`w.grad.data`），而没有清权重`w`的data(`w.data`)。
+{: .notice--primary}
+
+<br>
+
 **References**
 
 [1] [03.梯度下降算法 - 刘二大人](https://www.bilibili.com/video/BV1Y7411d7Ys?p=3&vd_source=8aeddead7f39b0189fff9b14fa090a75).
+
+[2] [04.反向传播 - 刘二大人](https://www.bilibili.com/video/BV1Y7411d7Ys?p=4&vd_source=8aeddead7f39b0189fff9b14fa090a75).
+

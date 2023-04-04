@@ -188,3 +188,4 @@ conda list --export
 
 [2] [Anaconda 安装及修改环境默认位置 - 物联沃.](https://www.iotword.com/10057.html#:~:text=Anaconda 安装及修改环境默认位置 1 1.官网下载安装包 2 2.安装 一路next即可，安装位置可改到D盘 3,如果安装在D盘，但是默认虚拟环境会在C盘 可用以下命令进行查看虚拟环境位置 conda info onda环境默认安装在用户目录C%3A\Users\username.conda\envs下，如果选择默认路径，那么之后创建虚拟环境，也是安装在用户目录下。 不想占用C盘空间，可以修改conda虚拟环境路径。 (1)首先，找到用户目录下的.condarc文件（C%3A\Users\username）。 )
 
+[3] [**Command reference - Conda documentation**](https://docs.conda.io/projects/conda/en/latest/commands.html).

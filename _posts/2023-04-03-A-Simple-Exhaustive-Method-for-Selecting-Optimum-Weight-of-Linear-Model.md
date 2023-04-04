@@ -73,7 +73,7 @@ plt.show()
 
 <br>
 
-进一步地，如果我们再遍历线性模型的bias，则可以类似的结果和图像：
+进一步地，如果我们再遍历线性模型的bias，则可以得到类似的结果和图像：
 
 ```python
 import numpy as np

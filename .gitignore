@@ -9,3 +9,4 @@ _site
 *.gif
 __pycache__
 *.avi
+.ipynb_checkpoints

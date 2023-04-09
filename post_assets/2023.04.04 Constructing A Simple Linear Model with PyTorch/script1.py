@@ -18,22 +18,25 @@ model = LinearModel()
 criterion = torch.nn.MSELoss(size_average = False) 
 optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
 
-for epoch in range(300):
+for epoch in range(500):
     # Forward
     y_pred = model(x_data)
-    loss = criterion(y_pred, y_data)
-    print(epoch,'\t', model.linear.weight.item(),
-          '\t', model.linear.bias.item(),
-          '\t',  loss.item())
     
-    # Reset gradients
-    optimizer.zero_grad()
+    # print(epoch,'\t', model.linear.weight.item(),
+    #       '\t', model.linear.bias.item(),
+    #       '\t',  loss.item())
+    
+    loss = criterion(y_pred, y_data)
     
     # Backward: autograd
     loss.backward()
     
     # Update
     optimizer.step() 
+    
+    # Reset gradients
+    optimizer.zero_grad()
+    
     
 print('w = ', model.linear.weight.item())
 print('b = ', model.linear.bias.item())

@@ -11,7 +11,7 @@ d2 = (x-points_x(2)).^2+(y-points_y(2)).^2;
 D = [d1, d2];
 [~, idx] = min(D, [], 2);
 contourf(xGrid, yGrid, ...
-    reshape(idx, size(xGrid, 1), size(yGrid, 2)));
+    reshape(idx, size(xGrid, 1), size(yGrid, 2)),'EdgeColor','None');
 mymap = [0, 1, 0; 1, 0, 0];
 colormap(mymap)
 colorbar

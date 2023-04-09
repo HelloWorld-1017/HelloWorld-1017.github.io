@@ -151,6 +151,42 @@ colorbar
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902191455141.png" alt="image-20220902191455141" style="zoom: 80%;" />
 
+很有意思，记录一下。
+
 <br>
 
-很有意思，记录一下。
+**2023.04.08** 
+
+在后来使用`surf`函数使用的过程中，黑线的问题总是存在；尤其是在网格划分得比较细致的情况下，原本的用意是使得平面更加平滑，但是结果确实一片黑色。后来发现，其实上文使用的`surf`函数和`contourf`函数其实都接受一个`EdgeColor`的参数，只需要将其设置为`'None'`，即可完美得避免出现colorful black的情况。
+
+例如：
+
+```matlab
+...
+surf(peaks(1000),'EdgeColor','none')
+...
+```
+
+![image-20230408171146362](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171146362.png)
+
+```matlab
+...
+contourf(xGrid, yGrid, ...
+    reshape(idx, size(xGrid, 1), size(yGrid, 2)),...
+    'EdgeColor','none');
+...
+```
+
+![image-20230408171212649](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171212649.png)
+
+```matlab
+...
+contourf(xGrid, yGrid, ...
+    reshape(idx, size(xGrid, 1), size(yGrid, 2)),'EdgeColor','None');
+...
+```
+
+![image-20230408171308175](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171308175.png)
+
+<br>
+

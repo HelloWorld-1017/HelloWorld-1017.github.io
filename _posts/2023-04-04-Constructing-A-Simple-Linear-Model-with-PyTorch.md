@@ -116,11 +116,14 @@ optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
 
 训练的循环主要包含四个步骤，都是必要的步骤
 
-- 计算预测值；
-- 计算损失；
-- 梯度清零；
-- 自动梯度计算；
-- 更新权重；
+- 计算预测值：`loss = criterion(y_pred, y_data)`；
+- 计算损失，`loss = criterion(y_pred, y_data)`；
+- 梯度清零，`optimizer.zero_grad()`；
+- 自动梯度计算，`loss.backward()`；
+- 更新权重，`optimizer.step()`；
+
+注：这里梯度清零的操作可以放在“自动梯度计算”和“更新权重”操作之前，也可以放在这两个操作之后，都可以运行并且得到正确的结果。只要保证每一次训练步骤中都对梯度清零即可。当然，不能放在这两个操作之间~
+{: .notice--primary}
 
 ```python
 for epoch in range(300):

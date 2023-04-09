@@ -10,3 +10,5 @@ _site
 __pycache__
 *.avi
 .ipynb_checkpoints
+
+slprj

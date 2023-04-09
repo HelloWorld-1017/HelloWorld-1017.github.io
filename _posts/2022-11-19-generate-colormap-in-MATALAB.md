@@ -4,6 +4,7 @@ title: Generate colormap in MATLAB
 date: 2022-11-19 22:34:33 +0800
 categories: 
  - MATLAB
+ - Graphic Design and Typography
 tags:
  - MATLAB Graphics
 toc: false

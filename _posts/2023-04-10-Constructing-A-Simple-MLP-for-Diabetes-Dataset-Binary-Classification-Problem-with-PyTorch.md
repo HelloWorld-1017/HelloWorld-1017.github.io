@@ -1,14 +1,15 @@
 ---
 layout: single
-title: Constructing A Simple MLP for Diabetes Dataset Binary Classification Problem with PyTorch (Load Datasets using `DataSet` and `DataLoader`)
+title: Constructing A Simple MLP for Diabetes Dataset Binary Classification Problem with PyTorch (Load Datasets using PyTorch `DataSet` and `DataLoader`)
 date: 2023-04-10 13:44:03 +0800
 categories: 
  - Machine Learning
  - Python
 tags:
  - PyTorch
-toc: false
 ---
+
+# Constructing A Simple MLP for Diabetes Dataset Binary Classification Problem with PyTorch
 
 本博客根据参考 [1] 使用PyTorch框架搭建一个简单的MLP，以解决糖尿病数据集所对应的二分类问题：
 
@@ -68,7 +69,7 @@ x = np.loadtxt('D:/Softwares/anaconda3/Lib/site-packages/sklearn/datasets/data/d
 y = np.loadtxt('D:/Softwares/anaconda3/Lib/site-packages/sklearn/datasets/data/diabetes_target.csv.gz', delimiter = ' ', dtype = np.float32)
 ```
 
-其中，`.gz`文件是Linux系统中常用的压缩格式，在window环境下，python也能够读取这样的压缩格式文件；`dtype=np.float32`表示数据采用32位的浮点数保存。在神经网络计算中，通常都会使用32位的浮点数，因为一些常用的N卡的游戏卡GPU，1080，2080，它们只支持32位的浮点数计算。只有在那些比较专业的显卡，比如Tesla系列的显卡，才支持双精度（即64）位的数据计算。并且另一方面，对于训练神经网络而言，32位的浮点数计算已经足够用了。
+其中，`.gz`文件是Linux系统中常用的压缩格式，在window环境下，python也能够读取这样的压缩格式文件；`dtype=np.float32`表示数据采用32位的浮点数保存。在神经网络计算中，通常都会使用32位的浮点数，因为一些常用的N卡的游戏卡GPU，1080，2080，它们只支持32位的浮点数计算。只有在那些比较专业的显卡，比如Tesla系列的显卡，才支持双精度（即64位）的数据计算。并且另一方面，对于训练神经网络而言，32位的浮点数计算已经足够用了。
 
 （2）构建MLP模型的代码：
 
@@ -118,9 +119,9 @@ class Model(torch.nn.Module):
 
 <br>
 
+# Loading Datasets and Realizing SGD using PyTorch `DataSet` and `DataLoader`
 
-
-上面的代码在实现时并没有采用Mini-batch和SGD方法，在训练时更加可能会遇到鞍点问题 [3]，下面我们就使用PyTroch提供的工具类`Dataset`和`DataLoader`来实现SGD。
+上面的代码在实现时并没有采用Mini-batch和SGD方法，在训练时更加可能会遇到鞍点问题 [4]，下面就使用PyTroch提供的工具类`Dataset`和`DataLoader`来实现SGD。
 
 ```python
 import torch
@@ -144,13 +145,13 @@ train_loader = DataLoader(dataset=dataset,
                          num_workers=2)# Parallel threads: 2
 ```
 
-对于`__init__`函数，我们有两种选择。一种是把所有的数据（包括特征和标签）都读取到内存中，在每次调用`__getitem__`时，就使用索引把数据拿出来。在数据集本身大小不大时，我们可以采用这种方式（例如在这里使用的Diabetes数据集），但是如果读取的是图像的数据集，可能大小有几十个G，这时候再在`__init__`中把所有数据读取到内存中显然是不合理的。在这种情况下，我们可以把图像文件都放在一个文件夹下，在`__init__`中仅把文件名列表读取到内存中。数据集标签也是一样的，如果只是做图像的分类，那么就可以直接把整个数据的标签都读取到内存中，但是假如我们想要做图像分割的任务，需要对整个图像的每个像素点进行分类，标签是一个和图像尺寸一致的矩阵，这时候需要对标签也采用“加载文件名列表”的方式处理，以保证内存的高效使用。
+（1）魔法方法`__getitem__`的定义，使得实例化`DiabetesDataset`后，能够支持下标操作，可以通过索引来挑选数据。
 
-魔法方法`__getitem__`的定义，使得实例化`DiabetesDataset`后，能够支持下标操作，可以通过索引来挑选数据。
+（2）魔法方法`__len__`能够返回数据集中数据的数量。
 
-魔法方法`__len__`能够返回数据集中数据的数量。
+（3）对于`__init__`函数，我们有两种选择。一种是把所有的数据（包括特征和标签）都读取到内存中，在每次调用`__getitem__`时，就使用索引把数据拿出来。在数据集本身大小不大时，我们可以采用这种方式（例如在这里使用的Diabetes数据集），但是如果读取的是图像的数据集，可能大小有几十个G，这时候再在`__init__`中把所有数据读取到内存中显然是不合理的。在这种情况下，我们可以把图像文件都放在一个文件夹下，在`__init__`中仅把文件名列表读取到内存中。数据集标签也是一样的，如果只是做图像的分类，那么就可以直接把整个数据的标签都读取到内存中，但是假如我们想要做图像分割的任务，需要对整个图像的每个像素点进行分类，标签是一个和图像尺寸一致的矩阵，这时候需要对标签也采用“加载文件名列表”的方式处理，以保证内存的高效使用。
 
-上面的代码设置了`DataLoader`的`num_workers=2`，表示在读取Mini-batch时采用两个并行的线程。但是，在Windows平台下（PyTorch版本为0.4），如果直接使用dataLoader进行训练，会出现报错：
+（4）上面的代码设置了`DataLoader`的`num_workers=2`，表示在读取Mini-batch时采用两个并行的线程。但是，在Windows平台下（PyTorch版本为0.4），如果直接使用dataLoader进行训练，会出现报错：
 
 ![image-20230410152956600](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230410152956600.png)
 
@@ -241,15 +242,18 @@ for epoch in range(1000):
         
 ax = plt.subplot()
 plt.plot(np.linspace(1,len(loss_list),len(loss_list)), loss_list)
+plt.grid()
 ax.set_xlabel('Iteration')
 ax.set_ylabel('Loss value')
 ```
 
+![image-20230410191800414](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230410191800414.png)
+
+可以看到这里的效果并不是很理想。
+
 <br>
 
-
-
-Load Benchmark Dataset in `torchvision.datasets`
+# Load Benchmark Dataset in `torchvision.datasets`
 
 在`torchvision.datasets`中，内置了很多的benchmark数据集：
 
@@ -257,11 +261,29 @@ Load Benchmark Dataset in `torchvision.datasets`
 
 它们都继承自`torch.utils.data.Dataset`，已经对`__getitem__`方法和`__len__`方法进行了定义。因此，在调用的时候就比较简单，不用重新继承`Dataset`类再自定义。例如，对于MNIST：
 
-Convert PIL Image (Python Image Library Image) to Tensor
+```python
+import torch 
+from torch.utils.data import DataLoader
+from torchvision import transforms
+from torchvision import datasets
 
-![image-20230410164746370](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230410164746370.png)
+train_dataset = datasets.MNIST(root='mnist',
+                               train=True,
+                               transform=transforms.ToTensor(), # Convert PIL Image (Python Image Library Image) to Tensor
+                               download=True)
 
+test_dataset = datasets.MNIST(root='mnist',
+                              train=False,
+                              transform=transforms.ToTensor(),
+                              download=True)
 
+train_loader = DataLoader(dataset=train_dataset,
+                          batch_size=32,
+                          shuffle=True)
+test_loader = DataLoader(dataset=test_dataset,
+                         batch_size=32,
+                         shuffle=False)# Attention here
+```
 
 <br>
 
@@ -273,5 +295,5 @@ Convert PIL Image (Python Image Library Image) to Tensor
 
 [3] [08.加载数据集 - 刘二大人](https://www.bilibili.com/video/BV1Y7411d7Ys?p=8&vd_source=8aeddead7f39b0189fff9b14fa090a75).
 
-[4] SGD博客
+[4] [Simple Gradient Descend (GD) and Stochastic Gradient Descend (SGD) Methods Selecting Optimum Weight of Linear Model - What a starry night~](http://whatastarrynight.com/machine learning/operation research/python/Simple-Gradient-Descend-(GD)-and-Stochastic-Gradient-Descend-(SGD)-Methods-Selecting-Optimum-Weight-of-Linear-Model/).
 

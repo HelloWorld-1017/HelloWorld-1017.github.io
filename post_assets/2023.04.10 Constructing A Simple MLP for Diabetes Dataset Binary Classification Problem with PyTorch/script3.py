@@ -24,8 +24,8 @@ class DiabetesDataset(Dataset):
     def __len__(self):
         return self.len
 
-dataset = DiabetesDataset('D:/Softwares/anaconda3/Lib/site-packages/sklearn/datasets/data/diabetes_data.csv.gz', 
-                          'D:/Softwares/anaconda3/Lib/site-packages/sklearn/datasets/data/diabetes_target.csv.gz')
+dataset = DiabetesDataset('diabetes_data.csv.gz', 
+                          'diabetes_target.csv.gz')
 
 train_loader = DataLoader(dataset = dataset,
                           batch_size = 32, 
@@ -74,5 +74,6 @@ for epoch in range(1000):
         
 ax = plt.subplot()
 plt.plot(np.linspace(1,len(loss_list),len(loss_list)), loss_list)
+plt.grid()
 ax.set_xlabel('Iteration')
 ax.set_ylabel('Loss value')

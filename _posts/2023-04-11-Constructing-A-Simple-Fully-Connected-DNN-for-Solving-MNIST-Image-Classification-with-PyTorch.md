@@ -337,4 +337,3 @@ if __name__ == '__main__':
 [4] [Entropy, Cross entropy, KL Divergence and Their Relation - What a starry night~](http://whatastarrynight.com/mathematics/machine learning/signals and systems/uncertainty/matlab/Entropy-Cross-Entropy-KL-Divergence-and-their-Relation/).
 
 [5] [CrossEntropyLoss - PyTorch 2.0 documentation](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss).
-

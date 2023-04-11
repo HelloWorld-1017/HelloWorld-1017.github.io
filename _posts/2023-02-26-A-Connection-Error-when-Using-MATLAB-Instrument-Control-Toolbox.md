@@ -7,7 +7,7 @@ categories:
 tags:
  - MATLAB Instrument Control Toolbox
  - Experiment
- - MATLAB Warnings and Error
+ - MATLAB Warnings and Errors
 toc: false
 ---
 

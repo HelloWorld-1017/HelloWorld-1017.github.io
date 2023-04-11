@@ -7,6 +7,7 @@ categories:
  - Python
 tags:
  - PyTorch
+ - Python Warnings and Errors
 ---
 
 # Constructing A Simple MLP for Diabetes Dataset Binary Classification Problem with PyTorch

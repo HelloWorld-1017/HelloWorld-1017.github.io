@@ -2,61 +2,53 @@
 
 # Introduction
 
-在博客XX中：
-
-
-
-
-
-
-
-如果我们的神经网络都是由线性层串行地连接起来，我们就把它叫做全连接神经网络(Fully Connected Neural Network，也有叫Dnese/Deep Connected，所以就有人叫这种网络为**DNN**)，层与层各节点之间都有权重连接，任意一个节点都要参与到下一层的计算中。所以把这种线性层也叫做全连接层。
-
-
-
-在全连接层处理图像的时候，第一步要把图像数据拉成一个长向量，这样就丧失了已有的**空间结构的信息**。CNN是直接按照图像的空间结构进行保存，从而保存原始的空间信息。
-
-
-
-在使用下采样时（Subsampling），通道数是不改变的。
-
-前面的卷积运算实际上就是（自动）特征提取的工作（Feature extraction），后面全连接层的部分用于分类（Classification），实现了一个End-to-End的特征提取：
+如果我们的神经网络都是由线性层串行地连接起来，层与层各节点之间都有权重连接，任意一个节点都要参与到下一层的计算中，这种线性层也被称为是全连接层（fully-connected layer），而由多层全连接层构成的网络也被称为全连接神经网络（Fully-Connected Neural Network，也有叫Dnese/Deep Connected，即**DNN**）。在博客 [2] 中，我们就把MNIST图像展开成一个向量，传入到了一个DNN中，实现了图像分类的问题。但是，在使用全连接层处理图像时，第一步就要把图像数据拉成一个长向量，这样的做法会丧失图像的**空间结构的信息**。卷积神经网络（Convolutional Neural Network, CNN）就可以在一定程度上解决这样的问题，卷积层的使用可以很好得保留图像的空间结构。一个基本的CNN结构如下图所示：
 
 ![image-20230411222929745](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411222929745.png)
 
-在整个流程中的特征提取阶段，我们主要使用了卷积层（Convolution layer）和最大池化层（Max
+相比于全连接神经网络，CNN有一些特殊之处：
 
+- 卷积运算（Convolution）：由卷积层提供；
+- 下采样运算（Subsampling）：由池化层提供。下采样的运算有很多种，对应着各种各样运算的池化层。在本博客的例子中，我们只采用了一种池化层，即最大池化层。
+- 在整个CNN中，前面的卷积层和池化层实际上就是完成了（自动）特征提取的工作（Feature extraction），后面的全连接层的部分用于分类（Classification）。因此，CNN是一个End-to-End的神经网络结构。
 
+下面就详细地学习一下CNN的各个部分。
 
-栅格图像；
+<br>
 
-![image-20230411200810833](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411200810833.png)
+# Convolution Layer
 
-也就是说，对于一个3通道的图像，做一个$3\times3$的卷积运算，最后只有一个通道！！！
+## `in_channels`, `out_channels`, `kernel_size` properties
 
-![image-20230411201046798](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411201046798.png)
+在生活中，当我们使用相机拍摄一个物体时，就会形成一个栅格图像（raster image）[3]。栅格图像是由一个一个像素点构成，每个像素点都由一个RGB元组来描述，从而形成对整个图像信息的精确描述。我们通常称这种彩色图像的RGB元组为RGB通道（channel）。
 
-同样地，对于输入通道为$n$的输入做卷积，输出的结果同样只有一个通道！！！
+例如，对于一个$5\times5$的三通道的栅格图像做$3\times3$的卷积运算，最终可以得到一个通道：
+
+![image-20230412092550862](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092550862.png)
+
+**并且需要强调的是，最后只有一个通道！！！**
+
+![image-20230412092607313](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092607313.png)
+
+并且，对于输入通道为$n$的输入做卷积，输出的结果同样只有一个通道！！！
 
 ![image-20230411201311121](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411201311121.png)
 
+如果我们想增加输出的通道数量，则需要增加卷积核的个数（即下图中的filter的个数）：
 
+![image-20230412092654809](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092654809.png)
 
+最终，总结起来就是：
 
+- 每一个卷积核的通道数量（`torch.nn.Conv2d`的`in_channels`参数）要求和输入的通道数量是一样的，即$n$个；
 
-![image-20230411201747790](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411201747790.png)
+- 卷积核的总数（`torch.nn.Conv2d`的`out_channels`参数）是和输出的通道数量是一样的，即$m$个；
 
-- 每一个卷积核的通道数量要求和输入的通道数量是一样的，即$n$个；
-- 卷积核的总数是和输出的通道数量是一样的，即$m$个；
-- 因此，卷积卷积核实际上是一个4维的张量。
+- 因此，卷积核实际上是一个4维的张量（`in_channels`，`out_channels`，`kernel_size`(tuple)）：
 
-![image-20230411201912189](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411201912189.png)
+  ![image-20230412092713434](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092713434.png)
 
-
-
-
-
-一个简单的算例：
+下面就简单验证一下$1\times10\times3\times3$的卷积核对$1\times5\times100\times100$的图像的改变：
 
 ```python
 import torch
@@ -79,26 +71,22 @@ output = conv_layer(input)
 
 print(input.shape)
 print(conv_layer.weight.shape)
-print(conv_layer.weight.shape)
+print(output.shape)
 ```
 
 ```python
 torch.Size([1, 5, 100, 100])
 torch.Size([10, 5, 3, 3])
-torch.Size([10, 5, 3, 3])
+torch.Size([1, 10, 98, 98])
 ```
 
-
-
-
-
-常见的参数：
-
-1. padding， same参数   
-
-# Convolution Layer
-
 ## `padding` property
+
+`padding`是卷积层`torch.nn.Conv2d`的一个重要的属性。如果设置`padding=1`，则会在输入通道的四周补上一圈0元素：
+
+![image-20230411212155975](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411212155975.png)
+
+可以使用代码简单验证一下：
 
 ```python
 import torch
@@ -130,11 +118,19 @@ tensor([[[[ 91., 168., 224., 215., 127.],
           [ 96., 112., 110.,  68.,  31.]]]], grad_fn=<ConvolutionBackward0>)
 ```
 
-与预期的结果是一致的：
+可以看到是与预期的结果是一致的。
 
-![image-20230411212155975](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411212155975.png)
+
+
+padding， same参数   
+
+
+
+
 
 ## `stride` property
+
+`torch.nn.Conv2d`还有一个属性是`stride`，表示卷积核每次移动的步长：![image-20230411213139008](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411213139008.png)
 
 ```python
 import torch
@@ -163,11 +159,13 @@ tensor([[[[211., 262.],
           [251., 169.]]]], grad_fn=<ConvolutionBackward0>)
 ```
 
-与预期结果一致：
+同样与预期结果一致。
 
-![image-20230411213139008](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411213139008.png)
+<br>
 
 # Max-Pooling Layer
+
+**在使用下采样时（Subsampling），通道数是不改变的。**
 
 最大池化层（Max-Pooling），没有权重（无参数的层，因此不需要优化），默认参数stride=2；
 
@@ -202,7 +200,7 @@ tensor([[[[4., 8.],
 
 
 
-
+下采样层的作用只是改变了损失函数的值，本身是无参的；
 
 池化层似乎都是无参的;
 
@@ -274,9 +272,9 @@ model.to(device)
 
 [1] [10.卷积神经网络（基础篇）- 刘二大人](https://www.bilibili.com/video/BV1Y7411d7Ys?p=10&vd_source=8aeddead7f39b0189fff9b14fa090a75).
 
+[2] [Constructing A Simple Fully-Connected DNN for Solving MNIST Image Classification with PyTorch - What a starry night~](http://whatastarrynight.com/machine learning/python/Constructing-A-Simple-Fully-Connected-DNN-for-Solving-MNIST-Image-Classification-with-PyTorch/).
 
-
-
+[3] [Raster vs. Vector Images - All About Images - Research Guides at University of Michigan Library](https://guides.lib.umich.edu/c.php?g=282942&p=1885352#:~:text=Raster (or bitmap) images are,together to create the image.).
 
 
 

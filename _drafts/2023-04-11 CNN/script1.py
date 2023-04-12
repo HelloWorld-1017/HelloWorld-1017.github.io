@@ -18,4 +18,4 @@ output = conv_layer(input)
 
 print(input.shape)
 print(conv_layer.weight.shape)
-print(conv_layer.weight.shape)
+print(output.shape)

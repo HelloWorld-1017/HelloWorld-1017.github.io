@@ -50,7 +50,7 @@ categories:
 
 - **LeNet**：Y. Lecun, L. Bottou, Y. Bengio and P. Haffner, "**Gradient-based learning applied to document recognition**," in *Proceedings of the IEEE*, vol. 86, no. 11, pp. 2278-2324, Nov. 1998, doi: 10.1109/5.726791. Available: https://ieeexplore.ieee.org/abstract/document/726791.
 - **AlexNet**: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "**Imagenet classification with deep convolutional neural networks**." *Communications of the ACM* 60.6 (2017): 84-90. Available: https://dl.acm.org/doi/abs/10.1145/3065386.
-- **GoogLeNet**: Szegedy, Christian, et al. "Going deeper with convolutions." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2015. Available: https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html.
+- **GoogLeNet**: Szegedy, Christian, et al. "**Going deeper with convolutions**." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2015. Available: https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html.
 - **VGG**: Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." *arXiv preprint arXiv:1409.1556* (2014). Available: https://arxiv.org/abs/1409.1556.
 - **ResNet**: He, Kaiming, et al. "**Deep residual learning for image recognition**." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016. Available: https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html.
 

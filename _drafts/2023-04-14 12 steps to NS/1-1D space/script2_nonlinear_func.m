@@ -30,7 +30,9 @@ helperNonLinearCon(200)
 function helperNonLinearCon(nx)
 dx = 2/(nx-1); % deta x: 0.05
 nt = 25;       % nt is the number of timesteps we want to calculate
-dt = .025;     % delt t: 0.025
+% dt = .025;     % delt t: 0.025
+sigma = .5;
+dt = sigma*dx;
 
 % Set initial condition
 un = nan(nt,nx);

@@ -83,7 +83,7 @@ print(conv_layer.weight.shape)
 print(output.shape)
 ```
 
-```python
+```
 torch.Size([1, 5, 100, 100])
 torch.Size([10, 5, 3, 3])
 torch.Size([1, 10, 98, 98])
@@ -119,7 +119,7 @@ output = conv_layer(input)
 print(output)
 ```
 
-```python
+```
 tensor([[[[ 91., 168., 224., 215., 127.],
           [114., 211., 295., 262., 149.],
           [192., 259., 282., 214., 122.],
@@ -157,7 +157,7 @@ output = conv_layer(input)
 print(output)
 ```
 
-```python
+```
 tensor([[[[211., 262.],
           [251., 169.]]]], grad_fn=<ConvolutionBackward0>)
 ```

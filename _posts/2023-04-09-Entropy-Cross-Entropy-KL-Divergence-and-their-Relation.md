@@ -350,7 +350,7 @@ Loss = -mean(pv0.*log(phat0)+(1-pv0).*log(1-phat0));
 end
 ```
 
-```matlab
+```
 0.7469
 0.4004
 2.1293
@@ -395,7 +395,7 @@ Loss = -mean(pv0.*log(phat0)+pv1.*log(phat1));
 end
 ```
 
-```matlab
+```
 0.7469
 0.4004
 2.1293

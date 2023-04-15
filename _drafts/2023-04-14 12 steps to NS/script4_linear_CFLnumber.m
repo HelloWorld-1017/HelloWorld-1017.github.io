@@ -13,25 +13,26 @@ nexttile
 hold(gca,"on")
 grid(gca,"on")
 box(gca,"on")
-helperLinearCon(61)
+helperLinearCon(81)
 
 nexttile
 hold(gca,"on")
 grid(gca,"on")
 box(gca,"on")
-helperLinearCon(71)
+helperLinearCon(101)
 
 nexttile
 hold(gca,"on")
 grid(gca,"on")
 box(gca,"on")
-helperLinearCon(85)
+helperLinearCon(121)
 
 function helperLinearCon(nx)
 dx = 2/(nx-1); % deta x: 0.05
 nt = 20;       % nt is the number of timesteps we want to calculate
-dt = .025;     % delt t: 0.025
 c = 1;
+sigma = .5;
+dt = sigma*dx;
 
 % Set initial condition
 un = nan(nt,nx);

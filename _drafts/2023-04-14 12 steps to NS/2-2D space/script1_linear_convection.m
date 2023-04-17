@@ -31,8 +31,8 @@ title("Initial interations")
 for i = 2:nt
     un = u;
     u(2:end,2:end) = un(2:end,2:end)...
-        -(c*dt/dx)*(un(2:end,2:end)-un(2:end,1:end-1))...
-        -(c*dt/dy)*(un(2:end,2:end)-un(1:end-1,2:end));
+        -(c*dt/dx)*(un(2:end,2:end)-un(1:end-1,2:end))...
+        -(c*dt/dy)*(un(2:end,2:end)-un(2:end,1:end-1));
     u(1,:) = 1;
     u(end,:) = 1;
     u(:,1) = 1;

@@ -1,15 +1,14 @@
 ---
 layout: single
-title: Install the minimal-mistakes-jekyll Theme in Github Pages
+title: Install the Minimal-mistakes-jekyll Theme in Github Pages
 date: 2022-07-17 12:25:11 +0800
 categories: 
  - Github Pages
 tags: 
  - Jekyll
-toc: false
 ---
 
-
+# Minimal-mistakes-jekyll Theme Installation
 
 一开始，使用 github pages + Jekyll 建立个人网站的时候，使用的是一个比较简单的主题，总体结构也很清晰，但是后面想给网站添加一些功能就比较麻烦，比如添加评论功能、添加站内搜索功能、SEO优化等等。麻烦就麻烦在一些插件的功能同样比较少，并且只有少数几个插件在 Github 白名单中。
 
@@ -172,15 +171,46 @@ Conversion error: Jekyll::Converters::Scss encountered an error while converting
 
 bingo~
 
+<br>
 
+# Other Tools
 
+（2023年04月17日）
 
+## Code block settings 
 
+如果想要使得博客中的代码块显示行号，以及更多的显示主题格式或者功能，可以参考博客 [1] 使用`prism.js`的插件，可以直接在官网：[Download ▲ Prism (prismjs.com)](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)下载，并按照博客 [1] 所提供的方式进行配置。但是在配置之后，网站中有的代码块会出现行号显示不全的情况：
 
+![image-20230417093737199](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230417093737199.png)
 
+不太清楚这是什么原因导致的。
 
+## Centering the figures
 
+虽然我们在`.md`文件中插入的图片都是居中显示的，但是在基于minimal-mistakes-jekyll构建的网站中图片都是左对齐的。个人觉得，图片还是居中显示比较美观，但是网上的很多解决方法都是针对单张图像的。使用这种方法来居中图片，显然太繁琐了。Stackoverflow中有一个相关问题 [2]，Lazy Ren做出了详细的回答，我采用了其中将所有图片都居中的一种方式：在`./assets/css/main.scss`文件中添加代码：
 
+```css
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
 
+Lazy Ren也指出这种方式可能存在风险：
 
+> But note that I have not tested deeply enough to find out any unwanted side effects. So use it at your own risk.
 
+因为这段代码可能是将网站中的**所有**图像都居中。因此，一个“意料之外”的改变是主页中以及博客中的avatar就也被居中了：
+
+![image-20230417095125144](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230417095125144.png)
+
+原先avatar是和文字是左端对齐的。
+
+<br>
+
+**References**
+
+[1] [为 jekyll 中的代码块添加行号 - LIUMH的博客](https://hugueliu.github.io/2019/12/28/add_line_number_for_code_block_in_jekyll/).
+
+[2] [css - Jekyll Blog Post: Centering Images - Stack Overflow](https://stackoverflow.com/questions/23819197/jekyll-blog-post-centering-images).

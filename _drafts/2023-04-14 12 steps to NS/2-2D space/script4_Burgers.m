@@ -20,7 +20,8 @@ vn = ones(ny,nx);
 u(floor(.5/dy):floor(1/dy+1),floor(.5/dx):floor(1/dx+1))= 2;
 v(floor(.5/dy):floor(1/dy+1),floor(.5/dx):floor(1/dx+1))= 2;
 
-figure
+figure('Units','pixels', ...
+    'Position',[728.33,386.33,1554,369.99])
 tiledlayout(1,3)
 nexttile
 box(gca,"on")

@@ -7,10 +7,10 @@ header:
 date: 2022-09-28 23:42:17 +0800
 categories: 
  - Mathematics
+ - Wisdom
 tags:
  - Probability Theory and Mathematical Statistics
  - Experiment
- - Wisdom
 toc: false
 ---
 

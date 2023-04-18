@@ -5,9 +5,9 @@ date: 2022-07-26 13:01:33 +0800
 categories: 
  - Psychology
  - Mathematics
+ - Wisdom
 tags: 
  - Probability Theory and Mathematical Statistics
- - Wisdom
 toc: false
 ---
 <br>

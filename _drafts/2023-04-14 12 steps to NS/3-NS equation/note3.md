@@ -127,7 +127,7 @@ $$
 &b_{i,j}=0\ \text{everywhere\ else}
 \end{split}
 $$
-迭代将在伪时间（pseud0-time）内进行，以放松初始尖峰。泊松方程下的松弛随着它们的进展而变得越来越慢。为什么？
+迭代将在伪时间（pseudo-time）内进行，以放松初始尖峰。泊松方程下的松弛随着它们的进展而变得越来越慢。为什么？
 
 
 
@@ -144,13 +144,15 @@ $$
 \dfrac{\partial\vec{v}}{\partial t}+(\vec{v}\cdot\nabla)\vec{v}&=-\dfrac1\rho\nabla p+\nu\nabla^2\vec{v}
 \end{split}
 $$
-其中$\vec{v}$表示速度场。第一个方程表示恒定密度下的质量守恒；第二个方程是动量守恒的表达式（==如何等效？==）。但是。。。
+其中$\vec{v}$表示速度场。第一个方程表示恒定密度下的质量守恒；第二个方程是动量守恒的表达式（==如何等效？==）。但是出现的一个问题是：不可压缩流体的连续方程没有一个控制变量（dominant variable），因此没有一种显而易见的方式来耦合速度和压强。在可压缩流体中，质量连续性（mass continuity）能够提供密度$\rho$的演化方程，与$\rho$和$p$相关的状态方程相耦合。
+
+对于不可压缩流体，连续方程$\nabla\cdot\vec{v}=0$提供了运动约束，该约束需要压强场演化以使得膨胀率（rate of expansion）$\Delta\cdot\vec{v}$在每一处消失。解决这一困难的方法是构建一个保证连续性得到满足的压强场；这样的关系可以通过**动量方程的散度（divergence of the momentum equation）**来获得。在这个过程中，就出现了压强的泊松方程（Poisson equation）。
 
 <br>
 
 # Cavity Flow with NS Equation
 
-微分方程系统：两个方程用于求解速度分量$u$和$u$，一个方程用于求解压强：
+微分方程系统：两个方程用于求解速度分量$u$和$u$，一个方程用于求解pressure：
 $$
 \begin{split}
 &\dfrac{\partial u}{\partial t}+u\dfrac{\partial u}{\partial x}+v\dfrac{\partial u}{\partial y}=-\dfrac1\rho\dfrac{\partial p}{\partial x}+\nu(\dfrac{\partial^2u}{\partial x^2}+\dfrac{\partial^2u}{\partial y^2})\\
@@ -159,8 +161,7 @@ $$
 \end{split}
 $$
 
-
-
+首先
 
 
 
@@ -182,11 +183,25 @@ $$
 
 **References**
 
-[6] [CFDPython/12_Step_9.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/12_Step_9.ipynb). （2D Laplace Equation）
+[1] Barba, Lorena A., and Forsyth, Gilbert F. (2018). CFD Python: the 12 steps to Navier-Stokes equations. *Journal of Open Source Education*, **1**(9), 21, https://doi.org/10.21105/jose.00021.
 
-[7] [CFDPython/13_Step_10.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/13_Step_10.ipynb).（2D Poisson Equation）
+[2] [CFDPython/12_Step_9.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/12_Step_9.ipynb). （2D Laplace Equation）
 
-[8] [CFDPython/14_Step_11.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/14_Step_11.ipynb). （Cavity Flow with Navier–Stokes）
+[3] [CFDPython/13_Step_10.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/13_Step_10.ipynb).（2D Poisson Equation）
+
+[XX] [CFDPython/14_Step_11.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/14_Step_11.ipynb). （Cavity Flow with Navier–Stokes）
 
 [9] [CFDPython/15_Step_12.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/15_Step_12.ipynb). （Channel Flow with Navier–Stokes）
+
+[Momentum Equations of the Fluid from Fundamentals of Aerodynamics by Anderson - What a starry night~](http://whatastarrynight.com/mathematics/computational fluid dynamics/Momentum-Equations-of-the-Fluid-from-Fundamentals-of-Aerodynamics-by-Anderson/)
+
+
+
+
+
+
+
+
+
+
 

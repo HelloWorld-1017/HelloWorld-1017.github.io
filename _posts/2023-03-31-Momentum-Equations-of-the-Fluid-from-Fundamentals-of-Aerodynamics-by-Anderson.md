@@ -212,13 +212,22 @@ $$
 \dfrac{\partial({\rho w)}}{\partial t}+\nabla\cdot(\rho w\boldsymbol{\mathrm{V}})=-\dfrac{\partial p}{\partial z}+\rho f_z+\boldsymbol({\mathcal{F}_z})_{viscous}\label{NSz}
 $$
 
+将方程$\eqref{NSx}$到$\eqref{NSz}$可以用矢量表示法写作 [2]：
+
+$$
+\dfrac{\partial}{\partial t}(\rho\boldsymbol{\mathrm{V}})+\nabla\cdot(\rho\boldsymbol{\mathrm{V}}\otimes\boldsymbol{\mathrm{V}})=-\nabla p+\rho\boldsymbol{f}+{\boldsymbol{\mathcal{F}}}_{viscous}\label{NSvec}
+$$
+
+注：其中，$\otimes$表示外积（outer product） [3]，有：$\boldsymbol{\mathrm{V}}\otimes\boldsymbol{\mathrm{V}}=\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}^{T}$，在有些地方为了简便表示，甚至会直接写作$\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}$，即：$\boldsymbol{\mathrm{V}}\otimes\boldsymbol{\mathrm{V}}=\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}^{T}=\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}$。
+{: .notice-primary}
+
 <br>
 
 # NS Equations and Euler Equations
 
 式$\eqref{integral}$以及式$\eqref{NSx}$到$\eqref{NSz}$可以应用于三维的、不稳定的任何流体，无论是可压缩、不可压缩，还是粘性、非粘性的流体。
 
-对于稳定的（$\partial/\partial t\equiv0$），非粘性（$\boldsymbol{\mathrm{F}}_{viscous}$）的，不考虑体积力（$\boldsymbol{\mathrm{f}}=0$）的流体而言，这些方程可以分别可以简化为：
+对于稳定的（$\partial/\partial t\equiv0$）（稳态系统），非粘性（$\boldsymbol{\mathrm{F}}_{viscous}$）的，不考虑体积力（$\boldsymbol{\mathrm{f}}=0$）的流体而言，这些方程可以分别可以简化为：
 
 $$
 \iint_S(\rho\boldsymbol{\mathrm{V\cdot dS}})\boldsymbol{\mathrm{V}}=-\iint_Sp\boldsymbol{\mathrm{dS}}
@@ -232,13 +241,23 @@ $$
 \end{split}\label{Euler}
 $$
 
-最后需要指出的是，非粘性流体的动量方程（式$\eqref{Euler}$）被称作欧拉方程（Euler equations）；粘性流体的动量方程（式$\eqref{NSx}$到$\eqref{NSz}$）则被称为Navier-Stokes方程（NS equations）。
+其微分形式的矢量表示形式为：
+
+$$
+\nabla\cdot(\rho\boldsymbol{\mathrm{V}}\otimes\boldsymbol{\mathrm{V}})=-\nabla p\label{Eulervec}
+$$
+
+最后需要指出的是，非粘性流体的动量方程（式$\eqref{Euler}$以及对应的$\eqref{Eulervec}$）被称作欧拉方程（Euler equations）；粘性流体的动量方程（式$\eqref{NSx}$-$\eqref{NSz}$以及相对应的$\eqref{NSvec}$）则被称为Navier-Stokes方程（NS equations）。
 
 <br>
 
 **References**
 
 [1] Anderson, John. *EBOOK: Fundamentals of Aerodynamics (SI units)*. McGraw hill, 2011.
+
+[2] [Navier–Stokes equations - Wikipedia](https://en.wikipedia.org/wiki/Navier–Stokes_equations).
+
+[3] [Outer product - Wikipedia](https://en.wikipedia.org/wiki/Outer_product).
 
 
 

@@ -2,7 +2,7 @@
 layout: single
 title: Some egotism of this sort is inevitable
 date: 2022-10-22 15:52:39 +0800
-tags:
+categories:
  - Wisdom
 toc: false
 ---

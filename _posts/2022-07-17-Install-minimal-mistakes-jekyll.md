@@ -179,7 +179,7 @@ bingo~
 
 ## Code block settings 
 
-如果想要使得博客中的代码块显示行号，以及更多的显示主题格式或者功能，可以参考博客 [1] 使用`prism.js`的插件，可以直接在官网：[Download ▲ Prism (prismjs.com)](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)下载，并按照博客 [1] 所提供的方式进行配置。但是在配置之后，网站中有的代码块会出现行号显示不全的情况：
+如果想要使得博客中的代码块显示行号，以及更多的显示主题格式或者功能，可以参考博客 [1] 使用`prism.js`的插件，可以直接在官网：[Download ▲ Prism ](https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+c+csharp+cpp+cilkc+cilkcpp+cmake+css-extras+csv+diff+git+linker-script+http+hpkp+hsts+ignore+java+javadoc+javadoclike+json+json5+jsonp+latex+markup-templating+matlab+nginx+nix+perl+php+php-extras+plsql+powershell+python+r+ruby+rust+sql+uri+vim+visual-basic+yaml&plugins=line-highlight+autolinker+custom-class+file-highlight+show-language+jsonp-highlight+highlight-keywords+inline-color+previewers+autoloader+keep-markup+command-line+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+download-button+match-braces)下载，并按照博客 [1] 所提供的方式进行配置。但是在配置之后，网站中有的代码块会出现行号显示不全的情况：
 
 ![image-20230417093737199](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230417093737199.png)
 

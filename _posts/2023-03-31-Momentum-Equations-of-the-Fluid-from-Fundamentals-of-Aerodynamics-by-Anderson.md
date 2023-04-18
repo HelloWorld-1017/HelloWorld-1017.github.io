@@ -219,7 +219,7 @@ $$
 $$
 
 注：其中，$\otimes$表示外积（outer product） [3]，有：$\boldsymbol{\mathrm{V}}\otimes\boldsymbol{\mathrm{V}}=\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}^{T}$，在有些地方为了简便表示，甚至会直接写作$\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}$，即：$\boldsymbol{\mathrm{V}}\otimes\boldsymbol{\mathrm{V}}=\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}^{T}=\boldsymbol{\mathrm{V}}\boldsymbol{\mathrm{V}}$。
-{: .notice-primary}
+{: .notice--primary}
 
 <br>
 

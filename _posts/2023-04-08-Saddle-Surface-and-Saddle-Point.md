@@ -7,7 +7,7 @@ categories:
  - Machine Learning
  - MATLAB
 tags:
- - Operation Research
+ - Operations Research
  - MATLAB Graphics
  - Geometry
 ---

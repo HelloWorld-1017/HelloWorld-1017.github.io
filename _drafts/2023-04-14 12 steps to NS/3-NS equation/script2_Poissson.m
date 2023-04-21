@@ -64,5 +64,4 @@ title(sprintf("After %s-times iterations",num2str(numIteration)), ...
     'Interpreter','latex')
 xlabel('x','Interpreter','latex')
 ylabel('y','Interpreter','latex')
-zlabel('$p_{i,j}$','Interpreter','latex')
-
+zlabel('$p_{i,j}$','Interpreter','latex')   

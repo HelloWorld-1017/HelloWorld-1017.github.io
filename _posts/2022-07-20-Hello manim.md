@@ -5,7 +5,7 @@ date: 2022-07-20 21:23:43 +0800
 categories: 
  - Python
 tags: 
- - manim
+ - Python manim Package
 ---
 
 # Hello, manim!

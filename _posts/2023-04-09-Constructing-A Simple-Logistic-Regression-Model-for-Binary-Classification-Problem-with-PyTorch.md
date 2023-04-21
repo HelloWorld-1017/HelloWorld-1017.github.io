@@ -4,7 +4,7 @@ title: Constructing A Simple Logistic Regression Model for Binary Classification
 date: 2023-04-09 16:38:03 +0800
 categories: 
  - Machine Learning
- - Operation Research
+ - Operations Research
  - Python
 tags:
  - PyTorch

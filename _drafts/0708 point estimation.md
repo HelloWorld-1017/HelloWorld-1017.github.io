@@ -230,7 +230,6 @@ $I(\theta)$这个量在数理统计学中很重要，有很多方面的应用。
 
 $$
 f(x, \theta)=(\sqrt{2\pi}\sigma)^{-1}\exp\Big( -\dfrac{(x-\theta)^2}{2\sigma^2}\Big)
-
 $$
 
 进一步有：

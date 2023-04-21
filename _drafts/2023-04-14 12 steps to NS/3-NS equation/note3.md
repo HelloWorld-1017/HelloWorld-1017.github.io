@@ -101,7 +101,7 @@ zlabel('$p_{i,j}$','Interpreter','latex')
 
 <br>
 
-# 2D Poisson Equation
+# 2D Poisson Equation（lesson 13）
 
 在二维Laplace方程的右端添加一个源项（source term），可以得到二维的泊松方程：
 $$
@@ -129,7 +129,77 @@ $$
 $$
 迭代将在伪时间（pseudo-time）内进行，以放松初始尖峰。泊松方程下的松弛随着它们的进展而变得越来越慢。为什么？
 
-==代码+图像==
+```matlab
+clc,clear,close all
+
+nx = 50;
+ny = 50;
+nt = 100;
+xmin = 0;
+xmax = 2;
+ymin = 0;
+ymax = 1;
+
+dx = (xmax-xmin)/(nx-1);
+dy = (ymax-ymin)/(ny-1);
+
+p = zeros(nx,ny);
+pd = zeros(nx,ny);
+b = zeros(nx,ny);
+x = linspace(xmin,xmax,nx);
+y = linspace(xmin,xmax,ny);
+
+% Source term
+b(floor(ny/4),floor(nx/4)) = 100;
+b(floor(3*ny/4),floor(3*nx/4)) = -100;
+
+figure('Units','pixels', ...
+    'Position',[728.33,386.33,940.67,369.99])
+tiledlayout(1,2)
+nexttile
+box(gca,"on")
+grid(gca,"on")
+[X,Y] = meshgrid(x,y);
+surf(X,Y,p+b,'EdgeColor','none')
+colormap("jet")
+colorbar
+title("The combination of initial condition and initial spikes",'Interpreter','latex')
+xlabel('x','Interpreter','latex')
+ylabel('y','Interpreter','latex')
+zlabel('$p_{i,j}+b_{i,j}$','Interpreter','latex')
+
+l1norm_target = 1e-4;
+l1norm = 1;
+numIteration = 0;
+while l1norm > l1norm_target
+    pd = p;
+    p(2:end-1,2:end-1) = (dy^2*(pd(3:end,2:end-1)+pd(1:end-2,2:end-1))...
+        +dx^2*(pd(2:end-1,3:end)+pd(2:end-1,1:end-2))...
+        +b(2:end-1,2:end-1)*dx^2*dy^2)...
+        ./(2*dx^2+2*dy^2);
+    p(1,:) = 0;
+    p(end,:) = 0;
+    p(:,1) = 0;
+    p(:,end) = 0;
+
+    l1norm = sum(abs(p(:))-abs(pd(:)),'all')/sum(abs(pd(:)),'all');
+    numIteration = numIteration+1;
+end
+
+nexttile
+box(gca,"on")
+grid(gca,"on")
+surf(X,Y,p,'EdgeColor','none')
+colormap("jet")
+colorbar
+title(sprintf("After %s-times iterations",num2str(numIteration)), ...
+    'Interpreter','latex')
+xlabel('x','Interpreter','latex')
+ylabel('y','Interpreter','latex')
+zlabel('$p_{i,j}$','Interpreter','latex')   
+```
+
+![image-20230420101711496](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230420101711496.png)
 
 <br>
 
@@ -161,26 +231,86 @@ $$
 \end{split}
 $$
 
-对于这三个方程，我们可以离散化得到：
-
-==第三个方程如何离散化？Delta t从哪里来的？==
+$u$-动量方程的离散化形式为：
 
 
 $$
-
+\begin{split}
+&\dfrac{u_{i,j}^{n+1}-u_{i,j}^{n}}{\Delta t}+u_{i,j}^n\dfrac{u_{i,j}^n-u_{i-1,j}^n}{\Delta x}+v_{i,j}^n\dfrac{u_{i,j}^n-u_{i,j-1}^n}{\Delta y}\\
+=&-\dfrac1\rho\Big(\dfrac{p_{\textcolor{red}{i+1},j}^n-p_{\textcolor{red}{i-1},j}^n}{\textcolor{red}{2\Delta x}}\Big)
++\nu\Big(\dfrac{u_{i+1,j}^n-2u_{i,j}^n+u_{i-1,j}^n}{(\Delta x)^2}+\dfrac{u_{i,j+1}^n-2u_{i,j}^n+u_{i,j-1}^n}{(\Delta y)^2}\Big)
+\end{split}
 $$
-进而有：
+$v$-动量方程的离散化形式为：
+$$
+\begin{split}
+&\dfrac{v_{i,j}^{n+1}-v_{i,j}^{n}}{\Delta t}+u_{i,j}^n\dfrac{v_{i,j}^n-v_{i-1,j}^n}{\Delta x}+v_{i,j}^n\dfrac{v_{i,j}^n-v_{i,j-1}^n}{\Delta y}\\
+=&-\dfrac1\rho\Big(
+\dfrac{p_{i,\textcolor{red}{j+1}}^n-p_{i,\textcolor{red}{j-1}}^n}{\textcolor{red}{2\Delta y}}
+\Big)
++\nu\Big(\dfrac{v_{i+1,j}^n-2v_{i,j}^n+v_{i-1,j}^n}{(\Delta x)^2}+\dfrac{v_{i,j+1}^n-2v_{i,j}^n+v_{i,j-1}^n}{(\Delta y)^2}\Big)
+\end{split}
+$$
+注：==红色部分==
 
+以及离散化的pressure-Poisson方程：
+$$
+\begin{split}
+&\dfrac{p_{i+1,j}^n-2p_{i,j}^n+p_{i-1,j}^n}{(\Delta x)^2}+\dfrac{p_{i,j+1}^n-2p_{i,j}^n+p_{i,j-1}^n}{(\Delta y)^2}\\
+=&\rho\Big[\textcolor{red}{\dfrac1{\Delta t}\Big(\dfrac{u_{i+1,j}-u_{i-1,j}}{2\Delta x}+\dfrac{v_{i,j+1}-v_{i,j-1}}{2\Delta y}\Big)}-\dfrac{u_{i+1,j}-u_{i-1,j}}{2\Delta x}\dfrac{u_{i+1,j}-u_{i-1,j}}{2\Delta x}\\
+-&2\dfrac{u_{i,j+1}-u_{i,j-1}}{2\Delta y}\dfrac{v_{i+1,j}-v_{i-1,j}}{2\Delta x}
+-\dfrac{v_{i,j+1}-v_{i,j-1}}{2\Delta y}\dfrac{v_{i,j+1}-v_{i,j-1}}{2\Delta y}
+\Big]
+\end{split}
+$$
+注：==红色部分==，==第三个方程如何离散化？Delta t从哪里来的？==
 
-
-
-
+最终根据$u$-动量方程可以得到：
+$$
+\begin{split}
+u_{i,j}^{n+1}=&u_{i,j}^n-u_{i,j}^n\dfrac{\Delta t}{\Delta x}(u_{i,j}^n-u_{i-1,j}^n)-v_{i,j}^n\dfrac{\Delta t}{\Delta y}(u_{i,j}^n-u_{i,j-1}^n)\\
+&-\dfrac{\Delta t}{2\rho\Delta x}(p_{i+1,j}^n-p_{i-1,j}^n)\\
+&+\nu\Big[\dfrac{\Delta t}{(\Delta x)^2}\Big(u_{i+1,j}^n-2u_{i,j}^n+u_{i-1,j}^n\Big)
++\dfrac{\Delta t}{(\Delta y)^2}\Big(u_{i,j+1}^n-2u_{i,j}^n+u_{i,j-1}^n
+\Big)\Big]
+\end{split}
+$$
+根据$v$-动量方程可以得到：
+$$
+\begin{split}
+v_{i,j}^{n+1}=&v_{i,j}^n-u_{i,j}^n\dfrac{\Delta t}{\Delta x}(v_{i,j}^n-v_{i-1,j}^n)-v_{i,j}^n\dfrac{\Delta t}{\Delta y}(u_{i,j}^n-u_{i,j-1}^n)\\
+&-\dfrac{\Delta t}{2\rho\Delta y}(p_{i,j+1}^n-p_{i,j-1}^n)\\
+&+\nu\Big[\dfrac{\Delta t}{(\Delta x)^2}\Big(v_{i+1,j}^n-2v_{i,j}^n+v_{i-1,j}^n\Big)
++\dfrac{\Delta t}{(\Delta y)^2}\Big(v_{i,j+1}^n-2v_{i,j}^n+v_{i,j-1}^n
+\Big)\Big]
+\end{split}
+$$
+根据pressure-Poisson方程可以的得到：
+$$
+\begin{split}
+p_{i,j}=&\dfrac12\dfrac{(p_{i+1,j}^n+p_{i-1,j}^n)(\Delta y)^2+(p_{i,j+1}^n+p_{i,j-1}^n)(\Delta x)^2}{(\Delta x)^2+(\Delta y)^2}\\
+&-\dfrac12\dfrac{\rho(\Delta x)^2(\Delta y)^2}{(\Delta x)^2+(\Delta y)^2}\\
+&\times\Big[\dfrac1{\Delta t}\Big(\dfrac{u_{i+1,j}-u_{i-1,j}}{2\Delta x}+\dfrac{v_{i,j+1}-v_{i,j-1}}{2\Delta y}\Big)-\dfrac{u_{i+1,j}-u_{i-1,j}}{2\Delta x}\dfrac{u_{i+1,j}-u_{i-1,j}}{2\Delta x}\\
+&-2\dfrac{u_{i,j+1}-u_{i,j-1}}{2\Delta y}\dfrac{v_{i+1,j}-v_{i-1,j}}{2\Delta x}
+-\dfrac{v_{i,j+1}-v_{i,j-1}}{2\Delta y}\dfrac{v_{i,j+1}-v_{i,j-1}}{2\Delta y}
+\Big]
+\end{split}
+$$
 初始条件为：
 
-
-
-
-
+$$
+u,v,p=0\ \text{everywhere}
+$$
+边界条件为：
+$$
+\begin{split}
+&u=1\ \text{at}\ y=2\\
+&u,v=0\ \text{on the other boundaries}\\
+&\dfrac{\partial p}{\partial y}=0\ \text{at}\ y=0\\
+&p=0\ \text{at}\ y=2\\
+&\dfrac{\partial p}{\partial x}=0\ \text{at}\ x=0,2
+\end{split}
+$$
 
 
 

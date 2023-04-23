@@ -4,10 +4,10 @@ title: Simple Gradient Descend (GD) and Stochastic Gradient Descend (SGD) Method
 date: 2023-04-04 10:04:03 +0800
 categories: 
  - Machine Learning
- - Operation Research
  - Python
 tags:
  - PyTorch
+ - Operations Research
 ---
 
 # Gradient Descend

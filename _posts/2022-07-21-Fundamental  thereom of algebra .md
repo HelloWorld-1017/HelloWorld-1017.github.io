@@ -10,7 +10,7 @@ tags:
 
 # Content
 
-The **fundamental theorem of algebra**, also known as d'Alembert's theorem, or the d'Alembert–Gauss theorem, states that <u>every non-constant single-variablepolynomial with complex coefficients has at least one complex root</u>. This includes polynomials with real coefficients, since every real number is a complex number with its imaginary part equal to zero.
+The **fundamental theorem of algebra**, also known as d'Alembert's theorem, or the d'Alembert–Gauss theorem, states that <u>every non-constant single-variable polynomial with complex coefficients has at least one complex root</u>. This includes polynomials with real coefficients, since every real number is a complex number with its imaginary part equal to zero.
 
 The theorem is also stated as follows: <u>every non-zero, single-variable, degree n polynomial with complex coefficients has, counted with multiplicity, exactly n complex roots</u>. The equivalence of the two statements can be proven through the use of successive polynomial division.
 
@@ -38,9 +38,9 @@ There are several equivalent formulations of the theorem:
 
 （2）对于多变量的情形，比如对于四次方程 $x^2y^2-1=0$，该定理并不给出根的存在情况，事实上，这个方程有无穷多个根；
 
-（3）这个定理是个**存在性定理**，并不给出根的精确位置。实际上，Abel–Ruffini theorem 证明了五次以上的多项式不存在代数解
+（3）这个定理是个**存在性定理**，并不给出根的精确位置。实际上，Abel-Ruffini theorem 证明了五次以上的多项式不存在代数解
 
-   > **Abel–Ruffini theorem** $^{[2]}$
+   > **Abel-Ruffini theorem** $^{[2]}$
    >
    > In mathematics, the Abel–Ruffini theorem (also known as Abel's impossibility theorem) states that there is no solution in radicals to general polynomial equations of degree five or higher with arbitrary coefficients. Here, general means that the coefficients of the equation are viewed and manipulated as indeterminates(variable).
    >
@@ -48,7 +48,7 @@ There are several equivalent formulations of the theorem:
    >
    > <br>
    >
-   > BTW，3Blue1Brown 频道在介绍群论的时候提到过该定理的一个证明方式。群论(Group theory)是一门研究对称性的一门学科，从群论的观点看，假设五次方程真的有求根公式，而这个求根公式只用到了四则运算和根号，那么5个元素的置换群$S_5$能够分解成一类特殊的单群，即素数阶循环群(cyclic groups of prime order)，但是如果讲 $S_5$  **真正地** 分解， 则用到了另一类单群，而带根号的求根公式中绝不会出现这种单群，根据这个矛盾推出了假设——五次方程有求根公式——是错误的。当然，其中略去的细节需要相当长的时间才能讲完😂
+   > BTW，3Blue1Brown 频道在介绍群论的时候提到过该定理的一个证明方式 [3]。群论(Group theory)是一门研究对称性的一门学科，从群论的观点看，假设五次方程真的有求根公式，而这个求根公式只用到了四则运算和根号，那么5个元素的置换群$S_5$能够分解成一类特殊的单群，即素数阶循环群(cyclic groups of prime order)，但是如果讲 $S_5$  **真正地** 分解， 则用到了另一类单群，而带根号的求根公式中绝不会出现这种单群，根据这个矛盾推出了假设——五次方程有求根公式——是错误的。当然，其中略去的细节需要相当长的时间才能讲完😂
 
 （4）该定理可用于判定**一类**二元 $n$ 次方程组解的情况：
 

@@ -10,7 +10,7 @@ categories:
  - MATLAB
 tags:
  - MATLAB Graphics
- - Operation Research
+ - Operations Research
 ---
 
 # Entropy

@@ -6,7 +6,7 @@ categories:
  - Mathematics
  - MATLAB
 tags:
- - Calculus
+ - Mathematical Analysis
  - MATLAB Graphics
 toc: false
 ---

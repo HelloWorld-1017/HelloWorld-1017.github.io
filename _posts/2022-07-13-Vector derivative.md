@@ -1,12 +1,12 @@
 ---
 layout: single
 title: 向量求导公式
-date: 2022-07-13 17:45:25
+date: 2022-07-14 17:45:25
 categories: 
  - Mathematics
 tags: 
  - Matrix
- - Calculus
+ - Mathematical Analysis
 ---
 
 # 标量对向量求导

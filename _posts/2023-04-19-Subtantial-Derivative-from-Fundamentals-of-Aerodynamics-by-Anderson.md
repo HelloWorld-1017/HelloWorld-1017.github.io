@@ -6,7 +6,7 @@ categories:
  - Mathematics
  - Computational Fluid Dynamics
 tags:
- - Calculus
+ - Mathematical Analysis
 ---
 
 # Substantial Derivative
@@ -71,21 +71,21 @@ $$
 +\Big(\dfrac{\partial\rho}{\partial t}\Big)\Big\vert_1\label{eq3}
 $$
 
-式中，$(\rho_2-\rho_1)/(t_2-t_1)$表示：随着流体微团从点1移动到点2，流体微团**密度变化的平均（*average*）时间速率**。随着时间$t_2$无限接近$t_1$，这一项可以写作：
+式中，$(\rho_2-\rho_1)/(t_2-t_1)$表示：随着流体微团从点1移动到点2，流体微团密度变化的平均（*average*）时间速率。随着时间$t_2$无限接近$t_1$，这一项可以写作：
 
 $$
 \lim_{t_2\rightarrow t_1}\dfrac{\rho_2-\rho_1}{t_2-t_1}=\dfrac{D\rho}{Dt}\notag
 $$
 
-这里，左端项$D\rho/Dt$表示：随着流体微团移动经过点1，流体微团**密度变化的瞬时（*instantaneous*）时间速率**。符号
+这里，左端项$D\rho/Dt$表示：随着流体微团移动经过点1，流体微团密度变化的瞬时（*instantaneous*）时间速率。符号
 
 $$
 D/Dt\notag
 $$
 
-被定义为**物质导数（substantial derivative）**。
+被定义为物质导数（substantial derivative）。
 
-注意，$D\rho/Dt$随着一个给定流体微团（a **given fluid element**）穿过空间，该流体微团密度变化的时间速率。我们的视角始终锁定在这个流体微团运动，在它经过点1时，我们看到了这个流体微团的密度发生了变化。因此，它与$(\partial\rho/\partial t)_1$是不一样的，后者在物理上表示**固定（fixed）**点处密度变化的时间速率。对于$(\partial\rho/\partial t)_1$，我们是将视角固定在固定点1处，并且观测到由流场中的瞬态波动（transient fluctuations）而导致的密度变化。因此，$D\rho/Dt$和$(\partial\rho/\partial t)_1$在物理上（physically）和数值上（numerically）都是不同的量。
+注意，$D\rho/Dt$随着一个给定流体微团（a given fluid element）穿过空间，该流体微团密度变化的时间速率。我们的视角始终锁定在这个流体微团运动，在它经过点1时，我们看到了这个流体微团的密度发生了变化。因此，它与$(\partial\rho/\partial t)_1$是不一样的，后者在物理上表示固定（fixed）点处密度变化的时间速率。对于$(\partial\rho/\partial t)_1$，我们是将视角固定在固定点1处，并且观测到由流场中的瞬态波动（transient fluctuations）而导致的密度变化。因此，$D\rho/Dt$和$(\partial\rho/\partial t)_1$在物理上（physically）和数值上（numerically）都是不同的量。
 
 对于式$\eqref{eq3}$的右端，我们注意到有：
 
@@ -124,7 +124,7 @@ $$
 \nabla\equiv\boldsymbol{\mathrm{i}}\dfrac{\partial}{\partial x}+\boldsymbol{\mathrm{j}}\dfrac{\partial}{\partial y}+\boldsymbol{\mathrm{k}}\dfrac{\partial}{\partial z}
 $$
 
-注：算子$\nabla$也被称为是**哈密顿算子（Hamilton operator）**。
+注：算子$\nabla$也被称为是哈密顿算子（Hamilton operator）。
 {: .notice--primary}
 
 因此，式$\eqref{eq5}$也可以写作：
@@ -137,9 +137,9 @@ $$
 
 再次强调，式$\eqref{eq6}$中：
 
-- $D/Dt$是**物质导数（substantial derivative）**，在物理上表示的是随移动流体微团变化的时间速率（which is physically the time rate of change following a moving fluid element）;
-- $\partial/\partial t$被称作**局部导数（local derivative）**，在物理上表示在一个固定点处变化的时间速率（which is physically the time rate of change at a fixed point）；
-- $\boldsymbol{\mathrm{V}}\cdot\nabla$被称作**对流导数（convective derivative）**，在物理上表示由于流体微团从流场中的一个点到另外一个另一个点（这两个点在空间中的流场性质不同）的运动而变化的时间速率（which is physically the time rate of change due to the movement of the fluid element from one location to another in the flow field where the flow properties are spatially different）。
+- $D/Dt$是物质导数（substantial derivative），在物理上表示的是随移动流体微团变化的时间速率（which is physically the time rate of change following a moving fluid element）;
+- $\partial/\partial t$被称作局部导数（local derivative），在物理上表示在一个固定点处变化的时间速率（which is physically the time rate of change at a fixed point）；
+- $\boldsymbol{\mathrm{V}}\cdot\nabla$被称作对流导数（convective derivative），在物理上表示由于流体微团从流场中的一个点到另外一个另一个点（这两个点在空间中的流场性质不同）的运动而变化的时间速率（which is physically the time rate of change due to the movement of the fluid element from one location to another in the flow field where the flow properties are spatially different）。
 
 物质导数可以应用于任何的流场变量（e.g., $Dp/Dt,\ DT/Dt,\ Du/Dt$），例如对于温度$T$有：
 
@@ -155,7 +155,7 @@ $$
 
 > Again, Equation $\eqref{eq7}$ states physically that the temperature of the fluid element is changing as the element sweeps past a point in the flow because at that point the flow-field temperature itself may be fluctuating with time (the local derivative) and because the fluid element is simply on its way to another point in the flow field where the temperature is different (the convective derivative).）
 
-想象这样一个场景可能会帮助我们来理解物质导数的含义：假如我们正在山上徒步，此时我们准备进入一个山洞。山洞内部的温度比外面更低。因此，当我们穿过洞口时，我们会感到温度的降低——这类似于**对流导数**；另一方面，想象与此同时，一个朋友向我们丢了一个雪球，并且当我们经过洞口的瞬间雪球刚好砸中我们。当雪球击中我们时，我们会感受到一个额外的、瞬间的温度降低——这类似于**局部导数**。因此，当我们经过洞口时所感受到的净温度降低（net temperature drop）是这两个影响的共同作用：（1）进入洞穴；（2）与此同时被雪球击中——这个净温度降低就类似于**物质导数**。
+想象这样一个场景可能会帮助我们来理解物质导数的含义：假如我们正在山上徒步，此时我们准备进入一个山洞。山洞内部的温度比外面更低。因此，当我们穿过洞口时，我们会感到温度的降低——这类似于对流导数；另一方面，想象与此同时，一个朋友向我们丢了一个雪球，并且当我们经过洞口的瞬间雪球刚好砸中我们。当雪球击中我们时，我们会感受到一个额外的、瞬间的温度降低——这类似于局部导数。因此，当我们经过洞口时所感受到的净温度降低（net temperature drop）是这两个影响的共同作用：（1）进入洞穴；（2）与此同时被雪球击中——这个净温度降低就类似于物质导数。
 
 > Consider an example that will help to reinforce the physical meaning of the substantial derivative. Imagine that you are hiking in the mountains, and you are about to enter a cave. The temperature inside the cave is cooler than outside. Thus, as you walk through the mouth of the cave, you feel a temperature decrease—this is analogous to the convective derivative. However, imagine that, at the same time, a friend throws a snowball at you such that the snowball hits you just at the same instant you pass through the mouth of the cave. You will feel an additional, but momentary, temperature drop when the snowball hits you—this is analogous to the local derivative. The net temperature drop you feel as you walk through the mouth of the cave is therefore a combination of both the act of moving into the cave, where it is cooler, and being struck by the snowball at the same instant—this net temperature drop is analogous to the substantial derivative.
 
@@ -245,11 +245,11 @@ $$
 
 式$\eqref{DNSx}$-$\eqref{DNSz}$就是使用物质导数形式所表达的动量方程。
 
-在现代空气动力学当中，通常称式$\eqref{eq10}$和式$\eqref{NSx}$为基本方程的**守恒形式（conservation form）**（有时候也被称为是**散度形式**，**divergence form**，因为左端项的散度项）；相反，式$\eqref{eq9}$、式$\eqref{DNSx}$-式$\eqref{DNSz}$被称作**非守恒形式（nonconservation form）**，因为左端项具有物质导数。这两种形式都是基本方程的有效描述，在大多数情况下，没有特别的理由选择一种形式而不是另一种形式。非守恒形式频繁地出现在教科书和动力学理论中；然而，**对于一些空气动力学理论的数值求解方法，守恒形式有时会得到更加精确的结果**。因此，守恒形式和非守恒形式之间的区别在现代计算流体动力学学科中变得很重要。
+在现代空气动力学当中，通常称式$\eqref{eq10}$和式$\eqref{NSx}$为基本方程的守恒形式（conservation form）（有时候也被称为是散度形式，divergence form，因为左端项的散度项）；相反，式$\eqref{eq9}$、式$\eqref{DNSx}$-式$\eqref{DNSz}$被称作非守恒形式（nonconservation form），因为左端项具有物质导数。这两种形式都是基本方程的有效描述，在大多数情况下，没有特别的理由选择一种形式而不是另一种形式。非守恒形式频繁地出现在教科书和动力学理论中；然而，对于一些空气动力学理论的数值求解方法，守恒形式有时会得到更加精确的结果。因此，守恒形式和非守恒形式之间的区别在现代计算流体动力学学科中变得很重要。
 
 <br>
 
-**References**
+References
 
 [1] Anderson, John. *EBOOK: Fundamentals of Aerodynamics (SI units)*. McGraw hill, 2011.
 

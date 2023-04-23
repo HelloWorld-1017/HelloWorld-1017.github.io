@@ -1,6 +1,6 @@
 ---
 layout: single
-title: MATLAB Example--Condition Monitoring and Prognostics Using Vibration Signals
+title: Condition Monitoring and Prognostics Using Vibration Signals
 date: 2022-09-21 19:46:45 +0800
 categories: 
  - MATLAB
@@ -27,7 +27,7 @@ tags:
 
 `pdmBearingConditionMonitoringData.mat`文件中的数据内容：
 
-```matlab
+```
 Name                  Size               Bytes  Class     Attributes
   data                600x1             96062400  cell                
   defectDepthVec      600x1                 4800  double              
@@ -121,13 +121,17 @@ axis xy
 因此，在健康状态下和故障状态下震动信号的频谱是不同的，可以用于故障诊断。在本例中，从频谱中提取mean peak frequencies作为health indicator。
 
 设频谱为$P(t,\omega)$，peak frequency可以表示为：
+
 $$
 PeakFreq(t)=\arg\max_\omega P(t,\omega)\notag
 $$
+
 则mean peak frequency为peak frequency的均值：
+
 $$
 meanPeakFreq=\dfrac1T\int_0^TPeakFreq(t)\mathrm{d}t\notag
 $$
+
 计算健康震动信号的mean peak frequency：
 
 ```matlab
@@ -135,7 +139,7 @@ $$
 meanPeakFreq0 = mean(fvec(I0))  % Calculate mean peak frequency.
 ```
 
-```matlab
+```
 meanPeakFreq0 =
   666.4602
 ```
@@ -147,7 +151,7 @@ meanPeakFreq0 =
 meanPeakFreqFinal = mean(fvec(Ifinal))
 ```
 
-```matlab
+```
 meanPeakFreqFinal =
    2.8068e+03
 ```
@@ -235,7 +239,7 @@ batchSize = 10;             % Define batch size for updating the dynamic model
 
 `pdmBearingConditionMonitoringStatistics.mat`文件的数据内容如下所示：
 
-```matlab
+```
 Name               Size            Bytes  Class     Attributes
 
   dataFaulty       100x1               800  double              
@@ -331,9 +335,11 @@ FPE: 640, MSE: 602.7
 {: .notice--primary}
 
 可以看到，这个initial estimated dynamic model的拟合效果不好。拟合效果的评判指标是normalized root mean square error (NRMSE)（即上面的`Fit to estimation data: 0.2763%(prediction focus)`，计算公式为：
+
 $$
 NRMSE=1-\dfrac{\vert\vert x_{true}-x_{pred}\vert\vert}{\vert\vert x_{true}-mean(x_{true})\vert\vert}\notag
 $$
+
 这个数值越大越好。而初始的前200个数据点大致是常数和噪声的叠加，此时$x_{pred}\approx mean(x_{true})$，此时NRMSE接近于0。
 
 为了验证这个模型，绘制autocorrelation of residuals：

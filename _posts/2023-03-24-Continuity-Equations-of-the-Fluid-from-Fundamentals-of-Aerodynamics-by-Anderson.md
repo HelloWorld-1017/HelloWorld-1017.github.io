@@ -6,7 +6,7 @@ categories:
  - Mathematics
  - Computational Fluid Dynamics
 tags:
- - Calculus
+ - Mathematical Analysis
 ---
 
 # The Definitions of Mass Flow and Mass Flux

@@ -16,5 +16,6 @@ for k = 3:2:ub
 end
 disp(find(p))
 p = cast(find(p)*2-1,class(n)); % Convert variable to different data type
+disp(p)
 p(1) = 2;
 

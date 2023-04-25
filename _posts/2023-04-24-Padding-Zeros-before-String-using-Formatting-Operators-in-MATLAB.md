@@ -11,25 +11,25 @@ toc: false
 
 在MATLAB中，可以使用格式化运算符（Formatting Operators）来固定字符串的长度（不足的部分补零），`sprintf`函数和`num2str`函数均接受这样的语法：
 
-```
+```matlab
 >> sprintf("test%04d",100)
 ans = 
     "test0100"
 ```
 
-```
+```matlab
 >> sprintf("test%04s",num2str(100))
 ans = 
     "test0100"
 ```
 
-```
+```matlab
 >> sprintf("test%s",num2str(100,"%04d"))
 ans = 
     "test0100"
 ```
 
-```
+```matlab
 >> sprintf("test%04s","ttt")
 ans = 
     "test0ttt"

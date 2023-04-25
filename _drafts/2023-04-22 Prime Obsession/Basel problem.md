@@ -55,6 +55,22 @@ $$
 
 
 
+黎曼$\zeta$函数：
+$$
+\zeta(s)=\sum_{n=1}^\infty n^{-s}
+$$
+即：$s$的$\zeta$函数定义为$n$的负$s$次幂的取遍所有正整数$n$的和。
+
+当$s=1$时，这个级数就是调和级数 [4] ，它是发散的，即$\zeta(1)$没有值；
+
+当$s=2$时，这个级数对应的就是Basel问题，即$\zeta(2)=\pi^2/6$，除此之外，欧拉对于$s$为偶数，即$\zeta(4)$，$\zeta(6)$，$\cdots$，均以闭型的方式给出了无穷级数的精确解。
+
+
+
+
+
+
+
 <br>
 
 **References**
@@ -64,6 +80,10 @@ $$
 [2] [Basel problem - Wikipedia](https://en.wikipedia.org/wiki/Basel_problem).
 
 [3] [从巴塞尔问题(Basel problem)的证明到黎曼猜想 - 知乎](https://zhuanlan.zhihu.com/p/126675259).
+
+[4] [Some Classical Series and Fourfold Division of Mathematics from Prime Obsession by Derbyshire - What a starry night~](http://whatastarrynight.com/mathematics/Some-Classical-Series-and-Fourfold-Division-of-Mathematics-from-Prime-Obsession-by-Derbyshire/#divergent-harmonic-series).
+
+
 
 
 

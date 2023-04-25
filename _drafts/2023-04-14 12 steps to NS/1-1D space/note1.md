@@ -730,7 +730,9 @@ end
 
 **References**
 
-[1] [Continuity Equations of the Fluid from Fundamentals of Aerodynamics by Anderson - What a starry night~](http://whatastarrynight.com/mathematics/computational fluid dynamics/Continuity-Equations-of-the-Fluid-from-Fundamentals-of-Aerodynamics-by-Anderson/).
+[1] 
+
+ [Continuity Equations of the Fluid from Fundamentals of Aerodynamics by Anderson - What a starry night~](http://whatastarrynight.com/mathematics/computational fluid dynamics/Continuity-Equations-of-the-Fluid-from-Fundamentals-of-Aerodynamics-by-Anderson/).
 
 [2] [CFDPython/01_Step_1.ipynb at master · barbagroup/CFDPython (github.com)](https://github.com/barbagroup/CFDPython/blob/master/lessons/01_Step_1.ipynb).
 

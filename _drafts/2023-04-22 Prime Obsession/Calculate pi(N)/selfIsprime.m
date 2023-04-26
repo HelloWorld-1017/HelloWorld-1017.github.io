@@ -17,7 +17,6 @@ if ~isempty(X)
             isp(k) = (Xk>1) && all(rem(Xk, p(p<Xk)));
         end
     else
-        
         fm = flintmax(class(X));
         p = primes(sqrt(fm));
         for k = 1:numel(isp)

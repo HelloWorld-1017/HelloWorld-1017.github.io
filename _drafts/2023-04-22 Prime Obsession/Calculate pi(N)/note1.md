@@ -102,60 +102,6 @@ CPU占用率大约在30%，GPU的占用率大约在2%\-3%。
 
 <br>
 
-要判定某个数$N$是不是素数，我们只需要使用素数$2,3,5,\cdots$一个一个地去除$N$，直到其中有一个素数正好可以整除$N$，那么我们就可以说明$N$不是素数。这种尝试直到我们**将要**用来除的素数大于$\sqrt N$时就停下来。
-
-MATLAB提供了一个`primes(n)`函数，用于返回小于等于输入`n`的所有素数的列表。`primes`函数的作用是：
-
-（1）检查输入`n`
-
-```matlab
-if ~isscalar(n) 
-  error(message('MATLAB:primes:InputNotScalar'));
-elseif ~isreal(n)
-  error(message('MATLAB:primes:ComplexInput'));
-end
-
-if n < 2
-  p = zeros(1,0,class(n)); 
-  return
-elseif isfloat(n) && n > flintmax(class(n))
-  warning(message('MATLAB:primes:NGreaterThanFlintmax'));
-  n = flintmax(class(n));  
-end
-```
-
-- 检查`n`是否是标量（如果是向量、矩阵或者其他类型，则报错）；
-  - 如果是标量，则检查`n`是否是实数（如果是复数，则报错）；
-- 检查`n`是否小于2，如果小于2，则返回空向量；
-  - 如果`n`大于2，则会进一步进行关于浮点类型输入的检查：如果输入是浮点类型的输入，则会输入的浮点数类型所支持的最大的连续的整数（整数类型的输入会跳过这一步的检查）；==？==
-
-（2）
-
-`nextpow2`函数；
-
-`cast`函数；
-
-
-
-
-
-（3）检查输入是否小于2，如果小于2，则代表用户输入的的是
-
-```matlab
-%PRIMES Generate list of prime numbers.
-%   PRIMES(N) is a row vector of the prime numbers less than or 
-%   equal to N.  A prime number is one that has no factors other
-%   than 1 and itself.
-```
-
-如果输入的值`n`超过了`flintmax(class(n))`，则会产生警告`warning(message('MATLAB:primes:NGreaterThanFlintmax'));`；
-
-  
-
-
-
-<br>
-
 高斯手算的轶事
 
 <br>
@@ -167,4 +113,8 @@ end
 [2] [Determine which array elements are prime - MATLAB isprime - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/isprime.html).
 
 [3] [Integers - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/integers.html).
+
+[4] https://en.wikipedia.org/wiki/Prime_number#Special-purpose_algorithms_and_the_largest_known_prime.
+
+[5] 
 

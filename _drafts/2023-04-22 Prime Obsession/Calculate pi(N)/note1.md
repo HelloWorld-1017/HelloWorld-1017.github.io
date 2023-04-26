@@ -94,11 +94,33 @@ end
 
 这样的估计是相当粗糙的，因为对数观念；
 
+在`isprime`函数内部，仍然需要循环
 
 
 并行计算；GPU计算（绘制分形的那个博客）；
 
 CPU占用率大约在30%，GPU的占用率大约在2%\-3%。
+
+
+
+单纯用`primes`函数很快，但是内存不够：
+
+```matlab
+>> a = primes(10^12);
+Error using true
+Requested 1x500000000000 (465.7GB) array exceeds
+maximum array size preference (15.7GB). This might
+cause MATLAB to become unresponsive.
+
+Error in primes (line 28)
+p = true(1,double(ceil(n/2)));
+```
+
+
+
+空间不足的问题更好解决；
+
+
 
 <br>
 

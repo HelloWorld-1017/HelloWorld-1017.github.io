@@ -2,13 +2,12 @@ clc,clear,close all
 
 tic
 for i = 1:10
-    a = 1:1e7;
-    result = selfIsprime(a);
+    result_helper = helperIsprime(1:1e7);
 end
 toc
 
-result_builtin = result;
-save("result_builtin.mat","result_builtin")
-
-% result_self = result;
-% save("result_self.mat","result_self")
+tic
+for i = 1:10
+    result_builtin = isprime(1:1e7);
+end
+toc

@@ -1,6 +1,15 @@
-Trial Division and MATLAB `isprime` Function
-
-
+---
+layout: single
+title: Trial Division and MATLAB `isprime` Function
+date: 2023-04-27 12:05:29 +0800
+categories: 
+ - Mathematics
+ - MATLAB
+tags:
+ - Prime Obsession
+ - Number Theory
+ - MATLAB Mathematics
+---
 
 # Trial Division
 
@@ -70,19 +79,13 @@ primes([133,457,9,13,103])
 
 我们可以简单地可视化上述的过程：
 
-![image-20230426201640597](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230426201640597.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230426201640597.png" alt="image-20230426201640597" style="zoom:50%;" />
 
-但是，`isprime`函数中：
+但是，`isprime`函数中语句`isp(k) = (Xk>1) && all(rem(Xk, p(p<Xk)))`表示在对元素进行试除法时，尝试的是素数列表`p`中**小于**该元素的所有素数。例如，对于元素`9`，需要对2，3，5，7四个素数进行试除。而根据试除法的原理，我们只需要对素数列表`p`中**小于等于**$\sqrt{\text{9}}=3$的所有素数进行试除即可，因**此这一步会增加计算时间！！！**对于元素133，13和103的试除同样会面临这样的问题：
 
-```matlab
-isp(k) = (Xk>1) && all(rem(Xk, p(p<Xk)))
-```
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230426202608380.png" alt="image-20230426202608380" style="zoom:50%;" />
 
-表示在对元素进行试除法时，尝试的是素数列表`p`中**小于**该元素的所有素数。例如，对于元素`9`，需要对2，3，5，7四个素数进行试除。而根据试除法的原理，我们只需要对素数列表`p`中**小于等于**$\sqrt{\text{9}}=3$的所有素数进行试除即可，因**此这一步会增加计算时间！！！**对于元素133，13和103的试除同样会面临这样的问题：
-
-![image-20230426202608380](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230426202608380.png)
-
-图中，浅紫色的元素表示没有必要进行试除的元素。
+上图中，浅紫色的元素表示没有必要进行试除的元素。
 
 因此，我们可以把这试除的语句更改为：
 
@@ -126,7 +129,7 @@ ans =
      0
 ```
 
-可以预期的是，随着上限的增加，相比于原来的`isprime`函数，修改过的代码会节省更多的时间！！！
+可以预期的是，随着上限的增加，相比于原来的`isprime`函数，修改过的代码会节省更多的时间。
 
 <br>
 
@@ -139,6 +142,3 @@ ans =
 [3] [isprime - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/isprime.html).
 
 [4] [Sieve of Eratosthenes and MATLAB primes Function - What a starry night~](http://whatastarrynight.com/mathematics/matlab/Sieve-of-Eratosthenes-and-MATLAB-primes-Function/).
-
-
-

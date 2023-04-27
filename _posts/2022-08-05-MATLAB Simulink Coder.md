@@ -10,8 +10,6 @@ tags:
 toc: true
 ---
 
-
-
 # 自动生成 Simulink 模型的 C 语言代码
 
 [Generate C Code for a Model](https://ww2.mathworks.cn/help/rtw/gs/model-and-simulation.html)

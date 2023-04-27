@@ -13,7 +13,7 @@ function isp = helperIsprime(X)
 isp = false(size(X));
 
 if ~isempty(X)  
-    X = X(:);
+    X = X(:)';
     if ~isreal(X) || any(X < 0) || any(floor(X) ~= X) || ...
             any(isinf(X))
         error(message('MATLAB:isprime:InputNotPosInt'));
@@ -28,7 +28,7 @@ if ~isempty(X)
         end
         for k = 1:numel(isp)
             Xk = X(k);
-            isp(k) = (Xk>1) && all(rem(Xk, p(p<=sqrt(Xk))));
+            isp(k) = (Xk>1) && all(rem(Xk, p(p<Xk)));
         end
     else
         fm = flintmax(class(X));

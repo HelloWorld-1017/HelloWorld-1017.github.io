@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Wilson's theorem
+title: Wilson's Theorem
 date: 2023-04-25 20:06:05 +0800
 categories: 
  - Mathematics
@@ -10,7 +10,7 @@ tags:
 ---
 
 
-# Wilson's theorem
+# Wilson's Theorem
 
 在代数和数论中，**Wilson's theorem**表明 [1,2] ：对于自然数$n>1$，**当且仅当**：
 

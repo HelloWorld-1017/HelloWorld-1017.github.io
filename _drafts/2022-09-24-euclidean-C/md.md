@@ -1,3 +1,13 @@
+[Generate C Code at the Command Line - MATLAB & Simulink - MathWorks China](https://ww2.mathworks.cn/help/coder/gs/generating-c-code-from-matlab-code-at-the-command-line.html)
+
+
+
+
+
+
+
+
+
 ## Create and Test a Function in MATLAB
 
 首先，建立一个`euclidean`函数：
@@ -142,8 +152,6 @@ Distance to the farthest point is 1.1357
 
 ![image-20220924183636645](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220924183636645.png)
 
-
-
 注释`%#codegen`使Code Analyzer识别一些专门针对code generation的warnings和errors。
 
 所有的这些warning都是同一种类型：
@@ -205,7 +213,7 @@ MATLAB中的一些自建函数和工具箱函数、类、系统对象不支持co
 
 ![image-20220924190337863](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220924190337863.png)
 
-Check for Run-Time Issues步骤会基于entry-point functions生成一个MEX文，运行该MEX文件并且报告问题。生成的MEX函数文件可以在MATLAB中直接调用，基于MEX函数文件检查和修复在生成的C代码中难以察觉的错误是一种很好的方式。
+Check for Run-Time Issues步骤会基于entry-point functions生成一个`.mex`文件，运行该`.mex`文件并且报告问题。生成的MEX函数文件可以在MATLAB中直接调用，基于`.mex`函数文件检查和修复在生成的C代码中难以察觉的错误是一种很好的方式。
 
 打开Check for Run-Time Issues对话框，选中一个调用entry-point function的测试文件（这里是`script1_testIn3D`），之后点击`Check for Issues`：
 
@@ -460,7 +468,7 @@ void euclidean(const double x_data[], const int x_size[1],
 
 
 
-
+**References**
 
 [1] [Generate C Code by Using the MATLAB Coder App - MathWorks](https://ww2.mathworks.cn/help/coder/gs/generating-c-code-from-matlab-code-using-the-matlab-coder-project-interface.html).
 

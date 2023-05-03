@@ -13,18 +13,18 @@ tags:
 toc: false
 ---
 
-前两天在逛知乎的时候，在一篇回答的下面看到了一条评论， 大致意思是“（在MATLAB中，）先行后列比先列后行快”。也就是说，在不得以循环遍历矩阵中的每一个数组的元素时，“先按照行的顺序遍历，再按照列的顺序遍历”所花费的时间更短。于是，今天我就简单地测试了一下，采用的测试程序是“100次循环`10e4`阶矩阵的元素自增1”：
+前两天在逛知乎的时候，在一篇回答的下面看到了一条评论， 大致意思是“（在MATLAB中，）先行后列比先列后行快”。也就是说，在不得以循环遍历矩阵中的每一个数组的元素时，“先按照**行索引增大**的顺序遍历，再按照**列索引增大**的顺序遍历”所花费的时间更短。于是，今天我就简单地测试了一下，采用的测试程序是“100次循环`10e4`阶矩阵的元素自增1”：
 
 ```matlab
 clc,clear,close all
 
-%% First row, second column
+%%First row, second column
 tic
 A = ones(10^4);
 for t = 1:100
-    for j = 1:height(A)
-        for i = 1:width(A)
-            A(i,j) = A(i,j)+1;
+    for columns = 1:width(A)
+        for rows = 1:height(A)
+            A(rows,columns) = A(rows,columns)+1;
         end
     end
 end
@@ -36,9 +36,9 @@ clear all
 tic
 B = ones(10^4);
 for t = 1:100
-    for i = 1:width(B)
-        for j = 1:height(B)
-            B(i,j) = B(i,j)+1;
+    for rows = 1:height(B)
+        for columns = 1:width(B)
+            B(rows,columns) = B(rows,columns)+1;
         end
     end
 end

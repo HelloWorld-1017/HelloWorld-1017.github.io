@@ -1,6 +1,6 @@
 ---
 layout: single
-title: C Language, Char type and Char string type.
+title: Char type and Char string type of C Language
 date: 2022-09-11 14:36:37 +0800
 categories: 
  - C

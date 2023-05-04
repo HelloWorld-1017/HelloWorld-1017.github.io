@@ -1,32 +1,6 @@
 ---
 layout: default
 ---
-<head>
-  <!-- Support MathJax and automatic equation numbering -->
-  <!-- MathJax demos: https://github.com/mathjax/MathJax-demos-web#customization-->
-  <!-- https://github.com/mathjax/MathJax-demos-web/blob/master/equation-refs.html.md -->
-  <script>
-    MathJax = {
-      tex: {
-        tags: 'all',  // should be 'ams', 'none', or 'all'
-        inlineMath: [['$','$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      //   Macros: {
-      //     boldsymbol: ["\\boldsymbol{#1}",1],
-      // }
-      }
-    };
-  </script>
-    <!-- Important for auto equation numbering-->
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-    
-    <!-- Support mermaid -->
-    <!-- https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted?id=_3-calling-the-javascript-api -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script> mermaid.initialize({ startOnLoad: true }); </script> -->
-    <!-- <div class="mermaid">mermaid code</div> -->
-</head>
 
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}

@@ -175,9 +175,42 @@ bingo~
 
 # Other Tools
 
-（2023年04月17日）
+## Supporting MathJax
+
+为了使得网站全站都支持MathJax公式输入，需要在`./_layouts/default.html`添加以下的代码：
+
+```html
+<head>
+  <!-- Support MathJax and automatic equation numbering -->
+  <!-- MathJax demos: https://github.com/mathjax/MathJax-demos-web#customization-->
+  <!-- https://github.com/mathjax/MathJax-demos-web/blob/master/equation-refs.html.md -->
+  <script>
+    MathJax = {
+      tex: {
+        tags: 'all',  // should be 'ams', 'none', or 'all'
+        inlineMath: [['$','$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      //   Macros: {
+      //     boldsymbol: ["\\boldsymbol{#1}",1],
+      // }
+      }
+    };
+  </script>
+    <!-- Important for auto equation numbering-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    
+    <!-- Support mermaid -->
+    <!-- https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted?id=_3-calling-the-javascript-api -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script> mermaid.initialize({ startOnLoad: true }); </script> -->
+    <!-- <div class="mermaid">mermaid code</div> -->
+</head>
+```
 
 ## Code block settings 
+
+（2023年04月17日）
 
 如果想要使得博客中的代码块显示行号，以及更多的显示主题格式或者功能，可以参考博客 [1] 使用`prism.js`的插件，可以直接在官网：[Download ▲ Prism ](https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+c+csharp+cpp+cilkc+cilkcpp+cmake+css-extras+csv+diff+git+linker-script+http+hpkp+hsts+ignore+java+javadoc+javadoclike+json+json5+jsonp+latex+markup-templating+matlab+nginx+nix+perl+php+php-extras+plsql+powershell+python+r+ruby+rust+sql+uri+vim+visual-basic+yaml&plugins=line-highlight+autolinker+custom-class+file-highlight+show-language+jsonp-highlight+highlight-keywords+inline-color+previewers+autoloader+keep-markup+command-line+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+download-button+match-braces)下载，并按照博客 [1] 所提供的方式进行配置。但是在配置之后，网站中有的代码块会出现行号显示不全的情况：
 
@@ -186,6 +219,8 @@ bingo~
 不太清楚这是什么原因导致的。
 
 ## Centering the figures
+
+（2023年04月17日）
 
 虽然我们在`.md`文件中插入的图片都是居中显示的，但是在基于minimal-mistakes-jekyll构建的网站中图片都是左对齐的。个人觉得，图片还是居中显示比较美观，但是网上的很多解决方法都是针对单张图像的。使用这种方法来居中图片，显然太繁琐了。Stackoverflow中有一个相关问题 [2]，Lazy Ren做出了详细的回答，我采用了其中将所有图片都居中的一种方式：在`./assets/css/main.scss`文件中添加代码：
 

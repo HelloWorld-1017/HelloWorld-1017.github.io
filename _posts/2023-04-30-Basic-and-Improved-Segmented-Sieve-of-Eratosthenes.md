@@ -262,7 +262,7 @@ diffSums = num_self - numel(pLRList_builtin);
 end
 ```
 
-注：测试``helperSegmentedSieve2`函数只需要将上述代码中`helperTest`函数中使用的`helperSegmentedSieve`替换为`helperSegmentedSieve2`即可。
+注：测试`helperSegmentedSieve2`函数只需要将上述代码中`helperTest`函数中使用的`helperSegmentedSieve`替换为`helperSegmentedSieve2`即可。
 {: .notice--primary}
 
 最终结果表明，两个函数与使用MATLAB`primes`函数得到的结果都是一致的。

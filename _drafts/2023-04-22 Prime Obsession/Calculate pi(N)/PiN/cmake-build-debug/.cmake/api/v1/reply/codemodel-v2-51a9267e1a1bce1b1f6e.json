@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PiN",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PiN::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PiN-Debug-d52e0c7a76de56f251cc.json",
+					"name" : "PiN",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Tsing/Desktop/QinghuaMa.github.io/_drafts/2023-04-22 Prime Obsession/Calculate pi(N)/PiN/cmake-build-debug",
+		"source" : "C:/Users/Tsing/Desktop/QinghuaMa.github.io/_drafts/2023-04-22 Prime Obsession/Calculate pi(N)/PiN"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: The Log Integral Function and its Relation to The Prime Number Theorem
+title: The Log Integral Function and its Relation to The PNT
 date: 2023-04-28 14:53:37 +0800
 categories: 
  - Mathematics
@@ -10,8 +10,9 @@ tags:
  - Number Theory
  - Mathematical Analysis
  - MATLAB Symbolic Math Toolbox
-toc: false
 ---
+
+# The Log Integral Function
 
 函数：
 
@@ -77,13 +78,15 @@ xlabel('$x$','Interpreter','latex')
 ylabel('$li(x)$','Interpreter','latex')
 ```
 
-==从数学上讲，关于积分对数函数$Li(x)$有两点需要注意：==
+从数学上讲，关于积分对数函数$Li(x)$有两点需要注意：
 
 （1）$Li(x)$没有初等的原函数；
 
-（2）奇异积分，反常积分，无穷积分；
+（2）$1/\ln t$在$x=1$处具有一个瑕点，因此$Li(x)$本质上是一个反常积分（improper integral）[5]；
 
 <br>
+
+# The Relation to The PNT
 
 当$x$特别大时，我们可以用累加的方法来近似$Li(x)$：
 
@@ -119,7 +122,7 @@ ans =
      2.633264532773007e-04
 ```
 
-进一步，根据对数观念 [5]，当$x$特别大时，我们可以将式$\eqref{eq2}$近似地写作：
+进一步，根据对数观念 [6]，当$x$特别大时，我们可以将式$\eqref{eq2}$近似地写作：
 
 $$
 Li(x)\approx\dfrac{x}{\ln x}\notag
@@ -173,4 +176,6 @@ $$
 
 [4] [logint - MathWorks](https://ww2.mathworks.cn/help/symbolic/sym.logint.html?s_tid=srchtitle_logint_1).
 
-[5] [The Prime Number Theorem (PNT) from Prime Obsession by Derbyshire - What a starry night~](http://whatastarrynight.com/mathematics/The-Prime-Number-Theorem-(PNT)-from-Prime-Obsession-by-Derbyshire/).
+[5] [Improper integral - Wikipedia](https://en.wikipedia.org/wiki/Improper_integral).
+
+[6] [The Prime Number Theorem (PNT) from Prime Obsession by Derbyshire - What a starry night~](http://whatastarrynight.com/mathematics/The-Prime-Number-Theorem-(PNT)-from-Prime-Obsession-by-Derbyshire/).

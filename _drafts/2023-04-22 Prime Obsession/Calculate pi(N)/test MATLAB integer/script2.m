@@ -2,24 +2,78 @@ clc,clear,close all
 
 %% A is double
 tic
-A = ones(10^4);
-A = helperAccumulation(A);
+A = helperAccumulation(double(ones(10^4)));
 class(A)
 toc
 
-%% B is int64
-% clear all
+%% B is single
+clear
 tic
-B = int64(ones(10^4));
-B = helperAccumulation(B);
+B = helperAccumulation(single(ones(10^4)));
 class(B)
 toc
 
-function A = helperAccumulation(A)
+%% C is int8
+clear
+tic
+C = helperAccumulation(int8(ones(10^4)));
+class(C)
+toc
+
+%% D is int16
+clear
+tic
+D = helperAccumulation(int16(ones(10^4)));
+class(D)
+toc
+
+%% E is int32
+clear
+tic
+E = helperAccumulation(int32(ones(10^4)));
+class(E)
+toc
+
+%% F is int64
+clear
+tic
+F = helperAccumulation(int64(ones(10^4)));
+class(F)
+toc
+
+%% G is uint8
+clear
+tic
+G = helperAccumulation(uint8(ones(10^4)));
+class(G)
+toc
+
+%% H is uint16
+clear
+tic
+H = helperAccumulation(uint16(ones(10^4)));
+class(H)
+toc
+
+%% I is uint32
+clear
+tic
+I = helperAccumulation(uint32(ones(10^4)));
+class(I)
+toc
+
+%% J is uint64
+clear
+tic
+J = helperAccumulation(uint64(ones(10^4)));
+class(J)
+toc
+
+function matrix = helperAccumulation(matrix)
 for t = 1:100
-    for columns = 1:width(A)
-        for rows = 1:height(A)
-            A(rows,columns) = A(rows,columns)+1;
+    for columns = 1:width(matrix)
+        for rows = 1:height(matrix)
+            matrix(rows,columns) = matrix(rows,columns)+1;
         end
     end
 end

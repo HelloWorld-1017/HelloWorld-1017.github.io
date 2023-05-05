@@ -3,70 +3,70 @@ clc,clear,close all
 %% A is double
 tic
 A = helperAccumulation(double(ones(10^4)));
-class(A)
+disp(class(A))
 toc
 
 %% B is single
-clear
+% clear
 tic
 B = helperAccumulation(single(ones(10^4)));
-class(B)
+disp(class(B))
 toc
 
 %% C is int8
-clear
+% clear
 tic
 C = helperAccumulation(int8(ones(10^4)));
-class(C)
+disp(class(C))
 toc
 
 %% D is int16
-clear
+% clear
 tic
 D = helperAccumulation(int16(ones(10^4)));
-class(D)
+disp(class(D))
 toc
 
 %% E is int32
-clear
+% clear
 tic
 E = helperAccumulation(int32(ones(10^4)));
-class(E)
+disp(class(E))
 toc
 
 %% F is int64
-clear
+% clear
 tic
 F = helperAccumulation(int64(ones(10^4)));
-class(F)
+disp(class(F))
 toc
 
 %% G is uint8
-clear
+% clear
 tic
 G = helperAccumulation(uint8(ones(10^4)));
-class(G)
+disp(class(G))
 toc
 
 %% H is uint16
-clear
+% clear
 tic
 H = helperAccumulation(uint16(ones(10^4)));
-class(H)
+disp(class(H))
 toc
 
 %% I is uint32
-clear
+% clear
 tic
 I = helperAccumulation(uint32(ones(10^4)));
-class(I)
+disp(class(I))
 toc
 
 %% J is uint64
-clear
+% clear
 tic
 J = helperAccumulation(uint64(ones(10^4)));
-class(J)
+disp(class(J))
 toc
 
 function matrix = helperAccumulation(matrix)

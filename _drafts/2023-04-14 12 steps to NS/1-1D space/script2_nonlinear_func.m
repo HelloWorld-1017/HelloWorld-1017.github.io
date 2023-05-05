@@ -19,20 +19,18 @@ nexttile
 hold(gca,"on")
 grid(gca,"on")
 box(gca,"on")
-helperNonLinearCon(100)
+helperNonLinearCon(101)
 
 nexttile
 hold(gca,"on")
 grid(gca,"on")
 box(gca,"on")
-helperNonLinearCon(200)
+helperNonLinearCon(201)
 
 function helperNonLinearCon(nx)
 dx = 2/(nx-1); % deta x: 0.05
 nt = 25;       % nt is the number of timesteps we want to calculate
-% dt = .025;     % delt t: 0.025
-sigma = .5;
-dt = sigma*dx;
+dt = .025;     % delt t: 0.025
 
 % Set initial condition
 un = nan(nt,nx);

@@ -154,6 +154,7 @@ $$
 <br>
 
 **Reference**
+
 [1]  [Dot product - Wikipedia](https://en.wikipedia.org/wiki/Dot_product).
 
-[2]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)
+[2]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9).

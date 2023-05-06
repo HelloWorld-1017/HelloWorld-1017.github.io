@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 向量求导公式
+title: Vector Derivative
 date: 2022-07-14 17:45:25
 categories: 
  - Mathematics

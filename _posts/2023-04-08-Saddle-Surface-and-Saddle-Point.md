@@ -22,28 +22,28 @@ $$
 
 是一种特殊的非凸也非凹的曲面 [1]，它的图像如下所示：
 
-![image-20230407225340939](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230407225340939.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230407225340939.png" alt="image-20230407225340939" style="zoom:50%;" />
 
 注：绘图脚本见文末附录A。
 {: .notice--primary}
 
 **马鞍面可以看作是*“顶点在曲线上的抛物线挂在抛物线上移动形成的”*** [2]。例如，固定住上图中上方的抛物线（蓝色曲线：$z=x^2+y^2,\ y=0$），移动下方的抛物线（红色曲线），可以形成一个马鞍面：
 
-![image-20230408153520466](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408153520466.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408153520466.png" alt="image-20230408153520466" style="zoom:50%;" />
 
 注：绘图脚本见文末附录B。
 {: .notice--primary}
 
 同样地，也可以看作是固定下方的抛物线（红色曲线，$z=x^2+y^2,\ x=0$），移动上方的抛物线（蓝色曲线），形成一个马鞍面：
 
-![image-20230408153746354](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408153746354.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408153746354.png" alt="image-20230408153746354" style="zoom:50%;" />
 
 注：绘图脚本见文末附录C。
 {: .notice--primary}
 
 以及综合上述两种视角得到的图像：
 
-![image-20230408154007028](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408154007028.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408154007028.png" alt="image-20230408154007028" style="zoom:50%;" />
 
 注：绘图脚本见文末附录D。
 {: .notice--primary}
@@ -70,9 +70,7 @@ $$
 注：极值点也不一定数驻点。例如对于函数$y=\vert x\vert$而言，它的极值点就不是驻点，因为在其极值点处不可导。
 {: .notice--warning}
 
-<br>
-
-从图像上我们可以很容易地看出$(0,0,0)$并不是一个极值点，而且在数学上，我们也可以通过二元函数极值点的充分条件判断出这个它不是极值点 [4], [5]。但是对于利用梯度信息进行优化的优化算法而言，它们是无法判断出这一点的。例如，我们在博客[Simple Gradient Descend (GD) and Stochastic Gradient Descend (SGD) Methods Selecting Optimum Weight of Linear Model](http://whatastarrynight.com/machine learning/operation research/python/Simple-Gradient-Descend-(GD)-and-Stochastic-Gradient-Descend-(SGD)-Methods-Selecting-Optimum-Weight-of-Linear-Model/#local-minimum-and-saddle-point)中提到过，在深度学习领域，人们通常GD算法来解决损失函数的优化问题；如果损失函数关于权重的函数是类似于一个马鞍面的函数，那么当损失值优化到鞍点时，GD算法会因为梯度消失而认为鞍点处就是最优值（或者是局部最优值）而停止优化。这显然是不合理的。因此，鞍点问题，或者是梯度消失的问题，是神经网络训练中着重关注的一个问题。
+从图像上我们可以很容易地看出$(0,0,0)$并不是一个极值点，而且在数学上，我们也可以通过二元函数极值点的充分条件判断出这个它不是极值点 [4], [5]。但是对于利用梯度信息进行优化的优化算法而言，它们是无法判断出这一点的。例如，我们在博客 [6] 中提到过，在深度学习领域，人们通常GD算法来解决损失函数的优化问题；如果损失函数关于权重的函数是类似于一个马鞍面的函数，那么当损失值优化到鞍点时，GD算法会因为梯度消失而认为鞍点处就是最优值（或者是局部最优值）而停止优化。这显然是不合理的。因此，鞍点问题，或者是梯度消失的问题，是神经网络训练中着重关注的一个问题。
 
 <br>
 
@@ -400,3 +398,5 @@ end
 [4] [两种方法证明二元函数极值取得的充分性 - 知乎](https://zhuanlan.zhihu.com/p/362415195).
 
 [5] [Extrema of functions of two variables: necessary and sufficient conditions - Mathematics Stack Exchange](https://math.stackexchange.com/questions/1280588/extrema-of-functions-of-two-variables-necessary-and-sufficient-conditions).
+
+[6] [Simple Gradient Descend (GD) and Stochastic Gradient Descend (SGD) Methods Selecting Optimum Weight of Linear Model](http://whatastarrynight.com/machine learning/operation research/python/Simple-Gradient-Descend-(GD)-and-Stochastic-Gradient-Descend-(SGD)-Methods-Selecting-Optimum-Weight-of-Linear-Model/#local-minimum-and-saddle-point).

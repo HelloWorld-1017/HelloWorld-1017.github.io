@@ -602,9 +602,15 @@ ylabel('$p(v_2)$','Interpreter','latex')
 由于`slice`函数相当于将计算切片和绘图集成到一个函数中了，因此在（1）设置曲面绘图属性和（2）寻找熵的最大值时需要稍微注意一下：
 
 ```matlab
+[p1,p2,p3] = meshgrid(0.01:0.01:1);
+entropy = -(p1.*log(p1)+p2.*log(p2)+p3.*log(p3));
+[xsurf,ysurf] = meshgrid(0.01:0.01:1);
+zsurf = 1-xsurf-ysurf;
+
+...
+
 s = slice(p1,p2,p3,entropy,xsurf,ysurf,zsurf);
 s.EdgeColor = 'none';
-
 [xPos,yPos] = find(s.CData==max(max(s.CData)));
 xPos = xPos(1);
 yPos = yPos(1);

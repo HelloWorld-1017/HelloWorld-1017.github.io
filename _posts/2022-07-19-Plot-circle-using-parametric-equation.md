@@ -4,8 +4,10 @@ title: Plot Circle Based on Parametric Equation
 date: 2022-07-19 23:53:23 +0800
 categories: 
  - MATLAB
+ - Mathematics
 tags: 
  - MATLAB Graphics
+ - Geometry
 toc: false
 ---
 

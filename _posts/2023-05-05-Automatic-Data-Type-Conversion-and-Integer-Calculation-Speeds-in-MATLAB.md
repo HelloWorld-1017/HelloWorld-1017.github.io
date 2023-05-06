@@ -1,24 +1,22 @@
-
-
-Automatic Data Type Conversion and Integer Calculation Speeds in MATLAB
-
-MATLAB
-
-Mathematics
-
-Numerical Analysis
-
-MATLAB Language Fundamentals
-
-
+---
+layout: single
+title: Automatic Data Type Conversion and Integer Calculation Speeds in MATLAB
+date: 2023-05-05 17:23:27 +0800
+categories: 
+ - MATLAB
+ - Mathematics
+tags:
+ - Numerical Analysis
+ - MATLAB Language Fundamentals
+---
 
 # Introduction
 
-在MATLAB中，浮点数有两种类型：默认的64位双精度浮点数（Double-Precision Floating Point）`double`，32位单精度浮点数（Single-Precision Floating Point）[1]；整数有8种类型，包含4种有符号整型以及4种无符号整型 [2]：
+在MATLAB中，浮点数有两种类型：默认的64位双精度浮点数（Double-Precision Floating Point）`double`，32位单精度浮点数（Single-Precision Floating Point）`single` [1]；整数有8种类型，包含4种有符号整型以及4种无符号整型 [2]：
 
 ![image-20230504182703473](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230504182703473.png)
 
-不同数字类型的变量在进行相互运算时，有时会存在自动类型转换，有时会报错；并且，相同的数字采用不同类型的变量来承载，计算速度也有所差距，本博客就简单地梳理一下这些内容。
+不同数字类型的变量在进行相互运算时，有时会存在自动类型转换，有时会报错；并且，相同的数字采用不同类型的变量来承载，计算速度也有所差距，本博客就简单整理一下这些内容。
 
 <br>
 
@@ -49,7 +47,7 @@ ans =
    16
 ```
 
-结果转换为与整数相同的数据类型，并且遵从四舍五入的规则：
+结果转换为与整数相同的整型，并且遵从四舍五入的规则：
 
 ```matlab
 >> double(7.2)+uint32(9)
@@ -91,7 +89,7 @@ doubles.
 
 # Integer Addition Operation Speed of Each Data Type
 
-上述这十种数据类型都可以表示（特定范围的）正整数，在实验之前我觉得如果用整型变量表示整数，计算速度可能会快一些，因为浮点数的机器表示比整数的浮点数表示复杂 [3,4]。然后，我简单地进行了一个不同数据类型$10^4$阶$1$矩阵元素循环自加1的计算试验，测试了一下速度：
+上述这十种数据类型都可以表示（特定范围的）正整数，在实验之前我觉得如果用整型变量表示整数，计算速度可能会快一些，因为浮点数的机器表示比整数的浮点数表示复杂 [3,4]。然后，我简单地进行了不同数据类型$10^4$阶$1$矩阵元素循环自加1的计算试验，测试了一下速度：
 
 ```matlab
 clc,clear,close all
@@ -178,35 +176,31 @@ end
 
 ```
 double
-Elapsed time is 21.193129 seconds.
+Elapsed time is 10.621610 seconds.
 single
-Elapsed time is 31.534959 seconds.
+Elapsed time is 12.998448 seconds.
 int8
-Elapsed time is 42.866931 seconds.
+Elapsed time is 17.986876 seconds.
 int16
-Elapsed time is 42.784059 seconds.
+Elapsed time is 17.811298 seconds.
 int32
-Elapsed time is 42.227893 seconds.
+Elapsed time is 16.945584 seconds.
 int64
-Elapsed time is 108.893160 seconds.
+Elapsed time is 57.852715 seconds.
 uint8
-Elapsed time is 33.601635 seconds.
+Elapsed time is 14.257828 seconds.
 uint16
-Elapsed time is 33.229937 seconds.
+Elapsed time is 14.199355 seconds.
 uint32
-Elapsed time is 33.292885 seconds.
+Elapsed time is 14.027019 seconds.
 uint64
-Elapsed time is 83.529158 seconds.
+Elapsed time is 44.500926 seconds.
 ```
 
-注：MATLAB版本，内存。。。
+注：CPU: 12th Gen Intel(R) Core(TM) i7-12700K；Internal storage: 16.0 GB；GPU: NVIDIA GeForce RTX 3060 Ti；MATLAB Version: 9.12.0.1884302 (R2022a)。
 {: .notice--primary}
 
-计算的结果表明，使用浮点数类型表示整数反而是更快的（并且使用`double`类型比`single`类型更快），不太清楚是什么原因。
-
-
-
-
+计算的结果表明，使用浮点数类型表示整数反而是更快的（并且使用`double`类型比`single`类型更快）。目前还不太清楚是什么原因，先记录在这里。
 
 <br>
 

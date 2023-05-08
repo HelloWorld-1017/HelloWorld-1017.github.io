@@ -1,6 +1,6 @@
+# 2-D Rotation Matrix
 
-
-以二维空间为例，假设有一个向量的坐标为$(1,1)$，经过某种旋转$R$后，其坐标变为$(0,\sqrt2)$。那么，**我们如何知道旋转$R$所对应的矩阵是什么？**
+在二维空间中，假设有一个向量的坐标为$(1,1)$，经过某种旋转$R$后，其坐标变为$(0,\sqrt2)$。那么，**我们如何知道旋转$R$所对应的矩阵是什么？**
 
 数学上，上述问题可以表述为，已知：
 $$
@@ -113,35 +113,19 @@ $$
 R=\begin{bmatrix}
 \dfrac{\sqrt2}{2}&-\dfrac{\sqrt2}{2}\\
 \dfrac{\sqrt2}{2}&\dfrac{\sqrt2}{2}\\
-\end{bmatrix}
+\end{bmatrix}\label{eq4}
 $$
 就是我们上面得到的旋转矩阵$R_1$。
 
 但是，这种方法需要**已知两个向量的旋转前后的坐标**，这样的条件有时候是不满足的。
 
+<br>
 
+从另一个角度讲，对于向量的旋转，可以看做是对坐标系的旋转，也即对基向量的旋转；**线性变换仅仅改变基向量的位置，并不改变基的线性组合** [1]。如果对基向量逆时针旋转$\theta$角度，则从几何上可以推导出旋转后的基向量坐标：
 
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230508133745234.png" alt="image-20230508133745234" style="zoom:33%;" />
 
-
-
-
-从另一个角度讲，
-
-
-
-想要使得
-
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230506202716728.png" alt="image-20230506202716728" style="zoom: 33%;" />
-
-实际上就变成了一个单变量的问题；
-
-
-
-虽然是一个非线性方程组，但是这是非常容易求解的；
-
-
-
-三维：
+另一方面，“**矩阵对应着一种线性变换，并且矩阵的每一列都是线性变换后基向量的坐标**”，旋转矩阵亦是如此，因此逆时针旋转$\theta$角度的旋转矩阵为：
 $$
 R(\theta)=
 \begin{bmatrix}
@@ -149,19 +133,52 @@ R(\theta)=
 \sin\theta&\cos\theta\\
 \end{bmatrix}
 $$
+回到最开始的问题：假设有一个向量的坐标为$(1,1)$，经过某种旋转$R$后，其坐标变为$(0,\sqrt2)$。那么，**我们如何知道旋转$R$所对应的矩阵是什么？**
 
+此时，我们就可以列写出：
+$$
+\begin{bmatrix}
+\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+\sqrt2\\
+\end{bmatrix}
+$$
 
+$$
+\left\{
+\begin{split}
+&\cos\theta-\sin\theta=0\\
+&\sin\theta+\cos\theta=0
+\end{split}\right.\label{eq3}
+$$
 
+对比式$\eqref{eq2}$，可以看到式$\eqref{eq3}$是一个**单变量**的求解问题。尽管式$\eqref{eq3}$是一个**非线性**方程（组），但是它是非常容易求解的，我们可以解得$\theta=\pi/4$，并且旋转矩阵为：
+$$
+R(\pi/4)=
+\begin{bmatrix}
+\dfrac{\sqrt2}{2}&-\dfrac{\sqrt2}{2}\\
+\dfrac{\sqrt2}{2}&\dfrac{\sqrt2}{2}\\
+\end{bmatrix}
+$$
+与$\eqref{eq4}$的结果是一致的。
 
+<br>
 
+# 3-D Rotation Matrix
 
+## Basic rotation
 
+三维坐标系统下，一共有3个（$C_3^2$）旋转的角度，类比于二维坐标系统下的基向量旋转，可以推导出三个基本旋转矩阵（basic rotation, AKA elemental rotation） 。
 
-
-
-
-三维坐标系统下，一共有3个旋转的角度（$C_3^2$）
-
+（1）绕$x$轴旋转（在$zy$平面内逆时针旋转）的旋转矩阵
 
 $$
 R_x(\theta)=
@@ -172,6 +189,7 @@ R_x(\theta)=
 \end{bmatrix}
 $$
 
+（2）绕$y$轴旋转（在$zx$平面内逆时针旋转）的旋转矩阵：
 $$
 R_y(\theta)=
 \begin{bmatrix}
@@ -181,6 +199,7 @@ R_y(\theta)=
 \end{bmatrix}
 $$
 
+（3）绕$z$轴旋转（在$xy$平面内逆时针旋转）的旋转矩阵：
 $$
 R_z(\theta)=
 \begin{bmatrix}
@@ -189,6 +208,11 @@ R_z(\theta)=
 0&0&1
 \end{bmatrix}
 $$
+
+## General rotations
+
+
+
 
 $$
 \begin{split}
@@ -233,13 +257,15 @@ $$
 
 **References**
 
-[1] 
+[1] [Matrix and its Relation to Linear Transformation - What a starry night~](http://whatastarrynight.com/mathematics/Linear-Transformation-and-Matrix/).
+
+[2] [Rotation matrix - Wikipedia](https://en.wikipedia.org/wiki/Rotation_matrix).
+
+[3] [旋转矩阵（Rotation Matrix）的推导及其应用 - meteoric_cry - 博客园](https://www.cnblogs.com/meteoric_cry/p/7987548.html).
 
 
 
-[旋转矩阵（Rotation Matrix）的推导及其应用 - meteoric_cry - 博客园](https://www.cnblogs.com/meteoric_cry/p/7987548.html).
 
-[Rotation matrix - Wikipedia](https://en.wikipedia.org/wiki/Rotation_matrix)
 
 
 

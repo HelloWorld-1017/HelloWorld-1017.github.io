@@ -34,7 +34,7 @@ $$
 \vec{v}=2\times(1,0)+3\times(0,1)=(2,3)
 $$
 
-假设有一个线性变换使得基底$\hat{i}$和$\hat{j}$变换为 $\hat{i}_{transformed}=(1,0)$ 和 $\hat{j}_{transformed}=(-1,1)$，则变换后的向量
+假设有一个线性变换使得基底$\hat{i}$和$\hat{j}$变换为$$\hat{i}_{transformed}=(1,0)$$ 和 $$\hat{j}_{transformed}=(-1,1)$$，则变换后的向量
 
 $$
 \vec{v}_{transformed}=2\times(1,0)+3\times(-1,1)=(-1,3)
@@ -48,10 +48,10 @@ $$
 
 
 
-也就是说，我们只需要根据变换后的 $\hat{i}_{transformed}$ 和$\hat{j}_{transformed}$，就能推断出变换后 $\vec{v}_{transformed}$ 的位置。
+也就是说，我们只需要根据变换后的 $$\hat{i}_{transformed}$$ 和 $$\hat{j}_{transformed}$$，就能推断出变换后 $$\vec{v}_{transformed}$$ 的位置。
 
 因此，一个二维线性变换仅由四个数字完全确定，即变换后的$\hat{i}$的两个坐标和变换后的$\hat{j}$的两个坐标。我们将这些基向量的坐标以列的形式放入到一个2 $\times$ 2的格子中，就得到了一个**2 $\times$ 2矩阵**。
-
+?
 $$
 A =\begin{bmatrix}
 1&-1\\

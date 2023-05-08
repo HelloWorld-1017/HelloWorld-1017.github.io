@@ -176,7 +176,7 @@ $$
 
 ## Basic rotation
 
-三维坐标系统下，一共有3个（$C_3^2$）旋转的角度，类比于二维坐标系统下的基向量旋转，可以推导出三个基本旋转矩阵（basic rotation, AKA elemental rotation） 。
+三维坐标系统下，一共有3个（$C_3^2$）旋转的角度，类比于二维坐标系统下的基向量旋转，可以推导出三个基本旋转矩阵（basic rotation, AKA elemental rotation）[2] 。
 
 （1）绕$x$轴旋转（在$zy$平面内逆时针旋转）的旋转矩阵
 
@@ -211,7 +211,7 @@ $$
 
 ## General rotations
 
-
+在三维空间中的一般旋转可以看作是三种基本旋转的共同作用，因此有 [2]：
 
 
 $$
@@ -241,6 +241,16 @@ R&=R_z(\alpha)R_y(\beta)R_x(\gamma)\\
 \end{bmatrix}
 \end{split}
 $$
+
+
+
+## How to calculate rotation matrix?
+
+
+
+
+
+
 
 
 

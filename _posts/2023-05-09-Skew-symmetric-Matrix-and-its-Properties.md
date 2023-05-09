@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Skew-symmetric Matrix and its Properties
+title: Skew-Symmetric Matrix and its Properties
 date: 2023-05-09 14:54:27 +0800
 categories: 
  - Mathematics

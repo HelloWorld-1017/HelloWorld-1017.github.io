@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 向量点积的代数定义和几何定义
+title: Geometric and Algebraic Definition of Dot Product
 date: 2022-06-09
 categories: 
  - Mathematics
@@ -35,21 +35,21 @@ $$
 \boldsymbol{a}\cdot \boldsymbol{b}=\boldsymbol{a}\boldsymbol{b}^T
 $$
 
-以二维向量为例，若向量
+以二维向量为例，若向量：
 
 $$
 \boldsymbol{a}=[0,2]^T\\
 \boldsymbol{b} = [2,2]^T
 $$
 
-则
+则：
 
 $$
 \boldsymbol{a}\cdot \boldsymbol{b}=\begin{bmatrix}0\\2\end{bmatrix} \cdot \begin{bmatrix}2\\2 \end{bmatrix}=0\times2+2\times2=4
 $$
 
 ## 向量点积的几何定义
-在欧几里得空间，欧几里得向量(Euclidean vector)是一个既有大小又有方向的几何量。两个欧几里得向量$\boldsymbol{a}$和$\boldsymbol{b}$的点积(亦称为内积，inner product)定义为
+在欧几里得空间，欧几里得向量(Euclidean vector)是一个既有大小又有方向的几何量。两个欧几里得向量$\boldsymbol{a}$和$\boldsymbol{b}$的点积(亦称为内积，inner product)定义为：
 
 $$
 \boldsymbol{a}\cdot \boldsymbol{b}=||\boldsymbol{a}||\ ||\boldsymbol{b}||\cos \theta\tag{1}
@@ -57,13 +57,13 @@ $$
 
 其中$\theta$是向量$\boldsymbol{a}$和$\boldsymbol{b}$的夹角，$\vert\vert\boldsymbol{a}\vert\vert$表示向量$\boldsymbol{a}$的大小。
 
-若定义向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影(scalar projection)
+若定义向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影(scalar projection)：
 
 $$
 a_b =\boldsymbol{a}\cdot \hat{\boldsymbol{b}}= ||\boldsymbol{a}||\cos \theta \tag{2}
 $$
 
-则根据式(1)，向量$\boldsymbol{a}$和$\boldsymbol{b}$内积可写作
+则根据式(1)，向量$\boldsymbol{a}$和$\boldsymbol{b}$内积可写作：
 
 $$
 \begin{aligned}\boldsymbol{a}\cdot \boldsymbol{b}&=||\boldsymbol{a}||\ ||\boldsymbol{b}||\cos \theta \\
@@ -75,11 +75,13 @@ $$
 
 式(3)表明，从几何角度看，向量$\boldsymbol{a}$与$\boldsymbol{b}$的点积的结果等于向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影和$\boldsymbol{b}$模长的乘积；同理，也等于向量$\boldsymbol{b}$在向量$\boldsymbol{a}$上的标量投影和$\boldsymbol{a}$模长的乘积。
 
-仍然以二维向量为例进行解释，令
+仍然以二维向量为例进行解释，令：
 
 $$
+\begin{split}
 \boldsymbol{a}=[0,2]^T\\
 \boldsymbol{b} = [2,2]^T
+\end{split}
 $$
 
 则两个向量点积的几何解释如下图所示：
@@ -87,6 +89,7 @@ $$
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232637512.png" alt="image-20220707232637512" style="zoom: 50%;" />
 
 (向量$\boldsymbol{a}$与$\boldsymbol{b}$的点积的结果等于向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影和$\boldsymbol{b}$模长的乘积)
+
 $$
 \begin{aligned}\boldsymbol{a}\cdot \boldsymbol{b}
 &=a_b||\boldsymbol{b}||=\sqrt{2}\times2\sqrt{2}=4\\\end{aligned}
@@ -105,7 +108,7 @@ $$
 
 # 两种定义之间的联系
 
-[矩阵对应着一种线性变换，并且矩阵的每一列是线性变换后基向量的坐标](https://blog.csdn.net/weixin_44983951/article/details/125231310)，因此高维空间到一维空间的线性变换对应着一个行向量。比如，将二维空间中的向量变换到一维空间中的线性变换就对应一个1行2列的向量。
+**矩阵对应着一种线性变换，并且矩阵的每一列是线性变换后基向量的坐标**，因此高维空间到一维空间的线性变换对应着一个行向量。比如，将二维空间中的向量变换到一维空间中的线性变换就对应一个1行2列的向量。
 
 假设二维空间的向量经过一个线性变换都变换到了数轴$x_3$上，设$\hat{u}$是刚好落在该数轴上的“单位向量”。
 

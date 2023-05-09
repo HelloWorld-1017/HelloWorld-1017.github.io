@@ -78,12 +78,13 @@ $$
 > (5) 若矩阵$A$可逆，则有：$\vert A\vert=\dfrac{1}{\vert A^{-1}\vert}$；
 >
 > (6) 根据运算法则(2)和(3)，有：
-> 
+>
 > $$
 > \dfrac{\partial}{\partial A}x^TAx=\dfrac{\partial}{\partial A}\mathrm{tr}(xx^TA)=(xx^T)^T=xx^T
 > $$
-> 
-> 即结果等于向量$x$与自身的的外积(outer product, ie矢量积，叉积)。
+>
+> 即结果等于向量$x$与自身的外积(outer product)。
+>
 
 根据以上的运算法则，将式$\eqref{likelihood}$的log似然函数化简为：
 
@@ -114,7 +115,7 @@ $$
 \end{split}
 $$
 
-该形式与博客[Point Estimation - What a starry night ~](http://whatastarrynight.com/mathematics/Point-Estimation/#mle)中推导的一维正态函数的极大似然估计形式是类似的，即：使用样本均值估计总体分布的均值，使用样本协方差矩阵估计总体分布的协方差矩阵。
+该形式与博客 [2] 中推导的一维正态函数的极大似然估计形式是类似的，即：使用样本均值估计总体分布的均值，使用样本协方差矩阵估计总体分布的协方差矩阵。
 
 <br>
 
@@ -122,5 +123,4 @@ $$
 
 [1] [Maximum Likelihood Estimators - Multivariate Gaussian](https://stats.stackexchange.com/questions/351549/maximum-likelihood-estimators-multivariate-gaussian).
 
-
-
+[2] [Point Estimation - What a starry night ~](http://whatastarrynight.com/mathematics/Point-Estimation/#mle).

@@ -93,7 +93,7 @@ a_2b_3-a_3b_2\\
 a_3b_1-a_1b_3\\
 a_1b_2-a_2b_1
 \end{bmatrix}
-\end{split}
+\end{split}\label{eq3}
 $$
 向量记法计算的结果与矩阵记法计算的结果是一致的，但是之前总是看到矩阵记法的叉积计算公式，第一次看到这种向量记法的计算式，觉得还是挺有意思的~
 
@@ -122,11 +122,146 @@ $$
 对比叉积和内积的定义式 ==[XX]==：
 $$
 \begin{split}
-&\text{Dot product}: \\
+&\text{Dot product}: \boldsymbol{a}\cdot\boldsymbol{b}=\vert\vert\boldsymbol{a}\vert\vert\ \vert\vert\boldsymbol{b}\vert\vert\cos\theta\\
 &\text{Cross product}: \boldsymbol{a}\times\boldsymbol{b}=\vert\vert\boldsymbol{a}\vert\vert\ \vert\vert\boldsymbol{b}\vert\vert\sin\theta\cdot\boldsymbol{n}
 \end{split}
 $$
 
+可以看到，点积能够反映向量$\boldsymbol{a}$和向量$\boldsymbol{b}$之间的夹角的cosine关系，而叉积可以反映夹角的sine关系。因此，点积可以看作是对于垂直性（perpendicularity）的一种度量，而叉积可以看作是对于平行性（parallelism）的一种度量。
+
+给定两个单位向量，如果它们是相互垂直的，则叉积的幅值为1；如果相互是相互平行的，则叉积的幅值为0。而点积的结果刚好相反：如果两个向量是垂直的，则点积为0；如果两个向量是平行的，则点积为1。
+
+<br>
+
+## Conversion to matrix multiplication
+
+叉积可以表示为斜对称矩阵 ==[XX]== 和一个向量的矩阵乘法（参考式$\eqref{eq3}$的结果）：
+$$
+\begin{split}
+&\boldsymbol{a}\times\boldsymbol{b}=[\boldsymbol{a}]_{\times}\boldsymbol{b}=
+\begin{bmatrix}
+0&-a_3&a_2\\
+a_3&0&-a_1\\
+-a_2&a_1&0\\
+\end{bmatrix}
+\begin{bmatrix}
+b_1\\
+b_2\\
+b_3\\
+\end{bmatrix}\\
+&\boldsymbol{a}\times\boldsymbol{b}=[\boldsymbol{b}]_{\times}^T\boldsymbol{a}=
+\begin{bmatrix}
+0&b_3&-b_2\\
+-b_3&0&b_1\\
+b_2&-b_1&0\\
+\end{bmatrix}
+\begin{bmatrix}
+a_1\\
+a_2\\
+a_3\\
+\end{bmatrix}\\
+\end{split}
+$$
+其中，$[\boldsymbol{a}]_{\times}$定义为：
+$$
+[\boldsymbol{a}]_{\times}:=\begin{bmatrix}
+0&-a_3&a_2\\
+a_3&0&-a_1\\
+-a_2&a_1&0\\
+\end{bmatrix}
+$$
+它是一个斜对称矩阵，并且可以通过计算向量$\boldsymbol{a}$与单位向量的叉积得到：
+$$
+[\boldsymbol{a}]_{\times,i}=\boldsymbol{a}\times\hat{\boldsymbol{e}}_i,\ i\in{1,2,3}
+$$
+或者：
+$$
+[\boldsymbol{a}]_{\times}=\sum_{i=1}^3(\boldsymbol{a}\times\hat{\boldsymbol{e}}_i)\otimes\hat{\boldsymbol{e}}_i
+$$
+其中，$\otimes$是==外积==的符号。
+
+> 注：
+
+另外，如果$\boldsymbol{a}$能够由向量$\boldsymbol{b}$和向量$\boldsymbol{c}$的叉积表示：
+$$
+\boldsymbol{a}=\boldsymbol{c}\times\boldsymbol{d}
+$$
+则有：
+$$
+[\boldsymbol{a}]_{\times}=\boldsymbol{b}\boldsymbol{c}^T-\boldsymbol{c}\boldsymbol{d}^T
+$$
+
+## Cross product in MATLAB
+
+在MATLAB中，我们可以使用`cross`函数计算两个向量的叉积：
+
+```matlab
+```
+
+
+
+
+
+<br>
+
+# Outer Product
+
+在线性代数中，两个坐标向量的外积（outer product）是一个矩阵。例如，如果两个向量的维度分别是$n$和$m$，则它们的外积是一个$n\times m$的矩阵。更一般地，给定两个张量（tensor）的外积也是一个张量。张量的外积也被称为张量的张量积（tensor product），并且能够用于定义张量代数（tensor algebra）。
+
+## Definition
+
+给定两个向量，形状分别为$m\times1$和$n\times1$：
+$$
+\boldsymbol{u}=
+\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_m
+\end{bmatrix},\ 
+\boldsymbol{v}=
+\begin{bmatrix}
+v_1\\
+v_2\\
+\vdots\\
+v_n
+\end{bmatrix}
+$$
+它们的张量积可以表示为$\boldsymbol{u}\otimes\boldsymbol{v}$：
+$$
+\boldsymbol{u}\otimes\boldsymbol{v}=
+\begin{bmatrix}
+u_1v_1&u_1v_2&\cdots&u_1v_n\\
+u_2v_1&u_2v_2&\cdots&u_2v_n\\
+\vdots&\vdots&\ddots&\vdots\\
+u_mv_1&u_mv_2&\cdots&u_mv_n\\
+\end{bmatrix}
+$$
+或者使用索引记法：
+$$
+(\boldsymbol{u}\otimes\boldsymbol{v})_{ij}=u_iv_j
+$$
+性质：
+
+（1）给定一个$n\times1$的向量$\boldsymbol{w}$，则有：
+$$
+(\boldsymbol{u}\otimes\boldsymbol{v})\boldsymbol{w}=(\boldsymbol{v}\cdot\boldsymbol{w})\boldsymbol{u}
+$$
+（2）给定一个$1\times m$的向量$\boldsymbol{x}$，则有：
+$$
+\boldsymbol{x}(\boldsymbol{u}\otimes\boldsymbol{v})=(\boldsymbol{x}\cdot\boldsymbol{u})\boldsymbol{v}^T
+$$
+（3）
+
+
+
+
+
+
+
+
+
+he dot product is the [trace](https://en.wikipedia.org/wiki/Trace_(linear_algebra)) of the outer product
 
 
 
@@ -142,7 +277,13 @@ $$
 
 [2] [Cross product - Wikipedia](https://en.wikipedia.org/wiki/Cross_product).
 
+
+
+[4] [Geometric and Algebraic Definition of Dot Product - What a starry night~](http://whatastarrynight.com/mathematics/Geometric-and-Algebraic-Definition-of-Dot-Product/).
+
 [3] [Exterior algebra - Wikipedia](https://en.wikipedia.org/wiki/Exterior_algebra).
+
+[5] [cross - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/cross.html).
 
 
 

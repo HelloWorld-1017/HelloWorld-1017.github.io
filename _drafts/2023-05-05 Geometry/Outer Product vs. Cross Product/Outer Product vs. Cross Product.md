@@ -1,16 +1,16 @@
-Outer Product vs. Cross Product
+Cross Product and Outer Product
 
 
 
 # Cross Product
 
-## Definition of cross product
+## Definition
 
-向量$\boldsymbol{a}$和向量$\boldsymbol{b}$之间的叉积（cross product，又称为矢量积，vector product）**只**定义在三维空间，表示为：
+向量$\boldsymbol{a}$和向量$\boldsymbol{b}$之间的叉积（cross product，又称为矢量积，vector product） **只**定义在三维空间，表示为：
 $$
 \boldsymbol{a}\times\boldsymbol{b}
 $$
-在物理和应用数学中，楔形符号（wedge notation）$\boldsymbol{a}\wedge\boldsymbol{b}$也经常被用于表示叉积，但是在纯数学中，$\boldsymbol{a}\wedge\boldsymbol{b}$通常用于表示矢量积抽象到$n$维空间的Exterior product的概念。
+在物理和应用数学中，楔形符号（wedge notation）$\boldsymbol{a}\wedge\boldsymbol{b}$也经常被用于表示叉积，但是在纯数学中，$\boldsymbol{a}\wedge\boldsymbol{b}$通常用于表示矢量积抽象到$n$维空间的**Exterior product**的概念。
 
 叉积$\boldsymbol{a}\times\boldsymbol{b}$定义了一个垂直于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$的向量$\boldsymbol{c}$，矢量$\boldsymbol{c}$的方向满足右手定则：
 
@@ -31,6 +31,8 @@ $$
 
 ## Computing cross product
 
+### Computing based on matrix notation
+
 在计算$\boldsymbol{a}\times\boldsymbol{b}$时，通常使用矩阵记法（3阶行列式）进行计算：
 $$
 \begin{split}
@@ -47,7 +49,7 @@ Cross product这个名字的也是受启发于这种3阶行列式计算方法：
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sarrus_rule_cross_product_ab.svg/1200px-Sarrus_rule_cross_product_ab.svg.png" alt="Sarrus rule cross product ab.svg" style="zoom:33%;" >
 
-## Geometric meaning
+### Computing based on coordinate notation
 
 如果$(\boldsymbol{\mathrm{i}},\boldsymbol{\mathrm{j}},\boldsymbol{\mathrm{k}})$是一组正向正交基，则它们之间的叉积满足：
 $$
@@ -131,8 +133,6 @@ $$
 
 给定两个单位向量，如果它们是相互垂直的，则叉积的幅值为1；如果相互是相互平行的，则叉积的幅值为0。而点积的结果刚好相反：如果两个向量是垂直的，则点积为0；如果两个向量是平行的，则点积为1。
 
-<br>
-
 ## Conversion to matrix multiplication
 
 叉积可以表示为斜对称矩阵 ==[XX]== 和一个向量的矩阵乘法（参考式$\eqref{eq3}$的结果）：
@@ -178,9 +178,7 @@ $$
 $$
 [\boldsymbol{a}]_{\times}=\sum_{i=1}^3(\boldsymbol{a}\times\hat{\boldsymbol{e}}_i)\otimes\hat{\boldsymbol{e}}_i
 $$
-其中，$\otimes$是==外积==的符号。
-
-> 注：
+其中，$\otimes$是**外积**的符号（在后文中将会提到外积）。
 
 另外，如果$\boldsymbol{a}$能够由向量$\boldsymbol{b}$和向量$\boldsymbol{c}$的叉积表示：
 $$
@@ -193,14 +191,13 @@ $$
 
 ## Cross product in MATLAB
 
-在MATLAB中，我们可以使用`cross`函数计算两个向量的叉积：
+在MATLAB中，我们可以使用`cross`函数 [XX] 计算两个向量的叉积：
 
 ```matlab
+>> cross([1,0,0],[0,1,0])
+ans =
+     0     0     1
 ```
-
-
-
-
 
 <br>
 
@@ -235,13 +232,13 @@ u_1v_1&u_1v_2&\cdots&u_1v_n\\
 u_2v_1&u_2v_2&\cdots&u_2v_n\\
 \vdots&\vdots&\ddots&\vdots\\
 u_mv_1&u_mv_2&\cdots&u_mv_n\\
-\end{bmatrix}
+\end{bmatrix}\label{eq4}
 $$
 或者使用索引记法：
 $$
 (\boldsymbol{u}\otimes\boldsymbol{v})_{ij}=u_iv_j
 $$
-性质：
+## Properties
 
 （1）给定一个$n\times1$的向量$\boldsymbol{w}$，则有：
 $$
@@ -251,24 +248,35 @@ $$
 $$
 \boldsymbol{x}(\boldsymbol{u}\otimes\boldsymbol{v})=(\boldsymbol{x}\cdot\boldsymbol{u})\boldsymbol{v}^T
 $$
-（3）
+（3）如果向量$\boldsymbol{u}$和$\boldsymbol{v}$是同维度的向量，并且它们的维度都大于1，则有：
+$$
+\mathrm{det}(\boldsymbol{u}\otimes\boldsymbol{v})=0
+$$
+（4）从外积的定义$\eqref{eq4}$可以看出，外积$\boldsymbol{u}\otimes\boldsymbol{v}$等价于矩阵乘法：
+$$
+\boldsymbol{u}\otimes\boldsymbol{v}=\boldsymbol{u}\boldsymbol{v}^T
+$$
+对于复向量，则有：
+$$
+\boldsymbol{u}\otimes\boldsymbol{v}=\boldsymbol{u}\boldsymbol{v}^\dagger=\boldsymbol{u}(\boldsymbol{v}^T)^*
+$$
+## The dot product is the trace of the outer product
 
+两个相同维度的向量$\boldsymbol{u}$和$\boldsymbol{v}$的点积定义为 [XX]：
 
+$$
+<\boldsymbol{u},\boldsymbol{v}>=\boldsymbol{u}^T\boldsymbol{v}
+$$
+也被称作是欧几里得空间标准的内积（inner product）。
 
-
-
-
-
-
-
-he dot product is the [trace](https://en.wikipedia.org/wiki/Trace_(linear_algebra)) of the outer product
-
-
-
-
-
-
-
+向量内积与向量外积的关系是：**向量点积是向量外积的得到的矩阵的迹**：
+$$
+<\boldsymbol{u},\boldsymbol{v}>=\Tr(\boldsymbol{u}\otimes\boldsymbol{v})
+$$
+并且，向量$\boldsymbol{w}$与矩阵$\boldsymbol{u}\otimes\boldsymbol{v}$的乘积可以写作内积的形式：
+$$
+(\boldsymbol{u}\otimes\boldsymbol{v})\boldsymbol{w}=\boldsymbol{u}<\boldsymbol{v},\boldsymbol{w}>
+$$
 <br>
 
 **References**
@@ -280,8 +288,6 @@ he dot product is the [trace](https://en.wikipedia.org/wiki/Trace_(linear_algebr
 
 
 [4] [Geometric and Algebraic Definition of Dot Product - What a starry night~](http://whatastarrynight.com/mathematics/Geometric-and-Algebraic-Definition-of-Dot-Product/).
-
-[3] [Exterior algebra - Wikipedia](https://en.wikipedia.org/wiki/Exterior_algebra).
 
 [5] [cross - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/cross.html).
 

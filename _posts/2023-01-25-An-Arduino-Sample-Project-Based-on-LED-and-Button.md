@@ -16,8 +16,8 @@ toc: false
 Arduino IDE：
 
 ```c++
-const int buttonPin = 2;     // the number of the pushbutton pin
-const int ledPin =  3;      // the number of the LED pin
+const int buttonPin = 2;     // the number of the pushbutton pin, "D2" port
+const int ledPin =  3;      // the number of the LED pin, "D3" port
 
 // variables will change:
 int buttonState = 0;         // variable for reading the pushbutton status

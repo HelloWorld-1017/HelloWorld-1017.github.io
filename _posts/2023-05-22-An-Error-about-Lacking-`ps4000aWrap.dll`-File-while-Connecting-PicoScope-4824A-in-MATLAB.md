@@ -23,7 +23,7 @@ There was an error loading the library "ps4000aWrap.dll"
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/b307435ba1c307fb61125dc5.png" alt="b307435ba1c307fb61125dc5" style="zoom: 33%;" />
 
-在网上找了很久也没有找到相关的解决方案，有的方法很复杂也无济于事。但最后解决的也非常简单，就是下载缺少的文件即可：下载picosdk-c-wrappers-binaries仓库 [4]，将其中的`Windows 64-bit`文件夹中的`ps4000aWrap.dll`和`ps4000aWrap.lib`文件放在MATLAB的搜索目录下。以上就解决了这个报错\~\~\~
+在网上找了很久也没有找到相关的解决方案，有的方法很复杂也无济于事（例如 [4]）。但最后解决的也非常简单，就是下载缺少的文件即可：下载picosdk-c-wrappers-binaries仓库 [5]，将其中的`Windows 64-bit`文件夹中的`ps4000aWrap.dll`和`ps4000aWrap.lib`文件放在MATLAB的搜索目录下。以上就解决了这个报错\~\~\~
 
 <br>
 
@@ -35,4 +35,6 @@ There was an error loading the library "ps4000aWrap.dll"
 
 [3] [Collecting Block Data in MATLAB via PicoScope 4824A - What a starry night~](http://whatastarrynight.com/matlab/Collecting-Block-Data-in-MATLAB-via-PicoScope-4824A/).
 
-[4] [picotech/picosdk-c-wrappers-binaries: Binaries versions of wrapper library projects for PicoScope® oscilloscope products](https://github.com/picotech/picosdk-c-wrappers-binaries).
+[4] [How can i set up my Picoscope Device in Instrument Control Toolbox? - MATLAB Answers](https://ww2.mathworks.cn/matlabcentral/answers/268391-how-can-i-set-up-my-picoscope-device-in-instrument-control-toolbox).
+
+[5] [picotech/picosdk-c-wrappers-binaries: Binaries versions of wrapper library projects for PicoScope® oscilloscope products](https://github.com/picotech/picosdk-c-wrappers-binaries).

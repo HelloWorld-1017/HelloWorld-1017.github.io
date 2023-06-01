@@ -1,7 +1,7 @@
 clc,clear,close all
 
 Q1 = 1.1;
-Q2 = 1.5;
+Q2 = 0.1;
 
 eta = linspace(0.01,2,1e3);
 
@@ -37,7 +37,7 @@ title('Phase shift characteristic')
 nexttile
 hold(gca,'on'),grid(gca,'on'),box(gca,'on')
 plot(eta,HL1,'LineWidth',1.5,'Color',[249,82,107]/255,'DisplayName',['$L: Q_1=$',num2str(Q1)])
-plot(eta,HC1,'--','LineWidth',1.5,'Color',[249,82,107]/255,'DisplayName',['$L: Q_1=$',num2str(Q1)])
+plot(eta,HC1,'--','LineWidth',1.5,'Color',[249,82,107]/255,'DisplayName',['$C: Q_1=$',num2str(Q1)])
 plot(eta,HL2,'LineWidth',1.5,'Color',[7,84,213]/255,'DisplayName',['$L: Q_2=$',num2str(Q2)])
 plot(eta,HC2,'--','LineWidth',1.5,'Color',[7,84,213]/255,'DisplayName',['$C: Q_2=$',num2str(Q2)])
 xline(1,'Color',[0.5,0.5,0.5],'LineWidth',1.5,'DisplayName','Resonance')

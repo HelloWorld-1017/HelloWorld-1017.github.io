@@ -83,7 +83,7 @@ $$
 $$
 因此，L、C串联端口相当于短路，但$\dot{U}_L(\mathrm{j}\omega_0)$、$\dot{U}_C(\mathrm{j}\omega_0)$分别不等于零，两者模值相等且反相，相互完全抵消。根据这一点，串联谐振又称为**电压谐振**。此外，工程上将上式中的比值$\omega_0L/R=1/\omega_0CR$定义为谐振电路的**品质因数**$Q$（称$Q$值），即：
 $$
-Q:=\dfrac{\omega_0L}R=\dfrac1{\omega_0CR}=\dfrac1R\sqrt{\dfrac{L}{C}}
+Q:=\dfrac{\omega_0L}R=\dfrac1{\omega_0CR}=\dfrac1R\sqrt{\dfrac{L}{C}}\label{eqQ}
 $$
 $Q$值不仅综合反映了电路中三个参数对谐振状态的影响，而且也是分析和比较谐振电路频率特性的一个重要的辅助参数。用$Q$值表示$U_L(\mathrm{j}\omega)$和$U_C(\mathrm{j}\omega)$为：
 $$
@@ -138,69 +138,167 @@ $$
 
 总结计算Q的方式；
 
-<br>
-
-当输入信号$u_S$的信号不变而$\omega$变动时，这犹如从输入端口输入变量$\omega$，而在不同“窗口”（输出端口）观察频率$\omega$的响应；
-
-上一节是从整个端口看进去的；分析了阻抗的频率响应；
-
-
-
-不同RLC串联电路在频响上的差异，可以通过各自的Q值体现出来。
-
-
-
-注：关于纵坐标的解释。
-
-
-
 
 
 <br>
 
-# Appendix
+在上一节，主要分析了RLC串联电路在谐振状态下的特性；并且在分析频率特性时，采用的是“从端口看进去”的方式，是从阻抗的角度分析电路的频率特性。但实际上，我们可以通过其他不同的“窗口”，即使用不同的**网络函数**：
+$$
+\dfrac{\dot{U}_R(\mathrm{j}\omega)}{\dot{U}_S(\mathrm{j}\omega)},\ \dfrac{\dot{U}_L(\mathrm{j}\omega)}{\dot{U}_S(\mathrm{j}\omega)},\ \dfrac{\dot{U}_C(\mathrm{j}\omega)}{\dot{U}_S(\mathrm{j}\omega)}
+$$
+分析当输入信号$u_S$的幅值不变而$\omega$变动时电路的频率特性。这些网络的频率特性都被统称为电路的**频率响应（频响）**。
 
-## Appendix A
+在分析频率响应之前首先需要说明的是，在后文中，为了便于比较不同参数的RLC串联电路的频率响应之间在性能上的差异，我们采用实际角频率$\omega$与谐振点处角频率$\omega_0$作为横坐标$\eta$，即有关系式：
+$$
+\dfrac{\omega}{\omega_0}=\eta,\ \omega=\eta\omega_0
+$$
+这样，所有的RLC电路都在$\eta=1$处谐振，我们就可以在同一个相对尺度之下比较相互频率特性的差异，这一共同的尺度也表示各谐振电路的**偏谐程度**（即偏离谐振点的程度）。
+
+并且在实际中，由于不同的RLC电路输入幅值也是不同的，因此在绘制频率响应曲线时，纵坐标的度量也需要除以谐振点的输入电压得到一个相对的尺度，但是下文中为了简化分析，我们就假设电路的输入电压幅值都是单位值。
+
+## From the perspective of $\dot{U}_R(\mathrm{j}\eta)$
+
+当使用电阻电压$\dot{U}_R(\mathrm{j}\eta)$作为输出变量时，其对应的网络函数$H_R(\mathrm{j}\eta)$可以表示为：
+$$
+\begin{split}
+H_R(\mathrm{j}\eta)&=\dfrac{\dot{U}_R(\mathrm{j}\omega)}{\dot{U}_S(\mathrm{j}\omega)}=\dfrac{R}{R+\mathrm{j}(\omega L-\dfrac1{\omega C})}\\
+&=\dfrac{1}{1+\mathrm{j}(\eta\dfrac{\omega_0 L}{R}-\dfrac1{\eta\omega_0 CR})}\\
+\end{split}
+$$
+根式$\eqref{eqQ}$，有：
+$$
+H_R(\mathrm{j}\eta)=\dfrac1{1+\mathrm{jQ(\eta-\dfrac{1}{\eta})}}
+$$
+进一步可以得到：
+$$
+\begin{split}
+H_R(\mathrm{j}\eta)&=\dfrac{1-\mathrm{j}Q(\eta-\dfrac1\eta)}{1+Q^2(\eta-\dfrac1\eta)^2}\\
+&=\dfrac{\sqrt{1+Q^2(\eta-\dfrac1\eta)^2}}{1+Q^2(\eta-\dfrac1\eta)^2}\angle\mathrm{arctan}\big(-Q(\eta-\dfrac1\eta)\big)\\
+&=\dfrac1{\sqrt{1+Q^2(\eta-\dfrac1\eta)^2}}\angle\mathrm{arctan}\big(-Q(\eta-\dfrac1\eta)\big)
+\end{split}\label{HR}
+$$
+最终，我们可以得到频率响应：
+$$
+\begin{split}
+\varphi(\mathrm{j}\eta)&=-\mathrm{arctan}\big[Q(\eta-\dfrac1\eta)\big]\\
+\big\vert H_R(\mathrm{j}\eta)\big\vert&=\dfrac1{\sqrt{1+Q^2(\eta-\dfrac1\eta)^2}}
+\end{split}\label{eqHR}
+$$
+可以看到，**不同参数的RLC串联电路在频响上的差异，可以通过各自的$Q$值体现**。我们可以绘制出两个不同的$Q$值所对应的频响曲线：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230601192150927.png" alt="image-20230601192150927" style="zoom:50%;" />
 
 ```matlab
 clc,clear,close all
 
-% Set elements parameters
-R = 3;
-L = 4;
-C = 5;
+% Set Q values
+Q1 = 10;
+Q2 = 3;
 
-% Solve omega_0
-syms omega0
-omega0 = solve(omega0*L-1/(omega0*C)==0,omega0); % 1/(2*sqrt(5))
-omega0 = double(omega0(omega0>0));
+% Calculate phase shift and amplitude frequency characteristic with
+% different Q values
+eta = linspace(0.01,2,1e3);
+phi = @(Q,eta) -atan(Q*(eta-1./eta));
+HR = @(Q,eta) 1./sqrt(1+Q^2*(eta-1./eta).^2);
+phi1 = phi(Q1,eta)/(2*pi)*360; % convert rad/s to degree
+phi2 = phi(Q2,eta)/(2*pi)*360; % convert rad/s to degree
+HR1 = HR(Q1,eta);
+HR2 = HR(Q2,eta);
 
-% Calculate Phase shift characteristic and Amplitude frequency characteristic
-omega = linspace(0.01,1,1e3);
-phi = atan((omega*L-1./(omega*C))/R);
-Z = R./cos(phi);
-[ZMin,ZMinPos] = min(Z);
-
-% Plot Phase shift characteristic and Amplitude frequency characteristic
+% Plot phase shift characteristic with different Q values
 figure('Units','pixels','Position',[717,329.67,1116,420])
 tiledlayout(1,2)
 nexttile
 hold(gca,'on'),grid(gca,'on'),box(gca,'on')
-plot(omega,phi,'LineWidth',1.5,'Color','k','DisplayName','$\varphi(\mathrm{j}\omega)$')
-xline(omega0,'--','LineWidth',1.5,'Color',[0.5,0.5,0.5],'HandleVisibility','off')
-scatter(omega0,0,'filled','Color','r','DisplayName','$\omega_0$')
-xlabel('$\omega$','Interpreter','latex')
-ylabel('$\varphi(\mathrm{j}\omega)$','Interpreter','latex')
+plot(eta,phi1,'LineWidth',1.5, ...
+    'Color',[249,82,107]/255,'DisplayName',['$Q_1=$',num2str(Q1)])
+plot(eta,phi2,'LineWidth',1.5, ...
+    'Color',[7,84,213]/255,'DisplayName',['$Q_2=$',num2str(Q2)])
+legend('Interpreter','latex')
+xlabel('$\eta$','Interpreter','latex')
+ylabel('$\varphi(\mathrm{j}\eta)\ ({}^\circ)$','Interpreter','latex')
+yticks(-90:30:90)
 title('Phase shift characteristic')
-legend('Interpreter','latex','Location','best')
+
+% Plot amplitude frequency characteristic with different Q values
 nexttile
 hold(gca,'on'),grid(gca,'on'),box(gca,'on')
-plot(omega,Z,'LineWidth',1.5,'Color','k','DisplayName','$|Z(\mathrm{j}\omega)|$')
-xline(omega0,'--','LineWidth',1.5,'Color',[0.5,0.5,0.5],'HandleVisibility','off')
-scatter(omega(ZMinPos),ZMin,'filled','Color','r','DisplayName','$\omega_0$')
-xlabel('$\omega$','Interpreter','latex')
-ylabel('$|Z(\mathrm{j}\omega)|$','Interpreter','latex')
+plot(eta,HR1,'LineWidth',1.5, ...
+    'Color',[249,82,107]/255,'DisplayName',['$Q_1=$',num2str(Q1)])
+plot(eta,HR2,'LineWidth', ...
+    1.5,'Color',[7,84,213]/255,'DisplayName',['$Q_2=$',num2str(Q2)])
+xline(1,'Color',[0.5,0.5,0.5],'LineWidth',1.5,'DisplayName','Resonance')
+legend('Interpreter','latex')
+xlabel('$\eta$','Interpreter','latex')
+ylabel('$U_R(\mathrm{j}\eta)$','Interpreter','latex')
 title('Amplitude frequency characteristic')
-legend('Interpreter','latex','Location','best')
 ```
 
+我们可以看到，不同$Q$值所对应的RLC电路具有以下特点和差异：
+
+（1）它们都在谐振点$\eta=1$处出现峰值，在其邻域$\eta=1+\Delta\eta$内都有较大幅度的输出信号，这表明RLC串联电路都具有**在全频域内选择各自谐振信号**的性能，工程上将这一性能称为**“选择性”**；
+
+（2）当信号的频率偏离谐振频率后（$\eta\ne1$），输出信号的幅度都从峰值开始下降，表明**电路对非谐振的信号具有抑制能力（**简称**抑非能力**）。根据式$\eqref{HR}$，电路的抑非能力取决于下面的比值：
+$$
+\Big\vert Q(\eta-\dfrac1\eta)\Big\vert_{\eta\ne1}=\Big\vert\dfrac{X(1+\Delta\eta)}{R}\Big\vert\ \Big(\text{where }R=Z(\mathrm{j}\omega_0)\Big)
+$$
+该比值为：**信号偏离谐振频率后，电路电抗的增量（因为谐振时$X(\mathrm{j}1)=0$）与谐振时阻抗的比值**。它与电路的$Q$值成正比，$Q$值越大，该比值越大，电抗的相对增量就越大，电路的抑非能力就越强；这也说明，**电路的抑非能力主要是由非零电抗引起的**。
+
+从曲线中可以看出，由于$Q_1>Q_2$，$Q_1$值所代表的电路的抑非能力强于$Q_2$值所代表的电路，因此$Q_1$值曲线急速下降，十分陡峭，而$Q_2$值曲线下降很慢，顶部的变化显得比较平缓。曲线的整体形状显示了电路在抑非能力上的差异，并且这一差异在谐振点附近尤为突出。当信号的频率远离谐振频率后，左侧趋同于RC电路，右侧趋同于RL电路，彼此的差异逐渐缩小直至趋于消失。
+
+（3）电路在全频域内都有信号的输出，但只有在谐振点附近的邻域（$\eta=1+\Delta\eta$）内幅度较大，具有工程实际应用价值。因此，工程上设定了一个输出幅度指标来界定频率范围，划分出谐振电路的**通频带（通带）**和**阻带**。
+
+通带限定的频域范围称为**带宽**，记为$BW$。工程上按照下面的式子决定通带的$BW$，即：
+$$
+\vert H_R(\mathrm{j}\eta)\vert\ge\dfrac1{\sqrt2}=0.707(\text{设定的指标})
+$$
+当上式取等号时，根据式$\eqref{eqHR}$有：
+$$
+\begin{split}
+&\dfrac1{\sqrt{1+Q^2(\eta-\dfrac1\eta)^2}}=\dfrac1{\sqrt{2}}\\
+\Rightarrow&Q(\eta-\dfrac1\eta)=\pm1
+\end{split}
+$$
+于是可以求得两个频率点（一共四个解，舍去了两个负解）：
+$$
+\eta_1=-\dfrac1{2Q}+\sqrt{(\dfrac1{2Q})^2+1}<1,\ \omega_1=\eta_1\omega_0\ (下界)
+$$
+
+$$
+\eta_2=\dfrac1{2Q}+\sqrt{(\dfrac1{2Q})^2+1}>1,\ \omega_2=\eta_2\omega_0\ (上界)
+$$
+
+因此，通频带$BW$为：
+$$
+BW=\omega_2-\omega_1=\dfrac{\omega_0}{Q}\label{eqBW}
+$$
+==绘制图像==
+
+由上述所界定的通带位于频域中段，呈带状形，所以网络函数$H_R(\mathrm{j}\eta)$称为**带通函数**。通带的频率范围为：
+$$
+\omega_1\le\omega\le\omega_2
+$$
+$\omega_1$、$\omega_2$分别位于$\omega_0$两侧，因此$\omega_0$又常称为中心**频率**。
+
+工程上对于$\omega_1$、$\omega_2$常另有称为，如**$3\ \mathrm{dB}$点**（因为按照分别的定义，此电压的比值相当于$20\log_{10}0.707=-3\ \mathrm{dB}$，即电压下降了$3\ \mathrm{dB}$），**半功率点**（因为此时电阻上的功率等于谐振时电阻功耗的一半），并有$\varphi(\mathrm{j}\eta_1)=45^\circ$，$\varphi(\mathrm{j}\eta_2)=-45^\circ$。
+
+工程上也常用通带的带宽$BW$来比较和评价电路的性能。根据式$\eqref{eqBW}$，$BW$与$Q$值成反比，因而有：
+
+- $Q$值越大，$BW$越窄，电路的选择性越好，抑非能力越强；
+- $Q$值越小，$BW$越宽，电路选择性能越差，但带宽包含的信号多，信号流失少，有利于减少信号的失真。
+
+上述这两种情况都有实际的工程应用价值。
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>

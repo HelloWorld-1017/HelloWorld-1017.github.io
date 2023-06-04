@@ -25,11 +25,13 @@ $$
 
 输出电压$v(t)$基本上就等于$v_s(t)$的直流分量：
 $$
-v\approx\langle v_s\rangle=DV_g
+v\approx\langle v_s\rangle=DV_g\label{eq0}
 $$
 上述电路在理想状态下没有能量损耗。
 
 <br>
+
+## Small-ripple approximation
 
 由于不可能构建一个完美的滤波器，使得只传递DC分量而完全移除开关频率及其谐波分量。因此，低通滤波器会传递一些少量的有开关产生的高频谐波。因此，实际中的电压输出波形$v(t)$是类似于这样的：
 
@@ -129,7 +131,90 @@ $$
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230602220153373.png" alt="image-20230602220153373" style="zoom:67%;" />
 
-电感的初始值$i_L(0)=0$，当开关第一次ON时，根据式$\eqref{eq11}$，电感电流会以斜率$(V_g-v(t))/L$增加，其中$v(t)=0$；之后，开关位于OFF的状态，根据式$\eqref{eq22}$，电感
+电感的初始值$i_L(0)=0$，当开关第一次ON时，根据式$\eqref{eq11}$，电感电流会以斜率$(V_g-v(t))/L$增加，其中$v(t)=0$；之后，开关位于OFF的状态，根据式$\eqref{eq22}$，电感电流变化的斜率为$-v(t)/L$，此时$v(t)$仍然可以近似为零，因此在这个阶段，电感电流变化的斜率基本上为零。可以看到，在第一个开关周期内电感电流有一个净增量。电感电流会向电容充电，输出电压$v(t)$会稍微增加。之后，会进入下一个开关周期，并重复上述过程直至稳定状态，即：ON时段内的电流增量与OFF时段内的电流减量相等，有$i_L(nT_s)=i_L((n+1)T_s)$，在整个开关周期内没有电流净增量。
+
+## The principle of inductor volt-second balance
+
+由于在稳态状态下，由“一个开关周期内的电感电流净增量为零”这一事实，我们可以得到一个在**任何的**开关转换器中都适用的原理：**电感伏秒平衡原理**（the principle of *inductor volt-second balance*）。
+
+根据电感的定义：
+$$
+v_L(t)=L\dfrac{\mathrm{d}i_L(t)}{\mathrm{d}t}
+$$
+积分后可以得到：
+$$
+i_L(T_S)-i_L(0)=\dfrac1L\int_0^{T_s}v_L(t)\mathrm{d}t
+$$
+在稳态下，上式右端为零，因此有：
+$$
+0=\int_0^{T_s}v_L(t)\mathrm{d}t\label{eq5}
+$$
+式$\eqref{eq4}$表明，$v_L(t)$波形下的面积必须为零。
+
+式$\eqref{eq4}$两边同除$T_s$，有：
+$$
+0=\dfrac1{T_s}\int_0^{T_s}v_L(t)\mathrm{d}t=\langle v_L\rangle\label{eq6}
+$$
+即：一个开关周期内$v_L(t)$的平均值（或DC分量）为零。
+
+如下图所示：
+
+![image-20230604132337476](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230604132337476.png)
+
+一个开关周期内$v_L(t)$波形下的面积$\lambda$可以表示为：
+$$
+\lambda=\int_0^{T_s}v_L(t)\mathrm{d}t=(V_g-V)(DT_s)+(-V)(D'T_s)
+$$
+于是有：
+$$
+\langle v_L\rangle=\dfrac{\lambda}{T_s}=D(V_g-V)+D'(-V)
+$$
+根据式$\eqref{eq6}$有：
+$$
+0=D(V_g-V)+D'(-V)
+$$
+即：
+$$
+V=DV_g
+$$
+这个结果与一开始所推导的式$\eqref{eq0}$是一致的。
+
+因此，电感伏秒平衡原理能使我们推导出转换器输出电压的DC分量的表达式。并且，这种方式的优点在于普适性——**它能够用于分析任何的转换器**。
+
+## The priciple of capacitor amp-second balance
+
+......
+
+<br>
+
+# Boost Converter Example
+
+Boost电路是另一种著名的开关模式转换器，它能够产生一个幅值高于DC输入电压的DC输出电压。使用理想开关实现的以及使用MOSFET和二极管所实现的Boost电路如下图所示：
+
+![image-20230604133943436](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230604133943436.png)
+
+在下文中，我们主要以使用理想开关实现的Boost电路进行分析。
+
+## Small-ripple approximation
+
+当开关的位置掷于位置1时，等效电路如下图所示：
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230604135015546.png" alt="image-20230604135015546" style="zoom:67%;" />
+
+电感电压和电容电流为：
+$$
+\begin{split}
+&v_L=V_g\\
+&i_C=-\dfrac{v}{R}
+\end{split}
+$$
+
+
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230604135037472.png" alt="image-20230604135037472" style="zoom:67%;" />
+
+<br>
+
+# Exercise: Buck-boost Converter Example
 
 
 

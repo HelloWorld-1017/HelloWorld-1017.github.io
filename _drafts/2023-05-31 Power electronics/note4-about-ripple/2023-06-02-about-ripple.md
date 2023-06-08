@@ -191,7 +191,7 @@ $$
 
 Boost电路是另一种著名的开关模式转换器，它能够产生一个幅值高于DC输入电压的DC输出电压。使用理想开关实现的以及使用MOSFET和二极管所实现的Boost电路如下图所示：
 
-![image-20230604133943436](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230604133943436.png)
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230604133943436.png" alt="image-20230604133943436" style="zoom:67%;" />
 
 在下文中，我们主要以使用理想开关实现的Boost电路进行分析。
 
@@ -215,6 +215,84 @@ $$
 <br>
 
 # Exercise: Buck-boost Converter Example
+
+![image-20230608124914111](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230608124914111.png)
+
+（1）
+
+当开关的位置位于位置1时，有：
+
+==fig==
+$$
+\left\{
+\begin{split}
+&v_L=V_g\\
+&i_C(t)=-\dfrac{v}{R}\approx-\dfrac{V}{R}
+\end{split}
+\right.
+$$
+当开关的位置位于位置2时，有：
+
+==fig==
+$$
+\left\{
+\begin{split}
+&v_L=v\approx V\\
+&i_C(t)=-\dfrac{v}{R}-i_L(t)\approx -\dfrac{V}{R}-I
+\end{split}
+\right.
+$$
+于是可以绘制出稳态时一个开关周期内的电感电压和电容电流的变化曲线：
+
+![image-20230608124705931](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230608124705931.png)
+
+根据上文所述的电感伏秒平衡原理和电容安秒平衡原理，有：
+$$
+\left\{
+\begin{split}
+&V_gD+V(1-D)=0\\
+&-\dfrac{V}{R}D+(-\dfrac{V}{R}-I)(1-D)=0
+\end{split}
+\right.\notag
+$$
+可以得到：
+$$
+\left\{
+\begin{split}
+&V=-\dfrac{V_gD}{1-D}\\
+&I=\dfrac{V_gD}{R(1-D)^2}
+\end{split}
+\right.
+$$
+于是有：
+$$
+\left\{
+\begin{split}
+&D=0.4\\
+&I=8.33
+\end{split}
+\right.
+$$
+（2）当开关位于位置1时，有：
+$$
+\dfrac{\mathrm{d}i_L(t)}{\mathrm{d}t}=\dfrac{V_g}{L}=\dfrac{30}{L}
+$$
+于是：
+$$
+\dfrac{30}{L}\cdot DT_s=2\Delta i_L=2\times0.1\times I
+$$
+可以得到：
+$$
+L=0.18\ \mathrm{mH}
+$$
+（3）根据式XX，可以得到：
+$$
+0.1=\dfrac{0.1\times I\times T_s}{8C}
+$$
+可以得到：
+$$
+C=26.03\ \mathrm{\mu F}
+$$
 
 
 

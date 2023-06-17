@@ -3,7 +3,7 @@ layout: single
 title: Correction and Supplement for Blog "An Arduino Sample Project Based on Temperature Sensor"
 date: 2023-01-24 20:04:03 +0800
 categories: 
- - Arduino
+ - Hardware
  - C
 tags:
  - Arduino
@@ -11,7 +11,7 @@ tags:
 
 # Introduction
 
-之前在学习温度传感器模块的时候（博客[An Arduino Sample Project Based on Temperature Sensor](http://whatastarrynight.com/arduino/c/An-Arduino-Sample-Project-Based-on-Temperature-Sensor/)，后简称为[博客](http://whatastarrynight.com/arduino/c/An-Arduino-Sample-Project-Based-on-Temperature-Sensor/)），有一个问题没有解决，没有搞清楚Arduino端口的输出值与电阻值之间的转换关系。但其实问题不止于此，我忽略了很多重要的东西，因此这篇博客意在对上一篇博客进行纠正和补充。
+之前在学习温度传感器模块的时候（博客[An Arduino Sample Project Based on Temperature Sensor - What a starry night~](http://whatastarrynight.com/hardware/c/An-Arduino-Sample-Project-Based-on-Temperature-Sensor/)，后简称为“博客”），有一个问题没有解决，没有搞清楚Arduino端口的输出值与电阻值之间的转换关系。但其实问题不止于此，我忽略了很多重要的东西，因此这篇博客意在对上一篇博客进行纠正和补充。
 
 <br>
 

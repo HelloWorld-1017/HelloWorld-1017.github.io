@@ -24,7 +24,7 @@ D:\Softwares\anaconda3\envs\PDEenv\Lib\site-packages\
 
 之后，打开Anaconda prompt，cd到指定目录：
 
-```shell
+```
 cd /d D:\Softwares\anaconda3\envs\PDEenv\Lib\site-packages\PDEBench-main
 ```
 
@@ -32,7 +32,7 @@ cd /d D:\Softwares\anaconda3\envs\PDEenv\Lib\site-packages\PDEBench-main
 
 然后，输入命令：
 
-```matlab
+```
 pip install .
 ```
 

@@ -3,8 +3,10 @@ layout: single
 title:  An Arduino Sample Project Based on Temperature Sensor
 date: 2023-01-11 12:03:04 +0800
 categories: 
- - Arduino
+ - Hardware
  - C
+tags:
+ - Arduino
 ---
 
 # Introduction
@@ -234,7 +236,7 @@ temperature = 1/(log(resistance/10000)/B+1/298.15)-273.15;
 
 ![image-20230111122131766](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111122131766.png)
 
-并且也会变化，但是它们端口输出值的具体含义我目前不是很清楚。
+并且也会变化，但是我目前还不清楚它们端口输出值的具体含义。
 
 <br>
 

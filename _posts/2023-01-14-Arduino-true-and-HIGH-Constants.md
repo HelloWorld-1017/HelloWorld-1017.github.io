@@ -3,8 +3,10 @@ layout: single
 title:  Arduino `true` and `HIGH` Constants
 date: 2023-01-14 21:06:37 +0800
 categories: 
- - Arduino
+ - Hardware
  - C
+tags:
+ - Arduino
 toc: false
 ---
 

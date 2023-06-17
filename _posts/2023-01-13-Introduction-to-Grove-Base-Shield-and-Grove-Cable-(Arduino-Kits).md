@@ -3,6 +3,8 @@ layout: single
 title:  Introduction to Grove Base Shield and Grove Cable (Arduino Kits)
 date: 2023-01-13 20:49:47 +0800
 categories: 
+ - Hardware
+tags:
  - Arduino
 ---
 

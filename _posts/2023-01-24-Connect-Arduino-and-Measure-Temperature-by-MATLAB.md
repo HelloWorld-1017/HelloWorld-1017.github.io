@@ -3,9 +3,10 @@ layout: single
 title: Connect Arduino and Measure Temperature by MATLAB
 date: 2023-01-24 21:25:03 +0800
 categories: 
- - Arduino
+ - Hardware
  - MATLAB
 tags: 
+ - Arduino
  - MATLAB Support Package for Arduino Hardware
 toc: false
 ---

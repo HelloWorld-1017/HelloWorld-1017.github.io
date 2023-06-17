@@ -3,10 +3,11 @@ layout: single
 title:  An Arduino Sample Project Based on Vibration Sensor
 date: 2023-01-10 21:18:17 +0800
 categories: 
- - Arduino
+ - Hardware
  - C
 tags:
  - C Warnings and Errors
+ - Arduino
 ---
 
 # Introduction

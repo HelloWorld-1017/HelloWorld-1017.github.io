@@ -3,15 +3,15 @@ layout: single
 title: An Arduino Sample Project Based on Liquid Crystal Display (LCD)
 date: 2023-01-12 10:55:51 +0800
 categories: 
- - Arduino
+ - Hardware
  - C
+tags:
+ - Arduino
 ---
-
-本博客使用LCD屏幕搭建示例项目[Grove - 16x2 LCD: Play with Arduino](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-arduino)。
 
 # Introduction
 
-该示例项目使用的LCD显示器（Liquid Crystal Display，液晶显示器）来自Grove套件（[Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)）：
+本博客使用LCD屏幕搭建示例项目：[Grove - 16x2 LCD: Play with Arduino](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-arduino)。该示例项目使用的LCD显示器（Liquid Crystal Display，液晶显示器）来自Grove套件（[Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)）：
 
 ![image-20230112082835171](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112082835171.png)
 

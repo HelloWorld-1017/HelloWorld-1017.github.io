@@ -248,9 +248,6 @@ $$
 
 <br>
 
-**参考**
+**References**
 
 [1]  [Solenoid - MathWorks](https://ww2.mathworks.cn/help/physmod/simscape/ug/solenoid.html).
-
-
-

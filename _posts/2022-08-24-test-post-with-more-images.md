@@ -3,7 +3,7 @@ layout: single
 title: Test Post with more images(HTML `<figure>` tag)
 date: 2022-08-24 10:07:19 +0800
 categories: 
- - Github Pages
+ - Github
 tags: 
  - Jekyll
 classes: wide

@@ -3,7 +3,7 @@ layout: single
 title: Test Gallery
 date: 2022-08-12 20:16:09 +0800
 categories: 
- - Github Pages
+ - Github
 tags: 
  - Jekyll
 toc: false

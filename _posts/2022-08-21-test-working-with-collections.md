@@ -3,7 +3,7 @@ layout: single
 title: Test Working with Collections
 date: 2022-08-21 13:25:23 +0800
 categories: 
- - Github Pages
+ - Github
 tags: 
  - Jekyll
 toc: false

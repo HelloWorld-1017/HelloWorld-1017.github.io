@@ -3,7 +3,7 @@ layout: single
 title:  Install Jekyll for Windows
 date: 2023-01-03 09:55:32 +0800
 categories: 
- - Github Pages
+ - Github 
 tags:
  - Jekyll
 toc: false

@@ -6,7 +6,7 @@ header:
   overlay_color: "#333"
 date: 2022-08-13 16:32:41 +0800
 categories: 
- - Github Pages
+ - Github
 tags: 
  - Jekyll
 toc: false

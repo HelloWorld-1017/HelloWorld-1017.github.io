@@ -131,7 +131,7 @@ $$
 
 则需要做以下的修改：
 
-![image-20230620191157474](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620191157474.png)
+![image-20230621154606911](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230621154606911.png)
 
 得到的位置波形为：
 

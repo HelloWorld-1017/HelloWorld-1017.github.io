@@ -175,7 +175,3 @@ axis([0 2e-4 0 1 0 30])
 legend({'Data from FEM','Calculated'},'Location','Best')
 grid on
 hold(gca, "off")
-
-
-
-

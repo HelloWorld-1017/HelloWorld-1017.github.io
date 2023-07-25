@@ -4,6 +4,7 @@ title: A Connection Error when Using MATLAB Instrument Control Toolbox
 date: 2023-02-26 21:30:29 +0800
 categories: 
  - MATLAB
+ - Windows
 tags:
  - MATLAB Instrument Control Toolbox
  - Experiment

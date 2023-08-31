@@ -69,7 +69,7 @@ Apart from using functions provided by `changes` package, Nebil [3] provided an 
 
 \begin{document}
 % Describe the style of both the box and the text.
-\newcommand{\remark}[3]{%
+\newcommand{\remark}[3]{
     {\colorbox{#2}{\sffamily\scriptsize\bfseries\textcolor{white}{#1}}}
     {\sffamily\small\itshape\textcolor{#2}{#3}}
 } 

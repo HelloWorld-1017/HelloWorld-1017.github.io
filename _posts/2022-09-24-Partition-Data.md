@@ -250,43 +250,83 @@ end
 Added on 31, Aug. 2023.
 {:.notice}
 
-At times, we probably want to extract a specified-and-the-same number of samples from each class, regardless of whether or not the origin dataset is balanced, like selecting 3 samples of each class from deleted `fisheriris` dataset aforementioned in the last section for instance: 
+In certain scenarios, we probably want to extract a specified number of samples from each class, regardless of whether or not the origin dataset is balanced, like respectively extracting 5, 3, and 2 samples of each class from deleted `fisheriris` dataset aforementioned in the last section for instance: 
 
 ```matlab
 clc,clear,close all
 load fisheriris.mat
 
 % Delete some data, make proportion 3:2:1
-idx = randperm(50, 20);
-meas(idx, :) = [];
-species(idx, :) = [];
-idx = randperm(50, 30)+30;
-meas(idx, :) = [];
-species(idx, :) = [];
-idx = randperm(50, 40)+50;
-meas(idx, :) = [];
-species(idx, :) = [];
+idx_training = randperm(50, 20);
+meas(idx_training, :) = [];
+species(idx_training, :) = [];
+idx_training = randperm(50, 30)+30;
+meas(idx_training, :) = [];
+species(idx_training, :) = [];
+idx_training = randperm(50, 40)+50;
+meas(idx_training, :) = [];
+species(idx_training, :) = [];
 
-% Select a specified number of samples (here, 3) from each class
-classesName = unique(species);
+% % % For verifying 
+% meas(:,5) = (1:height(meas))'; % add a tag for each sample
+
+% Select a specified number of samples from each class
+[meas_training,species_training,meas_test,species_test] = helperExtractSample(meas,species,[5;3;2]);
+
+% % % For verifying 
+% % For feature 'meas'
+% combinenation_meas = [meas_training;meas_test];
+% combinenation_species = [species_training;species_test];
+% disp(numel(unique(combinenation_meas(:,5))))
+% % For label 'species'
+% variables = findgroups(combinenation_species);
+% totalNumPerClass = splitapply(@numel,combinenation_species,variables);
+% disp(totalNumPerClass)
+
+function [feautues_training,labels_training,features_test,labels_test] = ...
+    helperExtractSample(features,labels,trainingNumPerClass) % Function for Select a specified number of samples from each class
+% Initial pre-process
+classesName = unique(labels);
 numClasses = numel(classesName);
-selectedNumPerClass = 3;
-totalNum = selectedNumPerClass*numClasses;
-selectedMeas = nan(totalNum,width(meas));
-selectedSpecies = cell(totalNum,1);
-for i = 1:numClasses
-    idx = strcmp(species,classesName(i));
-    features = meas(idx,:);
-    label = species(idx);
-    num = numel(label);
-    idx = randperm(num,selectedNumPerClass);
-    idxRange = 1+(i-1)*selectedNumPerClass:i*selectedNumPerClass;
-    selectedMeas(idxRange,:) = features(idx,:);
-    selectedSpecies(idxRange,1) = label(idx,:);
-end
+variables = findgroups(labels);
+totalNumPerClass = splitapply(@numel,labels,variables);
+testNumPerClass = totalNumPerClass-trainingNumPerClass;
 
+trainingNum = sum(trainingNumPerClass);
+testNum = sum(totalNumPerClass)-trainingNum;
+
+feautues_training = nan(trainingNum,width(features));
+features_test = nan(testNum,width(features));
+
+labels_training = cell(trainingNum,1);
+labels_test = cell(testNum,1);
+
+beginningIdx_training = 1;
+beginningIdx_test = 1;
+for i = 1:numClasses
+    % Extract all samples of the same label
+    speciesIdx = strcmp(labels,classesName(i));
+    selectedFeatures = features(speciesIdx,:);
+    selectedLabels = labels(speciesIdx);
+    idx_training = randperm(totalNumPerClass(i),trainingNumPerClass(i));
+
+    % Extract a specified number of training samples
+    idxRange_training = beginningIdx_training:(beginningIdx_training+trainingNumPerClass(i)-1);
+    feautues_training(idxRange_training,:) = selectedFeatures(idx_training,:);
+    labels_training(idxRange_training,1) = selectedLabels(idx_training,:);
+    beginningIdx_training = beginningIdx_training+trainingNumPerClass(i);
+
+    % Extract a specified number of test samples
+    idxRange_test = beginningIdx_test:(beginningIdx_test+testNumPerClass(i)-1);
+    idx_test = 1:totalNumPerClass(i);
+    idx_test(idx_training) = [];
+    features_test(idxRange_test,:) = selectedFeatures(idx_test,:);
+    labels_test(idxRange_test,1) = selectedLabels(idx_test,:);
+    beginningIdx_test = beginningIdx_test+testNumPerClass(i);
+end
 % Display label results
-disp(selectedSpecies)
+disp(labels_training)
+end
 ```
 
 ```

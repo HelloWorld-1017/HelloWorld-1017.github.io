@@ -86,4 +86,4 @@ $$
 
 [1] [Mass-Spring-Damper in Simulink and Simscape - MathWorks](https://ww2.mathworks.cn/help/simscape/ug/mass-spring-damper-in-simulink-and-simscape.html).
 
-[2] [Simulate Solenoid in MATLAB Simulink - What a starry night~](http://whatastarrynight.com/matlab/signals and systems/electromagnetism/circuit breaker/MATLAB-Simscape-solenoid/).
+[2] [Simulate Solenoid in MATLAB Simulink - What a starry night~](https://ma1017.github.io/matlab/signals and systems/electromagnetism/circuit breaker/MATLAB-Simscape-solenoid/).

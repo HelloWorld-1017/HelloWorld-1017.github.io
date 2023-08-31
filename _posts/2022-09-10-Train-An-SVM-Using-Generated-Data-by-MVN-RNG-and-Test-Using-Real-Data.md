@@ -11,7 +11,7 @@ tags:
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 
-Warning⚠️⚠️⚠️ ：本文所有的示例都存在严重的**数据泄露**现象，当时没有进行考虑，之后会对针对这一问题进行修改。
+Warning⚠️⚠️⚠️ ：本文所有的示例都存在严重的**数据泄露**现象，当时没有进行考虑，之后会对针对这一问题进行修改。2023.08.31：数据泄露的问题已经进行了矫正，详见博客[Correct Data Leakage Problem - What a starry night~ ](https://ma1017.github.io/mathematics/matlab/machine learning/correct-data-leakage-problem/).
 {: .notice--warning}
 
 # Introduction

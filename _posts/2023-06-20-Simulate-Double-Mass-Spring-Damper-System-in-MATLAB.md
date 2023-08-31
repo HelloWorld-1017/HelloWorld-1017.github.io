@@ -272,7 +272,7 @@ $$
 
 **References**
 
-[1] [Mass-Spring-Damper Simulation in MATLAB - What a starry night~](http://whatastarrynight.com/matlab/Mass-Spring-Damper-Simulation-in-MATLAB/).
+[1] [Mass-Spring-Damper Simulation in MATLAB - What a starry night~](https://ma1017.github.io/matlab/Mass-Spring-Damper-Simulation-in-MATLAB/).
 
 [2] [Double Mass-Spring-Damper in Simulink and Simscape - MathWorks](https://ww2.mathworks.cn/help/simscape/ug/double-mass-spring-damper-in-simulink-and-simscape.html).
 

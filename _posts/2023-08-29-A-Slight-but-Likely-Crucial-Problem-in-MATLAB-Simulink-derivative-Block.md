@@ -51,6 +51,6 @@ On the other hand, the integration results only relates to Initial Condition (IC
 
 <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230829145105206.png" alt="image-20230829145105206" style="zoom: 80%;" />
 
-To sum up, I think using `integrator` block to describe system equation as much as possible, rather than `derivative` block, is a better choice as a fault value always appears in initial condition of derivative output, probably leading to divergent results, despite the fact of numerical algorithms for integration is much more complicated than that for derivative.
+So to my mind, using `integrator` block to describe system equation as much as possible, rather than `derivative` block, is a better choice as a fault value always appears in initial condition of derivative output, probably leading to divergent results, despite the fact of numerical algorithms for integration is much more complicated than that for derivative.
 
 <br>

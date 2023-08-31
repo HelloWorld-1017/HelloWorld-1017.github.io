@@ -29,11 +29,11 @@ There was an error loading the library "ps4000aWrap.dll"
 
 **References**
 
-[1] [Connecting PicoScope 4824A in MATLAB - What a starry night~](http://whatastarrynight.com/matlab/Connecting-PicoScope-4824A-in-MATLAB/).
+[1] [Connecting PicoScope 4824A in MATLAB - What a starry night~](http://ma1017.github.io/matlab/Connecting-PicoScope-4824A-in-MATLAB/).
 
-[2] [Collecting Streaming Data in MATLAB via PicoScope 4824A - What a starry night~](http://whatastarrynight.com/matlab/Collecting-Streaming-Data-in-MATLAB-via-PicoScope-4824A/).
+[2] [Collecting Streaming Data in MATLAB via PicoScope 4824A - What a starry night~](http://ma1017.github.io/matlab/Collecting-Streaming-Data-in-MATLAB-via-PicoScope-4824A/).
 
-[3] [Collecting Block Data in MATLAB via PicoScope 4824A - What a starry night~](http://whatastarrynight.com/matlab/Collecting-Block-Data-in-MATLAB-via-PicoScope-4824A/).
+[3] [Collecting Block Data in MATLAB via PicoScope 4824A - What a starry night~](http://ma1017.github.io/matlab/Collecting-Block-Data-in-MATLAB-via-PicoScope-4824A/).
 
 [4] [How can i set up my Picoscope Device in Instrument Control Toolbox? - MATLAB Answers](https://ww2.mathworks.cn/matlabcentral/answers/268391-how-can-i-set-up-my-picoscope-device-in-instrument-control-toolbox).
 

@@ -13,7 +13,7 @@ tags:
 
 # Introduction
 
-之前的两篇博客：[Train an SVM Using Generated Data by MVN-RNG, and Test with Real Data](http://whatastarrynight.com/mathematics/programming/machine%20learning/Train-An-SVM-Using-Generated-Data-by-MVN-RNG-and-Test-Using-Real-Data/)，[Correct Data Leakage Problem](http://whatastarrynight.com/mathematics/programming/machine%20learning/correct-data-leakage-problem/)都考虑使用MVG-RNG来做数据增强。前一篇博客没有考虑数据穿越问题，后一篇做出了纠正。这两篇博客的共同点是都使用生成数据作为所有的训练集数据，考虑的是最坏的情况。但在实践中，数据增强是对数据集的**补充**使得模型泛化能力更强，而不是**替代**。因此，如果使用数据增强技术，需要将生成数据和真实数据一起作为训练集训练模型。本文就对比了（1）使用由生成数据和真实数据混合构成的训练集；（2）使用由生成数据构成的完整的训练集训练出的模型的性能。
+之前的两篇博客：[Train an SVM Using Generated Data by MVN-RNG, and Test with Real Data - What a starry night~](https://ma1017.github.io/mathematics/matlab/machine learning/Train-An-SVM-Using-Generated-Data-by-MVN-RNG-and-Test-Using-Real-Data/)，[Correct Data Leakage Problem - What a starry night~](https://ma1017.github.io/mathematics/matlab/machine learning/correct-data-leakage-problem/) 都考虑使用MVG-RNG来做数据增强。前一篇博客没有考虑数据穿越问题，后一篇做出了纠正。这两篇博客的共同点是都使用生成数据作为所有的训练集数据，考虑的是最坏的情况。但在实践中，数据增强是对数据集的**补充**使得模型泛化能力更强，而不是**替代**。因此，如果使用数据增强技术，需要将生成数据和真实数据一起作为训练集训练模型。本文就对比了（1）使用由生成数据和真实数据混合构成的训练集；（2）使用由生成数据构成的完整的训练集训练出的模型的性能。
 
 <br>
 

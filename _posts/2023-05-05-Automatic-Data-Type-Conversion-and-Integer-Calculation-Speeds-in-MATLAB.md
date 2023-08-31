@@ -210,6 +210,6 @@ Elapsed time is 44.500926 seconds.
 
 [2] [Integers - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/integers.html).
 
-[3] [Machine Representation of Decimal Integers - What a starry night~](http://whatastarrynight.com/mathematics/matlab/Machine-Representation-of-Decimal-Integers/).
+[3] [Machine Representation of Decimal Integers - What a starry night~](http://ma1017.github.io/mathematics/matlab/Machine-Representation-of-Decimal-Integers/).
 
-[4] [Floating Point Representation and Machine Representation of Decimal Digits (IEEE 754 Standards) - What a starry night~](http://whatastarrynight.com/mathematics/matlab/Floating-Point-Arithmetic/).
+[4] [Floating Point Representation and Machine Representation of Decimal Digits (IEEE 754 Standards) - What a starry night~](http://ma1017.github.io/mathematics/matlab/Floating-Point-Arithmetic/).

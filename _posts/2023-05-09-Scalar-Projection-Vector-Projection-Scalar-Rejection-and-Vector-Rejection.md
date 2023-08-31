@@ -148,5 +148,5 @@ legend('Interpreter','latex')
 
 [1] [Vector projection - Wikipedia](https://en.wikipedia.org/wiki/Vector_projection).
 
-[2] [Geometric and Algebraic Definition of Dot Product - What a starry night~](http://whatastarrynight.com/mathematics/Geometric-and-Algebraic-Definition-of-Dot-Product/).
+[2] [Geometric and Algebraic Definition of Dot Product - What a starry night~](http://ma1017.github.io/mathematics/Geometric-and-Algebraic-Definition-of-Dot-Product/).
 

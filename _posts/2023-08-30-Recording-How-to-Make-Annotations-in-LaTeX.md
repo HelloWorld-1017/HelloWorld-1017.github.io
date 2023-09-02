@@ -55,7 +55,7 @@ This is a \replaced{replacement}{replace}.
 
 ![image-20230830221530665](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230830221530665.png)
 
-N.B.: In origin blog [1], the remark is added by keyword `remark`, like `This is \added[id=Ma,remark={This is added by Ma.}]{added} text.` However, an error occurs, “Package xkeyval Error: ‘remark’ undefined in families ‘Changes@added’. ...id=Ma,remark={This is added by Ma.}]{added}” as actually there exists no `remark` defined in `changes` package (at least in my `changes` edition installed) [2]. The keyword `common` should be used instead.
+N.B.: In origin blog [1], the remark is added by keyword `remark`, like `This is \added[id=Ma,remark={This is added by Ma.}]{added} text.` However, an error occurs, “Package xkeyval Error: ‘remark’ undefined in families ‘Changes@added’. ...id=Ma,remark={This is added by Ma.}]{added}” as actually there exists no `remark` defined in `changes` package (at least in my `changes` edition installed) [2]. The keyword `comment` should be used instead.
 {: .notice--warning}
 
 Apart from using functions provided by `changes` package, Nebil [3] provided an interesting way to make inline annotations within the context, by a user-defining approach using `\newcommand` keyword:

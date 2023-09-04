@@ -1,6 +1,6 @@
 # README
 
-This repository is supporting my personal blog website: [https://ma1017.github.io/](https://ma1017.github.io/). 
+This repository is supporting my personal blog website: [https://ma1017.github.io](https://ma1017.github.io). 
 
 From my point of view, writing it down is to forget and carry on. If lucky, I hope these dots could be connected one day when I looking backward.
 

@@ -23,7 +23,7 @@ plot(t,[x y])
 legend('Original Signal','Signal with AWGN')
 ```
 
-<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/image-20230914233316928.png" alt="image-20230914233316928" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915014908694.png" alt="image-20230915014908694" style="zoom:50%;" />
 
 However, the documentation does not list the detailed calculation formula, and recently I plan to use this function in my research, so I want to get into it. 
 
@@ -86,11 +86,11 @@ $$
 
 as the `signalpower` property of `awgn` function is set to `‘measured’`. Actually, we could specify other double value for `signalpower` property:
 
-<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/image-20230915002737115.png" alt="image-20230915002737115" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915015001859.png" alt="image-20230915015001859" style="zoom:50%;" />
 
 > The documentation does not provide the default setting for `signalpower` property, but we could find that the default value is `1` from whose source code:
 >
-> ![image-20230915003016283](https://raw.githubusercontent.com/Ma1017/blog-images/main/image-20230915003016283.png)
+> ![image-20230915015029345](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915015029345.png)
 
 For instance, we could specify `signalpower`  is `0.8`:
 
@@ -118,7 +118,7 @@ disp(P_noise1-P_noise2)
 
 We could find that, although we set `sigPower` to `0.8`, the value of `P_signal` is `1.203` instead. The reason is `awgn` function set default unit for `sigPower` to dB:
 
-<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/image-20230915010819218.png" alt="image-20230915010819218" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915015104049.png" alt="image-20230915015104049" style="zoom:50%;" />
 
 So, if we want to set `sigPower` to `0.8` watts, we should specified as follow:
 

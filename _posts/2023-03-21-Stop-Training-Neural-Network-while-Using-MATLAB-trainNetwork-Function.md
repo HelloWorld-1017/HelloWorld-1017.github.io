@@ -97,7 +97,7 @@ options = trainingOptions("sgdm", ...
 
 <br>
 
-# (3) Custom early stopping (`OutputFcn` property)
+# (3) Custom early stopping based on validation accuracy (`OutputFcn` property)
 
 `trainingOptions`函数还有另外一个输入参数`OutputFcn`，该输入参数接受一个函数句柄（function handle）或者函数句柄的元组数组（cell array of function handles）：
 
@@ -224,6 +224,62 @@ info =
 （2）输出的结构体的内容是与`OutputFcn`属性中所列出的内容是一致的；
 
 （3）只有间隔`ValidationFrequency`的次数，才会输出验证集的相关信息（如这里的fields `ValidationLoss`和`ValidationAccuracy`)；
+
+<br>
+
+# (4) Custom early stopping based on training loss (`OutputFcn` property)
+
+Added on Sep. 15 2023.
+{: .notice--primary}
+
+At times, available data are limited, and it is likely impractical to specify partial data as validation dataset. In these scenarios, stopping training network according to training loss or accuracy is an alternative choice. This could be realised by aforementioned `'OutputFcn'` property of `trainingOptions` as well. 
+
+The following example shows how to stop network training when training loss is lower than a specified value (i.e. `1e-2`) 3 times in a row. 
+
+```matlab
+...
+validationFrequency = floor(numel(YTrain)/miniBatchSize);
+options = trainingOptions('sgdm', ...
+    'InitialLearnRate',0.01, ...
+    'MaxEpochs',100, ...
+    'MiniBatchSize',miniBatchSize, ...
+    'VerboseFrequency',validationFrequency, ...
+    'ValidationData',{XValidation,YValidation}, ...
+    'ValidationFrequency',validationFrequency, ...
+    'Plots','training-progress', ...
+    'OutputFcn',@(info)stopIfTrainingLossNotImproving(info,3));
+[net,info] = trainNetwork(XTrain,YTrain,layers,options);
+
+function stop = stopIfTrainingLossNotImproving(info,N)
+stop = false;
+
+persistent lossLag
+lossThreshold = 1e-2;
+
+if info.State == "start"
+    lossLag = 0;
+elseif ~isempty(info.TrainingLoss)
+    if info.TrainingLoss > lossThreshold
+        lossLag = 0;
+    else
+        lossLag = lossLag + 1;
+    end
+    if lossLag >= N
+        stop = true;
+    end
+end
+end
+```
+
+![image-20230915160625882](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915160625882.png)
+
+We could observe recorded training information `info.TrainingLoss` to verify it:
+
+```
+>> info.TrainingLoss(end-4:end)
+ans =
+    0.0173    0.0141    0.0087    0.0068    0.0099
+```
 
 <br>
 

@@ -45,7 +45,7 @@ y = sig + noise; % linear (line 156)
 end
 ```
 
-If we suppose that $x$  and $noise$ represent input signal `sig` and additive white Gaussian noise, respectively, $\mathrm{SNR}_{\mathrm{dB}}$ is SNR (Signal-to-noise ratio) [2] in decibel unit `reqSNR`, we could obtain the computation expression:
+Supposing that $x$  and $noise$ represent input signal `sig` and additive white Gaussian noise, respectively, $\mathrm{SNR}_{\mathrm{dB}}$ is SNR (Signal-to-noise ratio) [2] in decibel unit `reqSNR`, we could obtain the computation expression:
 
 $$
 noise \sim \sqrt{\dfrac{(1/n)\sum\vert x_i\vert^2}{10^{\mathrm{SNR_{dB}}/10}}}\times\mathscr{N}(0,1)
@@ -90,9 +90,9 @@ as the `signalpower` property of `awgn` function is set to `‘measured’`. Act
 
 > The documentation does not provide the default setting for `signalpower` property, but we could find that the default value is `1` from whose source code:
 >
-> ![image-20230915015029345](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915015029345.png)
+> <img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915015029345.png" alt="image-20230915015029345" style="zoom:50%;" />
 
-For instance, we could specify `signalpower`  is `0.8`:
+For instance, `signalpower` could be specified as `0.8`:
 
 ```matlab
 t = (0:0.1:60)';
@@ -116,11 +116,11 @@ disp(P_noise1-P_noise2)
 0.0083
 ```
 
-We could find that, although we set `sigPower` to `0.8`, the value of `P_signal` is `1.203` instead. The reason is `awgn` function set default unit for `sigPower` to dB:
+The results show that, although we set `sigPower` to `0.8`, the value of `P_signal` is `1.203` instead. The reason is `awgn` function set default unit for `sigPower` to dB:
 
 <img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230915015104049.png" alt="image-20230915015104049" style="zoom:50%;" />
 
-So, if we want to set `sigPower` to `0.8` watts, we should specified as follow:
+So, if want to set `sigPower` to `0.8` watts, we should specified as follow:
 
 ```matlab
 t = (0:0.1:60)';

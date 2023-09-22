@@ -1,7 +1,7 @@
 ---
 layout: single
-title: MATLAB `tic` and `toc` Pair and `Timeit` Function
-date: 2023-09-21 22:39:13 +0800
+title: MATLAB `tic` and `toc` Pair and `timeit` Function
+date: 2023-09-22 13:46:17 +0800
 categories:
  - MATLAB
 tags:

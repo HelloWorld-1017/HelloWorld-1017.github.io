@@ -72,7 +72,7 @@ tStart =
 
 Note that this is a integer that has meaning ONLY for the `toc` function [1]: 
 
-![image-20230921210923497](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921210923497.png)
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921210923497.png" alt="image-20230921210923497"  />
 
 Furthermore, we could record the running time of each time in the loop and put them in the vector `T`:
 
@@ -150,11 +150,11 @@ diffRunTime = timeit(g)-timeit(h)
 
 (2) `timeit` function will calls the specified function multiple times and returns the median of the measurement.
 
-![image-20230921221619916](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921221619916.png)
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921221619916.png" alt="image-20230921221619916"  />
 
 (3) Using `timeit` between `tic` and `toc` may cause some unexpected results:
 
-![image-20230921223509719](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921223509719.png)
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921223509719.png" alt="image-20230921223509719"  />
 
 For example:
 

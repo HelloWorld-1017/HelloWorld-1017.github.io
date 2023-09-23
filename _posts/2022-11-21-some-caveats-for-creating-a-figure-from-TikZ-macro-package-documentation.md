@@ -6,6 +6,8 @@ categories:
  - LaTeX
  - Graphic Design and Typography
  - Wisdom
+tags:
+ - LaTeX TikZ
 ---
 
 # Introduction

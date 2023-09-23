@@ -20,3 +20,8 @@ __pycache__
 # Ignore MATLAB simulation compile files
 slprj
 *.slxc
+
+# Ignore TeXstudio automatically generated files
+*.aux
+*.log
+*.gz

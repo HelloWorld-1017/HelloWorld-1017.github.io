@@ -74,7 +74,7 @@ In general, it is easy to reproduce, and the main purpose of recording this exam
 
 **References**
 
-[1] [Ten Simple Rules for Better Figures - PLOS Computational Biology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833#s3).
+[1] [Ten Simple Rules for Better Figures - PLOS Computational Biology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833).
 
 [2] [Ten Simple Rules for Better Figures: Avoid Chartjunk - PLOS Computational Biology](https://journals.plos.org/ploscompbiol/article/figure?id=10.1371/journal.pcbi.1003833.g007).
 

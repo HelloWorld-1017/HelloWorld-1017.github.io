@@ -30,7 +30,7 @@ tags:
 - 如果对于$i\le k$，曲线$f()$和$g()$的第$i$阶导数值在点$f(b)=g(m)$处都是相等的，那么我们称两条曲线是**$\boldsymbol{C^k}$ continuous**；
 - 如果在连接点处，两条曲线的曲率(curvatures)是相同的，那么称两条曲线在连接点处是curvature continuous；
 
-直观上看，两条曲线是$\boldsymbol{C^0}$ continuous，则表明我们可以从一条曲线走到另一条曲线是不需要经过一个gap；两条曲线是$\boldsymbol{C^1}$ continuous，表明从一条曲线走到另一条曲线经过连接点处的速度是相同的；两条曲线是，则表明在连接点处除了速度是不变的外，加速度也是不变的。因此在连接点处，$\boldsymbol{C^2}$ continuous比$\boldsymbol{C^1}$ continuous更加平滑，$\boldsymbol{C^1}$ continuous比$\boldsymbol{C^0}$ continuous更加平滑。
+直观上看，两条曲线是$\boldsymbol{C^0}$ continuous，则表明我们可以从一条曲线走到另一条曲线是不需要经过一个gap；两条曲线是$\boldsymbol{C^1}$ continuous，表明从一条曲线走到另一条曲线经过连接点处的速度是相同的；两条曲线是$\boldsymbol{C^2}$ continuous，则表明在连接点处除了速度是相同的以外，加速度也是相同的。因此在连接点处，$\boldsymbol{C^2}$ continuous比$\boldsymbol{C^1}$ continuous更加平滑，$\boldsymbol{C^1}$ continuous比$\boldsymbol{C^0}$ continuous更加平滑。
 
 两条曲线是curvature continuous，则表明在连接点处turning rate是相同的；然而，此时在连接点处的二阶导数可能是不相同的。也就是说，curvature continuous不能够保证$\boldsymbol{C^2}$ continuous；但是，$\boldsymbol{C^2}$ continuous可以保证curvature continuous，这一点可以由曲率的计算公式得到。
 

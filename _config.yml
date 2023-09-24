@@ -28,9 +28,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Qinghua Ma" # can override the site author with different ones on specific posts, pages, or collection documents.
 description              : "An amazing website."
-url                      : http://ma1017.github.io
+url                      : http://helloworld-1017.github.io
 baseurl                  : # https://mademistakes.com/mastering-jekyll/site-url-baseurl/
-repository               : Ma1017/Ma1017.github.io
+repository               : helloworld-1017/helloworld-1017.github.io
 
 
 author:
@@ -44,7 +44,7 @@ author:
     #   url: qinghua7717@stu.xjtu.edu.cn
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: https://github.com/Ma1017
+      url: https://github.com/helloworld-1017
 
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

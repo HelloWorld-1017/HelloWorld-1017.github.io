@@ -42,7 +42,7 @@ $$
 $$
 \begin{split}
 t_0&=0\\
-t_k&=\dfrac1L(\sum_{i=1^k}\vert D_i-D_{i-1}\vert)\\
+t_k&=\dfrac1L(\sum_{i=1}^k\vert D_i-D_{i-1}\vert)\\
 t_n&=1\\
 \end{split}\notag
 $$

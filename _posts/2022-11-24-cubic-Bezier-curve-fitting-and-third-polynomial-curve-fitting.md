@@ -23,7 +23,7 @@ Schneider P J.在其1990年发表的论文"An algorithm for automatically fittin
 
 $$
 \begin{split}
-Q(t)&=B_0^3(t)V_0+B_1^3(u_i)V_1+B_2^3(t)V_2+B_3^3(t)V_3\\
+Q(t)&=B_0^3(t)V_0+B_1^3(t)V_1+B_2^3(t)V_2+B_3^3(t)V_3\\
 &=B_0^3(t)V_0+B_1^3(t)(\alpha_1\hat{t}_1+V_0)+B_2^3(t)(\alpha_2\hat{t}_2+V_3)+B_3^3(t)V_3
 \end{split}\label{eqQ}
 $$
@@ -39,13 +39,14 @@ $$
 1. fit a least-squares line to the points in the neighborhood of the endpoints;
 2. averaging vectors from the endpoints to the next $n$ points(本文采用的方法);
 
-之后，对X-Y平面内的数据点$d_i$进行参数化，将$d_i$与参数值$u_i$对应，采用的方法是chord-length parameterization(详见：[The Chord Length Method(Chord-length Parameterization) from MTU](http://whatastarrynight.com/mathematics/The-chord-length-method-from-MTU/))。
+之后，对X-Y平面内的数据点$d_i$进行参数化，将$d_i$与参数值$u_i$对应，采用的方法是chord-length parameterization(详见博客[5])。
 
-最后采用最小二乘你的方法求解未知系数$\alpha_1$和$\alpha_2$。最小二乘方法的目标函数为：
+最后采用最小二乘拟合方法求解未知系数$\alpha_1$和$\alpha_2$。最小二乘方法的目标函数为：
 
 $$
 S=\vert\vert P-Q(t)\vert\vert^2_2=\sum_{i=1}^n[d_i-Q(u_i)]^2\label{eqS}
 $$
+
 其中，$d_i$是给定数据点的$(x,y)$坐标；$u_i$与$d_i$相联系的parameter value。
 
 根据式$\eqref{eqQ}$，可以得到：
@@ -84,8 +85,10 @@ $$
 为了简化计算，我们记：
 
 $$
-A_{i,1}=\hat{t}_1B_1^3(u_i)\\
-A_{i,2}=\hat{t}_2B_2^3(u_i)\\
+\begin{split}
+&A_{i,1}=\hat{t}_1B_1^3(u_i)\\
+&A_{i,2}=\hat{t}_2B_2^3(u_i)\\
+\end{split}
 $$
 
 则式$\eqref{eq1}$可以写为：
@@ -458,4 +461,6 @@ end
 [3] [#深度解析# SSR，MSE，RMSE，MAE、SSR、SST、R-squared、Adjusted R-squared误差的区别 - 知乎](https://zhuanlan.zhihu.com/p/355345621).
 
 [4] [Sum of Squares Total, Sum of Squares Regression and Sum of Squares Error - 365 Data science](https://365datascience.com/tutorials/statistics-tutorials/sum-squares/).
+
+[5] [The Chord Length Method(Chord-length Parameterization) from MTU - What a starry night~](https://helloworld-1017.github.io/mathematics/The-chord-length-method-from-MTU/).
 

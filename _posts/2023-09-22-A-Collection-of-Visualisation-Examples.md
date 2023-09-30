@@ -12,7 +12,7 @@ toc: false
 
 1. [PGF/TikZ Manual: Complete Online Documentation](https://tikz.dev/).
 1. [TikZ and PGF examples](https://texample.net/tikz/examples/all/).
-1. [pgfmanual.pdf](https://pgf-tikz.github.io/pgf/pgfmanual.pdf).
+1. [TikZ and PGF documentation: pgfmanual.pdf](https://pgf-tikz.github.io/pgf/pgfmanual.pdf).
 1. [TikZ: Electric Engineering](https://tikz.net/category/engineering/electric-engineering/).
 1. [CircuiTikZ Package](https://www.ctan.org/pkg/circuitikz).
 1. [TikZ examples technical area: Electrical engineering](https://texample.net/tikz/examples/area/electrical-engineering/).

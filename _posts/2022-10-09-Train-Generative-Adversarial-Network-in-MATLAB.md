@@ -20,13 +20,13 @@ GAN包含两个部分结构：
 
 - 生成器(Generator)，给定一个随机向量(隐层输入，latent input)作为输入，该网络可以生成和训练数据相同结构数据；
 
-  ![image-20221008082639079](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008082639079.png)
+  ![image-20221008082639079](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008082639079.png?raw=true)
 
 - 判别器(Discriminator)，给定批量的训练数据(真实数据)和生成数据，该网络判断它们是"real"还是"generated"。
 
 下图展示了GAN的总体结构：
 
-![image-20221008082729985](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008082729985.png)
+![image-20221008082729985](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008082729985.png?raw=true)
 
 训练GAN，就是同时提升Generator和Discriminator的表现：
 
@@ -60,7 +60,7 @@ imds = imageDatastore(datasetFolder, IncludeSubfolders=true);
 
 此时，变量`imds`是一个`ImageDatastore`类的实例：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008085146901.png" alt="image-20221008085146901" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008085146901.png?raw=true" alt="image-20221008085146901" style="zoom: 80%;" />
 
 之后，对图片数据进行数据增强，数据增强的方式为random horizontal flipping，并且将图片的大小调整为64-by-64：
 
@@ -71,7 +71,7 @@ augimds = augmentedImageDatastore([64 64], imds, DataAugmentation=augmenter);
 
 此时，变量`augimds`是一个`augmentedImageDatastore`类的实例：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008085606565.png" alt="image-20221008085606565" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008085606565.png?raw=true" alt="image-20221008085606565" style="zoom: 80%;" />
 
 ## Define Generative Adversarial Network
 
@@ -81,7 +81,7 @@ augimds = augmentedImageDatastore([64 64], imds, DataAugmentation=augmenter);
 
 本示例GAN的Generator网络结构如下：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008085923114.png" alt="image-20221008085923114"  />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008085923114.png?raw=true" alt="image-20221008085923114"  />
 
 该网络：
 
@@ -221,7 +221,7 @@ netG = dlnetwork(layersGenerator);
 
 本示例GAN的Discriminator的网络结构如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008100427867.png" alt="image-20221008100427867"  />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008100427867.png?raw=true" alt="image-20221008100427867"  />
 
 该网络：
 
@@ -326,7 +326,7 @@ end
 
 Generator和Discriminator网络的losses计算路径示意图如下图所示：
 
-![image-20221008153243800](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008153243800.png)
+![image-20221008153243800](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008153243800.png?raw=true)
 
 在计算losses的时候，调用了一个自定义函数`ganLoss`：
 
@@ -371,7 +371,7 @@ lossD = -mean(log(YReal)) - mean(log(1-YGenerated));
 
 Generator和Discriminator网络的Scores计算路径示意图如下图所示：
 
-![image-20221008153217280](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008153217280.png)
+![image-20221008153217280](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008153217280.png?raw=true)
 
 在计算scores时，`YReal`和`YGenerated`的含义和计算losses是一致的，计算方法和意义也是类似的，只是多了一个负号但是能够更有效地反映相同的信息(The score is inversely proportional to the loss but effectively contains the same information)。
 
@@ -606,7 +606,7 @@ addpoints(lineScoreD,iteration,scoreD);
 
 使用NVIDA GeForce RTX 3060 Ti GPU 花费1h33min训练了500轮，得到最终的结果：
 
-![image-20221008205333021](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008205333021.png)
+![image-20221008205333021](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008205333021.png?raw=true)
 
 ## Generate New Images
 
@@ -631,7 +631,7 @@ axis off
 title("Generated Images")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008205523033.png" alt="image-20221008205523033" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008205523033.png?raw=true" alt="image-20221008205523033" style="zoom:67%;" />
 
 ## Save models
 
@@ -674,7 +674,7 @@ axis off
 title("Generated Images")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008210046431.png" alt="image-20221008210046431" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008210046431.png?raw=true" alt="image-20221008210046431" style="zoom:80%;" />
 
 <br>
 

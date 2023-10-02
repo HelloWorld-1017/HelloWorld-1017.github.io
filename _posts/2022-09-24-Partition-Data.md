@@ -168,7 +168,7 @@ box on
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220924132133219.png" alt="image-20220924132133219" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220924132133219.png?raw=true" alt="image-20220924132133219" style="zoom:67%;" />
 
 fisheriris数据集中三个物种都有50条数据，比例是1:1:1，所以当`Stratify=true`，切分后的数据集的数量比例是1:1:1。
 
@@ -241,7 +241,7 @@ box on
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220924133719786.png" alt="image-20220924133719786" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220924133719786.png?raw=true" alt="image-20220924133719786" style="zoom:67%;" />
 
 可以看到，`Stratify=true`将数据集按种类3:2:1的比例进行切分。
 

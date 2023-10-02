@@ -38,7 +38,7 @@ tags:
 
 考虑如下图所示的由流线（streamline）所表示的一般流场（general flow field）：
 
-![image-20230320195903811](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230320195903811.png)
+![image-20230320195903811](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230320195903811.png?raw=true)
 
 想象这样一个闭合体（closed volume）取自流体的一个有限区域。这个闭合体就定义为控制体（Control Volume）$V$，控制面（Control Surface）$S$ 就定义为限制控制体的闭合曲面（closed surface）。
 
@@ -52,7 +52,7 @@ tags:
 
 考虑如下图所示的由流线所表示的一般流场：
 
-![image-20230320201630532](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230320201630532.png)
+![image-20230320201630532](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230320201630532.png?raw=true)
 
 想象一个流体中的无穷小流体微团（infinitesimal fluid element in the flow），具有体积微元（differential volume）$\mathrm{d}V$。这个流体微团是无穷小的，如同微积分学中所定义的那样，但是另一方面，它有足够大，能够包含大量分子以至于它可以被视作连续介质（continuous medium）。这个流体微团可以在空间固定（如上图左图所示），也可以随流线以速度$\boldsymbol{\mathrm{V}}$运动，与流速保持一致（如上图右图所示）。
 

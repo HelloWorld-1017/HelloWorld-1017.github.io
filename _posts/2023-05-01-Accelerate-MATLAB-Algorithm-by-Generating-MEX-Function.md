@@ -138,15 +138,15 @@ Distance to the farthest point is 1.2923
 
 在我们编写MATLAB代码时，软件会一直运行着Code Analyzer，检查代码是否有问题，如果没有检测到问题，就会在右上角有一个绿色的小对号：
 
-![image-20230430200927498](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230430200927498.png)
+![image-20230430200927498](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230430200927498.png?raw=true)
 
 但是如果想要使Code Analyzer检查一些专门针对code generation的警告和错误，则还需要在函数声明的后面添加一个指令`%#codegen`：
 
-![image-20230430201133200](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230430201133200.png)
+![image-20230430201133200](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230430201133200.png?raw=true)
 
 此时`euclidean`函数中所有的这些warning都是同一种类型：
 
-![image-20230430201309842](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230430201309842.png)
+![image-20230430201309842](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230430201309842.png?raw=true)
 
 表示这些变量在使用它们之前，必须首先进行定义。之所以出现这种warnings，是因为code generator需要根据这些变量的大小来分配内存。因此，我们需要在最开始使用`ones`函数同时分配和初始化这些数组：
 
@@ -159,7 +159,7 @@ distance = ones(1,2)*norm(x-cb(:,1));
 
 之后，Code Analyzer的警告就消失了：
 
-![image-20230430201504827](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230430201504827.png)
+![image-20230430201504827](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230430201504827.png?raw=true)
 
 ## Code Generation Readiness Tool
 
@@ -171,7 +171,7 @@ coder.screener('euclidean')
 
 来打开Code Generation Readiness Tool检查代码是否还有问题：
 
-![image-20230430201752298](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230430201752298.png)
+![image-20230430201752298](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230430201752298.png?raw=true)
 
 <br>
 

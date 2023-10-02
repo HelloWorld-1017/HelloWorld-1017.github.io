@@ -24,7 +24,7 @@ hold(gca, "on")
 scatter(1:numel(data), data, 200, 'rx', LineWidth=2)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220831101149145.png" alt="image-20220831101149145" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220831101149145.png?raw=true" alt="image-20220831101149145" style="zoom:67%;" />
 
 其中：
 
@@ -54,7 +54,7 @@ hold(gca, "on")
 scatter(1:numel(data), data, 200, 'filled', 'rx', LineWidth=2)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220831120750565.png" alt="image-20220831120750565" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220831120750565.png?raw=true" alt="image-20220831120750565" style="zoom:50%;" />
 
 There's noting，而且也不报错。类似marker还有：`'+'`, `'*'`, `'.'`。
 

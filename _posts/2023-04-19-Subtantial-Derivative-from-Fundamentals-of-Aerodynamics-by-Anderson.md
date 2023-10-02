@@ -13,7 +13,7 @@ tags:
 
 考虑一个小的流体维微团在流场中移动，如下图所示：
 
-![image-20230418133726838](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230418133726838.png)
+![image-20230418133726838](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230418133726838.png?raw=true)
 
 速度场给定为：
 

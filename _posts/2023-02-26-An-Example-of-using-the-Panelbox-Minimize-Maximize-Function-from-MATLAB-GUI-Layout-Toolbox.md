@@ -12,11 +12,11 @@ tags:
 
 MATLAB GUI Layout Toolbox所提供的Panel类`uix.BoxPanel`具有“折叠/展开”（即minimize/maximize）的功能，并且提供了一个该属性的示例：`minimizeexample`。该示例创建了如下图所示的GUI界面：
 
-![image-20230225231031216](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225231031216.png)
+![image-20230225231031216](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225231031216.png?raw=true)
 
 如果点击Panel左上角的三角形，则界面会变成：
 
-![image-20230225231104238](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225231104238.png)
+![image-20230225231104238](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225231104238.png?raw=true)
 
 程序以此来实现Panel折叠与展开的功能。该示例的代码中包含着很多非常意思的细节，也解决了一些之前我没有理解的问题，因此写下这篇博客以记录一下。
 
@@ -59,7 +59,7 @@ set(fig,'Position',[pos(1,1:2),width,sum(box.Heights)]);
 end 
 ```
 
-![image-20230225232409783](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225232409783.png)
+![image-20230225232409783](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225232409783.png?raw=true)
 
 其中，创建Panel时使用的是MATLAB GUI Layout Toolbox所提供的Panel类`uix.BoxPanel`。需要注意的是，这三个Panel是保存在Cell类型的`Panel`变量中的：
 
@@ -130,7 +130,7 @@ set(panel{1},'MinimizeFcn',{@nMinimize, 1});
 
 `'MinimizeFcn'`（以及回调函数中需要用到的`Minimized`）都是`uix.BoxPanel`中所定义的属性：
 
-![image-20230225234636017](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225234636017.png)
+![image-20230225234636017](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225234636017.png?raw=true)
 
 而对于向`'MinimizeFcn'`绑定回调函数（即传入参数`{@nMinimize, 1}`）的方式，我不是很理解。因为如果在单独的一个脚本文件中仅仅写入：
 
@@ -247,21 +247,21 @@ Error while evaluating UIControl Callback.
 
 在函数定义中没有使用形参`eventSource` and `eventData`，但同时MATLAB Code Analyzer并没有进行提示，是因为在函数声明的后面添加了一条特殊的注释`%#ok<INUSL>`：
 
-![image-20230226174152490](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226174152490.png)
+![image-20230226174152490](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226174152490.png?raw=true)
 
 用以提示Code Analyzer: *It means MATLAB editor will not issue warning at this line of code. It does not have any effect at the run time.* （参考：[%#ok -> What's the meaning? (narkive.com)](https://comp.soft-sys.matlab.narkive.com/KETqSEbs/ok-inusl-what-s-the-meaning)），删除掉这条注释后，可以看到Code Analyzer就会像往常一样提示“输入参数可能未在函数定义中进行使用”：
 
-![image-20230226174326526](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226174326526.png)
+![image-20230226174326526](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226174326526.png?raw=true)
 
 不同的代码开发者会采用不同的方式来处理这种“没有使用但必要”的情况，比如说博客[A GUI Demo Browser from MATLAB GUI Layout Toolbox - What a starry night~](http://whatastarrynight.com/matlab/A-GUI-Demo-Browser-from-MATLAB-GUI-Layout-Toolbox/)中的示例在回调函数定义时采用的方式是使用`~`进行替代：
 
-![image-20230226174830073](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226174830073.png)
+![image-20230226174830073](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226174830073.png?raw=true)
 
-![image-20230226174935333](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226174935333.png)
+![image-20230226174935333](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226174935333.png?raw=true)
 
 以及博客[An Example Creating MATLAB GUI with Object-oriented and Model-View-Controller Programming Methods - What a starry night~](http://whatastarrynight.com/matlab/An-Example-Creating-MATLAB-GUI-with-Object-oriented-and-Model-View-Controller-Programming-Methods/)中直接任由Code Analyzer警告的处理方式：
 
-![image-20230226175152657](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226175152657.png)
+![image-20230226175152657](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226175152657.png?raw=true)
 
 总的来讲，我认为本博客中的这个示例的处理方式是更加规范的。
 
@@ -269,7 +269,7 @@ Error while evaluating UIControl Callback.
 
 回调函数定义的部分没有什么复杂的地方，需要提一点的是，原代码会根据Panel的折叠情况来调整figure的大小：
 
-![image-20230226180336598](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226180336598.png)
+![image-20230226180336598](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226180336598.png?raw=true)
 
 但我个人认为固定住figure的大小是更合理的，只需要注释掉下面的代码即可：
 
@@ -281,7 +281,7 @@ Error while evaluating UIControl Callback.
     ...
 ```
 
-![image-20230226180518858](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230226180518858.png)
+![image-20230226180518858](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230226180518858.png?raw=true)
 
 <br>
 

@@ -68,11 +68,11 @@ title('The sub title')
 title(t, 'April Bowling League Data')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic1.jpg" alt="pic1" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic1.jpg?raw=true" alt="pic1" style="zoom:80%;" />
 
 其中`nexttile`函数的参数所代表的含义：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904194910212.png" alt="image-20220904194910212" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904194910212.png" alt="image-20220904194910212" style="zoom:80%;" />
 
 <br>
 
@@ -120,7 +120,7 @@ plot(x,y4)
 title('Subplot 4: sin(8x)')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic2.jpg" alt="pic2" style="zoom:80%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic2.jpg?raw=true" alt="pic2" style="zoom:80%;" />
 
 但是除此之外，`subplot`函数可以设置`position`参数：
 
@@ -141,7 +141,7 @@ title('Second Subplot')
 sgtitle('Subplot Grid Title')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic3.jpg" alt="pic3" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic3.jpg?raw=true" alt="pic3" style="zoom:80%;" />
 
 其中，不像`tiledlayout`函数中**最后**可以连用两个`title`函数，前一个`titile`设置最后一个子图的标题，后一个`title`设置总标题，如果使用`subplot`进行绘制，要使用`sgtitle`函数设置总标题：
 

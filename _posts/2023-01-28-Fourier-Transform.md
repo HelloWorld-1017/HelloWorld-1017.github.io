@@ -5,14 +5,14 @@ date: 2023-01-28 13:44:01 +0800
 categories: 
  - Signals and Systems
 header:
-  image: https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230128135300193.png
+  image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230128135300193.png?raw=true
 ---
 
 # Fourier Transform
 
 在博客[Spectrum of Periodic Signals](http://whatastarrynight.com/signals%20and%20systems/matlab/Spectrum-of-Periodic-Signals/)中，我们推导并分析了周期矩形脉冲信号的频谱：
 
-![image-20230126174004648](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126174004648.png)
+![image-20230126174004648](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126174004648.png?raw=true)
 
 并且得出结论：
 
@@ -23,7 +23,7 @@ header:
 
 周期信号的**连续频谱**过渡为非周期信号的**连续频谱**。
 
-![image-20230128130220281](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230128130220281.png)
+![image-20230128130220281](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230128130220281.png?raw=true)
 
 虽然各频率分量的幅度趋近于无穷小，但无穷小量之间仍有相对大小差别，出于这个原因，我们可以很自然地引入**频谱密度函数**这个概念。
 
@@ -77,7 +77,7 @@ $$
 > 
 > 含义是：单位频率（$1/T$）上的频谱强度，也就是频谱密度。
 
-📌📌📌仍然需要强调的是，傅里叶变换求出来的$F(\mathrm{j}\omega)$和傅里叶级数求出的$F_n$不在一个层次上。$F_n$代表的是实际频谱，即双边谱，的强度；而$F(\mathrm{j}\omega)$是将双边谱的频谱强度放大了无穷倍看到的频谱强度。但是，它们都反映了频谱的大小。
+仍然需要强调的是，傅里叶变换求出来的$F(\mathrm{j}\omega)$和傅里叶级数求出的$F_n$不在一个层次上。$F_n$代表的是实际频谱，即双边谱，的强度；而$F(\mathrm{j}\omega)$是将双边谱的频谱强度放大了无穷倍看到的频谱强度。但是，它们都反映了频谱的大小。
 
 <br>
 
@@ -110,7 +110,7 @@ $$
 
 最终，由傅里叶变换和傅里叶反变换组成了傅里叶变换对：
 
-![image-20230128135300193](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230128135300193.png)
+![image-20230128135300193](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230128135300193.png?raw=true)
 
 可以记作：
 

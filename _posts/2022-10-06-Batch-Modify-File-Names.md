@@ -12,7 +12,7 @@ toc: false
 
 今天在整理电脑文件的时候遇到了这样一类问题，比如说现在有这样几个相同类型的文件：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006222410110.png" alt="image-20221006222410110" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006222410110.png" alt="image-20221006222410110" style="zoom: 67%;" />
 
 我想要把`PeakyBlinders01`修改成`01 Peaky Blinders`。
 
@@ -21,7 +21,7 @@ toc: false
 ```matlab
 clc, clear, close all
 
-file = dir("*.jpg");
+file = dir("*.jpg?raw=true");
 for i = 1:numel(file)
     oldname = file(i).name;
     matchStr = regexp(oldname, '[0-9][0-9]', "match");
@@ -33,7 +33,7 @@ end
 
 运行代码后，可以看到文件名被修改成预期的样子：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006223019726.png" alt="image-20221006223019726" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006223019726.png?raw=true" alt="image-20221006223019726" style="zoom:67%;" />
 
 其中，代码中：
 

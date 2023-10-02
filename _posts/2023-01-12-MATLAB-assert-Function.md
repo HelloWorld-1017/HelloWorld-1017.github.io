@@ -24,7 +24,7 @@ assert(cond,errID,msg,A1,...,An)
 
 - `errID`是assertion failure的identifier，它的命名需要满足一定的规则：
 
-  ![image-20230112175940649](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112175940649.png)
+  ![image-20230112175940649](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112175940649.png?raw=true)
 
   这个Identifier是存在于[`MExpection`](https://ww2.mathworks.cn/help/matlab/ref/mexception.html)对象中的，在后文中会详细地讨论这一点。
 
@@ -41,7 +41,7 @@ assert(a>=b, 'MYError:aleb', "a=%d, b=%d. a is less than b", a, b)
 
 此时程序会将错误信息打印在命令行窗口中：
 
-![image-20230112180908056](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112180908056.png)
+![image-20230112180908056](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112180908056.png?raw=true)
 
 `assert`函数的使用是比较简单的，但是我们仍然需要说明两点。
 

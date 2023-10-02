@@ -28,13 +28,13 @@ This example demonstrates the following app building tasks:
 
 Copyright 2018 The MathWorks, Inc.
 
-该示例来自MATLAB官方网站。一共有两个app，分别是 MainAppExample.mlapp 和 DialogAppExample.mlapp。在下文中，两个.mlapp代码分别在两个一级标题下完整给出，每个一级标题中的二级标题分别代表**类**的一部分属性或方法的实现，其中带 🎈 的二级标题是最具有差异和值得重点关注的部分。
+该示例来自MATLAB官方网站。一共有两个app，分别是 MainAppExample.mlapp 和 DialogAppExample.mlapp。在下文中，两个.mlapp代码分别在两个一级标题下完整给出，每个一级标题中的二级标题分别代表**类**的一部分属性或方法的实现，其中带  的二级标题是最具有差异和值得重点关注的部分。
 
 <br>
 
 # （一）MainAppExample.mlapp
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731172154853.png" alt="image-20220731172154853" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220731172154853.png?raw=true" alt="image-20220731172154853" style="zoom: 50%;" />
 
 定义继承自 matlab.apps.AppBase 的子类 MainAppExample：
 
@@ -73,7 +73,7 @@ MainAppExample 类主要以下几部分属性和方法：
 
 
 
-## 🎈（3）公有方法：updateplot
+## （3）公有方法：updateplot
 
 ```matlab
     methods (Access = public)
@@ -97,7 +97,7 @@ MainAppExample 类主要以下几部分属性和方法：
 
 
 
-## 🎈（4）私有方法：startupFcn, OptionButtonPushed, MainAppCloseRequest
+## （4）私有方法：startupFcn, OptionButtonPushed, MainAppCloseRequest
 
 ```matlab
     % Callbacks that handle component events
@@ -136,7 +136,7 @@ MainAppExample 类主要以下几部分属性和方法：
 
 当点击 Options 按钮时，软件会执行 `OptionsButtonPushed` 回调函数，首先禁用掉 Options 按钮，之后弹出 DialogAppExample App
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731212300394.png" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220731212300394.png?raw=true" style="zoom:50%;" />
 
 ```matlab
 app.DialogApp = DialogAppExample(app, app.CurrentSize, app.CurrentColormap);
@@ -226,7 +226,7 @@ app.DialogApp = DialogAppExample(app, app.CurrentSize, app.CurrentColormap);
 
 # （二）DialogAppExample.mlapp
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731172122056.png" alt="image-20220731172122056" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220731172122056.png?raw=true" alt="image-20220731172122056" style="zoom:67%;" />
 
 定义继承自 matlab.apps.AppBase 的子类 DialogAppExample：
 
@@ -267,7 +267,7 @@ end
 
 
 
-## 🎈（3）私有方法：StartupFcn, ButtonPushed, DialogAppCloseRequest
+## （3）私有方法：StartupFcn, ButtonPushed, DialogAppCloseRequest
 
 ```matlab
     % Callbacks that handle component events
@@ -434,7 +434,7 @@ end
 
 在上述过程中，我们可以看到对话框 app 调用了主 app 的 `updateplot()` 方法，这是可行的，因为主 app 中所定义的 `updateplot()` 方法是一个 public function
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220731222002303.png" alt="image-20220731222002303" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220731222002303.png?raw=true" alt="image-20220731222002303" style="zoom: 67%;" />
 
 public function 主要用于多窗口的 app ，以减少代码的冗余，具体的信息可以查看文档： [Reuse Code Using Helper Functions](https://ww2.mathworks.cn/help/matlab/creating_guis/code-and-call-app-functions-in-app-designer.html)。
 

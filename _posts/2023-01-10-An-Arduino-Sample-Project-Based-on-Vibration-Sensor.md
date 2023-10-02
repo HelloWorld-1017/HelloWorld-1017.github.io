@@ -20,13 +20,13 @@ tags:
 
 本项目所采用的振动传感器模块是Seeed Studio公司Grove套件中的Vibration Sensor(SW-420)：
 
-![image-20230110195353558](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110195353558.png)
+![image-20230110195353558](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110195353558.png?raw=true)
 
 产品官方文档见：[Grove - Vibration Sensor(SW-420) - Seeed Wiki](https://wiki.seeedstudio.com/Grove-Vibration_Sensor_SW-420/)。该官方文档中提供了该振动模块的电路的`.sch`文件、`.brd`文件：
 
-![image-20230110193936566](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110193936566.png)
+![image-20230110193936566](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110193936566.png?raw=true)
 
-![image-20230110193953904](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110193953904.png)
+![image-20230110193953904](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110193953904.png?raw=true)
 
 均可下载学习。
 
@@ -34,15 +34,15 @@ tags:
 >
 > 下载的压缩包解压后有几个文件：
 >
-> ![image-20230110194323884](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110194323884.png)
+> ![image-20230110194323884](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110194323884.png?raw=true)
 >
 > 我们在Altium Designer软件中打开`.PrjPcb`后缀的项目文件即可打开这个项目，就可以看到项目下的所有文件：
 >
-> ![image-20230110194553613](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110194553613.png)
+> ![image-20230110194553613](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110194553613.png?raw=true)
 
 SW-420是振动模块中振动传感器的型号：
 
-![image-20230110195736085](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110195736085.png)
+![image-20230110195736085](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110195736085.png?raw=true)
 
 这是一个高灵敏度、非定向（non-directional）的振动传感器。当模块是稳定的时候，电路接通并输出高电平；当模块发生运动或者振动时，电路将短暂断开并输出低电平。
 
@@ -52,7 +52,7 @@ SW-420是振动模块中振动传感器的型号：
 
 项目所采用的蜂鸣器同样来自Grove套件（[Grove - Buzzer - Seeed Wiki](https://wiki.seeedstudio.com/Grove-Buzzer/)）：
 
-![image-20230110195459813](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110195459813.png)
+![image-20230110195459813](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110195459813.png?raw=true)
 
 该模块的主要部件是一个压电蜂鸣器（[piezo buzzer](https://en.wikipedia.org/wiki/Buzzer#Piezoelectric)），它可以连接到**数字端口输出**，当输出为高电平时，它会发出声音。
 
@@ -112,7 +112,7 @@ void loop()
 
 我们将振动传感器连接到D2端口，将蜂鸣器连接到D3端口：
 
-![image-20230110203517589](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110203517589.png)
+![image-20230110203517589](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110203517589.png?raw=true)
 
 烧录下面的程序：
 
@@ -157,7 +157,7 @@ void loop() {
 
 **Experiment 2**：我们可以通过旋转振动模块上的电位器控制传感器的灵敏度：
 
-![image-20230110204310766](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110204310766.png)
+![image-20230110204310766](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110204310766.png?raw=true)
 
 但是这个电位器是可以向着一个方面一直旋转的，灵敏度的控制效果并不好；
 

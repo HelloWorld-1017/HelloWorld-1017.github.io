@@ -11,7 +11,7 @@ toc: false
 
 《MATLAB面向对象编程：从入门到设计模式（第2版）》这本书中介绍了一个使用“面向对象+MVC（Model-View-Controller）模式”创建GUI的示例：
 
-![image-20230225151658839](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225151658839.png)
+![image-20230225151658839](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225151658839.png?raw=true)
 
 该GUI很简单地模拟银行账户存款取款的过程。原书作者非常详细地介绍了如何使用面向对象编程的方式编写MVC模式的GUI程序，但是作为初学者，有一些小细节我不是很理解，原本我想要写一篇博客对这些地方一一进行解释，但是写到一半发现内容越写越多，并且再看时仍然觉得没有条理，没有主次，抓不住重点；另一方面，由于能力有限，很多地方我也无法完全搞明白。因此，我在这篇博客中仅仅把原书所提供的代码放在这里，以后在编程时进行模仿，一点一点进行学习。
 
@@ -19,7 +19,7 @@ toc: false
 
 `Model`类：
 
-![image-20230225153008865](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225153008865.png)
+![image-20230225153008865](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225153008865.png?raw=true)
 
 ```matlab
 classdef Model < handle
@@ -51,7 +51,7 @@ end
 
 `View`类：
 
-![image-20230225153021925](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225153021925.png)
+![image-20230225153021925](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225153021925.png?raw=true)
 
 ```matlab
 classdef View < handle
@@ -124,7 +124,7 @@ end
 
 `Controller`类：
 
-![image-20230225153037251](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225153037251.png)
+![image-20230225153037251](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225153037251.png?raw=true)
 
 ```matlab
 classdef Controller < handle

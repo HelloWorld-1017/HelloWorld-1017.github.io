@@ -15,7 +15,7 @@ MATLAB软件本身提供了一个用于文字识别（Optical Character Recognit
 
 我在电影 *Before Sunrise* 中截了一张图：
 
-![image-20230121122733171](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121122733171.png)
+![image-20230121122733171](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121122733171.png?raw=true)
 
 并保存为`before_sunrise.png`文件，测试一下`ocr`函数的使用效果。
 
@@ -69,7 +69,7 @@ ans =
 
 最终标记的图像：
 
-![image-20230121123533892](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121123533892.png)
+![image-20230121123533892](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121123533892.png?raw=true)
 
 可以看到整体的识别效果是比较差的，不像官方示例展示得那么优秀。
 
@@ -108,7 +108,7 @@ ans =
      '
 ```
 
-![image-20230121151028239](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121151028239.png)
+![image-20230121151028239](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121151028239.png?raw=true)
 
 图片中整个中英文台词进行识别，结果为：
 
@@ -122,7 +122,7 @@ ans =
      '
 ```
 
-![image-20230121151142973](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121151142973.png)
+![image-20230121151142973](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121151142973.png?raw=true)
 
 可以看到，`ocr`函数本身是不支持识别中文的，但是可以安装相关的语言包，具体可以参考文档：[ocr: Language](https://ww2.mathworks.cn/help/vision/ref/ocr.html#bu76sfz)，[Install OCR Language Data Files Packages](https://ww2.mathworks.cn/help/vision/ug/ocr-language-data-files.html).
 
@@ -136,7 +136,7 @@ ans =
 
 首先按照参考博客的步骤在百度云中创建一个文字识别应用：
 
-![image-20230121152713018](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121152713018.png)
+![image-20230121152713018](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121152713018.png?raw=true)
 
 记录下`API Key`和`Secret Key`（相当于账户和密码）。
 
@@ -153,7 +153,7 @@ token = token.access_token;
 
 百度云的API文档（[文字识别OCR：调用方式](https://cloud.baidu.com/doc/OCR/s/Ck3h7y2ia)）说明图片经过`base64`编码和`urlencode`后传入：
 
-![image-20230121153429604](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121153429604.png)
+![image-20230121153429604](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121153429604.png?raw=true)
 
 在将图片转换为`base64`编码时可以使用MATLAB File Exchange中Katz写的[`base64file`函数](https://ww2.mathworks.cn/matlabcentral/fileexchange/24514-base64-image-encoder?s_tid=srchtitle_base64file_4)：
 
@@ -187,7 +187,7 @@ base64string = base64file(filname);
 
 此时代表图片信息的`base64string`就是一个`char`数据类型：
 
-![image-20230121154306074](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121154306074.png)
+![image-20230121154306074](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121154306074.png?raw=true)
 
 然后使用[`webwrite`函数](https://ww2.mathworks.cn/help/matlab/ref/webwrite.html)将post到指定网站：
 
@@ -234,11 +234,11 @@ ans =
 >
 > 错误码信息可以在百度云的官方文档中查到：[文字识别OCR：错误码 ](https://ai.baidu.com/ai-doc/OCR/dk3h7y5vr)，错误码`18`代表并发限制超过免费额度：
 >
-> ![image-20230121155213056](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121155213056.png)
+> ![image-20230121155213056](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121155213056.png?raw=true)
 >
 > 但实际上哪怕是百度云所提供的免费额度也是需要开通的（见博客：[百度OCR API识别失败：Open api qps request limit reached 错误也许在这-小风alter的博客](https://blog.csdn.net/weixin_44298740/article/details/117560495)），我们可以在百度云的控制台看到领取的额度信息：
 >
-> ![image-20230121120853848](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121120853848.png)
+> ![image-20230121120853848](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121120853848.png?raw=true)
 
 这部分完整代码如下：
 
@@ -328,7 +328,7 @@ roi =
 
 - 将截图保存为一个暂时的图像文件，获得它的`base64`编码后再将其删除。这一步了参考上文Katz在为[`base64file`函数](https://ww2.mathworks.cn/matlabcentral/fileexchange/24514-base64-image-encoder?s_tid=srchtitle_base64file_4)提供的使用示例：
 
-  ![image-20230121173822788](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230121173822788.png)
+  ![image-20230121173822788](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230121173822788.png?raw=true)
 
 - 将图像的`base64`编码post到web server中，获取response，并提取识别结果
 

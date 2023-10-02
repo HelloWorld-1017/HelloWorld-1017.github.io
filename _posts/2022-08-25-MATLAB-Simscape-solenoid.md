@@ -17,7 +17,7 @@ tags:
 
 MATLAB 官方提供了一个电磁体(solenoid)的 Simulink 仿真模型$^{[1]}$，该仿真模型是基于 Simscape 模块进行构建的。用户在命令行中输入 `ssc_solenoid` 即可打开该模型：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825144343510.png" alt="image-20220825144343510" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825144343510.png?raw=true" alt="image-20220825144343510" style="zoom: 67%;" />
 
 该物理模型主要体现出了电路系统和机械系统之间的耦合。
 
@@ -26,7 +26,7 @@ MATLAB 官方提供了一个电磁体(solenoid)的 Simulink 仿真模型$^{[1]}$
 
 该 Simulink 模型所对应的物理模型为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825143608628.png" alt="image-20220825143608628" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825143608628.png?raw=true" alt="image-20220825143608628" style="zoom:67%;" />
 
 当开关闭合后，电路满足方程：
 
@@ -42,8 +42,8 @@ $$
 其中， $\dfrac{\mathrm{d}x}{\mathrm{d}t}$ 为铁芯运动的速度；$L(x)$ 和 $\dfrac{\mathrm{d}L(x)}{\mathrm{d}x}$ 在 Simulink 模型中由 PS Lookup Table(1D) 模块给出：
 
 <figure class="half">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825135120035.png">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825135053982.png">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825135120035.png?raw=true">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825135053982.png?raw=true">
     <figcaption>(1) Profile of L(x); (2) Profile of dL/dx</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ $$
 
 机械部分是由铁芯、弹簧所构成的一个质量-弹簧-阻尼系统：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825153817564.png" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825153817564.png?raw=true" style="zoom:67%;" />
 
 力的平衡方程为：
 
@@ -83,13 +83,13 @@ $$
 
 官方在模型中的左下角添加了这样的注释
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825131210984.png" alt="image-20220825131210984" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825131210984.png?raw=true" alt="image-20220825131210984" style="zoom:50%;" />
 
 其中超链接的部分既可以指向 URL，也可以指向一段执行代码。比如， 选中 `see code` 超链接，并右键选中 `Hyperlink`：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825131521923.png" alt="image-20220825131521923" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825131521923.png?raw=true" alt="image-20220825131521923" style="zoom:50%;" />
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825131558416.png" alt="image-20220825131558416" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825131558416.png?raw=true" alt="image-20220825131558416" style="zoom:50%;" />
 
 可以看到，`see code` 超链接是执行了一段 MATLAB 代码，功能是打开 `ssc_solenoid_plotimf.m` 文件。`ssc_solenoid_plotimf.m` 文件的功能是绘制线圈电流和电磁力曲线。但是这个文件是只读的，无法保存修改，因此我们需要在电脑中找到`ssc_solenoid_plotimf.m` 文件，复制一份到当前文件夹。此时也不用修改该超链接所指向的 Code，因为 MATLAB 会优先在当前文件夹中搜索代码文件。
 
@@ -144,7 +144,7 @@ clear temp_soli temp_solmf temp_solpos ah
 
 效果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825133727626.png" alt="image-20220825133727626" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825133727626.png?raw=true" alt="image-20220825133727626" style="zoom:50%;" />
 
 <br>
 
@@ -156,17 +156,17 @@ clear temp_soli temp_solmf temp_solpos ah
 
 电磁铁中铁芯的初始位置是在 `ssc_solenoid/Solenoid/Position Velocity Force Interface` 的 `Translational Motion Sensor` 模块中进行定义的。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825125131631.png" alt="image-20220825125131631" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825125131631.png?raw=true" alt="image-20220825125131631" style="zoom: 50%;" />
 
 并且 `ssc_solenoid/Position Sensor` 的 `Translational Motion Sensor` 的参数要和它保持一致。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825130237814.png" alt="image-20220825130237814" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825130237814.png?raw=true" alt="image-20220825130237814" style="zoom:50%;" />
 
 ### 修改
 
 如果修改初始位置为 10 mm，则波形为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825134131412.png" alt="image-20220825134131412" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825134131412.png?raw=true" alt="image-20220825134131412" style="zoom:50%;" />
 
 出现这种异常现象的原因：
 
@@ -176,13 +176,13 @@ clear temp_soli temp_solmf temp_solpos ah
 
 **总之，这就是模型参数不匹配导致的。**通过增加直流电压源的值可以解决这个问题，让动铁芯动起来，比如设置为DC 220V，结果为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825135727089.png" alt="image-20220825135727089" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825135727089.png?raw=true" alt="image-20220825135727089" style="zoom:50%;" />
 
 ## 动铁芯停止
 
 在这个模型中，动铁芯停止运动的条件是**动铁芯和弹簧所组成的质量-弹簧-阻尼系统达到了力的平衡**，在这个过程中会出现振荡的现象，从而出现位置为负数的情况：
 
-![image-20220825154554788](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825154554788.png)
+![image-20220825154554788](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825154554788.png?raw=true)
 
 如果我们不想让位置越过零太多，或者说我们想让动铁芯 Hard stop，类似于撞击到刚体上停止，就需要再设计一个刚体的模型。刚体同样可以简化为一个弹簧和一个阻尼，具体可以参考：[Translational Hard Stop](https://ww2.mathworks.cn/help/physmod/simscape/ref/translationalhardstop.html)，[Friction Model with Hard Stops](https://ww2.mathworks.cn/help/simulink/slref/friction-model-with-hard-stops.html).
 
@@ -190,15 +190,15 @@ clear temp_soli temp_solmf temp_solpos ah
 
 在0.3s时，该模型的这部分会向机械系统持续施加一个10N的力：
 
-![image-20220825160920902](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825160920902.png)
+![image-20220825160920902](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825160920902.png?raw=true)
 
 在图像上可以看到在0.3s时形成一个振荡：
 
-![image-20220825161112347](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825161112347.png)
+![image-20220825161112347](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825161112347.png?raw=true)
 
 如果我们去掉这个力，则图像为：
 
-![image-20220825161218709](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825161218709.png)
+![image-20220825161218709](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825161218709.png?raw=true)
 
 说明这个10N的力并不影响大致波形，但是它的具体作用不是很清楚，而且是持续施加的，不太可能是为了构建一个Hard Stop，可能是为了观察当系统稳定时，推动动铁芯给机电系统造成的影响。
 
@@ -206,25 +206,25 @@ clear temp_soli temp_solmf temp_solpos ah
 
 该 Simulink 模型的电压源为 DC 50V，开关在 0.1s 时进行闭合，之后并不打开：
 
-![image-20220825160105652](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825160105652.png)
+![image-20220825160105652](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825160105652.png?raw=true)
 
 那么，如果开关在 0.4s 时断开会怎样呢？我们可以将 Step 模块换为 Pulse Generator 模块来实现这一功能。
 
-![image-20220825162030557](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825162030557.png)
+![image-20220825162030557](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825162030557.png?raw=true)
 
 结果如下：
 
 注意：此时模型中已经删去了在0.3s后施加的10N的外力，并且仿真时间从原来的0.5s增加至2s。
 {: .notice--danger}
 
-![image-20220825162127797](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825162127797.png)
+![image-20220825162127797](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825162127797.png?raw=true)
 
 这说明一旦切断电压源，电磁力就会立即消失，动铁芯在弹簧力的作用下向初始点移动。
 
 还有一个需要注意的点，动铁芯在弹簧力的作用下运动的动态过程为什么不存在振荡现象？
 
 <figure>
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825163343055.png">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825163343055.png?raw=true">
     <figcaption>The varying profile of spring's variables.</figcaption>
 </figure>
 

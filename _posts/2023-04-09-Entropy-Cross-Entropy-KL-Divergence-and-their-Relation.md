@@ -69,7 +69,7 @@ $$
 
 对于这样一个只具有两个状态的系统，实际上仅仅需要得知$p(v_1)$的值，就可以计算出整个系统的熵（因为$p(v_2)=1-p(v_1)$），因此我们可以很简单地绘制出$p(v_1)$取不同值时熵的大小：
 
-![image-20230407154104139](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230407154104139.png)
+![image-20230407154104139](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230407154104139.png?raw=true)
 
 注：绘图脚本见附录A。
 {: .notice--primary}
@@ -123,7 +123,7 @@ $$
 
 同样地，对于具有三个状态的系统，可以绘制出类似的图像：
 
-![image-20230408171722004](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171722004.png)
+![image-20230408171722004](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408171722004.png?raw=true)
 
 注：绘图脚本见附录B。
 {: .notice--primary}
@@ -136,7 +136,7 @@ $$
 
 这个二元函数的图像为：
 
-![image-20230408174829067](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408174829067.png)
+![image-20230408174829067](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408174829067.png?raw=true)
 
 注：绘图脚本见附录C。
 {: .notice--primary}
@@ -217,7 +217,7 @@ $$
 
 可以看到，式$\eqref{eqa}$，$\eqref{eqb}$，和$\eqref{eqc}$的函数和两状态系统熵的计算式$\eqref{eq2states}$是类似的，因此在这三条边界上，最大值为0.6931，最小值为0。从垂直于三个边界的视角观看这个二维函数的图像，同样可以看出这一点：
 
-![image-20230408180456045](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408180456045.png)
+![image-20230408180456045](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408180456045.png?raw=true)
 
 注：绘图脚本见附录E。
 {: .notice--primary}
@@ -243,7 +243,7 @@ $$
 
 此处从略。而关于非负性的证明也是非常简单的 [6] ：
 
-![image-20230408183203054](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408183203054.png)
+![image-20230408183203054](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408183203054.png?raw=true)
 
 <br>
 
@@ -597,7 +597,7 @@ ylabel('$p(v_2)$','Interpreter','latex')
 
 除此之外，还有另一种实现方式，是计算出整个立方体区域的的熵，然后使用`slice`函数切取并绘制出$p(v_1)+p(v_2)+p(v_3)=1$的平面 [2], [3]：
 
-![image-20230408172002241](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408172002241.png)
+![image-20230408172002241](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408172002241.png?raw=true)
 
 由于`slice`函数相当于将计算切片和绘图集成到一个函数中了，因此在（1）设置曲面绘图属性和（2）寻找熵的最大值时需要稍微注意一下：
 

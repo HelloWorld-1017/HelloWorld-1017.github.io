@@ -61,7 +61,7 @@ X_test = (X_test-repmat(mu_test, numTest, 1))./repmat(sigma_test, numTest, 1);
 mdl = fitcnet(X_train, Y_train, 'LayerSizes', [7, 5], 'Activations', 'sigmoid', 'Standardize', false);
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925134950130.png" alt="image-20220925134950130" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925134950130.png?raw=true" alt="image-20220925134950130" style="zoom:67%;" />
 
 该深度神经网络包含两个隐藏层（神经元个数分别为7和5，激活函数为sigmoid），一个输入层和一个输出层，输出层后面接一个Softmax函数，将输出值压缩为一个0~1之间的概率值，并且每一个样本的所述各类别的概率加和为1。
 
@@ -174,7 +174,7 @@ end
 
 最后得到对比图像：
 
-![image-20220925140159077](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925140159077.png)
+![image-20220925140159077](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925140159077.png?raw=true)
 
 <br>
 

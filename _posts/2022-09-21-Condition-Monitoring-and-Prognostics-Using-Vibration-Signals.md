@@ -48,7 +48,7 @@ xlabel('Time (min)');
 ylabel('Defect depth (m)');
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918154729742.png" alt="image-20220918154729742" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918154729742.png?raw=true" alt="image-20220918154729742" style="zoom:50%;" />
 
 绘制健康状态的震动信号（第一条信号）和故障状态的震动信号（最后一条信号）：
 
@@ -70,7 +70,7 @@ ylabel('Acceleration(m/s^2)');
 legend('Faulty bearing signal');
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918155029014.png" alt="image-20220918155029014" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918155029014.png?raw=true" alt="image-20220918155029014" style="zoom:50%;" />
 
 <br>
 
@@ -100,7 +100,7 @@ colorbar
 axis xy
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918160505064.png" alt="image-20220918160505064" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918160505064.png?raw=true" alt="image-20220918160505064" style="zoom:50%;" />
 
 之后，计算并绘制轴承故障状态下震动信号的频谱图：
 
@@ -114,7 +114,7 @@ colorbar
 axis xy
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918160655675.png" alt="image-20220918160655675" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918160655675.png?raw=true" alt="image-20220918160655675" style="zoom:50%;" />
 
 可以看到，此时的信号能量集中的更高的频率。
 
@@ -170,7 +170,7 @@ colorbar
 axis xy
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918161757316.png" alt="image-20220918161757316" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918161757316.png?raw=true" alt="image-20220918161757316" style="zoom:50%;" />
 
 可以看到，图像中布满了高频噪声。这个现象是由原始震动和由小缺陷引起的震动所共同引起的。为了计算mean peak frequency，需要将数据进行滤波处理，移除这些高频噪声，再次进行可视化：
 
@@ -186,7 +186,7 @@ colorbar
 axis xy
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918162333303.png" alt="image-20220918162333303" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918162333303.png?raw=true" alt="image-20220918162333303" style="zoom:50%;" />
 
 之后，对所有的震动信号进行相同的特征提取步骤：
 
@@ -220,7 +220,7 @@ ylabel('Mean peak frequency (Hz)');
 grid on;
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918162622715.png" alt="image-20220918162622715" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918162622715.png?raw=true" alt="image-20220918162622715" style="zoom:50%;" />
 
 
 
@@ -258,7 +258,7 @@ ylabel('Probability Distribution');
 legend('Normal Bearing','Faulty Bearing');
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918223647977.png" alt="image-20220918223647977" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918223647977.png?raw=true" alt="image-20220918223647977" style="zoom:50%;" />
 
 基于图像，我们将mean peak frequency的阈值设置为2000Hz，以分辨轴承的正常状态和故障状态，同时最大化轴承的使用。
 
@@ -287,7 +287,7 @@ tsFeature = iddata(meanPeakFreq(1:tStart), [], samplingTime);
 plot(tsFeature.y)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220919091520424.png" alt="image-20220919091520424" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220919091520424.png?raw=true" alt="image-20220919091520424" style="zoom:50%;" />
 
 图像表明，初始数据大致是常数加上一定的噪声。这是预期内的，因为在初始时刻轴承是健康的，mean peak frequency不会大幅度地变化。
 
@@ -348,7 +348,7 @@ $$
 resid(tsFeature, past_sys)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220919094941951.png" alt="image-20220919094941951" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220919094941951.png?raw=true" alt="image-20220919094941951" style="zoom:50%;" />
 
 图像表明，残差是不相关的，得到的模型是有效的。
 
@@ -380,7 +380,7 @@ legend({'Past Data', 'Forecast', 'Failure Threshold', '95% C.I'},...
 grid on
 ```
 
-![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/gif1.gif)
+![gif1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/gif1.gif?raw=true)
 
 注：这里在计算95%置信区间时使用的方式是直接乘上1.96，这是查正态分布表得到的。这里默认的区间估计的对象是什么？具体是如何查找的？目前还不是很清楚。
 {: .notice--warning}
@@ -442,7 +442,7 @@ for tCur = tStart:batchSize:numSamples % batchSize = 10;
 end
 ```
 
-![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/gif1.gif)
+![gif1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/gif1.gif?raw=true)
 
 此时的时间序列模型：
 

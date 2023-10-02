@@ -54,7 +54,7 @@ $$
 
 我们可以用 MATLAB 求解这个方程的数值解以及迭代过程，画出相轨迹。
 
-![pic1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/pic1.svg)
+![pic1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic1.svg)
 
 ```matlab
 clc, clear, close
@@ -148,7 +148,7 @@ $$
 
 式 $\eqref{analyticalsolution}$ 就是式 $\eqref{eg}$  的解析解形式，可以根据式 $\eqref{analyticalsolution}$ 来绘制状态变量随时间变化图以及相图：
 
-![pic2](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/pic2.svg)
+![pic2](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic2.svg?raw=true)
 
 ```matlab
 clc, clear, close
@@ -234,7 +234,7 @@ timesteps = (0:neuralOdeTimesteps)*dt; % Select the first 41 points, ie 40 time 
 
 这里用到的神经网络有两个全连接层，其中第一个全连接层后连接一个激活函数层。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220823143631721.png" alt="image-20220823143631721" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220823143631721.png?raw=true" alt="image-20220823143631721" style="zoom:50%;" />
 
 两个全连接层的权重和偏置的值都保存在结构体 `neuralOdeParameters` 中，并进行初始化：
 
@@ -330,7 +330,7 @@ end
 
 以 mini batch 中单条数据为例，分析一下这行代码所做的工作。变量 `tspan` 的形状是 1x41，它定义41个时间点。`dlode` 函数通过调用用户所定义的 `odeModel` ，基于前一个时间点的状态变量来计算后一个时间点的状态变量，因此最终可以预测出 40 个时间节点的状态变量的值。下方的示意图就展示了这个过程。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220823151953356.png" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220823151953356.png?raw=true" style="zoom: 50%;" />
 
 #### （5）定义模型的损失函数
 
@@ -434,9 +434,9 @@ end
 
 ⚠ 注意，这个数据片段是不包括随机选取的初始点的。这么做是为了和 `dlode45` 的处理方式相同，这一点很重要。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220823151953356.png" alt="image-20220823151953356" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220823151953356.png?raw=true" alt="image-20220823151953356" style="zoom:50%;" />
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220823151041854.png" alt="image-20220823151041854" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220823151041854.png?raw=true" alt="image-20220823151041854" style="zoom:50%;" />
 
 另外需要注意的一行代码是：
 
@@ -531,7 +531,7 @@ plottingTimesteps = 2:numTimeSteps; % 2:2000
 
 最终得到模型动态训练的过程：
 
-![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/gif1.gif)
+![gif1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/gif1.gif?raw=true)
 
 ### Step4：模型测试（效果仍有待改进）
 
@@ -617,7 +617,7 @@ plotTrueAndPredictedSolutions(xTrue8, xPred8);
 
 可以看到 Neural ODE 的求解效果：
 
-![image-20220823160126283](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220823160126283.png)
+![image-20220823160126283](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220823160126283.png?raw=true)
 
 上图中的前四幅图像使用的 MATLAB 官方示例所提供的初始值，可以看到效果较好，但是后面我又随便设置了几个初始值，求解的效果并不理想。出现这种状况并不意外，这说明模型过拟合了。因为训练集的数据始终使用的是一条相轨迹，该相轨迹的初始点为 $[0,2]$ ，而我后面随便选取的分别为 $[-6;0]$，$[-7;-7]$，$[5.5;6]$，$[9;5]$ ，这和训练相轨迹的初始值差异较大，导致模型无法准确预测出相轨迹。
 

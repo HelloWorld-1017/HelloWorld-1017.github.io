@@ -11,7 +11,7 @@ toc: false
 
 之前在使用MATLAB绘制的图像的时候，一般会采用直接复制的方式：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221007222601167.png" alt="image-20221007222601167" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221007222601167.png" alt="image-20221007222601167" style="zoom:50%;" />
 
 或者使用`saveas`函数。
 
@@ -25,7 +25,7 @@ clc, clear, close all
 x = 1:0.1:4;
 y = x.^2;
 
-fileFormats = [".jpg", ".tif"];
+fileFormats = [".jpg?raw=true", ".tif"];
 resolutions = [300, 600, 900, 1000, 2400];
 for i = 1:numel(fileFormats)
     for j = 1:numel(resolutions)
@@ -40,7 +40,7 @@ end
 
 可以导出不同像素的`.jpg`和`.tif`格式的图像：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221007223239242.png" alt="image-20221007223239242" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221007223239242.png?raw=true" alt="image-20221007223239242" style="zoom:50%;" />
 
 将它们导入到word中，之后另存为PDF文件，可以看到它们之间细微的差别。2400 dpi的图像在细节方面的确表现得更优秀。
 

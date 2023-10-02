@@ -78,7 +78,7 @@ $$
 
 假设自变量 $x$ 和 $y$ 在 $z$ 平面（即 $xy$ 平面）中符合某条曲线，这将导致变量 $u$ 和 $v$ 在 $w$ 平面（即 $uv$ 平面）中遵循某一条**象曲线**。例如，如果点 $P(x,y)$ 沿着双曲线 $x^2-y^2=c$ （其中 $c$ 是一个常数）移动，那么**象点** $Q(u,v)$ 将沿着曲线 $u=c$ （即 $w$ 平面中的一条垂线）移动；如果点 $P$ 沿着双曲线 $2xy=k$ （其中 $k$ 是一个常数）移动，那么点 $Q$ 将沿着水平线 $v=k$ 移动。最终，双曲线 $x^2-y^2=c$ 和 $2xy=k$ 在 $z$ 平面内形成了两组相似的曲线，其中每条曲线都对应着一个给定的常数，它们的象曲线在 $w$ 平面内形成了由水平线及垂线构成的矩形网格。
 
-![Mapping1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Mapping1.gif)
+![Mapping1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Mapping1.gif)
 
 ```matlab
 clc, clear, close all
@@ -239,7 +239,7 @@ $$
 
 该方程组在复数域（$xy$ 平面）内有两个根：$(0,-1)$ 和 $(0, 1)$。在 $xy$ 平面绘制出几条经过上述两个点的轨迹：$x=y^2-1$，$x=0$，$x=1-y^2$，$x^2+y^2=1$，可以看到在经过 $xy$ 平面的 $(0,-1)$ 和 $(0, 1)$ 时，复数映射都会经过 $w$ 平面的原点 $(0,0)$。
 
-![Mapping2](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Mapping2.gif)
+![Mapping2](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Mapping2.gif?raw=true)
 
 ```matlab
 clc, clear, close all
@@ -341,7 +341,7 @@ $$
 
 假设对于复变函数 $w=z^2+1$ ，并且在 $z$ 平面上存在一点 $z_0=(0.5,0)$。现在我们在以 $P$ 为圆心，半径为0.5的圆形邻域边界上等间隔地选取12个点，使它们以直线的方式逼近点 $z_0$ 。下图就展示了在逼近的过程中，$z$ 平面中的直线轨迹以及所对应的 $w$ 平面中的轨迹。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Mapping3.gif" alt="Mapping3" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Mapping3.gif?raw=true" alt="Mapping3" style="zoom:50%;" />
 
 从程序上讲，如果对于 $z$ 平面中每一条逼近的直线我们都取5000个点，那么倒数第二个点和最后一个点之间的复数差值我们就可以认为是一个很小的 $\Delta z$，与之对应的是 $w$ 平面中的 $\Delta w$。对于每一条直线轨迹都计算一下 $\Delta w/\Delta z$，可以得到：
 
@@ -453,7 +453,7 @@ end
 
 在实变函数领域，如果实变函数 $y=f(x)$ 可微，则有：$\mathrm{d}y=f'(x)\mathrm{d}x$，对于指定的一点$x_0$，有$\mathrm{d}y\vert_{x=x_0}=f'(x_0)\mathrm{d}x$，从几何角度看，这表示在 $x_0$ 处增加一个极小量 $\mathrm{d}x$ ，函数值增加 $\mathrm{d}y$。例如，对于实变函数 $y=x^2$，有：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220720143426716.png" alt="image-20220720143426716" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220720143426716.png?raw=true" alt="image-20220720143426716" style="zoom:50%;" />
 
 ```matlab
 clc, clear, close all
@@ -538,7 +538,7 @@ v = imag(w);
 ...
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Mapping5.gif" alt="Mapping5" style="zoom:50%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Mapping5.gif?raw=true" alt="Mapping5" style="zoom:50%;" />
 
 可以看到两种的绘制方式结果是一致的！
 

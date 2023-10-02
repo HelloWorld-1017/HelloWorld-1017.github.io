@@ -174,7 +174,7 @@ cov_bultin =
 
 从上面也可以看到，对于同一个矩阵`A`，`var`函数计算了协方差矩阵主对角线上的元素：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221025183855051.png" alt="image-20221025183855051" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221025183855051.png?raw=true" alt="image-20221025183855051" style="zoom:50%;" />
 
 那么，假如我只想计算$\mathrm{Cov}(X_1,X_2)$或者$\mathrm{Cov}(X_2,X_1)$呢？MATLAB不提供仅计算这些scalar的函数，仅能从`cov`函数计算得到的协方差矩阵中获得。其实这么做也很合理，因为一个scalar本身就无法完全描述多个分量之间的散布程度。
 

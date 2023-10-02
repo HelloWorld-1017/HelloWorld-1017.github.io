@@ -32,7 +32,7 @@ ps4000aDeviceObj = icdevice('picotech_ps4000a_generic','ObjectVisibility','on');
 
 <br>
 
-但是我记得一开始采用关掉MATLAB再运行的方式是不解决不了的，再运行还是会出现这样的报错，必须重启计算机才能解决，因此就极其麻烦👿 于是我就尝试着解决这个问题。
+但是我记得一开始采用关掉MATLAB再运行的方式是不解决不了的，再运行还是会出现这样的报错，必须重启计算机才能解决，因此就极其麻烦 于是我就尝试着解决这个问题。
 
 首先，在一般的流程下，MATLAB需要先创建Device Object，并与设备进行连接：
 
@@ -55,7 +55,7 @@ delete(ps4000aDeviceObj);
 
 首先我们模拟上面提到的中断代码的过程，并且清除掉工作空间中的所有变量：
 
-![image-20230226203117055](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230226203117055.png)
+![image-20230226203117055](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230226203117055.png?raw=true)
 
 虽然看似把“连接”都删除掉了，但其实还在。此时在cmd中输入（参考[使用tasklist将任务管理器的进程导出-百度经验](https://jingyan.baidu.com/article/148a1921f2e8f94d71c3b1d0.html)，[tasklist - Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/tasklist)）：
 
@@ -65,15 +65,15 @@ tasklist /v /fo csv>>d:\tasklist.csv
 
 会在D盘的根目录下生成一个`tasklist.csv`文件，该文件中保存着计算机目前所运行的进程信息：
 
-![image-20230226205729454](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230226205729454.png)
+![image-20230226205729454](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230226205729454.png?raw=true)
 
 我们在其可以看到这样一个MATLAB的进程，占用着18320 PID（Process Identification）：
 
-![image-20230226210410055](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230226210410055.png)
+![image-20230226210410055](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230226210410055.png?raw=true)
 
 之后在任务管理器的`详细信息`中找到这一进程，将其关闭后再次进入MATLAB运行程序即可重新建立连接：
 
-![image-20230226210607291](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230226210607291.png)
+![image-20230226210607291](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230226210607291.png?raw=true)
 
 虽然最后看起来很简单，就是在任务管理器中将MATLAB结束进程即可，甚至现在尝试的话，只需要关闭MATLAB重新进入运行就能接解决问题。但是，在寻找解决方案的过程中并不想这么顺利。
 

@@ -40,13 +40,13 @@ $$
 注：简单地讲，任意连接下面这条曲线上的两个点形成一条直线，我们不能够保证曲线上的所有点都在直线的上方，这就是一个非凸函数。
 {: .notice--primary}
 
-![image-20230403211245718](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230403211245718.png)
+![image-20230403211245718](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230403211245718.png?raw=true)
 
 那么，为什么只能保证找到局部最优的梯度下降法还用得这么普遍呢？ 因为后来人们研究发现，**损失函数并没有很多的局部最优点，其实比较少**。但是，会存在另外一种比较特殊的点，鞍点（saddle point），即梯度值为0（零向量）的点。
 
 如果进行梯度优化时进入到了鞍点，那么就没有办法继续向前迭代：
 
-![image-20230403211805739](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230403211805739.png)
+![image-20230403211805739](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230403211805739.png?raw=true)
 
 在深度学习里面，我们所要解决的最大的问题是不是局部最优问题，而是鞍点问题。
 
@@ -148,7 +148,7 @@ ax2.set_ylabel('Loss value')
 plt.show()
 ```
 
-![image-20230403214959725](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230403214959725.png)
+![image-20230403214959725](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230403214959725.png?raw=true)
 
 <br>
 
@@ -210,7 +210,7 @@ ax2.set_ylabel('Loss value')
 plt.show()
 ```
 
-![image-20230404102044749](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230404102044749.png)
+![image-20230404102044749](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230404102044749.png?raw=true)
 
 虽然使用SGD算法比使用GD算法得到的神经网络准确率较高，但是相比GD算法，SGD算法具有更高的时间复杂度，运算效率更低。
 
@@ -266,7 +266,7 @@ w.requires_grad = True
 
 在PyTorch中，最基本的一个数据类就是Tensor。它可以保存标量，向量，矩阵，甚至是更高维度的张量。Tensor中有两个比较重要的成员，一个是`data`，一个是`grad`，分别用来保存它本身的值，以及损失函数对权重的导数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230404174511345.png" alt="image-20230404174511345" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230404174511345.png?raw=true" alt="image-20230404174511345" style="zoom:67%;" />
 
 默认的创建的`torch.Tensor`是不需要进行计算梯度的，只有设置了`w.reauires_grad = True`，即表示我们希望计算关于该变量的梯度时，才会进行计算梯度。
 

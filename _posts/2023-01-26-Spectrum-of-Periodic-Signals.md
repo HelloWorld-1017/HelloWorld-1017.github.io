@@ -70,7 +70,7 @@ tags:
 
 三角形式与指数形式的傅里叶级数所对应的频谱分别是单边谱（单边幅度谱，单边相位谱）和双边谱（双边幅度谱，双边相位谱）。
 
-![image-20230125183057330](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230125183057330.png)
+![image-20230125183057330](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230125183057330.png?raw=true)
 
 注：绘制双边谱并不意味着我们现实生活中存在负的频率，而是因为引入复数以后，正频率和负频率是一对。在数学上看，负数运算比三角函数的运算简单得多。
 {: .notice--primary}
@@ -91,7 +91,7 @@ tags:
 
 有一幅度为1，周期为$T$，脉冲宽度为$\tau$的周期矩形脉冲，如图所示：
 
-![image-20220710135204578](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710135204578.png)
+![image-20220710135204578](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710135204578.png?raw=true)
 
 求其三角型傅里叶级数和指数型傅里叶级数。
 
@@ -158,7 +158,7 @@ $$
 
 **（1）$\tau$不变，增大$T$的值**
 
-![image-20230126174004648](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126174004648.png)
+![image-20230126174004648](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126174004648.png?raw=true)
 
 > ```matlab
 > clc, clear, close all
@@ -183,7 +183,7 @@ $$
 
 **（2）$T$不变，减小$\tau$的值**
 
-![image-20230126174331163](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126174331163.png)
+![image-20230126174331163](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126174331163.png?raw=true)
 
 > ```matlab
 > clc, clear, close all

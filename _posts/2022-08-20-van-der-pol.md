@@ -11,7 +11,7 @@ categories:
 
 电子振荡电路一般至少含有两个储能元件和一个非线性元件。本文所介绍的范德坡(Van del Pol)电路是一种典型的非线性振荡电路，它是由一个线性电感、一个线性电容和一个非线性电阻构成，如下图所示。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220819181910505.png" alt="image-20220819181910505" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220819181910505.png?raw=true" alt="image-20220819181910505" style="zoom:50%;" />
 
 其中，非线性电阻为电流控制型，伏安特性为：
 
@@ -21,7 +21,7 @@ $$
 
 该非线性电阻有一段具有负电阻性质：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220820105039909.png" alt="image-20220820105039909" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220820105039909.png?raw=true" alt="image-20220820105039909" style="zoom:50%;" />
 
 以 $u_c$  和 $i_R$ 为状态变量，则可以写出状态方程：
 
@@ -80,13 +80,13 @@ $$
 
 下图展示了当 $\varepsilon=0.1$ ，初始条件分别为 $(0,1)$ $(0, 5)$ $(0,9) $ 时的相轨迹。
 
-![PhaceTractories](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/PhaceTractories.gif)
+![PhaceTractories](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/PhaceTractories.gif)
 
-![image-20220820133239047](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220820133239047.png)
+![image-20220820133239047](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820133239047.png?raw=true)
 
 ```matlab
 clc, clear, close
-gifFile = 'PhaceTractories.gif';
+gifFile = 'PhaceTractories.gif?raw=true';
 if exist(gifFile, 'file')
     delete(gifFile)
 end
@@ -190,7 +190,7 @@ end
 
 当初始值固定为 $(0,5)$ 时，不同的 $\varepsilon$ 取值（0.1，0.7，3.5）所对应的相轨迹：
 
-![image-20220820141247247](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220820141247247.png)
+![image-20220820141247247](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820141247247.png?raw=true)
 
 ```matlab
 clc, clear, close
@@ -294,7 +294,7 @@ end
 
 我们可以再观察一下 $\varepsilon=3.5$ 时，不同初值条件，即$(0,1)$，$(1, 5)$ ，$(5,9) $ 对应的相图：
 
-![image-20220820143647878](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220820143647878.png)
+![image-20220820143647878](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820143647878.png?raw=true)
 
 ```matlab
 clc, clear, close

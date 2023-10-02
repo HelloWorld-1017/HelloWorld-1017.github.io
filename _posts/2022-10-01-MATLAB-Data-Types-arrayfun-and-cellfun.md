@@ -15,7 +15,7 @@ tags:
 
 MATLAB支持的基本数据类型可以在[Data Types - MathWorks](https://ww2.mathworks.cn/help/matlab/data-types.html)查到：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001203128671.png" alt="image-20221001203128671" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001203128671.png?raw=true" alt="image-20221001203128671" style="zoom:67%;" />
 
 <br>
 
@@ -45,7 +45,7 @@ p(2).Marker = '+';
 p(3).Marker = 's';
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001204024432.png" alt="image-20221001204024432" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001204024432.png?raw=true" alt="image-20221001204024432" style="zoom:50%;" />
 
 <br>
 
@@ -69,7 +69,7 @@ p(2).Marker = '+';
 p(3).Marker = 's';
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001205111116.png" alt="image-20221001205111116" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001205111116.png?raw=true" alt="image-20221001205111116" style="zoom: 67%;" />
 
 <br>
 

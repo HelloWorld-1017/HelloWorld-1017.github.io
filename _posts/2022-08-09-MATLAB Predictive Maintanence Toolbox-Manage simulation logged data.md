@@ -14,7 +14,7 @@ tags:
 
 创建模型 model.slx，该模型含有两个信号源，分别是 Sine Wave 和 Cosine Wave
 
-![image-20220809161111679](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809161111679.png)
+![image-20220809161111679](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809161111679.png?raw=true)
 
 它们的幅值和角频率分别由变量 `A1` 、`f1` 和 `A2` 、`f2` 控制，默认值在 `PreLoadFcn` 中进行设置。它们的波形经过 Plus 模块相加后，输出到 Sum 示波器中进行显示。
 
@@ -26,9 +26,9 @@ tags:
 
 将正弦信号、余弦信号以及两者的合成信号都记录下来，并且分别命名为 `SineWave` ，`CosineWave` 和 `CompositeWave` 。
 
-![image-20220809161707687](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809161707687.png)
+![image-20220809161707687](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809161707687.png?raw=true)
 
-![image-20220809161907262](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809161907262.png)
+![image-20220809161907262](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809161907262.png?raw=true)
 
 <br>
 
@@ -73,7 +73,7 @@ end
 
 仿真运行中
 
-![image-20220809163751150](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809163751150.png)
+![image-20220809163751150](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809163751150.png?raw=true)
 
 <br>
 
@@ -81,17 +81,17 @@ end
 
 运行完毕后，可以在当前文件夹中看到 Data 子文件夹，其中的 .mat 文件保存了每次仿真的运行信息
 
-![image-20220809164336350](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809164336350.png)
+![image-20220809164336350](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809164336350.png?raw=true)
 
 每个 .mat 文件都包含了4个变量，分别是 `logsout` ， `PMSignalLogName`  ，`SimulationInput` ， `SimulationMetadata`：
 
-![image-20220809164443223](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809164443223.png)
+![image-20220809164443223](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809164443223.png?raw=true)
 
 ## `PMSignalLogName` 变量和 `logsout` 变量
 
 变量 `logsout` ，保存了所记录信号的信息，并且该变量的名称保存在 `PMSignalLogName` 中
 
-![image-20220809164558917](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809164558917.png)
+![image-20220809164558917](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809164558917.png?raw=true)
 
 
 
@@ -99,7 +99,7 @@ end
 
 变量 `SimulationInput` 保存了仿真输入的信息
 
-![image-20220809164743151](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809164743151.png)
+![image-20220809164743151](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809164743151.png?raw=true)
 
 其中，`SimulationInput.Variables` 中保存着变量 `A1` 、`f1` 和 `A2` 、`f2`  的值：
 
@@ -153,7 +153,7 @@ ans =
 
 变量 `SimulationMetadata` 中保存着仿真的其他信息
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809165209339.png"/>
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809165209339.png?raw=true"/>
 
 <br>
 
@@ -215,11 +215,11 @@ read(ens)
 
 上述 `ens = simulationEnsembleDatastore()` 的操作并没有把所有的数据都放入到一个表中（这么做会占取大量的电脑资源），它只是创建了一个索引表：
 
-![image-20220809172046736](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809172046736.png)
+![image-20220809172046736](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809172046736.png?raw=true)
 
 其中，`ens.Files` 保存了 .mat 文件的文件名（BTW，文件并不是按照1~500的顺序排列，而是按照拼写排序，但这在大多数情况下并不影响操作）
 
-![image-20220809172304850](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809172304850.png)
+![image-20220809172304850](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809172304850.png?raw=true)
 
 变量 `ens.LastMemberRead` 中保存了最后一次读取的文件，相当于是一个 cursor。
 
@@ -247,7 +247,7 @@ ans =
 
 现在，我们的 .mat 文件的内容是这样的：
 
-![image-20220809173859355](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809173859355.png)
+![image-20220809173859355](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809173859355.png?raw=true)
 
 `ens.DataVariables` 有这些：
 
@@ -293,7 +293,7 @@ writeToLastMemberRead(ens, addData);
 
 此时，.mat 文件中保存的数据：
 
-![image-20220809184516061](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809184516061.png)
+![image-20220809184516061](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809184516061.png?raw=true)
 
 
 
@@ -320,7 +320,7 @@ writeToLastMemberRead(ens, addData);
 
 此时，.mat 文件中保存的数据：
 
-![image-20220809185353073](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809185353073.png)
+![image-20220809185353073](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809185353073.png?raw=true)
 
 ### 提取仿真输入参数
 
@@ -355,7 +355,7 @@ writeToLastMemberRead(ens, addData);
 
 此时，.mat 文件中保存的数据：
 
-![image-20220809200524997](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809200524997.png)
+![image-20220809200524997](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809200524997.png?raw=true)
 
 
 
@@ -363,11 +363,11 @@ writeToLastMemberRead(ens, addData);
 
 上述过程只是对第1个 .mat 文件进行操作：
 
-![image-20220809200658430](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809200658430.png)
+![image-20220809200658430](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809200658430.png?raw=true)
 
 不涉及其他文件：
 
-![image-20220809200819844](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809200819844.png)
+![image-20220809200819844](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809200819844.png?raw=true)
 
 可以将上述过程封装成 `preparedata` 函数，并写作循环形式，对每一个 .mat 文件进行操作：
 
@@ -614,7 +614,7 @@ end
   logsout                 1x1             244801  Simulink.SimulationData.Dataset    
 ```
 
-虽然有些僵硬，但是 bingo~ 🥰
+虽然有些僵硬，但是 bingo~ 
 
 之后，对所有 .mat 进行批量删除操作，但是和批量写入不同的是，重复的写入并不会报错，但是重复的删除会出现报错，比如刚才我们对第一个 .mat 文件进行了删除操作，这些变量已经没有了，再次删除（甚至是再次读取都会报错，因为我们设置的 `fens.DataVariables` 中包含 `A1` 那几个变量）就会报错，因此在整个流程之前先简单设置一个 `fens.SelectedVariables` ，先 `read` 一下，跳过第一个文件：
 

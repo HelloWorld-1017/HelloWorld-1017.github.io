@@ -7,7 +7,7 @@ categories:
 toc: false
 classes: wide
 header:
-  image: https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/20230115-clause.png
+  image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/20230115-clause.png?raw=true
 ---
 
 # Introduction

@@ -14,7 +14,7 @@ categories:
 
 # Deep Learning is the Branch of Presentation Learning
 
-![image-20230401144104050](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230401144104050.png)
+![image-20230401144104050](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401144104050.png?raw=true)
 
 （1）深度学习（Deep learning）是机器学习（Machine learning）的一个分支；
 
@@ -24,7 +24,7 @@ categories:
 
 <br>
 
-![image-20230401144225303](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230401144225303.png)
+![image-20230401144225303](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401144225303.png?raw=true)
 
 （1）Rule-based systems（基于规则的系统）：最早的人工智能算法就是基于规则的，需要构造知识库（knowledge base），手工设计程序（图搜索、树搜索）。一个经典的例子是使用学习系统程序求取某个函数的原函数。实际上，**只要是实现一些类似于人类智能活动的程序，就可以称之为人工智能（AI）程序**。**基于规则的系统也属于人工智能的范畴，是早期开发人工智能系统的一种方式**。其中，最主要的部分是如何设计程序，即如何制定规则，而这需要非常专业的特定领域的知识。对于非常复杂的问题，很难去设计一套完备的规则，肯定会漏掉一些规则，导致算法出现缺陷；另一方面，随着规则越来越庞大，最终会变成人类难以维护的程序。
 
@@ -42,11 +42,11 @@ categories:
 
 我们可以通过ILSVRC（ImageNet Large Scale Visual Recognition Challenge）竞赛的错误率下降的趋势看出传统机器学习遇到的挑战和深度学习发展的进程：
 
-![image-20230401161548318](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230401161548318.png)
+![image-20230401161548318](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401161548318.png?raw=true)
 
 一些经典的神经网络结构的出现，能够极大程度上推动深度学习的发展：
 
-![](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230401162948166.png)
+![](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401162948166.png?raw=true)
 
 - **LeNet**：Y. Lecun, L. Bottou, Y. Bengio and P. Haffner, "**Gradient-based learning applied to document recognition**," in *Proceedings of the IEEE*, vol. 86, no. 11, pp. 2278-2324, Nov. 1998, doi: 10.1109/5.726791. Available: https://ieeexplore.ieee.org/abstract/document/726791.
 - **AlexNet**: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "**Imagenet classification with deep convolutional neural networks**." *Communications of the ACM* 60.6 (2017): 84-90. Available: https://dl.acm.org/doi/abs/10.1145/3065386.

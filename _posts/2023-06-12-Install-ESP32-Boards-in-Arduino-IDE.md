@@ -16,7 +16,7 @@ toc: false
 
 按理说在Arduino IDE中安装是一件比较简单的事情，只需要在`Tool>Borad>Boards Manager...`搜索安装即可，但是最开始搜索ESP32时找不到任何的内容，在网上搜索了一下解决方案，这是需要在`File>Preferences>Additional boards manager URLs`中添加类似于搜索ESP32的搜索路径 [1]：
 
-![image-20230617153702877](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230617153702877.png)
+![image-20230617153702877](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230617153702877.png?raw=true)
 
 之后，就可以在`Tool>Borad>Boards Manager...`中搜索到ESP32板子的相关内容。我使用这种方式在一台电脑上实现了安装，但是在另一台电脑上安装失败，始终报错下载失败之类的信息。
 
@@ -24,15 +24,15 @@ toc: false
 
 后面进行了很多的尝试和分析，我觉得可能是文件名哪里出现了错误，导致Arduino IDE无法搜索到我们手动安装的库。于是作为测试，我就在Arduino IDE下载了`Arduino megaAVR Boards`这个板子的相关套件。Luckily，下载很顺利。之后，我就在`...\Arduino15\packages\arduino\hardware\`文件夹下看到了`megaavr`文件夹：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230617160310109.png" alt="image-20230617160310109"  />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230617160310109.png?raw=true" alt="image-20230617160310109"  />
 
 点进去之后，看到一个以版本号命名的文件夹：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230617160353174.png" alt="image-20230617160353174"  />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230617160353174.png?raw=true" alt="image-20230617160353174"  />
 
 于是我就尝试着将`espressif`文件夹下的`esp32`修改为了相对应的版本号`2.0.9`（可在 [2] 中的README文件中查找到），然后就可以在Arduino IDE中找到ESP32相关的板子了，bingo!
 
-![image-20230617160756420](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230617160756420.png)
+![image-20230617160756420](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230617160756420.png?raw=true)
 
 <br>
 

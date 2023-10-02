@@ -79,7 +79,7 @@ legend('sine function', ...
 title('Bernstein polynomials')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221118141900347.png" alt="image-20221118141900347" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221118141900347.png?raw=true" alt="image-20221118141900347" style="zoom:50%;" />
 
 其中：
 
@@ -153,7 +153,7 @@ b = symfun(b, fargs);
 end
 ```
 
-这个函数是基于符号函数进行计算的，应该也是基于de Casteljau's算法，只是有些看不懂😂
+这个函数是基于符号函数进行计算的，应该也是基于de Casteljau's算法，只是有些看不懂
 
 个人认为，这两个代码：
 
@@ -315,7 +315,7 @@ P_out = (1-t).*P0 + t.*P1;
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/gif1.gif" alt="gif1" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/gif1.gif?raw=true" alt="gif1" style="zoom: 67%;" />
 
 
 
@@ -415,7 +415,7 @@ P_out = (1-t).*P0 + t.*P1;
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/gif2.gif" alt="gif2" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/gif2.gif?raw=true" alt="gif2" style="zoom:67%;" />
 
 <br>
 

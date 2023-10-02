@@ -53,7 +53,7 @@ result = forward(net, input);
 
 dlarray函数使用错误。根据MATLAB的 [dlarray函数官方文档](https://ww2.mathworks.cn/help/deeplearning/ref/dlarray.html?searchHighlight=dlarray&s_tid=srchtitle_dlarray_1)，当神经网络的输入为特征向量时，数值要转换为"CB"格式的dlarray，而不是"SB"格式(我想当然认为是“Spatial-Batch"格式)。
 
-![image-20220710122651510](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710122651510.png)
+![image-20220710122651510](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710122651510.png?raw=true)
 
 因此，只需要将原代码的第10行改写如下代码即可。
 

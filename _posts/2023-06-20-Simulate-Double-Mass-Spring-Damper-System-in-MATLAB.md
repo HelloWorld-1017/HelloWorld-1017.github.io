@@ -15,7 +15,7 @@ tags:
 
 两个质量-弹簧-阻尼系统 [1] 连接在一起就可以得到一个二自由度的质量-弹簧-阻尼系统：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230620083127863.png" alt="image-20230620083127863" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230620083127863.png?raw=true" alt="image-20230620083127863" style="zoom:50%;" />
 
 对两个质量块分别列写动量守恒方程可以得到：
 
@@ -37,15 +37,15 @@ $$
 
 若系统的初始条件为两个弹簧的形变量为$x_0=1\ \mathrm{m}$，则根据系统方程$\eqref{eq1}$，就可以搭建出相对应的Simulink仿真模型 [1]：
 
-![image-20230619153329559](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230619153329559.png)
+![image-20230619153329559](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230619153329559.png?raw=true)
 
 并得到质量块的位置与速度随时间的变化曲线：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230619160411359.png" alt="image-20230619160411359" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230619160411359.png?raw=true" alt="image-20230619160411359" style="zoom:67%;" />
 
 > 注：上面的模型取自MATLAB官方示例 [2] 的一部分：
 >
-> ![image-20230620194555104](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620194555104.png)
+> ![image-20230620194555104](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620194555104.png?raw=true)
 >
 > 按照作者的原意，两个弹簧的初始状态应该都为`x0=1`，其中Simulink模型似乎是设置错误。后面我就主要以初始状态均为`x0=1`的i情况进行分析。
 
@@ -61,11 +61,11 @@ $$
 
 实际上，上面的示例得到的并非是“质量块位置”随时间的变化曲线，而是“弹簧形变量”随时间的变化曲线。如果想要得到“弹簧形变量”随时间的变化曲线，则可以在弹簧形变量的基础上增加一些常数的偏置。例如，假设弹簧的原长为`5`，质量块的直径为`0.5`：
 
-![image-20230620174421406](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620174421406.png)
+![image-20230620174421406](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620174421406.png?raw=true)
 
 两个质量块的位置波形如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620174432244.png" alt="image-20230620174432244" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620174432244.png?raw=true" alt="image-20230620174432244" style="zoom: 67%;" />
 
 可以看到最终质量块1最终稳定在`5.5`处，质量块2最终稳定在`11`处。
 
@@ -73,7 +73,7 @@ $$
 
 如果二自由度的质量-弹簧-阻尼系统垂直摆放：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620175154339.png" alt="image-20230620175154339" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620175154339.png?raw=true" alt="image-20230620175154339" style="zoom:50%;" />
 
 则在整个运动过程中都会受到重力的影响。根据式$\eqref{eq1}$，有：
 
@@ -86,11 +86,11 @@ $$
 
 因此只需要在模型中添加重力的常数项（为负值）即可：
 
-![image-20230620174624434](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620174624434.png)
+![image-20230620174624434](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620174624434.png?raw=true)
 
 两个质量块的位置的实际波形为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620174741549.png" alt="image-20230620174741549" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620174741549.png?raw=true" alt="image-20230620174741549" style="zoom: 67%;" />
 
 最终，质量块1的实际位置稳定在`5.3234`，质量块2的实际位置稳定在`10.5585`。
 
@@ -127,15 +127,15 @@ $$
 
 从上面的过程中可以看到，Simulink中主要求解的是**弹簧形变量**这一变量。如果我们想要像上文一样得到与实际位置对应的变量，加减一些常数、注意一下系统的参考方向即可。例如，假如我们想要仿真这样一个模型：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620184428652.png" alt="image-20230620184428652" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620184428652.png?raw=true" alt="image-20230620184428652" style="zoom:50%;" />
 
 则需要做以下的修改：
 
-![image-20230621154606911](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230621154606911.png)
+![image-20230621154606911](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230621154606911.png?raw=true)
 
 得到的位置波形为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620190336362.png" alt="image-20230620190336362" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620190336362.png?raw=true" alt="image-20230620190336362" style="zoom: 67%;" />
 
 质量块1的实际位置稳定在`94.3234`（100-5.5-0.17658），质量块2的实际位置稳定在`88.5585`（100-2*5.5-0.26487-0.17658）。
 
@@ -258,15 +258,15 @@ $$
 
 在计算得到以上的参数后，我们就可以使用Simulink中的线性状态空间模块`State-Space`[5, 6] 进行建模：
 
-![image-20230620192920475](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620192920475.png)
+![image-20230620192920475](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620192920475.png?raw=true)
 
 其中`State-Space`模块的设置如下：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620193022838.png" alt="image-20230620193022838" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620193022838.png?raw=true" alt="image-20230620193022838" style="zoom: 67%;" />
 
 两种模型得到的结果是完全一致的：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230620193130104.png" alt="image-20230620193130104" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620193130104.png?raw=true" alt="image-20230620193130104" style="zoom: 67%;" />
 
 <br>
 

@@ -65,13 +65,13 @@ $$
 
 例如，寻找区间$[51,76]$中所有素数的过程为：
 
-![image-20230428202641050](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428202641050.png)
+![image-20230428202641050](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428202641050.png?raw=true)
 
 以上，一个非常简单且自然的Segmented sieve就完成了，但是由于区间端点`L`和`R`值是用户所设置的，因此仍需要注意一些地方：
 
 （1）当区间的右端`R`特别大，而左端`L`比较小时，在最开始所构建的素数表`pList`（小于等于`sqrt(R)`的所有素数）会和区间$[L,R]$中所包含的素数**重合**。这会导致我们在标记`pList`中每一个元素`pj`的倍数为`false`时，会导致我们将$[L,R]$中`pj`本身（`pj`的一倍）也标记为素数，因此得到的`pLRList`是缺少素数的。例如，我们使用上述方法来寻找$[5,26]$内的所有素数：
 
-![image-20230428202712584](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428202712584.png)
+![image-20230428202712584](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428202712584.png?raw=true)
 
 可以看到，$[5,26]$内的素数$5$被筛掉了，我们找到的`pLRList`是不完整的。因此，为了防止这种情况的发生，我们可以将`pList`中大于等于`L`的素数保留下来，与`pLRList`进行拼接：`pLRList = [plist(pList>=L), pLRList];`。
 
@@ -119,7 +119,7 @@ $$
 
 但是，对于segmented Eratosthenes sieve，情况就有所不同。在下图中，我给出了几个简单的例子：
 
-![image-20230429161846101](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230429161846101.png)
+![image-20230429161846101](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230429161846101.png?raw=true)
 
 通过这个例子，我们可以归纳出：
 
@@ -221,11 +221,11 @@ end
 
 > 注：除了以上关于布尔向量长度的改进以外，博客 [1] 中还提到了MATLAB的`primes`函数另一个很巧妙的地方：在根据起始素数标记序列中它的倍数时，代码并不是从`(k+2)*k`开始标记的，而是从`k*k`处开始标记的：
 >
-> ![image-20230429164956390](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230429164956390.png)
+> ![image-20230429164956390](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230429164956390.png?raw=true)
 >
 > 这能够进一步加大代码的效率。但对于segmented Eratosthenes sieve而言，这样的改进意义是很小的。因为尽管我上面编写的代码想要适用于任何的区间，但是在实际应用segmented Eratosthenes sieve时，素数表`pList`和`[L,R]`是不重合的：
 >
-> ![image-20230429170030439](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230429170030439.png)
+> ![image-20230429170030439](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230429170030439.png?raw=true)
 >
 > 在这种情况下，如果仍想要使用这个改进效率的方式，需要做更多的判断，可能反而是不经济的。
 

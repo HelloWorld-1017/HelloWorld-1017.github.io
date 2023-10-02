@@ -238,7 +238,7 @@ for i = 1:20
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220910141053455.png" alt="image-20220910141053455" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220910141053455.png?raw=true" alt="image-20220910141053455" style="zoom:50%;" />
 
 之后，将特征(28-by-28)展开成行向量，并且将one-hot标签转换为定类变量(1~10，其中10代表数字0)：
 
@@ -306,7 +306,7 @@ for i = 1:size(X_show_cell, 2)
 end
 ```
 
-![image-20220910135500317](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220910135500317.png)
+![image-20220910135500317](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220910135500317.png?raw=true)
 
 可以看到，虽然由生成数据所训练的模型对于真实数据集的预测效果很好（准确率为95.56%），但是所生成的图片效果并不是很好。
 

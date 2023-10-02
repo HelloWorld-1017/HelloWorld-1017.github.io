@@ -18,7 +18,7 @@ $$
 
 例如，对于下面的情形：
 
-![image-20230122124026424](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230122124026424.png)
+![image-20230122124026424](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230122124026424.png?raw=true)
 
 我们可以列出方程组：
 
@@ -48,7 +48,7 @@ $$
 
 如果我们想要使该误差矢量最小，就需要满足：
 
-![image-20230122125020203](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230122125020203.png)
+![image-20230122125020203](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230122125020203.png?raw=true)
 
 $$
 \vert\alpha_1\vec{e}_1\vert=\vert\vec{V}\vert\cos\theta_1\label{eq1}
@@ -249,7 +249,7 @@ $$
 
 $\vec{e}_1$和$\vec{e}_2$并不是必要条件，例如，对于下面的分解：
 
-![image-20230123230359066](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230123230359066.png)
+![image-20230123230359066](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230123230359066.png?raw=true)
 
 我们可以列出方程组：
 

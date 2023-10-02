@@ -158,7 +158,7 @@ get.r called
 
 （2）虽然`x`和`y`属性值发生了改变，但是如果我们不访问`r`属性，程序也不会调用`r.get`方法；但是，如果此时我们在工作空间中点开对象`p`：
 
-![image-20230126143018838](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126143018838.png)
+![image-20230126143018838](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126143018838.png?raw=true)
 
 可以看到实际上属性`r`的值已经重新进行了计算。
 
@@ -219,7 +219,7 @@ Aobj = A();
 Aobj.a = 10;
 ```
 
-![image-20230126144925398](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126144925398.png)
+![image-20230126144925398](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126144925398.png?raw=true)
 
 **case 2：错误赋值**
 
@@ -232,7 +232,7 @@ Aobj.a = -10;
 
 程序报错：
 
-![image-20230126144943600](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126144943600.png)
+![image-20230126144943600](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126144943600.png?raw=true)
 
 **任何对属性`a`的赋值都会经过`set.a`的中间层**（由MATLAB负责调用）。
 
@@ -420,13 +420,13 @@ end
 
 结果为：
 
-![image-20230126155416730](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230126155416730.png)
+![image-20230126155416730](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230126155416730.png?raw=true)
 
 可以看到，虽然我们在Constructor中给`date`属性赋值，但是程序仍然通过`set`方法**同样地**向`timeStamp`属性进行赋值；程序在解析`disp("date: "+obj.date)`中的`obj.date`时调用`get`方法，**转而**查询`timeStamp`属性值。
 
 <br>
 
-# 📌📌📌 Dependent Property Features
+#  Dependent Property Features
 
 在上文的`Pont2D`类的定义中：
 

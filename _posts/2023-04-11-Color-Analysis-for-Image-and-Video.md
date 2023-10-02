@@ -15,7 +15,7 @@ toc: false
 
 今天在看MATLAB Graphics Documentation的时候，看到了一个分析RGB图像色彩的案例 [1]。该示例分析的是MATLAB的自带图像`peppers.png`：
 
-![image-20230409224701368](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409224701368.png)
+![image-20230409224701368](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409224701368.png?raw=true)
 
 采用的方法是`histogram2`函数 [2] 分别绘制R-G通道、R-B通道和G-B通道的二维频率直方图：
 
@@ -66,7 +66,7 @@ ylabel('Blue Values')
 title('Green vs. Blue Pixel Components')
 ```
 
-![image-20230409225108488](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409225108488.png)
+![image-20230409225108488](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409225108488.png?raw=true)
 
 这样的图像中可以分析出结论：
 
@@ -95,7 +95,7 @@ title('Color histogram in RGB color space')
 xlim([0 257])
 ```
 
-![image-20230409225635701](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409225635701.png)
+![image-20230409225635701](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409225635701.png?raw=true)
 
 可以看到，三个颜色分量的尖峰都在比较小的RGB值处出现。但是，当RGB值超过100时（意味着红色更加红色，绿色更加绿色，蓝色更加蓝色），明显R分量的出现的频率最多，G分量次之，蓝色分量最少，与上面得到的结论是类似的。
 
@@ -107,19 +107,19 @@ xlim([0 257])
 
 上周末去电影院看了新海诚导演新的电影《铃芽之旅》，画面很精美，配乐也很震撼，于是回来又重新刷了刷新海诚导演以前的作品。我找了《你的名字》的一张壁纸 [5]：
 
-![image-20230409232116431](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409232116431.png)
+![image-20230409232116431](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409232116431.png?raw=true)
 
 做了类似的图像分析：
 
-![image-20230409232133844](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409232133844.png)
+![image-20230409232133844](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409232133844.png?raw=true)
 
-![image-20230409232156571](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409232156571.png)
+![image-20230409232156571](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409232156571.png?raw=true)
 
 可以看到这张图片中的B分量时更多的。
 
 除此之外，我看到B站Up主 *影迷至下Filmlas* 在分析《你的名字》这篇影片时 [6] ，就分析了整部影片的调色盘，以讲述新海诚导演是如何通过影片的配色来渲染情绪的：
 
-![](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409232826670.png)
+![](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409232826670.png?raw=true)
 
 应该是有专业的软件来创建出上面调色盘，那么，如果让我做的话，我应该怎么做呢？我其实想到了之前在博客 [7] 学习到的一个例子。我们可以读取图片后，使用K-means方法找到这张图片的一个中心点，使用这个中心点的颜色作为这个图片的配色。
 
@@ -181,7 +181,7 @@ ax.ZLabel.FontName = 'Cambria';
 exportgraphics(gcf, "pic.png")
 ```
 
-![image-20230409234723609](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409234723609.png)
+![image-20230409234723609](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409234723609.png?raw=true)
 
 这张图片可以使用（120,122,160）来表示。
 
@@ -237,11 +237,11 @@ xlabel('Time (minute)')
 set(gca,'ytick',[],'yticklabel',[],'FontSize',13)
 ```
 
-![image-20230411182754788](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411182754788.png)
+![image-20230411182754788](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230411182754788.png?raw=true)
 
 和上面参考 [6] 得到的视频色彩分析结果是比较类似，但是参考 [6] 的结果好像更加平滑。可能是我使用的k-means聚类的方法太粗糙了，也可能是我展示的方式不太好，展示每一帧图像的色彩分析有些过于密集了。但总之，这也是一个差不多的结果，哈哈哈~
 
-🤩🤩🤩
+
 
 <br>
 

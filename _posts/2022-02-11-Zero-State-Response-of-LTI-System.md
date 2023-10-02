@@ -10,7 +10,8 @@ toc: false
 
 
 以离散系统为例。在离散的线性时不变(linear time invariant, LTI)系统中，输入为单位脉冲函数$\delta(k)$时产生单位脉冲响应$h(k)$，则有： 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710133729178.png" alt="image-20220710133729178" style="zoom: 67%;" />
+
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710133729178.png?raw=true" alt="image-20220710133729178" style="zoom: 67%;" />
 
 
 
@@ -23,4 +24,6 @@ $$
 
 即：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710133840501.png" alt="image-20220710133840501" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710133840501.png?raw=true" alt="image-20220710133840501" style="zoom:50%;" />
+
+<br>

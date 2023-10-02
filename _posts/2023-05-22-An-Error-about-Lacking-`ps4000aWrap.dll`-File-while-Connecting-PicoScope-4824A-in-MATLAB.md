@@ -21,7 +21,7 @@ There was an error loading the library "ps4000aWrap.dll"
 找不到指定的模块。
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/b307435ba1c307fb61125dc5.png" alt="b307435ba1c307fb61125dc5" style="zoom: 33%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/b307435ba1c307fb61125dc5.png?raw=true" alt="b307435ba1c307fb61125dc5" style="zoom: 33%;" />
 
 在网上找了很久也没有找到相关的解决方案，有的方法很复杂也无济于事（例如 [4]）。但最后解决的也非常简单，就是下载缺少的文件即可：下载picosdk-c-wrappers-binaries仓库 [5]，将其中的`Windows 64-bit`文件夹中的`ps4000aWrap.dll`和`ps4000aWrap.lib`文件放在MATLAB的搜索目录下。以上就解决了这个报错\~\~\~
 

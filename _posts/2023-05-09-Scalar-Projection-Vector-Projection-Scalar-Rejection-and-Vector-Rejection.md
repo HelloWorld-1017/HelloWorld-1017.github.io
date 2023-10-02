@@ -115,7 +115,7 @@ $$
 
 基于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$的定义在编程时更方便计算。以向量$\boldsymbol{a}=(1,1)$，$\boldsymbol{b}=(0.4,1.6)$进行验证：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230509133231886.png" alt="image-20230509133231886" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230509133231886.png?raw=true" alt="image-20230509133231886" style="zoom:50%;" />
 
 ```matlab
 clc,clear,close all

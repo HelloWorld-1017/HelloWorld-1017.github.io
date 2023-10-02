@@ -13,7 +13,7 @@ tags:
 
 假设空间中有一个空间位置固定的有限控制体，如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230322211115933.png" alt="image-20230322211115933" style="zoom:25%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230322211115933.png?raw=true" alt="image-20230322211115933" style="zoom:25%;" />
 
 它的体积$\mathcal{V}$和控制面$\mathrm{\boldsymbol{S}}$不随时间变化；另一方面，流体会穿过这一控制体，由于流场的不稳定波动（due to the unsteady fluctuations of the flow filed）会导致控制体内的流体质量会发生变化。
 
@@ -57,7 +57,7 @@ $$
 
 考虑一个流场，该流场中的所有性质都是空间和时间的函数，例如对于密度有：$\rho=\rho(x,y,z,t)$。在这个流场中，考虑一个如下图所示的位置固定的有限控制体：
 
-![image-20230322223915961](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230322223915961.png)
+![image-20230322223915961](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230322223915961.png?raw=true)
 
 考虑在控制面的任意一个点，有：
 

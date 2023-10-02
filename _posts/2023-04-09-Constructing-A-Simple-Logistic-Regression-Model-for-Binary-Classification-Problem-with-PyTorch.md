@@ -42,7 +42,7 @@ $$
 注：虽然是叫做Logistic回归，实际上它解决的是一个二分类问题。
 {: .notice--primary}
 
-![image-20230409160417104](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409160417104.png)
+![image-20230409160417104](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409160417104.png?raw=true)
 
 其中，$\sigma$是Logistic函数，是S型（Sigmoid）函数的一种，用于将神经网络的输出值压缩到$[0,1]$之间有，由于非常常用，有时候也被直接称为Sigmoid函数。它的公式为：
 
@@ -157,7 +157,7 @@ plt.grid()
 plt.show()
 ```
 
-![image-20230409162054843](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230409162054843.png)
+![image-20230409162054843](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230409162054843.png?raw=true)
 
 需要注意的是，上面这段代码并没有根据预测的概率（预测为类别1的概率）而对样本进行分类，如果想要进一步分类，只需要依据输出概率做很简单的判定即可，这里就不再赘述。
 

@@ -33,7 +33,7 @@ M1 =
     6.0000    6.0000    4.3333    1.0000   -2.0000   -2.0000   -0.3333    2.0000    4.0000    4.5000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925224512539.png" alt="image-20220925224512539" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925224512539.png?raw=true" alt="image-20220925224512539" style="zoom: 50%;" />
 
 当设置`window`为3时，默认情况下不减少数组的维度，第一个和最后一个窗口的长度为2。
 
@@ -52,7 +52,7 @@ M2 =
 
 此时，数组的维度减少到$(10-(3-1))$：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925230850480.png" alt="image-20220925230850480" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925230850480.png?raw=true" alt="image-20220925230850480" style="zoom:50%;" />
 
 
 
@@ -69,7 +69,7 @@ M3 =
     6.0000    6.0000    4.2500    2.7500         0   -1.7500   -0.7500    0.7500    2.7500    4.0000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925231251841.png" alt="image-20220925231251841" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925231251841.png?raw=true" alt="image-20220925231251841" style="zoom:50%;" />
 
 ### Example 4: `movmean(A, 4, 'Endpoints', 'discard')`
 
@@ -84,7 +84,7 @@ M4 =
     4.2500    2.7500         0   -1.7500   -0.7500    0.7500    2.7500
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925231334507.png" alt="image-20220925231334507" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925231334507.png?raw=true" alt="image-20220925231334507" style="zoom:50%;" />
 
 ## Trailing Moving Average of Vector
 
@@ -103,7 +103,7 @@ M5 =
     6.0000    6.0000    4.2500    2.7500         0   -1.7500   -0.7500    0.7500    2.7500    4.0000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220926124803586.png" alt="image-20220926124803586" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220926124803586.png?raw=true" alt="image-20220926124803586" style="zoom:67%;" />
 
 ### Example 2: `movmean(A, [2, 1], 'Endpoints', 'discard')`
 
@@ -118,7 +118,7 @@ M6 =
     4.2500    2.7500         0   -1.7500   -0.7500    0.7500    2.7500
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925233158393.png" alt="image-20220925233158393" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925233158393.png?raw=true" alt="image-20220925233158393" style="zoom:50%;" />
 
 ### Example 3: `movmean(A, [2, 0])`
 
@@ -133,7 +133,7 @@ M7 =
     4.0000    6.0000    6.0000    4.3333    1.0000   -2.0000   -2.0000   -0.3333    2.0000    4.0000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220926124906435.png" alt="image-20220926124906435" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220926124906435.png?raw=true" alt="image-20220926124906435" style="zoom:67%;" />
 
 ### Example 4: `movmean(A, [2, 0], 'Endpoints', 'discard')`
 
@@ -148,7 +148,7 @@ M8 =
     6.0000    4.3333    1.0000   -2.0000   -2.0000   -0.3333    2.0000    4.0000
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925233522871.png" alt="image-20220925233522871" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925233522871.png?raw=true" alt="image-20220925233522871" style="zoom:50%;" />
 
 <br>
 

@@ -11,7 +11,7 @@ toc: false
 
 MATLAB的`colormap`函数可以将默认的色卡作为输入值：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902181921057.png" alt="image-20220902181921057" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902181921057.png?raw=true" alt="image-20220902181921057" style="zoom: 50%;" />
 
 除此之外，还可以调用用户设置的色彩矩阵，这种方式可以使我们用“离散”的颜色来表表达数据范围。比如：
 
@@ -28,11 +28,11 @@ colormap(mymap)
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902182405760.png" alt="image-20220902182405760" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902182405760.png?raw=true" alt="image-20220902182405760" style="zoom: 80%;" />
 
 `mymap`与色卡的对应关系为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902182739675.png" alt="image-20220902182739675" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902182739675.png?raw=true" alt="image-20220902182739675" style="zoom:80%;" />
 
 <br>
 
@@ -46,7 +46,7 @@ surf(peaks(1000))
 
 
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902182900966.png" alt="image-20220902182900966" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902182900966.png?raw=true" alt="image-20220902182900966" style="zoom:80%;" />
 
 在图中看到了色卡中并没有定义的黑色。起初对于`peaks`函数的值域不是了解，以为是函数值超过了色卡定义的范围，即[-6, 8]，于是找到了`caxis`函数来试图解决：
 
@@ -60,11 +60,11 @@ caxis([-1000, 1000])
 
 但还是没有效果，
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902183450033.png" alt="image-20220902183450033" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902183450033.png?raw=true" alt="image-20220902183450033" style="zoom:80%;" />
 
 后来发现，问题并不出在这里，**这个黑色其实是网格线**。如果把图片放大可以看到：
 
-![image-20220902183640569](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902183640569.png)
+![image-20220902183640569](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902183640569.png?raw=true)
 
 这个黑是五彩斑斓的黑~
 
@@ -95,13 +95,13 @@ colorbar
 
 得到图像：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902184807938.png" alt="image-20220902184807938" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902184807938.png?raw=true" alt="image-20220902184807938" style="zoom:80%;" />
 
 
 
 中间有一条黑钱。其实这不是黑线，放大看的话可以看到也是彩色的：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902184851836.png" alt="image-20220902184851836" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902184851836.png?raw=true" alt="image-20220902184851836" style="zoom:80%;" />
 
 
 
@@ -117,9 +117,9 @@ colorbar
 ```
 可以看到，图中虽然只出现了定义的两种颜色，但还是不太理想，仍然有黑色线条出现：
 
-![image-20220902185521330](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902185521330.png)
+![image-20220902185521330](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902185521330.png?raw=true)
 
-![image-20220902185532533](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902185532533.png)
+![image-20220902185532533](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902185532533.png?raw=true)
 
 这里的黑线就很不合理，也并不可能是数值计算的误差导致的。
 
@@ -149,7 +149,7 @@ colormap(mymap)
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220902191455141.png" alt="image-20220902191455141" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220902191455141.png?raw=true" alt="image-20220902191455141" style="zoom: 80%;" />
 
 很有意思，记录一下。
 
@@ -167,7 +167,7 @@ surf(peaks(1000),'EdgeColor','none')
 ...
 ```
 
-![image-20230408171146362](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171146362.png)
+![image-20230408171146362](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408171146362.png?raw=true)
 
 ```matlab
 ...
@@ -177,7 +177,7 @@ contourf(xGrid, yGrid, ...
 ...
 ```
 
-![image-20230408171212649](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171212649.png)
+![image-20230408171212649](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408171212649.png?raw=true)
 
 ```matlab
 ...
@@ -186,7 +186,7 @@ contourf(xGrid, yGrid, ...
 ...
 ```
 
-![image-20230408171308175](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408171308175.png)
+![image-20230408171308175](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408171308175.png?raw=true)
 
 <br>
 

@@ -22,28 +22,28 @@ $$
 
 是一种特殊的非凸也非凹的曲面 [1]，它的图像如下所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230407225340939.png" alt="image-20230407225340939" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230407225340939.png?raw=true" alt="image-20230407225340939" style="zoom:50%;" />
 
 注：绘图脚本见文末附录A。
 {: .notice--primary}
 
 **马鞍面可以看作是*“顶点在曲线上的抛物线挂在抛物线上移动形成的”*** [2]。例如，固定住上图中上方的抛物线（蓝色曲线：$z=x^2+y^2,\ y=0$），移动下方的抛物线（红色曲线），可以形成一个马鞍面：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408153520466.png" alt="image-20230408153520466" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408153520466.png?raw=true" alt="image-20230408153520466" style="zoom:50%;" />
 
 注：绘图脚本见文末附录B。
 {: .notice--primary}
 
 同样地，也可以看作是固定下方的抛物线（红色曲线，$z=x^2+y^2,\ x=0$），移动上方的抛物线（蓝色曲线），形成一个马鞍面：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408153746354.png" alt="image-20230408153746354" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408153746354.png?raw=true" alt="image-20230408153746354" style="zoom:50%;" />
 
 注：绘图脚本见文末附录C。
 {: .notice--primary}
 
 以及综合上述两种视角得到的图像：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230408154007028.png" alt="image-20230408154007028" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230408154007028.png?raw=true" alt="image-20230408154007028" style="zoom:50%;" />
 
 注：绘图脚本见文末附录D。
 {: .notice--primary}

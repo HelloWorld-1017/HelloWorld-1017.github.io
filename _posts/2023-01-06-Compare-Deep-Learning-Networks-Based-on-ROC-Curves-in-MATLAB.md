@@ -91,7 +91,7 @@ lgraphGoogLeNet = layerGraph(googlenet);
 plot(lgraphGoogLeNet)
 ```
 
-![image-20230104112343706](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104112343706.png)
+![image-20230104112343706](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104112343706.png?raw=true)
 
 为了能够将pretrained network用于transfer learning，我们首先需要将network匹配new dataset：
 
@@ -99,7 +99,7 @@ plot(lgraphGoogLeNet)
 - **Increase the learning in the new layer by increasing the weight and bias learn rate factors.** This increase ensures that learning is faster in the new layer than in the transferred layers.
 - Replace the output layer, `output`, with a new output layer that is adapted to the new data.
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104112833124.png" alt="image-20230104112833124" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104112833124.png?raw=true" alt="image-20230104112833124" style="zoom: 80%;" />
 
 ```matlab
 newLearnableLayer = fullyConnectedLayer(numClasses, ...
@@ -125,9 +125,9 @@ analyzeNetwork(NetBefore)
 analyzeNetwork(NetAfter)
 ```
 
-![image-20230104114014040](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104114014040.png)
+![image-20230104114014040](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104114014040.png?raw=true)
 
-![image-20230104114033174](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104114033174.png)
+![image-20230104114033174](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104114033174.png?raw=true)
 
 
 
@@ -140,11 +140,11 @@ analyzeNetwork(lgraphSmallNet)
 
 Network 1：
 
-![image-20230104114517225](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104114517225.png)
+![image-20230104114517225](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104114517225.png?raw=true)
 
 Network 2:
 
-![image-20230104114543380](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104114543380.png)
+![image-20230104114543380](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104114543380.png?raw=true)
 
 第一个小的神经网络一共有17个layers和近300,000个参数，大的GoogLeNet Network有144个layers和大约6,000,000个参数。但是由于我们采用了transfer learning的技术，后者的GoogLeNet Network训练时长并不会很长，因为该pretrained network已经学习到了一定的特征提取能力，我们可以将其作为一个starting point for new data。
 
@@ -207,14 +207,14 @@ optsGoogLeNet.InitialLearnRate = 0.0001;
 netSmallNet = trainNetwork(augimdsTrain, lgraphSmallNet, optsSmallNet);
 ```
 
-![image-20230106200837717](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106200837717.png)
+![image-20230106200837717](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106200837717.png?raw=true)
 
 ```matlab
 % For Network 2
 netGoogLeNet = trainNetwork(augimdsTrain, lgraphGoogLeNet, optsGoogLeNet);
 ```
 
-![image-20230106200825645](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106200825645.png)
+![image-20230106200825645](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106200825645.png?raw=true)
 
 从模型训练的训练过程中我们可以看到，采用了pretrained的模型虽然具有更多参数，但是反而能在较短的时间内训练出更好的效果。
 
@@ -274,7 +274,7 @@ confusionchart(TTest, YTestGoogLeNet)
 title("GoogLeNet")
 ```
 
-![image-20230106202354561](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106202354561.png)
+![image-20230106202354561](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106202354561.png?raw=true)
 
 ## ROC Curves
 
@@ -300,7 +300,7 @@ plot(rocGoogLeNet)
 title("ROC Curve: GoogLeNet")
 ```
 
-![image-20230106202641040](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106202641040.png)
+![image-20230106202641040](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106202641040.png?raw=true)
 
 ### Compare AUC Values
 
@@ -331,7 +331,7 @@ legend(["SmallNet","GoogLeNet"],Location="southeast")
 title("AUC")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106202814337.png" alt="image-20230106202814337" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106202814337.png?raw=true" alt="image-20230106202814337" style="zoom:80%;" />
 
 ### Investigate Specific Class
 
@@ -359,7 +359,7 @@ hold off
 
 
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106202849289.png" alt="image-20230106202849289" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106202849289.png?raw=true" alt="image-20230106202849289" style="zoom:80%;" />
 
 ### Compare Average ROC Curves
 
@@ -381,7 +381,7 @@ xlabel("FPR")
 ylabel("TPR")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230106204356697.png" alt="image-20230106204356697" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230106204356697.png?raw=true" alt="image-20230106204356697" style="zoom: 80%;" />
 
 ## Conclusion
 

@@ -67,7 +67,7 @@ ainfo =
 
 - `data`是一个两通道的音频数据矩阵：
 
-  ![image-20230114190256022](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230114190256022.png)
+  ![image-20230114190256022](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230114190256022.png?raw=true)
 
   此时我们并没有指定`audioread`函数的`dataType`属性，因此`data`的数据类型是默认的`double`，并且数据矩阵中的元素是标准化后的值，从[-1, 1]取值。若设置`audioread`函数的`dataType`属性为`'native'`：
 
@@ -87,7 +87,7 @@ ainfo =
 
   > 注：44100Hz，即44.1kHz是一个常用的音频采样率，其他常用的采样率还有：
   >
-  > ![image-20230114193835323](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230114193835323.png)
+  > ![image-20230114193835323](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230114193835323.png?raw=true)
   >
   > （[sound: Sample rate - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/sound.html#mw_395634c1-32c7-44d2-aaf2-8e31939e60da)）
 
@@ -142,7 +142,7 @@ xlabel('Time')
 ylabel('Audio Signal')
 ```
 
-![image-20230114193236012](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230114193236012.png)
+![image-20230114193236012](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230114193236012.png?raw=true)
 
 <br>
 

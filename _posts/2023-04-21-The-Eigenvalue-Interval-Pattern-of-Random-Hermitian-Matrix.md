@@ -24,13 +24,13 @@ tags:
 
 例如，我们现在构造出一个269阶的随机埃尔米特矩阵，并将它们的本征值绘制出来：
 
-![image-20230421181900169](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230421181900169.png)
+![image-20230421181900169](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230421181900169.png?raw=true)
 
 它的本征值的范围是：$[-45.3140,45.3889]$。我们可以看到，这些间隔没有明显的模式，我们可能会认为它是随机的，但其实并非如此。
 
 如果在相同的间隔（即$[-45.3140,45.3889]$）内完全随机地抽取269个数（服从均匀分布），并以相同的方式作图：
 
-![image-20230421182429216](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230421182429216.png)
+![image-20230421182429216](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230421182429216.png?raw=true)
 
 注：计算及绘制的MATLAB代码见文末附录A。
 {: .notice--primary}
@@ -39,7 +39,7 @@ tags:
 
 > 并且由于实对称矩阵是一种特殊的埃尔米特矩阵，因此对于随机实对称阵 [2]，同样具有类似的排斥效应：
 >
-> ![image-20230421183415276](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230421183415276.png)
+> ![image-20230421183415276](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230421183415276.png?raw=true)
 >
 > 注：计算及绘制的MATLAB代码见文末附录B。
 > {: .notice--primary}

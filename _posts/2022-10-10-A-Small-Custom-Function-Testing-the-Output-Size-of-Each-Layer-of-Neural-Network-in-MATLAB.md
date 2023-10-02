@@ -185,15 +185,15 @@ analyzeNetwork(NetE)
 analyzeNetwork(NetD)
 ```
 
-![image-20230104121358730](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104121358730.png)
+![image-20230104121358730](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104121358730.png?raw=true)
 
-![image-20230104121412683](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104121412683.png)
+![image-20230104121412683](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104121412683.png?raw=true)
 
 可以看到，每一层输出的size和之前写的小函数得到的结果是一致的。但与此同时，软件还检测出神经网络的一些errors。但是，这两个神经网络结构同样来自官方示例[Train Variational Autoencoder(VAE) to Generate Images in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Variational-Autoencoder(VAE)-to-Generate-Images-in-MATLAB/)，完全可以运行并且没有报错，这是怎么回事呢？
 
 进一步查看[analyzeNetwork](https://ww2.mathworks.cn/help/deeplearning/ref/analyzenetwork.html)的官方文档，可以看到实际上该函数对于`target`做出了区分：
 
-![image-20230104122219070](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104122219070.png)
+![image-20230104122219070](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104122219070.png?raw=true)
 
 简单地讲，使用`trainNetwork`训练的神经网络（比如示例[Compare Deep Learning Model Using ROC Curves - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/compare-deep-learning-models-using-ROC-curves.html)中定义的神经网络）都是比较经典的结构或者采用通用的训练策略和设置；而如果用户想要自定义cusom trianing loop（比如示例[Train Variational Autoencoder(VAE) to Generate Images in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Variational-Autoencoder(VAE)-to-Generate-Images-in-MATLAB/)中的VAE），需要在定义好layers后，使用`dlnetwork`函数将其转换为`dlnetwork`对象，再创建自定义循环。对于后者，分析神经网络时需要使用语法`analyzeNetwork(layers,TargetUsage="dlnetwork")`。
 
@@ -205,8 +205,8 @@ analyzeNetwork(NetE, TargetUsage="dlnetwork")
 analyzeNetwork(NetD, TargetUsage="dlnetwork")
 ```
 
-![image-20230104124812740](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104124812740.png)
+![image-20230104124812740](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104124812740.png?raw=true)
 
-![image-20230104124822084](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230104124822084.png)
+![image-20230104124822084](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230104124822084.png?raw=true)
 
 此时就没有errors了。

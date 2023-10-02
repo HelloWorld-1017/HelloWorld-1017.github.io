@@ -79,11 +79,11 @@ primes([133,457,9,13,103])
 
 我们可以简单地可视化上述的过程：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230426201640597.png" alt="image-20230426201640597" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230426201640597.png?raw=true" alt="image-20230426201640597" style="zoom:50%;" />
 
 但是，`isprime`函数中语句`isp(k) = (Xk>1) && all(rem(Xk, p(p<Xk)))`表示在对元素进行试除法时，尝试的是素数列表`p`中**小于**该元素的所有素数。例如，对于元素`9`，需要对2，3，5，7四个素数进行试除。而根据试除法的原理，我们只需要对素数列表`p`中**小于等于**$\sqrt{\text{9}}=3$的所有素数进行试除即可，因**此这一步会增加计算时间！！！**对于元素133，13和103的试除同样会面临这样的问题：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230426202608380.png" alt="image-20230426202608380" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230426202608380.png?raw=true" alt="image-20230426202608380" style="zoom:50%;" />
 
 上图中，浅紫色的元素表示没有必要进行试除的元素。
 

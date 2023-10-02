@@ -17,7 +17,7 @@ Schneider P J.在其1990年发表的论文"An algorithm for automatically fittin
 
 具有四个控制点的三阶Bezier曲线示意图如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/schematics.png" alt="schematics" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/schematics.png?raw=true" alt="schematics" style="zoom:50%;" />
 
 该Bezier曲线对应的参数方程为：
 
@@ -407,7 +407,7 @@ end
 
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221124161259979.png" alt="image-20221124161259979" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221124161259979.png?raw=true" alt="image-20221124161259979" style="zoom:50%;" />
 
 可以看到，两种拟合方法都基本与数据曲线重合。
 
@@ -415,7 +415,7 @@ end
 
 拟合$[0,3]$之间的指数函数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221124161542666.png" alt="image-20221124161542666" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221124161542666.png?raw=true" alt="image-20221124161542666" style="zoom:50%;" />
 
 此时，虽然Bezier曲线拟合的RMSE也不是很大，但是在图像上可以看到与数据曲线有着比较明显的差距，而直接使用三阶多项式拟合仍然基本与数据曲线重合。
 
@@ -423,7 +423,7 @@ end
 
 拟合$[-2,5]$之间的指数函数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221124161839202.png" alt="image-20221124161839202" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221124161839202.png?raw=true" alt="image-20221124161839202" style="zoom:50%;" />
 
 当进一步扩大区间的左右端点，直接使用三阶多项式拟合的方法有一段与真实数据点偏离很大，而Bezier曲线仍然能基本拟合出数据曲线的形状。
 
@@ -431,13 +431,13 @@ end
 
 拟合$[0,6]$之间的sine函数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221124162221222.png" alt="image-20221124162221222" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221124162221222.png?raw=true" alt="image-20221124162221222" style="zoom:50%;" />
 
 ## $y=\sin(x),\ x\in[-16, 10]$
 
 拟合$[-16,10]$之间的sine函数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221124162424773.png" alt="image-20221124162424773" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221124162424773.png?raw=true" alt="image-20221124162424773" style="zoom:50%;" />
 
 此时，两种拟合方法的拟合效果均不好，但是Bezier曲线拟合的方法还是更好一些。
 

@@ -76,7 +76,7 @@ numFeatures = size(XTrain{1},1);
 legend("Feature " + string(1:numFeatures), Location="northeastoutside")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221210143537493.png" alt="image-20221210143537493" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210143537493.png?raw=true" alt="image-20221210143537493" style="zoom:67%;" />
 
 ## Prepare Data for padding
 
@@ -84,7 +84,7 @@ legend("Feature " + string(1:numFeatures), Location="northeastoutside")
 
 下图就展示了在sorting data之前和之后padding的效果：
 
-![image-20221210144122027](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221210144122027.png)
+![image-20221210144122027](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144122027.png?raw=true)
 
 首先，获得每一个observation的序列长度，保存在`sequenceLengths`中：
 
@@ -116,7 +116,7 @@ ylabel("Length")
 title("Sorted Data")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221210144454577.png" alt="image-20221210144454577" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144454577.png?raw=true" alt="image-20221210144454577" style="zoom:50%;" />
 
 我们设定mini-batch的size为27，以均匀分割数据，并且降低在每一个mini-batch中padding的数量：
 
@@ -126,7 +126,7 @@ miniBatchSize = 27;
 
 最终padding的效果是：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221210144721064.png" alt="image-20221210144721064" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144721064.png?raw=true" alt="image-20221210144721064" style="zoom:67%;" />
 
 ## Define LSTM network architecture
 
@@ -195,7 +195,7 @@ options = trainingOptions("adam", ...
 net = trainNetwork(XTrain,YTrain,layers,options);
 ```
 
-![training_process](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/training_process.png)
+![training_process](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/training_process.png?raw=true)
 
 如果不想展示这样的图像，需要更改`options`变量中的`Plots`设置([trainingOptions: Plots and Display - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/trainingoptions.html#d124e166338))：
 
@@ -332,7 +332,7 @@ options = trainingOptions("adam", ...
 net = trainNetwork(XTrain,TTrain,layers,options);
 ```
 
-![training_process_1d](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/training_process_1d.png)
+![training_process_1d](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/training_process_1d.png?raw=true)
 
 ## Test network
 
@@ -352,7 +352,7 @@ acc =
     0.9568
 ```
 
-![image-20221211151109487](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221211151109487.png)
+![image-20221211151109487](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221211151109487.png?raw=true)
 
 这里用于测试的测试集，和上面训练过程中使用的验证集是一个数据集，稍微有一些不合理。
 

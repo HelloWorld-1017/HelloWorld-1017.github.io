@@ -27,7 +27,7 @@ fig = figure( ...
 );
 ```
 
-![pic_gcf](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/pic_gcf.png)
+![pic_gcf](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic_gcf.png?raw=true)
 
 
 
@@ -59,7 +59,7 @@ ax = axes('unit', 'centimeters', ... % sepcify units
     'Color', [0.9,0.9,0.9] ... % sepcify background color
     );
 ```
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/pic_gca.png" alt="pic_gca" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic_gca.png?raw=true" alt="pic_gca" style="zoom:50%;" />
 
 ---
 ### Position属性和Axis limits属性、DataAspectRatio属性、PlotBoxAspectRatio属性的冲突
@@ -73,7 +73,7 @@ ax = axes('unit', 'centimeters', ... % sepcify units
 set(gca, 'XLim', [0 10]) % 指定x轴的显示范围的最小值是0，最大值是10
 set(gca, 'YLim', [0 5])  % 指定y轴的显示范围的最小值是0，最大值是5
 ```
-![image-20220710123446605](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710123446605.png)
+![image-20220710123446605](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710123446605.png?raw=true)
 
  **<font color='blue'>DataAspectRatio属性</font>**：沿每个轴的数据单位的相对长度，指定为[dx dy dz]形式的三元素向量，默认值是[1,1,1]。
  例如：
@@ -82,7 +82,7 @@ set(gca, 'YLim', [0 5])  % 指定y轴的显示范围的最小值是0，最大值
  set(gca, 'DataAspectRatio', [1 2 1])  % 指定x轴上1个数据单位的长度与y轴上2个数据单元和z轴上1个数据单元的长度相同
 ```
 
-![image-20220710123348436](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710123348436.png)
+![image-20220710123348436](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710123348436.png?raw=true)
 
  **<font color='blue'>PlotBoxAspectRatio属性</font>**：指定每个轴的相对长度，指定为定义相对x轴、y轴和z轴比例因子的三元素向量[px py pz],默认值是[1,1,1]。
  例如：
@@ -90,7 +90,7 @@ set(gca, 'YLim', [0 5])  % 指定y轴的显示范围的最小值是0，最大值
 ```matlab
  set(gca, 'PlotBoxAspectRatio', [1 3 1]) % 指定x轴、y轴、z轴的相对长度之比为1:3:1
 ```
-![image-20220710123316228](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220710123316228.png)
+![image-20220710123316228](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710123316228.png?raw=true)
 
 
 

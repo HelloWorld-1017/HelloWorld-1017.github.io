@@ -197,7 +197,7 @@ end
 
 其中`channelSettings`结构体的内容是：
 
-![image-20230227083252181](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230227083252181.png)
+![image-20230227083252181](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230227083252181.png?raw=true)
 
 这部分的内容和博客[Collecting Block Data in MATLAB via PicoScope 4824A: Set channels](http://whatastarrynight.com/matlab/Collecting-Block-Data-in-MATLAB-via-PicoScope-4824A/#2-set-channels)中设置通道的方式是类似的，后者的代码更加紧凑，如果对于`ps4000aSetChannel`函数的输入参数中常数所代表的含义比较熟悉，可以后面这种方式。
 
@@ -278,7 +278,7 @@ segmentIndex        = 0;
 ratioMode           = ps4000aEnuminfo.enPS4000ARatioMode.PS4000A_RATIO_MODE_NONE; % rationMode = 0;
 ```
 
-## 📌Buffers to be passed to the driver: `pDriverBufferChA`, `pDriverBufferChB`
+## Buffers to be passed to the driver: `pDriverBufferChA`, `pDriverBufferChB`
 
 ```matlab
 % Buffers to be passed to the driver
@@ -314,7 +314,7 @@ status.setDataBufferChB = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
    channelB, pDriverBufferChB, overviewBufferSize, segmentIndex, ratioMode);% status.setDataBufferChB = 0;
 ```
 
-## 📌Application Buffers: `pAppBufferChA` and `pAppBufferChB`
+## Application Buffers: `pAppBufferChA` and `pAppBufferChB`
 
 前面一步设置了Driver buffer，接下来需要设置Application buffer，这个buffer保存着从driver中暂时复制出的数据。设置与前面的一步也是类似的，但是需要特别针对Streaming mode进行设置：
 
@@ -431,7 +431,7 @@ maxSamples =
 
 虽然注释中提到预分配的空间要是sufficient，采用1.5倍的设置的大小，但是实际的代码中并没有这么做，在下一节创建Final buffer时直接采用与预期的大小一样的数组大小，即`maxSamples = 2000000`。
 
-## 📌Create final data buffers: `pBufferChAFinal` and `pBufferChAFinal`
+## Create final data buffers: `pBufferChAFinal` and `pBufferChAFinal`
 
 上面在创建Application buffer时提到，Application buffer只是暂时的一个buffer，它其中的数据需要传入到Final buffer中保存，因此同样需要为A通道和B通道创建指针：
 
@@ -470,7 +470,7 @@ else
 end
 ```
 
-![image-20230227081059416](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230227081059416.png)
+![image-20230227081059416](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230227081059416.png?raw=true)
 
 ## Start streaming data collection: `ps4000aRunStreaming` function
 
@@ -516,7 +516,7 @@ triggeredAtIndex    = 0; % The index in the overall buffer where the trigger occ
 [~, stopFig.h] = stopButton(); % `stopButton` from PicoScope Support Toolbox   
 ```
 
-![image-20230227080512640](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230227080512640.png)
+![image-20230227080512640](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230227080512640.png?raw=true)
 
 `stopButton()`函数来自PicoScope Support Toolbox，它有两个输出，分别是figure的和一个stop按钮：
 
@@ -549,7 +549,7 @@ end
 > setappdata(f,'todaydate',val)
 > ```
 >
-> ![image-20230227102020211](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230227102020211.png)
+> ![image-20230227102020211](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230227102020211.png?raw=true)
 >
 > UI中是不显示该数据的，但同时该UI的属性中也找不到这个值，不太清楚这个值具体保存在哪里，但是可以通过`getappdata()`函数（[getappdata - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/getappdata.html)）重新获取到这个值：
 >
@@ -599,7 +599,7 @@ end
 
 需要注意的是横坐标范围的设置：`xlim(axes1, [0 (actualSampleInterval * maxSamples)]);`
 
-![image-20230227104140854](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230227104140854.png)
+![image-20230227104140854](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230227104140854.png?raw=true)
 
 <br>
 
@@ -830,7 +830,7 @@ clear bufferChAmV bufferChBmV firstValuePosn lastValuePosn ...
     startIndex triggered triggerAt;
 ```
 
-🎈🎈🎈从清除变量这一步可以清楚地体会到，Application buffer和Final buffer是不同的，在每次循环中Application buffer的数据都会清掉，而Final buffer则保存着所有的数据，因此，正如前面所指出的那样，最后能收集到多大体量的数据取决于PC的内存有多大。
+从清除变量这一步可以清楚地体会到，Application buffer和Final buffer是不同的，在每次循环中Application buffer的数据都会清掉，而Final buffer则保存着所有的数据，因此，正如前面所指出的那样，最后能收集到多大体量的数据取决于PC的内存有多大。
 
 <br>
 
@@ -917,7 +917,7 @@ delete(ps4000aDeviceObj);
 
 <br>
 
-# 📌Discussion about Buffers
+# Discussion about Buffers
 
 以上就是整个示例的所有代码，其中比较难理解的部分是buffer的设置和使用。对于A和B两个通道，代码都设置了三个buffer，分别是driver buffer（data buffer），application buffer和final buffer，并且设置的方式都是一样的，我们这里就以A通道为例整理一下这些buffer的作用。
 
@@ -937,7 +937,7 @@ status.setDataBufferChA = invoke(ps4000aDeviceObj, 'ps4000aSetDataBuffer', ...
     channelA, pDriverBufferChA, overviewBufferSize, segmentIndex, ratioMode);
 ```
 
-![image-20230313124731594](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230313124731594.png)
+![image-20230313124731594](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230313124731594.png?raw=true)
 
 改代码将buffer size设置为250000。
 
@@ -1075,7 +1075,7 @@ maxSamples = get(ps4000aDeviceObj, 'numPreTriggerSamples') + ...
 
 当收集到这个数量的值时，程序就会停止收集数据（auto stop），这一点在官方文档中也可以看到：
 
-![image-20230313132544155](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230313132544155.png)
+![image-20230313132544155](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230313132544155.png?raw=true)
 
 如果我们想要修改`maxSamples`的值，则需要修改前面对应的设置这两个值的代码，例如修改为收集300000个点：
 

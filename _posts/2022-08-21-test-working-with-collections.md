@@ -60,7 +60,7 @@ main:
 
 （4）在网站的根目录下创建 `_portfolio` 文件夹
 
-![image-20220821124622493](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220821124622493.png)
+![image-20220821124622493](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220821124622493.png?raw=true)
 
 之后，在该文件夹中创建几个测试文件：`portfolio1.md`，`portfolio2.md`，`portfolio3.md`。
 
@@ -86,9 +86,9 @@ title: Portfolio3
 
 最后，在本地 `bundle exec jekyll serve` ，查看效果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220821125002104.png" alt="image-20220821125002104"  />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220821125002104.png?raw=true" alt="image-20220821125002104"  />
 
-![image-20220821132729171](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220821132729171.png)
+![image-20220821132729171](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220821132729171.png?raw=true)
 
 <br>
 

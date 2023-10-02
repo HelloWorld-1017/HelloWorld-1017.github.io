@@ -11,7 +11,7 @@ toc: false
 
 MATLAB Classification Learner app 提供了方便的、图形化操作的训练机器学习模型的手段，并且可以将整个的训练过程自动生成为函数代码或者模型代码
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802214800679.png" alt="image-20220802214800679" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220802214800679.png?raw=true" alt="image-20220802214800679" style="zoom:67%;" />
 
 本文就导出了一个核函数为线性函数的支持向量机模型，得到了函数文件 trainClassifier.m ，并以此文件为例分析代码的整体结构。
 
@@ -179,11 +179,11 @@ validationAccuracy = 1 - kfoldLoss(partitionedModel, 'LossFun', 'ClassifError');
 
 这部分的代码依赖于一开始的交叉验证设置，比如上述代码就是使用下图所示的 **k 折交叉验证法**
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802223550857.png" alt="image-20220802223550857" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220802223550857.png?raw=true" alt="image-20220802223550857" style="zoom: 80%;" />
 
 如果改变交叉验证策略，比如使用**留出法**
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802223818251.png" alt="image-20220802223818251" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220802223818251.png?raw=true" alt="image-20220802223818251" style="zoom: 80%;" />
 
 则相应的代码为
 
@@ -232,7 +232,7 @@ validationAccuracy = sum(correctPredictions)/length(correctPredictions);
 
 如果训练集和验证集使用的是同一个数据集
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220802224513049.png" alt="image-20220802224513049" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220802224513049.png?raw=true" alt="image-20220802224513049" style="zoom: 80%;" />
 
 则
 

@@ -80,7 +80,7 @@ float temperature = 1.0/(log(R/R0)/B+1/298.15)-273.15;
 
 实际上，该模块中集成了一个voltage divider（[Lesson 11 : Temperature sensor Grove module. - YouTube](https://www.youtube.com/watch?v=wjL7xOGqAqg&t=4s)）：（选用100k电阻是因为NTC在25摄氏度时的电阻值就是100k）
 
-![image-20230114134916769](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230114134916769.png)
+![image-20230114134916769](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230114134916769.png?raw=true)
 
 因此端口的输出电压$V$与工作电压$V_{CC}$之间存在比例关系：
 
@@ -143,21 +143,21 @@ R = R0*R;
 
 第二个问题是Arduino工作电压的问题。我所使用的扩展板上[Grove Base Shield V2](https://wiki.seeedstudio.com/Base_Shield_V2/)有一个调整工作电压的开关（可选3.3V或5.0V）：
 
-![image-20230124185657874](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124185657874.png)
+![image-20230124185657874](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124185657874.png?raw=true)
 
 我之前并不在意这个开关，但这个工作很重要。仍然是`ananologRead()`函数的文档（[analogRead() - Arduino Reference](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/)）：
 
-![image-20230124195203036](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124195203036.png)
+![image-20230124195203036](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124195203036.png?raw=true)
 
 这里明确指出Arduino Uno的工作电压是5 Volts，因此需要始终把它调整到5 V的位置。如果将其调整到3.3V的位置，就会出现错误。对于LED灯而言，它的亮度会变暗；而对于本文所使用的温度传感器，则会导致明显的输出错误。
 
 工作电压为5 V时打印的环境温度值：
 
-![image-20230124195524904](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124195524904.png)
+![image-20230124195524904](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124195524904.png?raw=true)
 
 工作电压为3.3 V时打印的环境温度值：
 
-![image-20230124195554249](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124195554249.png)
+![image-20230124195554249](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124195554249.png?raw=true)
 
 <br>
 

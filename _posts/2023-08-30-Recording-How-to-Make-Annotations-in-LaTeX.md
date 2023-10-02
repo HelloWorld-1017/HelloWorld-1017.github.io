@@ -26,7 +26,7 @@ We test \hl{highlight} here.
 \end{document}
 ```
 
-![image-20230830215902044](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230830215902044.png)
+![image-20230830215902044](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230830215902044.png?raw=true)
 
 <br>
 
@@ -53,7 +53,7 @@ This is a \replaced{replacement}{replace}.
 \end{document}
 ```
 
-![image-20230830221530665](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230830221530665.png)
+![image-20230830221530665](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230830221530665.png?raw=true)
 
 N.B.: In origin blog [1], the remark is added by keyword `remark`, like `This is \added[id=Ma,remark={This is added by Ma.}]{added} text.` However, an error occurs, “Package xkeyval Error: ‘remark’ undefined in families ‘Changes@added’. ...id=Ma,remark={This is added by Ma.}]{added}” as actually there exists no `remark` defined in `changes` package (at least in my `changes` edition installed) [2]. The keyword `comment` should be used instead.
 {: .notice--warning}
@@ -87,7 +87,7 @@ As a minimal working example, we add a paragraph with some plain-old vanilla tex
 
 The generated PDF is showed as follow:
 
-![image-20230830224747979](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230830224747979.png)
+![image-20230830224747979](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230830224747979.png?raw=true)
 
 <br>
 
@@ -97,4 +97,4 @@ The generated PDF is showed as follow:
 
 [2] [xkeyval error when using the changes package - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/618627/xkeyval-error-when-using-the-changes-package).
 
-[3] [💬 remark -- a simple command to add inline notes in LaTeX · GitHub](https://gist.github.com/nebil/4e114e433c193297c0f3802bc9c33ef4).
+[3] [ remark -- a simple command to add inline notes in LaTeX · GitHub](https://gist.github.com/nebil/4e114e433c193297c0f3802bc9c33ef4).

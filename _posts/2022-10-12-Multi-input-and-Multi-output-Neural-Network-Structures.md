@@ -64,7 +64,7 @@ lgraphG = connectLayers(lgraphG, 'LabelsG', 'cat/in2');
 plot(lgraphG)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221013131327393.png" alt="image-20221013131327393" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221013131327393.png?raw=true" alt="image-20221013131327393" style="zoom:67%;" />
 
 可以看到，实际上我在无意中定义了一个双输出的神经网络结构，因此代码：
 
@@ -108,6 +108,6 @@ Layersf1 = [
 
 就是一个简单的CGAN的Generator的结构了：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221013130725445.png" alt="image-20221013130725445" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221013130725445.png?raw=true" alt="image-20221013130725445" style="zoom: 67%;" />
 
 实际上，多输入多输出的神经网络结构在深度学习模型中是比较常见的，比如著名的ResNet，GoogleNet等等（见[resnet50 - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/resnet50.html)）。

@@ -15,7 +15,7 @@ toc: false
 
 在官网下载RubyInstallers：[https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)，我下载的是这个含有Devkit的x64版本：
 
-![image-20230103090630806](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103090630806.png)
+![image-20230103090630806](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103090630806.png?raw=true)
 
 **Step 2：安装RubyGems**
 

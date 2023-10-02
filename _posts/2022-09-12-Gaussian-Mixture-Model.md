@@ -74,7 +74,7 @@ for idx = 1:4
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220911233404599.png" alt="image-20220911233404599" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220911233404599.png?raw=true" alt="image-20220911233404599" style="zoom:50%;" />
 
 图中，黑线表示不同的高斯混合PDF，可以看到，选取不同的权重系数曲线是不同的；蓝线是认为样本属于单一的高斯分布而得到的PDF。
 
@@ -144,7 +144,7 @@ xlabel('Sepal length (cm)');
 ylabel('Sepal width (cm)');
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912111241632.png" alt="image-20220912111241632" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912111241632.png?raw=true" alt="image-20220912111241632" style="zoom:67%;" />
 
 指定GMM component的个数和EM算法最大迭代数，以及协方差矩阵设置：
 
@@ -249,7 +249,7 @@ end
 ```
 最终得到不同`fitgmdist`函数option的结果和图像：
 
-![image-20220912114736265](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912114736265.png)
+![image-20220912114736265](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912114736265.png?raw=true)
 
 除此之外，`fitgmdist`函数还支持设置初始条件：
 
@@ -285,7 +285,7 @@ end
 sum(converged)
 ```
 
-![image-20220912115804043](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912115804043.png)
+![image-20220912115804043](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912115804043.png?raw=true)
 
 以上设置的GMM都是收敛的，但是各个设置所得到的结果还是有比较大的差异。另外，以上的GMM拟合都是**非监督**聚类，完全没有用到标签的信息，因此哪一种GMM都可以认为是合理的。但是，Iris是一个有标签的数据集，我们可以绘制一下真实的数据情况，用真实的情况作为参考：
 
@@ -297,7 +297,7 @@ X = meas(:, 1:2);
 gscatter(X(:, 1), X(:, 2), species)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912120849719.png" alt="image-20220912120849719" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912120849719.png?raw=true" alt="image-20220912120849719" style="zoom:50%;" />
 
 <br>
 
@@ -307,7 +307,7 @@ gscatter(X(:, 1), X(:, 2), species)
 
 GMM的概率图如下所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912122531730.png" alt="image-20220912122531730" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912122531730.png?raw=true" alt="image-20220912122531730" style="zoom:50%;" />
 
 阴影部分为观测变量$x$，实心点表示参数。
 

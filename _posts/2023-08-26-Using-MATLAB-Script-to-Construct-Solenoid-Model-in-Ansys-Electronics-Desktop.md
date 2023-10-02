@@ -16,7 +16,7 @@ About two months ago, I studied a simple-but-complete FEM example from Ansys Ele
 
 This FEM example is called *Getting Started with Maxwell: A 2D Magnetostatic Solenoid Problem* [1]. The introduction in PDF version is available in `Help` tab if you have installed AEDT and inserted a Maxwell 2D (or 3D) Design (in `Project` Tab):
 
-![image-20230826204855555](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230826204855555.png)
+![image-20230826204855555](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230826204855555.png)
 
 This 92-page introduction is rather detailed and freshman-friendly, illustrating how to build and analyse Solenoid model from scratch. Almost everyone could get the same results if follow this tech booklet step by step. So, this blog is not intent to repeat or copy its contents, but try to cope with an issue associated with efficiency: How to construct and simulate solenoid model in scripting way (specifically using MATLAB) ?
 
@@ -32,7 +32,7 @@ obj.oDesktop = obj.oAnsoftApp.GetAppDesktop();
 
 On the other hand, the AEDT provides the further convenience: it supports recording user’s operation and converting it to VBscript version (`Tools` Tab -> `Record Script To File...`):
 
-![image-20230827061944954](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230827061944954.png)
+![image-20230827061944954](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230827061944954.png?raw=true)
 
 So, what I should do next is convert VBscript code to the recognisable form MATLAB could identify. 
 
@@ -63,7 +63,7 @@ The following overview is organised base on TOC of the introduction PDF, and alo
 
    5. **Create the Background (Problem Region)**: default material ‘Vacuum’.
 
-      <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230910151203043.png" alt="image-20230910151203043" style="zoom:50%;" />
+      <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230910151203043.png?raw=true" alt="image-20230910151203043" style="zoom:50%;" />
 
       ```matlab
       clc,clear,close all
@@ -216,7 +216,7 @@ classdef Solenoid < handle
             xlabel(sprintf("x-axis (%s)",obj.LengthUnit))
             ylabel(sprintf("z-axis (%s)",obj.LengthUnit))
             legend('Location','northwest')
-            exportgraphics(gca,fullfile(obj.FolderName,"ModelSchematic.jpg"),"Resolution",600);
+            exportgraphics(gca,fullfile(obj.FolderName,"ModelSchematic.jpg?raw=true"),"Resolution",600);
 
             function [x,z] = helper_Rectangle(x,z,height,wdith)
                 x = [x,x+height,x+height,x];
@@ -1126,11 +1126,11 @@ s.helperPipeline();
 
 Model diagram in MATLAB:
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230827052906644.png" alt="image-20230827052906644" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230827052906644.png?raw=true" alt="image-20230827052906644" style="zoom: 67%;" />
 
 Matrix data of $F(i,x)$, $L(i,x)$, and $\Phi(i,x)$: 
 
-![image-20230827060053583](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230827060053583.png)
+![image-20230827060053583](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230827060053583.png?raw=true)
 
 <br>
 

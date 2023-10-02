@@ -38,7 +38,7 @@ conda deactivate
 
 例如：
 
-![image-20230402150133736](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230402150133736.png)
+![image-20230402150133736](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230402150133736.png?raw=true)
 
 ## List all environments
 
@@ -51,7 +51,7 @@ conda info --envs
 
 例如：
 
-![image-20230402150242734](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230402150242734.png)
+![image-20230402150242734](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230402150242734.png?raw=true)
 
 注：其中的\*代表当前所处的环境。
 {: .notice--primary}
@@ -75,7 +75,7 @@ conda config --show
 
 可以看到其中的`envs_dirs`中的配置信息已经进行了修改：
 
-![image-20230402155716982](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230402155716982.png)
+![image-20230402155716982](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230402155716982.png?raw=true)
 
 新建的路径已经成为了首选的环境路径。此时，再创建一个新的环境`newevns2`，并查看它的路径信息：
 
@@ -85,7 +85,7 @@ conda create --name newevns2 python
 conda info --envs
 ```
 
-![image-20230402160009034](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230402160009034.png)
+![image-20230402160009034](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230402160009034.png?raw=true)
 
 ## Remove environment
 

@@ -10,7 +10,7 @@ toc: false
 
 在Github上，有很多开源的Python库，有一些库可以很简单地使用`conda install`命令或者`pip install`命令进行安装，但是有一些包似乎并不提供这些方式（可能是没有上传到Anaconda Cloud或者PyPI上），例如最近学习的一个库：[PDEBench - Github](https://github.com/pdebench/PDEBench)，在库的Readme文件中，仅仅提供了一种安装方式：
 
-![image-20230404152738286](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230404152738286.png)
+![image-20230404152738286](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230404152738286.png?raw=true)
 
 本博客就简单记录一下这个库的安装。
 

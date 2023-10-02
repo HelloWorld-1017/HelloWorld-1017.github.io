@@ -31,7 +31,7 @@ $$
 
 将这一原理，即式$\eqref{eq2}$，应用到一个空间位置固定的有限控制体上（如下图所示），就可以得到流体动量方程（Momentum equations）的表达式。
 
-![image-20230329231542103](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230329231542103.png)
+![image-20230329231542103](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230329231542103.png?raw=true)
 
 <br>
 

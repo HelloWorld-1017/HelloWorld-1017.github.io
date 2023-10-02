@@ -23,7 +23,7 @@ imagesc(x,y,C)
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718182728255.png" alt="image-20220718182728255" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220718182728255.png?raw=true" alt="image-20220718182728255" style="zoom:50%;" />
 
 上述代码中
 
@@ -48,7 +48,7 @@ text(x(end), y(end), ['(', num2str(x(end)), ',', num2str(y(end)), ')'], fontsize
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718185509146.png" alt="image-20220718185509146" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220718185509146.png?raw=true" alt="image-20220718185509146" style="zoom:50%;" />
 
 <br>
 
@@ -68,7 +68,7 @@ set(gca, 'yDir', 'normal') % Method 2
 colorbar
 ```
 
-![image-20220904154245136](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904154245136.png)
+![image-20220904154245136](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904154245136.png?raw=true)
 
 <br>
 
@@ -83,7 +83,7 @@ imagesc(C, clims)
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718190512349.png" alt="image-20220718190512349" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220718190512349.png?raw=true" alt="image-20220718190512349" style="zoom:50%;" />
 
 <br>
 
@@ -99,11 +99,11 @@ colormap('Jet')
 colorbar
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718190433965.png" alt="image-20220718190433965" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220718190433965.png?raw=true" alt="image-20220718190433965" style="zoom:50%;" />
 
 MATLAB 内建的色卡有以下几种：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220718190340288.png" alt="image-20220718190340288" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220718190340288.png?raw=true" alt="image-20220718190340288" style="zoom:50%;" />
 
 <br>
 

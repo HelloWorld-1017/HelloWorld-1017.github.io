@@ -60,7 +60,7 @@ manim script1.py --format=gif
 
 生成的gif文件如下所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/CreateCircle_ManimCE_v0.16.0.post0.gif" alt="CreateCircle_ManimCE_v0.16.0.post0" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/CreateCircle_ManimCE_v0.16.0.post0.gif" alt="CreateCircle_ManimCE_v0.16.0.post0" style="zoom:67%;" />
 
 <br>
 
@@ -100,11 +100,11 @@ manim --save_sections script2.py
 
 就可以在目录 .\media\videos\script2\1080p60 下看到sections文件夹
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220721091335989.png" style="zoom:50%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220721091335989.png?raw=true" style="zoom:50%;" />
 
 该文件夹的内容如下：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220721091442634.png" alt="image-20220721091442634" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220721091442634.png?raw=true" alt="image-20220721091442634" style="zoom: 50%;" />
 
 两个视频文件是之前我们分隔开的两个sections分别对应的输出视频；.jison文件则记录了关于每个 section 输出视频的信息。
 

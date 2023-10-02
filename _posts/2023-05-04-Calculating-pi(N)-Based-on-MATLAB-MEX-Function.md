@@ -80,7 +80,7 @@ profile on; test; profile viewer
 
 借助MATLAB的工具Profiler [3] 分析代码的运行。打开`helperSegmentedSieve2Num`的分析：
 
-![image-20230502185719138](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230502185719138.png)
+![image-20230502185719138](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230502185719138.png?raw=true)
 
 可以看到，在计算$\pi(N)$这个应用场景下，`helperSegmentedSieve2Num`中判断区间左端值奇偶性的代码是不必要的（因为一定是偶数）。因此，为了简化代码，我们可以将左端值为奇数的分支删除掉，得到：
 
@@ -120,11 +120,11 @@ codegen -report helperSegmentedSieve2Num -args {L, R, plist}
 
 结果出现了以下的错误：
 
-![image-20230502191315858](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230502191315858.png)
+![image-20230502191315858](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230502191315858.png?raw=true)
 
 点击`View Error Report`：
 
-![image-20230502191356874](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230502191356874.png)
+![image-20230502191356874](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230502191356874.png?raw=true)
 
 报错的原因是生成MEX文件时不支持`pj=pList`语句，我们需要将其修改为`j = 1:numel(pList)`，并添加`pj=pList(j)`语句，即：
 

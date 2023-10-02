@@ -13,13 +13,13 @@ tags:
 
 本博客使用LCD屏幕搭建示例项目：[Grove - 16x2 LCD: Play with Arduino](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-arduino)。该示例项目使用的LCD显示器（Liquid Crystal Display，液晶显示器）来自Grove套件（[Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)）：
 
-![image-20230112082835171](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112082835171.png)
+![image-20230112082835171](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112082835171.png?raw=true)
 
 示例项目的运行需要使用与硬件配套的[Github: Grove RGB LCD Library](https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight)，要首先安装：
 
-![image-20230111131428527](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111131428527.png)
+![image-20230111131428527](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111131428527.png?raw=true)
 
-![image-20230111123913945](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111123913945.png)
+![image-20230111123913945](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111123913945.png?raw=true)
 
 之后将LCD屏接到I2C端口（并且接到四个I2C端口中的任意一个都可以，都不影响使用，也不需要修改代码），烧录代码：
 
@@ -61,7 +61,7 @@ void loop()
 
 最后的效果是LCD的第一行显示“Hello, world"的字样，第二行显示跳动的数字，该数字表示程序运行的秒数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112083836037.png" alt="image-20230112083836037" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112083836037.png?raw=true" alt="image-20230112083836037" style="zoom:80%;" />
 
 <br>
 
@@ -135,7 +135,7 @@ lcd.print("你好，世界！");
 
 显示的是乱码的内容：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112093319330.png" alt="image-20230112093319330" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112093319330.png?raw=true" alt="image-20230112093319330" style="zoom:80%;" />
 
 
 
@@ -157,7 +157,7 @@ lcd.setCursor(0, 1);
 lcd.setCursor(3, 1);
 ```
 
-![image-20230112101854633](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112101854633.png)
+![image-20230112101854633](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112101854633.png?raw=true)
 
 如果直接将这一行注释掉：
 
@@ -167,7 +167,7 @@ lcd.setCursor(3, 1);
 
 `loop()`部分中打印的数字就不会在固定的位置显示。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112102240616.png" alt="image-20230112102240616" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112102240616.png?raw=true" alt="image-20230112102240616" style="zoom:80%;" />
 
 ### `lcd.print(millis()/1000);`
 
@@ -188,7 +188,7 @@ lcd.print("  ");
 lcd.print((double)millis()/1000); // Method 2
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230112100947579.png" alt="image-20230112100947579" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230112100947579.png?raw=true" alt="image-20230112100947579" style="zoom:80%;" />
 
 <br>
 

@@ -29,7 +29,7 @@ C = bsxfun(@(x, y) func, A, B)
 
 如果`A`和`B`都是具有4个元素的行向量，
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220929181926223.png" alt="image-20220929181926223" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220929181926223.png?raw=true" alt="image-20220929181926223" style="zoom: 67%;" />
 
 例如：
 
@@ -47,7 +47,7 @@ C =
 
 如果`A`和`B`是具有3个元素的列向量；
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220929181957911.png" alt="image-20220929181957911" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220929181957911.png?raw=true" alt="image-20220929181957911" style="zoom:67%;" />
 
 例如：
 
@@ -67,7 +67,7 @@ C =
 
 如果`A`是具有3个元素的列向量，`B`是具有4个元素的行向量：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220929182030416.png" alt="image-20220929182030416" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220929182030416.png?raw=true" alt="image-20220929182030416" style="zoom:67%;" />
 
 例如：
 
@@ -87,7 +87,7 @@ C =
 
 如果`A`是具有3个元素的行向量，`B`是具有4个元素的列向量：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220929182119471.png" alt="image-20220929182119471" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220929182119471.png?raw=true" alt="image-20220929182119471" style="zoom:67%;" />
 
 例如：
 
@@ -124,7 +124,7 @@ legend('k=1', 'k=2', 'k=3', 'k=4', "Location", "best")
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220929184409017.png" alt="image-20220929184409017" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220929184409017.png?raw=true" alt="image-20220929184409017" style="zoom:67%;" />
 
 <br>
 

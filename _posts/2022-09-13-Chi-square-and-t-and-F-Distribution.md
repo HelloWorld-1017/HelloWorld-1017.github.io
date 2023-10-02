@@ -148,7 +148,7 @@ grid on
 box on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918144328163.png" alt="image-20220918144328163" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918144328163.png?raw=true" alt="image-20220918144328163" style="zoom:50%;" />
 
 <br>
 
@@ -243,7 +243,7 @@ grid on
 box on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918124835599.png" alt="image-20220918124835599" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918124835599.png?raw=true" alt="image-20220918124835599" style="zoom:50%;" />
 
 <br>
 
@@ -330,7 +330,7 @@ grid on
 box on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918140922103.png" alt="image-20220918140922103" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918140922103.png?raw=true" alt="image-20220918140922103" style="zoom:50%;" />
 
 
 
@@ -430,7 +430,7 @@ $$
 
 该值等于下图所示面积的二元积分：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220918110212576.png" alt="image-20220918110212576" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220918110212576.png?raw=true" alt="image-20220918110212576" style="zoom:50%;" />
 
 计算二重积分，并将其转换为累次积分：
 

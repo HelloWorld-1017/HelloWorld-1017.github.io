@@ -167,7 +167,7 @@ title('Corresponding CDFs of Exponential Distribution')
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220930092902352.png" alt="image-20220930092902352" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220930092902352.png?raw=true" alt="image-20220930092902352" style="zoom:67%;" />
 
 注意：`exppdf`和`expcdf`函数接受的参数是数学期望，是$1/\lambda$的值，而不是$\lambda$的值。
 {: .notice--warning}
@@ -277,7 +277,7 @@ xlabel('x')
 ylabel('CDF')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220930102820947.png" alt="image-20220930102820947" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220930102820947.png?raw=true" alt="image-20220930102820947" style="zoom:67%;" />
 
 可以看到，当参数`b`等于1时，其实就是指数分布。
 

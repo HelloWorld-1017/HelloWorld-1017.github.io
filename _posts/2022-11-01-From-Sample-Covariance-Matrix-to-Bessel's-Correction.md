@@ -98,7 +98,7 @@ $$
 
 虽然对于使用式$\eqref{eq4}$去估计总体标准差，只是减小并非消除bias，但是这并不影响它的实践意义，比如MATLAB的`std`函数在默认情况下就使用式$\eqref{eq4}$去计算样本标准差：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221101183130171.png" alt="image-20221101183130171" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221101183130171.png?raw=true" alt="image-20221101183130171" style="zoom:50%;" />
 
 ### Caveat 2: The corrected estimator often has a higher mean squared error
 
@@ -258,11 +258,11 @@ $$
 
 以本例中的第2个样本为例解释这一点：
 
-![image-20221101164301724](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221101164301724.png)
+![image-20221101164301724](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221101164301724.png?raw=true)
 
 如果我们对所有的5个样本应用这种分解，可以得到：
 
-![image-20221101180155502](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221101180155502.png)
+![image-20221101180155502](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221101180155502.png?raw=true)
 
 很明显，上图中的中间列的加和为0。剩余部分：
 

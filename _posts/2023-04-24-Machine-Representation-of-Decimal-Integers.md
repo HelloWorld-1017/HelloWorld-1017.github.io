@@ -22,7 +22,7 @@ tags:
 
 大多数编程语言都会提供相应的整数类型变量，例如MATLAB提供的integer数据类型有 [2]：
 
-![image-20230422145327359](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230422145327359.png)
+![image-20230422145327359](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230422145327359.png?raw=true)
 
 在MATLAB中，使用`num2hex`函数可以查看浮点数的十六进制机器表示法，例如：
 

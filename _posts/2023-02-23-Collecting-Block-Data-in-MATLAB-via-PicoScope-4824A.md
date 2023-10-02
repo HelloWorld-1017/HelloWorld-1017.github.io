@@ -57,9 +57,9 @@ connect(ps4000aDeviceObj);
 
 `invoke`函数是MATLAB Instrument Control Toolbox中的自建函数（[invoke - MathWorks](https://ww2.mathworks.cn/help/instrument/invoke.html)），该函数的作用是：Execute driver-specific function on device object. 这些driver-specific函数就在开发者所提供的`.mdd`文件中：
 
-![image-20230223161155081](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230223161155081.png)
+![image-20230223161155081](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230223161155081.png?raw=true)
 
-![image-20230223161325106](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230223161325106.png)
+![image-20230223161325106](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230223161325106.png?raw=true)
 
 这些函数的输入输出的含义都从这里查找到。
 
@@ -95,7 +95,7 @@ ans =
 
 而`PicoConstants`对象则是由PicoScope Support Toolbox提供（后面所要用到的`PicoStatus`属性也是一样的）：
 
-![image-20230223163340590](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230223163340590.png)
+![image-20230223163340590](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230223163340590.png?raw=true)
 
 其中定义了很多的常数，这里所要用到的`PicoConstants.QUAD_SCOPE`和`PicoConstants.OCTO_SCOPE`分别为：
 
@@ -413,7 +413,7 @@ ylabel(getVerticalAxisLabel(chAUnits));
 
 最终图像的效果是：
 
-![image-20230223201119914](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230223201119914.png)
+![image-20230223201119914](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230223201119914.png?raw=true)
 
 ## (8) Disconnect Device
 

@@ -61,7 +61,7 @@ colorbar
 axis off
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904120024087.png" alt="image-20220904120024087" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904120024087.png?raw=true" alt="image-20220904120024087" style="zoom: 80%;" />
 
 但是，代码片段：
 
@@ -115,7 +115,7 @@ colorbar
 axis off
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904120951554.png" alt="image-20220904120951554" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904120951554.png?raw=true" alt="image-20220904120951554" style="zoom: 80%;" />
 
 尽管两个图像之间并没有什么明显的差异，但是区分变量$z$和$c$是有必要的。
 
@@ -151,7 +151,7 @@ axis off
 
 可以看到图像为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904121751235.png" alt="image-20220904121751235" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904121751235.png?raw=true" alt="image-20220904121751235" style="zoom: 80%;" />
 
 在分形领域或者全纯动力学领域可能对上述两个都很漂亮的图形有更为严格的区分。
 
@@ -192,7 +192,7 @@ cbar = colorbar;
 cbar.Limits = [0, 1];
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904152649720.png" alt="image-20220904152649720" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904152649720.png?raw=true" alt="image-20220904152649720" style="zoom: 80%;" />
 
 从上述代码中可以看到，Vendoyov对于方程$\eqref{eq1}$的迭代，就是从$z=0$开始，符合Mandelbrot set的定义。Vendoyov将参数c的网格矩阵根据方程$\eqref{eq1}$进行迭代，在迭代`maxIterations`次后，若函数值的模仍小于设定的`R`，就认为该点是收敛的，则将`logicalImage`中的对应位置设为逻辑`1`；若函数值的模大于`R`，则认为是发散的，将`logicalImage`中的对应位置设为逻辑`0`，之后进行绘图。
 
@@ -228,7 +228,7 @@ cbar = colorbar;
 cbar.Limits = [0, maxIterations];
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220904153048551.png" alt="image-20220904153048551" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904153048551.png?raw=true" alt="image-20220904153048551" style="zoom:80%;" />
 
 这种方式通过`count`矩阵来记录参数`c`经过**多少次**迭代后仍可以认为是收敛的（函数值的模小于`R`）：`count`矩阵中的数字越大，就表示经过多轮迭代后仍收敛。
 
@@ -301,7 +301,7 @@ end
 imwrite(im, map, 'mandelbrot_gif.gif', 'DelayTime', 0, 'LoopCount', inf) 
 ```
 
-![mandelbrot_gif](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/mandelbrot_gif.gif)
+![mandelbrot_gif](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/mandelbrot_gif.gif?raw=true)
 
 以及生成.avi视频文件的代码：
 

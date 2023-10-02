@@ -7,14 +7,14 @@ categories:
 tags:
  - MATLAB App Building
 header:
-  image: https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230224183310721.png
+  image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230224183310721.png?raw=true
 ---
 
 # Introduction
 
 博客[Hello, MATLAB GUI Layout Toolbox!](http://whatastarrynight.com/matlab/Hello-MATLAB-GUI-Layout-Toolbox/)中提到，MATLAB GUI Layout Toolbox提供了一个很漂亮的创建GUI的完整示例：
 
-![image-20230225141945003](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225141945003.png)
+![image-20230225141945003](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225141945003.png?raw=true)
 
 本博客就仔细地学习一下这个示例。
 
@@ -107,7 +107,7 @@ data =
 
 - `DemoFunctions`是这些Demo对应的函数名，这些函数都是MATLAB的内置函数。例如我们直接在命令行中输入`logo`，软件就会绘制出MATLAB的图标：
 
-  ![image-20230224102041879](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230224102041879.png)
+  ![image-20230224102041879](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230224102041879.png?raw=true)
 
   并且会在工作空间中加载相应的变量：
 
@@ -200,7 +200,7 @@ gui = createInterface(data.DemoNames);
 
 `createInterface()`函数创建的Parent-Children关系为：
 
-![image-20230224183310721](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230224183310721.png)
+![image-20230224183310721](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230224183310721.png?raw=true)
 
 其中：
 
@@ -208,7 +208,7 @@ gui = createInterface(data.DemoNames);
 
 包括：`figure`类，`uimenu`类，`uicontrol`类、`uicontainer`类和`axes`类，其中`uicontainer`类有一些特殊，MATLAB官方文档中并没有对这个类进行介绍。如果在命令行中输入`type uicontainer`，则只会显示`'uicontainer' is a built-in function.`；如果使用`open uicontainer`，则会有这样的一段注释：
 
-![image-20230224183928678](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230224183928678.png)
+![image-20230224183928678](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230224183928678.png?raw=true)
 
 进行简单的介绍。“built-in function”可能就意味着它的代码不是开源的；但另一方面，如果在命令行中输入`open figure`，也只会出现类似的一段注释，然而我们就可以在MATLAB文档中查找到详细的设置，所以“built-in function”与是否有官方文档并没有直接的联系。我个人认为`uicontainer`类可能更像是一种“中间”函数，有些类似MATLAB的Handle类中定义的Hidden类型的properties.
 
@@ -218,23 +218,23 @@ gui = createInterface(data.DemoNames);
 
 - `uix.HBoxFlex`类：Arrange elements horizontally with draggable dividers
 
-  ![image-20230225120309693](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225120309693.png)
+  ![image-20230225120309693](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225120309693.png?raw=true)
 
 - `uix.BoxPanel`类：Arrange a single element in a panel with boxed title
 
-  ![image-20230225120238856](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225120238856.png)
+  ![image-20230225120238856](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225120238856.png?raw=true)
 
 - `uix.VBox`类：Arrange elements vertically in a single column
 
-  ![image-20230225120356671](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225120356671.png)
+  ![image-20230225120356671](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225120356671.png?raw=true)
 
 可以看到，官方提供的这个示例中使用到的类都来自`uix`库，与在博客[Hello, MATLAB GUI Layout Toolbox!](http://whatastarrynight.com/matlab/Hello-MATLAB-GUI-Layout-Toolbox/)中所介绍的类不同，后者都来自`uiextras`库。这两个库在工具箱中都有定义：
 
-![image-20230225120636190](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225120636190.png)
+![image-20230225120636190](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225120636190.png?raw=true)
 
 然而在Documentation中只有对于`uix`库的介绍：
 
-![image-20230225120800040](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225120800040.png)
+![image-20230225120800040](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225120800040.png?raw=true)
 
 这可能是因为在某个版本中，开发者重新编写了一个`vix`库，并且完全覆盖了`uiextras`库的内容。可以看到`vix`库的类是更多的：
 
@@ -278,7 +278,7 @@ GridFlex.m    VBoxFlex.m
 
 最终，执行完命令`   data = createData();`和`gui = createInterface( data.DemoNames );`后，得到的视图如下图所示：
 
-![image-20230225121652066](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225121652066.png)
+![image-20230225121652066](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225121652066.png?raw=true)
 
 <br>
 
@@ -323,7 +323,7 @@ redrawDemo();
 
 该函数根据所选取的Demo，更新了GUI四部分的显示：
 
-![image-20230225122727147](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225122727147.png)
+![image-20230225122727147](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225122727147.png?raw=true)
 
 ## `redrawDemo` function
 
@@ -365,21 +365,21 @@ redrawDemo();
 
 这个函数首先会删除掉原有的`gui.ViewAxes`：
 
-![image-20230225123851778](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225123851778.png)
+![image-20230225123851778](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225123851778.png?raw=true)
 
 然后在工作空间中执行Demo的函数名，在*their own windows*绘制出图像：
 
-![image-20230225124409324](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225124409324.png)
+![image-20230225124409324](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225124409324.png?raw=true)
 
 之后再将其隐藏，并且将图像copy到*our window*中显示，最后的效果是：
 
-![image-20230225124252763](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225124252763.png)
+![image-20230225124252763](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225124252763.png?raw=true)
 
 ## `displayEndOfDemoMessage` function
 
 在执行完函数`updateInterface();`和`redrawDemo();`后，程序最终会执行一个`displayEndOfDemoMessage`函数：
 
-![image-20230225125034694](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230225125034694.png)
+![image-20230225125034694](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225125034694.png?raw=true)
 
 该函数的作用是：
 

@@ -12,13 +12,13 @@ toc: false
 
 考虑一个随流线运动的有限控制体（参考博客：[Three Different Models of the Fluid from *Fundamentals of Aerodynamics* by Anderson](http://whatastarrynight.com/mathematics/computational%20fluid%20dynamics/Three-Different-Models-of-the-Fluid-from-Fundamentals-of-Aerodynamics-by-Anderson/)）：
 
-![image-20230322143537903](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230322143537903.png)
+![image-20230322143537903](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230322143537903.png?raw=true)
 
 该控制体是总是包含相同的流体粒子，因此它的质量是固定的，不随时间运动。然而，它的体积$V$和控制面$S$随时间变化，也就导致它的密度$\rho$随时间变化。
 
 在某一时刻，该控制体的状态如下图所示：
 
-![image-20230322143644076](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230322143644076.png)
+![image-20230322143644076](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230322143644076.png?raw=true)
 
 假设在该时刻，有限体的体积为$\mathcal{V}$，控制面的面积为$S$。我们首先考虑$\mathrm{d}S$（注意这是一个标量）的运动：在经过$\Delta t$的时间后，有限控制体的体积由于$\mathrm{d}S$的运动增加了$\Delta\mathcal{V}$（可以看成是相比原先的有限控制体凸起了一个柱体）：
 
@@ -52,7 +52,7 @@ $$
 
 假设上图2.15中的移动的控制体的体积收缩到一个非常小的体积$\delta \mathcal{V}$，本质上就成为了一个无限小流体微团（[Three Different Models of the Fluid from *Fundamentals of Aerodynamics* by Anderson](http://whatastarrynight.com/mathematics/computational%20fluid%20dynamics/Three-Different-Models-of-the-Fluid-from-Fundamentals-of-Aerodynamics-by-Anderson/)）
 
-![image-20230322160445020](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230322160445020.png)
+![image-20230322160445020](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230322160445020.png?raw=true)
 
 则式$\eqref{eq5}$就可以写作：
 

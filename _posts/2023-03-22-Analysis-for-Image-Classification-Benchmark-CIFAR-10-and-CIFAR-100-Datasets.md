@@ -196,7 +196,7 @@ Sample size of each class in whole training dataset
 
 最终将结果汇总在表格中：
 
-![image-20230321180632180](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230321180632180.png)
+![image-20230321180632180](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230321180632180.png?raw=true)
 
 可以看到：
 
@@ -287,7 +287,7 @@ im = imtile(XTrain(:,:,:,idx),ThumbnailSize=[96,96]);
 imshow(im)
 ```
 
-![image-20230321183317343](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230321183317343.png)
+![image-20230321183317343](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230321183317343.png?raw=true)
 
 <br>
 
@@ -320,7 +320,7 @@ train.mat
 
 CIFAR-100一共有20大类（Superclass）的图像，而这20个大类又可以细分为100个小类（Classes），每个大类均包含5个小类：
 
-![image-20230321190428322](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230321190428322.png)
+![image-20230321190428322](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230321190428322.png?raw=true)
 
 而`coarse_label_names`和`fine_label_names`就保存着Superclasses和Classes的名称。
 

@@ -21,7 +21,7 @@ Pip和conda在如何实现环境中的依赖关系方面也有所不同。安装
 
 考虑到conda和pip的相似性，一些人试图将这些工具结合起来创建data science environments，这并不奇怪。混合使用pip和conda的一个主要原因是：有些packages只能通过pip安装。在Anaconda仓库中，有超过1,500个packages可供安装，包括最流行的data science，machine learning和AI框架。这些packages以及数以千计的额外的packages可以通过channels，[conda-forge](https://conda-forge.org/)和[bioconda](https://bioconda.github.io/)，从Anaconda cloud中获取，并使用conda安装。尽管这些包已经很多了，但是和PyPI上超过150,000个packages相比，还是太少了。因此，有些packages只能通过pip安装而无法使用conda安装，在这些情况下，混合使用conda和pip安装和合理的。
 
-![image-20230402143224972](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230402143224972.png)
+![image-20230402143224972](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230402143224972.png?raw=true)
 
 <br>
 

@@ -138,7 +138,7 @@ p(1) = 2;
 
 它仅仅生成了一个对应所有奇数（直接将2的倍数筛选掉）的布尔向量`p`；而另一方面，**在迭代时使用的索引`k`却是针对于完整的数列（包含2的倍数）**，因此在阅读这段代码时可能有些困难。因此，我绘制了一个`primes(51)`的示意图帮助理解：
 
-![image-20230426130614806](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230426130614806.png)
+![image-20230426130614806](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230426130614806.png?raw=true)
 
 同样一个奇数，在完整的数列中的索引$k$（即数字的值本身）与在仅包含奇数的数列中的索引$j$存在以下的算术关系：
 

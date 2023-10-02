@@ -22,7 +22,7 @@ categories:
 
 蔡氏电路(Chua's circuit)的电路结构如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819130711336.png" alt="image-20220819130711336" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819130711336.png?raw=true" alt="image-20220819130711336" style="zoom:50%;" />
 
 该电路是由两个线性电容、一个线性电感、一个线性电阻和一个非线性电阻构成的三阶自治动态电路。非线性电阻的伏安特性是 $i_R=g(u_R)$ ，是一个**电压控制型非线性电阻**，它所对应的伏安特性曲线是一个分段线性曲线。
 
@@ -62,7 +62,7 @@ $$
 
 其中， $\alpha=15.6$ ，$\beta=28$，$R_0=1$，$C_2=1$ 。非线性电阻的伏安特性曲线为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819142621984.png" alt="image-20220819142621984" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819142621984.png?raw=true" alt="image-20220819142621984" style="zoom:50%;" />
 
 ```matlab
 % The voltage-current profile of the nonlinear resistance
@@ -87,7 +87,7 @@ title('The voltage-current profile of the nonlinear resistance')
 
 其相轨迹为：
 
-![image-20220819142832191](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819142832191.png)
+![image-20220819142832191](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819142832191.png?raw=true)
 
 ```matlab
 [t,y] = ode45(@chua,[0 100],[0.7 0 0]);
@@ -117,7 +117,7 @@ end
 
 观察它的相轨迹绘制过程：
 
-![Chua1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/Chua1.gif)
+![Chua1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/Chua1.gif?raw=true)
 
 ```matlab
 gifFile = 'Chua1.gif';

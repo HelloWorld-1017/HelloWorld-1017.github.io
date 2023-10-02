@@ -106,7 +106,7 @@ ax.set_ylabel('Loss value')
 
 但是，在MLP的训练过程中，出现了二分类交叉熵损失值小于0的情况，而且出现得很频繁：
 
-![image-20230410195959578](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230410195959578.png)
+![image-20230410195959578](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230410195959578.png?raw=true)
 
 其实问题就出现在对于数据集标签的处理上。代码：
 
@@ -132,7 +132,7 @@ $$
 
 即可纠正这一错误：
 
-![image-20230410201500966](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230410201500966.png)
+![image-20230410201500966](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230410201500966.png?raw=true)
 
 这个问题也侧面反映出，用于计算二分类交叉熵的损失函数`torch.nn.BCELoss(size_average = True)`仅仅负责计算，而不会检查输入的标签是否仅有两个分类。
 

@@ -28,11 +28,11 @@ box on
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912231156922.png" alt="image-20220912231156922" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912231156922.png?raw=true" alt="image-20220912231156922" style="zoom:50%;" />
 
-但是🤦‍♂️！`sprintf`函数的目的是为了向命令行中打印文本，所以它不支持LaTeX解释器，这一点使得这种用法其实不是很实用。
+但是‍♂️！`sprintf`函数的目的是为了向命令行中打印文本，所以它不支持LaTeX解释器，这一点使得这种用法其实不是很实用。
 
-但是🙆‍♂️！受此启发，可以使用`sprintf`函数向`eval`函数传递参数，可以提高代码的可读性。
+但是‍♂️！受此启发，可以使用`sprintf`函数向`eval`函数传递参数，可以提高代码的可读性。
 
 顺便学习了一下`title`函数的用法，`title`函数是可以支持双行标题和子标题的。
 
@@ -48,7 +48,7 @@ box on
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912142142800.png" alt="image-20220912142142800" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912142142800.png?raw=true" alt="image-20220912142142800" style="zoom:50%;" />
 
 子标题用法：
 
@@ -62,7 +62,7 @@ box on
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220912142357249.png" alt="image-20220912142357249" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912142357249.png?raw=true" alt="image-20220912142357249" style="zoom:50%;" />
 
 其中，变量`tt`和`ss`是标题和子标题所对应的Text对象，可以分别修改它们的行为：
 

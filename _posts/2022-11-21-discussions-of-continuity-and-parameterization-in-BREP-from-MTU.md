@@ -20,7 +20,7 @@ tags:
 
 比如，在下面的图像中，我们将三个BREP curvilinear patches连接到一起。
 
-![image-20221121145148729](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121145148729.png)
+![image-20221121145148729](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121145148729.png?raw=true)
 
 两个曲线边界分别使用黄色和白色表示，并且两条曲线在顶点$X$处交汇。记这两条曲线分别为$f(u)$和$g(v)$，其中$u$和$v$分别从区间$[a, b]$和$[m, n]$取值。问题在于，我们如何保证这些区间以平滑的方式连接在一起呢？(How we can make sure that these curves join together in a "smooth" way.)
 
@@ -53,7 +53,7 @@ $$
 
 其中，点A，B和C是三个在同一条直线上的点，如下图所示。
 
-![image-20221121151707471](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121151707471.png)
+![image-20221121151707471](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121151707471.png?raw=true)
 
 随着变量$u$(或者$v$)从0变化到1，则$f(u)$(或者$g(v)$)从点A运动到点B(从点B运动到点C)。我们很容易看到，直线AB和直线BC在B点是$\boldsymbol{C^0}$ continuous，但是它们在B点是$\boldsymbol{C^1}$ continuous吗？
 
@@ -101,7 +101,7 @@ $$
 
 两个参数方程所对应的曲线以及运动轨迹如下图所示：
 
-![gif](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/gif.gif)
+![gif](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/gif.gif)
 
 （上图使用MATLAB软件绘制，具体代码见文末的Appendix A）
 
@@ -212,7 +212,7 @@ $$
 
 因为如果在连接点处的tangent vectors相同(即有相同的方向)，那么两条曲线在连接点处就有相同的tangent line。但是注意，反之并不成立。准确讲，有相同tangent line的两个curve segments并不意味着在连接点它们是$\boldsymbol{G^1}$ continuous。比如在下图中：
 
-![image-20221121195239220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221121195239220.png)
+![image-20221121195239220](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221121195239220.png?raw=true)
 
 曲线$f(u)$和$g(v)$在连接点处有着相同的tangent line，但是连接点处的tangent vectors的方向是相反的，因此在连接点处就不是$\boldsymbol{G^1}$ continuous。
 
@@ -235,7 +235,7 @@ $$
 
 它们的图像以及运动轨迹如下图所示：
 
-![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/gif1.gif)
+![gif1](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/gif1.gif?raw=true)
 
 (MATLAB绘图代码见文末的Appendix B)
 

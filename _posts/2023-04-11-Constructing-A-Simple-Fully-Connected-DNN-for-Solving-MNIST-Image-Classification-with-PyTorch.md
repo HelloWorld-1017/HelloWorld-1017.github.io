@@ -108,7 +108,7 @@ Out[23]: 5
 
 > 关于标签的定义，我们可以在`datasets.MNIST`的源码中查看到：
 >
-> ![image-20230411150043796](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230411150043796.png)
+> ![image-20230411150043796](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230411150043796.png?raw=true)
 
 <br>
 
@@ -173,9 +173,9 @@ $$
 
 在上面的代码中，我们并没有看到（1）Softmax层，以及（2）0-9的定类标签向独热编码方式的转换。这是因为这两个步骤都集成在了多分类交叉熵损失函数`torch.nn.CrossEntropyLoss`的定义中 [5] ：
 
-![image-20230411160800983](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230411160800983.png)
+![image-20230411160800983](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230411160800983.png?raw=true)
 
-![image-20230411131637395](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230411131637395.png)
+![image-20230411131637395](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230411131637395.png?raw=true)
 
 <br>
 

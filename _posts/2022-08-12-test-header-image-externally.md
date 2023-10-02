@@ -9,7 +9,7 @@ tags:
 toc: false
 classes: wide
 header:
-  image: https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/PeakyBlinders1.jpg
+  image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/PeakyBlinders1.jpg?raw=true
   caption: "Peaky Blinders"
 ---
 

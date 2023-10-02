@@ -67,7 +67,7 @@ plt.xlabel('w')
 plt.show()
 ```
 
-![image-20230403155351323](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230403155351323.png)
+![image-20230403155351323](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230403155351323.png?raw=true)
 
 虽然这个示例非常得简单，但是其思想是通用的。
 
@@ -128,7 +128,7 @@ fig.colorbar(surf, orientation='vertical')
 plt.show()
 ```
 
-![image-20230403201354803](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230403201354803.png)
+![image-20230403201354803](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230403201354803.png?raw=true)
 
 <br>
 

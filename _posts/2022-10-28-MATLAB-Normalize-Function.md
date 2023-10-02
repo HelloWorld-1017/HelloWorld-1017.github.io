@@ -88,7 +88,7 @@ A_normalized =
 
 上述标准化方法是`normalize`函数默认的标准化方法`zscore`，除此之外，还可以设定其的方法：
 
-![image-20221028204619191](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221028204619191.png)
+![image-20221028204619191](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221028204619191.png?raw=true)
 
 <br>
 

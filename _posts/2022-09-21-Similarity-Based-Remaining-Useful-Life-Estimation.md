@@ -182,11 +182,11 @@ figure('Units', 'pixels', 'Position', [299, 101, 1100, 789])
 helperPlotEnsemble(trainData, timeVariable, [conditionVariables(1:2) dataVariables(1:2)], nsample)
 ```
 
-![image-20220915195348310](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220915195348310.png)
+![image-20220915195348310](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220915195348310.png?raw=true)
 
 为了看得清楚一点，我们可以修改`nsample`，只可视化2个机器的情况：
 
-![image-20220915195455130](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220915195455130.png)
+![image-20220915195455130](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220915195455130.png?raw=true)
 
 可以看到，这些数据随时间变化是杂乱无章的，没有明显的退化趋势。但是处理后的曲线就可能会表现出一种趋势。
 
@@ -235,7 +235,7 @@ figure(2)
 helperPlotClusters(opConditionUnwrap)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917133313874.png" alt="image-20220917133313874" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917133313874.png?raw=true" alt="image-20220917133313874" style="zoom:50%;" />
 
 可以看到，所有数据的operating conditions列聚集在三维空间中的6个regime。
 
@@ -252,7 +252,7 @@ figure(3)
 helperPlotClusters(opConditionUnwrap, clusterIndex, centers)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917134135495.png" alt="image-20220917134135495" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917134135495.png?raw=true" alt="image-20220917134135495" style="zoom:50%;" />
 
 ## Working Regime Normalization
 
@@ -311,7 +311,7 @@ figure(4)
 helperPlotEnsemble(trainDataNormalized, timeVariable, dataVariables(1:4), nsample)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917134737300.png" alt="image-20220917134737300" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917134737300.png?raw=true" alt="image-20220917134737300" style="zoom:50%;" />
 
 标准化后，一些传感器值就表现一定的随时间变化的趋势，之后就针对每一个传感器数据进行趋势分析。
 
@@ -348,7 +348,7 @@ figure(5)
 helperPlotEnsemble(trainDataNormalized, timeVariable, dataVariables(sensorTrended(3:6)), nsample)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917135051477.png" alt="image-20220917135051477" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917135051477.png?raw=true" alt="image-20220917135051477" style="zoom:50%;" />
 
 ## Construct Health Condition
 
@@ -366,7 +366,7 @@ figure(6)
 helperPlotEnsemble(trainDataNormalized, timeVariable, "health_condition", nsample)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917135509415.png" alt="image-20220917135509415" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917135509415.png?raw=true" alt="image-20220917135509415" style="zoom:50%;" />
 
 ## Construct Health Indicator
 
@@ -445,7 +445,7 @@ ylabel('Health Indicator')
 title('Training Data')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917140923094.png" alt="image-20220917140923094" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917140923094.png?raw=true" alt="image-20220917140923094" style="zoom:50%;" />
 
 注：在`degradationSensorFusion`函数中可以看到，这些数据（即曲线）是经过了`movmean`滑动平均的，并且考虑到了滑动平均技术可能引起的offset。
 {: .notice--primary}
@@ -465,7 +465,7 @@ ylabel('Health Indicator')
 title('Validation Data')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917141344560.png" alt="image-20220917141344560" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917141344560.png?raw=true" alt="image-20220917141344560" style="zoom:50%;" />
 
 ## Build and Fit Similarity RUL Model `residualSimilarityModel`
 
@@ -530,7 +530,7 @@ grid on
 box on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917150443681.png" alt="image-20220917150443681" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917150443681.png?raw=true" alt="image-20220917150443681" style="zoom:50%;" />
 
 ## Performance Evaluation
 
@@ -573,7 +573,7 @@ pdfRUL =
       :               :         
     177.56        0.00065188    
 ```
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917151505271.png" alt="image-20220917151505271" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917151505271.png?raw=true" alt="image-20220917151505271" style="zoom:50%;" />
 
 之后，使用自定义函数`helperPlotRULDistribution`对比真实RUL与预测RUL。
 
@@ -623,7 +623,7 @@ figure(10)
 helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154126424.png" alt="image-20220917154126424" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917154126424.png?raw=true" alt="image-20220917154126424" style="zoom:50%;" />
 
 对于得到的结果需要有几点说明。
 
@@ -657,7 +657,7 @@ pdfRUL =
     131.48         0.015314
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917151752167.png" alt="image-20220917151752167" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917151752167.png?raw=true" alt="image-20220917151752167" style="zoom:50%;" />
 
 可以看到，修改了`'NumNearestNeighbors'`属性会影响`estRUL`、`ciRUL`和`pdfRUL`的值。
 
@@ -738,7 +738,7 @@ title('RUL Estimation')
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154126424.png" alt="image-20220917154126424" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917154126424.png?raw=true" alt="image-20220917154126424" style="zoom:50%;" />
 
 `helperPlotRULDistribution`函数将预测结果与真实结果进行对比并可视化，这是一个比较漂亮的呈现方式。
 
@@ -757,8 +757,8 @@ helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
 ```
 
 <figure class="half">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154718923.png" alt="image-20220917154718923" style="zoom:50%;" />
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917154753728.png" alt="image-20220917154753728" style="zoom:50%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917154718923.png?raw=true" alt="image-20220917154718923" style="zoom:50%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917154753728.png?raw=true" alt="image-20220917154753728" style="zoom:50%;" />
 </figure>
 
 
@@ -777,8 +777,8 @@ helperPlotRULDistribution(trueRUL, estRUL, pdfRUL, ciRUL)
 ```
 
 <figure class="half">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917155027647.png" alt="image-20220917155027647" style="zoom:50%;" />
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917155035903.png" alt="image-20220917155035903" style="zoom:50%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917155027647.png?raw=true" alt="image-20220917155027647" style="zoom:50%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917155035903.png?raw=true" alt="image-20220917155035903" style="zoom:50%;" />
 </figure>
 
 
@@ -852,7 +852,7 @@ title('RUL Prediction Error using first 90% of each validation ensemble member')
 linkaxes(ax, 'x')
 ```
 
-![image-20220917161704527](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917161704527.png)
+![image-20220917161704527](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917161704527.png?raw=true)
 
 并且绘制误差的箱线图，查看四分位点：
 
@@ -863,7 +863,7 @@ ylabel('Prediction Error')
 title('Prediction error using different percentages of each validation ensemble member')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917161931275.png" alt="image-20220917161931275" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917161931275.png?raw=true" alt="image-20220917161931275" style="zoom:50%;" />
 
 之后，计算预测误差的均值和标准差，并绘制errorbar：
 
@@ -884,7 +884,7 @@ errorSD =
    21.7315   13.5194   12.3083
 ```
 
-![image-20220917162202780](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220917162202780.png)
+![image-20220917162202780](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220917162202780.png?raw=true)
 
 <br>
 

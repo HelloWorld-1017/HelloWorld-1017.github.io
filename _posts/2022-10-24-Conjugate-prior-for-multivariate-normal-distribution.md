@@ -168,7 +168,7 @@ $$
 
 这个后验是没有闭式解的，需要用到Gibbs采样：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221024222602877.png" alt="image-20221024222602877" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221024222602877.png?raw=true" alt="image-20221024222602877" style="zoom: 67%;" />
 
 <br>
 

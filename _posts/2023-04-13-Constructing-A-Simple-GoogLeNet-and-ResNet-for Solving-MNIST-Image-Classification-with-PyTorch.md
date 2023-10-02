@@ -21,17 +21,17 @@ tags:
 
 GoogLeNet于2015年提出 [3]：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230412234527217.png"/>
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230412234527217.png?raw=true"/>
 
 在定义神经网络的时候，有些参数是比较难选的，例如卷积核的大小。GoogLeNet的出发点是：既然不知道多大的卷积核好用，那么就在一个 **Inception** 中都构造一下（btw，电影《盗梦空间》的英文名称就是Inception ），最后将不同branch的输出拼接（concatenate）：
 
-![image-20230413122449428](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413122449428.png)
+![image-20230413122449428](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413122449428.png?raw=true)
 
 如果$3\times3$的效果好，那么在训练的过程中$3\times3$这个路径上的权重就会变得比较大，变得比较重要，其他路线上的权重就会变小。它是通过**提供几种候选的CNN的配置，通过训练自动地在这几条路里面找到最优的卷积的组合**。
 
 要想使得多个branch的输出可以拼接到一起，**就必须保证每个branch输出的Height和Width是一致的，唯一的不同是Channel的大小**，最后沿着Channel这个维度将输出拼接起来：
 
-![image-20230413122924591](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413122924591.png)
+![image-20230413122924591](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413122924591.png?raw=true)
 
 为了能够保证每个branch输出的Height和Width是一致的，我们就需要对每一个branch中的卷积层的`padding`属性和`stride`属性进行设计。
 
@@ -39,17 +39,17 @@ GoogLeNet于2015年提出 [3]：
 
 在上面的Inception module中，我们可以看到一个比较特殊的卷积层，即$1\times1$的卷积。实际上，它的原理和其他的卷积层并没有区别，它的功能是融合input中相同位置的所有信息：
 
-![image-20230413195039110](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413195039110.png)
+![image-20230413195039110](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413195039110.png?raw=true)
 
 而它最重要的作用是**以一种低计算资源的方式改变通道的数量**。
 
 例如，假如我们想要使得通道的数量由192降低到32，如果我们使用$5\times5$（padding=2）的卷积层，则降低通道数量这一操作大概需要120 million次运算：
 
-![image-20230413122219174](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230413122219174.png)
+![image-20230413122219174](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230413122219174.png?raw=true)
 
 而使用$5\times5$的卷积层，则只需要大概12 million次运算，计算量大概只有之前的1/10，极大地节省了计算资源：
 
-![image-20230413122241092](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230413122241092.png)
+![image-20230413122241092](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230413122241092.png?raw=true)
 
 这对于深度神经网络的训练是非常有益的。有的时候，也把这种$1\times1$的卷积核叫做Network in Network（NiN）[4,5]。
 
@@ -377,7 +377,7 @@ if __name__ == '__main__':
 
 在CNN中，如果一直增加卷积层的数量，看上去网络更复杂了，但是实际上结果却变差了 [6]：
 
-![image-20230413202202814](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413202202814.png)
+![image-20230413202202814](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413202202814.png?raw=true)
 
 并且，这并不是过拟合所导致的，因为训练准确率和测试准确率都下降了。其根本原因是在训练过程中出现了**梯度消失**的现象。因为在反馈更新梯度时，需要将一连串的梯度乘起来（链式法则），如果这些梯度值都小于1，那么乘积就会越来越小；随着训练参数的增多，乘积就会趋于零，权重就无法进行更新，在**离输入比较近的层就得不到训练**。
 
@@ -385,7 +385,7 @@ if __name__ == '__main__':
 
 在2016年，何恺明等人提出了ResNet，就很优雅地解决了训练过程中梯度消失的问题 [6]。其基本思想是在网络中引入这样的Residual block：
 
-![image-20230413204147840](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413204147840.png)
+![image-20230413204147840](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413204147840.png?raw=true)
 
 在前馈的过程中，将输入与输出**加和**。这使得在反馈过程中计算梯度时，梯度值是大于1的：
 
@@ -397,7 +397,7 @@ $$
 
 最终，会构建出这样一个神经网络：
 
-![image-20230413205734707](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413205734707.png)
+![image-20230413205734707](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413205734707.png?raw=true)
 
 其中：
 
@@ -655,17 +655,17 @@ if __name__ == '__main__':
 
 除了这种最基本的ResNet，何恺明等人的论文 [8] 给出了更多的Residual Block的结构设计：
 
-![image-20230413211808540](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413211808540.png)
+![image-20230413211808540](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413211808540.png?raw=true)
 
-![image-20230413211823064](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413211823064.png)
+![image-20230413211823064](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413211823064.png?raw=true)
 
-![image-20230413212333131](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413212333131.png)
+![image-20230413212333131](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413212333131.png?raw=true)
 
-![image-20230413212411870](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413212411870.png)
+![image-20230413212411870](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413212411870.png?raw=true)
 
 以及Huang等人提出的DenseNet [9]：
 
-![image-20230413212540797](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230413212540797.png)
+![image-20230413212540797](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230413212540797.png?raw=true)
 
 <br>
 

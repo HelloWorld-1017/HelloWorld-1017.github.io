@@ -57,7 +57,7 @@ $$
 
 下面用状态平面讨论二阶 RLC 串联电路放电的动态过程，其电路图如下图所示。为了简化假设，假设电阻 R、电感 L 和电容 C 都是线性元件。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818193442974.png" alt="image-20220818193442974" style="zoom: 33%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220818193442974.png?raw=true" alt="image-20220818193442974" style="zoom: 33%;" />
 
 假设电容电压的初始值为 $u_C(0_-)=U_0$，电感的初始值为 $i_L(0_-)=0$，在 0 时刻开关闭合。电路的方程为：
 
@@ -164,7 +164,7 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819085650207.png" alt="image-20220819085650207" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819085650207.png?raw=true" alt="image-20220819085650207" style="zoom:50%;" />
 
 上图展现了在衰减振荡状态的情况下不同初值的相轨迹，这组相轨迹就是一个相图。
 
@@ -230,13 +230,13 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818223605884.png" alt="image-20220818223605884" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220818223605884.png?raw=true" alt="image-20220818223605884" style="zoom:50%;" />
 
 螺旋线的圈间距离表征了振荡的衰减率，而每一圈对应于震荡的周期。
 
 当 $R=0.1$ 时，欠阻尼的程度更加严重，则可以看到很多圈的螺旋线。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818230034482.png" alt="image-20220818230034482" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220818230034482.png?raw=true" alt="image-20220818230034482" style="zoom:50%;" />
 
 ```matlab
 clc, clear, close
@@ -332,7 +332,7 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-![image-20220819085851220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819085851220.png)
+![image-20220819085851220](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819085851220.png?raw=true)
 
 对应于不同的初始条件，相图是一组变形的抛物线，原点是它们的渐近点，相点的运动是趋于原点的。
 
@@ -413,7 +413,7 @@ dydt = [y(2); -omega_s*y(1)-2*delta*y(2)];
 end
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818232101598.png" alt="image-20220818232101598" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220818232101598.png?raw=true" alt="image-20220818232101598" style="zoom:50%;" />
 
 ## 当 $\delta=0$ 时：不衰减的正弦振荡
 
@@ -421,7 +421,7 @@ end
 
 ### 不同初值的对于相轨迹的影响（相图）
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220819090011968.png" alt="image-20220819090011968" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819090011968.png?raw=true" alt="image-20220819090011968" style="zoom:50%;" />
 
 ```matlab
 clc, clear, close

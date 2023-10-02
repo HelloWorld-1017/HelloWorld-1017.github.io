@@ -17,37 +17,37 @@ toc: true
 
 创建 Simulink 模型：
 
-![image-20220808173055995](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808173055995.png)
+![image-20220808173055995](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808173055995.png?raw=true)
 
 模块 Sine Wave 和 Cosine Wave 模块的幅值分别由变量 `A1` 和 `A2` 控制，由后面的脚本控制：
 
-![image-20220808173020969](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808173020969.png)
+![image-20220808173020969](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808173020969.png?raw=true)
 
 
 
-![image-20220808173248240](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808173248240.png)
+![image-20220808173248240](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808173248240.png?raw=true)
 
 
 
 选中需要记录的信号后，点击 Simulation tab 中的 Log signals
 
-![image-20220808173322109](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808173322109.png)
+![image-20220808173322109](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808173322109.png?raw=true)
 
 之后，可以在需要记录的信号上看到天线的标志：
 
-![image-20220808173443074](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808173443074.png)
+![image-20220808173443074](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808173443074.png?raw=true)
 
 之后 `Ctrl+E` 点开模型配置，确保勾选了 `Signal Logging`
 
-![image-20220808172818967](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808172818967.png)
+![image-20220808172818967](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808172818967.png?raw=true)
 
 点击后面的 Configure Signals to Logging Selector 按钮
 
-![image-20220808172910387](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808172910387.png)
+![image-20220808172910387](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808172910387.png?raw=true)
 
 可以进行信号属性的配置，包括设置 Signal name 等等
 
-![image-20220808173702360](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808173702360.png)
+![image-20220808173702360](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808173702360.png?raw=true)
 
 Apply 后 OK。
 
@@ -65,7 +65,7 @@ out = sim(in);
 
 在 `out.logsout` 中就保存着记录的两个信号：
 
-![image-20220808174843260](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808174843260.png)
+![image-20220808174843260](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808174843260.png?raw=true)
 
 ```matlab
 >> out.logsout

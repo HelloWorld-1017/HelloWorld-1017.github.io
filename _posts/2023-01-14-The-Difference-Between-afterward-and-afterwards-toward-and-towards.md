@@ -9,9 +9,9 @@ toc: false
 
 英语中的afterward和afterwards，toward和towards在含义上没有任何区别，唯一的区别在于不同英语国家使用的倾向性不同。例如，美国人喜欢afterward和toward，而英国人倾向于使用afterwards和towards。
 
-![image-20230114221644225](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230114221644225.png)
+![image-20230114221644225](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230114221644225.png?raw=true)
 
-![image-20230114221759325](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230114221759325.png)
+![image-20230114221759325](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230114221759325.png?raw=true)
 
 但是没有这么绝对："**But this is not a rule, and exceptions are easily found.**"
 

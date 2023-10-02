@@ -23,7 +23,7 @@ tbl = readtable(filename, 'TextType', 'string');
 
 table变量`tbl`的结构和内容如下所示：
 
-![image-20221002093538628](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221002093538628.png)
+![image-20221002093538628](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002093538628.png)
 
 本示例主要是根据各种条件创建`tbl.Description`列的词云：
 
@@ -39,7 +39,7 @@ wordcloud(textData);
 title("Factory Reports")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic1.jpg" alt="pic1" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic1.jpg?raw=true" alt="pic1" style="zoom:67%;" />
 
 （2）根据`tbl.Category`列的标签分别对`tbl.Description`列创建词云：
 
@@ -58,7 +58,7 @@ wordcloud(textData(idx), 'Color', 'magenta');
 title("Mechanical Failure")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic2.jpg" alt="pic2" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic2.jpg?raw=true" alt="pic2" style="zoom:67%;" />
 
 在这里，设置了`wordcloud`函数的`Color`属性设置出现频次较少的单词的颜色，如果想要设置出现频次较多的单词的颜色，需要设置`wordcloud`函数的`HighlightColor`属性看，例如：
 
@@ -76,7 +76,7 @@ wordcloud(textData(idx), 'HighlightColor', 'red');
 title("Cost > $1,000")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic3.jpg" alt="pic3" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic3.jpg?raw=true" alt="pic3" style="zoom:67%;" />
 
 （3）`WordCloudChart`属性
 
@@ -134,7 +134,7 @@ wc.MaxDisplayWords = 3;
 title("Factory Reports")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic4.jpg" alt="pic4" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic4.jpg?raw=true" alt="pic4" style="zoom: 67%;" />
 
 <br>
 
@@ -144,7 +144,7 @@ title("Factory Reports")
 
 `sonnets.txt`文件中保存的是莎士比亚的十四行诗：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221002104149524.png" alt="image-20221002104149524" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002104149524.png?raw=true" alt="image-20221002104149524" style="zoom:67%;" />
 
 首先，使用`fileread`函数读取`sonnets.txt`文件：
 
@@ -174,7 +174,7 @@ sonnets = string(sonnets);
 
 此时的`sonnets`变量中包含很多的换行符：
 
-![image-20221002104921134](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221002104921134.png)
+![image-20221002104921134](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002104921134.png?raw=true)
 
 使用`splitlines`函数将其分行：
 
@@ -188,7 +188,7 @@ sonnets = splitlines(sonnets);
   sonnets      2625x1             320806  string
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221002105229472.png" alt="image-20221002105229472" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002105229472.png?raw=true" alt="image-20221002105229472" style="zoom:67%;" />
 
 之后，将一些标点符号替换为空格：
 
@@ -211,7 +211,7 @@ sonnets = split(sonnets);
   sonnets      17712x1             976416  string
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221002105732324.png" alt="image-20221002105732324" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002105732324.png?raw=true" alt="image-20221002105732324" style="zoom:67%;" />
 
 移除掉字母小于5个的单词：
 
@@ -228,7 +228,7 @@ wordcloud(C);
 title("Sonnets Word Cloud")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic.jpg" alt="pic" style="zoom:67%;" />
+<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic.jpg?raw=true" alt="pic" style="zoom:67%;" />
 
 <br>
 

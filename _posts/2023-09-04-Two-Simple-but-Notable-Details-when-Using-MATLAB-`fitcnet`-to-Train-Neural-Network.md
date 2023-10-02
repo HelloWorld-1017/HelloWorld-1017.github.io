@@ -49,7 +49,7 @@ ylabel("Training loss")
 xlim([0,mdl.TrainingHistory.Iteration(end)])
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230904000012841.png" alt="image-20230904000012841" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230904000012841.png?raw=true" alt="image-20230904000012841" style="zoom:50%;" />
 
 The property of `"LossTolerance",1e-6` shows that the training process of this network stops when training loss is equal or less than the specified value `1e-6` (although is `1e-6` is default value, specifying it explicitly is a better practice). This is so literally obvious that users possibly neglect two details about stopping condition of network, which are I want to point out in this blog. 
 
@@ -59,11 +59,11 @@ The property of `"LossTolerance",1e-6` shows that the training process of this n
 
 To begin with, we could find this network will stop before training loss is equal or less than `1e-6` in some cases, like:
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230904001424267.png" alt="image-20230904001424267" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230904001424267.png?raw=true" alt="image-20230904001424267" style="zoom:50%;" />
 
 The reason for this phenomenon is that the gradient is extremely small so that MATLAB believe the network is well-trained and unnecessary to continue training. Actually, we could define what is “extremely small” for gradient by property `GradientTolerance`, whose default value is `1e-6` as well:
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230904002111936.png" alt="image-20230904002111936" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230904002111936.png?raw=true" alt="image-20230904002111936" style="zoom:50%;" />
 
 We could verify it in the above case:
 
@@ -110,13 +110,13 @@ xlim([0,mdl.TrainingHistory.Iteration(end)])
 legend
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230904085425364.png" alt="image-20230904085425364" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230904085425364.png?raw=true" alt="image-20230904085425364" style="zoom:50%;" />
 
 But we could find from the results that the aforementioned phenomenon, i.e., the network stops training before training loss reduce to the `LossTolerance`, happens more frequently, although the gradient dose not reduce to the `GradientTolerance` value.
 
 This is because that once we set `ValidationData` property, the validation dataset will influence the training progress DEFINITELY, despite the fact that we just want to observe whose loss. Or rather, at this time, the stopping condition is determined by validation loss in a way, and depending on `ValidationPatience` property:
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230904010258981.png" alt="image-20230904010258981" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230904010258981.png?raw=true" alt="image-20230904010258981" style="zoom:50%;" />
 
 According official introduction in the above figure, default value `6` of  `ValidationPatience` means if the situation which validation loss is greater than or equal to the minimum validation loss computed so far happens at least 6 times IN A ROW, the network will stop training and return a trained network, regardless of settings of `LossTolerance` and `GradientTolerance`. This point could also be verified by read-only `ValidationChecks` property:
 
@@ -171,7 +171,7 @@ xlim([0,mdl.TrainingHistory.Iteration(end)])
 legend
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230904091321131.png" alt="image-20230904091321131" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230904091321131.png?raw=true" alt="image-20230904091321131" style="zoom:50%;" />
 
 At this time, we could find more noticeable overfitting phenomenon from which.
 

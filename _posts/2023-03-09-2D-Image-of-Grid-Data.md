@@ -75,7 +75,7 @@ ylabel('Current (A)')
 zlabel('Flux linkage (Wb)')
 ```
 
-![image-20230309192711187](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230309192711187.png)
+![image-20230309192711187](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230309192711187.png?raw=true)
 
 并且为了后续将磁链网格数据关于电流和行程求偏导，对这个网格数据进行了最小二乘多项式拟合，并对比了原始的和拟合的磁链网格三维图像：
 
@@ -106,7 +106,7 @@ grid on
 hold(gca, "off")
 ```
 
-![image-20230309193656850](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230309193656850.png)
+![image-20230309193656850](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230309193656850.png?raw=true)
 
 <br>
 
@@ -114,7 +114,7 @@ hold(gca, "off")
 
 这篇论文在描述类似的一个因变量随两个自变量变化时，采用的是用颜色区分的二维图像，例如：
 
-![image-20230309193928500](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230309193928500.png)
+![image-20230309193928500](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230309193928500.png?raw=true)
 
 仿照这种形式，我重新对上述示例中的数据进行了绘制。一共绘制了三个图像，第一个是原始数据的图像，第二个是拟合数据的图像；由于得到了显示的拟合公式，因此就可以细分网格，对拟合数据的图像进行平滑，因此第三个是平滑后的拟合数据图像：
 
@@ -175,17 +175,17 @@ colorbar
 set(gca, "YDir", "normal")
 ```
 
-![image-20230309194820001](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230309194820001.png)
+![image-20230309194820001](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230309194820001.png?raw=true)
 
 这种图形的表现形式更加得紧凑；并且将数据表现为这样的图像后，就可能有更多的应用。
 
 例如，文献[Encoding Time Series as Images for Visual Inspection and Classification Using Tiled Convolutional Neural Networks](https://www.researchgate.net/publication/275970614_Encoding_Time_Series_as_Images_for_Visual_Inspection_and_Classification_Using_Tiled_Convolutional_Neural_Networks)就将时间序列编码成矩阵数据后，将其表示为图像（利用Gramian Angular Fields（GAF）和Markov Transition Fields （MTF）方法），之后依据图像信息训练了一个CNN分类器：
 
-![image-20230309222100713](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230309222100713.png)
+![image-20230309222100713](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222100713.png?raw=true)
 
-![image-20230309222119453](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230309222119453.png)
+![image-20230309222119453](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222119453.png?raw=true)
 
-![image-20230309222136502](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230309222136502.png)
+![image-20230309222136502](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222136502.png?raw=true)
 
 还是一个比较有意思的工作。
 

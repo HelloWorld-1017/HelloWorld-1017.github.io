@@ -118,7 +118,7 @@ ylabel('CDF')
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220930175825620.png" alt="image-20220930175825620" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220930175825620.png?raw=true" alt="image-20220930175825620" style="zoom:67%;" />
 
 ## Compare Binomial and Normal Distribution PDFs
 
@@ -149,7 +149,7 @@ title('Binomial and Normal pdfs')
 legend('Binomial Distribution','Normal Distribution','location','northwest')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001183201007.png" alt="image-20221001183201007" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001183201007.png?raw=true" alt="image-20221001183201007" style="zoom: 67%;" />
 
 <br>
 
@@ -193,7 +193,7 @@ $$
 
 式$\eqref{eq3}$所代表的分布，称为泊松分布(Poisson distribution)，记作$X\sim P(\lambda)$。
 
-🎈🎈🎈**泊松分布多出现在当$X$表示在一定的时间或空间内出现的事件个数的场合**。🎈🎈🎈
+**泊松分布多出现在当$X$表示在一定的时间或空间内出现的事件个数的场合**。
 
 从上述推导过程也可以看出：**泊松分布可以作为二项分布的极限而得到**。一般而言，若$X\sim B(n,p)$，其中（1）$n$很大，（2）$p$很小，而（3）$np=\lambda$不太大时，则$X$的分布接近于泊松分布$P(\lambda)$。当二项分布很难计算且满足上述三个条件时，可以将其转换为泊松分布进行计算。
 
@@ -247,7 +247,7 @@ ylabel('CDF')
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001181613946.png" alt="image-20221001181613946" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001181613946.png?raw=true" alt="image-20221001181613946" style="zoom: 67%;" />
 
 ### Compare Binomial and Poisson Distribution PDFs
 
@@ -276,7 +276,7 @@ legend('Binomial Distribution', 'Poisson Distribution', ...
     'location','northeast')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001183604855.png" alt="image-20221001183604855" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001183604855.png?raw=true" alt="image-20221001183604855" style="zoom: 67%;" />
 
 <br>
 
@@ -338,7 +338,7 @@ ylabel('CDF')
 grid on
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221001182442400.png" alt="image-20221001182442400" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221001182442400.png?raw=true" alt="image-20221001182442400" style="zoom: 67%;" />
 
 <br>
 

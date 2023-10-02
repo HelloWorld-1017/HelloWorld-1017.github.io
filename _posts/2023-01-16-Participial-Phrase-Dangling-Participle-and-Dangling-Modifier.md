@@ -7,7 +7,7 @@ categories:
 toc: false
 classes: wide
 header:
-  image: https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/20230116-Participial%20Phrase,%20Dangling%20Participle,%20and%20Dangling%20Modifier.png
+  image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/20230116-Participial%20Phrase,%20Dangling%20Participle,%20and%20Dangling%20Modifier.png?raw=true
 ---
 
 # Participle and Participial Phrase

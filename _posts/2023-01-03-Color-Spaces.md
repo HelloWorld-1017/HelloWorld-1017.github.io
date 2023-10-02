@@ -45,7 +45,7 @@ I = rgb2gray(RGB);
 imshow(I)
 ```
 
-![image-20230103071958718](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103071958718.png)
+![image-20230103071958718](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103071958718.png?raw=true)
 
 图片转换前后的变量类型和size：
 
@@ -88,11 +88,11 @@ imshow(X, map)
 colorbar
 ```
 
-![image-20230103082043311](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103082043311.png)
+![image-20230103082043311](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103082043311.png?raw=true)
 
 之后，将RGB colormap转换为grayscale colormap后再展示图像：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103102855145.png" alt="image-20230103102855145" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103102855145.png?raw=true" alt="image-20230103102855145" style="zoom:50%;" />
 
 对于indexed image和colormap的使用，我并不熟悉，此处不进行详细地探讨。
 
@@ -100,7 +100,7 @@ colorbar
 
 MATLAB的`rgb2gray`的转化算法是：
 
-![image-20230103103235677](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103103235677.png)
+![image-20230103103235677](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103103235677.png?raw=true)
 
 并且说明了：
 
@@ -127,7 +127,7 @@ YIQ = rgb2ntsc(RGB)
 
 转换算法为：
 
-![image-20230103112911461](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103112911461.png)
+![image-20230103112911461](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103112911461.png?raw=true)
 
 > In the NTSC color space, the luminance is the grayscale signal used to display pictures on monochrome (black and white) televisions. The other components carry the hue and saturation information. The value `0` corresponds to the absence of the component, while the value `1` corresponds to full saturation of the component.
 
@@ -158,7 +158,7 @@ imshow(YIQ(:,:,3));
 title('Quadrature in YIQ Color Space');
 ```
 
-![image-20230103120045773](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103120045773.png)
+![image-20230103120045773](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103120045773.png?raw=true)
 
 我们可以对比一下`rgb2gray`转换函数的效果：
 
@@ -176,7 +176,7 @@ imshow(YIQ(:,:,1));
 title('Luminance in YIQ Color Space');
 ```
 
-![image-20230103120210328](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103120210328.png)
+![image-20230103120210328](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103120210328.png?raw=true)
 
 ```matlab
 >> mean(double(rgb2gray(RGB))/255-YIQ(:, :, 1), "all")
@@ -186,7 +186,7 @@ ans =
 
 可以看到，`rgb2gray`的输出值在[0, 255]之间，而`rgb2ntsc`每一个分量的输出值在[0,1]之间，两者统一到同一标准下是几乎相同的。这也验证了两个转换公式的一致性。
 
-> ![image-20230103223026662](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103223026662.png)
+> ![image-20230103223026662](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103223026662.png?raw=true)
 >
 > [Understanding Color Spaces and Color Space Conversion - MATLAB & Simulink - MathWorks China](https://ww2.mathworks.cn/help/images/understanding-color-spaces-and-color-space-conversion.html#mw_7bb4a637-62c8-4e41-8376-785c243782a7)
 
@@ -198,13 +198,13 @@ ans =
 
 [NTSC Color Space](https://www.saji8k.com/displays/color-space/ntsc-1953/#:~:text=NTSC Color Space The NTSC Color Space is,in modern displays%2C it is commonly used to)就认为NTSC Color Space代表1953年引入的一种RGB color space，它的色域(color gamut)比sRGB宽得多；Wikipedia词条[YIQ - Wikipedia](https://en.wikipedia.org/wiki/YIQ#NTSC_1953_colorimetry)中的这段描述：
 
-![image-20230103124105887](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103124105887.png)
+![image-20230103124105887](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103124105887.png?raw=true)
 
 也认为RGB就是original 1953 color NTSC specification，他们都不认为NTSC color space和YIQ是一致的。综上，我个人是倾向于认为NTSC Color Space这个表述很宽泛，就是指NTSC这个组织所规定的色彩空间，并且在不同的场合所指代的色彩空间是不一样的。
 
 除此之外，其他色彩空间也存在这样的问题。比如[Wikipedia的YUV color model词条](https://en.wikipedia.org/wiki/YUV)中提到的：
 
-![image-20230103214804335](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103214804335.png)
+![image-20230103214804335](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103214804335.png?raw=true)
 
 <br>
 
@@ -228,7 +228,7 @@ The HSV (Hue, Saturation, Value) color space corresponds better to how people ex
 - *S*: Saturation, which is **the amount of hue or departure from neutral**. *S* is in the range [0, 1]. As *S* increases, colors vary from unsaturated (shades of gray) to fully saturated (no white component).
 - *V*: Value, which is **the maximum value** among the red, green, and blue components of a specific color. *V* is in the range [0, 1]. As *V* increases, the corresponding colors become increasingly brighter.
 
-![image-20230103131746724](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103131746724.png)
+![image-20230103131746724](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103131746724.png?raw=true)
 
 **(3) Deviced-independent Color Spaces** ([Device-Independent Color Spaces  - MathWorks](https://ww2.mathworks.cn/help/images/device-independent-color-spaces.html))
 
@@ -250,7 +250,7 @@ The YCbCr color space is widely used for digital video. In this format, luminanc
 [rgb2ycbcr - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2ycbcr.html).
 {: .notice--primary}
 
-📌**YUV, another color space widely used for digital video, is very similar to YCbCr but not identical.**📌
+**YUV, another color space widely used for digital video, is very similar to YCbCr but not identical.**
 {: .notice--warning}
 
 **(5) YIQ**
@@ -280,7 +280,7 @@ The National Television Systems Committee (NTSC) defines a color space known as 
 
 在学习YIQ色彩空间时，感觉I和Q所代表的的含义——In-phase和Quadrature——陌生但熟悉。找了一下之前学习的文献，发现这两个概念出现在参考 [3] 中。这篇论文将electromagnetic in-phase and quadrature signal data作为训练集训练了一个semi-supervised GAN，实现了end-to-end electromagnetic signal classification。
 
-![image-20230103222341337](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230103222341337.png)
+![image-20230103222341337](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103222341337.png?raw=true)
 
 这个信号应该不是图像信号，但是也使用了In-phase和Quadrature的概念，目前不太清楚两者有什么联系，先仅仅是记录在这里。
 

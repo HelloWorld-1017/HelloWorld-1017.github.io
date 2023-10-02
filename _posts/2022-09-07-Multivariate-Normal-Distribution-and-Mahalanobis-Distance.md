@@ -100,7 +100,7 @@ zlabel('Probability Density')
 title('plot3')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220905195913743.png" alt="image-20220905195913743" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220905195913743.png?raw=true" alt="image-20220905195913743" style="zoom:80%;" />
 
 ## Biviriate Normal Distribution CDF
 
@@ -167,7 +167,7 @@ ylim([-3, 3])
 zlim([0, 1])
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220905195952951.png" alt="image-20220905195952951" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220905195952951.png?raw=true" alt="image-20220905195952951" style="zoom:80%;" />
 
 CDF其实就是PDF在某一区域的二元积分，比如在计算在$x,y\in[0,1]$内的CDF：
 
@@ -213,7 +213,7 @@ ylabel('x2')
 title('CDF values')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220905201418897.png" alt="image-20220905201418897" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220905201418897.png?raw=true" alt="image-20220905201418897" style="zoom:80%;" />
 
 可以得到：
 
@@ -392,7 +392,7 @@ box on
 grid on
 ```
 
-![image-20220906151214957](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220906151214957.png)
+![image-20220906151214957](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220906151214957.png?raw=true)
 
 在上面的示例中，首先使用`mvnrnd`函数生成服从二维正态分布的样本`X`，之后使用`mahal`函数计算观测点`Y`到样本点的马氏距离，并进行比较：
 
@@ -428,7 +428,7 @@ d2_mahal =
 
 从数值结果和图(a)都可以看出，虽然观测点`Y = [1 1;1 -1;-1 1;-1 -1];`到样本中心的欧式距离`d2_Euclidean`很接近（因为计算的时候使用的是样本均值，所以欧式距离仍有所差异，随着样本点的数量的增加，**样本均值会逐渐接近经验均值**，即`mu = [0; 0]`，这个差异会越来越小），但是它们的马氏距离差异很大，因此马氏距离能够更好地表征点到一个分布的距离。
 
-🙆‍♂️🙆‍♂️🙆‍♂️
+‍♂️‍♂️‍♂️
 
 上文提到马氏距离的一个等价定义式$\eqref{eq2}$，即马氏距离是欧式距离的一个线性变换，线性变换矩阵为$W$，并且有$S^{-1}=W^TW$，于是我们可以利用Cholesky分解将$S^{-1}$分解为$W^TW$的形式，并且与使用`mahal`函数计算出的马氏距离的平方`d2_mahal`作比较以验证公式$\eqref{eq2}$的正确性：
 
@@ -453,7 +453,7 @@ d2_mahal =
     1.0137
 ```
 
-🙆‍♂️🙆‍♂️🙆‍♂️
+‍♂️‍♂️‍♂️
 
 上面所述的方式是将样本点保持在欧式空间，对欧式空间中的欧式距离做线性变换$W$得到马氏距离，而上文还提到如果对整个空间进行线性变换（还是相同的线性变换矩阵$W$），即对样本点`X`进行线性变换，则样本点表现出各向同性，图(b)就体现出这一点；另一方面，图(b)还体现出在变换空间内，样本点`Y`的马氏距离非常接近，而且就等于变换空间内的欧式距离：
 
@@ -479,7 +479,7 @@ d2_Euclidean_trans =
     1.8810
 ```
 
-🙆‍♂️🙆‍♂️🙆‍♂️
+‍♂️‍♂️‍♂️
 
 另外，上文还提到，$S^{-1}=W^TW$的分解（可能）是不唯一的，上述使用的分解方式是使用Cholesky分解得到下三角阵和上三角阵的乘积。我并不清楚是否还存在其他分解方式。如果分解不唯一，那么样本点`X`经历其他线性变换后，是否会保持各向同性？还有，分解不唯一是一定的吗？还是在一定条件下，分解就唯一了呢？
 
@@ -536,7 +536,7 @@ ylabel('x2')
 title('$\mu$ = [0, 0], $\Sigma$ = [1, 0; 0, 1]', Interpreter='latex')
 ```
 
-![image-20220907131256149](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220907131256149.png)
+![image-20220907131256149](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220907131256149.png?raw=true)
 
 <br>
 

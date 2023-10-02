@@ -13,7 +13,7 @@ tags:
 
 如果我们的神经网络都是由线性层串行地连接起来，层与层各节点之间都有权重连接，任意一个节点都要参与到下一层的计算中，这种线性层也被称为是全连接层（fully-connected layer），而由多层全连接层构成的网络也被称为全连接神经网络（Fully-Connected Neural Network，也有叫Dnese/Deep Connected，即**DNN**）。在博客 [2] 中，我们就把MNIST图像展开成一个向量，传入到了一个DNN中，实现了图像分类的问题。但是，在使用全连接层处理图像时，第一步就要把图像数据拉成一个长向量，这样的做法会丧失图像的**空间结构的信息**。卷积神经网络（Convolutional Neural Network, CNN）就可以在一定程度上解决这样的问题，卷积层的使用可以很好得保留图像的空间结构。一个基本的CNN结构如下图所示：
 
-![image-20230411222929745](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411222929745.png)
+![image-20230411222929745](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230411222929745.png?raw=true)
 
 相比于全连接神经网络，CNN有一些特殊之处：
 
@@ -33,19 +33,19 @@ tags:
 
 例如，对于一个$5\times5$的三通道的栅格图像做$3\times3$的卷积运算，最终可以得到一个通道：
 
-![image-20230412092550862](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092550862.png)
+![image-20230412092550862](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230412092550862.png?raw=true)
 
 **并且需要强调的是，最后只有一个通道！！！**
 
-![image-20230412092607313](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092607313.png)
+![image-20230412092607313](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230412092607313.png?raw=true)
 
 并且，对于输入通道为$n$的输入做卷积，输出的结果同样只有一个通道！！！
 
-![image-20230411201311121](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411201311121.png)
+![image-20230411201311121](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230411201311121.png?raw=true)
 
 如果我们想增加输出的通道数量，则需要增加卷积核的个数（即下图中的filter的个数）：
 
-![image-20230412092654809](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092654809.png)
+![image-20230412092654809](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230412092654809.png?raw=true)
 
 最终，总结起来就是：
 
@@ -55,7 +55,7 @@ tags:
 
 - 因此，卷积核实际上是一个4维的张量（`in_channels`，`out_channels`，`kernel_size`(int or tuple)）：
 
-  ![image-20230412092713434](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230412092713434.png)
+  ![image-20230412092713434](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230412092713434.png?raw=true)
 
 下面就简单验证一下$1\times10\times3\times3$的卷积核对$1\times5\times100\times100$的图像的改变：
 
@@ -93,7 +93,7 @@ torch.Size([1, 10, 98, 98])
 
 `padding`是卷积层`torch.nn.Conv2d`的一个重要的属性。如果设置`padding=1`，则会在输入通道的四周补上一圈零元素，从而改变output的size：
 
-![image-20230411212155975](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411212155975.png)
+![image-20230411212155975](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230411212155975.png?raw=true)
 
 可以使用代码简单验证一下：
 
@@ -133,7 +133,7 @@ tensor([[[[ 91., 168., 224., 215., 127.],
 
 `torch.nn.Conv2d`还有一个常用的属性是`stride`，表示卷积核每次移动的步长：
 
-![image-20230411213139008](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411213139008.png)
+![image-20230411213139008](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230411213139008.png?raw=true)
 
 ```python
 import torch
@@ -168,7 +168,7 @@ tensor([[[[211., 262.],
 
 从上面的几个例子中可以看到，卷积核以及相关参数的设置可以改变输入数据的size（Height和Width），并且官网给出了详细的用于计算输出size的公式：
 
-![image-20230412154658739](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230412154658739.png)
+![image-20230412154658739](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230412154658739.png?raw=true)
 
 但在一般情况下，我们在设计CNN的时候，不用特别关注卷积核的size，**我们只需要保证前后相连的两个卷积层的通道数量匹配，CNN就可以正常计算下去**。
 
@@ -228,7 +228,7 @@ tensor([[[[272., 259., 246., 233.],
 
 则此时output的size会超过input的size。经过卷积层后，output的size反而增大了，这并不是人们期望卷积层所进行的工作（但的确有这种层的存在，即反卷积层/转置卷积层 [ConvTranspose2d - PyTorch 2.0 documentation](https://pytorch.org/docs/stable/generated/torch.nn.ConvTranspose2d.html#torch.nn.ConvTranspose2d)）。因此，实际上`torch.nn.Conv2d`的`padding`属性有一个`'same'`选项（[Conv2d  - PyTorch 2.0 documentation](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d)），用于自动padding输入，使得卷积后的output的size与input的size是一致的：
 
-![image-20230412161304970](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230412161304970.png)
+![image-20230412161304970](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230412161304970.png?raw=true)
 
 例如，对于上面这个例子，我们设置`padding='same'`，则输出的结果与`padding=2`的结果是一致的：
 
@@ -266,7 +266,7 @@ tensor([[[[4., 8.],
           [9., 8.]]]])
 ```
 
-![image-20230411213844287](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230411213844287.png)
+![image-20230411213844287](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230411213844287.png?raw=true)
 
 当输入是奇数层时：
 
@@ -334,7 +334,7 @@ tensor([[[[3.2500, 6.2500],
 
 最终，在这里为MNIST数据集的分类任务构建的CNN结构如下图所示：
 
-![image-20230412200837414](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230412200837414.png)
+![image-20230412200837414](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230412200837414.png?raw=true)
 
 构建模型的代码为：
 
@@ -571,7 +571,7 @@ if __name__ == '__main__':
     print((endtime - starttime).seconds)
 ```
 
-![image-20230412203438457](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230412203438457.png)
+![image-20230412203438457](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230412203438457.png?raw=true)
 
 <br>
 

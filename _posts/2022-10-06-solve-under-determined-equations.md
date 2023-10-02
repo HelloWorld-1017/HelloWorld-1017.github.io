@@ -119,7 +119,7 @@ title(['y=', num2str(x(1)), '$x^2$+', num2str(x(2)), '$x+$', num2str(x(3))], Int
 legend
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221005151641074.png" alt="image-20221005151641074" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221005151641074.png?raw=true" alt="image-20221005151641074" style="zoom:67%;" />
 
 ## From the Point of View of Geometry
 
@@ -185,7 +185,7 @@ title(['y=', num2str(x2(1)), '$x^2$+', num2str(x2(2)), '$x+$', num2str(x2(3))], 
 legend
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221006125349323.png" alt="image-20221006125349323" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006125349323.png?raw=true" alt="image-20221006125349323" style="zoom:80%;" />
 
 <br>
 

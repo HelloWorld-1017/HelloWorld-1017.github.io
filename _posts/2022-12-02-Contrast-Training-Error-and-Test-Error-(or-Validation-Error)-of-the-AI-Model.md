@@ -54,7 +54,7 @@ Mdl = fitcnet(tblTrain,"Smoker", ...
 
 运行后，变量`Mdl.TrainingHistory`就包含了训练过程中的训练误差和验证误差：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221201195921492.png" alt="image-20221201195921492" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221201195921492.png" alt="image-20221201195921492" style="zoom:67%;" />
 
 将它们取出来，并绘制迭代图像：
 
@@ -69,7 +69,7 @@ xlabel("Iteration")
 ylabel("Cross-Entropy Loss")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221201200031354.png" alt="image-20221201200031354" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221201200031354.png?raw=true" alt="image-20221201200031354" style="zoom: 67%;" />
 
 之后，找到最小的验证集损失所对应的训练轮数：
 
@@ -216,7 +216,7 @@ err4.Color = [0 0 0];
 err4.LineStyle = 'none';
 err4.LineWidth = 1.5;
 
-exportgraphics(gcf, "results.jpg")
+exportgraphics(gcf, "results.jpg?raw=true")
 
 function [data_mean, data_errhigh, data_errlow] = helperErrorLimits(data)
 data_mean = mean(data);
@@ -225,7 +225,7 @@ data_errlow = std(data);
 end
 ```
 
-![results](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/results.jpg)
+![results](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/results.jpg?raw=true)
 
 由误差图像可以看出：
 

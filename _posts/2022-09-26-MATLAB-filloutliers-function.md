@@ -67,7 +67,7 @@ title("Number of outliers cleaned: " + nnz(outlierIndices))
 legend('Location', 'best')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925191239519.png" alt="image-20220925191239519" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925191239519.png?raw=true" alt="image-20220925191239519" style="zoom:67%;" />
 
 可以验证一下离群值查找规则`"mean"`：
 
@@ -155,7 +155,7 @@ title("Number of outliers cleaned: " + nnz(outlierIndices))
 legend('Location', 'best')
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220925210702401.png" alt="image-20220925210702401" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220925210702401.png?raw=true" alt="image-20220925210702401" style="zoom:67%;" />
 
 验证一下算法原理：
 
@@ -214,7 +214,7 @@ legend("Input data", "Cleaned data", "Outliers", "Filled outliers", "", "", "", 
     "Location", "best")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220926152540973.png" alt="image-20220926152540973" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220926152540973.png?raw=true" alt="image-20220926152540973" style="zoom:67%;" />
 
 <br>
 

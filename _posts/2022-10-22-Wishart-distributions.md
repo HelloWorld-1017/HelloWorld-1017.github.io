@@ -71,7 +71,7 @@ $$
 
 在贝叶斯统计中，Wishart分布是(均值已知的)MVN分布的精度矩阵$\Omega$($\Omega=\Sigma^{-1}$，$\Sigma$是协方差矩阵)的共轭先验：
 
-![image-20221022215519013](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221022215519013.png)
+![image-20221022215519013](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022215519013.png)
 
 没有足够的信息时，自由度$n=p$的Wishart先验是一个合适的选择。由于Wishart先验的均值为$W_p(\mathrm{V},n)$为$n\mathrm{V}$，这表明矩阵$\mathrm{V}$的一个合理的选择是$n^{-1}\Sigma_0^{-1}$，其中$\Sigma_0$是协方差矩阵的猜测($\Sigma_0$is some prior guess for the covariance matrix)。
 
@@ -79,7 +79,7 @@ $$
 
 在MATLAB的官方文档中，也提供了关于Wishart分布的一些概括和功能：[Wishart Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/wishart-distribution.html)，其中的描述和PDF定义和Wikipedia中时一致的：
 
-![image-20221022214757974](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221022214757974.png)
+![image-20221022214757974](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022214757974.png?raw=true)
 
 只是记号有所差异。我们这里仍然沿用式$\eqref{Wishart}$中的记号，即$n$表示Wishart分布的自由度，$\Sigma$表示对称正定矩阵，这是两个Wishart分布的参数。
 
@@ -126,11 +126,11 @@ for i = 1:numel(dfs)
     colorbar
     set(gca, 'PlotBoxAspectRatio', [1, 1, 1])
 end
-exportgraphics(gcf, 'fig.jpg', Resolution=300)
+exportgraphics(gcf, 'fig.jpg?raw=true', Resolution=300)
 
 ```
 
-![fig](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/fig.jpg)
+![fig](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/fig.jpg?raw=true)
 
 可以看到，当$\Sigma$一定时(这里取15阶的单位矩阵)，自由度越大，Wishart分布所产生的随机矩阵是越“确定”的，就和先验协方差矩阵越一致。
 
@@ -143,7 +143,7 @@ Sigma = diag(1:15);
 
 得到结果：
 
-![pic2](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic2.jpg)
+![pic2](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic2.jpg?raw=true)
 
 <br>
 
@@ -165,13 +165,13 @@ $$
 $$
 在贝叶斯统计中，Inverse Wishart分布常作为(均值未知的)MVN函数的协方差矩阵的共轭先验：
 
-![image-20221022224948742](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221022224948742.png)
+![image-20221022224948742](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022224948742.png)
 
 ## `iwishrnd`  Function in MALTAB
 
 和Wishart分布一样，MATLAB同样提供了相关的内容：[Inverse Wishart Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/inverse-wishart-distribution.html)，[iwishrnd - MathWorks](https://ww2.mathworks.cn/help/stats/iwishrnd.html)。其PDF：
 
-![image-20221022223732781](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221022223732781.png)
+![image-20221022223732781](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022223732781.png?raw=true)
 
 与式$\eqref{inverseWishart}$是等价的。
 
@@ -216,18 +216,18 @@ for i = 1:numel(dfs)
     set(gca, 'PlotBoxAspectRatio', [1, 1, 1])
 end
 
-exportgraphics(gcf, 'pic3.jpg', Resolution=300)
+exportgraphics(gcf, 'pic3.jpg?raw=true', Resolution=300)
 
 ```
 
-![pic3](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic3.jpg)
+![pic3](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic3.jpg?raw=true)
 
 ```matlab
 Sigma = diag(1:15);
 ...
 ```
 
-![pic4](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic4.jpg)
+![pic4](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic4.jpg?raw=true)
 
 <br>
 

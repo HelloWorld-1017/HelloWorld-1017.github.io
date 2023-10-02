@@ -250,7 +250,7 @@ $$
 
 对于方波（square）信号$f(t)$：
 
-![image-20230124134953108](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124134953108.png)
+![image-20230124134953108](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124134953108.png?raw=true)
 
 它的三角形式的傅里叶系数为：
 
@@ -287,7 +287,7 @@ $$
 
 以周期为2的方波为例，可视化正弦型号对于方波的近似：
 
-![image-20230124145237868](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124145237868.png)
+![image-20230124145237868](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124145237868.png?raw=true)
 
 > ```matlab
 > classdef Square < handle
@@ -389,19 +389,19 @@ $$
 
 间断点的个数必须是有限个，无限个第一类间断点就不满足，例如：
 
-![image-20230125171141635](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230125171141635.png)
+![image-20230125171141635](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230125171141635.png?raw=true)
 
 **条件2**：在一个周期内，函数极大值和极小值的数目应该为有限个。
 
 同样的，无限个极值的情形也不满足，例如：
 
-![image-20230125172457494](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230125172457494.png)
+![image-20230125172457494](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230125172457494.png?raw=true)
 
 **条件3**：在一个周期内，函数绝对可积。
 
 这一条件是为了保证有界，比如下面的信号就不满足：
 
-![image-20230125172553092](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230125172553092.png)
+![image-20230125172553092](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230125172553092.png?raw=true)
 
 <br>
 

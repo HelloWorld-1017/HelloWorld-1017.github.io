@@ -22,7 +22,7 @@ $$
 
 的定义域为$(0,1)\cup (1,+\infty)$，部分的函数图像为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428165358279.png" alt="image-20230428165358279" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428165358279.png?raw=true" alt="image-20230428165358279" style="zoom:50%;" />
 
 ```matlab
 clc,clear,close all
@@ -53,7 +53,7 @@ ylabel('$\ln t$','Interpreter','latex')
 > ylabel('$\ln t$','Interpreter','latex')
 > ```
 >
-> <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428165415562.png" alt="image-20230428165415562" style="zoom:50%;" />
+> <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428165415562.png?raw=true" alt="image-20230428165415562" style="zoom:50%;" />
 
 式$\eqref{eq0}$的变上限积分函数（Integrals with variable upper limit function）为：
 
@@ -65,7 +65,7 @@ $$
 
 在MATLAB Symbolic Math Toolbox中，由专门的`logint`函数 [4] 来计算这个变上限积分，例如我们可以绘制出$Li(x)$随$x$变化的曲线：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230427233358700.png" alt="image-20230427233358700" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230427233358700.png?raw=true" alt="image-20230427233358700" style="zoom:50%;" />
 
 ```matlab
 clc,clear,close all
@@ -160,7 +160,7 @@ $$
 | $10,000,000,000,000$  | $346,065,536,839$   | $-11,992,858,452$         | $108,971$      |
 | $100,000,000,000,000$ | $3,204,941,750,802$ | $-102,838,308,636$        | $314,890$      |
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428143931252.png" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428143931252.png?raw=true" style="zoom:50%;" />
 
 并且，对于表和图中显示的所有$N$值，$N/\ln N$给出了对$\pi(N)$的一个**低的**估计，而$Li(x)$给出了一个**高的**估计。
 

@@ -16,7 +16,7 @@ MATLAB Simulink中的Simscape模块可以针对不同的物理场进行建模，
 
 例如，对于 `Reluctance Force Actuator` 模块：
 
-![image-20220826104135660](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220826104135660.png)
+![image-20220826104135660](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220826104135660.png?raw=true)
 
 它所对应的 `reluctance_force_actuator.ssc` 文件如下：
 

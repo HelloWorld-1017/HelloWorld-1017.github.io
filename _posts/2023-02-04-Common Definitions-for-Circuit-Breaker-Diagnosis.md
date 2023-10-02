@@ -40,7 +40,7 @@ IEEE Std C37.10-2011 [2]：
 
 那么，什么是断路器的fundamental functions？这些文献中都没有提及。但是在CIGRE的报告 [1] 中列出了一些MF和mF的一些特征。例如，MF有：
 
-![image-20230203234433858](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230203234433858.png)
+![image-20230203234433858](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230203234433858.png?raw=true)
 
 > - Does Not Close (Open) on Command
 > - Closes (Opens) Without Command
@@ -54,7 +54,7 @@ IEEE Std C37.10-2011 [2]：
 
 以及mF：
 
-![image-20230203234542165](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230203234542165.png)
+![image-20230203234542165](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230203234542165.png?raw=true)
 
 mF的类型应该有很多，因为使用不同技术的断路器所发生的故障有很大的差异。
 
@@ -64,7 +64,7 @@ mF的类型应该有很多，因为使用不同技术的断路器所发生的故
 
 Defect比mF的严重程度更轻微，用得也比较少。有的时候可能与mF也不做严格的区分，比如在报告 [1] 出现的一个表格中：
 
-![image-20230203235756000](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230203235756000.png)
+![image-20230203235756000](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230203235756000.png?raw=true)
 
 就没有刻意地区分两个概念。
 
@@ -78,11 +78,11 @@ IEEE Std C37.10-2011 [2] 对于failure mode的定义：
 
 这种对于failure mode的划分方式不太常见，也不太统一。比如说在这篇标准中，仅仅是在开头的Definitions对Failure mode进行了定义，后文并没有进行使用；在其他的文献中也经常用于指代具体的故障，例如文献 [1] 中：
 
-![image-20230204104529845](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230204104529845.png)
+![image-20230204104529845](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230204104529845.png?raw=true)
 
 和文献 [5]：
 
-![image-20230204104804969](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230204104804969.png)
+![image-20230204104804969](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230204104804969.png?raw=true)
 
 <br>
 

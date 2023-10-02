@@ -49,7 +49,7 @@ categories:
 
 断路器操动机构中的线圈需要energy来energize，而energy来自于电流和电压，这就意味着operating time随着操动操动电压变化而变化。
 
-![image-20230207003223866](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230207003223866.png)
+![image-20230207003223866](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230207003223866.png?raw=true)
 
 > The coil requires a certain energy to operate and the energy in this case is built from both current and
 > voltage (Figure 1.) which means that the operating time will change with changed voltage.  
@@ -64,7 +64,7 @@ categories:
 
 # Auxiliary voltage tests
 
-🙆‍♂️正如前文所述，电流和电压共同提供了能量，因此**在试验的过程中需要同时测量电流和电压值**，这是非常重要的。另外需要注意的是coil current并不在本文所讨论的范围内。
+‍♂️正如前文所述，电流和电压共同提供了能量，因此**在试验的过程中需要同时测量电流和电压值**，这是非常重要的。另外需要注意的是coil current并不在本文所讨论的范围内。
 
 > Both current and voltage builds the energy in this case, so it is important to measure both to get the
 > full picture. 
@@ -74,14 +74,14 @@ categories:
 
 根据标准IEC 62271，在试验中需要测量动作过程中整个的supply voltage.
 
-🙆‍♂️🙆‍♂️Closing coil需要在85-110%的额定供应电压内激励（合闸过程）；opening coils需要在70-110%的额定供应电压范围内激励（分闸过程）。
+‍♂️‍♂️Closing coil需要在85-110%的额定供应电压内激励（合闸过程）；opening coils需要在70-110%的额定供应电压范围内激励（分闸过程）。
 
 > With a reference to the IEC 62271 standard, it is required that the supply voltage is measured during
 > operation when performing tests, that closing coils shall operate correctly between 85% and 110% of
 > the rated supply voltage (AC or DC) and the opening coils shall operate between 70% DC (85% AC)
 > and 110% (AC or DC) of the rated supply voltage.  
 
-🙆‍♂️🙆‍♂️并且需要注意的是，断路器在运行过程中，靠近upper limit的供应电压并不会引起任何的问题，因此在field tests中，通常更需要关注nominal或者minimum voltage等级下断路器的状况。
+‍♂️‍♂️并且需要注意的是，断路器在运行过程中，靠近upper limit的供应电压并不会引起任何的问题，因此在field tests中，通常更需要关注nominal或者minimum voltage等级下断路器的状况。
 
 <br>
 
@@ -95,9 +95,9 @@ categories:
 >
 > The disadvantage is that the voltage is what it is, normally higher than nominal voltage, and cannot be adjusted.   
 
-因此，技术人员可以采用potable power supply设备代替station voltage进行测试，前者的电压值可以进行精确地调整；缺点是potable power supply比较重，🙆‍♂️🙆‍♂️并且在断路器动作过程中并不能保证当线圈被被激励时power supply是稳定的，会出现dip（尤其是在电压比较低时）.
+因此，技术人员可以采用potable power supply设备代替station voltage进行测试，前者的电压值可以进行精确地调整；缺点是potable power supply比较重，‍♂️‍♂️并且在断路器动作过程中并不能保证当线圈被被激励时power supply是稳定的，会出现dip（尤其是在电压比较低时）.
 
-![image-20230207010240166](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230207010240166.png)
+![image-20230207010240166](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230207010240166.png?raw=true)
 
 > A portable power supply can be used instead of the station voltage where the advantage obviously is that one can adjust to exactly match the nominal voltage and of course other desired voltage levels. 
 >
@@ -119,13 +119,13 @@ categories:
 
 > For DC operated CBs, which are most common, it is different voltage levels for the close and open coils where closing coil is 85% of nominal while the opening coil should operate down to 70% of nominal voltage.
 
-🙆‍♂️🙆‍♂️之所以有差异，是因为断路器合闸所需要的能量更大，如果一个电压能够使断路器合闸，那么在这个电压下，断路器就能够正常分闸。换句话说，断路器在Close-Open operation中总是能够切断故障电流。
+‍♂️‍♂️之所以有差异，是因为断路器合闸所需要的能量更大，如果一个电压能够使断路器合闸，那么在这个电压下，断路器就能够正常分闸。换句话说，断路器在Close-Open operation中总是能够切断故障电流。
 
 > The difference comes from that if it is possible to close the CB it should be a safety margin for the CB to open.
 >
 > In other words, the circuit breaker should always be able to break a fault current in a Close-Open operation.
 
-🙆‍♂️除了根据标准执行minimum voltage operation完成测试外，由于施加的能量低于正常测试情况，因此该测试也更容易检测慢速断路器的问题，即润滑问题。
+‍♂️除了根据标准执行minimum voltage operation完成测试外，由于施加的能量低于正常测试情况，因此该测试也更容易检测慢速断路器的问题，即润滑问题。
 
 > Besides fulfilling tests according to the standard by performing minimum voltage operation, it is also easier to detect problems with slow breakers, i.e. lubrication problems, since the energy applied is lower than in the normal test case.
 
@@ -135,7 +135,7 @@ categories:
 
 在国际标准中，并没有对pick-up voltage test（加压测试）进行规定，但是该测试仍然有价值。
 
-🙆‍♂️🙆‍♂️Pick-up voltage test的操作步骤是：
+‍♂️‍♂️Pick-up voltage test的操作步骤是：
 
 > The test is performed by applying voltage pulse **significantly under the minimum voltage**, then increase the voltage for the next pulse and continue like that **until the coil operates**. 
 >

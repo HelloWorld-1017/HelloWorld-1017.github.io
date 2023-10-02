@@ -11,7 +11,7 @@ toc: false
 
 变换(transformation)实际上可以看作是一种函数(function)，它接收一个向量，对其进行运算后输出一个向量。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/schematic1.png" alt="schematic1" style="zoom: 33%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/schematic1.png?raw=true" alt="schematic1" style="zoom: 33%;" />
 
 
 
@@ -40,11 +40,11 @@ $$
 \vec{v}_{transformed}=2\times(1,0)+3\times(-1,1)=(-1,3)
 $$
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220708093439970.png" alt="image-20220708093439970" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220708093439970.png?raw=true" alt="image-20220708093439970" style="zoom:50%;" />
 
 
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220708093503305.png" alt="image-20220708093503305" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220708093503305.png?raw=true" alt="image-20220708093503305" style="zoom:50%;" />
 
 
 

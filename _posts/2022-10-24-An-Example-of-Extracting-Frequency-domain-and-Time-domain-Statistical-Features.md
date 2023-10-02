@@ -30,7 +30,7 @@ xlabel("Observations")
 ylabel("Signal")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024131228983.png" alt="image-20221024131228983" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024131228983.png?raw=true" alt="image-20221024131228983" style="zoom:50%;" />
 
 注意，在提取频域特征之前，需要信号的偏移，使信号在零值附近波动，上图展示了这一点。
 
@@ -58,7 +58,7 @@ ylabel("Signal")
 plot(flowFrequencies, flowSpectrum)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024133757786.png" alt="image-20221024133757786" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024133757786.png?raw=true" alt="image-20221024133757786" style="zoom: 50%;" />
 
 但其实，`pspectrum`函数本身也可以进行绘图：
 
@@ -66,7 +66,7 @@ plot(flowFrequencies, flowSpectrum)
 pspectrum(flow1, 1000, 'FrequencyLimits', [2 250])
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024135228834.png" alt="image-20221024135228834" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024135228834.png?raw=true" alt="image-20221024135228834" style="zoom:50%;" />
 
 但是可以看到两者的差别。
 
@@ -86,11 +86,11 @@ xlabel("Frequency")
 ylabel("Power Specturm")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024135406917.png" alt="image-20221024135406917" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024135406917.png?raw=true" alt="image-20221024135406917" style="zoom:67%;" />
 
 两者就是一致的了。但是本示例在提取频域特征的时候，还是使用的原始的单位，并不使用dB单位，即基于该图像进行提取：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024133757786.png" alt="image-20221024133757786" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024133757786.png?raw=true" alt="image-20221024133757786" style="zoom: 50%;" />
 
 <br>
 
@@ -173,7 +173,7 @@ plot(flowF, flowP)
 scatter(fPeak, pMax, "filled")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024141038963.png" alt="image-20221024141038963" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024141038963.png?raw=true" alt="image-20221024141038963" style="zoom:67%;" />
 
 但是也可以看到，最后只将频率`fPeak`作为特征之一。
 
@@ -217,7 +217,7 @@ pKurtosis =  pKur(1);
 
 - `pKur`为谱峰度(Spectral kurtosis, SK)，使用的是短时傅里叶变换(short-time Fourier transform, STFT)进行计算：
 
-  <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024142817121.png" alt="image-20221024142817121" style="zoom: 80%;" />
+  <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024142817121.png?raw=true" alt="image-20221024142817121" style="zoom: 80%;" />
 
 - `fKur`为frequencies for `pKur`；
 
@@ -270,7 +270,7 @@ qMAD = mad(flow);
 
   计算的是Peak-magnitude-to-RMS ratio：
 
-  ![image-20221024144235942](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024144235942.png)
+  ![image-20221024144235942](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024144235942.png?raw=true)
 
 - ```matlab
   qRMS = rms(flow);
@@ -278,7 +278,7 @@ qMAD = mad(flow);
   
   计算的是信号的均方根值(Root-mean-square value):
   
-  ![image-20221024144437125](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221024144437125.png)
+  ![image-20221024144437125](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221024144437125.png?raw=true)
   
 - ```matlab
   qMAD = mad(flow);

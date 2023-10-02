@@ -32,7 +32,7 @@ $$
 1. 中位数受个别特大值和特小值的影响，而数学期望则不然；
 2. 中位值总存在，而数学期望并不是对任何随机变量都存在；
 
-🙆‍♂️🙆‍♂️🙆‍♂️正是因为第一个优点，MATLAB中的离群值判断函数`isoutlier`、离群值移除函数`rmoutliers`、离群值替换函数`filloutliers`在默认情况下都采用median和movmedian（Hampel filter）方法来判断是否是离群值。
+‍♂️‍♂️‍♂️正是因为第一个优点，MATLAB中的离群值判断函数`isoutlier`、离群值移除函数`rmoutliers`、离群值替换函数`filloutliers`在默认情况下都采用median和movmedian（Hampel filter）方法来判断是否是离群值。
 
 <br>
 

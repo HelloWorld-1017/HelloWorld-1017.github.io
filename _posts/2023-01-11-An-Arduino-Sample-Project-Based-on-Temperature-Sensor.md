@@ -13,7 +13,7 @@ tags:
 
 本博客学习使用Grove套件的温度传感模块搭建示例项目[Grove - Temperature Sensor: With Arduino](https://wiki.seeedstudio.com/Grove-Temperature_Sensor/#with-arduino)，该项目采用的温度传感器模块（[Grove - Temperature Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Sensor/)）：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111095119452.png" alt="image-20230111095119452" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111095119452.png?raw=true" alt="image-20230111095119452" style="zoom: 50%;" />
 
 该温度传感器模块采用的是TTC3A103-39H热敏电阻（[thermistor](https://en.wikipedia.org/wiki/Thermistor)），这是一个NTC热敏电阻（negative temperature coefficient thermistor），即电阻的阻值随着环境温度的下降而增加。
 
@@ -23,7 +23,7 @@ tags:
 
 将温度传感器模块接入到Arduino的模拟A0端口：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111095445576.png" alt="image-20230111095445576" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111095445576.png?raw=true" alt="image-20230111095445576" style="zoom:67%;" />
 
 并烧录以下程序：
 
@@ -53,11 +53,11 @@ void loop()
 
 之后，我们可以打开Serial Monitor监视温度的输出值：
 
-![image-20230111095702194](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111095702194.png)
+![image-20230111095702194](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111095702194.png?raw=true)
 
 也可以打开Serial Plotter观看绘制的曲线：
 
-![image-20230111095747184](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111095747184.png)
+![image-20230111095747184](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111095747184.png?raw=true)
 
 下面，我们就学习一下上述的代码片段。
 
@@ -91,7 +91,7 @@ void loop() {
 
 代码会将信息打印在Serial Monitor窗口中：
 
-![image-20230111103429873](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111103429873.png)
+![image-20230111103429873](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111103429873.png?raw=true)
 
 （需要注意，这里是循环打印）
 
@@ -107,15 +107,15 @@ void loop() {
 
 如果是使用Arduino IDE Serial Monitor窗口从Arduino中读取信息，那么我们可以使用baud rate下拉菜单设置波特率：
 
-![image-20230111104847077](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111104847077.png)
+![image-20230111104847077](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111104847077.png?raw=true)
 
 我们可以简单尝试一下不同波特率所传递的的信息：
 
-![image-20230111105209342](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111105209342.png)
+![image-20230111105209342](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111105209342.png?raw=true)
 
-![image-20230111105240672](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111105240672.png)
+![image-20230111105240672](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111105240672.png?raw=true)
 
-![image-20230111105315382](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111105315382.png)
+![image-20230111105315382](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111105315382.png?raw=true)
 
 <br>
 
@@ -202,7 +202,7 @@ $$
 
 实际上，$R_0$作为一个常数，应该可以通过传感器的datasheet（或者R-T曲线）获得，但是官网中所提供的热敏电阻TTC3A103-39H的R-T曲线很模糊，并且后面的型号也不是39H。后来，我找到[NTC Thermistor-Veteng](https://www.veteng.com/product/ntc-thermistor-ttc3a103-55.html)提供了该信号的相关参数：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111112842711.png" alt="image-20230111112842711" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111112842711.png?raw=true" alt="image-20230111112842711" style="zoom:80%;" />
 
 可以看到，该型号热敏电阻的Zero Power Resistance at 25 $^\circ \mathrm{C}$是$10\ \mathrm{k\Omega}$，B参数为3975，与我们代码中的设定是一致的。
 
@@ -224,17 +224,17 @@ temperature = 1/(log(resistance/10000)/B+1/298.15)-273.15;
 
 则输出值的摄氏温度为：
 
-![image-20230111115106177](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111115106177.png)
+![image-20230111115106177](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111115106177.png?raw=true)
 
 这些值肯定是不对的，但是我们现在不太清楚转换公式的含义是什么，也不清楚如何在网络上查找资料，因此先搁置在这里。
 
 另一方面，我们可能会问：模拟端口A0的输出值是什么呢？可以简单输出看一下：
 
-![image-20230111121741551](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111121741551.png)
+![image-20230111121741551](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111121741551.png?raw=true)
 
 可以看到模拟端口A0的输出值是一个一个整数。再进一步，如果把A0端口的温度传感器拔掉，可以看到电脑屏幕上仍会打印值
 
-![image-20230111122131766](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111122131766.png)
+![image-20230111122131766](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111122131766.png?raw=true)
 
 并且也会变化，但是我目前还不清楚它们端口输出值的具体含义。
 
@@ -258,7 +258,7 @@ Serial.print(temperature);
 
 但是该函数没有末尾的自动换行功能：
 
-![image-20230111115845719](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111115845719.png)
+![image-20230111115845719](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111115845719.png?raw=true)
 
 两个函数差异的详细阐述可以参考博客：[Arduino编程之Serial.println()和Serial.print() - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2163164#:~:text=Arduino编程之Serial.println ()和Serial.print () Arduino 的输出基本就用两个函数 print 和 println，区别在于后者比前者多了回车换行,(data) 从串行端口输出数据，跟随一个回车（ASCII 13%2C 或 ‘r’）和一个换行符（ASCII 10%2C 或 ‘n’）。)。
 

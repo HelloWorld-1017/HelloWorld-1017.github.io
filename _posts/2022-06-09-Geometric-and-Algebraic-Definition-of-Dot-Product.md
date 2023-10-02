@@ -84,7 +84,7 @@ $$
 
 则两个向量点积的几何解释如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232637512.png" alt="image-20220707232637512" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707232637512.png?raw=true" alt="image-20220707232637512" style="zoom: 50%;" />
 
 (向量$\boldsymbol{a}$与$\boldsymbol{b}$的点积的结果等于向量$\boldsymbol{a}$在向量$\boldsymbol{b}$上的标量投影和$\boldsymbol{b}$模长的乘积)
 
@@ -93,7 +93,7 @@ $$
 &=a_b||\boldsymbol{b}||=\sqrt{2}\times2\sqrt{2}=4\\\end{aligned}
 $$
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232720063.png" alt="image-20220707232720063" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707232720063.png?raw=true" alt="image-20220707232720063" style="zoom: 50%;" />
 
 (向量$\boldsymbol{a}$与$\boldsymbol{b}$的点积的结果等于向量$\boldsymbol{b}$在向量$\boldsymbol{a}$上的标量投影和$\boldsymbol{a}$模长的乘积)
 
@@ -110,11 +110,11 @@ $$
 
 假设二维空间的向量经过一个线性变换都变换到了数轴$x_3$上，设$\hat{u}$是刚好落在该数轴上的“单位向量”。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232759737.png" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707232759737.png?raw=true" style="zoom: 50%;" />
 
 在二维空间中，如果将二维向量直接**投影**在数轴$x_3$上，实际上，我们就是定义了一个从二维向量到数的函数，并且这个函数是线性的，因为它通过了线性检验，即在二维空间中的任意一条直线上等距分布的点在投影到数轴上仍然是等距分布的。总之，这个投影操作实际上是一个从二维向量到数的线性变换，所以我们能够找到描述这个变换的$1\times2$矩阵，即$\hat{i}$和$\hat{j}$变换后的位置。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232844852.png" alt="image-20220707232844852" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707232844852.png?raw=true" alt="image-20220707232844852" style="zoom:50%;" />
 由上图，$\hat{i}$和$\hat{u}$的长度都为$1$，它们关于对称线对称，因此$\hat{i}$投影(线性变换)后落在数轴的$u_x$的位置处；同理，$\hat{j}$投影后落在数轴的$u_y$的位置处。所以投影变换对应的$1\times 2$矩阵的两列就是$\hat{u}$在二维空间的两个坐标。
 
 $$
@@ -135,7 +135,7 @@ $$
 > 1. 将空间中的向量投影到给定数轴上的过程实际上是个线性变换，而每个线性变换都对应一个矩阵，并且矩阵的列向量是空间基底变换后的位置，因此投影操作可以由一个行向量来描述；
 > 2. 表征投影操作的行向量与空间列向量相乘的计算结果(几何定义)，与向量点积的结果一致(代数定义)；
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707232940777.png" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707232940777.png?raw=true" style="zoom:50%;" />
 
 
 
@@ -148,7 +148,7 @@ $$
 
 一个向量的对偶是由它定义的线性变换(vector lineat transformation that it encodes)；一个多维空间到一维空间的线性变换的对偶是多维空间中的某个特定向量。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220707233025264.png"/>
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707233025264.png?raw=true"/>
 
 **“所以有时你会意识到，不把向量看作空间中的箭头，而是把它看作线性变换的物质载体，会更容易理解向量，这时候，向量就仿佛是一个特定变换的概念性记号。”**
 

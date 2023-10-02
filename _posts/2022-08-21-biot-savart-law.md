@@ -65,7 +65,7 @@ $$
 
 在上述的积分式中，都用到了叉积的运算，因此在每一个微元处，都可以用以下的方式来判断场的方向。
 
-![image-20220821185619393](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220821185619393.png)
+![image-20220821185619393](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220821185619393.png?raw=true)
 
 <br>
 

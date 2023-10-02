@@ -60,7 +60,7 @@ $$
 ### 牛顿法
 **牛顿法**，也称为**牛顿-拉夫逊法(Newton's method, AKA Newton-Raphson method)**，它的收敛速度通常比二分法和不动点迭代收敛快很多。牛顿法所对应的几何图如下图所示。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220712125213291.png" alt="image-20220712125213291" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220712125213291.png?raw=true" alt="image-20220712125213291" style="zoom: 67%;" />
 
 
 
@@ -292,7 +292,7 @@ $$
 
 首先根据函数画出函数图像，如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712182156945.png" alt="image-20220712182156945" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712182156945.png?raw=true" alt="image-20220712182156945" style="zoom:67%;" />
 
 ```python
 import numpy as np
@@ -328,7 +328,7 @@ plt.show()
 
 ### 二分法
 
-![image-20220712210528013](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712210528013.png)
+![image-20220712210528013](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712210528013.png?raw=true)
 
 ```python
 # Specify parameters
@@ -425,7 +425,7 @@ $$
 
 初值$x_0$设置为4，经过2000次的迭代得到的近似解为$4.3336$，误差为$-0.2580$。得到的迭代图像如下图所示。
 
-![image-20220712211951092](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712211951092.png)
+![image-20220712211951092](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712211951092.png?raw=true)
 
 ```python
 import numpy as np
@@ -481,7 +481,7 @@ plt.show()
 
 根据式 $\eqref{singlevariable}$ 编写牛顿法求解程序。初值设置为$10$，算法最终得到近似值收敛到$4.3338$，误差小于$1\times 10^{-3}$，迭代图像如下图所示。
 
-![image-20220712212617316](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712212617316.png)
+![image-20220712212617316](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712212617316.png?raw=true)
 
 ```python
 import torch
@@ -538,7 +538,7 @@ fig.savefig('fig.eps')
 
 根据式 $\eqref{SM}$ 编写割线法求解程序。初值$x_0$、$x_0$分别设置为3和4。经过11次迭代，得到近似值收敛到$4.3338$，误为于$6.90\times 10^{-8}$，迭代图像如下图所示，收敛效果与牛顿法近似。
 
-![image-20220712213018948](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712213018948.png)
+![image-20220712213018948](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712213018948.png?raw=true)
 
 ```python
 import matplotlib
@@ -637,7 +637,7 @@ $$
 
 使用多元牛顿法分别对算例2的方程组 $\eqref{nonlinearsystem1}$ 、$\eqref{nonlinearsystem2}$ 分别进行求解，得到的收敛图像如下图所示。代码中使用PyTorch框架完成了对雅可比矩阵的构建。可以看到，多元牛顿法应用于这两个方程组都有非常好的收敛效果。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712214257321.png"/>
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712214257321.png?raw=true"/>
 
 ```python
 import torch
@@ -703,7 +703,7 @@ axes[1].legend()
 fig.savefig('fig1.eps')
 ```
 
-![image-20220712214720615](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712214720615.png)
+![image-20220712214720615](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712214720615.png?raw=true)
 
 ```python
 import torch
@@ -770,7 +770,7 @@ fig.savefig('fig2.eps')
 使用多元牛顿法分别对算例2的（1）、（2）方程组进行求解，得到的收敛图像如下图所示。
 
 
-![image-20220712215712154](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712215712154.png)
+![image-20220712215712154](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712215712154.png?raw=true)
 
 ```python
 import numpy as np
@@ -840,7 +840,7 @@ axes[1].legend()
 fig.savefig('fig1.eps')
 ```
 
-![image-20220712215841050](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220712215841050.png)
+![image-20220712215841050](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712215841050.png?raw=true)
 
 
 ```python

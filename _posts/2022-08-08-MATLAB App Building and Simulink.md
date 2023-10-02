@@ -12,17 +12,17 @@ toc: false
 
 首先创建一个简单的 Simulink 模型 test_passVariables.slx，仅包含一个 Constant 模块和 Display 模块：
 
-![image-20220808111745944](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808111745944.png)
+![image-20220808111745944](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808111745944.png?raw=true)
 
 其中 Constant 模块的数值是由变量 `K` 定义：
 
-![image-20220808111948609](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808111948609.png)
+![image-20220808111948609](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808111948609.png?raw=true)
 
 <br>
 
 创建一个简单的 App，test.mlapp，仅包含一个 Buttton：
 
-![image-20220808112125498](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808112125498.png)
+![image-20220808112125498](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808112125498.png?raw=true)
 
 回调函数为：
 
@@ -41,7 +41,7 @@ end
 
 运行 App 并点击 “加载模型” 按钮，选中 test_passVariables.slx 文件后，开始运行：
 
-![image-20220808112426409](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808112426409.png)
+![image-20220808112426409](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808112426409.png?raw=true)
 
 得到预期效果。
 
@@ -51,7 +51,7 @@ end
 
 1. 虽然模型能够正常运行，但是 Simulink 模型中的 Constant 模块仍然会有 error
 
-   <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220808112607223.png"/>
+   <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808112607223.png?raw=true"/>
 
    这是因为变量 `K` 完全是由模型文件外的代码控制的，在 workspace 中并没有变量 `K` ，在模型的 `PreLoadFcn` 中也没有预先定义；
 

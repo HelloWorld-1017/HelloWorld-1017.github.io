@@ -81,7 +81,7 @@ self.linear = torch.nn.Linear(1, 1)
 
 使用`torch.nn.Linear`类以实例化一个对象`linear`，其Input size为`1`，Output size也为`1`，默认设置下包含了weight和bias（[Linear — PyTorch 2.0 documentation](https://pytorch.org/docs/stable/generated/torch.nn.Linear.html?highlight=torch+nn+linear#torch.nn.Linear)）：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230404183520947.png" alt="image-20230404183520947" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230404183520947.png?raw=true" alt="image-20230404183520947" style="zoom:67%;" />
 
 ## `forward()` function
 
@@ -108,7 +108,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
 
 除了这里使用的`torch.optim.SGD`优化器，PyTorch还提供了这些优化器：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230404191431788.png" alt="image-20230404191431788" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230404191431788.png?raw=true" alt="image-20230404191431788" style="zoom:67%;" />
 
 <br>
 

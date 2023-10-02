@@ -34,7 +34,7 @@ plot(x, y3, "LineWidth", LineWidth, "Color", 'b')
 legend("y1", "y3")
 ```
 
-![image-20221202125241693](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221202125241693.png)
+![image-20221202125241693](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221202125241693.png?raw=true)
 
 <br>
 

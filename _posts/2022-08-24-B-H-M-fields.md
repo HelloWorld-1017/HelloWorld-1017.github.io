@@ -78,7 +78,7 @@ $$
 $$
 
 <figure>
-    <a href="https://commons.wikimedia.org/wiki/File:Bound_currents.gif"><img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/Bound_currents.gif"></a>
+    <a href="https://commons.wikimedia.org/wiki/File:Bound_currents.gif"><img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/Bound_currents.gif"></a>
     <figcaption>When the microscopic currents induced by the magnetization (black arrows) do not balance out, bound volume currents (blue arrows) and bound surface currents (red arrows) appear in the medium.</figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ $$
 
 
 <figure class="half">
-    <a href="https://commons.wikimedia.org/wiki/File:VFPt_magnets_BHM.svg"><img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220824090148796.png"></a>
+    <a href="https://commons.wikimedia.org/wiki/File:VFPt_magnets_BHM.svg"><img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220824090148796.png?raw=true"></a>
         <figcaption>Comparison of B, H and M inside and outside a cylindrical bar magnet.</figcaption>
 </figure>
 

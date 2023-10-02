@@ -114,7 +114,7 @@ $$
 
 式 $\eqref{eq1}$ 的函数 $f(x)$ 可以化简为 $f(x) = (x-\dfrac23)^2$，$x=\dfrac23$ 是函数的三重根。函数图像如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220714132122813.png" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220714132122813.png?raw=true" style="zoom: 50%;" />
 
 ```matlab
 % MATLAB script
@@ -258,7 +258,7 @@ list_x =
 
 从图像上看，函数 $f(x)=x^3-2x^2+\dfrac43x-\dfrac8{27}$ 在三重根 $x = \dfrac23$ 附近非常非常平缓。后向误差在垂直方向上进行度量，而前向误差在水平方向上进行度量，因此前者要比后者小得多。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220714132122813.png" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220714132122813.png?raw=true" style="zoom: 50%;" />
 
 **前向误差与后向误差的讨论与数值算法的终止条件有关**。方程求根问题是为了找到方程 $f(x) = 0$ 的根 $r$，假设我们的算法可以生成一个近似解 $x_a$ ，我们如何确定这个解有多好？如何确定我们是否可以停止迭代呢？
 

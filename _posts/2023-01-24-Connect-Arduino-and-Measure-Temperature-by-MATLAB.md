@@ -38,7 +38,7 @@ end
 
 运行后可以看到在命令行窗口中的持续输出：
 
-![image-20230124205608726](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230124205608726.png)
+![image-20230124205608726](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230124205608726.png?raw=true)
 
 代码中的变量`a`是一个`arduino`类的对象：
 

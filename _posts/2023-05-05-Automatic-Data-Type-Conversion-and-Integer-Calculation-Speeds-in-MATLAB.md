@@ -14,7 +14,7 @@ tags:
 
 在MATLAB中，浮点数有两种类型：默认的64位双精度浮点数（Double-Precision Floating Point）`double`，32位单精度浮点数（Single-Precision Floating Point）`single` [1]；整数有8种类型，包含4种有符号整型以及4种无符号整型 [2]：
 
-![image-20230504182703473](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230504182703473.png)
+![image-20230504182703473](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230504182703473.png?raw=true)
 
 不同数字类型的变量在进行相互运算时，有时会存在自动类型转换，有时会报错；并且，相同的数字采用不同类型的变量来承载，计算速度也有所差距，本博客就简单整理一下这些内容。
 
@@ -83,7 +83,7 @@ doubles.
 
 总之，不同数字类型的变量的运算规则可以总结为：
 
-![image-20230504215645036](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230504215645036.png)
+![image-20230504215645036](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230504215645036.png?raw=true)
 
 <br>
 

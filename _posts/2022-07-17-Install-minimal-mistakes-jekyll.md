@@ -31,9 +31,9 @@ tags:
 
 gem-based 的方式很简洁，比较适合小白，但我在使用的过程中遇到了很多坑。最头疼的问题是：网站在本地启动时完全没有问题，但是 [Github 构建网站](https://jekyllrb.com/docs/continuous-integration/github-actions/#build-and-deploy) 时报错——Error: The minimal-mistakes-jekyll theme could not be found.
 
-![image-20220717105859284](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717105859284.png)
+![image-20220717105859284](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717105859284.png?raw=true)
 
-![image-20220717110023303](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717110023303.png)
+![image-20220717110023303](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717110023303.png?raw=true)
 
 ```
 /usr/bin/docker run --name ghcrioactionsjekyllbuildpagesv104_e20132 --label 4cd98f --workdir /github/workspace --rm -e INPUT_SOURCE -e INPUT_DESTINATION -e INPUT_FUTURE -e INPUT_BUILD_REVISION -e INPUT_VERBOSE -e INPUT_TOKEN -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_RUN_ATTEMPT -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_REF_NAME -e GITHUB_REF_PROTECTED -e GITHUB_REF_TYPE -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e GITHUB_STEP_SUMMARY -e RUNNER_OS -e RUNNER_ARCH -e RUNNER_NAME -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e ACTIONS_ID_TOKEN_REQUEST_URL -e ACTIONS_ID_TOKEN_REQUEST_TOKEN -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/QinghuaMa.github.io/QinghuaMa.github.io":"/github/workspace" ghcr.io/actions/jekyll-build-pages:v1.0.4
@@ -86,7 +86,7 @@ github-pages 227 | Error:  The minimal-mistakes-jekyll theme could not be found.
 
 即网站配置文件 _config.yml 中的 theme 设置错误
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717110600083.png" alt="image-20220717110600083" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717110600083.png?raw=true" alt="image-20220717110600083" style="zoom:50%;" />
 
 但是这个属性完全是按照 minimal mistakes 官方文档中的要求设定的：[Gem-based method](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#gem-based-method)。针对这个问题，我 google 了很久，也尝试了很多方法，例如：[Jekell theme could not be found](https://stackoverflow.com/questions/46380722/jekyll-theme-could-not-be-found)，但是都无法解决，每次都卡在这里。
 
@@ -96,13 +96,13 @@ github-pages 227 | Error:  The minimal-mistakes-jekyll theme could not be found.
 
 并且官方直接提供了 [Minimal mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter/generate) ，可以快速建立一个网站仓库。但是这种方式在本地构建的时候，一直会卡在 Remote Theme: Using the mmistakes/minmal-mistakes。
 
-![image-20220717112153195](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717112153195.png)
+![image-20220717112153195](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717112153195.png?raw=true)
 
 在 google 上找了一些解决该问题的方法：[Jekyll Remote Theme Doesnt Work Locally](https://www.faqcode4u.com/faq/181519/jekyll-remote-theme-doesnt-work-locally)，但是同样无法解决。后来看到了另一篇博客详细分析了这个问题：[Setting up jekyll with minimal-mistakes theme - Works for me](https://brasier.me/jekyll/theme/2019/01/19/installing-minimal-mistakes-jekyll/#)，其中提到：
 
 > ......
 >
-> It takes exactly… a long time for it to pull down the remote theme on my local computer, but whatevs, it still builds. 🤷‍♂️
+> It takes exactly… a long time for it to pull down the remote theme on my local computer, but whatevs, it still builds. ‍♂️
 >
 > ```
 > done in 303.062 seconds.
@@ -130,21 +130,21 @@ github-pages 227 | Error:  The minimal-mistakes-jekyll theme could not be found.
 
 这个文件夹比直接fork仓库得到的文件夹更加简洁
 
-![image-20220717115246068](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717115246068.png)
+![image-20220717115246068](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717115246068.png?raw=true)
 
 将上图中的文件夹都复制到网站项目仓库中。
 
 然后，将 [Minimal mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter/generate) 中的 _page文件夹复制到网站项目文件夹中，并将其中的 _data 文件夹中的 navigation.yml 文件替换掉网站项目文件中的相应文件。
 
-![image-20220717123632223](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717123632223.png)
+![image-20220717123632223](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717123632223.png?raw=true)
 
 最后，按照官方文档中的 [Configuration](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) 配置 _config.yml 文件，并且配置好 Gemfile 文件，上传到GitHub上。
 
 但是在构建网站时又遇见了新的报错信息：
 
-![image-20220717112918703](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717112918703.png)
+![image-20220717112918703](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717112918703.png?raw=true)
 
-![image-20220717012644098](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717012644098.png)
+![image-20220717012644098](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717012644098.png?raw=true)
 
 ```
 ......
@@ -159,15 +159,15 @@ Conversion error: Jekyll::Converters::Scss encountered an error while converting
 
 [File to import not found or unreadable: vendor/breakpoint/breakpoint · Issue #1606 · mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes/issues/1606)
 
-![image-20220717120046431](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717120046431.png)
+![image-20220717120046431](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717120046431.png?raw=true)
 
 只需要将 .gitignore 文件中的 vendor 文件夹注释掉即可
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717120217863.png" alt="image-20220717120217863" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717120217863.png?raw=true" alt="image-20220717120217863" style="zoom:50%;" />
 
 至此，pull 一下
 
-![image-20220717120500826](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220717120500826.png)
+![image-20220717120500826](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220717120500826.png?raw=true)
 
 bingo~
 
@@ -214,7 +214,7 @@ bingo~
 
 如果想要使得博客中的代码块显示行号，以及更多的显示主题格式或者功能，可以参考博客 [1] 使用`prism.js`的插件，可以直接在官网：[Download ▲ Prism ](https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+c+csharp+cpp+cilkc+cilkcpp+cmake+css-extras+csv+diff+git+linker-script+http+hpkp+hsts+ignore+java+javadoc+javadoclike+json+json5+jsonp+latex+markup-templating+matlab+nginx+nix+perl+php+php-extras+plsql+powershell+python+r+ruby+rust+sql+uri+vim+visual-basic+yaml&plugins=line-highlight+autolinker+custom-class+file-highlight+show-language+jsonp-highlight+highlight-keywords+inline-color+previewers+autoloader+keep-markup+command-line+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+download-button+match-braces)下载，并按照博客 [1] 所提供的方式进行配置。但是在配置之后，网站中有的代码块会出现行号显示不全的情况：
 
-![image-20230417093737199](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230417093737199.png)
+![image-20230417093737199](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230417093737199.png?raw=true)
 
 不太清楚这是什么原因导致的。
 
@@ -238,7 +238,7 @@ Lazy Ren也指出这种方式可能存在风险：
 
 因为这段代码可能是将网站中的**所有**图像都居中。因此，一个“意料之外”的改变是主页中以及博客中的avatar就也被居中了：
 
-![image-20230417095125144](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230417095125144.png)
+![image-20230417095125144](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230417095125144.png?raw=true)
 
 原先avatar是和文字是左端对齐的。
 

@@ -103,7 +103,7 @@ $$
 
 BTW，并不存在 `split*` 环境。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220818190050788.png" alt="image-20220818190050788" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220818190050788.png?raw=true" alt="image-20220818190050788" style="zoom:50%;" />
 
 
 

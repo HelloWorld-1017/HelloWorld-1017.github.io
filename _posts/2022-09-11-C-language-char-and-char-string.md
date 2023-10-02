@@ -18,7 +18,7 @@ char类型变量的声明和初始化的基本语法为：`char grade = 'A';`。
 
 字符串(character string)是一个或多个字符的序列，如：`“Hello, world!”`。双引号不是字符串的一部分，双引号仅告知编译器它括起来的是字符串，正如单引号用于标识单个字符一样。C语言没有专门用于存储字符串的变量类型，字符串都被存储在char类型的数组中，数组由连续的存储单元组成，字符串中的字符被存储在相邻的存储单元，每个单元存储一个字符。
 
-![image-20220911135023492](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220911135023492.png)
+![image-20220911135023492](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220911135023492.png?raw=true)
 
 数组(array)是同类型数据元素的有序序列，是一行连续的多个存储单元。
 {: .notice--primary}
@@ -27,7 +27,7 @@ char类型变量的声明和初始化的基本语法为：`char grade = 'A';`。
 
 字符串的声明也是借助于char数组，如`char name[5]；`：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220911135521348.png" alt="image-20220911135521348" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220911135521348.png?raw=true" alt="image-20220911135521348" style="zoom: 80%;" />
 
 但是在声明的时候，一定要留出1个byte的位置用于让计算机添加空字符，否则在打印的时候会出现乱码。如果初始化时，传入的字符串本身的长度（不包含双引号）就小于数组的长度，同样会出现乱码。出现这两种乱码的本质原因是一样的，都是char数组中没有预留出位置让计算机在使用`scanf()`函数读取输入时添加空字符，而空字符是C语言用于标记字符串结束的标志。计算机无法识别字符串是否结束，就会将该字符串地址后面的存储单元中的值也转换为字符打印出来，也就是乱码的部分。
 
@@ -53,7 +53,7 @@ int main(void)
 
 该代码不会报错，但是会出现乱码现象：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220911143930143.png" alt="image-20220911143930143" style="zoom: 50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220911143930143.png?raw=true" alt="image-20220911143930143" style="zoom: 50%;" />
 
 <br>
 
@@ -61,7 +61,7 @@ int main(void)
 
 字符串常量`“x”`和字符常量`‘x’`是不同的，区别之一就在于`‘x’`是基本类型(ie char)，而`“x”`是派生类型(ie char数组)；区别之二就是`“x”`实际上是由两个字符组成：`‘x’`和空字符`\0`：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220911150728562.png" alt="image-20220911150728562" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220911150728562.png?raw=true" alt="image-20220911150728562" style="zoom:50%;" />
 
 <br>
 

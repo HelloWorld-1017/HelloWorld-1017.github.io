@@ -30,7 +30,7 @@ $$
 
 只需要令 $\theta$ 取遍 $[0,2\pi)$ 中的值，就可绘制出圆的图形。以圆方程 $(x-3)^2+(y-4)^2=5^2$ 为例绘制图像： 
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Circle1.gif" alt="Circle1" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Circle1.gif?raw=true" alt="Circle1" style="zoom:50%;" />
 
 ```matlab
 % Plot circle function (x-3)^2+(y-4)^2 = 5^2
@@ -69,7 +69,7 @@ end
 
 同理，只需要改变 $\theta$ 的取值范围就可以圆绘制的“方向”：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Circle2.gif" alt="Circle2" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Circle2.gif?raw=true" alt="Circle2" style="zoom:50%;" />
 
 ```matlab
 ......
@@ -79,7 +79,7 @@ theta = linspace(pi, -pi, numPoints);
 
 进一步地，根据圆的参数方程，可以很简单地通过循环来绘制圆上等间隔分布的点与圆心之间的连接线：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Circle3.gif" alt="Circle3" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Circle3.gif?raw=true" alt="Circle3" style="zoom:50%;" />
 
 ```matlab
 % Plot circle function (x-3)^2+(y-4)^2 = 5^2, 
@@ -172,7 +172,7 @@ end
 
 这时所绘制动图中的垂直连接线就与其他连接线一样顺滑：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/Circle4.gif" alt="Circle4" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/Circle4.gif?raw=true" alt="Circle4" style="zoom:50%;" />
 
 完整代码如下：
 

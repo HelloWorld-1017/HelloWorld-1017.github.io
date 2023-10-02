@@ -22,11 +22,11 @@ Stru2.Value = 1.7;
 
 
 
-![image-20220809124625224](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809124625224.png)
+![image-20220809124625224](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809124625224.png?raw=true)
 
 想要通过循环的形式实现——将结构体的 Type 值作为变量名，并将结构体的 Value 值作为该变量的值，例如：
 
-![image-20220809125024864](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20220809125024864.png)
+![image-20220809125024864](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220809125024864.png?raw=true)
 
 可以借助 `eval` 函数实现：
 

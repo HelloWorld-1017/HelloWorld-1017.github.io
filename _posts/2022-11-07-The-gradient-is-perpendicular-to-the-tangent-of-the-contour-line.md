@@ -114,7 +114,7 @@ quiver(x(1:interval:end), y(1:interval:end), ...
     py(1:interval:end, 1:interval:end), 'k', "filled")
 ```
 
-![image-20221107103323888](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221107103323888.png)
+![image-20221107103323888](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221107103323888.png?raw=true)
 
 ```matlab
 clc, clear, close all
@@ -149,7 +149,7 @@ quiver(x(1:interval:end), y(1:interval:end), ...
     py(1:interval:end, 1:interval:end), 'k', "filled")
 ```
 
-![image-20221107103451317](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221107103451317.png)
+![image-20221107103451317](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221107103451317.png?raw=true)
 
 从上面的例子我们还可以很清楚地看出一点：等高线的切线或者法线的斜率是没有方向的，而梯度是有方向的。因此说“**梯度的方向与等高线切线垂直**”是合理的，但是说“**梯度的方向与等高线法线方向相同**”是欠妥的，准确地讲，梯度和法线是在同一条直线上的。
 

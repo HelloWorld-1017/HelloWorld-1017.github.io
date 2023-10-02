@@ -28,7 +28,7 @@ end
 
 当在GUI中修改`uidropdown`的选项时，会调用回调函数`callback_uidropdown`：
 
-![image-20230525134555824](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230525134555824.png)
+![image-20230525134555824](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230525134555824.png?raw=true)
 
 使用代码修改`uidropdown`的值也可以修改GUI中的显示，**但是不会调用回调函数**：
 
@@ -36,13 +36,13 @@ end
 set(dropdown,"Value","Option 1");
 ```
 
-![image-20230525134738926](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230525134738926.png)
+![image-20230525134738926](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230525134738926.png?raw=true)
 
 ```matlab
 dropdown.Value = "Option 3";
 ```
 
-![](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230525134935087.png)
+![](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230525134935087.png?raw=true)
 
 <br>
 

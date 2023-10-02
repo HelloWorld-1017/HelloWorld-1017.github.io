@@ -155,11 +155,11 @@ in-line图像通常会和正文紧密连接在一起：
 >
 > A simple way of summing up this information is the following table:
 >
-> ![image-20221121094408205](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121094408205.png)
+> ![image-20221121094408205](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121094408205.png?raw=true)
 >
 > What the lecturer did was to visualize the data using a 3D bar diagram. It looked like this (except that in reality the numbers where typeset using some extremely low-resolution bitmap font and were near-unreadable):
 >
-> ![image-20221121094459560](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121094459560.png)
+> ![image-20221121094459560](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121094459560.png?raw=true)
 >
 > Both the table and the “plot” have about the same size. If your first thought is “the graphic looks nicer than the table”, try to answer the following questions based on the information in the table or in the graphic:
 >
@@ -193,7 +193,7 @@ in-line图像通常会和正文紧密连接在一起：
 
 > You might argue that in the example the exact numbers are not important for the graphic. The important things is the “message”, which is that there are more “very good” and “good” ratings than “bad” and “very bad”. However, to convey this message either use a sentence that says so or use a graphic that conveys this message more clearly:
 >
-> ![image-20221121095657936](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121095657936.png)
+> ![image-20221121095657936](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121095657936.png?raw=true)
 >
 > The above graphic has about the same information density as the table (about the same size and the same numbers are shown). In addition, one can directly “see” that there are more good or very good ratings than bad ones. One can also “see” that the number of people who gave no rating at all is not negligible, which is quite common for feedback forms.
 
@@ -201,7 +201,7 @@ in-line图像通常会和正文紧密连接在一起：
 
 > Charts are not always a good idea. Let us look at an example that I redrew from a pie chart in Die Zeit, June 4th, 2005:
 >
-> ![image-20221121095924698](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121095924698.png)
+> ![image-20221121095924698](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121095924698.png?raw=true)
 >
 > At first sight, the graphic looks “nice and informative”, but there are a lot of things that went wrong:
 >
@@ -249,7 +249,7 @@ Edward Tufte称类似这样的图像为"chart junk"(图表垃圾)。我们同样
 >
 > - **Strong contrasts will always be registered first by the eye.** For example, consider the following two grids:
 >
-> ![image-20221121101943056](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221121101943056.png)
+> ![image-20221121101943056](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221121101943056.png?raw=true)
 >
 > Even though the left grid comes first in English reading order, the right one is much more likely to be seen first: The white-to-black contrast is higher than the gray-to-white contrast. In addition, there are more “places” adding to the overall contrast in the right grid. Things like grids and, more generally, help lines usually should not grab the attention of the readers and, hence, should be typeset with a low contrast to the background. **Also, a loosely-spaced grid is less distracting than a very closely-spaced grid.**
 >

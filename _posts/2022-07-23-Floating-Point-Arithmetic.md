@@ -148,7 +148,7 @@ $$
 
 IEEE浮点标准所定义的浮点数字主要包含三个部分，分别是：符号（$+$ 或者 $-$）、尾数和指数。浮点数有三种常用的精度级别：单精度、双精度和扩展精度（也称为长双精度）。这三种精度都可以用**标准化**的IEEE浮点数表示为：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220721235015059.png" alt="image-20220721235015059" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220721235015059.png?raw=true" alt="image-20220721235015059" style="zoom:50%;" />
 
 其中，**标准化**意味着，主导数位（最左边的一位）必须是1。
 
@@ -315,7 +315,7 @@ $$
 \end{align*}
 $$
 
-### 机器精度的意义🤩
+### 机器精度的意义
 
 在 IEEE 机器算数模型中， $fl(x)$ 的相对舍入误差不会比机器精度的一半大，即：
 

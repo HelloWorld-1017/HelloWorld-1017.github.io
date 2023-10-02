@@ -50,7 +50,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 
 `trainingOptions`函数提供了设置神经网络的最大训练轮数的属性`MaxEpochs`：
 
-![image-20230321110115211](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230321110115211.png)
+![image-20230321110115211](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230321110115211.png?raw=true)
 
 其默认值是30。
 
@@ -62,7 +62,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 
 使用`trainNetwork`训练神经网络很方便的一点是我们可以在图形界面监视神经网络的训练过程，监视的指标有：Training accuracy，Smoothed training accuracy，Validation accuracy；Training loss，Smoothed training loss，Validation loss：
 
-![image-20230321111611264](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230321111611264.png)
+![image-20230321111611264](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230321111611264.png?raw=true)
 
 训练集的准确率和误差是始终可以监视的，但是如果我们想要使用验证集同时验证网络的性能，则需要在`trainingOptions`函数中指定验证集（`ValidationData`属性）以及验证频率的设置（`ValidationFrequency`属性）。例如：
 
@@ -79,7 +79,7 @@ options = trainingOptions("sgdm", ...
 
 如果想要automatic validation stopping，则需要指定`trianingOptions`的`ValidatationPatience`属性：
 
-![image-20230321112353362](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230321112353362.png)
+![image-20230321112353362](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230321112353362.png?raw=true)
 
 该属性指定为一个正整数或者是默认的`Inf`. 
 
@@ -87,13 +87,13 @@ options = trainingOptions("sgdm", ...
 
 > 这里需要强调的是另一个属性`ValidationFrequency`，这个属性指定了验证集验证的频率：
 >
-> ![image-20230321125922866](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230321125922866.png)
+> ![image-20230321125922866](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230321125922866.png?raw=true)
 >
 > `ValidationFrequency`指定为一个正整数，默认值是50。需要注意的是，这一属性的单位是iteration（并非epochs），即每训练50 iterations就使用验证集验证一次。
 
 当神经网络停止训练后，输出的神经网络也有两个选择。一是输出具有最小验证集误差的那个神经网络，二是输出停止时最后一次训练的神经网络。我们可以通过`OutputNetwork`属性进行设置：
 
-![image-20230321130544695](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230321130544695.png)
+![image-20230321130544695](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230321130544695.png?raw=true)
 
 <br>
 
@@ -101,7 +101,7 @@ options = trainingOptions("sgdm", ...
 
 `trainingOptions`函数还有另外一个输入参数`OutputFcn`，该输入参数接受一个函数句柄（function handle）或者函数句柄的元组数组（cell array of function handles）：
 
-![image-20230321131608733](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230321131608733.png)
+![image-20230321131608733](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230321131608733.png?raw=true)
 
 MATLAB提供了基于`OutputFcn`属性早停的示例：[Customize Output During Deep Learning Network Training - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/customize-output-during-deep-learning-training.html)，相关的代码为：
 

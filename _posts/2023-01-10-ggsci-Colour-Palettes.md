@@ -16,7 +16,7 @@ tags:
 
 > 官方网站：[Scientific Journal and Sci-Fi ThemedColor Palettes for ggplot2 - ggsci](https://nanx.me/ggsci/articles/ggsci.html)
 >
-> Github仓库：[nanxstats/ggsci: 🦄 Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci)
+> Github仓库：[nanxstats/ggsci:  Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci)
 
 官网中给出了获取palette中色彩RGB值的方式，在安装了R语言和RStudio后，输入指定的代码即可。
 
@@ -53,7 +53,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107180738968](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107180738968.png)
+![image-20230107180738968](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107180738968.png?raw=true)
 
 虽然我之前没有接触过R语言，R语言及其IDE都是刚刚安装的，但是上面这部分代码还是比较好理解的。主要介绍一下代码：
 
@@ -67,7 +67,7 @@ mypal <- pal_npg("nrc", alpha = 1)(10)
 
 （2）`"nrc"`，这个属性指定了palette type，不同的palette的type选项是不同的，对于NPG而言，只有`"nrc"`这一个选项。具体的type属性可以在官方网站[ggsci](https://nanx.me/ggsci/articles/ggsci.html)中查看
 
-![image-20230110135137608](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110135137608.png)
+![image-20230110135137608](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110135137608.png?raw=true)
 
 （3）`alpha`参数取值范围为$(0,1]$，`alpha = 1`表示颜色的透明度为opaque，即不透明。上面我们得到的颜色一共有十六进制数，前六位对应RGB tuple，后两位就对应着透明度。如果我们将透明度设置为0.6，则有：
 
@@ -81,7 +81,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230110145226108](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110145226108.png)
+![image-20230110145226108](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110145226108.png?raw=true)
 
 我们也很容易推出，颜色透明度的调节也是离散的，间隔为$1/255$。**在下文中，我们均只展示opaque的颜色**。
 
@@ -133,7 +133,7 @@ mypal =
     0.6902    0.6118    0.5216
 ```
 
-![image-20230108111241527](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230108111241527.png)
+![image-20230108111241527](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230108111241527.png?raw=true)
 
 本部分的讨论适用于下文所有的palette，完全一致。
 
@@ -154,7 +154,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107180916214](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107180916214.png)
+![image-20230107180916214](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107180916214.png?raw=true)
 
 ```matlab
 mypal =
@@ -170,7 +170,7 @@ mypal =
     0.1059    0.0980    0.0980
 ```
 
-![image-20230110151759410](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110151759410.png)
+![image-20230110151759410](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110151759410.png?raw=true)
 
 <br>
 
@@ -189,7 +189,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107181053174](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107181053174.png)
+![image-20230107181053174](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181053174.png?raw=true)
 
 ```matlab
 mypal =
@@ -203,7 +203,7 @@ mypal =
     0.9333    0.2980    0.5922
 ```
 
-![image-20230110152021105](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110152021105.png)
+![image-20230110152021105](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110152021105.png?raw=true)
 
 <br>
 
@@ -222,7 +222,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107181307592](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107181307592.png)
+![image-20230107181307592](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181307592.png?raw=true)
 
 ```matlab
 mypal =
@@ -237,7 +237,7 @@ mypal =
     0.1059    0.0980    0.0980
 ```
 
-![image-20230108110610029](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230108110610029.png)
+![image-20230108110610029](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230108110610029.png?raw=true)
 
 # JAMA (The Journal of the American Medical Association)
 
@@ -254,7 +254,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107181635587](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107181635587.png)
+![image-20230107181635587](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181635587.png?raw=true)
 
 ```matlab
 mypal =
@@ -267,7 +267,7 @@ mypal =
     0.5020    0.4745    0.4196
 ```
 
-![image-20230108110315852](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230108110315852.png)
+![image-20230108110315852](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230108110315852.png?raw=true)
 
 <br>
 
@@ -286,7 +286,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107181737598](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107181737598.png)
+![image-20230107181737598](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181737598.png?raw=true)
 
 ```matlab
 mypal =
@@ -302,7 +302,7 @@ mypal =
     0.2902    0.4118    0.5647
 ```
 
-![image-20230110152417412](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110152417412.png)
+![image-20230110152417412](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110152417412.png?raw=true)
 
 <br>
 
@@ -323,7 +323,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107181932500](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107181932500.png)
+![image-20230107181932500](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181932500.png?raw=true)
 
 ```matlab
 mypal =
@@ -355,7 +355,7 @@ mypal =
     0.8000    0.8000    0.6000
 ```
 
-![image-20230110153321481](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110153321481.png)
+![image-20230110153321481](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110153321481.png?raw=true)
 
 <br>
 
@@ -376,7 +376,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107182033100](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107182033100.png)
+![image-20230107182033100](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182033100.png?raw=true)
 
 ```matlab
 mypal =
@@ -392,7 +392,7 @@ mypal =
     0.0902    0.7451    0.8118
 ```
 
-![image-20230110153537200](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110153537200.png)
+![image-20230110153537200](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110153537200.png?raw=true)
 
 ## `category20`
 
@@ -408,7 +408,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107182230369](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107182230369.png)
+![image-20230107182230369](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182230369.png?raw=true)
 
 ```matlab
 mypal =
@@ -434,7 +434,7 @@ mypal =
     0.6196    0.8549    0.8980
 ```
 
-![image-20230110153724238](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110153724238.png)
+![image-20230110153724238](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110153724238.png?raw=true)
 
 ## `category20b`
 
@@ -450,7 +450,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107182319305](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107182319305.png)
+![image-20230107182319305](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182319305.png?raw=true)
 
 ```matlab
 mypal =
@@ -476,7 +476,7 @@ mypal =
     0.8706    0.6196    0.8392
 ```
 
-![image-20230110154116265](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110154116265.png)
+![image-20230110154116265](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110154116265.png?raw=true)
 
 ## `category20c`
 
@@ -492,7 +492,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107182402054](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107182402054.png)
+![image-20230107182402054](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182402054.png?raw=true)
 
 ```matlab
 mypal =
@@ -518,7 +518,7 @@ mypal =
     0.8510    0.8510    0.8510
 ```
 
-![image-20230110154327190](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110154327190.png)
+![image-20230110154327190](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110154327190.png?raw=true)
 
 <br>
 
@@ -540,7 +540,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107182638917](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107182638917.png)
+![image-20230107182638917](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182638917.png?raw=true)
 
 ```matlab
 mypal =
@@ -553,7 +553,7 @@ mypal =
     0.7216    0.7216    0.7216
 ```
 
-![image-20230110154518836](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110154518836.png)
+![image-20230110154518836](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110154518836.png?raw=true)
 
 <br>
 
@@ -582,7 +582,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107182814332](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107182814332.png)
+![image-20230107182814332](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182814332.png?raw=true)
 
 ```matlab
 mypal =
@@ -640,7 +640,7 @@ mypal =
     0.0784    1.0000    0.6941
 ```
 
-![image-20230110154732528](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110154732528.png)
+![image-20230110154732528](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110154732528.png?raw=true)
 
 ## `alternating`
 
@@ -655,7 +655,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107183033024](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107183033024.png)
+![image-20230107183033024](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183033024.png?raw=true)
 
 ```matlab
 mypal =
@@ -663,7 +663,7 @@ mypal =
     1.0000    0.7255         0
 ```
 
-![image-20230110154851215](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110154851215.png)
+![image-20230110154851215](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110154851215.png?raw=true)
 
 <br>
 
@@ -684,7 +684,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107183425569](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107183425569.png)
+![image-20230107183425569](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183425569.png?raw=true)
 
 ```matlab
 mypal =
@@ -700,7 +700,7 @@ mypal =
     0.2078    0.0549    0.1255
 ```
 
-![image-20230110155118300](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110155118300.png)
+![image-20230110155118300](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110155118300.png?raw=true)
 
 ## `light`
 
@@ -715,7 +715,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107183513730](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107183513730.png)
+![image-20230107183513730](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183513730.png?raw=true)
 
 ```matlab
 mypal =
@@ -730,7 +730,7 @@ mypal =
     0.4471    0.3373    0.3882
 ```
 
-![image-20230110155313662](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110155313662.png)
+![image-20230110155313662](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110155313662.png?raw=true)
 
 ## `dark`
 
@@ -745,7 +745,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107183606275](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107183606275.png)
+![image-20230107183606275](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183606275.png?raw=true)
 
 ```matlab
 mypal =
@@ -760,7 +760,7 @@ mypal =
     0.2078    0.0549    0.1255
 ```
 
-![image-20230110155445325](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110155445325.png)
+![image-20230110155445325](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110155445325.png?raw=true)
 
 <br>
 
@@ -779,7 +779,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107183719487](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107183719487.png)
+![image-20230107183719487](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183719487.png?raw=true)
 
 ```matlab
 mypal =
@@ -793,7 +793,7 @@ mypal =
          0    0.6863    0.4000
 ```
 
-![image-20230110155730766](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110155730766.png)
+![image-20230110155730766](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110155730766.png?raw=true)
 
 <br>
 
@@ -812,7 +812,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107183834191](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107183834191.png)
+![image-20230107183834191](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183834191.png?raw=true)
 
 ```matlab
 mypal =
@@ -825,7 +825,7 @@ mypal =
     0.4549    0.5412    0.6510
 ```
 
-![image-20230110164655319](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110164655319.png)
+![image-20230110164655319](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110164655319.png?raw=true)
 
 <br>
 
@@ -845,7 +845,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107184811680](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107184811680.png)
+![image-20230107184811680](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107184811680.png?raw=true)
 
 ```matlab
 mypal =
@@ -863,7 +863,7 @@ mypal =
     0.2471    0.2510    0.2549
 ```
 
-![image-20230110164836276](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110164836276.png)
+![image-20230110164836276](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110164836276.png?raw=true)
 
 
 
@@ -885,7 +885,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107184919859](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107184919859.png)
+![image-20230107184919859](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107184919859.png?raw=true)
 
 ```matlab
 mypal =
@@ -903,7 +903,7 @@ mypal =
     0.4118    0.7843    0.9255
 ```
 
-![image-20230110165201487](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110165201487.png)
+![image-20230110165201487](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110165201487.png?raw=true)
 
 <br>
 
@@ -923,7 +923,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185041128](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185041128.png)
+![image-20230107185041128](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185041128.png?raw=true)
 
 ```matlab
 mypal =
@@ -945,7 +945,7 @@ mypal =
     0.9922    0.5490    0.7569
 ```
 
-![image-20230110165325547](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110165325547.png)
+![image-20230110165325547](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110165325547.png?raw=true)
 
 <br>
 
@@ -965,7 +965,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185159554](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185159554.png)
+![image-20230107185159554](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185159554.png?raw=true)
 
 ```matlab
 mypal =
@@ -983,7 +983,7 @@ mypal =
     0.8392    0.0471         0
 ```
 
-![image-20230110165447161](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110165447161.png)
+![image-20230110165447161](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110165447161.png?raw=true)
 
 <br>
 
@@ -1008,7 +1008,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185312320](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185312320.png)
+![image-20230107185312320](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185312320.png?raw=true)
 
 ```matlab
 mypal =
@@ -1024,7 +1024,7 @@ mypal =
     0.7176    0.1059    0.1059
 ```
 
-![image-20230110165639600](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110165639600.png)
+![image-20230110165639600](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110165639600.png?raw=true)
 
 ## (2) `pink`
 
@@ -1039,7 +1039,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185408241](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185408241.png)
+![image-20230107185408241](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185408241.png?raw=true)
 
 ```matlab
 mypal =
@@ -1055,7 +1055,7 @@ mypal =
     0.5294    0.0510    0.3059
 ```
 
-![image-20230110165812946](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110165812946.png)
+![image-20230110165812946](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110165812946.png?raw=true)
 
 ## (3) `purple`
 
@@ -1070,7 +1070,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185504824](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185504824.png)
+![image-20230107185504824](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185504824.png?raw=true)
 
 ```matlab
 mypal =
@@ -1086,7 +1086,7 @@ mypal =
     0.2902    0.0745    0.5490
 ```
 
-![image-20230110165937697](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110165937697.png)
+![image-20230110165937697](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110165937697.png?raw=true)
 
 ## (4) `deep-purple`
 
@@ -1101,7 +1101,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185558420](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185558420.png)
+![image-20230107185558420](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185558420.png?raw=true)
 
 ```matlab
 mypal =
@@ -1117,7 +1117,7 @@ mypal =
     0.1922    0.1020    0.5725
 ```
 
-![image-20230110215229976](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110215229976.png)
+![image-20230110215229976](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110215229976.png?raw=true)
 
 ## (5) `indigo`
 
@@ -1132,7 +1132,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185650465](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185650465.png)
+![image-20230107185650465](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185650465.png?raw=true)
 
 ```matlab
 mypal =
@@ -1148,7 +1148,7 @@ mypal =
     0.0980    0.1333    0.4941
 ```
 
-![image-20230110215350884](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110215350884.png)
+![image-20230110215350884](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110215350884.png?raw=true)
 
 ## (6) `blue`
 
@@ -1163,7 +1163,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185755776](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185755776.png)
+![image-20230107185755776](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185755776.png?raw=true)
 
 ```matlab
 mypal =
@@ -1179,7 +1179,7 @@ mypal =
     0.0471    0.2745    0.6275
 ```
 
-![image-20230110215502225](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110215502225.png)
+![image-20230110215502225](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110215502225.png?raw=true)
 
 ## (7) `light-blue`
 
@@ -1194,7 +1194,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185835704](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185835704.png)
+![image-20230107185835704](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185835704.png?raw=true)
 
 ```matlab
 mypal =
@@ -1210,7 +1210,7 @@ mypal =
          0    0.3412    0.6039
 ```
 
-![image-20230110215635252](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110215635252.png)
+![image-20230110215635252](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110215635252.png?raw=true)
 
 ## (8) `cyan`
 
@@ -1225,7 +1225,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107185918621](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107185918621.png)
+![image-20230107185918621](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185918621.png?raw=true)
 
 ```matlab
 mypal =
@@ -1241,7 +1241,7 @@ mypal =
          0    0.3725    0.3922
 ```
 
-![image-20230110215739554](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110215739554.png)
+![image-20230110215739554](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110215739554.png?raw=true)
 
 ## (9) `teal`
 
@@ -1256,7 +1256,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190002436](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190002436.png)
+![image-20230107190002436](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190002436.png?raw=true)
 
 ```matlab
 mypal =
@@ -1272,7 +1272,7 @@ mypal =
          0    0.2980    0.2471
 ```
 
-![image-20230110215956190](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110215956190.png)
+![image-20230110215956190](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110215956190.png?raw=true)
 
 ## (10) `green`
 
@@ -1287,7 +1287,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190053988](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190053988.png)
+![image-20230107190053988](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190053988.png?raw=true)
 
 ```matlab
 mypal =
@@ -1303,7 +1303,7 @@ mypal =
     0.1020    0.3686    0.1216
 ```
 
-![image-20230110220210602](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220210602.png)
+![image-20230110220210602](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220210602.png?raw=true)
 
 ## (11) `light-green`
 
@@ -1318,7 +1318,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190141869](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190141869.png)
+![image-20230107190141869](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190141869.png?raw=true)
 
 ```matlab
 mypal =
@@ -1334,7 +1334,7 @@ mypal =
     0.2000    0.4078    0.1176
 ```
 
-![image-20230110220112586](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220112586.png)
+![image-20230110220112586](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220112586.png?raw=true)
 
 ## (12) `lime`
 
@@ -1349,7 +1349,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190223020](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190223020.png)
+![image-20230107190223020](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190223020.png?raw=true)
 
 ```matlab
 mypal =
@@ -1365,7 +1365,7 @@ mypal =
     0.5059    0.4667    0.0902
 ```
 
-![image-20230110220327314](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220327314.png)
+![image-20230110220327314](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220327314.png?raw=true)
 
 ## (13) `yellow`
 
@@ -1380,7 +1380,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107193509183](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107193509183.png)
+![image-20230107193509183](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107193509183.png?raw=true)
 
 ```matlab
 mypal =
@@ -1396,7 +1396,7 @@ mypal =
     0.9569    0.4980    0.0902
 ```
 
-![image-20230110220446616](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220446616.png)
+![image-20230110220446616](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220446616.png?raw=true)
 
 ## (14) `amber`
 
@@ -1411,7 +1411,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190428547](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190428547.png)
+![image-20230107190428547](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190428547.png?raw=true)
 
 ```matlab
 mypal =
@@ -1427,7 +1427,7 @@ mypal =
     1.0000    0.4314         0
 ```
 
-![image-20230110220659860](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220659860.png)
+![image-20230110220659860](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220659860.png?raw=true)
 
 ## (15) `orange`
 
@@ -1442,7 +1442,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190537393](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190537393.png)
+![image-20230107190537393](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190537393.png?raw=true)
 
 ```matlab
 mypal =
@@ -1458,7 +1458,7 @@ mypal =
     0.8980    0.3176         0
 ```
 
-![image-20230110220758735](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220758735.png)
+![image-20230110220758735](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220758735.png?raw=true)
 
 ## (16) `deep-orange`
 
@@ -1473,7 +1473,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190619158](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190619158.png)
+![image-20230107190619158](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190619158.png?raw=true)
 
 ```matlab
 mypal =
@@ -1489,7 +1489,7 @@ mypal =
     0.7490    0.2078    0.0471
 ```
 
-![image-20230110220911294](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110220911294.png)
+![image-20230110220911294](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110220911294.png?raw=true)
 
 ## (17) `brown`
 
@@ -1504,7 +1504,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190723867](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190723867.png)
+![image-20230107190723867](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190723867.png?raw=true)
 
 ```matlab
 mypal =
@@ -1520,7 +1520,7 @@ mypal =
     0.2431    0.1490    0.1333
 ```
 
-![image-20230110221004239](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110221004239.png)
+![image-20230110221004239](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110221004239.png?raw=true)
 
 ## (18) `grey`
 
@@ -1535,7 +1535,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190832170](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190832170.png)
+![image-20230107190832170](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190832170.png?raw=true)
 
 ```matlab
 mypal =
@@ -1551,7 +1551,7 @@ mypal =
     0.1255    0.1255    0.1255
 ```
 
-![image-20230110221113463](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110221113463.png)
+![image-20230110221113463](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110221113463.png?raw=true)
 
 ## (19) `blue-grey`
 
@@ -1566,7 +1566,7 @@ library("scales")
 show_col(mypal)
 ```
 
-![image-20230107190920083](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230107190920083.png)
+![image-20230107190920083](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190920083.png?raw=true)
 
 ```matlab
 mypal =
@@ -1582,6 +1582,6 @@ mypal =
     0.1490    0.1961    0.2196
 ```
 
-![image-20230110221222634](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230110221222634.png)
+![image-20230110221222634](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110221222634.png?raw=true)
 
 <br>

@@ -62,7 +62,7 @@ gradientsD = dlgradient(lossD, dlnetD.Learnables);
 end
 ```
 
-![image-20221008182247312](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008182247312.png)
+![image-20221008182247312](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008182247312.png?raw=true)
 
 正如在[Train Generative Adversarial Network(GAN) in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Generative-Adversarial-Network-in-MATLAB/)所述，对于Discriminator而言，希望最大化`dlYpred`和`-dlPredGenerated`，$\tilde{Y}-Y$所对应的的损失函数`mean(dlYPredGenerated-dlPred)`能够做到这一点，并且避免了使用negative log likelihood function，防止了损失函数值关于Discriminator learnable parameters偏导数不连续的情况，这个损失函数就是Wasserstein损失函数。
 
@@ -90,7 +90,7 @@ gradientsG = dlgradient(lossG, dlnetG.Learnables);
 end
 ```
 
-![image-20221008182831155](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008182831155.png)
+![image-20221008182831155](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008182831155.png?raw=true)
 
 同样地，我们在[Train Generative Adversarial Network(GAN) in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Generative-Adversarial-Network-in-MATLAB/)中提到过，对于Generator而言，希望最大化`dlYPredGenerated`，损失函数`-mean(dlYPredGenerated)`可以做到这一点，并且避免了使用negative log likelihood function，也是WGAN的思想。
 
@@ -152,7 +152,7 @@ end
 
 使用NVIDA GeForce RTX 3060 Ti GPU 训练了2h47min，得到最终的结果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic1.png" alt="pic1" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic1.png?raw=true" alt="pic1" style="zoom:80%;" />
 
 注意：这里的迭代曲线展示的是Discriminator的总的损失值`lossD`和不带有正则项的损失值的迭代曲线。而[Train Generative Adversarial Network(GAN) in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Generative-Adversarial-Network-in-MATLAB/)中的迭代曲线展示的是Generator和Discriminator的scores的迭代曲线，这一点还是有细微差别的。
 {: .notice--warning}
@@ -181,7 +181,7 @@ axis off
 title("Generated Images")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/pic2.png" alt="pic2" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic2.png?raw=true" alt="pic2" style="zoom:80%;" />
 
 可以看到，本示例的WGAN-GP模型的训练时间比[Train Generative Adversarial Network(GAN) in MATLAB](http://whatastarrynight.com/programming/machine%20learning/Train-Generative-Adversarial-Network-in-MATLAB/)中GAN的训练时间1h33min长了很多，而生成图像的效果并没有改善太多。WGAN-GP作为一种GAN的改进，在一些场景下可能会好很多，但这并不是绝对的，还需要根据具体场景进行尝试。
 

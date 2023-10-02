@@ -105,11 +105,11 @@ ans =
 
 最近我在尝试计算某一个大数下素数的个数，其中涉及到使用MATLAB的`isprime`函数来判断某个数是否是素数 [6]。`isprime`函数首先会将输入展开成一个列向量：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428170321052.png" alt="image-20230428170321052" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428170321052.png?raw=true" alt="image-20230428170321052" style="zoom:50%;" />
 
 为了测试使用行向量和列向量的区别，我将`isprime`函数复制了一份，并将这一语句修改为`X=X(:)'`，其余部分不变，定义为一个新的函数`helperIsprime`：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230428170545901.png" alt="image-20230428170545901" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230428170545901.png?raw=true" alt="image-20230428170545901" style="zoom:50%;" />
 
 注：这里的`herlperIsprimes`函数并没有进行博客 [6] 中提到的优化。
 {: .notice--warning}

@@ -44,7 +44,7 @@ gmm = fitgmdist(features, 3);
 
 程序停止在了：
 
-![image-20221122144455066](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221122144455066.png)
+![image-20221122144455066](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221122144455066.png?raw=true)
 
 说明当样本的数量小于特征的数量时，无法使用`fitgmdist`，并且在判断输入参数的时候就已经报错了，不会执行运算。`fitgmdist`是基于EM算法进行迭代的，但是理论上EM算法并没有这样的前提，这是MATLAB在代码实现时所添加的限制。
 
@@ -80,7 +80,7 @@ Error in script2 (line 9)
 d2_mahal = mahal(Y, Samples);
 ```
 
-![image-20221122150530999](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221122150530999.png)
+![image-20221122150530999](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221122150530999.png?raw=true)
 
 提示用于表示样本分布$Q$的样本点$X$，样本的数量必须超过维度的数量，这和上面`fitgmdist`函数遇到的报错是类似的。但显然，在理论上也并没有这样的规定。
 
@@ -276,7 +276,7 @@ $$
 
 打开MATLAB`mvnrnd`函数的源代码：
 
-![image-20221122164728343](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221122164728343.png)
+![image-20221122164728343](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221122164728343.png?raw=true)
 
 可以看到，编写该函数的时候已经考虑到了特征"can have perfect correlation"的情况，因而使用了Cholesky因子分解的方式将SCM分解，之后对`randn`生成的随机数进行计算等操作，从而避免了对SCM求逆的操作，是一个很好的trick。
 

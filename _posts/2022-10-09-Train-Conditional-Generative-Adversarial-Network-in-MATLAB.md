@@ -32,7 +32,7 @@ imds = imageDatastore(datasetFolder,IncludeSubfolders=true,LabelSource="folderna
 
 表示将`flower_photos`文件夹下的子文件夹名作为图片的标签。此时，`imds`变量新增了一个`Labels`属性：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008134917873.png" alt="image-20221008134917873" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008134917873.png?raw=true" alt="image-20221008134917873" style="zoom:80%;" />
 
 我们可以查看一下分类：
 
@@ -58,16 +58,16 @@ numClasses =
 
 
 <figure>
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008133932054.png" alt="image-20221008133932054" style="zoom: 80%;" />
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008134014138.png" alt="image-20221008134014138" style="zoom:80%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008133932054.png?raw=true" alt="image-20221008133932054" style="zoom: 80%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008134014138.png?raw=true" alt="image-20221008134014138" style="zoom:80%;" />
     <figcation>(a)The structure of GAN; (b)The structure of CGAN.</figcation>
 </figure>
 
 上面一组图展示了GAN和CGAN结构之间的差异，可以看到，在CGAN中，图片的Labels需要输入到Generator和Discriminator中。因此，CGAN的Generator和Discriminator的结构也需要更改为下面的样子：
 
 <figure>
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008135334707.png" alt="image-20221008135334707" style="zoom:80%;" />
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008135422776.png" alt="image-20221008135422776" style="zoom:80%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008135334707.png?raw=true" alt="image-20221008135334707" style="zoom:80%;" />
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008135422776.png?raw=true" alt="image-20221008135422776" style="zoom:80%;" />
     <figcaption>(a)The structure of Generator of CGAN;(b)The stucture of Discriminator of CGAN.</figcaption>
 </figure>
 
@@ -77,11 +77,11 @@ numClasses =
 
 CGAN的Generator网络结构如下图所示：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008135334707.png" alt="image-20221008135334707" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008135334707.png?raw=true" alt="image-20221008135334707" style="zoom:80%;" />
 
 和GAN的差异就在前面一部分：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008140148586.png" alt="image-20221008140148586" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008140148586.png?raw=true" alt="image-20221008140148586" style="zoom:80%;" />
 
 它的结构定义为：
 
@@ -133,7 +133,7 @@ netG = dlnetwork(lgraphGenerator)
 plot(lgraphGenerator)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008142317431.png" alt="image-20221008142317431" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008142317431.png?raw=true" alt="image-20221008142317431" style="zoom: 80%;" />
 
 其中，比较陌生的层是`feature2image`层、`concatenationLayer`层和`embeddingLayer`层。
 
@@ -248,7 +248,7 @@ end
 
 同样地，CGAN和GAN的Discriminator之间的差异仍体现在前面一部分：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008144604573.png" alt="image-20221008144604573" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008144604573.png?raw=true" alt="image-20221008144604573" style="zoom:80%;" />
 
 其结构定义：
 
@@ -305,7 +305,7 @@ netD = dlnetwork(lgraphDiscriminator)
 plot(lgraphDiscriminator)
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008144924079.png" alt="image-20221008144924079" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008144924079.png?raw=true" alt="image-20221008144924079" style="zoom:80%;" />
 
 ## Difference 3: Calculate losses and scores
 
@@ -356,15 +356,15 @@ end
 
 CGAN的Generator和Discriminator网络的losses和scores计算路径示意图如下图所示：
 
-![image-20221008154036959](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008154036959.png)
+![image-20221008154036959](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008154036959.png?raw=true)
 
-![image-20221008154014613](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008154014613.png)
+![image-20221008154014613](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008154014613.png?raw=true)
 
 与GAN相比：
 
-![image-20221008153243800](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008153243800.png)
+![image-20221008153243800](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008153243800.png?raw=true)
 
-![image-20221008153217280](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20221008153217280.png)
+![image-20221008153217280](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20221008153217280.png?raw=true)
 
 可以看到主要有两点差异：
 
@@ -422,11 +422,11 @@ XGeneratedNew = predict(netG,ZNew,TNew);
 
 使用NVIDA GeForce RTX 3060 Ti GPU 花费1h45min训练了500轮，得到最终的结果：
 
-![image-20221008231021799](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008231021799.png)
+![image-20221008231021799](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008231021799.png?raw=true)
 
 查看训练好的生成器生成daisy花图像的效果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008231146582.png" alt="image-20221008231146582" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008231146582.png?raw=true" alt="image-20221008231146582" style="zoom:80%;" />
 
 最后，保存一下模型：
 
@@ -473,7 +473,7 @@ imshow(I)
 title("Class: daisy")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20221008231718465.png" alt="image-20221008231718465" style="zoom: 80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221008231718465.png?raw=true" alt="image-20221008231718465" style="zoom: 80%;" />
 
 <br>
 

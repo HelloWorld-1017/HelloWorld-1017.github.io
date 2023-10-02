@@ -154,13 +154,13 @@ train_loader = DataLoader(dataset=dataset,
 
 （4）上面的代码设置了`DataLoader`的`num_workers=2`，表示在读取Mini-batch时采用两个并行的线程。但是，在Windows平台下（PyTorch版本为0.4），如果直接使用dataLoader进行训练，会出现报错：
 
-![image-20230410152956600](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230410152956600.png)
+![image-20230410152956600](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230410152956600.png?raw=true)
 
-![image-20230410152537722](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230410152537722.png)
+![image-20230410152537722](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230410152537722.png?raw=true)
 
 报错的原因是：在Linux和Windows平台下，实现多线程的库是不一样的。在Linux下调用多线程使用的`fork`，而Windows下采用的是`spawn`（这两个都是操作系统内核的C语言接口），它们处理多线程的方式不太一样。要解决这样的问题，我们需要将使用`dataLoader`迭代的代码封装起来，封装到`if`语句中或者是封装在函数中，但是不能定格写在程序中。
 
-![image-20230410153115733](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230410153115733.png)
+![image-20230410153115733](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230410153115733.png?raw=true)
 
 但是在实际使用的时候，发现使用采用多线程的方式会明显降低训练速度，可能因为是CPU性能比较低。因此在下面的实现中，并没有设置`num_workers`的值。
 
@@ -248,7 +248,7 @@ ax.set_xlabel('Iteration')
 ax.set_ylabel('Loss value')
 ```
 
-![image-20230410191800414](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20230410191800414.png)
+![image-20230410191800414](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230410191800414.png?raw=true)
 
 可以看到这里的效果并不是很理想。
 
@@ -258,7 +258,7 @@ ax.set_ylabel('Loss value')
 
 在`torchvision.datasets`中，内置了很多的benchmark数据集：
 
-![image-20230410163320594](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230410163320594.png)
+![image-20230410163320594](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230410163320594.png?raw=true)
 
 它们都继承自`torch.utils.data.Dataset`，已经对`__getitem__`方法和`__len__`方法进行了定义。因此，在调用的时候就比较简单，不用重新继承`Dataset`类再自定义。例如，对于MNIST：
 

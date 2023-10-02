@@ -35,7 +35,7 @@ tags:
 
 在电脑中找到`ee_solenoid_fem.slx`文件复制到当前文件夹中即可运行、编辑并保存。
 
-![image-20220826145151878](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220826145151878.png)
+![image-20220826145151878](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220826145151878.png?raw=true)
 
 
 
@@ -43,11 +43,11 @@ tags:
 
 在模型的`PreLoadFcn`函数中可以看到：
 
-![image-20220826150005970](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220826150005970.png)
+![image-20220826150005970](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220826150005970.png?raw=true)
 
 模型预加载了一个`ee_solenoid_fem_data.mat`，该文件中包含了模型的运行参数：
 
-![image-20220826163902745](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220826163902745.png)
+![image-20220826163902745](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220826163902745.png?raw=true)
 
 其中：
 
@@ -82,31 +82,31 @@ x0 =
 
 变量`x`，`xmin`，`xmax` 和`x0`都是和位移有关的变量，它们所代表的含义如下图所示：
 
-![image-20220828132634721](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828132634721.png)
+![image-20220828132634721](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828132634721.png?raw=true)
 
 其中，`x0`是设置在模块的`Initial Targets`部分。
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213551308.png" alt="image-20220827213551308" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827213551308.png?raw=true" alt="image-20220827213551308" style="zoom:50%;" />
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827213612440.png" alt="image-20220827213612440" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827213612440.png?raw=true" alt="image-20220827213612440" style="zoom:50%;" />
 
 （3）变量 `flux_linkage`
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826201555904.png" alt="image-20220826201555904" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826201555904.png?raw=true" alt="image-20220826201555904" style="zoom:50%;" />
 
 后面可以看到，FEM-Parameterized Linear Actuator组件有两种使用磁链的方式，当选择直接使用磁链数据时，需要用到该变量。
 
 （4）变量 `dfluxdi`，`dfluxdx`
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200111158.png" alt="image-20220826200111158" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826200111158.png?raw=true" alt="image-20220826200111158" style="zoom:50%;" />
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200450424.png" alt="image-20220826200450424" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826200450424.png?raw=true" alt="image-20220826200450424" style="zoom:50%;" />
 
 同样地，FEM-Parameterized Linear Actuator组件有两种使用磁链的方式，当选择使用磁链对于电流和位移的偏导数时，需要用到这两个变量。
 
 （5）变量`force`
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220826200620400.png" alt="image-20220826200620400" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826200620400.png?raw=true" alt="image-20220826200620400" style="zoom:50%;" />
 
 FEM-Parameterized Linear Actuator组件电磁力的计算方式也有两种，一种是直接使用导入数据，一种是模块自动计算。该模型使用的是第一种，需要用到变量`force`。在后面会再提及这一点，并且在代码文件中会对两种方式得到的Force matirx结果进行对比分析。
 
@@ -154,13 +154,13 @@ dLdx =
 
 该示例中基于FEM仿真数据的电磁铁模型仅仅包含这样一个FEM-Parameterized Linear Actuator组件和一个Spring组件：
 
-![image-20220827151257870](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827151257870.png)
+![image-20220827151257870](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827151257870.png?raw=true)
 
 因此，理解好FEM-Parameterized Linear Actuator组件的运行原理就掌握了这个电磁铁模型。
 
 <figure>
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827111006159.png">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827111019193.png">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827111006159.png?raw=true">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827111019193.png?raw=true">
     <figcaption>The (a) Settings and (b) Description of FEM-parameterized Linear Actuator component.</figcaption>
 </figure>
 该组件的官方介绍文档见：[FEM-Parameterized Linear Actuator](https://ww2.mathworks.cn/help/physmod/sps/ref/femparameterizedlinearactuator.html)。该组件的各个参数都有默认值，但这里用的是`ee_solenoid_fem_data.mat`中的数据。
@@ -183,7 +183,7 @@ dLdx =
 
 当设置为`Define in terms of Phi(i,x)`时，为直接使用磁链数据，特有的子参数为`Flux linkage matrix, Phi(i,x)`：
 
-![image-20220827134608116](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827134608116.png)
+![image-20220827134608116](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827134608116.png?raw=true)
 
 这种方式依据的就是法拉第电磁感应定律：
 
@@ -197,7 +197,7 @@ $$
 
 当设置为`Define in terms of dPhi(i,x)/dx and dPhi(i,x)/di`时，为使用磁链对电流和位移的偏导数，特有的子参数为：`Flux partial derivative wrt current, dPhi(i,x)/di`和`Flux partial wrt displacement, dPhi(i,x)/dx`：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827134802234.png" alt="image-20220827134802234"  />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827134802234.png?raw=true" alt="image-20220827134802234"  />
 
 基于链式求导法则对式$\eqref{eq1}$进行展开：
 
@@ -223,7 +223,7 @@ $$
 
 将`Calculate force matrix`设置为`No`，表示直接使用Force matrix，而不进行计算，这种模式的特有子参数是`Force matrix, F(i,x)`：
 
-![image-20220827142331204](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827142331204.png)
+![image-20220827142331204](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827142331204.png?raw=true)
 
 用户通过向参数`Force matrix, F(i,x)`传入数据将电磁力设置为电流和位移的方程。
 
@@ -237,7 +237,7 @@ $$
 
 将`Calculate force matrix`设置为`Yes`，表示令模块自动计算Force matrix：
 
-![image-20220827142248109](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827142248109.png)
+![image-20220827142248109](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827142248109.png?raw=true)
 
 在模型初始化时，该模式基于模块的磁链信息计算Force matrix，计算方法方式是对$\eqref{eq3}$进行数值积分。
 
@@ -251,7 +251,7 @@ $$
 
 为了对linear motor with a repeated flux pattern进行建模，需要将`Flux dependence on displacement`参数设置为`Cyclic`：
 
-![image-20220827145512726](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827145512726.png)
+![image-20220827145512726](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827145512726.png?raw=true)
 
 当选中了这个选项， the force and flux (or force and flux partial derivatives depending on the option chosen) must have identical first and last columns.
 
@@ -259,7 +259,7 @@ $$
 
 组件`Interpolation method`和`Extrapolation method`分别设置了内插算法和外插算法，用以输出给定点之外（区间内和区间外）的值：
 
-![image-20220827144501646](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827144501646.png)
+![image-20220827144501646](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827144501646.png?raw=true)
 
 另外，如果电磁学模型设置为`Define in terms of Phi(i,x)`，那么模块必须通过磁链数据首先估计`Flux partial derivative wrt displacement, dPhi(i,x)/dx`参数值。在进行估计时，模块首先使用`Interpolation method`所指定的插值方法。通常`Smmoth`选项更加准确，但是`Linear`更加稳定。
 
@@ -267,7 +267,7 @@ $$
 
 组件的`Winding resistance`参数和`Magnetizing resistance`参数分别设置了线圈的电阻和磁阻：
 
-![image-20220827145248204](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827145248204.png)
+![image-20220827145248204](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827145248204.png?raw=true)
 
 `Winding resistance`的默认值是14 ohm，
 
@@ -287,17 +287,17 @@ $$
 
 `Plunger mass`和`Dmaping`参数以及和一个外部的弹簧构成了一个质量-弹簧-阻尼系统：
 
-![image-20220827150036548](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827150036548.png)
+![image-20220827150036548](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827150036548.png?raw=true)
 
-![image-20220827150228828](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827150228828.png)
+![image-20220827150228828](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827150228828.png?raw=true)
 
 `Minimum stroke` 和 `Maximum stroke`参数是铁芯范围，电磁模型中`Displacement vector`参数中传入的位移向量的最小值和最大值：
 
-![image-20220827150426084](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827150426084.png)
+![image-20220827150426084](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827150426084.png?raw=true)
 
 `Contact stiffness`参数和`Contact damping`参数的设置相当于在`Minimum stroke` 和 `Maximum stroke`的位置放置了一个刚体模型已实现Hard stop：
 
-![image-20220827150557237](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827150557237.png)
+![image-20220827150557237](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827150557237.png?raw=true)
 
 
 
@@ -307,15 +307,15 @@ $$
 
 当考虑模型的热效应时，需要将组件的`Modeling option`参数设置为`Show thermal port`：
 
-![image-20220827132229317](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827132229317.png)
+![image-20220827132229317](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827132229317.png?raw=true)
 
 之后，组件将多出一个H端口，用于连接其他模块。
 
-![image-20220827132514450](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827132514450.png)
+![image-20220827132514450](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827132514450.png?raw=true)
 
 参数设置部分也会多部分：`Temperature Dependence`，`Thermal Port`：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827133129968.png" alt="image-20220827133129968" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827133129968.png?raw=true" alt="image-20220827133129968" style="zoom: 67%;" />
 
 thermal port的使用可以参考另一个示例：[Simulating Thermal Effects in Rotational and Translational Actuators](https://ww2.mathworks.cn/help/physmod/sps/ug/simulating-thermal-effects-in-rotational-and-translational-actuators.html)。
 
@@ -325,7 +325,7 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 该示例的另一个模型是Linear Solenoid模型：
 
-![image-20220827160600571](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827160600571.png)
+![image-20220827160600571](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827160600571.png?raw=true)
 
 该模型与[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁铁模型基本上是一致的，只有两点需要注意的差异。
 
@@ -333,9 +333,9 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 第一点是该实例的这个电磁铁模型构建了双端的Hard Stop，以模拟撞击停止：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827160825839.png" alt="image-20220827160825839" style="zoom:67%;" /> 
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827160825839.png?raw=true" alt="image-20220827160825839" style="zoom:67%;" /> 
 
-![image-20220827160844674](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827160844674.png)
+![image-20220827160844674](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827160844674.png?raw=true)
 
 这一点更为合理。
 
@@ -343,15 +343,15 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 虽然该示例的线性电磁铁模型的L(x)和dL/dx仍然采用的PS Lookup Table(1D)进行描述，但是这里的L(x)是线性的：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827161214103.png"/>
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827161214103.png?raw=true"/>
 
-![image-20220827161612092](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827161612092.png)
+![image-20220827161612092](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827161612092.png?raw=true)
 
 而 [【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中采用的是非线性L(x)：
 
 <figure class="half">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825135120035.png">
-    <img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825135053982.png">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825135120035.png?raw=true">
+    <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825135053982.png?raw=true">
     <figcaption><a href="http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/" title="(1) Profile of L(x); (2) Profile of dL/dx">(1) Profile of L(x); (2) Profile of dL/dx</a></figcaption>
 </figure>
 这里显然后者更为合理。
@@ -478,7 +478,7 @@ grid on
 hold(gca, "off")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220827164330777.png" alt="image-20220827164330777" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827164330777.png?raw=true" alt="image-20220827164330777" style="zoom:67%;" />
 
 ### Part 3：计算并分别绘制$\partial\Psi/\partial i$和$\partial\Psi/\partial x$的图像
 
@@ -534,9 +534,9 @@ title('Partial Derivative of Flux with Respect to Distance')
 axis([0 2e-4 0 1 -35 0])
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194947911.png" alt="image-20220827194947911" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827194947911.png?raw=true" alt="image-20220827194947911" style="zoom:67%;" />
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827194953964.png" alt="image-20220827194953964" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827194953964.png?raw=true" alt="image-20220827194953964" style="zoom:67%;" />
 
 其中需要注意的一行代码是：
 
@@ -651,13 +651,13 @@ grid on
 hold(gca, "off")
 ```
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220827204556104.png" alt="image-20220827204556104" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827204556104.png?raw=true" alt="image-20220827204556104" style="zoom:67%;" />
 
 ## `ee_solenoid_fem_plot1position.m`文件
 
 `ee_solenoid_fem_plot1position.m`文件用于绘制仿真结果，包括**弹簧的**的位置以及电流的情况：
 
-![image-20220828191913588](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828191913588.png)
+![image-20220828191913588](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828191913588.png?raw=true)
 
 但是我们更关心动铁芯的位移和电流的情况，因此我们修改一下代码：
 
@@ -724,7 +724,7 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 
 
-![image-20220828192245220](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828192245220.png)
+![image-20220828192245220](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828192245220.png?raw=true)
 
 <br>
 
@@ -737,11 +737,11 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 这个示例的目的就是为了展现磁饱和效应。磁饱和效应最明显的现象就是，需要更大的电流才能产生和线性情况相同的磁场：
 
-![image-20220828143915042](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828143915042.png)
+![image-20220828143915042](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828143915042.png?raw=true)
 
 以及当50N推到动铁芯时的电磁力变化：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828144415581.png" alt="image-20220828144415581" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828144415581.png?raw=true" alt="image-20220828144415581" style="zoom: 67%;" />
 
 
 
@@ -751,23 +751,23 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 在该示例的模型中，我们将开关换为一个方波信号，使电路在0.01s通电，在0.02s断电：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114347407.png" alt="image-20220828114347407" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828114347407.png?raw=true" alt="image-20220828114347407" style="zoom:67%;" />
 
 并且去掉在0.06s添加的50N的作用力。之后，观察结果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114706220.png" alt="image-20220828114706220" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828114706220.png?raw=true" alt="image-20220828114706220" style="zoom:67%;" />
 
 可以看到在0.02s断电后，电磁力能够在最终位置保持，但是也仅仅是保持一会儿，之后就会缓慢地向反方向移动。
 
 如果我们延长仿真时间到2s（并且相应修改Pulse开关的参数），则结果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220828114950237.png" alt="image-20220828114950237" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828114950237.png?raw=true" alt="image-20220828114950237" style="zoom:67%;" />
 
 可以看到，动铁芯最终会返回并且稳定在初始位置。
 
-🙅‍♂️🙅‍♂️🙅‍♂️但是这里的保持力并不是我们所期望的保持力（永磁体所提供的保持力），因为电磁力是通过数据文件中的`force`变量所定义的，`force`变量的行表示电流，列表示位移：
+‍♂️‍♂️‍♂️但是这里的保持力并不是我们所期望的保持力（永磁体所提供的保持力），因为电磁力是通过数据文件中的`force`变量所定义的，`force`变量的行表示电流，列表示位移：
 
-![image-20220828133727244](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828133727244.png)
+![image-20220828133727244](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828133727244.png?raw=true)
 
 我们可以看到当电流切断，即电流$i=0$时，电磁力一定为零，并不存在保持力。
 
@@ -779,25 +779,25 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 我们也可以通过FEM-Parameterized Linear Actuator组件电磁力的曲线看到这一点：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828134509587.png" alt="image-20220828134509587" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828134509587.png?raw=true" alt="image-20220828134509587" style="zoom:67%;" />
 
 当切断电流后，电磁力并没有立即变为0。
 
-🙋‍♂️🙋‍♂️🙋‍♂️如果想要得到例如永磁体所产生的保持力，`force`变量的第一行一定不能都是零值：
+‍♂️‍♂️‍♂️如果想要得到例如永磁体所产生的保持力，`force`变量的第一行一定不能都是零值：
 
-![image-20220828134739949](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828134739949.png)
+![image-20220828134739949](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828134739949.png?raw=true)
 
 ## 线圈电流的双峰以及振荡现象
 
 [【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁铁模型得到结果：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220825133727626.png" alt="image-20220825133727626" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825133727626.png?raw=true" alt="image-20220825133727626" style="zoom:50%;" />
 
 其线圈电流表现出明显的双峰现象，并且电流曲线和位移曲线都表现出振荡的现象，而本示例的结果并没有很明显。
 
 但是我们仔细观察本示例的结果，其实也可以看到类似的现象：
 
-<img src="https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/img/image-20220828142332932.png" alt="image-20220828142332932" style="zoom: 67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828142332932.png?raw=true" alt="image-20220828142332932" style="zoom: 67%;" />
 
 只是很不明显。不明显的原因的原因有两个方面：
 

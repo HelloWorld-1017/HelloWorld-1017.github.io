@@ -91,7 +91,7 @@ catch ME
 end
 ```
 
-![image-20230111190642280](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111190642280.png)
+![image-20230111190642280](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111190642280.png?raw=true)
 
 虽然报错信息是一样的，但是此时的变量空间中多出了`ME`这个变量。
 
@@ -126,7 +126,7 @@ end
 
 此时命令行中的报错信息就多了关于维度的更详细的报错信息：
 
-![image-20230111191939471](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111191939471.png)
+![image-20230111191939471](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111191939471.png?raw=true)
 
 最后，我们可以简单对比一下添加信息前后的两个`MExpection`对象`ME`和`ME1`：
 
@@ -172,7 +172,7 @@ ME1.cause{1} =
 a = notaFunction(5,6);
 ```
 
-![image-20230111193410824](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111193410824.png)
+![image-20230111193410824](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111193410824.png?raw=true)
 
 我们可以将这个错误repackage为warning：
 
@@ -185,7 +185,7 @@ catch
 end
 ```
 
-![image-20230111193344223](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/DeLLLaptop/image-20230111193344223.png)
+![image-20230111193344223](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230111193344223.png?raw=true)
 
 甚至我们可以更激进一点，将整个错误都隐藏掉：
 

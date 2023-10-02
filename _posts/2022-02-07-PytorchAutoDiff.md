@@ -109,8 +109,8 @@ axes[1].legend()
 
 
 
-![image-20220708001921161](https://blogimages-1309804558.cos.ap-nanjing.myqcloud.com/imgpersonal/image-20220708001921161.png)
-
-
+![image-20220708001921161](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220708001921161.png?raw=true)
 
 Bingo！
+
+<br>

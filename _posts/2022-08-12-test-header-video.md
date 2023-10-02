@@ -3,7 +3,7 @@ layout: single
 title: 视频外链及Header Video
 date: 2022-08-12 13:44:15 +0800
 categories: 
- - Github
+ - GitHub
 tags: 
  - Jekyll
 toc: false
@@ -55,7 +55,7 @@ header:
 
 
 
-参考
+**References**
 
 [1] [Layout: Header Video - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-video/)
 

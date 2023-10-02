@@ -6,7 +6,7 @@ header:
   overlay_color: "#333"
 date: 2022-08-13 16:32:41 +0800
 categories: 
- - Github
+ - GitHub
 tags: 
  - Jekyll
 toc: false
@@ -25,6 +25,6 @@ header:
 <br>
 
 
-参考
+**References**
 
 [1] [https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-color/](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-color/)

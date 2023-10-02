@@ -3,7 +3,7 @@ layout: single
 title: Install the Minimal-mistakes-jekyll Theme in Github Pages
 date: 2022-07-17 12:25:11 +0800
 categories: 
- - Github
+ - GitHub
 tags: 
  - Jekyll
 ---
@@ -102,7 +102,7 @@ github-pages 227 | Error:  The minimal-mistakes-jekyll theme could not be found.
 
 > ......
 >
-> It takes exactly… a long time for it to pull down the remote theme on my local computer, but whatevs, it still builds. ‍♂️
+> It takes exactly… a long time for it to pull down the remote theme on my local computer, but whatevs, it still builds. 
 >
 > ```
 > done in 303.062 seconds.
@@ -112,11 +112,11 @@ github-pages 227 | Error:  The minimal-mistakes-jekyll theme could not be found.
 >
 > … and it doesn’t say…
 >
-> “**in order to host on Github Pages you must use a remote_theme or fork the repo.**” Although to be fair it’s not up to the theme to tell everyone how Github works. Just for a n00b like me, it would have been helpful. That’s all.
+> “**in order to host on GitHub Pages you must use a remote_theme or fork the repo.**” Although to be fair it’s not up to the theme to tell everyone how GitHub works. Just for a n00b like me, it would have been helpful. That’s all.
 >
 > ......
 
-也就是说：（1）将 remote theme 部署在本地电脑上的确需要耗费很长的时间；（2）在Github Pages上使用 minimal-mistakes-jekyll 主题只能采用 [Remote theme method](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remote-theme-method) 或者Fork the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/fork) 的方式。
+也就是说：（1）将 remote theme 部署在本地电脑上的确需要耗费很长的时间；（2）在GitHub Pages上使用 minimal-mistakes-jekyll 主题只能采用 [Remote theme method](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remote-theme-method) 或者Fork the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/fork) 的方式。
 
 所以，现在又回到了fork仓库的方式。。。
 

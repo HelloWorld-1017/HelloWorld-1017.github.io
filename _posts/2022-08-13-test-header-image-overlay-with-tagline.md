@@ -7,7 +7,7 @@ header:
   caption: "Peaky Blinders"
 date: 2022-08-13 16:20:25 +0800
 categories: 
- - Github
+ - GitHub
 tags: 
  - Jekyll
 toc: false
@@ -26,7 +26,6 @@ header:
 
 <br>
 
+**Reference**
 
-参考
-
-[1] [https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-image-tagline/](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-image-tagline/)
+[1] [https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-image-tagline/](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-image-tagline/).

@@ -23,7 +23,7 @@ tbl = readtable(filename, 'TextType', 'string');
 
 table变量`tbl`的结构和内容如下所示：
 
-![image-20221002093538628](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002093538628.png)
+![image-20221002093538628](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221002093538628.png?raw=true)
 
 本示例主要是根据各种条件创建`tbl.Description`列的词云：
 

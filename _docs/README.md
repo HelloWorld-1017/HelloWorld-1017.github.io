@@ -1,0 +1,1 @@
+In Oct. 2 2023, I migrated the figures which were ever stored in the Tencent Cloud COS (Cloud Object Storage) service to the public GitHub repository [HelloWorld-1017/blog-images](https://github.com/HelloWorld-1017/blog-images). The previous `.md ` files using Tencent Cloud links are backed here in the `_post_backup` folder.

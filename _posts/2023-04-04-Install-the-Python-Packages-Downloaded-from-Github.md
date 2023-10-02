@@ -4,7 +4,7 @@ title: Install the Python Packages Downloaded from Github
 date: 2023-04-04 15:48:39 +0800
 categories: 
  - Python
- - Github
+ - GitHub
 toc: false
 ---
 

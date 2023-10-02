@@ -3,7 +3,7 @@ layout: single
 title: Test Post with more images(HTML `<figure>` tag)
 date: 2022-08-24 10:07:19 +0800
 categories: 
- - Github
+ - GitHub
 tags: 
  - Jekyll
 classes: wide
@@ -92,6 +92,6 @@ https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-202
 
 <br>
 
-**参考**
+**References**
 
 [1] [Markup: Another Post with Images - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/markup-more-images/)

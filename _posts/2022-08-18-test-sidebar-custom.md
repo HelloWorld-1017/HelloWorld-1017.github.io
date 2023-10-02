@@ -3,7 +3,7 @@ layout: single
 title: Test Sidebar Custom
 date: 2022-08-18 12:42:07 +0800
 categories: 
- - Github
+ - GitHub
 tags: 
  - Jekyll
 toc: false
@@ -35,6 +35,6 @@ sidebar:
 
 <br>
 
-参考
+**References**
 
 [1] [https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/](https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/)

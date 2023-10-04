@@ -8,6 +8,7 @@ categories:
 tags:
  - MATLAB Language Fundamentals
  - Regular Expression
+ - MATLAB Data Import and Analysis
 toc: false
 ---
 
@@ -73,20 +74,24 @@ Anyway, the effect of this MATLAB script is basically in expectation, although i
 
 [1] [HelloWorld-1017/blog-images](https://github.com/HelloWorld-1017/blog-images).
 
-[2] [regexp - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/regexp.html).
+[2] [MATLAB Language Fundamentals: `regexp` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/regexp.html).
 
-[3] [pattern - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/pattern.html).
+[3] [MATLAB Language Fundamentals: `pattern` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/pattern.html).
 
-[4] [regexprep - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/regexprep.html).
+[4] [MATLAB Language Fundamentals: `regexprep` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/regexprep.html).
 
-[5] [strfind - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/strfind.html).
+[5] [MATLAB Language Fundamentals: `strfind` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/strfind.html).
 
-[6] [strrep - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/strrep.html).
+[6] [MATLAB Language Fundamentals: `strrep` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/strrep.html).
 
-[7] [extract - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/extract.html).
+[7] [MATLAB Language Fundamentals: `extract` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/extract.html).
 
-[8] [extractBetween - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/extractbetween.html).
+[8] [MATLAB Language Fundamentals: `extractBetween` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/extractbetween.html).
 
-[9] [replace - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/replace.html).
+[9] [MATLAB Language Fundamentals: `replace` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/replace.html).
 
 [10] [浅析正则表达式用法：匹配字符，数量，边界 - 古兰精 - 博客园](https://www.cnblogs.com/goloving/p/14001538.html).
+
+[11] [MATLAB Data Import and Analysis: `fileread` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/fileread.html).
+
+[12] [MATLAB Programming: `dir` - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/dir.html).

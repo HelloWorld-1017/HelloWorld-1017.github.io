@@ -1,6 +1,6 @@
 ---
 layout: single
-title: A Collection of English Learning Resources
+title: A Collection of English Learning Resources and Tools
 date: 2023-10-01 20:33:53 +0800
 categories:
  - English

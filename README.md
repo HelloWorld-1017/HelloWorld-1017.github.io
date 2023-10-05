@@ -1,6 +1,6 @@
 # README
 
-This repository is supporting my personal blog website: [What a starry night~](https://helloworld-1017.github.io/). 
+This repository is supporting my personal blog website: [What a starry night~](https://helloworld-1017.github.io/). The website is based on Jekyll theme [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes) by Michael Rose *et al.*
 
 To my mind, writing things down is to forget it and carry on. If lucky, I hope these dots could be connected one day when I looking backward.
 

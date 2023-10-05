@@ -245,7 +245,7 @@ $$
 
 解：
 
-记$S_1^2$和$S_2^2$分别为$X_1,\cdots,X_n$和$Y_1,\cdots,Y_n$的样本方差，根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution](http://whatastarrynight.com/mathematics/programming/Chi-square-and-t-and-F-Distribution/#chi-square-distribution-students-t-distribution-f-distribution)提到的F分布的性质（性质3），有：
+记$S_1^2$和$S_2^2$分别为$X_1,\cdots,X_n$和$Y_1,\cdots,Y_n$的样本方差，根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution - What a starry night~](https://helloworld-1017.github.io/mathematics/matlab/Chi-square-and-t-and-F-Distribution/#chi-square-distribution-students-t-distribution-f-distribution)提到的F分布的性质（性质3），有：
 
 $$
 (S_2^2/\sigma_1^2)/(S_1^2/\sigma_2^2)\sim F_{m-1,n-1}\notag
@@ -263,7 +263,7 @@ $$
 
 解：
 
-根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution - What a starry night~](http://whatastarrynight.com/mathematics/programming/Chi-square-and-t-and-F-Distribution/#properties-of-chi-square-distribution)提到的卡方分布的性质（性质2），有：
+根据文章[Chi-square Distribution, Student’s t Distribution, and F Distribution - What a starry night~](https://helloworld-1017.github.io/mathematics/matlab/Chi-square-and-t-and-F-Distribution/#properties-of-chi-square-distribution)提到的卡方分布的性质（性质2），有：
 
 $$
 2n\lambda\overline{X}\sim\chi_{2n}^2\notag

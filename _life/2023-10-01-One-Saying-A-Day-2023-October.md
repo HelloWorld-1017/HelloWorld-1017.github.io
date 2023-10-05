@@ -36,3 +36,11 @@ In the long run, we are all dead.
 *by John Maynard Keynes.*
 
 <br>
+
+**Oct. 05, 2024**
+
+From Grothendieck, I have also learned not to take glory in the difficulty of a proof: difficulty means we have not understand. The ideal is to be able to paint a landscape in which the proof is obvious.
+
+*by Pierre Deligne.*
+
+<br>

@@ -1,12 +1,39 @@
 ---
 layout: single
-title: Law of Large Numbers and Central Limit Theorem
+title: Law of Large Numbers (LLN) and Central Limit Theorem
 date: 2023-10-04 19:45:38 +0800
 categories:
  - Mathematics
 tags:
  - Probability Theory and Mathematical Statistics
 ---
+
+# Law of Large Numbers
+
+## The weak form of large numbers (Khinchin's law)
+
+The **weak law of large numbers** (also called **Khinchin's law**) states that the sample average converges in probability towards the expected value:
+$$
+\bar{X}_n\xrightarrow{P}\mu,\ \text{when n}\rightarrow\infty
+$$
+That is, for any positive number $\varepsilon$:
+$$
+\lim_{n\rightarrow\infty}\mathrm{Pr}\Big(\vert\bar{X}_n-\mu\vert<\varepsilon\Big)=1
+$$
+
+> Or rather:
+> $$
+> \lim_{n\rightarrow\infty}\mathrm{Pr}\Big(\vert\bar{X}_n-\mu\vert\ge\varepsilon\Big)=0
+> $$
+> 
+
+Interpreting this result, the weak law states that for any nonzero margin specified $\varepsilon$, no matter how small, with a sufficiently large sample there will be a very high probability that the average of the observations will be close to the expected value; that is, within the margin.
+
+
+
+
+
+
 
 <br>
 

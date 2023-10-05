@@ -54,16 +54,16 @@ $$
 \end{split}
 $$
 
-In the case where $\mathrm{Var}(X)$ does exist, then:
+Let $\mu$ denote $\mathbb{E}(X)$, and **in the case where $\mathrm{Var}(X)=\sigma^2$ does exist**, then:
 
 $$
-P(\vert X-\mathbb{E}(X)\vert\ge\varepsilon)\le\mathrm{Var}(X)/\varepsilon^2\label{Chebyshev}
+P(\vert X-\mu\vert\ge\varepsilon)\le\sigma^2/\varepsilon^2\label{Chebyshev}
 $$
 
 Inequality $\eqref{Chebyshev}$ is **Chebyshev's inequality**, and equivalent to:
 
 $$
-P(\vert X-\mathbb{E}(X)\vert\ge k\varepsilon)\le\mathrm{Var}(X)/k^2\varepsilon^2
+P(\vert X-\mu\vert\ge k\varepsilon)\le\sigma^2/k^2\varepsilon^2
 $$
 
 which guarantees that, "for a wide class of probability distributions, no more than a certain fraction of values can be more than a certain distance from the mean." [3]
@@ -80,4 +80,4 @@ Chebyshev's inequality could be "be applied to completely arbitrary distribution
 
 [3] [Chebyshev's inequality - Wikipedia](https://en.wikipedia.org/wiki/Chebyshev's_inequality).
 
-[4] 概率论与数理统计. 陈希孺编著. 合肥: 中国科学技术大学出版社, 2009.2(2019.8重印).
+[4] 概率论与数理统计. 陈希孺编著. 合肥: 中国科学技术大学出版社, 2009.2(2019.8重印), p132.

@@ -1,7 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/post_assets/2022.07.20 Hello manim/media/videos/script1/480p15/partial_movie_files/CreateCircle/3163782288_3375467303_223132457.mp4'
-file 'file:C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/post_assets/2022.07.20 Hello manim/media/videos/script1/480p15/partial_movie_files/CreateCircle/2201830969_125286499_589525649.mp4'
-file 'file:C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/post_assets/2022.07.20 Hello manim/media/videos/script1/480p15/partial_movie_files/CreateCircle/2201830969_2856565142_2593257658.mp4'
-file 'file:C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/post_assets/2022.07.20 Hello manim/media/videos/script1/480p15/partial_movie_files/CreateCircle/2201830969_1384035021_4174018169.mp4'
-file 'file:C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/post_assets/2022.07.20 Hello manim/media/videos/script1/480p15/partial_movie_files/CreateCircle/2201830969_1741661332_1833400581.mp4'
-file 'file:C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/post_assets/2022.07.20 Hello manim/media/videos/script1/480p15/partial_movie_files/CreateCircle/2201830969_4065880486_1833400581.mp4'

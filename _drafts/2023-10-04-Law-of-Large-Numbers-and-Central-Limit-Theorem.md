@@ -103,8 +103,6 @@ p133
 
 [Law of large numbers - Wikipedia](https://en.wikipedia.org/wiki/Law_of_large_numbers).
 
-
-
 [Markov’s Inequality and Chebyshev’s Inequality - What a starry night~](https://helloworld-1017.github.io/mathematics/Markovs-Inequality-and-Chebyshevs-Inequality/).
 
 [4] 概率论与数理统计. 陈希孺编著. 合肥: 中国科学技术大学出版社, 2009.2(2019.8重印).

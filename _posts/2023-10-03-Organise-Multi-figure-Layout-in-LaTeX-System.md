@@ -21,8 +21,7 @@ In LaTeX system, the multi-figure layout could be organised by `\includegraphics
 \begin{figure}
 	\def\CE{0.20}
 	\centering
-	\subfloat[Data series A.]{
-	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}}\hfill
+	\subfloat[Data series A.]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}}\hfill
 	\subfloat[Data series B.]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}}\hfill
 	\subfloat[Data series C.]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}}\hfill
 	\subfloat[Data series D.]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}}\hfill
@@ -60,8 +59,7 @@ This is Fig. \ref{fig}, and this is subfigure Fig. \ref{fig-a}.
 \begin{figure}
 	\def\CE{0.25}
 	\centering
-	\subfloat[]{
-	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}
+	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}
 	\label{fig-a}}
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}}
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}}
@@ -94,8 +92,7 @@ This is Fig. \ref{fig}, and this is subfigure Fig. \ref{fig-a}.
 \begin{figure}
 	\def\CE{0.25}
 	\centering
-	\subfloat[]{
-	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}}
+	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}}
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}}
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}}
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}}\\
@@ -129,8 +126,7 @@ This is Fig. \ref{fig}, and this is subfigure Fig. \ref{fig-a}.
 \begin{figure}
 	\def\CE{0.20}
 	\centering
-	\subfloat[]{
-	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}}\hfill
+	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}}\hfill
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}}\hfill
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}}\hfill
 	\subfloat[]{\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}}

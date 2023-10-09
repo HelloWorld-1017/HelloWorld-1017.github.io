@@ -20,6 +20,13 @@ toc: false
 
 <br>
 
+**Electrical Engineering**
+
+1. Fundamentals of Power Electronics (Second Edition), Robert W. Erickson *et al.*, available at: [download link](https://www.researchgate.net/profile/Punit_Kumar19/post/How_to_Design_a_boost_Converter_parameter/attachment/59d6365a79197b8077993c36/AS:388309265207298@1469591552366/download/Fundamentals+of+Power+Electronics+(Robert+W.Erickson,+Dragan+Maksimovic,+2e,+2001)+-+Book.pdf).
+2. Fundamentals of Aerodynamics (Sixth Edition), John D. Anderson, available at: [Fundamentals of Aerodynamics, 6th Edition (aviationdose.com)](https://aviationdose.com/wp-content/uploads/2020/01/Fundamentals-of-aerodynamics-6-Edition.pdf).
+
+<br>
+
 **Popular Science**
 
 1. The End of Certainty, I. Prigogine, available at: [End-of-Certainty.pdf (sackett.net)](http://sackett.net/End-of-Certainty.pdf).

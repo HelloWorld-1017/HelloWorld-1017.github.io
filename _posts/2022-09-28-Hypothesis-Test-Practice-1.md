@@ -11,7 +11,7 @@ tags:
 
 # Introduction
 
-之前的一篇博客：[Contrast the Models Trained by Mixed Data Set and Only Generated Data Set](http://whatastarrynight.com/mathematics/programming/machine%20learning/Contrast-the-Models-Trained-by-Mixed-Data-Set-and-Only-Generated-Data-Set/)对了两种不同的训练集训练模型的效果：
+之前的一篇博客 [1] 对了两种不同的训练集训练模型的效果：
 
 （1）使用由生成数据和真实数据混合构成的训练集；
 
@@ -23,7 +23,7 @@ tags:
 
 （2）模型评估：最终在进行模型评估时，使用的是“想当然”的方式，即用平均准确率表征模型的准确率（越高越好），用准确率标准差表征模型的稳定性（越低越好），结果仅仅好一点就认为所对应的训练集效果是更好的。这种方式存在较为严重的“实验者预期效应”，并不是科学的方式。
 
-昨天学习了Hypothesis test中Fisher的Significant test方法：[【Hypothesis Test 1】Summarize the Thoughts of Pearson and Fisher](http://whatastarrynight.com/mathematics/hypothesis-test-summarize-the-thoughts-of-Pearson-and-Fisher/)，突然想到可以应用在这个场景之中。Hypothesis test实际上就是对于结果评估方法的优化。为了确保“观测到的的模型测试结果”是随机的，需要首先保证控制变量，即只有解决了问题（1），才能为Significant test方法的使用提供理论前提。
+昨天学习了Hypothesis test中Fisher的Significant test方法(参考博客 [2])，突然想到可以应用在这个场景之中。Hypothesis test实际上就是对于结果评估方法的优化。为了确保“观测到的的模型测试结果”是随机的，需要首先保证控制变量，即只有解决了问题（1），才能为Significant test方法的使用提供理论前提。
 
 <br>
 
@@ -272,3 +272,11 @@ ans =
 - 本文的Significant test并不是纯粹地针对方法，而是针对**应用于特定的训练集**的方法；
 - 还是要说，Hypothesis test的核心在于“拒绝”或者“接受”，而不是“证明”；
 - 这种Significance test的计算资源消耗是巨大的。
+
+<br>
+
+**References**
+
+[1] [Contrast the Models Trained by Mixed Data Set and Only Generated Data Set - What a starry night~](https://helloworld-1017.github.io/mathematics/matlab/machine learning/Contrast-the-Models-Trained-by-Mixed-Data-Set-and-Only-Generated-Data-Set/).
+
+[2] [【Hypothesis Test 1】Summarize the Thoughts of Pearson and Fisher - What a starry night~](https://helloworld-1017.github.io/mathematics/hypothesis-test-summarize-the-thoughts-of-Pearson-and-Fisher/).

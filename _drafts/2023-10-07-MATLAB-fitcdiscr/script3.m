@@ -1,9 +1,0 @@
-clc,clear,close all
-rng(1)
-
-load fisheriris.mat
-meas = meas(:,1:3);
-mdl = fitcdiscr(meas,species, ...
-    'OptimizeHyperparameters','auto',...
-    'HyperparameterOptimizationOptions', ...
-    struct('AcquisitionFunctionName','expected-improvement-plus'));

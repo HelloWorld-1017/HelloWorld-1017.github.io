@@ -11,6 +11,7 @@ toc: false
 
 1. An Introduction to  Multivariate Statistical Analysis (Third Edition), T. W. Anderson, available at: [DjVu Document (ustc.edu.cn)](http://staff.ustc.edu.cn/~ynyang/vector/2.pdf).
 2. Applied Multivariate Statistical Analysis, R. A. Johnson *et al.*, available at: [Applied Multivariate Statistical Analysis by Johnson and Wichern.pdf (uidaho.edu)](https://www.webpages.uidaho.edu/~stevel/519/Applied Multivariate Statistical Analysis by Johnson and Wichern.pdf).
+3. Methods-of-Multivariate-Analysis (Second Edition), A. C. Rencher, available at: [Methods of Multivariate Analysis 2 Ed-02 - Rencher](https://www.ipen.br/biblioteca/slr/cel/0241).
 
 <br>
 

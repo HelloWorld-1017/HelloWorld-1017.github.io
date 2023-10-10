@@ -18,7 +18,7 @@ tags:
 
 # Estimation Methods
 
-## Method of Moments
+## Moment Estimation
 
 ### Moments of  Random Variables
 
@@ -86,7 +86,13 @@ $$
 
 对于函数 $L(x_1, \cdots, x_n;\theta_1, \cdots, \theta_k)$：
 
-若将函数 $L$ 看作 $x_1, \cdots, x_n$ 的函数时，$L$ 是一个概率密度或概率函数。如果 $L(Y_1, \cdots, Y_n; \theta_1, \cdots, \theta_k) \gt L(X_1, \cdots, X_n;\theta_1, \cdots, \theta_k)$，则表明在观察时出现 $(Y_1, \cdots, Y_n)$ 这个点的可能性比出现 $X_1, \cdots, X_n$ 这个点的可能性大；反过来看，固定  $X_1, \cdots, X_n$ 而把函数 $L$ 看作 $\theta_1, \cdots, \theta_k$ 的函数时，$L$ 被称为**似然函数（Likelihood function）**，它的大小反映了在观察结果 $(X_1, \cdots, X_n) $ 已知的条件下，$(\theta_1, \cdots, \theta_k)$的各种取值的“似然程度”。在这里，参数  $\theta_1, \cdots, \theta_k$ 有一定的值（虽然未知），并非事件或者随机变量，无概率可言，故改用“似然”这个词。
+若将函数 $L$ 看作 $x_1, \cdots, x_n$ 的函数时，$L$ 是一个概率密度或概率函数。如果：
+
+$$
+L(Y_1, \cdots, Y_n; \theta_1, \cdots, \theta_k) \gt L(X_1, \cdots, X_n;\theta_1, \cdots, \theta_k),
+$$
+
+则表明在观察时出现 $(Y_1, \cdots, Y_n)$ 这个点的可能性比出现 $X_1, \cdots, X_n$ 这个点的可能性大；反过来看，固定  $X_1, \cdots, X_n$ 而把函数 $L$ 看作 $\theta_1, \cdots, \theta_k$ 的函数时，$L$ 被称为**似然函数（Likelihood function）**，它的大小反映了在观察结果 $(X_1, \cdots, X_n) $ 已知的条件下，$(\theta_1, \cdots, \theta_k)$的各种取值的“似然程度”。在这里，参数  $\theta_1, \cdots, \theta_k$ 有一定的值（虽然未知），并非事件或者随机变量，无概率可言，故改用“似然”这个词。
 
 因此，**极大似然估计法(Maximum likelihood estimation method)**就是用似然程度最大的那个点$$(\theta_1^*,\cdots,\theta_k^*)$$，即满足条件 
 
@@ -315,6 +321,6 @@ $\tilde{\theta}$ 的表达式 $\eqref{eq5}$ 传达出这样的信息：考虑两
 
 <br>
 
-**参考**
+**References**
 
 [1] 概率论与数理统计. 陈希孺编著. 合肥: 中国科学技术大学出版社, 2009.2(2019.8重印).

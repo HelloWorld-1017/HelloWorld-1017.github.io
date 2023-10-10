@@ -1,24 +1,29 @@
+---
+layout: single
+title: MATLAB `fitcdiscr` Function
+date: 2023-10-10 23:02:35 +0800
+categories:
+ - MATLAB
+ - Mathematics
+tags:
+ - MATLAB 
+ - Probability Theory and Mathematical Statistics
+---
 
+Note Well Here: My initial purpose of writing this blog is to explore the MATLAB `fitcdiscr` function. I found the official documentation describes that it is used to estimate a multivariate normal distribution, so I naturally thought it is realised by moment estimation, and therefore verified it by this way. However, in the end, I realised I was wrong (although it is a so obvious mistake when looking backward at present). The reason could be found in the last part *Hyperparameter Optimizsation Options and Discussions*. Having said that, I believe this is a valuable process in a way, so I decide to organise these content in this blog. 
+{: .notice--warning}
 
+# Introduction
 
-
-MATLAB `fitcdiscr` function [1] is for 'Fit discriminant analysis classifier', and the algorithm introduction in the official documentation gives more information: 
+MATLAB `fitcdiscr` function [[1]](#ref-1) is for "Fit discriminant analysis classifier", and the algorithm introduction in the official documentation gives more information: 
 
 ![image-20231007224244709](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231007224244709.png)
 
-
-
-
-
-
-
-
-
-It can bee seen that, `fitcdiscr` function is actually used to fit the 
-
 Taking `fisheriris` dataset as an example, the following text will analyse the `fitcdiscr` function.
 
-## Linear discriminant analysis
+<br>
+
+# Linear discriminant analysis
 
 For sake of easy visual analysis in the later part, we select the first three features of `meas` variable to analyse:
 
@@ -51,7 +56,7 @@ And the the mean vector of each multiviriate normal distribution is estimated by
 means = splitapply(@mean,meas,ClassVariables);
 Covs = splitapply(@(x){cov(x)},meas,ClassVariables);
 Covs{1},Covs{2},Covs{3}
-cov(meas)
+Cov_all = cov(meas);
 ```
 
 ```
@@ -88,7 +93,7 @@ ans =
     0.1675    0.0552    0.1852
 ```
 
-and he coefficient is *seemingly* determined by the `mdl.Prior`, which is sample number proportion of each class (default value `emperical`):
+and the coefficient is *seemingly* determined by the `mdl.Prior`, which is sample number proportion of each class (default value `emperical`):
 
 ```
 >> mdl.Prior
@@ -135,9 +140,9 @@ ans =
 >     0.1176    0.0503    0.1323
 > ```
 >
-> The difference between the covariance matrix of `mdl` and the one we calculated still exist, although small. I don't check whether or not this deviation is caused by numerical calculation error.
+> The difference between the covariance matrix of `mdl` and the one we calculated still exist, although small. I don't check whether this deviation is caused by numerical calculation error.
 
-So to my mind, strictly speaking, the description in the official documentation 'the model assumes `X` has a Gaussian mixture distribution' is not that appropriate (at least for this case where using the default easy linear discriminant analysis), as the coefficients are not estimated but just calculated by sample number. Another MATLAB documentation `fitgmdist` using EM iterative algorithm is more reasonable, the analysis of which could be found in blog [2].
+So to my mind, strictly speaking, the description in the official documentation "the model assumes `X` has a Gaussian mixture distribution" is not that appropriate (at least for this case where using the default easy linear discriminant analysis), as the coefficients of GMM are not estimated but just calculated based on sample size. Another MATLAB documentation `fitgmdist` using EM iterative algorithm is more reasonable, the analysis of which could be found in blog [[2]](#ref-2).
 
 After getting the sample mean and shared weighted covariance matrix, we could use `mvnrnd` function to generate samples, and compared them with the samples in `fisheiris` dataset:
 
@@ -204,9 +209,9 @@ zlabel("Feature 3")
 
 <br>
 
-## Quadratic discriminant analysis
+# Quadratic discriminant analysis
 
-As pointed out in the official documentation [1], specifying the property `DiscrimType` to `quadratic` could make a quadratic discriminant analysis and at which case, both mean and covariance matrix of each class vary.
+As pointed out in the official documentation [[1]](#ref-1), specifying the property `DiscrimType` to `quadratic` could make a quadratic discriminant analysis and at which case, both mean and covariance matrix of each class vary.
 
 ```matlab
 load fisheriris
@@ -259,7 +264,7 @@ Covs{3} =
     0.3033    0.0714    0.3046
 ```
 
-It can be seen that, for quadratic discriminant analysis, the mean vector and covariance matrix are respectively estimated by sample mean vector and unbiased sample variance matrix of each class, that is making a unbiased estimation for multivariate normal distribution of each class.
+As can be seen, for quadratic discriminant analysis, the mean vector and covariance matrix are respectively estimated by sample mean vector and unbiased sample variance matrix of each class, that is making a unbiased estimation for multivariate normal distribution of each class.
 
 At last, we could graphically compare the generated samples, including generated by linear model and by quadratic model, and original ones:
 
@@ -340,7 +345,7 @@ zlabel("Feature 3")
 
 ![image-20231008122309274](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231008122309274.png)
 
-We could simply test the similarity of generated samples and original ones by Mahalanobis Distance (could see blog [3]) for both models:
+We could simply test the similarity of generated samples and original ones by Mahalanobis Distance (could see blog [[3]](#ref-3)) for both models:
 
 ```matlab
 fprintf("Linear model, Avarage Mahalanobis distance: \n" + ...
@@ -376,120 +381,38 @@ In a word, for class setosa, quadratic model is better than linear model, while 
 
 <br>
 
-Actually, if see official documentation in detail, we could find that the `fitcdiscr` function actually support using cross validation to automatically optimize hyperparameters of the model. Some concerned arguments of `fitcdiscr` function are about this setting, but here we just take an official example to partly introduce it. The official examples are as followings:
+# Hyperparameter Optimizsation Options and Discussions
 
-```matlab
-clc,clear,close all
-rng(1)
+Actually, if see official documentation in detail [[1]](#ref-1), we could find that the `fitcdiscr` function actually support using cross validation to automatically optimise hyperparameters of the model. Some concerned arguments of `fitcdiscr` function are about this setting, and I think this is more complicated part of this function. 
 
-load fisheriris.mat
-meas = meas(:,1:3);
-mdl = fitcdiscr(meas,species, ...
-    'OptimizeHyperparameters','auto',...
-    'HyperparameterOptimizationOptions', ...
-    struct('AcquisitionFunctionName','expected-improvement-plus'));
-```
+Most important, from the running results at this case, I speculate that the way of verification described above, that is moment estimation [[4]](#ref-4), is not appropriate. The `fitcdiscr` function more likely to solve a maximum likelihood estimation with regularisation. 
 
-The command line window will display optimization information during process, and simultaneously, two progress figure are plotted dynamically.
+![image-20231010192234702](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231010192234702.png)
 
-```
-|=====================================================================================================|
-| Iter | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   |        Delta |        Gamma |
-|      | result |             | runtime     | (observed)  | (estim.)    |              |              |
-|=====================================================================================================|
-|    1 | Best   |     0.66667 |    0.097063 |     0.66667 |     0.66667 |       13.261 |      0.25218 |
-|    2 | Best   |    0.046667 |    0.063293 |    0.046667 |     0.08907 |   2.7404e-05 |     0.073264 |
-|    3 | Accept |    0.053333 |    0.094705 |    0.046667 |    0.046743 |   3.2455e-06 |      0.46974 |
-|    4 | Accept |     0.66667 |    0.060125 |    0.046667 |    0.046775 |       14.879 |      0.98622 |
-|    5 | Accept |        0.06 |    0.061027 |    0.046667 |    0.047394 |    1.099e-05 |      0.57159 |
-|    6 | Accept |         0.1 |    0.066511 |    0.046667 |     0.05231 |   0.00050462 |      0.99565 |
-|    7 | Accept |    0.086667 |    0.062412 |    0.046667 |    0.051108 |   1.0009e-06 |      0.87313 |
-|    8 | Best   |        0.04 |    0.072547 |        0.04 |    0.046615 |   2.1933e-05 |      0.40979 |
-|    9 | Accept |        0.04 |    0.071383 |        0.04 |    0.044901 |   2.3684e-05 |      0.16106 |
-|   10 | Accept |        0.04 |    0.072423 |        0.04 |     0.04387 |   2.5137e-05 |      0.18557 |
-|   11 | Accept |     0.66667 |    0.068188 |        0.04 |    0.043785 |       997.45 |      0.87848 |
-|   12 | Accept |    0.086667 |     0.06196 |        0.04 |    0.038679 |   3.1401e-05 |      0.85968 |
-|   13 | Accept |    0.046667 |    0.074078 |        0.04 |     0.04082 |   4.3139e-06 |    1.726e-05 |
-|   14 | Accept |    0.046667 |    0.064147 |        0.04 |    0.039845 |   1.6147e-05 |    0.0013389 |
-|   15 | Accept |        0.04 |    0.071702 |        0.04 |    0.039819 |   1.0189e-06 |      0.17587 |
-|   16 | Accept |        0.04 |    0.060839 |        0.04 |    0.039729 |   0.00010818 |      0.35198 |
-|   17 | Accept |        0.04 |    0.064474 |        0.04 |    0.038731 |   5.0829e-05 |      0.32588 |
-|   18 | Accept |        0.04 |    0.068561 |        0.04 |    0.038734 |   1.0133e-06 |     0.015301 |
-|   19 | Accept |        0.04 |    0.069015 |        0.04 |    0.039063 |   4.9562e-05 |      0.31226 |
-|   20 | Accept |        0.04 |     0.06588 |        0.04 |    0.039067 |   1.0051e-06 |      0.15054 |
-|=====================================================================================================|
-| Iter | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   |        Delta |        Gamma |
-|      | result |             | runtime     | (observed)  | (estim.)    |              |              |
-|=====================================================================================================|
-|   21 | Accept |        0.04 |    0.079592 |        0.04 |    0.039188 |   3.4961e-05 |      0.29902 |
-|   22 | Accept |    0.046667 |    0.069204 |        0.04 |    0.039317 |     0.037935 |   0.00090253 |
-|   23 | Accept |    0.046667 |    0.073799 |        0.04 |    0.039225 |    0.0040557 |   0.00046815 |
-|   24 | Accept |        0.04 |    0.069003 |        0.04 |    0.039226 |     0.013049 |      0.36435 |
-|   25 | Accept |    0.046667 |     0.06255 |        0.04 |    0.039268 |     0.014585 |     0.011052 |
-|   26 | Accept |        0.04 |    0.065089 |        0.04 |    0.039265 |   0.00073402 |      0.23526 |
-|   27 | Accept |        0.04 |    0.069593 |        0.04 |    0.039259 |    0.0028255 |      0.34862 |
-|   28 | Accept |        0.04 |    0.077335 |        0.04 |    0.039264 |     0.026283 |      0.31726 |
-|   29 | Accept |        0.04 |    0.089576 |        0.04 |    0.039284 |   0.00025517 |      0.21955 |
-|   30 | Accept |    0.086667 |     0.06082 |        0.04 |     0.03928 |     0.018889 |      0.89185 |
-
-__________________________________________________________
-Optimization completed.
-MaxObjectiveEvaluations of 30 reached.
-Total function evaluations: 30
-Total elapsed time: 15.5541 seconds
-Total objective function evaluation time: 2.1069
-
-Best observed feasible point:
-      Delta        Gamma 
-    __________    _______
-
-    2.1933e-05    0.40979
-
-Observed objective function value = 0.04
-Estimated objective function value = 0.041926
-Function evaluation time = 0.072547
-
-Best estimated feasible point (according to models):
-      Delta        Gamma 
-    __________    _______
-
-    3.4961e-05    0.29902
-
-Estimated objective function value = 0.03928
-Estimated function evaluation time = 0.074397
-```
-
-![image-20231008133239246](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231008133239246.png)
-
-![image-20231008133245704](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231008133245704.png)
-
-
-
-
-
-
-
-<br>
-
-
-
-
+And the similarity of mean vector and covariance matrix of the model and sample mean vector and sample covariance matrix is just a coincidence, which could refer to [[4,5]](#ref-4). Another official documentation [[6]](#ref-6) gives more information about Discriminant Analysis Models, but I don’t plan to get into it at present since my original motivation of recording this function is that I found it unfamiliar in another official example [[7]](#ref-7). Although the analysis content may be wrong (and with a high probability), I have known something about it. So, I decide to learn it more deeply if needed in the future.
 
 <br>
 
 **References**
 
+<div id="ref-1"></div>
 [1] [fitcdiscr - MathWorks](https://ww2.mathworks.cn/help/stats/fitcdiscr.html).
 
+<div id="ref-2"></div>
 [2] [Gaussian Mixture Model(GMM) - What a starry night~](https://helloworld-1017.github.io/mathematics/matlab/machine learning/Gaussian-Mixture-Model/).
 
+<div id="ref-3"></div>
 [3] [Multivariate Normal Distribution and Mahalanobis Distance - What a starry night~](https://helloworld-1017.github.io/mathematics/matlab/Multivariate-Normal-Distribution-and-Mahalanobis-Distance/).
 
+<div id="ref-4"></div>
+[4] [Point Estimation - What a starry night~](https://helloworld-1017.github.io/mathematics/Point-Estimation/).
 
+<div id="ref-5"></div>
+[5] [Maximum Likelihood Estimation for Multivariate Normal Distribution - What a starry night~](https://helloworld-1017.github.io/mathematics/maximum-likelihood-estimation-for-multivariate-normal-distribution/).
 
+<div id="ref-6"></div>
+[6] [Prediction Using Discriminant Analysis Models - MathWorks](https://ww2.mathworks.cn/help/stats/prediction-using-discriminant-analysis-models.html).
 
+<div id="ref-7"></div>
 
-
-
-
-
+[7] [Examine the Gaussian Mixture Assumption: Mardia Kurtosis Test for Linear and Quadratic Discriminants - MathWorks](https://ww2.mathworks.cn/help/stats/examine-the-gaussian-mixture-assumption.html#bs2r9lk).

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Test Header Image(External URL)
+title: Test Header Image (External Links) in Jekyll-based Website 
 date: 2022-08-12 18:14:13 +0800
 categories: 
  - GitHub

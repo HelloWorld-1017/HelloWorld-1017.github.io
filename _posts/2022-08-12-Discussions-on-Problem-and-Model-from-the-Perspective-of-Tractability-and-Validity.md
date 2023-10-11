@@ -1,16 +1,14 @@
 ---
 layout: single
-title: 从易处理性和有效性的角度看待问题与模型
+title: Discussions on Problem and Model from the Perspective of Tractability and Validity
 date: 2022-08-12 12:20:13 +0800
 categories:
  - Mathematics
  - Uncertainty
 tags: 
  - Operations Research
-toc: true
+toc: false
 ---
-
-<br>
 
 很多科学问题、工程问题都可以归结为一个优化问题：在考虑一定的 **约束** 下，规划 **决策变量** ，使得表征 **求解目的** 的 **目标函数** 最小。优化问题的求解大致分为 **精确求解** 和 **启发式求解** 两种方法，这两种方法的共同点是，它们都需要写出决策变量、约束、目标函数等要素（后面将会提到，这些要素需要 *精确* 写出）。再看过一些蒙特卡洛模拟求解数学问题的实例后，我感觉蒙特卡洛模拟实际上是另一种看待并求解优化问题的方式。今天在重读 Ronald 所著的《运筹学(Optimization in Operations Research)》时，惊奇地发现 Ronald 在书的第一章就对这两种不同的角度做出了详细的说明 。Ronald 将两种方式分别定义为规范性模型和描述性模型，并且将两者之间的选择归结为有效性和易处理性之间的权衡。易处理性与有效性之间“不可兼得”的关系是 Ronald 在《运筹学》的第一章一直在强调的主题，Ronald 从这个角度讲述了很多运筹学方法论的内容。
 

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 自动生成机器学习模型函数代码文件
+title: Generate Machine Learning Model `.m` Code Files Automatically in MATLAB
 date: 2022-08-02 23:11:21 +0800
 categories: 
  - MATLAB

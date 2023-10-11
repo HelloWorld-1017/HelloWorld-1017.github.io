@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 通过变量使用结构体的字段
+title: Invoke Structure Fields using Variables in MATLAB
 date: 2022-07-30 20:17:27 +0800
 categories: 
  - MATLAB

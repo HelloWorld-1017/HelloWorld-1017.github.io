@@ -1,11 +1,12 @@
 ---
 layout: single
-title: n次插值多项式的截断误差估计式（拉格朗日插值余项）
+title: "Lagrangian Interpolation Remainder: Truncation Error Estimation Formula for n-th Degrees Interpolation Polynomials"
 date: 2022-02-14
 categories: 
  - Mathematics
 tags: 
  - Numerical Analysis
+toc: false
 ---
 
 

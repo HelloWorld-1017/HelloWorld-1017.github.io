@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 使用 App 向 Simulink 模型传递参数
+title: Using the App to Pass Parameters to Simulink Models in MATLAB
 date: 2022-08-08 11:50:23 +0800
 categories:
  - MATLAB
@@ -8,8 +8,6 @@ tags:
  - MATLAB App Building
 toc: false
 ---
-<br>
-
 首先创建一个简单的 Simulink 模型 test_passVariables.slx，仅包含一个 Constant 模块和 Display 模块：
 
 ![image-20220808111745944](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220808111745944.png?raw=true)
@@ -84,7 +82,7 @@ end
 
    <br>
    
-   **参考**
+   **References**
    
-   [1] [Set variables for a simulation through SimulationInput object, in - MATLAB setVariable - MathWorks China](https://ww2.mathworks.cn/help/simulink/slref/setvariable.html)
+   [1] [setVariable - MathWorks](https://ww2.mathworks.cn/help/simulink/slref/setvariable.html).
 

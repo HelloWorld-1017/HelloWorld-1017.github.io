@@ -46,13 +46,9 @@ $$
 
 [1] [Z-test - Wikipedia](https://en.wikipedia.org/wiki/Z-test).
 
-
-
 [p-value - Wikipedia](https://en.wikipedia.org/wiki/P-value).
 
 [2] [z-test - MathWorks](https://ww2.mathworks.cn/help/stats/ztest.html).
-
-[4]
 
 [5] [One-sample and paired-sample t-test - MATLAB ttest - MathWorks China](https://ww2.mathworks.cn/help/stats/ttest.html).
 

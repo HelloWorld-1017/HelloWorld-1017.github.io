@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Simulink 批量仿真以及使用 simulationEnsembleDatastore 管理仿真中记录的数据
+title: Batch Simulink Simulation and Utilising `simulationEnsembleDatastore` to Organise Simulation Results in MATLAB
 date: 2022-08-09 21:31:07  +0800
 categories:
  - MATLAB

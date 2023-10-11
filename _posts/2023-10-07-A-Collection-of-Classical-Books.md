@@ -12,6 +12,13 @@ toc: false
 1. An Introduction to  Multivariate Statistical Analysis (Third Edition), T. W. Anderson, available at: [DjVu Document (ustc.edu.cn)](http://staff.ustc.edu.cn/~ynyang/vector/2.pdf).
 2. Applied Multivariate Statistical Analysis, R. A. Johnson *et al.*, available at: [Applied Multivariate Statistical Analysis by Johnson and Wichern.pdf (uidaho.edu)](https://www.webpages.uidaho.edu/~stevel/519/Applied Multivariate Statistical Analysis by Johnson and Wichern.pdf).
 3. Methods-of-Multivariate-Analysis (Second Edition), A. C. Rencher, available at: [Methods of Multivariate Analysis 2 Ed-02 - Rencher](https://www.ipen.br/biblioteca/slr/cel/0241).
+4. Probability and Statistics Cookbook (Version 0.2.6), available at: [The Probability and Statistics Cookbook](http://statistics.zone/), GitHub repository: [mavam/stat-cookbook: :orange_book: The probability and statistics cookbook](https://github.com/mavam/stat-cookbook).
+
+<br>
+
+**Mathematical Matrix**
+
+1. The Matrix Cookbook, K. B. Petersen and M. S. Pedersen, available at: [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf). 
 
 <br>
 

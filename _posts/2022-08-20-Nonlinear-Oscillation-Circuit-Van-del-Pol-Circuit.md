@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 非线性振荡电路
+title: "Nonlinear Oscillation Circuit: Van del Pol Circuit"
 date: 2022-08-20 14:03:49 +0800
 categories: 
  - Uncertainty
@@ -399,11 +399,9 @@ end
 
 可以看到，虽然极限环的形状改变了，但是在不同的初始条件下，仍然可以建立起相同的周期振荡。
 
-
-
 <br>
 
-**参考**
+**References**
 
 [1] 邱关源. 电路（第5版）.
 

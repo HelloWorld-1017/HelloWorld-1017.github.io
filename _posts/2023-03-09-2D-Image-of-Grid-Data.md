@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【Idea 3】2D Image of Grid Data
+title: "Idea 3: 2D Image of Grid Data"
 date: 2023-03-09 22:24:25 +0800
 categories: 
  - Ideas

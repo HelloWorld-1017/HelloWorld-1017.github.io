@@ -1,12 +1,14 @@
 ---
 layout: single
-title: 多行公式排列：`align` 与 `split` 公式环境
+title: "Multi-line Equation Layout: `align` and `split` environment"
 date: 2022-08-18 19:01:37 +0800
 categories: 
  - LaTeX
+tags:
+ - LaTeX Equation
 ---
 
-# `align` 环境
+# `align` environment
 
 ```latex
 \left\{
@@ -63,7 +65,7 @@ $$
 \end{align*}\right.
 $$
 
-# `split` 环境
+# `split` environment
 
 从上面可以看到，在 Markdown 文件中添加编号的 `align` 环境与左大括号的兼容性不太好。并且不能将整个公式作为一个整体，在多行的居中位置添加编号。而 `split` 环境可以有效解决这两个问题。
 

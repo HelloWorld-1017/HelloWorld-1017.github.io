@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【Idea 2】Threshold
+title: "Idea 2: Threshold"
 date: 2022-09-10 23:17:17 +0800
 categories: 
  - Ideas

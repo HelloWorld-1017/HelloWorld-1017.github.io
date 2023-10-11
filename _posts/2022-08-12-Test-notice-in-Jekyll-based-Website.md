@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Test `{: .notice}`"
+title: "Test `{: .notice}` in Jekyll-based Website" 
 date: 2022-08-12 17:03:13 +0800
 categories: 
  - GitHub

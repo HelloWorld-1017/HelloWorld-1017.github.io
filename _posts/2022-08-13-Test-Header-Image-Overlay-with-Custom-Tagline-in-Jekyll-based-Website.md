@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Test Header Image Overlay with Custom Tagline
+title: Test Header Image Overlay with Custom Tagline in Jekyll-based Website
 tagline: Peaky Blinders
 header:
   overlay_image: /images/PeakyBlinders1.jpg

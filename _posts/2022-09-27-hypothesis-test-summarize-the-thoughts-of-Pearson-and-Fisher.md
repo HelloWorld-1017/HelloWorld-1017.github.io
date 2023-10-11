@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【Hypothesis Test 1】Summarize the Thoughts of Pearson and Fisher
+title: "Hypothesis Test 1: Summarize the Thoughts of Pearson and Fisher"
 date: 2022-09-27 16:47:51 +0800
 categories: 
  - Mathematics

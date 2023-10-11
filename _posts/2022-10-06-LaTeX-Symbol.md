@@ -4,6 +4,8 @@ title: LaTeX Symbol
 date: 2022-10-06 23:09:11 +0800
 categories: 
  - LaTeX
+tags:
+ - LaTeX Equation
 ---
 
 # Mathematical Fonts

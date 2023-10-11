@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Test Sidebar with Navigation List
+title: Test Sidebar with Navigation List in Jekyll-based Website
 date: 2022-08-18 11:36:13 +0800
 categories: 
  - GitHub

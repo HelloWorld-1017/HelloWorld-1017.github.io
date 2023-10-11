@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【Hypothesis Test 3】Neyman-Pearson Hypothesis Testing(Statistical Hypothesis Testing)
+title: "Hypothesis Test 3: Neyman-Pearson Hypothesis Testing(Statistical Hypothesis Testing)"
 date: 2022-10-25 22:11:01 +0800
 categories: 
  - Mathematics

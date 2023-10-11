@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Test Gallery
+title: Test Gallery in Jekyll-based Website
 date: 2022-08-12 20:16:09 +0800
 categories: 
  - GitHub

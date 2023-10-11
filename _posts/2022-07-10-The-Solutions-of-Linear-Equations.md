@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 线性方程组解的判定
+title: Determination of Solutions for Linear Equations
 date: 2022-07-10
 categories: 
  - Mathematics
@@ -8,9 +8,7 @@ tags:
  - Matrix
 ---
 
-
-
-### 线性方程组解的判定
+# 线性方程组解的判定
 
 假设 $A$ 是一个 $m\times n$ 矩阵，则对于**线性方程组(systems of linear equations)**
 
@@ -27,9 +25,9 @@ $$
 | $\mathrm{rank}(A)=\mathrm{rank}(B)<n$ | 有无穷多解 |
 | $\mathrm{rank}(A)<\mathrm{rank}(B)$   | 无解       |
 
+<br>
 
----
-###  齐次线性方程组解的判定
+#  齐次线性方程组解的判定
 
 特别地，对于**齐次线性方程组(homogeneous linear equations)**
 
@@ -45,19 +43,17 @@ $$
 齐次线性方程组\eqref{homogeneous}有非零解\Leftrightarrow r(A)<n\notag
 $$
 
----
-### 非线性方程组不存在类似解的判定
+<br>
+
+# 非线性方程组不存在类似解的判定
 
 秩(rank)是基于**线性方程组**定义的，因此对于非线性方程组，并不存在类似通用的判定解的条件。实际上，非线性的概念非常宽泛和复杂，只要输入输出不满足线性性质（齐次性和可加性）的函数都被称为非线性函数，比如多项式函数、带有微分项、偏微分项的函数等等。因此，判定由它们所构成构成的方程组的解的情况当然不存在类似的通用方法。
 
+<br>
 
+**Reference**
 
+[1] [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf). 
 
----
-
-**参考**
-
-[1] [Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf). 
-
-[2] [Nonlinear system](https://en.wikipedia.org/wiki/Nonlinear_system).
+[2] [Nonlinear system - Wikipedia](https://en.wikipedia.org/wiki/Nonlinear_system).
 

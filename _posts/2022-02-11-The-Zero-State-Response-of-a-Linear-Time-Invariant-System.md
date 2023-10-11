@@ -1,13 +1,11 @@
 ---
 layout: single
-title: 线性时不变(LTI)系统的零状态响应等于输入信号与单位脉冲响应的卷积
+title: The Zero-State Response of a Linear Time Invariant System Equals to the Convolution of the Input Signal and the Unit-pulse Response
 date: 2022-02-11
 categories: 
  - Signals and Systems
 toc: false
 ---
-
-
 
 以离散系统为例。在离散的线性时不变(linear time invariant, LTI)系统中，输入为单位脉冲函数$\delta(k)$时产生单位脉冲响应$h(k)$，则有： 
 

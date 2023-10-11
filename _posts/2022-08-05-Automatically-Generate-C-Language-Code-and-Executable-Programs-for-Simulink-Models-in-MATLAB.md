@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 自动生成 Simulink 模型的 C 语言代码和可执行程序
+title: Automatically Generate C Language Code and Executable Programs for Simulink Models in MATLAB
 date: 2022-08-05 16:22:29 +0800
 categories: 
  - MATLAB 

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 二阶非线性电路的状态方程和相图
+title: State Function and Phase Portrait of Second-order Linear RLC Circuits
 date: 2022-08-19 09:17:37 +0800
 categories: 
  - Uncertainty

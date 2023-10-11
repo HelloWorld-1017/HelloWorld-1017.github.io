@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Set Signal Logging
+title: Set Signal Logging in MATLAB Simulink
 date: 2022-08-08 18:23:43 +0800
 categories:
  - MATLAB

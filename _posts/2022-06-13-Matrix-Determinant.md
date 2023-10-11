@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Determinant
+title: Matrix Determinant
 date: 2022-06-13
 categories: 
  - Mathematics
@@ -74,4 +74,4 @@ $$
 
 **Reference**
 
-[1] [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)
+[1] [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9).

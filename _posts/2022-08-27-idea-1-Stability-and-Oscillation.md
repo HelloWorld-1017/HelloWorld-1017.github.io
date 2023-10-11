@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 【Idea 1】稳定与振荡
+title: "Idea 1: Stability and Oscillation"
 date: 2022-08-27 13:04:27 +0800
 categories: 
  - Ideas

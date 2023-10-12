@@ -16,7 +16,7 @@ tags:
 
 设$X_1,\cdots, X_n$是从该总体中抽出的样本。所谓$\theta$的区间估计，就是估计满足条件$\hat{\theta}_1(X_1, \cdots, X_n)\le \hat{\theta}_2(X_1, \cdots, X_n)$的两个统计量$\hat{\theta}_1$，$\hat{\theta}_2$为端点的区间$[\hat{\theta}_1,\hat{\theta}_2]$。一旦有了样本$X_1,\cdots, X_n$，就把$\theta$估计在区间$[\hat{\theta}_1(X_1, \cdots, X_n),\ \hat{\theta}_2(X_1, \cdots, X_n)]$之内。
 
-再次强调，区间端点为统计量。
+N.B.: 再次强调，区间端点为统计量。
 {: .notice--primary}
 
 这里有两个要求：
@@ -35,8 +35,8 @@ $$
 
 **但是这两个要求是相互矛盾的**。区间估计理论和方法的基本问题，就是在已有的样本资源下，怎样找出更好的估计方法，以尽量提高可靠性和精度，但最终有一定的限度。奈曼提出并为现今所广泛接受的原则是：**先保证可靠性，在这个前提下尽可能使精度提高**。为此，他引出了如下的定义：
 
-定义：给定一个很小的数$\alpha>0$，如果对参数$\theta$的任何值，概率$\eqref{eq1}$都等于$1-\alpha$，则称区间估计$[\hat{\theta}_1,\hat{\theta}_2]$的**置信系数**为$1-\alpha$。
-{: .notice}
+Definition：给定一个很小的数$\alpha>0$，如果对参数$\theta$的任何值，概率$\eqref{eq1}$都等于$1-\alpha$，则称区间估计$[\hat{\theta}_1,\hat{\theta}_2]$的**置信系数**为$1-\alpha$。
+{: .notice--primary}
 
 估计区间也常称为是“置信区间”，即对该区间包含未知参数$\theta$可置信到何种程度，例如95%置信区间。
 
@@ -62,8 +62,8 @@ $$
 
 定义$u_\beta$为分布$N(0,1)$的**上$\beta$分位点**，其含义是$N(0,1)$分布中大于$u_\beta$的那部分的概率就是$\beta$。
 
-上$\beta$分位点的概念可以推广到任何分布$F$：满足$F(v_\beta)=1-\beta$的点$v_\beta$就是分布函数$F$的上$\beta$分位点。在数理统计学中，除了正态分布外，“统计三大分布”的上分位点很常用。
-{: notice--primary}
+N.B.: 上$\beta$分位点的概念可以推广到任何分布$F$：满足$F(v_\beta)=1-\beta$的点$v_\beta$就是分布函数$F$的上$\beta$分位点。在数理统计学中，除了正态分布外，“统计三大分布”的上分位点很常用。
+{: .notice--primary}
 
 因此，根据公式$\eqref{eq2}$和上$\beta$分位点的定义，并且对于标准正态分布有：$\Phi(-x)=1-\Phi(x)$，于是可以得到：
 
@@ -104,7 +104,7 @@ $$
 P\Big(t_{n-1}(1-\alpha/2)\le\sqrt{n}(\overline{X}-\mu)/S\le t_{n-1}(\alpha/2)\Big)=1-\alpha\notag
 $$
 
-又因为t分布的PDF关于$x=0$对称，即$t_{n-1}(1-\alpha/2)=-t_{n-1}(\alpha/2)$，于是上式可化为：
+又因为$t$分布的PDF关于$x=0$对称，即$t_{n-1}(1-\alpha/2)=-t_{n-1}(\alpha/2)$，于是上式可化为：
 
 $$
 P\Big(-t_{n-1}(\alpha/2)\le\sqrt{n}(\overline{X}-\mu)/S\le t_{n-1}(\alpha/2)\Big)=1-\alpha\notag

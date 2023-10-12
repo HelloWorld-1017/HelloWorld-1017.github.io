@@ -6,7 +6,6 @@ categories:
  - MATLAB
  - Mathematics
 tags:
- - MATLAB 
  - Probability Theory and Mathematical Statistics
 ---
 

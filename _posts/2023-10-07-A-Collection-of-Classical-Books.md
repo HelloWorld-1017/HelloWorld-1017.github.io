@@ -33,6 +33,10 @@ toc: false
 
 1. *Deep Learning*, I. Goodfellow *et al.*, available at: [Deep Learning (deeplearningbook.org)](https://www.deeplearningbook.org/).
 
+**Graph Theory**
+
+1. *Graph Theory (Fourth Edition)*, R. J. Wilson, available at: [wilsongraph.pdf](https://www.maths.ed.ac.uk/~v1ranick/papers/wilsongraph.pdf).
+
 <br>
 
 **Electrical Engineering**

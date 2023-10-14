@@ -1,6 +1,28 @@
-Mardia’s test
+---
+layout: single
+title: "Hypothesis Test 5: Mardia’s test"
+date: 2023-10-13 22:43:19 +0800
+categories:
+ - Mathematics
+ - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
+ - MATLAB Statistics and Machine Learning Toolbox
+---
 
-three resources:
+# Introduction
+
+Mardia’s test is a multivariate normally test to examine a set of data whether follow a multivariate normal distribution, by checking the multivariate skewness and kurtosis measures are consistent with a multivariate normal distribution ==[real]==. The null hypothesis of Mardia’s test is that the data set is similar to the normal distribution, therefore a sufficiently small $p$-value indicates non-normal data ==[wiki]==.
+
+I found three resources in the Internet discussing Mardia’s test. However, they looks similar, but not exactly the same. So, this blog will compare and discuss about them.
+
+<br>
+
+# Media’s test from Wikipedia
+
+
+
+
 
 for samples $\mathrm{\boldsymbol{X}}_1,\mathrm{\boldsymbol{X}}_2,\cdots,\mathrm{\boldsymbol{X}}_n$ of $k$-dimensional vectors, denote that:
 
@@ -13,6 +35,9 @@ $$
 &m_{i,j}=(\mathrm{\boldsymbol{X}}_i-\bar{\mathrm{\boldsymbol{X}}})^T\hat{\Sigma}^{-1}(\mathrm{\boldsymbol{X}}_j-\bar{\mathrm{\boldsymbol{X}}})\\
 \end{split}
 $$
+N.B., Actually, $\hat{\Sigma}$ is the biased sample covariance matrix.
+{: .notice--warning}
+
 then [1]:
 $$
 \begin{split}
@@ -35,6 +60,8 @@ $$
 \end{split}
 $$
 
+The "sample versions" of $\text{skew}$ and $\text{kurt}$ are: 
+
 $$
 \begin{split}
 &\text{skew}^\prime=\dfrac{n}{(n-1)^3}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\\
@@ -46,11 +73,15 @@ $$
 \text{meanKurt}=\dfrac{k}{k+2}\\
 \text{varKurt}=\dfrac{8k(k+2)}{n}
 $$
-==first write z-test==
-
-
-
 <br>
+
+sample covariance matrix
+
+
+
+The problem of `df`
+
+
 
 **References**
 
@@ -61,3 +92,4 @@ $$
 [3] [Mardia's Test - Real Statistics Using Excel](https://real-statistics.com/multivariate-statistics/multivariate-normal-distribution/multivariate-normality-testing/).
 
 [4] [Methods of Multivariate Analysis 2 Ed-02](https://www.ipen.br/biblioteca/slr/cel/0241), pages 112-113.
+

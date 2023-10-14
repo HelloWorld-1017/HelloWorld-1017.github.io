@@ -2,13 +2,7 @@ The Terminology of Graph Theory
 
 
 
-
-
-
-
-
-
-**Graph**: A graph consists of a set of **nodes** and set of node pairs called **edges**.
+**Graph**: A graph consists of a set of **nodes** and a set of node pairs called **edges**.
 
 An edge **links** the two nodes defining it and it is **incident** on both of them.
 
@@ -30,7 +24,7 @@ A **subgraph** of a given graph is a graph with all of its nodes and edges in th
 
 Subgraphs having no nodes in common are called **disjoint**; subgraphs having no edges in common are called **orthogonal**.
 
-A **spanning subgraph** of a given graph is a subgaph with node set identical to the node set of the given graph.
+A **spanning subgraph** of a given graph is a subgraph with node set identical to the node set of the given graph.
 
 A **spanning tree** of a graph is a spanning subgraph that is a tree.
 
@@ -40,19 +34,9 @@ An **edge weighted graph** is a graph with a real number assigned to each edge.
 
 A **minimal spanning tree (MST)** of an edge weighted graph is a spanning tree for which the sum of edge weights is a minimum.
 
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-Theorem (1): An MST contains as as subgraph the “nearest neighbour graph”. That is, there is an edge linking each node and the node closet to it (or one of them if there are ties).
+Theorem (1): An MST contains as a subgraph the “nearest neighbour graph”. That is, there is an edge linking each node and the node closet to it (or one of them if there are ties).
 
 Theorem (2): If any edge of an MST is deleted, thereby dividing the graph into two disjoint connected subgraphs, and thus dividing the points into two disjoint subsets, the deleted edge weight is the smallest interpoint distance between the two subsets.
 
@@ -61,6 +45,3 @@ Theorem (2): If any edge of an MST is deleted, thereby dividing the graph into t
 **References**
 
 [1] J. H. Friedman and L. C. Rafsky, "Multivariate generalizations of the Wald-Wolfowitz and Smirnov two-sample tests," *Ann. Stat.*, (1979): 697-717.
-
-
-

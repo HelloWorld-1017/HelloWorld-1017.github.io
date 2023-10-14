@@ -1,34 +1,23 @@
 clc,clear,close all
 
-rng(1)
+load fisheriris;
+prednames = {'SepalLength','SepalWidth','PetalLength','PetalWidth'};
 
-num = 1000;
-mu_bar = 0.1;
-sigma_bar =1.1;
-data = sigma_bar*randn(1,num)+mu_bar;
+% Train a linear discriminant analysis model.
+L = fitcdiscr(meas,species,'PredictorNames',prednames);
 
-mu = 0;
-sigma = 1;
-[h,p,ci,zval] = ztest(data,mu,sigma)
+% Train a quadratic discriminant analysis model
+Q = fitcdiscr(meas,species,'PredictorNames',prednames,'DiscrimType','quadratic');
 
-disp((mean(data)-mu)/(sigma/sqrt(num)))
+[N,D] = size(meas);
+meanKurt = D*(D+2)
 
-figure
-hold(gca,"on"),box(gca,"on"),grid(gca,"on")
-x = -10:0.1:10;
-plot(x,normpdf(x,mu,sigma),"LineWidth",1.5,"DisplayName","Test norm")
-plot(x,normpdf(x,mu_bar,sigma_bar),"LineWidth",1.5,"DisplayName","Real norm")
-low_alpha = norminv(0.025,0,1);
-stem([low_alpha,-low_alpha], ...
-    [normpdf(low_alpha),normpdf(-low_alpha)],"filled","Color","k");
-legend();
+varKurt = 8*D*(D+2)/N
 
-pp = 2*normcdf(-abs(zval),0,1)
+mahL = mahal(L,L.X,'ClassLabels',L.Y);
+meanL = mean(mahL.^2);
+[~,pvalL] = ztest(meanL,meanKurt,sqrt(varKurt))
 
-mean(data)+sigma*low_alpha/sqrt(num)
-mean(data)-sigma*low_alpha/sqrt(num)
-
-% normcdf(zval,0,1)
-
-% icdf("norm",0.025,0,1)
-
+mahQ = mahal(Q,Q.X,'ClassLabels',Q.Y);
+meanQ = mean(mahQ.^2);
+[~,pvalQ] = ztest(meanQ,meanKurt,sqrt(varKurt))

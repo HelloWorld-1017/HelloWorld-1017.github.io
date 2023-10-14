@@ -1,0 +1,39 @@
+% for ii = 1:n
+%     for jj = 1:n
+%         skew = skew+(1/n^2)*((meas(ii,:)-mu)*inv(Sigma_hat)*(meas(jj,:)-mu)')^3;
+%         count1 = count1+1;
+%         if ii == jj
+%             kurt = kurt+(1/n)*((meas(ii,:)-mu)*inv(Sigma_hat)*(meas(jj,:)-mu)')^2;
+%             count2 = count2+1;
+%         end
+%     end
+% end
+% disp(count1),disp(count2)
+% disp(skew),disp(kurt)
+
+
+% skew = (n/(n-1))^3*skew;
+% kurt = (n/(n-1))^2*kurt;
+% 
+% disp(skew),disp(kurt)
+% 
+% % Mardia’s Skewness Test
+% df = (k*(k+1)*(k+2))/6;
+% c = ((n+1)*(n+3)*(k+1))/(n*(n+1)*(k+1)-6);
+% corrected_skew = (n*c)/6*skew
+% 
+% % Mardia’s Kurtosis Test
+% corrected_kurt = (kurt-k*(k+2))*sqrt(n/(8*k*(k+2)))
+% 
+% x = 0:0.2:100;
+% y = chi2pdf(x,df);
+% plot(x,y)
+% 
+% % df is too large
+% 
+% fun = @(k) (1/6)*k*(k+1)*(k+2)
+% 
+% x = 0:0.2:100;
+% y = chi2pdf(x,fun(10));
+% plot(x,y)
+% 

@@ -1,8 +1,11 @@
 The Terminology of Graph Theory
 
+Recently, I've been learning multivariate normality test. During which process, I found Friedman-Rafsky test, which is proposed by J. H. Friedman and L. C. Rafsky in 1979 [[1]](#ref). Friedman and Rafsky generalised Wald-Wolfowitz test and Smirnov two-sample test to multivariate case, by replacing the notion of univariate sorted list by **minimal spanning tree** in graph theory. I think this generalisation is really artful and inspiring. I ever know the graph theory is an important branch of mathematics, but I rarely use it. The Friedman and Rafsky's paper gave a brief introduction about some terminology of graph theory, so I recorded down here, and more basic knowledge will be add if I meet it in the future.
+{: .notice--warning}
 
+# Terminology
 
-**Graph**: A graph consists of a set of **nodes** and a set of node pairs called **edges**.
+A **graph** consists of a set of **nodes** and a set of node pairs called **edges**.
 
 An edge **links** the two nodes defining it and it is **incident** on both of them.
 
@@ -36,12 +39,21 @@ A **minimal spanning tree (MST)** of an edge weighted graph is a spanning tree f
 
 <br>
 
-Theorem (1): An MST contains as a subgraph the “nearest neighbour graph”. That is, there is an edge linking each node and the node closet to it (or one of them if there are ties).
+# Theorem
 
-Theorem (2): If any edge of an MST is deleted, thereby dividing the graph into two disjoint connected subgraphs, and thus dividing the points into two disjoint subsets, the deleted edge weight is the smallest interpoint distance between the two subsets.
+Theorem 1: An MST contains as a subgraph the “nearest neighbour graph”. That is, there is an edge linking each node and the node closet to it (or one of them if there are ties).
+
+The edge between two nodes can also be called a **tie **[[2]](#ref).
+{: .notice--primary}
+
+Theorem 2: If any edge of an MST is deleted, thereby dividing the graph into two disjoint connected subgraphs, and thus dividing the points into two disjoint subsets, the deleted edge weight is the smallest interpoint distance between the two subsets.
 
 <br>
+
+<div id="ref"></div>
 
 **References**
 
 [1] J. H. Friedman and L. C. Rafsky, "Multivariate generalizations of the Wald-Wolfowitz and Smirnov two-sample tests," *Ann. Stat.*, (1979): 697-717.
+
+[2] [Glossary of SNA Terms - People of Medieval Scotland](https://www.poms.ac.uk/help/social-network-analysis/glossary-of-sna-terms/).

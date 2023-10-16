@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a6paper}
+\tiny
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[colorlinks=true,
+            linkcolor=JungleGreen, % Set internal link color
+            anchorcolor=orange, % Does not work
+            citecolor=green,
+            filecolor=cyan,
+            menucolor=black,
+            runcolor=magenta, 
+            urlcolor=blue % Set external website link color
+            ]{hyperref}
+            
+\newcommand{\myhypertarget}[3][orange]{\hypertarget{#2}{\textcolor{#1}{#3}}}
+
+\begin{document}
+\section{Introduction}
+\label{sec-introduction}
+This is \href{www.github.com}{GitHub} and \href{www.wikipedia.com}{Wikipedia} website\footnote{We
+changed the color of internal links to JungleGreen.}.\\
+\hypertarget{link}{Anchored by ``hypertarget", tag is ``link''.}\\
+\myhypertarget{mylink}{Anchored by ``myhypertarget", tag is ``mylink''.} \cite{b1}\\
+\noindent Click \href{run:readme.txt}{here} to open ``readmea.txt''.\\
+\noindent Click \hyperref[sec-introduction]{here} to jump to Introduction Section.\\
+\hyperlink{link}{Link to tag ``link''.}\\
+\hyperlink{mylink}{Link to tag ``mylink''.}\\
+\begin{thebibliography}{00}
+\bibitem{b1} \href{https://tex.stackexchange.com/questions/478463/anchorcolor-in-hyperref-not-working}{anchorcolor in hyperref not working? - Stack Exchange.}
+\end{thebibliography}
+
+\end{document}

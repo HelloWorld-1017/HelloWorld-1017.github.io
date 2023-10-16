@@ -8,7 +8,7 @@ categories:
 toc: false
 ---
 
-**LaTeX**
+**LaTeX TikZ and PGF**
 
 1. [PGF/TikZ Manual: Complete Online Documentation](https://tikz.dev/).
 1. [TikZ and PGF examples](https://texample.net/tikz/examples/all/).
@@ -36,6 +36,9 @@ toc: false
 4. [Adobe Color: 色輪、調色盤產生器](https://color.adobe.com/zh/create/color-wheel).
 5. [ColorBrewer: Color Advice for Maps](https://colorbrewer2.org).
 6. [Color Lisa: Color palette masterpieces of the world’s greatest artists.](https://colorlisa.com/).
+7. [LaTeX `xcolor` Package](https://ctan.org/pkg/xcolor?lang=en).
+   There are detailed information about various color models (formula) in this package documentation.
+   {: .notice--primary}
 
 <br>
 

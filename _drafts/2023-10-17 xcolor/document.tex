@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{xcolor}
+\renewcommand{\baselinestretch}{1.5}
+\newcommand\myfcolorbox[1]{\fcolorbox{black}{#1}{\phantom{\tiny{color}}} #1\quad}
+\begin{document}
+\begin{center}
+	\begin{tabular}{llllll}
+		\myfcolorbox{black} & \myfcolorbox{gray} & \myfcolorbox{olive} & \myfcolorbox{teal} & \myfcolorbox{blue} & \myfcolorbox{green}\\
+		\myfcolorbox{orange} & \myfcolorbox{violet} & \myfcolorbox{brown} & \myfcolorbox{lightgray} & \myfcolorbox{pink} & \myfcolorbox{white}\\
+		\myfcolorbox{cyan} & \myfcolorbox{lime} & \myfcolorbox{purple} & \myfcolorbox{yellow} & \myfcolorbox{darkgray} & \myfcolorbox{magenta}\\
+		\myfcolorbox{red}
+	\end{tabular}
+\end{center}
+
+\end{document}

@@ -16,7 +16,4 @@ https://tex.stackexchange.com/questions/525261/better-default-colors-for-hyperre
 
 https://www.garrickadenbuie.com/blog/colors-of-xcolor/
 
-https://mirror.mwt.me/ctan/macros/latex/contrib/xcolor-material/xcolor-material.pdf
-
-p40, grey, and gray
 

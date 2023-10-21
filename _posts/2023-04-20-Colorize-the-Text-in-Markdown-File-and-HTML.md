@@ -3,7 +3,7 @@ layout: single
 title: Colorize the Text in Markdown File and HTML
 date: 2023-04-20 10:49:37 +0800
 categories: 
- - GitHub 
+ - Jekyll
  - LaTeX
 toc: false
 ---

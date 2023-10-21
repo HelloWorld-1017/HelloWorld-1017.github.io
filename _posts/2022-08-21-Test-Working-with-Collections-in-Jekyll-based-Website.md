@@ -3,8 +3,6 @@ layout: single
 title: Test Working with Collections in Jekyll-based Websi
 date: 2022-08-21 13:25:23 +0800
 categories: 
- - GitHub
-tags: 
  - Jekyll
 toc: false
 classes: wide

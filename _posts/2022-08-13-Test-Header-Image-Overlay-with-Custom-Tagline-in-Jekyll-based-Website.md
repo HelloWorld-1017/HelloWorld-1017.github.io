@@ -7,8 +7,6 @@ header:
   caption: "Peaky Blinders"
 date: 2022-08-13 16:20:25 +0800
 categories: 
- - GitHub
-tags: 
  - Jekyll
 toc: false
 classes: wide

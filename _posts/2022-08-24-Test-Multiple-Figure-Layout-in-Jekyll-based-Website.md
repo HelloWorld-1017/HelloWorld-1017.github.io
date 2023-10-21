@@ -3,8 +3,6 @@ layout: single
 title: Test Multiple Figure Layout in Jekyll-based Website (HTML `<figure>` tag)
 date: 2022-08-24 10:07:19 +0800
 categories: 
- - GitHub
-tags: 
  - Jekyll
 classes: wide
 ---

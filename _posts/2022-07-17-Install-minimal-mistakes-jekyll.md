@@ -4,7 +4,6 @@ title: Install the Minimal-mistakes-jekyll Theme in Github Pages
 date: 2022-07-17 12:25:11 +0800
 categories: 
  - GitHub
-tags: 
  - Jekyll
 ---
 

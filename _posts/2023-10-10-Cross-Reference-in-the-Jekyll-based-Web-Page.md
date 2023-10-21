@@ -3,8 +3,6 @@ layout: single
 title: Cross Reference in the Jekyll-based Web Page
 date: 2023-10-10 16:37:25 +0800
 categories:
- - GitHub
-tags:
  - Jekyll
 toc: false
 ---

@@ -4,7 +4,7 @@ title: Redirect Figure Links in `.md` Files using MATLAB
 date: 2023-10-02 18:37:29 +0800
 categories:
  - MATLAB
- - GitHub
+ - Jekyll
 tags:
  - MATLAB Language Fundamentals
  - Regular Expression

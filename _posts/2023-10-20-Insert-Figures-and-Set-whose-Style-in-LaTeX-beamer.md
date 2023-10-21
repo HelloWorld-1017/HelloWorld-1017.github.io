@@ -88,9 +88,10 @@ in the preamble area [[3]](#ref).
 
 **References**
 
-[1] [Customise Figure Caption Style in LaTeX System - What a starry night ~](https://helloworld-1017.github.io/latex/Customise-Figure-Caption-Style-in-LaTeX-System/).
+[1] [Customise Figure Caption Style in LaTeX System - What a starry night ~](https://helloworld-1017.github.io/2023-10-11/14-19-07.html).
 
-[2] [Organise Multi-figure Layout in LaTeX System - What a starry night ~](https://helloworld-1017.github.io/latex/Organise-Multi-figure-Layout-in-LaTeX-System/).
+[2] [Organise Multi-figure Layout in LaTeX System - What a starry night ~](https://helloworld-1017.github.io/2023-10-03/22-38-49.html).
 
 [3] [Beamer Presentation: Figure has no number? - Stack Exchange](https://tex.stackexchange.com/a/127150/306224).
 
+[4] [Figures in Beamer - A detailed tutorial - LaTeX Beamer](https://latex-beamer.com/tutorials/beamer-figure/).

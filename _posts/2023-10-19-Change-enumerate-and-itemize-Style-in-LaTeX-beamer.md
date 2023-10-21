@@ -149,7 +149,7 @@ or organise the contents using `minipage` environment rather than `columns` [[5]
 
 <br>
 
-# Change unordered list mark style [[6]](#ref)
+# Change unordered list mark style [[6, 7]](#ref)
 
 ```latex
 \documentclass{beamer}
@@ -219,5 +219,7 @@ or organise the contents using `minipage` environment rather than `columns` [[5]
 [4] [https://tex.stackexchange.com/a/22944/306224](https://tex.stackexchange.com/a/22944/306224).
 
 [5] [https://tex.stackexchange.com/a/184689/306224](https://tex.stackexchange.com/a/184689/306224).
+
+[7] [https://latex-beamer.com/tutorials/lists/](https://latex-beamer.com/tutorials/lists/).
 
 [6] [https://mirror-hk.koddos.net/CTAN/macros/latex/required/psnfss/psnfss2e.pdf](https://mirror-hk.koddos.net/CTAN/macros/latex/required/psnfss/psnfss2e.pdf).

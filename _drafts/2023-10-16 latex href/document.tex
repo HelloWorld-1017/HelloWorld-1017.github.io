@@ -5,12 +5,12 @@
 \usepackage[dvipsnames]{xcolor}
 
 \usepackage[colorlinks=true,
-            linkcolor=JungleGreen, % Set internal link color
-            anchorcolor=orange, % Does not work
+            linkcolor=violet, % Set internal link color
+            anchorcolor=yellow, % Does not work
             citecolor=green, % 
             filecolor=red, % does not work in pdf view window in TeXstudio
 %            menucolor=black,
-            runcolor=magenta, % does not work in pdf view window in TeXstudio
+            runcolor=cyan, % does not work in pdf view window in TeXstudio
             urlcolor=blue % Set external website link color
             ]{hyperref}
             
@@ -20,18 +20,19 @@
 	\tableofcontents
 	\section{Introduction}
 		\label{sec-introduction}
-		This is \href{www.github.com}{GitHub} and \href{www.wikipedia.com}{Wikipedia} website\footnote{We
-		changed the color of internal links to JungleGreen.}.\\
+		This is \href{www.github.com}{GitHub} and \href{www.wikipedia.com}{Wikipedia} website\footnote{This is a footnote}.\\
 		\hypertarget{link}{Anchored by ``hypertarget", tag is ``link''.}\\
-		\myhypertarget{mylink}{Anchored by ``myhypertarget", tag is ``mylink''.} \cite{b1}\\
+		\myhypertarget{mylink}{Anchored by ``myhypertarget", tag is ``mylink''.} \\
 		\noindent Click \href{readme.txt}{here} to open ``readme.txt''.\\
 		\noindent Click \href{run:readme.txt}{here} to open ``readme.txt''.\\
 		\noindent Click \hyperref[sec-introduction]{here} to jump to Introduction Section.\\
 		\hyperlink{link}{Link to tag ``link''.}\\
 		\hyperlink{mylink}{Link to tag ``mylink''.}\\
-		\Acrobatmenu{View}{View Something}
+		\Acrobatmenu{View}{View Something}\\
+		Cite reference \cite{b1}
 		\begin{thebibliography}{00}
 		\bibitem{b1} \href{https://tex.stackexchange.com/questions/478463/anchorcolor-in-hyperref-not-working}{anchorcolor in hyperref not working? - Stack Exchange.}
+		
 		
 \end{thebibliography}
 

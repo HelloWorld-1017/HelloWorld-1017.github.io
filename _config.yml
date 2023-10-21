@@ -18,8 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-
-
 # theme                    : minimal-mistakes-jekyll  # "minimal-mistakes-jekyll" # "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 locale                   : "en-US" # "zh-CN"
@@ -187,7 +185,8 @@ defaults:
 #       icon: "fab fa-fw fa-instagram"
 #       url: "https://instagram.com/mmistakes"
 
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
+permalink: /:year-:month-:day/:hour-:minute-:second:output_ext
 paginate_path: /page:num/
 paginate: 17
 timezone: Asia/Shanghai

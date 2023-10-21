@@ -2,6 +2,42 @@ Friedman-Rafsky-Smith-Jain test
 
 
 
+```
+numG = 1e3;
+W = 2e3;
+alpha = 0.05;
+Accept! p-value: 0.1365
+Accept! p-value: 0.5015
+Accept! p-value: 0.2110
+```
+
+```
+numG = 50; % 1e3
+W = 2e3;
+alpha = 0.05;
+Accept! p-value: 0.5390
+Accept! p-value: 0.4890
+Accept! p-value: 0.3350
+```
+
+```
+numG = 100; % 1e3
+W = 2e3;
+alpha = 0.05;
+
+Accept! p-value: 0.8495
+Accept! p-value: 0.2550
+Accept! p-value: 0.0540
+```
+
+
+
+
+
+
+
+
+
 <br>
 
 **References**

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Determination of Solutions for Linear Equations
-date: 2022-07-10
+date: 2022-07-10 21:21:26 +0800
 categories: 
  - Mathematics
 tags: 

@@ -1,5 +1,5 @@
 clc,clear,close all
-rng(3)
+rng(7)
 
 num = 10;
 data = [randn(num,1),randn(num,1)];

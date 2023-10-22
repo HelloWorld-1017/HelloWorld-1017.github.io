@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Lagrangian Interpolation Remainder: Truncation Error Estimation Formula for n-th Degrees Interpolation Polynomials"
-date: 2022-02-14
+date: 2022-02-14 14:45:27 +0800
 categories: 
  - Mathematics
 tags: 

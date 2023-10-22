@@ -78,8 +78,8 @@ $$
 
 **Reference**
 
-[1] [Fundamental theorem of algebra-Wikipedia](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra)
+[1] [Fundamental theorem of algebra - Wikipedia](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra).
 
-[2] [Abel–Ruffini theorem-Wikipedia](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem)
+[2] [Abel–Ruffini theorem - Wikipedia](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem).
 
-[3] 3Blue1Brown. [【官方双语】群论与808017424794512875886459904961710757005754368000000000](https://www.bilibili.com/video/BV1Rh411R7KL?spm_id_from=333.999.0.0&vd_source=8aeddead7f39b0189fff9b14fa090a75)
+[3] [群论与808017424794512875886459904961710757005754368000000000 - 3Blue1Brown](https://www.bilibili.com/video/BV1Rh411R7KL?spm_id_from=333.999.0.0&vd_source=8aeddead7f39b0189fff9b14fa090a75).

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Vector Derivative
-date: 2022-07-14 17:45:25
+date: 2022-07-14 17:45:25 +0800
 categories: 
  - Mathematics
 tags: 

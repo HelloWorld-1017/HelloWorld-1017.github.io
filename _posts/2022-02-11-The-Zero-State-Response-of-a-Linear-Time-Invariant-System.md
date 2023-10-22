@@ -1,7 +1,7 @@
 ---
 layout: single
 title: The Zero-State Response of a Linear Time Invariant System Equals to the Convolution of the Input Signal and the Unit-pulse Response
-date: 2022-02-11
+date: 2022-02-11 11:53:37 +0800
 categories: 
  - Signals and Systems
 toc: false

@@ -1,14 +1,12 @@
 ---
 layout: single
 title: Matrix Determinant
-date: 2022-06-13
+date: 2022-06-13 19:57:32 +0800
 categories: 
  - Mathematics
 tags: 
  - Matrix
 ---
-
-
 
 
 # Determinant Definition

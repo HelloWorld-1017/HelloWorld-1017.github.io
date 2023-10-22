@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Chebyshev Polynomials and Chebyshev Interpolation
-date: 2022-02-14
+date: 2022-02-14 10:01:10 +0800
 categories: 
  - Mathematics
 tags: 
@@ -10,7 +10,7 @@ tags:
 
 
 
-## 切比雪夫多项式
+## Chebyshev polynomials
 
 定义$n$阶切比雪夫多项式$T_n(x)=\cos(n\arccos x)$。$n$取不同的值对应着不同的关于$x$的多项式。例如：
 
@@ -55,7 +55,7 @@ T_3(x)&=2xT_2(x)-T_1(x)=4x^3-3x
 \end{aligned}
 $$
 
-## 切比雪夫多项式的性质
+## The properties of Chebyshev polynomials
 
 在 $x\in [-1,1]$区间观察切比雪夫多项式，可以得到以下几个性质：
 
@@ -179,3 +179,5 @@ $$
 插值节点为 $x_i=cos(\dfrac{i\pi}{n})\ (i=0,1,\cdots,n)$。
 
 > 对于一般区间$[a,b]$，选取$x_i=\dfrac{a+b}{2}+\dfrac{b-a}{2}cos(\dfrac{2i+1}{2n+2}\pi)\ (i=0,...,n)$作为插值节点得到插值多项式$P_n(x)$，余项$R_n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\dfrac{(b-a)^{n+1}}{2^{2n+1}}T_{n+1}(t)$有最小上界$\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\dfrac{(b-a)^{n+1}}{2^{2n+1}},\ \xi\in(a,b)$。
+
+<br>

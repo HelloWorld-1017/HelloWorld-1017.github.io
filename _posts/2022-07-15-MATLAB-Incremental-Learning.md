@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Incremental Learning in MATLAB
-date: 2022-07-15 00:15:57
+date: 2022-07-15 00:15:57 +0800
 categories: 
  - MATLAB
  - Machine Learning

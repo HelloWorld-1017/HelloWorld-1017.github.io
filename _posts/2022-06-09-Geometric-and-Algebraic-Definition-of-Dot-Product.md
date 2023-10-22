@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Geometric and Algebraic Definition of Dot Product
-date: 2022-06-09
+date: 2022-06-09 21:07:09 +0800
 categories: 
  - Mathematics
 tags: 

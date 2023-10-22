@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Geometric significance of Solving Linear Equations
-date: 2022-06-14
+date: 2022-06-14 19:21:23 +0800
 categories: 
  - Mathematics
 tags: 

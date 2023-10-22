@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Solve Nonlinear Equation (System) using Iterative Method
-date: 2022-07-12 13:45:17
+date: 2022-07-12 13:45:17 +0800
 categories: 
  - Mathematics
 tags: 

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Multivariate Newton Iteration Method Based on PyTorch (Vector to Vector Derivative)
-date: 2022-02-07
+date: 2022-02-07 10:02:03 +0800
 categories: 
  - Python
  - Machine Learning
@@ -9,8 +9,6 @@ tags:
  - PyTorch
 toc: false
 ---
-
-
 
 
 对于非线性方程组：

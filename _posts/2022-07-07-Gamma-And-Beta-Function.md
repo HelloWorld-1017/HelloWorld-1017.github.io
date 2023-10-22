@@ -1,7 +1,7 @@
 ---
 layout: single
 title: The Definition and Properties of Gamma and Beta Function
-date: 2022-07-07
+date: 2022-07-07 07:49:51 +0800
 categories: 
  - Mathematics
 tags: 

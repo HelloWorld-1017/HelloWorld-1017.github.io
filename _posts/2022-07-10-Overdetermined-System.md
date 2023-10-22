@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Solve Over-determined Equations
-date: 2022-07-10
+date: 2022-07-10 15:29:33 +0800
 categories: 
  - Mathematics
 tags: 

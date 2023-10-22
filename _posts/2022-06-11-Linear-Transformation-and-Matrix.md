@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Matrix and its Relation to Linear Transformation
-date: 2022-06-11
+date: 2022-06-11 17:06:09 +0800
 categories: 
  - Mathematics
 tags: 

@@ -12,17 +12,17 @@ tags:
 
 # Introduction
 
-Mardia’s test is a multivariate normally test to examine a set of data whether follow a multivariate normal distribution, by checking the multivariate skewness and kurtosis measures are consistent with a multivariate normal distribution [[1]](#ref). The null hypothesis of Mardia’s test is that the data set is similar to the normal distribution, therefore a sufficiently small $p$-value indicates non-normal data [[2]](#ref).
+Mardia’s test is a multivariate normally test to examine a set of data whether follow a multivariate normal distribution, by means of checking whether the multivariate skewness and kurtosis measures are consistent with a multivariate normal distribution [[1]](#ref). The null hypothesis of Mardia’s test is that the data set is similar to the normal distribution, therefore a sufficiently small $p$-value indicates non-normal data [[2]](#ref). In addition, Mardia's tests are affine invariant but not consistent. For example, the multivariate skewness test is *NOT consistent* against symmetric non-normal alternatives [[2]](#ref).
 
-Mardia's tests are affine invariant but not consistent. For example, the multivariate skewness test is *NOT consistent* against symmetric non-normal alternatives [[2]](#ref).
+Recently, I found three resources on the Internet discussing Mardia’s test. The null hypothesis of them is the same, but the test statistics are not 
 
-I found three resources in the Internet discussing Mardia’s test. However, they looks similar, but not exactly the same. So, this blog will compare and discuss about them.
+they look similar but not exactly the same. So, this blog will discuss about them and then make a comparison. 
 
 <br>
 
 # Mardia’s test obtained from Wikipedia [[2]](#ref)
 
-For samples $\mathrm{\boldsymbol{X}}_1,\mathrm{\boldsymbol{X}}_2,\cdots,\mathrm{\boldsymbol{X}}_n$ of $k$-dimensional vectors, let $\hat{\Sigma}$ and element $m_{i,j}$ denote that:
+For samples $\mathrm{\boldsymbol{X}}_1,\mathrm{\boldsymbol{X}}_2,\cdots,\mathrm{\boldsymbol{X}}_n$ of $k$-dimensional vectors, let $\hat{\Sigma}$ and element $m_{i,j}$ respectively denote:
 
 $$
 \begin{split}
@@ -30,20 +30,20 @@ $$
 &m_{i,j}=(\mathrm{\boldsymbol{X}}_i-\bar{\mathrm{\boldsymbol{X}}})^T\hat{\Sigma}^{-1}(\mathrm{\boldsymbol{X}}_j-\bar{\mathrm{\boldsymbol{X}}})\\
 \end{split}\label{eq1}
 $$
-N.B., Actually, $\hat{\Sigma}$ is the biased sample covariance matrix.
+N.B., Actually, $\hat{\Sigma}$ is the *biased* sample covariance matrix.
 {: .notice--warning}
 
-then construct test statistic $A$ and $B$ [1]:
+then, we could construct test statistic $A$ and $B$ [1]:
 $$
 \begin{split}
 &A=\dfrac1{6n}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\\
 &B=\sqrt{\dfrac{n}{8k(k+2)}}\Big\{\dfrac1n\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big\}
 \end{split}
 $$
-Under the null hypothesis of multivariate normality, the statistic $A$ will have approximately a chi-squared distribution with $\dfrac16k(k+1)(k+2)$ degrees of freedom, and $B$ will be approximately standard normal distribution $\mathscr{N}(0,1)$, i.e., 
+Under the null hypothesis of multivariate normality, the statistic $A$ will have approximately a chi-squared distribution with $\dfrac16k(k+1)(k+2)$ degrees of freedom, and $B$ will be approximately standard normal distribution $\mathscr{N}(0,1)$, that is:
 $$
 \begin{split}
-&\dfrac1{6n}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\sim\chi^2(\dfrac{k(k+1)(k+2)}6)\\
+&\dfrac1{6n}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\sim\chi^2\Big(\dfrac{k(k+1)(k+2)}6\Big)\\
 &\sqrt{\dfrac{n}{8k(k+2)}}\Big\{\dfrac1n\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big\}\sim\mathscr{N}(0,1)
 \end{split}\label{eqwiki}
 $$
@@ -51,6 +51,7 @@ $$
 
 # Mardia's test obtained from Real Statistics [[1]](#ref)
 
+In the described in Real Statistics 
 $$
 \begin{split}
 &\text{skew}=\dfrac1{n^2}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\\
@@ -333,13 +334,13 @@ The problem of `df`
 
 [5] [Estimation of covariance matrices - Wikipedia](https://en.wikipedia.org/wiki/Estimation_of_covariance_matrices).
 
-[6] [From Sample Covariance Matrix(SCM) to Bessel’s Correction - What a starry night~](https://helloworld-1017.github.io/mathematics/From-Sample-Covariance-Matrix-to-Bessel's-Correction/).
+[6] [From Sample Covariance Matrix(SCM) to Bessel’s Correction - What a starry night~](https://helloworld-1017.github.io/2022-11-01/18-37-31.html).
 
-[7] [MATLAB `fitcdiscr` Function - What a starry night~](https://helloworld-1017.github.io/matlab/mathematics/MATLAB-fitcdiscr-Function/).
+[7] [MATLAB `fitcdiscr` Function - What a starry night~](https://helloworld-1017.github.io/2023-10-10/23-02-35.html).
 
 [8] [`fitcdiscr`: Fit discriminant analysis classifier. - MathWorks](https://ww2.mathworks.cn/help/stats/fitcdiscr.html).
 
-[9] [Multivariate Normal Distribution and Mahalanobis Distance - What a starry night~](https://helloworld-1017.github.io/mathematics/matlab/Multivariate-Normal-Distribution-and-Mahalanobis-Distance/#mahalanobis-distance).
+[9] [Multivariate Normal Distribution and Mahalanobis Distance: Mahalanobis Distance - What a starry night~](https://helloworld-1017.github.io/2022-09-07/13-26-02.html#mahalanobis-distance).
 
 [10] [Is a sample covariance matrix always symmetric and positive definite? - Stack Exchange](https://stats.stackexchange.com/questions/52976/is-a-sample-covariance-matrix-always-symmetric-and-positive-definite).
 

@@ -29,9 +29,8 @@ fig = figure( ...
 
 ![pic_gcf](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic_gcf.png?raw=true)
 
+<br>
 
-
----
 ## Axes的位置和大小设定
 ### Position属性
 ```matlab
@@ -61,7 +60,6 @@ ax = axes('unit', 'centimeters', ... % sepcify units
 ```
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic_gca.png?raw=true" alt="pic_gca" style="zoom:50%;" />
 
----
 ### Position属性和Axis limits属性、DataAspectRatio属性、PlotBoxAspectRatio属性的冲突
 
 
@@ -92,13 +90,12 @@ set(gca, 'YLim', [0 5])  % 指定y轴的显示范围的最小值是0，最大值
 ```
 ![image-20220710123316228](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710123316228.png?raw=true)
 
-
-
 我们在指定**Position**属性和上述三个属性时（或者使用默认值时），如果不经过精确的计算，很多时候会发生冲突，这就导致了绘制数据后区域大小并不一定是**Position**属性中设置的值。但是MATLAB并不会报错，而是会自适应地调整设置。比如，如果用户指定了Axis limits，DataAspectRatio，PlotBoxAspectRatio，MATLAB就会忽略掉PlotBoxAspectRatio的设置，只使用用户所指定的Axis limits和DataAspectRatio。
 
----
-**参考资料**
+<br>
 
-[1] [MATLAB Documentation-UI Figure Properties](https://ww2.mathworks.cn/help/matlab/ref/matlab.ui.figureappd-properties.html)
+**References**
 
-[2] [MATLAB Documentation-Axes Properties](https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.axis.axes-properties.html)
+[1] [MATLAB Documentation - UI Figure Properties](https://ww2.mathworks.cn/help/matlab/ref/matlab.ui.figureappd-properties.html).
+
+[2] [MATLAB Documentation - Axes Properties](https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.axis.axes-properties.html).

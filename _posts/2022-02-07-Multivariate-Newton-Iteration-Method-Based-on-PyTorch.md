@@ -105,8 +105,6 @@ axes[1].legend()
 ```
 最后得到结果：
 
-
-
 ![image-20220708001921161](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220708001921161.png?raw=true)
 
 Bingo！

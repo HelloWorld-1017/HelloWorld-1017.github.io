@@ -1,12 +1,16 @@
 ---
 layout: single
-title: Convert PDF File to PNG Format using `pdftoppm`
+title: Convert PDF File to PNG Format using `pdftoppm.exe`
 date: 2023-10-18 20:12:31 +0800
 categories:
  - LaTeX
-tag: LaTeX Tools
-toc: false
+ - MATLAB
+tag:
+ - LaTeX Tools
+ - MATLAB System Commands
 ---
+
+# Basic usage of `pdftoppm.exe`
 
 It is convenient to convert PDF file to PNG (Portable Network Graphics) file using `pdftoppm.exe`, all we need is to use the following command in the command prompt [[1]](#ref):
 
@@ -267,11 +271,30 @@ httex.exe                     platex.exe
 
 <br>
 
+# Invoke `pdftoppm.exe` in MATLAB to batch convert PDF files
+
+If we want to convert all `.pdf` files in the current folder to `.png` files, we could using MATLAB  `system` function [[2]](#ref) to invoke `pdftoppm.exe`, realising batch conversion:
+
+```matlab
+clc,clear,close all
+
+pdfFiles = dir("*.pdf");
+
+for i = 1:numel(pdfFiles)
+    pdfName = pdfFiles(i).name;
+    disp(pdfName)
+    system(sprintf('pdftoppm -png -r 600 "%s" "%s"', ...
+        pdfName,pdfName(1:end-4)));
+end
+```
+
+<br>
+
 <div id="ref"></div>
 
 **References**
 
 [1] [pdftoppm - XpdfReader](https://www.xpdfreader.com/pdftoppm-man.html).
 
-
+[2] [`system`: Execute operating system command and return output - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/system.html).
 

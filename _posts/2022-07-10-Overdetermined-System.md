@@ -12,7 +12,7 @@ tags:
 
 根据维基百科对于超定方程组的定义：
 
-> [**Overdetermined system**](https://en.wikipedia.org/wiki/Overdetermined_system) 
+> **Overdetermined system** [[2]](#ref)
 >
 > In mathematics, a **system of equations is considered overdetermined** if there are more equations than unknowns. An overdetermined system is almost always inconsistent (it has no solution) when constructed with random coefficients. However, an overdetermined system will have solutions in some cases, for example if some equation occurs several times in the system, or if some equations are linear combinations of the others.
 > The terminology can be described in terms of the concept of **constraint counting**. Each unknown can be seen as an available degree of freedom. Each equation introduced into the system can be viewed as a constraint that restricts one degree of freedom. Therefore, the critical case occurs when the number of equations and the number of free variables are equal. For every variable giving a degree of freedom, there exists a corresponding constraint. The overdetermined case occurs when the system has been overconstrained — that is, when the equations outnumber the unknowns. In contrast, the underdetermined case occurs when the system has been underconstrained — that is, when the number of equations is fewer than the number of unknowns. Such systems usually have an infinite number of solutions.
@@ -27,7 +27,7 @@ tags:
 
 （4）超定的概念重点在于强调约束的数量，以及和自由度之间比较，并不强调超过自由度数量的约束是否“有效”。
 
-
+<br>
 
 # 线性超定方程的求解
 
@@ -35,7 +35,7 @@ tags:
 
 根据超定方程的定义，超定方程可以存在精确解，也可以不存在精确解，只存在近似解。而我们可以使用一种通用的计算方法，使我们面对存在精确解的超定方程可以求出**精确解**，面对不存在精确解的超定方程**求出一个在向量范数意义下的一个"最好的"近似解**。
 
-> 超定方程的求解 $^{[1]}$
+> 超定方程的求解 [[1]](#ref)
 >
 > 假设 $A$ 是一个形状为 $n\times m$ 的矩阵，并且 $n>m$ （超定）, $\mathrm{rank}(A)=m$，则对于超定方程组$A\boldsymbol{x}=\boldsymbol{b}$ 
 >
@@ -54,8 +54,6 @@ A\boldsymbol{x}=\boldsymbol{b}\quad\Rightarrow\quad \boldsymbol{x}=(A^TA)^{-1}A^
 > $$
 > 
 > $\boldsymbol{x}_{min}$ 由最小化 $\vert\vert A\boldsymbol{x}-\boldsymbol{b}\vert\vert^2$ （向量范数的平方，通常取二范数）得到的近似解。
-
-
 
 （1）对于第一种情况
 
@@ -84,9 +82,7 @@ $$
 
 （2）对于第二种情况
 
-实际上，公式 $\eqref{equa2}$ 可以从超定方程组求解的几何意义上推导出，并且与最小二乘法存在着紧密的联系，可见另一篇博客：[从曲线拟合、参数估计角度、超定方程求解的几何角度看最小二乘法](http://www.whatastarrynight.com/blog/MLE/)
-
-
+实际上，公式 $\eqref{equa2}$ 可以从超定方程组求解的几何意义上推导出，并且与最小二乘法存在着紧密的联系，相关内容可参考博客 [[3]](#ref)。
 
 
 
@@ -135,13 +131,9 @@ $$
 
 线性方程组 $\eqref{equa4}$ 实际上有无穷多解，即最小二乘法损失函数 $L(\boldsymbol{x})$ 有无穷多个极小值，并且都落在直线 $x_1+x_2=3$ 上。如下图所示：
 
-
-
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220711183217117.png?raw=true" alt="image-20220711183217117" style="zoom:50%;" />
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220711183229158.png?raw=true" alt="image-20220711183229158" style="zoom:50%;" />
-
-
 
 ```matlab
 clc, clear, close all
@@ -164,10 +156,6 @@ view(47,1)
 saveas(gca, 'pic2.svg')
 ```
 
-
-
-
-
 综上，对于线性超定方程组，如果矩阵 $A^TA$ 可逆，则我们可以通过求解公式来求得方程组的精确解或者近似解；如果矩阵 $A^TA$ 不可逆，那么我们可以直接求解式 $\eqref{equa3}$ 所对应的线性方程组。
 
 ## 非线性超定方程组的求解
@@ -180,12 +168,14 @@ $$
 
 来求解 $\boldsymbol{x}$ 仍然是成立的，但是很难通过令偏导等于零或者简单求解类似于式 $\eqref{equa3}$ 的方程组（同样很难求解）来直接求得方程组的解，更多是使用梯度下降法等数值算法，或者使用遗传算法等启发式算法求解优化问题 $\eqref{NLP}$，当然，全局最优解是很难求得的。
 
+<br>
 
+<div id="ref"></div>
 
-
-
----
-
-**参考**
+**References**
 
 [1] [Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf). 
+
+[2] [Overdetermined system - Wikipedia](https://en.wikipedia.org/wiki/Overdetermined_system).
+
+[3] [Inspect the Least Square Method from Perspective of Curve Fitting, Parameter Estimation, and Geometry View of Solving Over-determined Equations - What a starry night~](https://helloworld-1017.github.io/2022-07-07/15-36-27.html).

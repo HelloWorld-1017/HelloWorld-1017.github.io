@@ -7,9 +7,9 @@ meas = meas(1:50,:);
 
 mu = mean(meas);
 Sigma = cov(meas);
-% numGs = 10:10:1000;
+numGs = 10:10:1000;
 % numGs = 1e3:100:1e4;
-numGs = 1e4:200:2e4;
+% numGs = 1e4:200:2e4;
 
 pValue_As = nan(1,numel(numGs));
 pValue_Bs = nan(1,numel(numGs));

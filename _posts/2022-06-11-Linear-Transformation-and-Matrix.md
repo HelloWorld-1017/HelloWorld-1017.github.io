@@ -42,11 +42,7 @@ $$
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220708093439970.png?raw=true" alt="image-20220708093439970" style="zoom:50%;" />
 
-
-
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220708093503305.png?raw=true" alt="image-20220708093503305" style="zoom:50%;" />
-
-
 
 也就是说，我们只需要根据变换后的 $$\hat{i}_{transformed}$$ 和 $$\hat{j}_{transformed}$$，就能推断出变换后 $$\vec{v}_{transformed}$$ 的位置。
 
@@ -92,7 +88,7 @@ $$
 
 <br>
 
-**总结**
+**Conclusion**
 
 （1）线性变换就是操纵空间的一种手段，它保持网格线平行且等距分布，且保持坐标原点不动；
 
@@ -106,4 +102,4 @@ $$
 
 **References**
 
-[1]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9)
+[1]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9).

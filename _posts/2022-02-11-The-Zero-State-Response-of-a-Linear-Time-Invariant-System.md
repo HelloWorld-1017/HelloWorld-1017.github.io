@@ -11,8 +11,6 @@ toc: false
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220710133729178.png?raw=true" alt="image-20220710133729178" style="zoom: 67%;" />
 
-
-
 根据卷积和的定义，对于任意输入信号$f(k)$：
 
 $$

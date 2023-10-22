@@ -1,35 +1,24 @@
 clc,clear,close all
 
-rng(1)
+
 
 load fisheriris.mat
 meas = meas(1:50,:);
 
 mu = mean(meas);
 Sigma = cov(meas);
-
-numEpoch = 20;
-
-% numGs = 10:10:100;
-% numGs = 1e3:100:1e4;
-numGs = 1e4:200:2e4;
+% numGs = 10:10:1000;
+numGs = 1e3:100:1e4;
+% numGs = 1e4:200:2e4;
 
 pValue_As = nan(1,numel(numGs));
 pValue_Bs = nan(1,numel(numGs));
 pValue_skew_correcteds = nan(1,numel(numGs));
 pValue_kurt_correcteds = nan(1,numel(numGs));
 
-for j = 1:numEpoch
-    for i = 1:numel(numGs)
-        [pValue_As(j,i),pValue_Bs(j,i),pValue_skew_correcteds(j,i),pValue_kurt_correcteds(j,i)] = helperMardia(mu,Sigma,numGs(i));
-    end
+for i = 1:numel(numGs)
+    [pValue_As(i),pValue_Bs(i),pValue_skew_correcteds(i),pValue_kurt_correcteds(i)] = helperMardia(mu,Sigma,numGs(i));
 end
-
-save("results.mat","pValue_As","pValue_Bs","pValue_skew_correcteds","pValue_kurt_correcteds")
-pValue_As = mean(pValue_As);
-pValue_Bs = mean(pValue_Bs);
-pValue_skew_correcteds = mean(pValue_skew_correcteds);
-pValue_kurt_correcteds = mean(pValue_kurt_correcteds);
 
 figure("Position",[197,30,1553,840],"Color","w")
 tiledlayout(2,1)
@@ -55,9 +44,8 @@ ylabel("p-value")
 legend("Location","southeast")
 title("Test for kutosis")
 
-% exportgraphics(gcf,"fig.pdf","Resolution",600)
-
 function [pValue_A,pValue_B,pValue_skew_corrected,pValue_kurt_corrected] = helperMardia(mu,Sigma,numG)
+rng(1)
 % Generate samples
 data = mvnrnd(mu,Sigma,numG);
 

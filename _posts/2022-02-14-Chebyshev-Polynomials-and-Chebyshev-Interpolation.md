@@ -156,9 +156,9 @@ $$
 >QED
 
 
-## 切比雪夫插值
+## Chebyshev interpolation
 
-根据[$n$次插值多项式的截断误差估计式](http://whatastarrynight.com/blog/2022/02/14/Lagrange-Form-Remainder/)：
+根据$n$次插值多项式的截断误差估计式 [[1]](#ref)：
 
 $$
 \begin{aligned}R_n(x)&=f(x)-p_n(x)\\&=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\prod \limits_{i=0}^n(x-x_i)\end{aligned}\quad \xi\in(a,b)\tag{3}
@@ -181,3 +181,10 @@ $$
 > 对于一般区间$[a,b]$，选取$x_i=\dfrac{a+b}{2}+\dfrac{b-a}{2}cos(\dfrac{2i+1}{2n+2}\pi)\ (i=0,...,n)$作为插值节点得到插值多项式$P_n(x)$，余项$R_n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\dfrac{(b-a)^{n+1}}{2^{2n+1}}T_{n+1}(t)$有最小上界$\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\dfrac{(b-a)^{n+1}}{2^{2n+1}},\ \xi\in(a,b)$。
 
 <br>
+
+<div id="ref"></div>
+
+**References**
+
+[1] [Lagrangian Interpolation Remainder: Truncation Error Estimation Formula for n-th Degrees Interpolation Polynomials - What a starry night~](https://helloworld-1017.github.io/2022-02-14/14-45-27.html).
+

@@ -5,9 +5,10 @@ date: 2023-10-17 18:16:22 +0800
 categories:
  - LaTeX
  - Graphic Design and Typography
+ - R
 ---
 
-# Base colours (always available)
+# 19 base colours (always available)
 
 ![image-20231017180425175](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231017180425175.png)
 
@@ -34,7 +35,7 @@ categories:
 
 <br>
 
-# Colours via `dvipsnames` option
+# 68 colours via `dvipsnames` option
 
 ![image-20231017180457962](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231017180457962.png)
 
@@ -74,7 +75,7 @@ categories:
 
 <br>
 
-# Colours via `svgnames` option
+# 151 colours via `svgnames` option
 
 ![image-20231017181148199](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231017181148199.png)
 
@@ -133,9 +134,13 @@ categories:
 \end{document}
 ```
 
+where
+
+![image-20231023142442209](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310231424288.png)
+
 <br>
 
-# Colours via `x11names` option
+# 317 colours via `x11names` option
 
 ![image-20231017180606510](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231017180606510.png)
 
@@ -239,10 +244,26 @@ categories:
 \end{document}
 ```
 
+where
+
+![image-20231023142412049](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310231424194.png)
+
 <br>
+
+# Something more ...
+
+Garrick’s blog [[3]](#ref) provides a way using `tidyverse` [[4]](#ref), a collection of R packages, to gather RGB-tuple of the colors defined in `xcolor` package. He extracts colour information from zipped files which are downloaded from `http://www.ukern.de/tex/xcolor/tex/svgnam.def.gz` and `http://www.ukern.de/tex/xcolor/tex/x11nam.def.gz`, and then organises colour tuples into a `.csv` file (Garrick provides this file in his blog [[3]](#ref) as wel). I want to reproduce it using MATLAB, but these two zipped files seems not common compressed format; I tried different ways but finally failed to open them.
+
+<br>
+
+<div id="ref"></div>
 
 **References**
 
 [1] [Extending LaTeX’s color facilities: the xcolor package (v2.14, 2022/06/12), page 39](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/xcolor/xcolor.pdf).
 
 [2] 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
+
+[3] [The Colors  of `xcolor` - Garrick](https://www.garrickadenbuie.com/blog/colors-of-xcolor/).
+
+[4] [tidyverse.org](https://www.tidyverse.org/).

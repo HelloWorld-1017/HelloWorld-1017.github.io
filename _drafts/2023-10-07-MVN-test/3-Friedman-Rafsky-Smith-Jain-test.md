@@ -1,11 +1,32 @@
-Friedman-Rafsky-Smith-Jain test
+---
+layout: single
+title: "Hypothesis Test 6: Friedman-Rafsky-Smith-Jain test (A Multivariate Normality Test)"
+date: 2023-10-23 xx:xx:xx +0800
+categories:
+ - Mathematics
+ - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
+ - MATLAB Statistics and Machine Learning Toolbox
+---
 
 
+
+# Introduction to Friedman-Rafsky-Smith-Jain test (FRSJ test)
+
+Let the $N$ data points in one sample be labeled $X$ and the $M$ data points in the other sample be labeled $Y$. The MST of the pooled samples is computed. The number of edges in the MST linking a point labeled $X$ to a point labeled $Y$ is found. Denote this $X$-to-$Y$ join count as $T$. Under the null hypothesis that $X$ and $Y$ are independent random samples from the same distribution, Friedman and Rafsky show that as 
+
+
+
+
+
+Results:
 
 ```
 numG = 1e3;
 W = 2e3;
 alpha = 0.05;
+
 Accept! p-value: 0.1365
 Accept! p-value: 0.5015
 Accept! p-value: 0.2110
@@ -15,6 +36,7 @@ Accept! p-value: 0.2110
 numG = 50; % 1e3
 W = 2e3;
 alpha = 0.05;
+
 Accept! p-value: 0.5390
 Accept! p-value: 0.4890
 Accept! p-value: 0.3350

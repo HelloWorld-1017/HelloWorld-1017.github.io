@@ -6,14 +6,15 @@
 
 **References**
 
-https://www.baeldung.com/cs/latex-hyperref-url-hyperlinks
+[Adding Hyperlinks in LaTeX - Baeldung](https://www.baeldung.com/cs/latex-hyperref-url-hyperlinks).
 
-https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
+[options for appearance of links in hyperref? - Stack Exchange](https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref).
 
-https://tex.stackexchange.com/questions/478463/anchorcolor-in-hyperref-not-working
+[anchorcolor in hyperref not working? - Stack Exchange](https://tex.stackexchange.com/questions/478463/anchorcolor-in-hyperref-not-working).
 
-https://tex.stackexchange.com/questions/525261/better-default-colors-for-hyperref-links
+[better default colors for hyperref links - Stack Exchange](https://tex.stackexchange.com/questions/525261/better-default-colors-for-hyperref-links).
 
-https://www.garrickadenbuie.com/blog/colors-of-xcolor/
+
+
 
 

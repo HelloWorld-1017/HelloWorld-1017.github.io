@@ -6,10 +6,9 @@
 
 \usepackage[colorlinks=true,
             linkcolor=violet, % Set internal link color
-            anchorcolor=yellow, % Does not work
-            citecolor=green, % 
+            anchorcolor=orange, % Does not work, refer to 
+            citecolor=green, 
             filecolor=red, % does not work in pdf view window in TeXstudio
-%            menucolor=black,
             runcolor=cyan, % does not work in pdf view window in TeXstudio
             urlcolor=blue % Set external website link color
             ]{hyperref}
@@ -19,21 +18,20 @@
 \begin{document}
 	\tableofcontents
 	\section{Introduction}
-		\label{sec-introduction}
-		This is \href{www.github.com}{GitHub} and \href{www.wikipedia.com}{Wikipedia} website\footnote{This is a footnote}.\\
-		\hypertarget{link}{Anchored by ``hypertarget", tag is ``link''.}\\
-		\myhypertarget{mylink}{Anchored by ``myhypertarget", tag is ``mylink''.} \\
-		\noindent Click \href{readme.txt}{here} to open ``readme.txt''.\\
-		\noindent Click \href{run:readme.txt}{here} to open ``readme.txt''.\\
-		\noindent Click \hyperref[sec-introduction]{here} to jump to Introduction Section.\\
-		\hyperlink{link}{Link to tag ``link''.}\\
-		\hyperlink{mylink}{Link to tag ``mylink''.}\\
-		\Acrobatmenu{View}{View Something}\\
-		Cite reference \cite{b1}
+	\label{sec-introduction}
+	\begin{tabular}{ll}
+		Website & \href{www.wikipedia.com}{Wikipedia}\\
+		File & \href{readme.txt}{Open ``./readme.txt''}\\
+		Run file & \href{run:readme.txt}{Run ``./readme.txt''}\\
+		Footnote & \footnote{This is a footnote.}\\
+		Internal link & \hyperref[sec-introduction]{Introduction}\\
+		\hypertarget{link}{Anchored by ``hypertarget"} & \hyperlink{link}{Link to tag ``link''.}\\
+		\myhypertarget{mylink}{Anchored by ``myhypertarget"} & \hyperlink{mylink}{Link to tag ``mylink''.}\\
+		Cite reference & \cite{b1}\\
+	\end{tabular}
+
 		\begin{thebibliography}{00}
 		\bibitem{b1} \href{https://tex.stackexchange.com/questions/478463/anchorcolor-in-hyperref-not-working}{anchorcolor in hyperref not working? - Stack Exchange.}
-		
-		
 \end{thebibliography}
 
 \end{document}

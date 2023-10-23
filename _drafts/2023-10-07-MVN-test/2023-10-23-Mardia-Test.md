@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Hypothesis Test 5: Mardia’s test (A Multivariate Normality Test)"
-date: 2023-10-13 22:43:19 +0800
+date: 2023-10-23 22:30:17 +0800
 categories:
  - Mathematics
  - MATLAB
@@ -30,28 +30,34 @@ $$
 &m_{i,j}=(\mathrm{\boldsymbol{X}}_i-\bar{\mathrm{\boldsymbol{X}}})^T\hat{\Sigma}^{-1}(\mathrm{\boldsymbol{X}}_j-\bar{\mathrm{\boldsymbol{X}}})\\
 \end{split}\label{eq1}
 $$
+
 N.B., Actually, $\hat{\Sigma}$ is the *biased* sample covariance matrix.
 {: .notice--warning}
 
 and then, we could construct test statistic $A$ and $B$ [1]:
+
 $$
 \begin{split}
 &A=\dfrac1{6n}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\\
 &B=\sqrt{\dfrac{n}{8k(k+2)}}\Big\{\dfrac1n\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big\}
 \end{split}
 $$
+
 Under the null hypothesis of multivariate normality, the statistic $A$ will have approximately a chi-squared distribution with $\dfrac16k(k+1)(k+2)$ degrees of freedom, and $B$ will be approximately standard normal distribution $\mathscr{N}(0,1)$, that is:
+
 $$
 \begin{split}
 &\dfrac1{6n}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\sim\chi^2\Big(\dfrac{k(k+1)(k+2)}6\Big)\\
 &\sqrt{\dfrac{n}{8k(k+2)}}\Big\{\dfrac1n\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big\}\sim\mathscr{N}(0,1)
 \end{split}\label{eqwiki}
 $$
+
 <br>
 
 # Mardia's test obtained from "Real Statistics Using Excel" [[1]](#ref)
 
 In the Mardia's test described in "Real Statistics Using Excel" website, the test statistics are [[1]](#ref):
+
 $$
 \begin{split}
 &\text{skew}=\dfrac1{n^2}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\\
@@ -67,31 +73,40 @@ $$
 &\text{kurt}^\prime=\dfrac{n}{(n-1)^2}\sum_{i=1}^nm_{i,i}^2
 \end{split}
 $$
+
 In addition, for small samples (generally sample size is less than 20), they could be corrected to:
+
 $$
 \begin{split}
 \text{skew}^{\prime\prime}&=\dfrac{n^2c}{6(n-1)^3}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\\
 \text{kurt}^{\prime\prime}&=\sqrt{\dfrac{n}{8k(k+2)}}\Big[\dfrac{n}{(n-1)^2}\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big]
-\end{split}
+\end{split}\label{correction}
 $$
+
 where $c$ in $\text{skew}^{\prime\prime}$ is:
+
 $$
 c=\dfrac{(n+1)(n+3)(k+1)}{n(n+1)(k+1)-6}
 $$
+
 If accepting null hypothesis, we have:
+
 $$
 \begin{split}
 &\text{skew}^{\prime\prime}\sim\chi^2(\dfrac{k(k+1)(k+2)}6)\\
 &\text{kurt}^{\prime\prime}\sim\mathscr{N}(0,1)
 \end{split}
 $$
+
 that is:
+
 $$
 \begin{split}
 &\dfrac{\textcolor{red}{n^2c}}{6\textcolor{red}{(n-1)^3}}\sum_{i=1}^n\sum_{j=1}^nm_{i,j}^3\sim\chi^2(\dfrac{k(k+1)(k+2)}6)\\
 &\sqrt{\dfrac{n}{8k(k+2)}}\Big[\textcolor{red}{\dfrac{n}{(n-1)^2}}\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big]\sim\mathscr{N}(0,1)
 \end{split}\label{eqreal}
 $$
+
 The red marks in above equation represents the coefficients that are different from equation $\eqref{eqwiki}$. As can be seen, if $n\rightarrow\infty$,  equation $\eqref{eqreal}$ is the same as $\eqref{eqwiki}$, so these could be viewed as some corrections in small sample case. I don't make a profound study for these coefficients, but I feel $n-1$ is from the correction for high sample moments, something like Bessel's correction [[4, 5, 6]](#ref).
 
 <br>
@@ -118,13 +133,17 @@ As can be seen:
 (1) This test is just examine kurtosis, without skew. 
 
 (2) The $z$-test is used to test kurtosis, and the null hypothesis of it is: 
+
 $$
 \dfrac1n\sum_{i=1}^nm_{i,i}^2\sim\mathscr{N}\Big(k(k+2),\sqrt{\dfrac{8k(k+2)}{n}}\Big)
 $$
+
 i.e.,
+
 $$
 \Big(\dfrac{n}{8k(k+2)}\Big)^{1/4}\Big[\dfrac1n\sum_{i=1}^nm_{i,i}^2-k(k+2)\Big]\sim\mathscr{N}(0,1)
 $$
+
 It is like Mardia's test provided by Wikipedia (equation $\eqref{eqwiki}$), but the coefficient is $\Big(\dfrac{n}{8k(k+2)}\Big)^{1/4}$ rather than $\Big(\dfrac{n}{8k(k+2)}\Big)^{1/2}$. I tend to contend that the MATLAB example made a mistake at this aspect. 
 
 (3) This example calculates $(1/n)\sum_{i=1}^nm_{i,i}^2$ by calculating (squared) Mahalanobis distance using `mahal` function (could refer to blog [[9]](#ref)):
@@ -306,6 +325,7 @@ xlabel("Sample size")
 ylabel("p-value")
 legend("Location","southeast")
 title("Test for skewness")
+ylim([0,1])
 
 nexttile
 hold(gca,"on"),box(gca,"on"),grid(gca,"on")
@@ -316,7 +336,8 @@ plot(numGs,pValue_kurt_correcteds,"LineWidth",1.5,"DisplayName","Real Statistics
 xlabel("Sample size")
 ylabel("p-value")
 legend("Location","southeast")
-title("Test for kutosis")
+title("Test for kurtosis")
+ylim([0,1])
 
 function [pValue_A,pValue_B,pValue_skew_corrected,pValue_kurt_corrected] = helperMardia(mu,Sigma,numG)
 % Generate samples
@@ -353,26 +374,26 @@ pValue_skew_corrected = chi2cdf(skew_corrected,df);
 end
 ```
 
-![image-20231015135144064](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231015135144064.png)
+![results-Epoch1-1000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232119524.png)
 
 Sample size varies from $10$ to $1,000$, with step $10$.
 {: .notice--primary}
 
-![image-20231015135842473](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231015135842473.png)
+![results-Epoch1-10000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232121860.png)
 
 Sample size varies from $1,000$ to $10,000$, with step $100$.
 {: .notice--primary}
 
-![image-20231015141604279](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231015141604279.png)
+![results-Epoch1-20000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232125837.png)
 
 Sample size varies from $10,000$ to $20,000$, with step $200$.
 {: .notice--primary}
 
 In this experiment, I expect to see a regular pattern, for example, there exist a relatively obvious increasing trend as sample size increases, but unluckily, it doesn't, and what's worse is that the $p$-value seemingly not stable. 
 
-## Experiment 3: observe mean $p$-values ($20$ times)
+## Experiment 3: observe mean $p$-values
 
-So, I continue to experiment. This set of experiments is analogous with Experiment 2. This difference is that in this part, every Mardia's test is repeatedly conducted $20$ times under the same sample size, and the figures show mean $p$-value.
+So, I continue to experiment. This set of experiments is analogous with Experiment 2. The difference is that, in this part, every Mardia's test is repeatedly conducted $20$ times under the same sample size, and the figures show mean $p$-value.
 
 ```matlab
 clc,clear,close all
@@ -397,16 +418,17 @@ pValue_skew_correcteds = nan(1,numel(numGs));
 pValue_kurt_correcteds = nan(1,numel(numGs));
 
 for j = 1:numEpoch
+    disp(j)
     for i = 1:numel(numGs)
         [pValue_As(j,i),pValue_Bs(j,i),pValue_skew_correcteds(j,i),pValue_kurt_correcteds(j,i)] = helperMardia(mu,Sigma,numGs(i));
     end
 end
 
 save("results.mat","pValue_As","pValue_Bs","pValue_skew_correcteds","pValue_kurt_correcteds")
-pValue_As = mean(pValue_As);
-pValue_Bs = mean(pValue_Bs);
-pValue_skew_correcteds = mean(pValue_skew_correcteds);
-pValue_kurt_correcteds = mean(pValue_kurt_correcteds);
+pValue_As = mean(pValue_As,1);
+pValue_Bs = mean(pValue_Bs,1);
+pValue_skew_correcteds = mean(pValue_skew_correcteds,1);
+pValue_kurt_correcteds = mean(pValue_kurt_correcteds,1);
 
 figure("Position",[197,30,1553,840],"Color","w")
 tiledlayout(2,1)
@@ -414,25 +436,26 @@ nexttile
 hold(gca,"on"),box(gca,"on"),grid(gca,"on")
 plot(numGs,pValue_As,"LineWidth",1.5,"DisplayName","Wiki version","Color","b","Marker","o")
 plot(numGs,pValue_skew_correcteds,"LineWidth",1.5,"DisplayName","Real Statistics Version","Color","r","Marker","square")
-% xticklabels(numGs)
-% xticks(1:numel(numGs))
 xlabel("Sample size")
 ylabel("p-value")
 legend("Location","southeast")
-title("Test for skewness")
+title(sprintf("Test for skewness (the number of repeated experiment: %s)",num2str(numEpoch)))
+ylim([0,1])
 
 nexttile
 hold(gca,"on"),box(gca,"on"),grid(gca,"on")
 plot(numGs,pValue_Bs,"LineWidth",1.5,"DisplayName","Wiki version","Color","b","Marker","o")
 plot(numGs,pValue_kurt_correcteds,"LineWidth",1.5,"DisplayName","Real Statistics Version","Color","r","Marker","square")
-% xticklabels(numGs)
-% xticks(1:numel(numGs))
 xlabel("Sample size")
 ylabel("p-value")
 legend("Location","southeast")
-title("Test for kutosis")
+title(sprintf("Test for kurtosis (the number of repeated experiment: %s)",num2str(numEpoch)))
+ylim([0,1])
 
-% exportgraphics(gcf,"fig.pdf","Resolution",600)
+pngFileName = sprintf("results-Epochs%s-%s.png",num2str(numEpoch),num2str(numGs(end)));
+exportgraphics(gcf,pngFileName,"Resolution",600)
+matFileName = sprintf("results-Epochs%s-%s.mat",num2str(numEpoch),num2str(numGs(end)));
+save(matFileName,"pValue_As","pValue_Bs","pValue_skew_correcteds","pValue_kurt_correcteds")
 
 function [pValue_A,pValue_B,pValue_skew_corrected,pValue_kurt_corrected] = helperMardia(mu,Sigma,numG)
 % Generate samples
@@ -469,40 +492,41 @@ pValue_skew_corrected = chi2cdf(skew_corrected,df);
 end
 ```
 
-![image-20231015142414562](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231015142414562.png)
+![results-Epochs20-1000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232129029.png)
 
 Sample size varies from $10$ to $1,000$, with step $10$, mean $p$-value of $20$ times.
 {: .notice--primary}
 
-![image-20231015153121133](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231015153121133.png)
+![results-Epochs20-10000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232130057.png)
 
 Sample size varies from $1,000$ to $10,000$, with step $100$, mean $p$-value of $20$ times.
 {: .notice--primary}
 
-![image-20231015192811176](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231015192811176.png)
+![results-Epochs20-20000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232131799.png)
 
 Sample size varies from $10,000$ to $20,000$, with step $200$, mean $p$-value of $20$ times.
 {: .notice--primary}
 
-As can be seen, the mean $p$-value seems more stable than $p$-value from single test that in Experiment 2, but the trend that how sample size influence confidence is not that obvious. 
+As can be seen, the mean $p$-value seems more stable than $p$-value of single test that in Experiment 2.
 
-## Experiment 4: observe mean $p$-values ($10,000$ times)
+If we increase the number of repeated experiment from $20$ times to $10,000$ times, we could get:
 
-If we increase the number of repeated experiment from $20$ times to $10,000$ times.
+![results-Epochs10000-1000](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310232209566.png)
+
+Sample size varies from $10$ to $1,000$, with step $10$, mean $p$-value of $10,000$ times.
+{: .notice--primary}
+
+At this time, we could see an obvious pattern:
+
+1. For both “Test for skewness”and “Test for kurtosis”, the results of $\eqref{eqwiki}$ and $\eqref{eqreal}$ are stable and consistent as sample size increases, especially when sample size is over $300$.
+2. For both “Test for skewness”and “Test for kurtosis”, when sample size is relatively small, we have more confidence to accept null hypothesis according to $\eqref{eqreal}$ compared with $\eqref{eqwiki}$. This is brought by correction $\eqref{correction}$.
+3. For “Test for skewness”, the $p$-value corresponding to $\eqref{eqreal}$ decreases as sample size increases, however, $p$-value corresponding to $\eqref{eqwiki}$ increases. And For “Test for kurtosis”, $p$-value corresponding to both $\eqref{eqwiki}$ and $\eqref{eqreal}$ increases as sample size increases.
 
 <br>
 
 # Discussions
 
-possibly come from two source:
-
-(1) random number
-
-(2) 
-
-The problem of `df`
-
-
+From above experiments, we could see that (1) the results of Mardia’s test with small sample size is not reliable, and (2) the results of a single Mardia’s test is not reliable *if samples are random*, because“random number”will significantly influence our confidence. To overcome these problems, we should collect samples as much as possible to get them involved in the Mardia’s test, and carry out repeated tests to relieve the influence of random factors.
 
 <br>
 
@@ -529,8 +553,6 @@ The problem of `df`
 [9] [Multivariate Normal Distribution and Mahalanobis Distance: Mahalanobis Distance - What a starry night~](https://helloworld-1017.github.io/2022-09-07/13-26-02.html#mahalanobis-distance).
 
 [10] [Is a sample covariance matrix always symmetric and positive definite? - Stack Exchange](https://stats.stackexchange.com/questions/52976/is-a-sample-covariance-matrix-always-symmetric-and-positive-definite).
-
-[11] 
 
 
 

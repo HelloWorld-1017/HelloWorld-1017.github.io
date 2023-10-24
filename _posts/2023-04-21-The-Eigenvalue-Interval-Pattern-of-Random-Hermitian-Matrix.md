@@ -11,7 +11,7 @@ tags:
  - Prime Obsession
 ---
 
-# The Eigenvalue Interval Pattern of Random Hermitian Matrix
+# The eigenvalue interval pattern of random Hermitian matrix
 
 **随机矩阵**是由随机选取的数所构成的矩阵（实际上由计算机所产生的都是伪随机）。假设现在有一个埃尔米特矩阵，并且其中的元素：
 
@@ -30,19 +30,98 @@ tags:
 
 如果在相同的间隔（即$[-45.3140,45.3889]$）内完全随机地抽取269个数（服从均匀分布），并以相同的方式作图：
 
-![image-20230421182429216](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230421182429216.png?raw=true)
+```matlab
+clc,clear,close all
+rng("default")
 
-注：计算及绘制的MATLAB代码见文末附录A。
-{: .notice--primary}
+% Construct Hermitian matrix
+order = 269;
+A = randn(order);
+HReal = tril(A,-1)+triu(A',0);
+DiagCoeff = sqrt(2)*diag(ones(order,1));
+DiagCoeff(DiagCoeff==0) = 1;
+HReal = DiagCoeff.*HReal;
+B = randn(order);
+Hcomplex = tril(B,-1)-triu(B',0);
+Hcomplex = (1-diag(ones(order,1))).*Hcomplex;
+H = HReal+Hcomplex*1i;
 
-我们就明显地可以看到随机埃尔米特矩阵本征值之间的**排斥效应**：产生自均匀分布的随机数中所具有的非常接近的相邻数对比本征值分布中的相邻数对更多，并且数对之间离得也更远。
+EigValues = eig(H);
 
-> 并且由于实对称矩阵是一种特殊的埃尔米特矩阵，因此对于随机实对称阵 [2]，同样具有类似的排斥效应：
+disp(min(EigValues))
+disp(max(EigValues))
+
+% Random ponits drawn from uniform distribution
+RandomPoints = rand(1,order)*(max(EigValues)-min(EigValues))+min(EigValues);
+RandomPoints = sort(RandomPoints);
+
+figure('Units','pixels','Position',[71,482.33,2399.33,253.99])
+hold(gca,'on')
+box(gca,'on')
+grid(gca,'on')
+scatter(EigValues,2*ones(1,numel(EigValues)),10, ...
+    'filled','MarkerFaceColor',[7,84,213]/255, ...
+    'DisplayName','Eigenvalues of Hermitian matrix')
+scatter(RandomPoints,ones(1,numel(RandomPoints)),10, ...
+    'filled','MarkerFaceColor',[249,82,107]/255,...
+    'DisplayName','Uniform distribution random points')
+title(sprintf("std(diff(EigValues)) = %.4f, std(diff(RandomPoints)) = %.4f",std(diff(EigValues)), std(diff(RandomPoints))))
+legend()
+set(gca,'yticklabel',[])
+xlim([-50,50])
+ylim([0.5,2.5])
+xlabel("Value")
+
+exportgraphics(gcf,"fig-1.jpg","Resolution",600)
+```
+
+![fig-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310242248050.jpg)
+
+我们可以明显地看到随机埃尔米特矩阵本征值之间的**排斥效应**：产生自均匀分布的随机数中所具有的非常接近的相邻数对比本征值分布中的相邻数对更多，并且数对之间离得也更远。
+
+> 并且由于实对称矩阵是一种特殊的埃尔米特矩阵，因此对于随机实对称阵 [[2]](#ref)，同样具有类似的排斥效应：
 >
-> ![image-20230421183415276](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230421183415276.png?raw=true)
+> ```matlab
+> clc,clear,close all
+> rng("default")
+> 
+> % Construct real symmetric matrix
+> order = 269;
+> A = randn(order);
+> H = tril(A,-1)+triu(A',0);
+> DiagCoeff = sqrt(2)*diag(ones(order,1));
+> DiagCoeff(DiagCoeff==0) = 1;
+> H = DiagCoeff.*H;
+> 
+> EigValues = eig(H);
+> disp(min(EigValues))
+> disp(max(EigValues))
+> 
+> % Random ponits drawn from uniform distribution
+> RandomPoints = rand(1,order)*(max(EigValues)-min(EigValues))+min(EigValues);
+> RandomPoints = sort(RandomPoints);
+> 
+> figure('Units','pixels','Position',[71,482.33,2399.33,253.99])
+> hold(gca,'on')
+> box(gca,'on')
+> grid(gca,'on')
+> scatter(EigValues,2*ones(1,numel(EigValues)),10, ...
+>  'filled','MarkerFaceColor',[7,84,213]/255, ...
+>  'DisplayName','Eigenvalues of Hermitian matrix')
+> scatter(RandomPoints,ones(1,numel(RandomPoints)),10, ...
+>  'filled','MarkerFaceColor',[249,82,107]/255,...
+>  'DisplayName','Uniform distribution random points')
+> title(sprintf("std(diff(EigValues)) = %.4f, std(diff(RandomPoints)) = %.4f",std(diff(EigValues)), std(diff(RandomPoints))))
+> legend()
+> set(gca,'yticklabel',[])
+> xlim([-50,50])
+> ylim([0.5,2.5])
+> xlabel("Value")
+> 
+> exportgraphics(gcf,"fig-2.jpg","Resolution",600)
+> ```
 >
-> 注：计算及绘制的MATLAB代码见文末附录B。
-> {: .notice--primary}
+> ![fig-2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310242251523.jpg)
 
 因此，尽管本征值之间并不想形成任何可辨认的模式（因为它们毕竟是从一个随机矩阵中计算产生的），但是却尽力保持着互相之间的距离。与此形成鲜明对比的是，一个纯粹的随机点如果发现自己同另一个随机点挤在一起，它似乎根本不会在乎。
 
@@ -55,7 +134,7 @@ tags:
 
 - 与对关联函数，以及它极其与众不同的特征有关的某种比率，被称为它的**形状因子（form factor）**。
 
-# Something Else ...
+# Something else ...
 
 **2023年5月6日**
 
@@ -63,95 +142,11 @@ tags:
 
 <br>
 
-# Appendix
-
-## Appendix A
-
-```matlab
-clc,clear,close all
-rng("default")
-
-% Construct Hermitian matrix
-A = randn(269);
-HReal = tril(A,-1)+triu(A',0);
-DiagCoeff = sqrt(2)*diag(ones(269,1));
-DiagCoeff(DiagCoeff==0) = 1;
-HReal = DiagCoeff.*HReal;
-B = randn(269);
-Hcomplex = tril(B,-1)-triu(B',0);
-Hcomplex = (1-diag(ones(269,1))).*Hcomplex;
-H = HReal+Hcomplex*1i;
-
-EigValues = eig(H);
-disp(min(EigValues))
-disp(max(EigValues))
-
-% Random ponits drawn from uniform distribution
-RandomPoints = rand(1,269)*(max(EigValues)-min(EigValues))+min(EigValues);
-RandomPoints = sort(RandomPoints);
-
-figure('Units','pixels','Position',[71,482.33,2399.33,253.99])
-hold(gca,'on')
-box(gca,'on')
-grid(gca,'on')
-scatter(EigValues,2*ones(1,numel(EigValues)),10, ...
-    'filled','MarkerFaceColor',[7,84,213]/255, ...
-    'DisplayName','Eigenvalues of Hermitian matrix')
-scatter(RandomPoints,ones(1,numel(RandomPoints)),10, ...
-    'filled','MarkerFaceColor',[249,82,107]/255,...
-    'DisplayName','Uniform distribution random points')
-legend()
-set(gca,'yticklabel',[])
-xlim([-50,50])
-ylim([0.5,2.5])
-xlabel("Value")
-```
-
-## Appendix 2
-
-```matlab
-clc,clear,close all
-rng("default")
-
-% Construct real symmetric matrix
-A = randn(269);
-H = tril(A,-1)+triu(A',0);
-DiagCoeff = sqrt(2)*diag(ones(269,1));
-DiagCoeff(DiagCoeff==0) = 1;
-H = DiagCoeff.*H;
-
-EigValues = eig(H);
-disp(min(EigValues))
-disp(max(EigValues))
-
-% Random ponits drawn from uniform distribution
-RandomPoints = rand(1,269)*(max(EigValues)-min(EigValues))+min(EigValues);
-RandomPoints = sort(RandomPoints);
-
-figure('Units','pixels','Position',[71,482.33,2399.33,253.99])
-hold(gca,'on')
-box(gca,'on')
-grid(gca,'on')
-scatter(EigValues,2*ones(1,numel(EigValues)),10, ...
-    'filled','MarkerFaceColor',[7,84,213]/255, ...
-    'DisplayName','Eigenvalues of Hermitian matrix')
-scatter(RandomPoints,ones(1,numel(RandomPoints)),10, ...
-    'filled','MarkerFaceColor',[249,82,107]/255,...
-    'DisplayName','Uniform distribution random points')
-legend()
-set(gca,'yticklabel',[])
-xlim([-50,50])
-ylim([0.5,2.5])
-xlabel("Value")
-```
-
-<br>
+<div id="ref"></div>
 
 **References**
 
 [1] Derbyshire J. Prime obsession: Bernhard Riemann and the greatest unsolved problem in mathematics[M]. Joseph Henry Press, 2003.
 
-[2] [Hermitian Matrix - What a starry night~](http://whatastarrynight.com/mathematics/Hermitian-Matrix/).
-
-
+[2] [Hermitian Matrix - What a starry night~](https://helloworld-1017.github.io/2023-04-20/09-35-32.html).
 

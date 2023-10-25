@@ -71,11 +71,24 @@ set(gca,'yticklabel',[])
 xlim([-50,50])
 ylim([0.5,2.5])
 xlabel("Value")
-
 exportgraphics(gcf,"fig-1.jpg","Resolution",600)
+
+figure
+hold(gca,'on')
+box(gca,'on')
+grid(gca,'on')
+bins = 100;
+histogram(EigValues,bins,"FaceColor",[7,84,213]/255,"DisplayName","Eigenvalues of Hermitian matrix")
+histogram(RandomPoints,bins,"FaceColor",[249,82,107]/255,"DisplayName","Uniform distribution random points")
+legend();
+ylabel("Frequency")
+xlabel("Value")
+exportgraphics(gcf,"fig-2.jpg","Resolution",600)
 ```
 
 ![fig-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310242248050.jpg)
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310252241239.jpg" alt="fig-2" style="zoom:50%;" />
 
 我们可以明显地看到随机埃尔米特矩阵本征值之间的**排斥效应**：产生自均匀分布的随机数中所具有的非常接近的相邻数对比本征值分布中的相邻数对更多，并且数对之间离得也更远。
 
@@ -106,22 +119,35 @@ exportgraphics(gcf,"fig-1.jpg","Resolution",600)
 > box(gca,'on')
 > grid(gca,'on')
 > scatter(EigValues,2*ones(1,numel(EigValues)),10, ...
->  'filled','MarkerFaceColor',[7,84,213]/255, ...
->  'DisplayName','Eigenvalues of Hermitian matrix')
+> 'filled','MarkerFaceColor',[7,84,213]/255, ...
+> 'DisplayName','Eigenvalues of Hermitian matrix')
 > scatter(RandomPoints,ones(1,numel(RandomPoints)),10, ...
->  'filled','MarkerFaceColor',[249,82,107]/255,...
->  'DisplayName','Uniform distribution random points')
+> 'filled','MarkerFaceColor',[249,82,107]/255,...
+> 'DisplayName','Uniform distribution random points')
 > title(sprintf("std(diff(EigValues)) = %.4f, std(diff(RandomPoints)) = %.4f",std(diff(EigValues)), std(diff(RandomPoints))))
 > legend()
 > set(gca,'yticklabel',[])
 > xlim([-50,50])
 > ylim([0.5,2.5])
 > xlabel("Value")
+> exportgraphics(gcf,"fig-3.jpg","Resolution",600)
 > 
-> exportgraphics(gcf,"fig-2.jpg","Resolution",600)
+> figure
+> hold(gca,'on')
+> box(gca,'on')
+> grid(gca,'on')
+> bins = 100;
+> histogram(EigValues,bins,"FaceColor",[7,84,213]/255,"DisplayName","Eigenvalues of Hermitian matrix")
+> histogram(RandomPoints,bins,"FaceColor",[249,82,107]/255,"DisplayName","Uniform distribution random points")
+> legend();
+> ylabel("Frequency")
+> xlabel("Value")
+> exportgraphics(gcf,"fig-4.jpg","Resolution",600)
 > ```
 >
-> ![fig-2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310242251523.jpg)
+> ![fig-3](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310242251523.jpg)
+>
+> <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310252244926.jpg" alt="fig-4" style="zoom:50%;" />
 
 因此，尽管本征值之间并不想形成任何可辨认的模式（因为它们毕竟是从一个随机矩阵中计算产生的），但是却尽力保持着互相之间的距离。与此形成鲜明对比的是，一个纯粹的随机点如果发现自己同另一个随机点挤在一起，它似乎根本不会在乎。
 

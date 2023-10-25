@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Create a New Skin of Jekyll Theme \"minimal-mistake\""
+title: "Create a New Skin of Jekyll Theme \"minimal-mistakes\""
 date: 2023-10-24 16:15:45 +0800
 categories:
  - Jekyll
@@ -8,7 +8,7 @@ categories:
 
 # Introduction
 
-Jekyll theme "minimal-mistake" [[1]](#ref) provides nine optional skins [[2]](#ref), and we could specify it in `_config.yml`:
+Jekyll theme "minimal-mistakes" [[1]](#ref) provides nine optional skins [[2]](#ref), and we could specify it in `_config.yml`:
 
 ```yaml
 minimal_mistakes_skin : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"

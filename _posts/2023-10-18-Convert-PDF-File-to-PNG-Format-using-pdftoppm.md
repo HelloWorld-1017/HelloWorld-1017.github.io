@@ -273,7 +273,7 @@ httex.exe                     platex.exe
 
 # Invoke `pdftoppm.exe` in MATLAB to batch convert PDF files
 
-If we want to convert all `.pdf` files in the current folder to `.png` files, we could using MATLAB  `system` function [[2]](#ref) to invoke `pdftoppm.exe`, realising batch conversion:
+If we want to convert all `.pdf` files in the current folder to `.png` files, we could use MATLAB  `system` function [[2]](#ref) to invoke `pdftoppm.exe`, realising batch conversion:
 
 ```matlab
 clc,clear,close all

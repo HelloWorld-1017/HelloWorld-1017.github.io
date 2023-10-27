@@ -73,6 +73,9 @@ I tend to use slash to make a separation, so I decide to delete breadcrumbs: ope
 
 ![image-20231021190437416](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310211904471.png)
 
+**Added on Oct. 27, 2023**: Actually, the breadcrumbs function could be closed by specifying `breadcrumbs` key in `_config.yml` to `false`, instead of commenting above code, the details could be found in [[4]](#ref).
+{: .notice--warning}
+
 The final effect is:
 
 ![image-20231021191203945](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202310212107895.png)
@@ -90,3 +93,6 @@ not bad anyway ~
 [2] [https://mademistakes.com/mastering-jekyll/how-to-link/](https://mademistakes.com/mastering-jekyll/how-to-link/).
 
 [3] [https://jekyllrb.com/docs/permalinks/](https://jekyllrb.com/docs/permalinks/).
+
+[4] [Minimal Mistakes: Breadcrumb navigation (beta)](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta).
+

@@ -111,7 +111,8 @@ header:
 logo: # "/assets/images/88x88.png"
 masthead_title: # "My Custom Title"
 
-breadcrumbs: true  # disabled by default
+breadcrumbs: true  # disabled by default, https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta
+
 
 # search
 search: true

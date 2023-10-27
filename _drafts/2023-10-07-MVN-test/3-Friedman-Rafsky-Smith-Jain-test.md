@@ -30,7 +30,7 @@ where $L=M+N$.
 
 
 
-
+The sample of $N$ points to be tested for normality is labeled $X$. The mean vector $V_x$ and 
 
 
 

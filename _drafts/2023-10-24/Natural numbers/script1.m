@@ -15,7 +15,7 @@ clear labels
 data = [data;flow(:)];
 clear flow
 
-data = data*1e4;
+data = normalise(data)*1e4;
 totalNum = numel(data);
 
 data = string(abs(data));

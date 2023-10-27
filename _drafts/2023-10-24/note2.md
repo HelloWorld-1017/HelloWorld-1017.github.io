@@ -1,8 +1,4 @@
-
-
-
-
-
+`glyphplot` and `andrewplot`
 
 
 

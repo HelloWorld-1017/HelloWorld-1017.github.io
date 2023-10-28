@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Hypothesis Test 5: Mardia’s test (A Multivariate Normality Test)"
+title: "Mardia’s test (A Multivariate Normality Test)"
 date: 2023-10-23 22:30:17 +0800
 categories:
  - Mathematics
@@ -8,6 +8,7 @@ categories:
  - MATLAB
 tags:
  - Probability Theory and Mathematical Statistics
+ - Hypothesis Test
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

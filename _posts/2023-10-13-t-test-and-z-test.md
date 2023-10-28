@@ -1,12 +1,13 @@
 ---
 layout: single
-title: "Hypothesis Test 4: $t$-test and $z$-test"
+title: "Hypothesis Test: $t$-test and $z$-test"
 date: 2023-10-13 22:12:05 +0800
 categories:
  - Mathematics
  - MATLAB
 tags:
  - Probability Theory and Mathematical Statistics
+ - Hypothesis Test
  - MATLAB Statistics and Machine Learning Toolbox
 ---
 

@@ -1,12 +1,13 @@
 ---
 layout: single
-title: "Hypothesis Test 2: Hypothesis Test Practice 1"
+title: "A Hypothesis Test Practice"
 date: 2022-09-28 23:38:35 +0800
 categories: 
  - Mathematics
  - MATLAB
 tags:
  - Probability Theory and Mathematical Statistics
+ - Hypothesis Test
 ---
 
 # Introduction

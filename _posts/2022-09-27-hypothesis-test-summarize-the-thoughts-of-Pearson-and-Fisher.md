@@ -1,11 +1,12 @@
 ---
 layout: single
-title: "Hypothesis Test 1: Summarize the Thoughts of Pearson and Fisher"
+title: "Summarise the Thoughts of Pearson and Fisher for Hypothesis Test"
 date: 2022-09-27 16:47:51 +0800
 categories: 
  - Mathematics
 tags:
  - Probability Theory and Mathematical Statistics
+ - Hypothesis Test
  - Experiment
 ---
 

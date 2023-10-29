@@ -602,6 +602,6 @@ color problem
 
 [xxx] https://en.wikipedia.org/wiki/Wald%E2%80%93Wolfowitz_runs_test
 
-[xxx] https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf.
+[xxx] [NCSS Analysis of Runs](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf).
 
 https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm

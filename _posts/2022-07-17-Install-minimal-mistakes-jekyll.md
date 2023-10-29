@@ -1,13 +1,13 @@
 ---
 layout: single
-title: Install the Minimal-mistakes-jekyll Theme in Github Pages
+title: Install the Minimal-mistakes-jekyll Theme in GitHub Pages
 date: 2022-07-17 12:25:11 +0800
 categories: 
  - GitHub
  - Jekyll
 ---
 
-# Minimal-mistakes-jekyll Theme Installation
+# Minimal-mistakes-jekyll theme installation
 
 一开始，使用 github pages + Jekyll 建立个人网站的时候，使用的是一个比较简单的主题，总体结构也很清晰，但是后面想给网站添加一些功能就比较麻烦，比如添加评论功能、添加站内搜索功能、SEO优化等等。麻烦就麻烦在一些插件的功能同样比较少，并且只有少数几个插件在 Github 白名单中。
 
@@ -217,7 +217,7 @@ bingo~
 
 不太清楚这是什么原因导致的。
 
-## Centering the figures
+## Center the figures
 
 （2023年04月17日）
 

@@ -10,8 +10,6 @@ tags:
  - MATLAB Language Fundamentals
 ---
 
-<br>
-
 # 二进制与十进制之间的转换
 
 ## 将十进制数转换为二进制数
@@ -619,8 +617,6 @@ ans =
 [1] Sauer T. 数值分析(原书第2版). 北京: 机械工业出版社, 2014.10(2021.1重印).
 
 [2] Kahan W. IEEE standard 754 for binary floating-point arithmetic[J]. Lecture Notes on the Status of IEEE, 1996, 754(94720-1776): 11.
-
-
 
 
 

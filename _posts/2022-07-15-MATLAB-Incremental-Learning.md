@@ -13,7 +13,7 @@ tags:
 
 # Introduction
 
-本博客中的实例来自 MATLAB 官方案例：[Implement Incremental Learning for Classification Using Flexible Workflow](https://ww2.mathworks.cn/help/stats/implement-incremental-learning-using-flexible-workflow-classification.html)
+本博客中的实例来自 MATLAB 官方案例：Implement Incremental Learning for Classification Using Flexible Workflow [[1]](#ref).
 
 > This example shows how to use the **flexible workflow** to implement incremental learning for binary classification with prequential evaluation. A traditionally trained model initializes the incremental model. 
 
@@ -39,7 +39,7 @@ When a data chunk is available, supply the incoming chunk and a configured incre
 
 
 
-## Cold start and Warm start
+## Cold start vs. Warm start
 
 **Cold start**
 Little information might be known about the population before incremental learning starts.
@@ -56,7 +56,7 @@ When enough information is known before learning begins (for example, you have g
 
 
 
-## Dataset
+## Data set
 
 **Human Activity Data**
 The humanactivity data set contains 24,075 observations of five different physical human activities: Sitting, Standing, Walking, Running, and  Dancing. Each observation has 60 features extracted from acceleration data measured by smartphone accelerometer sensors. The data set contains the following variables: 
@@ -66,15 +66,7 @@ The humanactivity data set contains 24,075 observations of five different physic
 3. feat (24075-by-60 double): Feature matrix of 60 features for 24,075 observations;
 4. featlabels (60-by-1): Labels of the 60 features.
 
-The Sensor HAR (human activity recognition) App [1] was used to create the humanactivity data set. When measuring the raw acceleration data with this app, a person placed a smartphone in a pocket so that the smartphone was upside down and the screen faced toward the person. The software then calibrated the measured raw data accordingly and extracted the 60 features from the calibrated data. For details about the calibration and  feature extraction, see [2] and [3], respectively.                                                                      
-
-[1] El Helou, A. Sensor HAR recognition App. MathWorks File Exchange. http://www.mathworks.com/matlabcentral/fileexchange/54138-sensor-har-recognition-app "
-
-[2] STMicroelectronics, AN4508 Application note. “Parameters and calibration of a low-g 3-axis accelerometer.” 2014.  
-
-[3] El Helou, A. Sensor Data Analytics. MathWorks File Exchange. https://www.mathworks.com/matlabcentral/fileexchange/54139-sensor-data-analytics--french-webinar-code- "
-
----
+The Sensor HAR (human activity recognition) App [[2]](#ref) was used to create the humanactivity data set. When measuring the raw acceleration data with this app, a person placed a smartphone in a pocket so that the smartphone was upside down and the screen faced toward the person. The software then calibrated the measured raw data accordingly and extracted the 60 features from the calibrated data. For details about the calibration and  feature extraction, see [[3]](#ref) and [[4]](#ref), respectively.                                                                      
 
 <br>
 
@@ -263,4 +255,14 @@ Plot a trace plot of the performance metrics and estimated coefficient $\beta_{6
 
 <br>
 
-**Copyright 2020 The MathWorks, Inc.**
+<div id="ref"></div>
+
+**References**
+
+[1] [Implement Incremental Learning for Classification Using Flexible Workflow -MathWorks](https://ww2.mathworks.cn/help/stats/implement-incremental-learning-using-flexible-workflow-classification.html).
+
+[2] El Helou, A. Sensor HAR recognition App. MathWorks File Exchange. [Sensor HAR recognition App - File Exchange - MATLAB Central](https://ww2.mathworks.cn/matlabcentral/fileexchange/54138-sensor-har-recognition-app).
+
+[3] STMicroelectronics, AN4508 Application note. “Parameters and calibration of a low-g 3-axis accelerometer.” 2014. 
+
+[4]  El Helou, A. Sensor Data Analytics. MathWorks File Exchange. [Sensor Data Analytics (French Webinar Code) - File Exchange - MATLAB Central](https://ww2.mathworks.cn/matlabcentral/fileexchange/54139-sensor-data-analytics-french-webinar-code).

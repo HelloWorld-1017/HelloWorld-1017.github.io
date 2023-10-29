@@ -10,7 +10,7 @@ tags:
  - MATLAB Predictive Maintenance Toolbox
  - System Identification
  - Time Series Analysis
- - RUL
+ - Remaining Useful Life
 ---
 
 # Introduction

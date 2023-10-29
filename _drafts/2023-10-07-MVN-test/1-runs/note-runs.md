@@ -1,8 +1,17 @@
-Hypothesis Test
+---
+layout: single
+title: "xx"
+date: 2023-10-xx xx:xx:xx +0800
+categories:
+ - Mathematics
+tags:
+ - Probability Theory and Mathematical Statistics
+ - Hypothesis Test
+---
 
 # Introduction
 
-The notion of "run" is fundamental in Wald-Wolfowitz test. 
+The notion of "run" is fundamental in Wald-Wolfowitz Runs Test. The NCSS statistical software [[1]](#ref) provides a detailed documentation [[2]](#ref) (BTW, maybe the most detailed one I could found on the Internet) to explain what is “run” and related hypothesis tests. So, in this blog, I want to 
 
 <br>
 
@@ -10,7 +19,7 @@ The notion of "run" is fundamental in Wald-Wolfowitz test.
 
 In the case of binary data consisting of two district categories, a run is defined as a sequence where a single value is repeated one or more times. A new run occurs each time the data value changes. For example, in the following binary data series consisting of $n=16$ values:
 
-A *run* of a sequence is a maximal non-empty segment of the sequence consisting of adjacent equal elements. [[2]](#ref)
+Definition of “run” from Wikipedia [[2]](#ref): A *run* of a sequence is a maximal non-empty segment of the sequence consisting of adjacent equal elements.
 {: .notice--primary}
 $$
 \textcolor{red}{\underline{0\ 0}}\ 
@@ -570,24 +579,6 @@ then there are still two runs up and two runs down for a total of four runs, **b
 
 Although not demonstrated by this example, the treatment of ties can have an impact on the run totals and,  therefore, on the resulting hypothesis tests, particularly in the case of small samples. If the signs before and  after the tied values are different (as was the case in this example) it won't matter whether you count the tie  as "up" or "down" since the run counts won't change. This is called a "non-critical tie." On the other hand, if  the signs before and after the tie are the same, the run counts will depend on the way the tie is treated. A  common practice is to see if the results change dramatically when ties are counted as "up" as then as "down". It is also not uncommon to skip ties altogether and exclude them from runs tests.
 
-
-
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br>
 
 # Something else ...
@@ -600,8 +591,10 @@ color problem
 
 **References**
 
-[xxx] https://en.wikipedia.org/wiki/Wald%E2%80%93Wolfowitz_runs_test
+[1] [Statistical Software - NCSS](https://www.ncss.com/).
 
-[xxx] [NCSS Analysis of Runs](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf).
+[2] [Analysis of Runs - NCSS](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf).
+
+[3] [Wald–Wolfowitz runs test - Wikipedia](https://en.wikipedia.org/wiki/Wald%E2%80%93Wolfowitz_runs_test).
 
 https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm

@@ -4,12 +4,11 @@ title: Solve Nonlinear Equation (System) using Iterative Method
 date: 2022-07-12 13:45:17 +0800
 categories: 
  - Mathematics
+ - Python
 tags: 
  - Numerical Analysis
  - Matrix
 ---
-
-
 
 # 迭代法原理
 ## 迭代法求解非线性方程
@@ -267,16 +266,15 @@ $$
 $$
 
 其中，
+
 $$
-\boldsymbol{\delta}_i = \boldsymbol{x}_{i+1} - \boldsymbol{x}_i
-$$，
+\begin{split}
+&\boldsymbol{\delta}_i = \boldsymbol{x}_{i+1} - \boldsymbol{x}_i\\
+&\boldsymbol{\Delta}_i = F(\boldsymbol{x}_{i+1})-F(\boldsymbol{x}_i)\\
+\end{split}
 $$
-\boldsymbol{\Delta}_i = F(\boldsymbol{x}_{i+1})-F(\boldsymbol{x}_i) 
-$$。
 
-
-
-
+<br>
 
 # 算例
 

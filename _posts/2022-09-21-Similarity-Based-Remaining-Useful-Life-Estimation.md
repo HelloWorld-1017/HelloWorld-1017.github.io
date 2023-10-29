@@ -8,7 +8,7 @@ categories:
 tags:
  - Probability Theory and Mathematical Statistics
  - MATLAB Predictive Maintenance Toolbox
- - RUL
+ - Remaining Useful Life
 ---
 
 # Introduction

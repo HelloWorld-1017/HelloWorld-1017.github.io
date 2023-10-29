@@ -56,4 +56,3 @@ $$
 [1] [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf). 
 
 [2] [Nonlinear system - Wikipedia](https://en.wikipedia.org/wiki/Nonlinear_system).
-

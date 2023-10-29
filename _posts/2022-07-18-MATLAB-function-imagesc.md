@@ -10,10 +10,9 @@ tags:
 
 # 基本语法
 
-> **imagesc**
-> Display image with scaled color
+> **`imagesc`**: Display image with scaled color
 
-MATLAB 官方提供的示例
+MATLAB 官方提供的示例：
 
 ```matlab
 x = [5 8];
@@ -107,6 +106,6 @@ MATLAB 内建的色卡有以下几种：
 
 <br>
 
-**参考**
+**References**
 
-[1] [imagesc - MATLAB Documentation](https://ww2.mathworks.cn/help/matlab/ref/imagesc.html)
+[1] [imagesc - MATLAB Documentation](https://ww2.mathworks.cn/help/matlab/ref/imagesc.html).

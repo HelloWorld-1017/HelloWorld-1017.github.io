@@ -621,7 +621,7 @@ $$
 
 [7] [Gimbal lock - Wikipedia](https://en.wikipedia.org/wiki/Gimbal_lock).
 
-[Symmetric matrix - Wikipedia](https://en.wikipedia.org/wiki/Symmetric_matrix).
+
 
 
 

@@ -77,7 +77,7 @@ $$
 
 <br>
 
-# "For all" and "Exist" symbol
+# "For all" and "Exist" symbol: `\forall` and `\exists`
 
 ```latex
 \forall, \exists

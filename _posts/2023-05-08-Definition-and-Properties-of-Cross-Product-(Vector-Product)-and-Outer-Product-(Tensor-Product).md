@@ -160,7 +160,7 @@ $$
 
 ## Conversion to matrix multiplication
 
-叉积可以表示为斜对称矩阵（Skew-symmetric matrix） [[5]](#ref) 和一个向量的矩阵乘法（根据式$\eqref{eq3}$）：
+叉积可以表示为斜对称矩阵（Skew-symmetric matrix） [[5, 6]](#ref) 和一个向量的矩阵乘法（根据式$\eqref{eq3}$）：
 
 $$
 \begin{split}
@@ -350,5 +350,5 @@ $$
 
 [5] [Skew-symmetric matrix - Wikipedia](https://en.wikipedia.org/wiki/Skew-symmetric_matrix).
 
-
+[6] [Skew-Symmetric Matrix and its Properties - What a starry night~](https://helloworld-1017.github.io/2023-05-09/14-54-27.html).
 

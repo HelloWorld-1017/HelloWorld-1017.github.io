@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Geometric and Algebraic Definition of Dot Product
+title: Geometric and Algebraic Definition of Dot Product (Inner Product)
 date: 2022-06-09 21:07:09 +0800
 categories: 
  - Mathematics
@@ -11,7 +11,7 @@ tags:
 
 # 向量点积的代数定义和几何定义
 
-向量点积(dot product)可以从**代数角度**和**几何角度**两个角度来定义。这两种定义在欧几里得空间的笛卡尔坐标系中是等效的。
+向量点积(dot product，也被称为外积，i.e.)可以从**代数角度**和**几何角度**两个角度来定义。这两种定义在欧几里得空间的笛卡尔坐标系中是等效的。
 
 ## 向量点积的代数定义
 长度相等的两个向量$\boldsymbol{a}=[a_1,a_2,\cdots, a_n]$和$\boldsymbol{b}=[b_1,b_2,\cdots, b_n]$的内积可以定义为：

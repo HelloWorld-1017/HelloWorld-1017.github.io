@@ -1,7 +1,3 @@
-
-
-
-
 在几何学中，**超平面（hyperplane）**是一个子空间，它的维度比它的环绕空间（ambient space）的维度小1 [1]。例如，三维空间中的超平面是二维平面（planes），二维空间中的超平面是一维直线（lines）。
 
 > 环绕空间（ambient space）[2] 
@@ -20,17 +16,9 @@ in all cases however, any hyperplane can be given in coordinates as the solution
 
 
 
-
-
-
-
-
-
 [超平面（Hyperplane）浅谈 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/263604941)
 
 [What is Hyperplane - Deepchecks](https://deepchecks.com/glossary/hyperplane/)
-
-
 
 [Codimension - Wikipedia](https://en.wikipedia.org/wiki/Codimension)
 
@@ -38,41 +26,21 @@ in all cases however, any hyperplane can be given in coordinates as the solution
 
  
 
-
-
-
-
 SVM
 
 
 
-
-
-
-
-
-
-
-
-流形（之前机器学习的blog）
-
-
+流形（机器学习的blog）
 
 
 
 Plane Curve [Plane curve - Wikipedia](https://en.wikipedia.org/wiki/Plane_curve)
-
-.
 
 
 
 [Cauchy problem - Wikipedia](https://en.wikipedia.org/wiki/Cauchy_problem).
 
 [Hyperbolic partial differential equation - Wikipedia](https://en.wikipedia.org/wiki/Hyperbolic_partial_differential_equation).
-
-
-
-
 
 
 

@@ -6,13 +6,14 @@ categories:
  - Mathematics
 tags:
  - Matrix
+ - Mathematical Proofs and Derivations
 ---
 
 # Any matrix
 
 ## Any matrix $A$ has the same eigenvalues as its transpose $A^T$
 
-***Theorem***: Any matrix $A$ has the same eigenvalues as its transpose $A^T$ [[2]](#ref-2). 
+***Theorem-1***: Any matrix $A$ has the same eigenvalues as its transpose $A^T$ [[2]](#ref-2). 
 
 *Proof* [[3]](#ref-3), [[4]](#ref-4):
 
@@ -74,17 +75,22 @@ And actually at some special cases, the probability that $A$ and $A^T$ have *no*
 
 ## All eigenvalues of Hermitian matrix are real.
 
-***Theorem***: All eigenvalues of Hermitian matrix are real.
+***Theorem-2***: All eigenvalues of Hermitian matrix are real.
 
 *Proof*: The proof of this theorem could be found in [[6]](#ref-6).
 
 We could obtain the following corollaries from this theorem:
 
-***Corollary***: All coefficients of the characteristic polynomial of Hermitian matrix are real [[6]](#ref-6).
+<div id="corollary-2-1"></div>
+***Corollary-2-1***: All coefficients of the characteristic polynomial of Hermitian matrix are real [[6]](#ref-6).
 
-***Corollary***: The trace of Hermitian matrix is real [[6]](#ref-6).
+<div id="corollary-2-2"></div>
+***Corollary-2-2***: The trace of Hermitian matrix is real [[6]](#ref-6).
 
-***Corollary***: The determinant of Hermitian matrix is real [[6]](#ref-6).
+<div id="corollary-2-3"></div>
+***Corollary-2-3***: The determinant of Hermitian matrix is real [[6]](#ref-6).
+
+
 
 <br>
 
@@ -92,23 +98,29 @@ We could obtain the following corollaries from this theorem:
 
 ## All eigenvalues of real symmetric matrix are real.
 
-***Theorem***: All eigenvalues of real symmetric matrix are real.
+***Theorem-3***: All eigenvalues of real symmetric matrix are real.
 
 *Proof*: According to the definition of Hermitian matrix, real symmetric matrix is a special case of Hermitian matrix [[6]](#ref-6).
 
-Similar to Hermitian matrix, these corollaries are also true:
+Similar to [Corollary-2-1](#corollary-2-1), [Corollary-2-2](#corollary-2-2), and [Corollary-2-3](#corollary-2-3) of Hermitian matrix, these corollaries are also true:
 
-***Corollary***: All coefficients of the characteristic polynomial of real symmetric matrix are real.
+***Corollary-3-1***: All coefficients of the characteristic polynomial of real symmetric matrix are real.
 
-***Corollary***: The trace of real symmetric matrix is real.
+***Corollary-3-2***: The trace of real symmetric matrix is real.
 
-***Corollary***: The determinant of real symmetric matrix is real.
+***Corollary-3-3***: The determinant of real symmetric matrix is real.
 
-## Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal
+### If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it.
 
-***Theorem***: Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal.
+Theorem-5: If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it.
 
-Proof
+Proof: Refer to [[7: Theorem-4](https://helloworld-1017.github.io/2023-10-31/11-36-28.html#theorem-4)].
+
+## Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal.
+
+***Theorem-4***: Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal.
+
+*Proof*: The detailed proof could be found in [[7: Theorem-2](https://helloworld-1017.github.io/2023-10-31/11-36-28.html#theorem-2)].
 
 <br>
 
@@ -131,3 +143,6 @@ Proof
 
 <div id="ref-6"></div>
 [6] [Hermitian Matrix - What a starry night~](https://helloworld-1017.github.io/2023-04-20/09-35-32.html).
+
+<div id="ref-7"></div>
+[7] [Some Properties of Real Symmetric Matrix - What a starry night~](https://helloworld-1017.github.io/2023-10-31/11-36-28.html).

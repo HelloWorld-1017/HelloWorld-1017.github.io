@@ -60,9 +60,11 @@ manim script1.py --format=gif
 
 生成的gif文件如下所示：
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/CreateCircle_ManimCE_v0.16.0.post0.gif" alt="CreateCircle_ManimCE_v0.16.0.post0" style="zoom:67%;" />
+![CreateCircle_ManimCE_v0.16.0.post0.gif](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/CreateCircle_ManimCE_v0.16.0.post0.gif?raw=true)
 
 <br>
+
+
 
 # 在 construct 函数中创建多个 sections，并分别渲染
 

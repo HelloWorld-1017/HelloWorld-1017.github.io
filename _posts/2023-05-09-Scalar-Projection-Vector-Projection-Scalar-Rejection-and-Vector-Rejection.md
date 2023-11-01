@@ -4,6 +4,7 @@ title: Scalar Projection, Vector Projection, Scalar Rejection and Vector Rejecti
 date: 2023-05-09 13:36:31 +0800
 categories: 
  - Mathematics
+ - MATLAB
 tags: 
  - Matrix
  - Geometry
@@ -148,5 +149,5 @@ legend('Interpreter','latex')
 
 [1] [Vector projection - Wikipedia](https://en.wikipedia.org/wiki/Vector_projection).
 
-[2] [Geometric and Algebraic Definition of Dot Product - What a starry night~](http://ma1017.github.io/mathematics/Geometric-and-Algebraic-Definition-of-Dot-Product/).
+[2] [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
 

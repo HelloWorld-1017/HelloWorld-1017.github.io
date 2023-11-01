@@ -8,7 +8,7 @@ tags:
  - LaTeX Equation
 ---
 
-# Dot product: `\langle` and `\rangle`
+# Dot product (Inner product): `\langle` and `\rangle`
 
 ```latex
 \langle\boldsymbol{u},\boldsymbol{v}\rangle=\boldsymbol{u}^T\boldsymbol{v}

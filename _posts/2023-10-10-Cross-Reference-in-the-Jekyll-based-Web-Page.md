@@ -4,7 +4,6 @@ title: Cross Reference in the Jekyll-based Web Page Using HTML `<div>` Tag
 date: 2023-10-10 16:37:25 +0800
 categories:
  - Jekyll
-toc: false
 ---
 
 # HTML `<div>` tag
@@ -65,6 +64,3 @@ At this point, the HTML language is more tolerant than LaTeX typesetting system.
 
 <div id="ref-2"></div>
 [2] [HTML div tag - w3schools](https://www.w3schools.com/tags/tag_div.ASP).
-
-
-

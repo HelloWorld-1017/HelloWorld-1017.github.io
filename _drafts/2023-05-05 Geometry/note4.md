@@ -1,8 +1,12 @@
-Some Properties of Orthogonally Diagonalizable Matrices
+Some Properties of Orthogonally Diagonalizable Matrix
 
 Matrix
 
 Mathematics
+
+Spectral Theorem
+
+
 
 # Definitions
 
@@ -300,10 +304,68 @@ A&=
 \boldsymbol{u}_n^T\\
 \end{bmatrix}\\
 &=\lambda_1\boldsymbol{u}_1\boldsymbol{u}_1^T+\lambda_2\boldsymbol{u}_2\boldsymbol{u}_2^T+\cdots+\lambda_n\boldsymbol{u}_n\boldsymbol{u}_n^T
-\end{split}
+\end{split}\label{eq2023-11-02-02}
 $$
 The subspaces $$\mathrm{Span}\{\boldsymbol{u}_i\}$$ are orthogonal straight lines through $\boldsymbol{0}$ in $\mathbb{R}^n$, each $n\times n$ matrix $$\boldsymbol{u}_i\boldsymbol{u}_i^T$$ is the projection of $\mathbb{R}^n$ (the column space of $A$) onto  $$\mathrm{Span}\{\boldsymbol{u}_i\}$$.
 
+Specifically, equation $\eqref{eq2023-11-02-02}$ illustrates that $A$ can be written as a linear combination of projections onto $n$ orthogonal “axes” in $\mathbb{R}^n$. This linear combination uses all eigenvalues (the spectrum) of $A$ as weights, so $\eqref{eq2023-11-02-02}$ is called spectral decomposition of $A$.
+
+If applying $\eqref{eq2023-11-02-02}$ to a point $x$ in $\mathbb{R}^n$, we could get:
+$$
+\begin{split}
+A\boldsymbol{x}
+&=\lambda_1\boldsymbol{u}_1\boldsymbol{u}_1^T\boldsymbol{x}
++\lambda_2\boldsymbol{u}_2\boldsymbol{u}_2^T\boldsymbol{x}
++\cdots
++\lambda_n\boldsymbol{u}_n\boldsymbol{u}_n^T\boldsymbol{x}\\
+&=\lambda_1\boldsymbol{u}_1\langle\boldsymbol{u}_1,\boldsymbol{x}\rangle
++\lambda_2\boldsymbol{u}_2\langle\boldsymbol{u}_2,\boldsymbol{x}\rangle
++\cdots
++\lambda_n\boldsymbol{u}_n\langle\boldsymbol{u}_n,\boldsymbol{x}\rangle\\
+&=\lambda_1\dfrac{\langle\boldsymbol{u}_1,\boldsymbol{x}\rangle}{\langle\boldsymbol{u}_1,\boldsymbol{u}_1\rangle}\boldsymbol{u}_1
++\lambda_2\dfrac{\langle\boldsymbol{u}_2,\boldsymbol{x}\rangle}{\langle\boldsymbol{u}_2,\boldsymbol{u}_2\rangle}\boldsymbol{u}_2
++\cdots
++\lambda_n\dfrac{\langle\boldsymbol{u}_n,\boldsymbol{x}\rangle}{\langle\boldsymbol{u}_n,\boldsymbol{u}_n\rangle}\boldsymbol{u}_n\\
+&=\lambda_1\mathrm{proj}_{\boldsymbol{u}_1}(\boldsymbol{x})
++\lambda_2\mathrm{proj}_{\boldsymbol{u}_2}(\boldsymbol{x})
++\cdots
++\lambda_n\mathrm{proj}_{\boldsymbol{u}_n}(\boldsymbol{x})
+\end{split}
+$$
+where $\mathrm{proj}_{\boldsymbol{u}}(\boldsymbol{v})$ is the vector projection of vector $\boldsymbol{v}$ on a nonzero vector $\boldsymbol{u}$ (could see references [[4](#ref-4), [6](#ref-6)]). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From 
+
+
+
+
+
+
+$$
+(\boldsymbol{u}_1\boldsymbol{u}_1^T)A=\lambda_1\boldsymbol{u}_1\boldsymbol{u}_1^T\boldsymbol{u}_1\boldsymbol{u}_1^T=\lambda_1\boldsymbol{u}_1\boldsymbol{u}_1^T
+$$
+
+$$
+(\boldsymbol{u}_1\boldsymbol{u}_1^T)(A-\lambda_1\boldsymbol{u}_1\boldsymbol{u}_1^T)=\boldsymbol{0}
+$$
+
+$$
+\mathrm{Rank}(\boldsymbol{u}_1\boldsymbol{u}_1^T)=1
+$$
 
 
 
@@ -336,3 +398,6 @@ The subspaces $$\mathrm{Span}\{\boldsymbol{u}_i\}$$ are orthogonal straight line
 
 <div id="ref-5"></div>
 [5] [Orthogonal matrix - Wikipedia](https://en.wikipedia.org/wiki/Orthogonal_matrix).
+
+<div id="ref-6"></div>
+[6] [Scalar Projection, Vector Projection, Scalar Rejection and Vector Rejection - What a starry night~](https://helloworld-1017.github.io/2023-05-09/13-36-31.html).

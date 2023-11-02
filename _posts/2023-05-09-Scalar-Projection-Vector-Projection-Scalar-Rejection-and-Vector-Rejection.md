@@ -2,10 +2,11 @@
 layout: single
 title: Scalar Projection, Vector Projection, Scalar Rejection and Vector Rejection
 date: 2023-05-09 13:36:31 +0800
-categories: 
+last_modified_at: 2023-11-02 21:08:27 +0800
+categories:
  - Mathematics
  - MATLAB
-tags: 
+tags:
  - Matrix
  - Geometry
 ---
@@ -112,11 +113,12 @@ $$
 \end{split}
 $$
 
-<br>
+**Added on Nov. 2, 2023**: The notions of vector projection and vector rejection are used in Gram-Schmidt Process, which could be found in [[3](#ref-3)].
+{: .notice--primary}
 
 基于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$的定义在编程时更方便计算。以向量$\boldsymbol{a}=(1,1)$，$\boldsymbol{b}=(0.4,1.6)$进行验证：
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230509133231886.png?raw=true" alt="image-20230509133231886" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311022016558.png" alt="image-20231102201557457" style="zoom: 67%;" />
 
 ```matlab
 clc,clear,close all
@@ -137,9 +139,9 @@ q1 = quiver(0,0,vecA(1),vecA(2), ...
 q2 = quiver(0,0,vecB(1),vecB(2), ...
     'LineWidth',1.5,'AutoScale','off','DisplayName','$b$');
 q3 = quiver(0,0,vecA1(1),vecA1(2), ...
-    'LineWidth',1.5,'AutoScale','off','DisplayName','$a_1$');
+    'LineWidth',1.5,'AutoScale','off','DisplayName','$a_1$, Vector projection');
 q4 = quiver(vecA1(1),vecA1(2),vecA2(1),vecA2(2), ...
-    'LineWidth',1.5,'AutoScale','off','DisplayName','$a_1$');
+    'LineWidth',1.5,'AutoScale','off','DisplayName','$a_2$, Vector rejection');
 legend('Interpreter','latex')
 ```
 
@@ -147,7 +149,12 @@ legend('Interpreter','latex')
 
 **References**
 
+<div id="ref-1"></div>
 [1] [Vector projection - Wikipedia](https://en.wikipedia.org/wiki/Vector_projection).
 
+<div id="ref-2"></div>
 [2] [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
+
+<div id="ref-3"></div>
+[3] [Gram-Schmidt Process - What a starry night~](https://helloworld-1017.github.io/2023-11-01/22-00-27.html).
 

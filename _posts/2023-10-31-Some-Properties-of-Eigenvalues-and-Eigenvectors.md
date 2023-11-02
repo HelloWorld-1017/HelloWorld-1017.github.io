@@ -41,28 +41,24 @@ But, it is important to highlight that, the eigenvalues of $A$ and $A^T$ are not
 ```matlab
 A = [1,3;2,4];
 
-[lamda1,v1] = eig(A)
-[lamda2,v2] = eig(A')
+[v1,lamda1] = eig(A)
+[v2,lamda2] = eig(A')
 ```
 
 ```
-lamda1 =
-
+v1 =
    -0.9094   -0.5658
     0.4160   -0.8246
 
-v1 =
-
+lamda1 =
    -0.3723         0
          0    5.3723
 
-lamda2 =
-
+v2 =
    -0.8246   -0.4160
     0.5658   -0.9094
-    
-v2 =
 
+lamda2 =
    -0.3723         0
          0    5.3723
 ```
@@ -110,7 +106,7 @@ Similar to [Corollary-2-1](#corollary-2-1), [Corollary-2-2](#corollary-2-2), and
 
 ***Corollary-3-3***: The determinant of real symmetric matrix is real.
 
-### If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it.
+## If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it.
 
 Theorem-5: If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it.
 

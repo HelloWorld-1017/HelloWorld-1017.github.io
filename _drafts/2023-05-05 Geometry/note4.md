@@ -330,10 +330,233 @@ A\boldsymbol{x}
 +\lambda_2\mathrm{proj}_{\boldsymbol{u}_2}(\boldsymbol{x})
 +\cdots
 +\lambda_n\mathrm{proj}_{\boldsymbol{u}_n}(\boldsymbol{x})
-\end{split}
+\end{split}\label{eq-2023-11-03-01}
 $$
 where $\mathrm{proj}_{\boldsymbol{u}}(\boldsymbol{v})$ is the vector projection of vector $\boldsymbol{v}$ on a nonzero vector $\boldsymbol{u}$ (could see references [[4](#ref-4), [6](#ref-6)]). 
 
+We could take a $3\times3$ symmetric matrix:
+$$
+A=\begin{bmatrix}
+2&-2&0\\
+-2&1&-2\\
+0&-2&0\\
+\end{bmatrix}\notag
+$$
+as an example to illustrate above ideas:
+
+```matlab
+clc,clear,close all
+
+rng(17)
+% Create a symmetric matrix
+A = [2,-2,0;-2,1,-2;0,-2,0];
+
+% Find eigenvalues and corresponding eigenvectors
+[u,lambda] = eig(A);
+u_1 = u(:,1);
+u_2 = u(:,2);
+u_3 = u(:,3);
+
+% Create a random vector and applying spectral decomposition
+x = rand(3,1);
+proj_1 = dot(u_1,x)/dot(u_1,u_1)*u_1;
+proj_2 = dot(u_2,x)/dot(u_2,u_2)*u_2;
+proj_3 = dot(u_3,x)/dot(u_3,u_3)*u_3;
+Ax = lambda(1,1)*proj_1+lambda(2,2)*proj_2+lambda(3,3)*proj_3;
+
+%% Figure 1
+figure("Position",[602.33,200,856.67,634])
+ax = axes("DataAspectRatio",[1,1,1]);
+view(ax,[-11.92,10.93])
+legend("Interpreter","latex","FontSize",15,"Position",[0.609521115582204,0.194156154239967,0.336228281184852,0.198738164706185])
+markerSize = 20;
+lineWidth = 1.5;
+fontSize = 17;
+hold(gca,"on"),box(gca,"on"),grid(gca,"on")
+
+% Plot eigenvectors
+plot3([0,u_1(1)],[0,u_1(2)],[0,u_1(3)], ...
+    "Color","b","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","Eigenvectors")
+plot3([0,u_2(1)],[0,u_2(2)],[0,u_2(3)], ...
+    "Color","b","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+plot3([0,u_3(1)],[0,u_3(2)],[0,u_3(3)], ...
+    "Color","b","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+text(-0.28,-0.70,-0.64,"$u_1$","FontSize",fontSize,"Color","b","Interpreter","latex")
+text(0.69,0.31,-0.67,"$u_2$","FontSize",fontSize,"Color","b","Interpreter","latex")
+text(-0.66,0.65,-0.39,"$u_3$","FontSize",fontSize,"Color","b","Interpreter","latex")
+
+% Plot the random vector, x
+plot3([0,x(1)],[0,x(2)],[0,x(3)], ...
+    "Color",[0,0.545,0],"LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","A random vector")
+text(0.32,0.51,0.20,"$x$","FontSize",fontSize,"Color",[0,0.545,0],"Interpreter","latex")
+
+% Plot Ax
+plot3([0,Ax(1)],[0,Ax(2)],[0,Ax(3)], ...
+    "Color","k","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","$A$ works on $x$")
+text(-0.47,-0.46,-1.10,"$Ax$","FontSize",fontSize,"Color","k","Interpreter","latex")
+
+% Plot vector projection (x on u_i)
+plot3([0,proj_1(1)],[0,proj_1(2)],[0,proj_1(3)], ...
+    "Color","r","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","Vector projection ($x$ on $u_i$)")
+plot3([0,proj_2(1)],[0,proj_2(2)],[0,proj_2(3)], ...
+    "Color","r","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+plot3([0,proj_3(1)],[0,proj_3(2)],[0,proj_3(3)], ...
+    "Color","r","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+text(-0.33188142784709,0.068857451234152,0.452217272205683,"$Proj_{u_1}(x)$", ...
+    "FontSize",fontSize,"Color","r","Interpreter","latex")
+text(0.164537846716412,-0.142149742645778,-0.102476304632832,"$Proj_{u_2}(x)$", ...
+    "FontSize",fontSize,"Color","r","Interpreter","latex")
+text(-0.44,0.43,-0.03,"$Proj_{u_3}(x)$", ...
+    "FontSize",fontSize,"Color","r","Interpreter","latex")
+
+% Plot vector rejection (x on u_i)
+plot3([x(1),proj_1(1)],[x(2),proj_1(2)],[x(3),proj_1(3)], ...
+    "Color",[0.5,0.5,0.5],"LineWidth",lineWidth,"LineStyle","--", ...
+    "DisplayName","Vector rejection ($x$ on $u_i$)")
+plot3([x(1),proj_2(1)],[x(2),proj_2(2)],[x(3),proj_2(3)], ...
+    "Color",[0.5,0.5,0.5],"LineWidth",lineWidth,"LineStyle","--", ...
+    "HandleVisibility","off")
+plot3([x(1),proj_3(1)],[x(2),proj_3(2)],[x(3),proj_3(3)], ...
+    "Color",[0.5,0.5,0.5],"LineWidth",lineWidth,"LineStyle","--", ...
+    "HandleVisibility","off")
+
+% Export graph
+exportgraphics(gcf,"pic-1.jpg","Resolution",600)
+
+%% Figure 2
+figure("Position",[602.33,200,856.67,634])
+ax = axes("DataAspectRatio",[1,1,1]);
+view(ax,[-11.92,10.93])
+legend("Interpreter","latex","FontSize",15,"Position",[0.620529088363842,0.195733441306213,0.353731233425858,0.198738164706185])
+markerSize = 20;
+lineWidth = 1.5;
+fontSize = 17;
+hold(gca,"on"),box(gca,"on"),grid(gca,"on")
+
+% Plot eigenvectors
+plot3([0,u_1(1)],[0,u_1(2)],[0,u_1(3)], ...
+    "Color","b","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","Eigenvectors")
+plot3([0,u_2(1)],[0,u_2(2)],[0,u_2(3)], ...
+    "Color","b","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+plot3([0,u_3(1)],[0,u_3(2)],[0,u_3(3)], ...
+    "Color","b","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+text(-0.28,-0.70,-0.64,"$u_1$","FontSize",fontSize,"Color","b","Interpreter","latex")
+text(0.69,0.31,-0.67,"$u_2$","FontSize",fontSize,"Color","b","Interpreter","latex")
+text(-0.66,0.65,-0.39,"$u_3$","FontSize",fontSize,"Color","b","Interpreter","latex")
+
+% Plot the random vector, x
+plot3([0,x(1)],[0,x(2)],[0,x(3)], ...
+    "Color",[0,0.545,0],"LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","A random vector")
+text(0.32,0.51,0.20,"$x$","FontSize",fontSize,"Color",[0,0.545,0],"Interpreter","latex")
+
+% Plot Ax
+plot3([0,Ax(1)],[0,Ax(2)],[0,Ax(3)], ...
+    "Color","k","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","$A$ works on $x$")
+text(-0.47,-0.46,-1.10,"$Ax$","FontSize",fontSize,"Color","k","Interpreter","latex")
+
+% Plot vector projection (Ax on u_i)
+plot3(lambda(1,1)*[0,proj_1(1)],lambda(1,1)*[0,proj_1(2)],lambda(1,1)*[0,proj_1(3)], ...
+    "Color","r","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "DisplayName","Vector projection ($Ax$ on $u_i$)")
+plot3(lambda(2,2)*[0,proj_2(1)],lambda(2,2)*[0,proj_2(2)],lambda(2,2)*[0,proj_2(3)], ...
+    "Color","r","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+plot3(lambda(3,3)*[0,proj_3(1)],lambda(3,3)*[0,proj_3(2)],lambda(3,3)*[0,proj_3(3)], ...
+    "Color","r","LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "HandleVisibility","off")
+text(-0.218998853914199,-0.218068949398294,-0.880847442870728,"$\lambda_1Proj_{u_1}(x)$", ...
+    "FontSize",fontSize,"Color","r","Interpreter","latex")
+text(0.164537846716412,-0.142149742645778,-0.102476304632832,"$\lambda_2Proj_{u_2}(x)$", ...
+    "FontSize",fontSize,"Color","r","Interpreter","latex")
+text(-0.44,0.43,-0.03,"$\lambda_3Proj_{u_3}(x)$", ...
+    "FontSize",fontSize,"Color","r","Interpreter","latex")
+
+% Plot vector rejection (Ax on u_i)
+plot3([Ax(1),lambda(1,1)*proj_1(1)],[Ax(2),lambda(1,1)*proj_1(2)],[Ax(3),lambda(1,1)*proj_1(3)], ...
+    "Color",[0.5,0.5,0.5],"LineWidth",lineWidth,"LineStyle","--", ...
+    "DisplayName","Vector rejection ($Ax$ on $u_i$)")
+plot3([Ax(1),lambda(2,2)*proj_2(1)],[Ax(2),lambda(2,2)*proj_2(2)],[Ax(3),lambda(2,2)*proj_2(3)], ...
+    "Color",[0.5,0.5,0.5],"LineWidth",lineWidth,"LineStyle","--", ...
+    "HandleVisibility","off")
+plot3([Ax(1),lambda(3,3)*proj_3(1)],[Ax(2),lambda(3,3)*proj_3(2)],[Ax(3),lambda(3,3)*proj_3(3)], ...
+    "Color",[0.5,0.5,0.5],"LineWidth",lineWidth,"LineStyle","--", ...
+    "HandleVisibility","off")
+
+% Export graph
+exportgraphics(gcf,"pic-2.jpg","Resolution",600)
+```
+
+![pic-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311031340243.jpg)
+
+![pic-2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311031340700.jpg)
+
+**(1) Verifying $\eqref{eq-2023-11-03-01}$**
+
+As can be seen, if viewing $$\{\boldsymbol{u}_1,\boldsymbol{u}_2,\boldsymbol{u}_3\}$$ as a complete basis set in $\mathbb{R}^n$, $\boldsymbol{x}$ could be rewrite as:
+$$
+\boldsymbol{x}=\mathrm{proj}_{\boldsymbol{u}_1}(\boldsymbol{x})
++\mathrm{proj}_{\boldsymbol{u}_2}(\boldsymbol{x})
++\mathrm{proj}_{\boldsymbol{u}_1}(\boldsymbol{x})
+$$
+and "transformation $A$ works on $\boldsymbol{x}$" could be write as:
+$$
+A\boldsymbol{x}=
+\lambda_1\mathrm{proj}_{\boldsymbol{u}_1}(\boldsymbol{x})
++\lambda_2\mathrm{proj}_{\boldsymbol{u}_2}(\boldsymbol{x})
++\lambda_3\mathrm{proj}_{\boldsymbol{u}_3}(\boldsymbol{x})
+$$
+We could verify this point:
+
+```
+>> Ax-A*x
+ans =
+   1.0e-15 *
+   -0.4441
+   -0.2776
+   -0.2220
+```
+
+**(2) Verifying $\eqref{eq2023-11-02-02}$**
+
+Equations $\eqref{eq2023-11-02-02}$ says that the symmetric $A$ could be written as a linear combination of $n$ matrix, we could verify this point:
+
+```
+>> lambda(1,1)*u_1*u_1', lambda(2,2)*u_2*u_2', lambda(2,2)*u_2*u_2'
+ans =
+   -0.2222   -0.4444   -0.4444
+   -0.4444   -0.8889   -0.8889
+   -0.4444   -0.8889   -0.8889
+
+ans =
+    0.4444    0.2222   -0.4444
+    0.2222    0.1111   -0.2222
+   -0.4444   -0.2222    0.4444
+ans =
+    0.4444    0.2222   -0.4444
+    0.2222    0.1111   -0.2222
+   -0.4444   -0.2222    0.4444
+   
+>> lambda(1,1)*u_1*u_1'+lambda(2,2)*u_2*u_2'+lambda(3,3)*u_3*u_3'
+ans =
+    2.0000   -2.0000   -0.0000
+   -2.0000    1.0000   -2.0000
+   -0.0000   -2.0000    0.0000
+```
+
+From $\eqref{eq2023-11-02-02}$, we could 
 
 
 
@@ -348,7 +571,37 @@ where $\mathrm{proj}_{\boldsymbol{u}}(\boldsymbol{v})$ is the vector projection 
 
 
 
-From 
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+% [v(:,1)*v(:,1)']*(lambda(2,2)*v(:,2)*v(:,2)'+lambda(3,3)*v(:,3)*v(:,3)')
+% v(:,2)*v(:,2)'*(lambda(1,1)*v(:,1)*v(:,1)'+lambda(3,3)*v(:,3)*v(:,3)')
+```
+
+
 
 
 
@@ -366,11 +619,6 @@ $$
 $$
 \mathrm{Rank}(\boldsymbol{u}_1\boldsymbol{u}_1^T)=1
 $$
-
-
-
-
-
 
 
 

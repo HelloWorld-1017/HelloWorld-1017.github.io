@@ -2,6 +2,7 @@
 layout: single
 title: Definition and Properties of Cross Product (Vector Product) and Outer Product (Tensor Product)
 date: 2023-05-08 09:39:25 +0800
+last_modified_at: 2023-11-03 21:00:46 +0800
 categories:
  - Mathematics
 tags:
@@ -129,7 +130,7 @@ $$
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Cross_product_parallelogram.svg" alt="Cross product parallelogram.svg" height="375" width="480" style="zoom: 50%;" >
 
-进一步地，以向量$\boldsymbol{a}$，$\boldsymbol{b}$和$\boldsymbol{c}$作为边的平行六面体（parallelepiped）的面积可以通过叉积和点积 [[3]](#ref) 的组合（称为scalar triple product，即标量三重积）进行计算：
+进一步地，以向量$\boldsymbol{a}$，$\boldsymbol{b}$和$\boldsymbol{c}$作为边的平行六面体（parallelepiped）的面积可以通过叉积和点积 [[3](#ref-3)] 的组合（称为scalar triple product，即标量三重积）进行计算：
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Parallelepiped_volume.svg/1200px-Parallelepiped_volume.svg.png" alt="Parallelepiped volume.svg" style="zoom: 33%;" >
 
@@ -147,7 +148,7 @@ $$
 
 ## Cross product vs. Dot product
 
-对比叉积和内积的定义式 [[3]](#ref)：
+对比叉积和内积的定义式 [[3](#ref-3)]：
 
 $$
 \begin{split}
@@ -160,7 +161,7 @@ $$
 
 ## Conversion to matrix multiplication
 
-叉积可以表示为斜对称矩阵（Skew-symmetric matrix） [[5, 6]](#ref) 和一个向量的矩阵乘法（根据式$\eqref{eq3}$）：
+叉积可以表示为斜对称矩阵（Skew-symmetric matrix） [[5](#ref-5), [6](#ref-6)] 和一个向量的矩阵乘法（根据式$\eqref{eq3}$）：
 
 $$
 \begin{split}
@@ -227,7 +228,7 @@ $$
 
 ## Cross product in MATLAB
 
-在MATLAB中，可以使用`cross`函数 [[4]](#ref) 计算两个向量的叉积：
+在MATLAB中，可以使用`cross`函数 [[4](#ref-4)] 计算两个向量的叉积：
 
 ```matlab
 >> cross([1,0,0],[0,1,0])
@@ -274,8 +275,10 @@ u_mv_1&u_mv_2&\cdots&u_mv_n\\
 \end{bmatrix}\label{eq4}
 $$
 
-或者使用索引记法：
+**Note added on Nov. 3, 2023**: Definition $\eqref{eq4}$ as well that in the following text, that is the way of denoting the outer product of $\boldsymbol{u}$ and $\boldsymbol{v}$ as $\boldsymbol{u}\otimes\boldsymbol{v}$ is from Wikipedia [[1](#ref-1)]. However, symbol $\otimes$ is more commonly used to denote Kronecker product. So, according to the definition of **Kronecker product** [[7](#ref-7), [8](#ref-8)], it is more reasonable to denote the outer product of $\boldsymbol{u}$ and $\boldsymbol{v}$ as $\boldsymbol{u}\otimes\boldsymbol{v}^T$ [[9](#ref-9)].
+{: .notice--warning}
 
+或者使用索引记法：
 $$
 (\boldsymbol{u}\otimes\boldsymbol{v})_{ij}=u_iv_j
 $$
@@ -314,7 +317,7 @@ $$
 
 ## The dot product is the trace of the outer product
 
-两个相同维度的向量$\boldsymbol{u}$和$\boldsymbol{v}$的点积定义为 [[3]](#ref)：
+两个相同维度的向量$\boldsymbol{u}$和$\boldsymbol{v}$的点积定义为 [[3](#ref-3)]：
 
 $$
 \langle\boldsymbol{u},\boldsymbol{v}\rangle=\boldsymbol{u}^T\boldsymbol{v}
@@ -336,19 +339,33 @@ $$
 
 <br>
 
-<div id="ref"></div>
+
 
 **References**
 
+<div id="ref-1"></div>
 [1] [Outer product - Wikipedia](https://en.wikipedia.org/wiki/Outer_product).
 
+<div id="ref-2"></div>
 [2] [Cross product - Wikipedia](https://en.wikipedia.org/wiki/Cross_product).
 
+<div id="ref-3"></div>
 [3] [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
 
+<div id="ref-4"></div>
 [4] [`cross`: Cross product. - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/cross.html).
 
+<div id="ref-5"></div>
 [5] [Skew-symmetric matrix - Wikipedia](https://en.wikipedia.org/wiki/Skew-symmetric_matrix).
 
+<div id="ref-6"></div>
 [6] [Skew-Symmetric Matrix and its Properties - What a starry night~](https://helloworld-1017.github.io/2023-05-09/14-54-27.html).
 
+<div id="ref-7"></div>
+[7] [Kronecker Product - from Wolfram MathWorld](https://mathworld.wolfram.com/KroneckerProduct.html).
+
+<div id="ref-8"></div>
+[8] [Kronecker product - Wikipedia](https://en.wikipedia.org/wiki/Kronecker_product).
+
+<div id="ref-9"></div>
+[9] [Vector Direct Product - from Wolfram MathWorld](https://mathworld.wolfram.com/VectorDirectProduct.html).

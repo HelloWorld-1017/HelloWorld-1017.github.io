@@ -2,14 +2,15 @@
 layout: single
 title: Some Mathematical Symbols in LaTeX and MathJax
 date: 2023-10-30 08:46:52 +0800
-last_modified_at: 2023-11-02 20:29:09 +0800
+last_modified_at: 2023-11-03 20:34:50 +0800
+modified_at1: 2023-11-02 20:29:09 +0800
 categories:
  - LaTeX
 tags:
  - LaTeX Equation
 ---
 
-# Dot product (Inner product): `\langle` and `\rangle`
+# Dot product (Inner product)
 
 ```latex
 \langle\boldsymbol{u},\boldsymbol{v}\rangle=\boldsymbol{u}^T\boldsymbol{v}
@@ -31,7 +32,7 @@ $$
 
 <br>
 
-# Cross product (Vector product): `\times` or `\wedge`
+# Cross product (Vector product)
 
 ```latex
 \boldsymbol{u}\times\boldsymbol{v}
@@ -53,18 +54,31 @@ $$
 
 <br>
 
-# Outer product: `\otimes` and other similar symbols
+# Kronecker product (Tensor product, Outer product) and other similar symbols
+
+Kronecker product (or tensor product): 
 
 ```latex
-\boldsymbol{u}\otimes\boldsymbol{v}
+A\otimes B
 ```
 
+
+$$
+A\otimes B\notag
+$$
+
+or denote outer product of vectors: 
+
+```
+\boldsymbol{u}\otimes\boldsymbol{v}
+```
 
 $$
 \boldsymbol{u}\otimes\boldsymbol{v}\notag
 $$
 
-Other similar symbols [[2](#ref-2)]:
+
+and some other similar symbols [[2](#ref-2)]:
 
 ```latex
 \oplus, \ominus, \odot, \oslash, \bigotimes, \bigoplus, \bigodot
@@ -76,7 +90,7 @@ $$
 
 <br>
 
-# Combination symbol: `\choose`
+# Combination symbol
 
 ```latex
 {n \choose k}
@@ -88,7 +102,7 @@ $$
 
 <br>
 
-# "For all" and "Exist" symbol: `\forall` and `\exists`
+# "For all" and "Exist" symbol
 
 ```latex
 \forall, \exists
@@ -100,7 +114,7 @@ $$
 
 <br>
 
-# Function mapping symbol: `\mapsto`
+# Function mapping symbol
 
 ```latex
 \mapsto

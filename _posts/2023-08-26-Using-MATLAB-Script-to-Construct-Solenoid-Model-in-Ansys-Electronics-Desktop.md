@@ -1,7 +1,8 @@
 ---
 layout: single
 title: Using MATLAB Script to Construct Solenoid Model in Ansys Electronics Desktop
-date: 2023-08-27 06:10:11 +0800
+date: 2023-08-26 06:10:11 +0800
+last_modified_at: 2023-11-04 01:55:07 +0800
 categories:
  - MATLAB
  - Finite Element Simulation
@@ -16,7 +17,7 @@ About two months ago, I studied a simple-but-complete FEM example from Ansys Ele
 
 This FEM example is called *Getting Started with Maxwell: A 2D Magnetostatic Solenoid Problem* [1]. The introduction in PDF version is available in `Help` tab if you have installed AEDT and inserted a Maxwell 2D (or 3D) Design (in `Project` Tab):
 
-![image-20230826204855555](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230826204855555.png)
+![image-20230826204855555](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230826204855555.png?raw=true)
 
 This 92-page introduction is rather detailed and freshman-friendly, illustrating how to build and analyse Solenoid model from scratch. Almost everyone could get the same results if follow this tech booklet step by step. So, this blog is not intent to repeat or copy its contents, but try to cope with an issue associated with efficiency: How to construct and simulate solenoid model in scripting way (specifically using MATLAB) ?
 

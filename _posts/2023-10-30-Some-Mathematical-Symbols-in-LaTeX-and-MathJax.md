@@ -2,12 +2,15 @@
 layout: single
 title: Some Mathematical Symbols in LaTeX and MathJax
 date: 2023-10-30 08:46:52 +0800
-last_modified_at: 2023-11-03 20:34:50 +0800
-modified_at1: 2023-11-02 20:29:09 +0800
 categories:
  - LaTeX
+ - Markdown
 tags:
  - LaTeX Equation
+modified_at1: 2023-11-02 20:29:09 +0800
+modified_at2: 2023-11-03 20:34:50 +0800
+modified_at3: 2023-11-04 13:10:45 +0800
+last_modified_at: 2023-11-04 15:01:15 +0800
 ---
 
 # Dot product (Inner product)
@@ -42,7 +45,7 @@ $$
 \boldsymbol{u}\times\boldsymbol{v}\notag
 $$
 
-Or using wedge notation `\wedge` [[1](#ref-1)]:
+Or using wedge notation `\wedge` [^1]:
 
 ```latex
 \boldsymbol{u}\wedge\boldsymbol{v}
@@ -67,18 +70,18 @@ $$
 A\otimes B\notag
 $$
 
-or denote outer product of vectors: 
+or denote outer product of vectors:
 
-```
-\boldsymbol{u}\otimes\boldsymbol{v}
+```latex
+\boldsymbol{u}\otimes\boldsymbol{v}^T
 ```
 
 $$
-\boldsymbol{u}\otimes\boldsymbol{v}\notag
+\boldsymbol{u}\otimes\boldsymbol{v}^T\notag
 $$
 
 
-and some other similar symbols [[2](#ref-2)]:
+and some other similar symbols [^2]:
 
 ```latex
 \oplus, \ominus, \odot, \oslash, \bigotimes, \bigoplus, \bigodot
@@ -124,14 +127,9 @@ $$
 \mapsto\notag
 $$
 
-
-
 <br>
 
 **References**
 
-<div id="ref-1"></div>
-[1] [Cross product - Wikipedia](https://en.wikipedia.org/wiki/Cross_product).
-
-<div id="ref-2"></div>
-[2] [【Latex】数学符号-代码对照表 - 爱吃猫的小鱼干的 Blog](https://su-lemon.gitee.io/post/73a19565.html).
+[^1]: [Cross product - Wikipedia](https://en.wikipedia.org/wiki/Cross_product).
+[^2]: [【Latex】数学符号-代码对照表 - 爱吃猫的小鱼干的 Blog](https://su-lemon.gitee.io/post/73a19565.html).

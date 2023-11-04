@@ -2,10 +2,9 @@
 layout: single
 title: MathJax `overline` versus `bar`
 date: 2022-10-25 12:19:45 +0800
+last_modified_at: 2023-11-04 14:57:52 +0800
 categories: 
- - LaTeX
-tags:
- - LaTeX Equation
+ - Markdown
 toc: false
 ---
 

@@ -1,12 +1,17 @@
 ---
 layout: single
-title: Cross Reference in the Jekyll-based Web Page Using HTML `<div>` Tag
+title: Cross Reference in Jekyll-based Web Page
 date: 2023-10-10 16:37:25 +0800
 categories:
  - Jekyll
+ - Markdown
+modified_at1: 2023-10-31 14:35:52 +0800
+last_modified_at: 2023-11-04 13:31:09 +0800
 ---
 
 # HTML `<div>` tag
+
+## Fundamental usage
 
 The cross reference in the Jekyll-based website could be realised by adding HTML `<div>` tag and whose `id` property in the `.md` file [[1]](#ref-1).
 
@@ -30,7 +35,7 @@ This is reference [[2]](#ref-2).
 
 This is reference [[1]](#ref-1).
 
-This is reference [[2]](#ref-2).
+This is reference [[2]](#ref-2). 
 
 After deploying web page, it will direct to the referred division when we clicking the text content with hyperlink, and the website address of the division is like:
 
@@ -38,9 +43,7 @@ After deploying web page, it will direct to the referred division when we clicki
 
 however, this function is not available in the original `.md` file. 
 
-<br>
-
-# The cases of Multiple definition and missing definition of HTML `<div>` tag
+## The cases of Multiple definition and missing definition of HTML `<div>` tag
 
 Added on Oct. 31, 2023.
 {: .notice--primary}
@@ -57,6 +60,71 @@ At this point, the HTML language is more tolerant than LaTeX typesetting system.
 
 <br>
 
+# Markdown footnote identifier
+
+Added on Nov. 4, 2023.
+{: .notice--primary}
+
+## Fundamental usage from Markdown Guid [[3](#ref-3)]
+
+Another way of cross reference is using Markdown identifier [[3](#ref-3)], i.e., creating a footnote reference by `[^<footnote>]`, and adding footnote by  `[^<footnote>]:<footnote_content>`. For example: 
+
+<div id="md-1"></div>
+
+```markdown
+Here's [^2] a [^1] simple [^1] footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+[^2]: This is the second foot note.
+```
+
+<br>
+
+Here's [^2] a [^1] simple [^1] footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+[^bignote]: Here's one with multiple paragraphs and code.
+[^2]: This is the second foot note.
+
+## Discussions
+
+[Markdown content](#md-1) will render output in `.md` file like this:
+
+![image-20231104140651912](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041406971.png)
+
+If we click the blue mark which `[^1]` renders, markdown file will direct to where `[^1]:This is the first footnote.` defines; and similarly, if we click the orange carriage return symbol after `[^1]:This is the first footnote.`, markdown file will return to where `[^1]` puts, and different orange carriage return symbols correspond to different `[^1]` identifiers. It is more efficient than using HTML `<div>` tag, cause the latter doesn't function in `.md` file. 
+
+But the rendered appearance of [markdown content](#md-1) is kind of different from that in `.md` file, reflecting in two aspects. Firstly, the detailed footnote contents will ALWAYS appear at the end of the page, no matter where they are put in `.md` file (It is reasonable, cause it is what "footnote" actually means). And the second one is that, the web page will re-name these footnotes using numbers, and re-organize them according to the occurrence order of  `[^<footnote>]`. In a word, it is very similar to cross reference in LaTeX.
+
+![image-20231104160220867](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041602011.png)
+
+![image-20231104160332159](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041603210.png)
+
+Besides, the website will automatically generate URL for each "footnote content":
+
+```
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fn:2
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fn:1
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fn:bignote
+```
+
+and for each "footnote":
+
+```
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fnref:2
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fnref:1
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fnref:1:1
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fnref:1:2
+http://127.0.0.1:4000/2023-10-10/08-37-25.html#fnref:bignote
+```
+
+Anyway, I think it is a more convenient and efficient way to create a cross reference in Jekyll-based web page compared with using HTML `<div>` tag because it could produce more flexible redirections both in `.md` file and web page.
+
+<br>
+
 **References**
 
 <div id="ref-1"></div>
@@ -64,3 +132,7 @@ At this point, the HTML language is more tolerant than LaTeX typesetting system.
 
 <div id="ref-2"></div>
 [2] [HTML div tag - w3schools](https://www.w3schools.com/tags/tag_div.ASP).
+
+<div id="ref-3"></div>
+[3] [Extended Syntax: Footnotes - Markdown Guide](https://www.markdownguide.org/extended-syntax/#footnotes).
+

@@ -1,6 +1,12 @@
 Dyads (Rank-one Matrix) in Linear Algebra
 
-Consider three-dimensional euclidean space [^1], and let:
+
+
+# Dyadic product of two vectors and dyad
+
+## Dyadic product of two vectors in three-dimensional Euclidean space
+
+Consider three-dimensional Euclidean space [^1], and let:
 $$
 \begin{split}
 &\boldsymbol{a}=a_1\boldsymbol{\mathrm{i}}+a_2\boldsymbol{\mathrm{j}}+a_3\boldsymbol{\mathrm{k}}\\
@@ -35,7 +41,7 @@ $$
 &+a_3b_1\boldsymbol{\mathrm{k}}\boldsymbol{\mathrm{i}}
 +a_3b_2\boldsymbol{\mathrm{k}}\boldsymbol{\mathrm{j}}
 +a_3b_3\boldsymbol{\mathrm{k}}\boldsymbol{\mathrm{k}}\\
-\end{split}
+\end{split}\label{eq0}
 $$
 which is a $3\times3$ matrix (also the result of the outer product or tensor product of $\boldsymbol{a}$ and $\boldsymbol{b}$ [^2]), i.e.,
 $$
@@ -58,51 +64,233 @@ a_3b_1&a_3b_2&a_3b_3\\
 \end{bmatrix}\label{eq1}
 $$
 
-> Note: Equation $\eqref{eq1}$ is obtained from "Wikipedia: Dyadics"[^1], expressing that $\boldsymbol{a}\boldsymbol{b}$, $\boldsymbol{a}\otimes\boldsymbol{b}$, and $\boldsymbol{a}\boldsymbol{b}^T$ are equivalent when denoting the dyadic product of $\boldsymbol{a}$ and $\boldsymbol{b}$. And among which,  $\boldsymbol{a}\otimes\boldsymbol{b}$ and $\boldsymbol{a}\boldsymbol{b}^T$ are believed to be equivalent at "Wikipedia: Outer product"[^3] when representing the outer product of $\boldsymbol{a}$ and $\boldsymbol{b}$. To my mind, $\boldsymbol{a}\boldsymbol{b}^T$ is reasonable as it is consistent with the notation of matrix multiplication. But, symbol $\otimes$ is more commonly used as Kronecker product, and according to the definition[^4][^5], using $\boldsymbol{a}\otimes\boldsymbol{b}^T$ is more reasonable when  
+> N.B.: Equation $\eqref{eq1}$ is obtained from "Wikipedia: Dyadics"[^1], expressing that $\boldsymbol{a}\boldsymbol{b}$, $\boldsymbol{a}\otimes\boldsymbol{b}$, and $\boldsymbol{a}\boldsymbol{b}^T$ are equivalent when denoting the dyadic product of $\boldsymbol{a}$ and $\boldsymbol{b}$. And among which,  $\boldsymbol{a}\otimes\boldsymbol{b}$ and $\boldsymbol{a}\boldsymbol{b}^T$ are also believed to be equivalent at "Wikipedia: Outer product"[^3] when representing the outer product of $\boldsymbol{a}$ and $\boldsymbol{b}$. To my mind, $\boldsymbol{a}\boldsymbol{b}^T$ is reasonable as it is consistent with the notation of matrix multiplication. But, symbol $\otimes$ is more commonly used as Kronecker product, and according to the definition of **Kronecker product** [^4][^5], using $\boldsymbol{a}\otimes\boldsymbol{b}^T$ is more reasonable to denote dyadic product. In fact, dyadic is known as vector direct product, and another reference [^6] indeed denotes the vector direct product of $\boldsymbol{a}$ and $\boldsymbol{b}$ as $\boldsymbol{a}\otimes\boldsymbol{b}^T$. As for the notation of $\boldsymbol{a}\boldsymbol{b}$, like in $\eqref{eq0}$, both references [^1][^6] point out it is right, but I contend it is kind of weird since it makes me confused if it appeared with matrix multiplication. In a word, I think the $\boldsymbol{a}\boldsymbol{b}^T$ and $\boldsymbol{a}\otimes\boldsymbol{b}^T$ are more appropriate, and in the following text, I will use the notation of $\boldsymbol{a}\otimes\boldsymbol{b}^T$ to denote dyadic product. For example, I would rewrite $\eqref{eq0}$ as:
+> $$
+> \begin{split}
+> \boldsymbol{a}\otimes\boldsymbol{b}^T
+> =&\quad a_1b_1(\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{i}}^T)
+> +a_1b_2(\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{j}}^T)
+> +a_1b_3(\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{k}}^T)\\
+> &+a_2b_1(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{i}}^T)
+> +a_2b_2(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{j}}^T)
+> +a_2b_3(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{k}}^T)\\
+> &+a_3b_1(\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{i}}^T)
+> +a_3b_2(\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{j}}^T)
+> +a_3b_3(\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{k}}^T)\\
+> \end{split}\label{eq2}
+> $$
 
+## Dyad
 
-
-
-
-
-
-
-
-
-
-$\boldsymbol{a}\otimes\boldsymbol{b}^T$ is a dyadic, 
-
-
-
-
-
-
-
-
-
-
-
-A matrix $A\in\mathbb{R}^{m\times n}$ is a dyad if it is of the form $A=\boldsymbol{u}\boldsymbol{v}^T$ for some vectors $\boldsymbol{u}\in\mathbb{R}^m$, $\boldsymbol{v}\in\mathbb{R}^n$. The dyad acts on an input vector $\boldsymbol{x}\in\mathbb{R}^n$ as follows:
+From $\eqref{eq1}$, we could obtain a series of **standard basis (and unit) dyads**:
 $$
-A\boldsymbol{x}=(\boldsymbol{u}\boldsymbol{v}^T)\boldsymbol{x}=(\boldsymbol{v}^T\boldsymbol{x})\boldsymbol{u}
+\begin{split}
+&\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{i}}^T=\begin{bmatrix}
+1&0&0\\0&0&0\\0&0&0\\
+\end{bmatrix},\ 
+&\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{j}}^T=\begin{bmatrix}
+0&1&0\\0&0&0\\0&0&0\\
+\end{bmatrix},\ 
+&\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{k}}^T=\begin{bmatrix}
+0&0&1\\0&0&0\\0&0&0\\
+\end{bmatrix}\\
+&\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{i}}^T=\begin{bmatrix}
+0&0&0\\1&0&0\\0&0&0\\
+\end{bmatrix},\ 
+&\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{j}}^T=\begin{bmatrix}
+0&0&0\\0&1&0\\0&0&0\\
+\end{bmatrix},\ 
+&\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{k}}^T=\begin{bmatrix}
+0&0&0\\0&0&1\\0&0&0\\
+\end{bmatrix}\\
+&\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{i}}^T=\begin{bmatrix}
+0&0&0\\0&0&0\\1&0&0\\
+\end{bmatrix},\ 
+&\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{j}}^T=\begin{bmatrix}
+0&0&0\\0&0&0\\0&1&0\\
+\end{bmatrix},\ 
+&\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{k}}^T=\begin{bmatrix}
+0&0&0\\0&0&0\\0&0&1\\
+\end{bmatrix} 
+\end{split}\label{eq4}
 $$
-In terms of the associated linear map, for a dyad, the output always points in the same direction $\boldsymbol{u}$ in output space $\mathbb{R}^m$, no matter what the input $x$ is. The output is thus always a sample scaled version of $\boldsymbol{u}$. The amount of scaling depends on the vector $\boldsymbol{v}$, via the linear function $\boldsymbol{x}\rightarrow\boldsymbol{v}^T\boldsymbol{x}$.
+While a **dyad** is a component of the dyadic, i.e., the dyadic product of a pair of basis vectors scalar multiplied by a number. For example, for a matrix $A$ denoted in the standard basis:
+$$
+\begin{split}
+A&=2\boldsymbol({\mathrm{i}}\otimes\boldsymbol{\mathrm{j}}^T)
++\dfrac{\sqrt{3}}{2}(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{i}}^T)
+-8\pi(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{k}}^T)
++\dfrac{2\sqrt2}{3}(\mathrm{\boldsymbol{k}}\otimes\boldsymbol{\mathrm{k}}^T)\\
+&=2\begin{bmatrix}
+0&1&0\\0&0&0\\0&0&0\\
+\end{bmatrix}
++\dfrac{\sqrt3}{2}\begin{bmatrix}
+0&0&0\\1&0&0\\0&0&0\\
+\end{bmatrix}
+-8\pi\begin{bmatrix}
+0&0&0\\0&0&1\\0&0&0\\
+\end{bmatrix}
++\dfrac{2\sqrt2}{3}\begin{bmatrix}
+0&0&0\\0&0&0\\0&0&1\\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+0&2&0\\
+\dfrac{\sqrt3}{2}&0&-8\pi\\
+0&0&\dfrac{2\sqrt2}{3}\\
+\end{bmatrix}
+\end{split}
+$$
+where $2\boldsymbol({\mathrm{i}}\otimes\boldsymbol{\mathrm{j}}^T)$ is a dyad, and so do $\dfrac{\sqrt{3}}{2}(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{i}}^T)$, $-8\pi(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{k}}^T)$, and $\dfrac{2\sqrt2}{3}(\mathrm{\boldsymbol{k}}\otimes\boldsymbol{\mathrm{k}}^T)$.
+
+As can be seen, **the rank of dyad is one**. In fact, dyad is also called **rank-one matrix** [^7]. In reference [^7], the definition of dyad is: A matrix $A\in\mathbb{R}^{m\times n}$ is a **dyad** if it is of the form $A=\boldsymbol{a}\boldsymbol{b}^T$ for some vectors $\boldsymbol{a}\in\mathbb{R}^m$, $\boldsymbol{b}\in\mathbb{R}^n$. This definition is more general than above case $\eqref{eq4}$, where two vectors are both unit and the dimension are the same, equal to three. 
+
+Reference [^7] points out that, the dyad acts on an input vector $\boldsymbol{x}\in\mathbb{R}^n$ as follows:
+$$
+A\boldsymbol{x}=(\boldsymbol{a}\boldsymbol{b}^T)\boldsymbol{x}=(\boldsymbol{b}^T\boldsymbol{x})\boldsymbol{a}\label{eq5}
+$$
+This is easy to understand and to prove, as $\boldsymbol{b}^T\boldsymbol{x}$ is scalar. But equation $\eqref{eq5}$ reflects an important fact: the output of a dyad acting on a vector $\boldsymbol{x}$ always points in the same direction $\boldsymbol{a}$ in output space $\mathbb{R}^m$, no matter what the input $\boldsymbol{x}$ is, and the amount of scaling just depends on the vector $\boldsymbol{b}$, via the linear function $\boldsymbol{x}\rightarrow\boldsymbol{b}^T\boldsymbol{x}$.
+
+Select a vector $\boldsymbol{a}\in\mathbb{R}^3$, a vector $\boldsymbol{b}\in\mathbb{R}^2$, and some vectors from 
+
+```matlab
+clc,clear,close all
+
+rng(17)
+
+a = rand(3,1);
+b = rand(2,1);
+
+x1 = rand(2,1);
+x2 = rand(2,1);
+x3 = rand(2,1);
+
+x11 = a*b'*x1;
+x22 = a*b'*x2;
+x33 = a*b'*x3;
+
+colors = [1,0,0;
+    0,0.545,0;
+    0,0,1];
+
+figure("Position",[925,453,560,420])
+ax = axes;
+view(ax,40.30,34.80)
+lineWidth = 1.5;
+markerSize = 20;
+hold(ax,"on"),box(ax,"on"),grid(ax,"on")
+plot3([0,a(1)],[0,a(2)],[0,a(3)], ...
+    "LineWidth",lineWidth+0.5,"Marker",".","MarkerSize",markerSize, ...
+    "Color","k","DisplayName","$a$")
+
+plot3([0,x1(1)],[0,x1(2)],[0,0], ...
+    "LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "LineStyle","-.","Color",colors(1,:),"DisplayName","$x_1$")
+plot3([0,x2(1)],[0,x2(2)],[0,0], ...
+    "LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "LineStyle","-.","Color",colors(2,:),"DisplayName","$x_2$")
+plot3([0,x3(1)],[0,x3(2)],[0,0], ...
+    "LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "LineStyle","-.","Color",colors(3,:),"DisplayName","$x_3$")
+
+plot3([0,x11(1)],[0,x11(2)],[0,x11(3)], ...
+    "LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "Color",colors(1,:),"DisplayName","$ab^Tx_1$")
+plot3([0,x22(1)],[0,x22(2)],[0,x22(3)], ...
+    "LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "Color",colors(2,:),"DisplayName","$ab^Tx_2$")
+plot3([0,x33(1)],[0,x33(2)],[0,x33(3)], ...
+    "LineWidth",lineWidth,"Marker",".","MarkerSize",markerSize, ...
+    "Color",colors(3,:),"DisplayName","$ab^Tx_3$")
+legend("Location","east","Interpreter","latex")
+```
+
+
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311042357622.png" alt="image-20231104235700562" style="zoom: 67%;" />
+
+
+
+```
+>> a*b'
+ans =
+    0.0200    0.2319
+    0.0360    0.4176
+    0.0130    0.1507
+
+>> rank(a*b')
+ans =
+     1
+```
 
 
 
 
 
-[Dyadic -- from Wolfram MathWorld](https://mathworld.wolfram.com/Dyadic.html)
+```
+>> norm(x11)./norm(b'*x1), norm(x22)./norm(b'*x2), norm(x33)./norm(b'*x3)
+ans =
+    0.6364
+ans =
+    0.6364
+ans =
+    0.6364
+```
 
-[Vector Direct Product - from Wolfram MathWorld](https://mathworld.wolfram.com/VectorDirectProduct.html)
+```
+>> x11./(b'*x1)-a, x22./(b'*x2)-a, x33./(b'*x3)-a
+ans =
+     0
+     0
+     0
+ans =
+     0
+     0
+     0
+ans =
+   1.0e-16 *
+
+         0
+         0
+    0.2776
+```
+
+<br>
 
 
 
-==try other rank-one matrix, i.e., from rank-one matrix to $u$==
+==try other rank-one matrix, i.e., from rank-one matrix to $u$==
 
-[Special Matrices](https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/l_mats_special.html).
 
-[vectors - What is dyadic in linear algebra? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/2768530/what-is-dyadic-in-linear-algebra#:~:text=A%20dyad%20is%20a%20matrix,of%20vectors%20a%20and%20b.).
+
+
+
+## Unit dyadic
+
+
+
+
+
+## Normalized dyads [^7]
+
+
+
+
+
+# Conclusion
+
+
+
+
+
+
+
+
+
+[Dyadic - from Wolfram MathWorld](https://mathworld.wolfram.com/Dyadic.html).
+
+
+
+
 
 <br>
 
@@ -113,5 +301,5 @@ In terms of the associated linear map, for a dyad, the output always points in t
 [^3]: [Outer product - Wikipedia](https://en.wikipedia.org/wiki/Outer_product).
 [^4]: [Kronecker product - Wikipedia](https://en.wikipedia.org/wiki/Kronecker_product).
 [^5]: [Kronecker Product - from Wolfram MathWorld](https://mathworld.wolfram.com/KroneckerProduct.html).
-
-
+[^6]: [Vector Direct Product - from Wolfram MathWorld](https://mathworld.wolfram.com/VectorDirectProduct.html).
+[^7]: [Special Matrices](https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/l_mats_special.html).

@@ -516,25 +516,30 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .footnote {
-  color: mix(#fff, $gray, 25%);
+  color: #3366CC;
   text-decoration: none;
+}
+.footnote:before {
+  content: "[";
+}
+.footnote:after {
+  content: "]";
 }
 
 .footnotes {
-  color: mix(#fff, $gray, 25%);
-
+  color: #3366CC;
   ol,
   li,
   p {
     margin-bottom: 0;
-    font-size: $type-size-6;
+    font-size: 100%;
+    text-decoration: none;
   }
 }
 
 a.reversefootnote {
-  color: $gray;
+  color: #FF0000;
   text-decoration: none;
-
   &:hover {
     text-decoration: underline;
   }

@@ -6,7 +6,8 @@ categories:
  - Jekyll
  - Markdown
 modified_at1: 2023-10-31 14:35:52 +0800
-last_modified_at: 2023-11-04 13:31:09 +0800
+modified_at2: 2023-11-04 13:31:09 +0800
+last_modified_at: 2023-11-04 19:22:48 +0800
 ---
 
 # HTML `<div>` tag
@@ -89,19 +90,19 @@ Here's [^2] a [^1] simple [^1] footnote,[^1] and here's a longer one.[^bignote]
 [^bignote]: Here's one with multiple paragraphs and code.
 [^2]: This is the second foot note.
 
-## Discussions
+<br>
 
 [Markdown content](#md-1) will render output in `.md` file like this:
 
-![image-20231104140651912](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041406971.png)
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041406971.png" alt="image-20231104140651912" style="zoom:50%;" />
 
 If we click the blue mark which `[^1]` renders, markdown file will direct to where `[^1]:This is the first footnote.` defines; and similarly, if we click the orange carriage return symbol after `[^1]:This is the first footnote.`, markdown file will return to where `[^1]` puts, and different orange carriage return symbols correspond to different `[^1]` identifiers. It is more efficient than using HTML `<div>` tag, cause the latter doesn't function in `.md` file. 
 
 But the rendered appearance of [markdown content](#md-1) is kind of different from that in `.md` file, reflecting in two aspects. Firstly, the detailed footnote contents will ALWAYS appear at the end of the page, no matter where they are put in `.md` file (It is reasonable, cause it is what "footnote" actually means). And the second one is that, the web page will re-name these footnotes using numbers, and re-organize them according to the occurrence order of  `[^<footnote>]`. In a word, it is very similar to cross reference in LaTeX.
 
-![image-20231104160220867](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041602011.png)
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041602011.png" alt="image-20231104160220867" style="zoom:50%;" />
 
-![image-20231104160332159](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041603210.png)
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041603210.png" alt="image-20231104160332159" style="zoom:50%;" />
 
 Besides, the website will automatically generate URL for each "footnote content":
 
@@ -123,6 +124,77 @@ http://127.0.0.1:4000/2023-10-10/08-37-25.html#fnref:bignote
 
 Anyway, I think it is a more convenient and efficient way to create a cross reference in Jekyll-based web page compared with using HTML `<div>` tag because it could produce more flexible redirections both in `.md` file and web page.
 
+## Formatting footnote style
+
+Besides, we could format the footnote style using SCSS language. For the Jekyll theme “minimal-mistakes” [^7] which I use, the footnote style is specified by the following codes in `.\_sass\minimal-mistakes\_utilities.scss` file:
+
+```scss
+.footnote {
+  color: mix(#fff, $gray, 25%);
+  text-decoration: none;
+}
+
+.footnotes {
+  color: mix(#fff, $gray, 25%);
+
+  ol,
+  li,
+  p {
+    margin-bottom: 0;
+    font-size: $type-size-6;
+  }
+}
+
+a.reversefootnote {
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+```
+
+I changed it to [^4] [^5] [^6]:
+
+```scss
+.footnote {
+  color: #3366CC;
+  text-decoration: none;
+}
+.footnote:before {
+  content: "[";
+}
+.footnote:after {
+  content: "]";
+}
+
+.footnotes {
+  color: #3366CC;
+  ol,
+  li,
+  p {
+    margin-bottom: 0;
+    font-size: 100%;
+    text-decoration: none;
+  }
+}
+
+a.reversefootnote {
+  color: #FF0000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+```
+
+The new footnote style is like:
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041918567.png" alt="image-20231104191833536" style="zoom:50%;" />
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311041918177.png" alt="image-20231104191802117" style="zoom:50%;" />
+
 <br>
 
 **References**
@@ -136,3 +208,7 @@ Anyway, I think it is a more convenient and efficient way to create a cross refe
 <div id="ref-3"></div>
 [3] [Extended Syntax: Footnotes - Markdown Guide](https://www.markdownguide.org/extended-syntax/#footnotes).
 
+[^4]:  [font-size - CSS: Cascading Style Sheets - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size).
+[^5]: [text-decoration - CSS: Cascading Style Sheets - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration).
+[^6]: [html - Square brackets with CSS - Stack Overflow](https://stackoverflow.com/questions/13651022/square-brackets-with-css).
+[^7]: [mmistakes/minimal-mistakes- Github](https://github.com/mmistakes/minimal-mistakes).

@@ -64,7 +64,7 @@ a_3b_1&a_3b_2&a_3b_3\\
 \end{bmatrix}\label{eq1}
 $$
 
-> N.B.: Equation $\eqref{eq1}$ is obtained from "Wikipedia: Dyadics"[^1], expressing that $\boldsymbol{a}\boldsymbol{b}$, $\boldsymbol{a}\otimes\boldsymbol{b}$, and $\boldsymbol{a}\boldsymbol{b}^T$ are equivalent when denoting the dyadic product of $\boldsymbol{a}$ and $\boldsymbol{b}$. And among which,  $\boldsymbol{a}\otimes\boldsymbol{b}$ and $\boldsymbol{a}\boldsymbol{b}^T$ are also believed to be equivalent at "Wikipedia: Outer product"[^3] when representing the outer product of $\boldsymbol{a}$ and $\boldsymbol{b}$. To my mind, $\boldsymbol{a}\boldsymbol{b}^T$ is reasonable as it is consistent with the notation of matrix multiplication. But, symbol $\otimes$ is more commonly used as Kronecker product, and according to the definition of **Kronecker product** [^4][^5], using $\boldsymbol{a}\otimes\boldsymbol{b}^T$ is more reasonable to denote dyadic product. In fact, dyadic is known as vector direct product, and another reference [^6] indeed denotes the vector direct product of $\boldsymbol{a}$ and $\boldsymbol{b}$ as $\boldsymbol{a}\otimes\boldsymbol{b}^T$. As for the notation of $\boldsymbol{a}\boldsymbol{b}$, like in $\eqref{eq0}$, both references [^1][^6] point out it is right, but I contend it is kind of weird since it makes me confused if it appeared with matrix multiplication. In a word, I think the $\boldsymbol{a}\boldsymbol{b}^T$ and $\boldsymbol{a}\otimes\boldsymbol{b}^T$ are more appropriate, and in the following text, I will use the notation of $\boldsymbol{a}\otimes\boldsymbol{b}^T$ to denote dyadic product. For example, I would rewrite $\eqref{eq0}$ as:
+> N.B.: Equation $\eqref{eq1}$ is obtained from "Wikipedia: Dyadics"[^1], expressing that $\boldsymbol{a}\boldsymbol{b}$, $\boldsymbol{a}\otimes\boldsymbol{b}$, and $\boldsymbol{a}\boldsymbol{b}^T$ are equivalent when denoting the dyadic product of $\boldsymbol{a}$ and $\boldsymbol{b}$. And among which,  $\boldsymbol{a}\otimes\boldsymbol{b}$ and $\boldsymbol{a}\boldsymbol{b}^T$ are also believed to be equivalent at "Wikipedia: Outer product"[^3] when representing the outer product of $\boldsymbol{a}$ and $\boldsymbol{b}$. To my mind, $\boldsymbol{a}\boldsymbol{b}^T$ is reasonable as it is consistent with the notation of matrix multiplication. But, symbol $\otimes$ is more commonly used as Kronecker product, and according to the definition of **Kronecker product** [^4][^5], using $\boldsymbol{a}\otimes\boldsymbol{b}^T$ is more reasonable to denote dyadic product (We could use MATLAB `kron` function [^8] to verify this point). In fact, dyadic is known as vector direct product, and another reference [^6] indeed denotes the vector direct product of $\boldsymbol{a}$ and $\boldsymbol{b}$ as $\boldsymbol{a}\otimes\boldsymbol{b}^T$. As for the notation of $\boldsymbol{a}\boldsymbol{b}$, like in $\eqref{eq0}$, both references [^1][^6] point out it is right, but I contend it is kind of weird since it makes me confused if it appeared with matrix multiplication. In a word, I think the $\boldsymbol{a}\boldsymbol{b}^T$ and $\boldsymbol{a}\otimes\boldsymbol{b}^T$ are more appropriate, and in the following text, I will use the notation of $\boldsymbol{a}\otimes\boldsymbol{b}^T$ to denote dyadic product. For example, rewrite $\eqref{eq0}$ as:
 > $$
 > \begin{split}
 > \boldsymbol{a}\otimes\boldsymbol{b}^T
@@ -146,11 +146,13 @@ As can be seen, **the rank of dyad is one**. In fact, dyad is also called **rank
 
 Reference [^7] points out that, the dyad acts on an input vector $\boldsymbol{x}\in\mathbb{R}^n$ as follows:
 $$
-A\boldsymbol{x}=(\boldsymbol{a}\boldsymbol{b}^T)\boldsymbol{x}=(\boldsymbol{b}^T\boldsymbol{x})\boldsymbol{a}\label{eq5}
+A\boldsymbol{x}=(\boldsymbol{a}\otimes\boldsymbol{b}^T)\boldsymbol{x}=(\boldsymbol{b}^T\boldsymbol{x})\boldsymbol{a}\label{eq5}
 $$
-This is easy to understand and to prove, as $\boldsymbol{b}^T\boldsymbol{x}$ is scalar. But equation $\eqref{eq5}$ reflects an important fact: the output of a dyad acting on a vector $\boldsymbol{x}$ always points in the same direction $\boldsymbol{a}$ in output space $\mathbb{R}^m$, no matter what the input $\boldsymbol{x}$ is, and the amount of scaling just depends on the vector $\boldsymbol{b}$, via the linear function $\boldsymbol{x}\rightarrow\boldsymbol{b}^T\boldsymbol{x}$.
+This is easy to understand and to prove, as $\boldsymbol{b}^T\boldsymbol{x}$ is scalar. But equation $\eqref{eq5}$ reflects an important fact: the output of a dyad acting on a vector $\boldsymbol{x}$ always points in the same direction $\boldsymbol{a}$ in output space $\mathbb{R}^m$, no matter what the input $\boldsymbol{x}$ is; and the amount of scaling just depends on the vector $\boldsymbol{b}$, via the linear function $\boldsymbol{x}\rightarrow\boldsymbol{b}^T\boldsymbol{x}$.
 
-Select a vector $\boldsymbol{a}\in\mathbb{R}^3$, a vector $\boldsymbol{b}\in\mathbb{R}^2$, and some vectors from 
+For example, we could select a vector $\boldsymbol{a}\in\mathbb{R}^3$, a vector $\boldsymbol{b}\in\mathbb{R}^2$, and some vectors from $\boldsymbol{x}_i\in\mathbb{R}^2$, and construct a linear transformation $A=\boldsymbol{a}\otimes\boldsymbol{b}^T$, and at last, plot  $\boldsymbol{x}_i$ and $A\boldsymbol{x}_i$ in the vector space:
+
+<div id="script-1"></div>
 
 ```matlab
 clc,clear,close all
@@ -164,9 +166,9 @@ x1 = rand(2,1);
 x2 = rand(2,1);
 x3 = rand(2,1);
 
-x11 = a*b'*x1;
-x22 = a*b'*x2;
-x33 = a*b'*x3;
+x11 = kron(a,b)*x1; % x11 = a*b'*x1;
+x22 = kron(a,b)*x2; % x22 = a*b'*x2;
+x33 = kron(a,b)*x3; % x33 = a*b'*x3;
 
 colors = [1,0,0;
     0,0.545,0;
@@ -204,11 +206,11 @@ plot3([0,x33(1)],[0,x33(2)],[0,x33(3)], ...
 legend("Location","east","Interpreter","latex")
 ```
 
-
-
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311042357622.png" alt="image-20231104235700562" style="zoom: 67%;" />
 
+As can be seen, $A\boldsymbol{x}_i$ always has the same direction as $\boldsymbol{a}$. And what's more, we could verify the following facts:
 
+(1) $\mathrm{Rank}(A)=1$:
 
 ```
 >> a*b'
@@ -222,12 +224,10 @@ ans =
      1
 ```
 
-
-
-
+(2) The scalar proportion of $\vert\vert A\boldsymbol{x}_i\vert\vert_2/\vert\vert\boldsymbol{b}^T\boldsymbol{x}_i\vert\vert_2$ is the same:
 
 ```
->> norm(x11)./norm(b'*x1), norm(x22)./norm(b'*x2), norm(x33)./norm(b'*x3)
+>> norm(x11)/norm(b'*x1), norm(x22)/norm(b'*x2), norm(x33)/norm(b'*x3)
 ans =
     0.6364
 ans =
@@ -236,45 +236,51 @@ ans =
     0.6364
 ```
 
-```
->> x11./(b'*x1)-a, x22./(b'*x2)-a, x33./(b'*x3)-a
-ans =
-     0
-     0
-     0
-ans =
-     0
-     0
-     0
-ans =
-   1.0e-16 *
+This result is same as the length of $\boldsymbol{a}$: ==?==
 
-         0
-         0
-    0.2776
+```
+>> norm(a)
+ans =
+    0.6364
 ```
 
-<br>
+Similarly, if select vectors $\boldsymbol{a}\in\mathbb{R}^2$, $\boldsymbol{b}\in\mathbb{R}^3$, $\boldsymbol{x}_i\in\mathbb{R}^3$, we could get:
 
-
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311060853412.png" alt="image-20231106085256267" style="zoom:67%;" />
 
 ==try other rank-one matrix, i.e., from rank-one matrix to $u$==
 
-
-
-
-
-## Unit dyadic
-
-
-
-
-
 ## Normalized dyads [^7]
 
+We could always normalize the dyad, by assuming that both $\boldsymbol{a}$, $\boldsymbol{b}$ are of unit (Euclidean) norm, and using a factor to capture their scale. That is, any dyad can be written in normalized form:
+$$
+A=\boldsymbol{a}\otimes\boldsymbol{b}^T=(\vert\vert\boldsymbol{a}\vert\vert_2\cdot\vert\vert\boldsymbol{b}\vert\vert_2)(\dfrac{\boldsymbol{a}}{\vert\vert\boldsymbol{a}\vert\vert_2})\otimes(\dfrac{\boldsymbol{b}}{\vert\vert\boldsymbol{b}\vert\vert_2})^T=\sigma\tilde{\boldsymbol{a}}\tilde{\boldsymbol{b}}^T
+$$
+where $\sigma>0$, and $\vert\vert\boldsymbol{a}\vert\vert_2\cdot\vert\vert\boldsymbol{b}\vert\vert_2=1$.
+
+<br>
+
+## Unit dyadic [^1]
+
+As described above, equation $\eqref{eq4}$ shows nine unit dyads in $\mathbb{R}^3$. Similarly, we could define unit dyadic $\boldsymbol{I}$: For any vector $\boldsymbol{a}$, if:
+$$
+I\cdot\boldsymbol{a}=\boldsymbol{a}\cdot\boldsymbol{I}=\boldsymbol{a}
+$$
+then $I$ is a unit dyadic.
+
+==this is standard basis== From $\eqref{eq4}$, we could obtain the unit dyadic in three-dimension vector space $\mathbb{R}^3$: 
+$$
+I=
+$$
 
 
 
+
+
+
+
+
+<br>
 
 # Conclusion
 
@@ -303,3 +309,4 @@ ans =
 [^5]: [Kronecker Product - from Wolfram MathWorld](https://mathworld.wolfram.com/KroneckerProduct.html).
 [^6]: [Vector Direct Product - from Wolfram MathWorld](https://mathworld.wolfram.com/VectorDirectProduct.html).
 [^7]: [Special Matrices](https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/l_mats_special.html).
+[^8]: [`kron`: Kronecker tensor product - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/kron.html).

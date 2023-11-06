@@ -1,4 +1,19 @@
+---
+layout: single
+title: "xxx"
+date: 2023-11-06 xx:xx:xx +0800
+categories:
+ - Mathematics
+ - MATLAB
+tags:
+ - Probability Theory and Mathematical Statistics
+ - Hypothesis Test
+ - Mathematical Combination
+---
+
 # Introduction
+
+
 
 
 
@@ -8,7 +23,7 @@
 
 For $n$ binary outcomes, $Y_i$(= $0$ or $1$), the non-parametric, Single-Sample Wald-Wolfowitz Runs Test can be used to test the null hypothesis that **the binary series is random**. The null hypothesis of randomness is rejected when the total number of runs of $0$ and $1$ is too many or too few. This test can be used for binary data and for numeric data that has been categorised as either above or below a reference value.
 
-Given the 
+Given the number of $0$'s ($n_1$) and $1$'s ($n_2$) in a series, the minimum and maximum possible total number of runs are:
 $$
 \begin{split}
 &R_{\text{min}}=2\\
@@ -23,7 +38,7 @@ $$
 
 ## Exact test
 
-To compute the exact test for a binary series, we must calculate the probabilities of obtaining given numbers of runs conditional on the number of ...
+To compute the exact test for a binary series, we must calculate the probabilities of obtaining given numbers of runs conditional on the number of runs conditional on the number of $0$'s ($n_1$) and $1$'s ($n_2$) in the series. If the data are random, the probability that the total number if runs, $R$, will be equal to some even number $2u$ is:
 
 $$
 \text{Pr}(R=2u)=\dfrac{2{{n_1-1} \choose {u-1}}{{n_2-1} \choose {u-1}}}{{{n} \choose {n_1}}}
@@ -68,6 +83,10 @@ $$
 $$
 This test is less accurate than the exact test and usually less accurate than the continuity-corrected $z$ test.
 
+## MATLAB implementation
+
+
+
 <br>
 
 ## Asymptotic $z$-test with continuity correction
@@ -109,8 +128,6 @@ The expected number of runs, $\mathbb{E}_k(R)$, given the $n_j$'s is:
 $$
 \mathbb{E}_k(R)=\dfrac{n(n+1)-\sum n_j^2}{n}
 $$
-<br>
-
 ## Asymptotic $z$-test
 
 For large $n$, the asymptotic standard normal $z$ statistic is computed from the observed total number of runs, $r$, as:
@@ -222,10 +239,6 @@ $$
 $$
 This test is less accurate than the exact test but usually more accurate than the regular $z$ test.
 
-
-
-
-
 <br>
 
 <div id="ref"></div>
@@ -233,3 +246,5 @@ This test is less accurate than the exact test but usually more accurate than th
 **References**
 
 [1] [NCSS Analysis of Runs](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf).
+
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm

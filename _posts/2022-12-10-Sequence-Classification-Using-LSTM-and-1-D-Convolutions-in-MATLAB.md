@@ -7,13 +7,12 @@ categories:
  - Machine Learning
 tags:
  - MATLAB Deep Learning Toolbox
+last_modified_at: 2023-11-06 15:24:48 +0800
 ---
 
 # Introduction
 
-MATLAB官方提供了分别使用LSTM神经网络和1-D Convolutions对sequence data进行分类的示例：[Sequence Classification Using Deep Learning](https://ww2.mathworks.cn/help/deeplearning/ug/classify-sequence-data-using-lstm-networks.html)，[Sequence Classification Using 1-D Convolutions](https://ww2.mathworks.cn/help/deeplearning/ug/sequence-classification-using-1-d-convolutions.html)。
-
-这两个示例使用的是同一个训练集，即Japanese Vowels训练集，一共有270条训练数据，和370条测试数据，共9个分类。
+MATLAB官方提供了分别使用LSTM神经网络和1-D Convolutions对sequence data进行分类的示例："Sequecen Classification Using Deep Learning" [^1]，Sequence Classification Using 1-D Convolutions [^2]。这两个示例使用的是同一个训练集，即Japanese Vowels训练集，一共有270条训练数据，和370条测试数据，共9个分类。
 
 <br>
 
@@ -76,7 +75,7 @@ numFeatures = size(XTrain{1},1);
 legend("Feature " + string(1:numFeatures), Location="northeastoutside")
 ```
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210143537493.png?raw=true" alt="image-20221210143537493" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210143537493.png?raw=true" alt="image-20221210143537493" style="zoom: 50%;" />
 
 ## Prepare Data for padding
 
@@ -84,7 +83,7 @@ legend("Feature " + string(1:numFeatures), Location="northeastoutside")
 
 下图就展示了在sorting data之前和之后padding的效果：
 
-![image-20221210144122027](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144122027.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144122027.png?raw=true" alt="image-20221210144122027" style="zoom:50%;" />
 
 首先，获得每一个observation的序列长度，保存在`sequenceLengths`中：
 
@@ -126,7 +125,7 @@ miniBatchSize = 27;
 
 最终padding的效果是：
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144721064.png?raw=true" alt="image-20221210144721064" style="zoom:67%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221210144721064.png?raw=true" alt="image-20221210144721064" style="zoom: 50%;" />
 
 ## Define LSTM network architecture
 
@@ -197,7 +196,7 @@ net = trainNetwork(XTrain,YTrain,layers,options);
 
 ![training_process](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/training_process.png?raw=true)
 
-如果不想展示这样的图像，需要更改`options`变量中的`Plots`设置([trainingOptions: Plots and Display - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/trainingoptions.html#d124e166338))：
+如果不想展示这样的图像，需要更改`options`变量中的`Plots`设置 [^3]：
 
 ```matlab
 options = trainingOptions(...
@@ -352,7 +351,7 @@ acc =
     0.9568
 ```
 
-![image-20221211151109487](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221211151109487.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221211151109487.png?raw=true" alt="image-20221211151109487" style="zoom:50%;" />
 
 这里用于测试的测试集，和上面训练过程中使用的验证集是一个数据集，稍微有一些不合理。
 
@@ -360,9 +359,6 @@ acc =
 
 **Reference**
 
-[1] [Sequence Classification Using Deep Learning - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/classify-sequence-data-using-lstm-networks.html).
-
-[2] [trainingOptions - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/trainingoptions.html).
-
-[3] [Sequence Classification Using 1-D Convolutions - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/sequence-classification-using-1-d-convolutions.html).
-
+[^1]: [Sequence Classification Using Deep Learning - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/classify-sequence-data-using-lstm-networks.html).
+[^2]: [Sequence Classification Using 1-D Convolutions - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/sequence-classification-using-1-d-convolutions.html).
+[^3]: [`trainingOptions`: Options for training deep learning neural network. - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/trainingoptions.html).

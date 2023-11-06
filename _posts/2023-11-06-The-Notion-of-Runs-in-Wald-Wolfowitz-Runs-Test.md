@@ -1,26 +1,31 @@
 ---
 layout: single
-title: "xx"
-date: 2023-10-xx xx:xx:xx +0800
+title: "The Notion of Runs in Wald-Wolfowitz Runs Test"
+date: 2023-11-06 13:01:26 +0800
 categories:
  - Mathematics
+ - MATLAB
 tags:
  - Probability Theory and Mathematical Statistics
  - Hypothesis Test
+ - Graph Theory
 ---
 
 # Introduction
 
-The notion of "run" is fundamental in Wald-Wolfowitz Runs Test. The NCSS statistical software [[1]](#ref) provides a detailed documentation [[2]](#ref) (BTW, maybe the most detailed one I could found on the Internet) to explain what is “run” and related hypothesis tests. So, in this blog, I want to 
+The notion of "run" is fundamental in Wald-Wolfowitz Runs Test [^3]. The NCSS statistical software [^1] provides a detailed documentation [^2] to explain what is “run” (BTW, maybe the most detailed one I could found on the Internet) and related hypothesis tests. So, in this blog, I want to learn how to compute "runs" in various cases and use MATLAB to realize it.
 
 <br>
 
-# Binary Data (Actually two category variables)
+# Binary data
 
-In the case of binary data consisting of two district categories, a run is defined as a sequence where a single value is repeated one or more times. A new run occurs each time the data value changes. For example, in the following binary data series consisting of $n=16$ values:
+For the case of binary data consisting of two district categories, a run is defined as **a sequence where a single value is repeated one or more times**, and **a new run always occurs when the data value changes**. 
 
-Definition of “run” from Wikipedia [[2]](#ref): A *run* of a sequence is a maximal non-empty segment of the sequence consisting of adjacent equal elements.
+Definition of “run” from Wikipedia [^3]: A *run* of a sequence is a maximal non-empty segment of the sequence consisting of adjacent equal elements.
 {: .notice--primary}
+
+For example, in the following binary data series consisting of $n=16$ values:
+
 $$
 \textcolor{red}{\underline{0\ 0}}\ 
 \textcolor{green}{\underline{ 1\ 1\ 1}}\ 
@@ -29,9 +34,17 @@ $$
 \textcolor{red}{\underline{0\ 0}}\ 
 \textcolor{green}{\underline{1}}\ 
 \textcolor{red}{\underline{0}}\ 
-\textcolor{green}{\underline{ 1\ 1\ 1\ 1\ 1}}
+\textcolor{green}{\underline{ 1\ 1\ 1\ 1\ 1}}\label{eq1}
 $$
-there are $4$ runs for $0$, whose lengths are $2$, $1$, $2$, and $1$; $4$ runs for $1$, whose lengths are $3$, $1$, $1$, and $5$; and for a grand total of $8$ distinct runs. As can be seen, **the runs strongly relate to the $0$-$1$ joints, and the most obvious pattern among which is that the total number of runs equals to $0$-$1$ joint count plus 1.** Based on these understandings, we could write the following MATLAB script to count runs automatically:
+
+there are:
+
+- $4$ runs for category $\textcolor{red}{0}$, whose lengths are $2$, $1$, $2$, and $1$;
+- $4$ runs for $\textcolor{green}{1}$, whose lengths are $3$, $1$, $1$, and $5$,
+
+and therefore totally $8$ distinct runs could be found. 
+
+As can be seen, **the runs strongly relate to the $0$-$1$ joints**, and the most obvious pattern among which is that **the total number of runs equals to $0$-$1$ joint count plus one**. Based on these understandings, we could write the following MATLAB script to count runs automatically:
 
 <div id="script1"></div>
 
@@ -89,9 +102,10 @@ Length = 5: 1 run(s)
 
 <br>
 
-# Categorical Data
+# Multiple categorical data
 
-For data consisting of $k$ distinct categories, a run is defined as a sequence where a single value is repeated one or more times. A new run occurs each the data value switches. For instance, in he following categorical data series consisting of $k=3$ categories and $n=16$ values:
+Similarly, for data consisting of $k$ distinct categories, a run is also defined as a sequence where a single value is repeated one or more times, and a new run occurs each time when the data value switches. For instance, iin he following categorical data series consisting of $k=3$ categories and $n=16$ values:
+
 $$
 \textcolor{red}{\underline{\text{A A}}}\ 
 \textcolor{green}{\underline{\text{B}}}\ 
@@ -102,15 +116,18 @@ $$
 \textcolor{blue}{\underline{\text{C}}}\ 
 \textcolor{red}{\underline{\text{A A}}}\ 
 \textcolor{blue}{\underline{\text{C}}}\ 
-\textcolor{green}{\underline{\text{B}}}
+\textcolor{green}{\underline{\text{B}}}\label{eq3}
 $$
+
 there are:
 
-1. $4$ runs for category $\text{A}$, whose lengths are $2$, $1$, $1$, and $2$;
-2. $3$ runs for category $\text{B}$, whose lengths are $1$, $3$, and $1$;
-3. $3$ runs for category $\text{C}$, whose lengths are $3$, $1$, and $1$.
+1. $4$ runs for category $\textcolor{red}{\text{A}}$, whose lengths are $2$, $1$, $1$, and $2$;
+2. $3$ runs for category $\textcolor{green}{\text{B}}$, whose lengths are $1$, $3$, and $1$;
+3. $3$ runs for category $\textcolor{blue}{\text{C}}$, whose lengths are $3$, $1$, and $1$,
 
-and for a grand total of $10$ distinct runs. 
+and therefore totally $10$ distinct runs could be found.
+
+Obviously, "binary data" is a just a special case of "multiple categorical data". Therefore, starting from the implementation method of [Script 1](#script1), I rewrite the `helperCountRuns ` function, making it suitable for multi-category data series:
 
 <div id="script2"></div>
 
@@ -177,25 +194,21 @@ Length = 1: 2 run(s)
 Length = 3: 1 run(s)
 ```
 
-This script could realise the function of [script 1](#script1), therefore, the `helperCountRuns` function used in the following scripts is taken as one defined here.
+The function of  `helperCountRuns` defined in [Script 2](#script2) is more general that in [Script 1](#script1), therefore, it will be adopted in the following text. 
 
 <br>
 
-# Numerical Data
+# Numeric data
 
-For numerical data, two different kinds of runs can be computed:
-
-1. Runs above and below a reference value
-2. Runs up and down
-
-The runs above and below a reference value are use in Wald-Wolfwitz test, while the runs up and down are used in the computing the runs test for serial randomness.
+For numerical data, two different kinds of runs can be computed: (1) "Runs above and below a reference value", and (2) "Runs up and down". The former is used in **Wald-Wolfwitz test**, while the latter is used in **computing the runs test for serial randomness**.
 
 ## Runs above and below a reference value
 
-For numeric data, a reference is used to determine the runs in the data set relative to the reference. The reference value can be set as (1) statistics, like the mean, median, or mode of the data or as (2) any custom user-defined values. The reference value is used to create a binary series from the numeric data by assigning a "1" to values above the reference and a "0" to values below the reference. For example, for the following numeric data series consisting of $n=16$ values withe a median used as the reference value:
+For numeric data, a *reference* is used to determine the runs in the data set relative to the reference. The reference value can be set as (1) statistics, like the mean, median, or mode of the data or as (2) any user-defined values. The reference value is used to create a binary series from the numeric data by assigning "1" to values above the reference and "0" to values below the reference. For example, for the following numeric data series consisting of $n=16$ values withe a median $28.5$ used as the reference value:
 
 
 $$
+\begin{equation}
 \textcolor{green}{\underline{31}}\ 
 \textcolor{red}{\underline{23}}\ 
 \textcolor{green}{\underline{36\ 43\ 51\ 44}}\ 
@@ -204,9 +217,11 @@ $$
 \textcolor{red}{\underline{2\ 3\ 15\ 18}}\ 
 \textcolor{green}{\underline{78}}\ 
 \textcolor{red}{\underline{24}}\
+\end{equation}
 $$
 
 $$
+\begin{equation}
 \textcolor{green}{\underline{1}}\ 
 \textcolor{red}{\underline{0}}\ 
 \textcolor{green}{\underline{1\ 1\ 1\ 1}}\ 
@@ -214,10 +229,16 @@ $$
 \textcolor{green}{\underline{1\ 1}}\ 
 \textcolor{red}{\underline{0\ 0\ 0\ 0}}\ 
 \textcolor{green}{\underline{1}}\ 
-\textcolor{red}{\underline{0}}\
+\textcolor{red}{\underline{0}}\ \label{eq2}
+\end{equation}
 $$
 
-[script 1](#script1) or [script 2](#script2) handle this situation
+there are:
+
+1. $4$ runs for category "$\textcolor{red}{\text{below}}$ reference value", whose lengths are $1$, $2$, $4$,  and $1$;
+2. $4$ runs for category "$\textcolor{green}{\text{above}}$ reference value", whose lengths are $1$, $4$, $2$, and $1$,
+
+and therefore totally $8$ distinct runs could be found:
 
 ```matlab
 clc,clear,close all
@@ -241,31 +262,33 @@ Length = 2: 1 run(s)
 Length = 4: 1 run(s)
 ```
 
-This sequence of runs can be tested for randomness using the Wald-Wolfwitz Runs Test.
+As can be seen, this case $\eqref{eq2}$ is very similar to "binary data" case $\eqref{eq1}$, but there exists a slight difference, that is, for "numeric data" $\eqref{eq2}$, the third case, values equal to the reference, probably occurs.
 
 ### Handle values equal to the reference
 
 When a value is exactly equal to the reference, a decision must be made whether to count it as "above" or "below" or whether to skip the value and discard it from the analysis.
 
-In NCSS, a fourth option?
-
 For example, if we have a simple numeric data series with sample size $n=7$, and a median of $48$ is used as the reference value:
+
 $$
 \textcolor{red}{\underline{47\ 44}}\ 
 \textcolor{green}{\underline{49}}\ 
 \textcolor{black}{48}\ 
 \textcolor{green}{\underline{50\ 51}}\ 
-\textcolor{red}{45}\
+\textcolor{red}{45}
 $$
+
 and the fourth value in the series, $48$, is exactly equals to the reference. The resulting binary sequence is:
+
 $$
 \textcolor{red}{\underline{0\ 0}}\ 
 \textcolor{green}{\underline{1}}\ 
 \textcolor{black}{?}\ 
 \textcolor{green}{\underline{1\ 1}}\ 
-\textcolor{red}{0}\
+\textcolor{red}{0}
 $$
-If we just leave it in place and view it as "equal", we have a total of $4$ runs (only counting category $0$ and $1$):
+
+If we just leave it in place and view it as "equal", we have a total of $4$ runs (only counting category $\textcolor{red}{0}$ and $\textcolor{green}{1}$):
 
 ```matlab
 clc,clear,close all
@@ -292,13 +315,14 @@ equal's run(s): 1 run(s)
 Length = 1: 1 run(s)
 ```
 
-If we view it as "1" (above), we have a total of $3$ runs:
+If we view it as "$1$" (above), we have a total of $3$ runs:
+
 $$
 \textcolor{red}{\underline{0\ 0}}\ 
 \textcolor{green}{\underline{1}}\ 
 \textcolor{black}{\underline{1}}\ 
 \textcolor{green}{\underline{1\ 1}}\ 
-\textcolor{red}{0}\
+\textcolor{red}{0}
 $$
 
 ```matlab
@@ -319,13 +343,14 @@ Length = 2: 1 run(s)
 Length = 4: 1 run(s)
 ```
 
-If we view it as "0" (below), we have a total of $5$ runs:
+If we view it as "$0$" (below), we have a total of $5$ runs:
+
 $$
 \textcolor{red}{\underline{0\ 0}}\ 
 \textcolor{green}{\underline{1}}\ 
 \textcolor{black}{\underline{0}}\ 
 \textcolor{green}{\underline{1\ 1}}\ 
-\textcolor{red}{0}\
+\textcolor{red}{0}
 $$
 
 ```matlab
@@ -348,10 +373,11 @@ Length = 2: 1 run(s)
 ```
 
 If we skip it and discard it, we have a total of $3$ runs:
+
 $$
 \textcolor{red}{\underline{0\ 0}}\ 
 \textcolor{green}{\underline{1\ 1\ 1}}\ 
-\textcolor{red}{0}\
+\textcolor{red}{0}
 $$
 
 ```matlab
@@ -375,21 +401,31 @@ Length = 2: 1 run(s)
 Length = 3: 1 run(s)
 ```
 
-So, the treatment of these values on the reference line can have an impact on the run totals and, therefore, on the resulting hypothesis tests, particularly in the small-sample case. If the values before and after the value in question are on different sides of the reference line, it won't matter whether we count it as "above" or "below" since the run counts won't change. In this case, the choice is "non-critical". But, if the values before and after are on the same side, the run counts will depend on the way this value is treated, as described above. **A common practice is to see if the results change dramatically when these values are counted as "above" as then as "below".** And, It is also *NOT* uncommon to skip these values altogether.
+So, the treatment of these values on the reference line can have an impact on the number of runs and, therefore, on the results of hypothesis tests, particularly in the small-sample case. If the values before and after the value in question are on different sides of the reference line, it won't matter whether we count it as "above" or "below" since the run counts won't change, or rather, in this case, the choice is "non-critical". But, if the values before and after are on the same side, the run counts will depend on the way this value is treated, as described above. **A common practice is to see if the results change dramatically when these values are counted as "above" or as "below".** And, It is also *not uncommon* to skip these values.
 
 ## Runs up and down
 
 To compute the runs up and down for $n$ numeric data values, the sign of the difference between each value and the one previous is recorded and used to create a binary series of $n-1$ signs. For example, for the following numeric data series consisting of $n=10$ values:
+
 $$
 \text{44, 40, 33, 26, 27, 44, 46, 54, 50, 51}
 $$
+
 the binary sequence of $n-1=9$ difference signs is:
+
 $$
 \textcolor{red}{\underline{-\ -\ -}}\ 
 \textcolor{green}{\underline{+\ +\ +\ +}}\ 
 \textcolor{red}{\underline{-}}\ 
 \textcolor{green}{\underline{+}}
 $$
+
+There are:
+
+1. $2$ runs for $\textcolor{red}{-}$, whose lengths are $3$ and $1$;
+2. $2$ runs for $\textcolor{green}{+}$, whose lengths are $4$ and $1$,
+
+and therefore totally $4$ distinct runs could be found:
 
 ```matlab
 clc,clear,close all
@@ -416,21 +452,20 @@ Length = 1: 1 run(s)
 Length = 4: 1 run(s)
 ```
 
-a total of $4$ distinct runs.
-
 <br>
 
 ### Handle tied values
 
-If the values are tied, then a zero is recorded.
+Similarly, the case that two adjacent values are equal also has probabilities to occur, and in which case, we call these two values are "tied". If the values are tied, then a zero is recorded. A decision must be made whether to count the zero as "up ($+$)" or "down ($–$)" or  whether to skip it and discard it from the analysis.
 
-Similarly, when two values are tied, a decision must be made whether to count the zero as "up (+)" or "down (–)" or  whether to skip it and discard it from the analysis.
+For example, if the data series with $n = 11$ values is:
 
-For example, if the data series above had a $50$ at the second to last position  with $n = 11$ values:
 $$
 \text{44, 40, 33, 26, 27, 44, 46, 54, 50, 50, 51}
 $$
-we could get sign series:
+
+we could get corresponding sign series:
+
 $$
 \textcolor{red}{\underline{-\ -\ -}}\ 
 \textcolor{green}{\underline{+\ +\ +\ +}}\ 
@@ -438,7 +473,8 @@ $$
 \textcolor{black}{0}\ 
 \textcolor{green}{\underline{+}}
 $$
-If we just view it as "0", we have a total of $4$ runs (only counting category $+$ and $-$):
+
+If we just view the penultimate value as "0", we have a total of $4$ runs (only counting category $+$ and $-$):
 
 ```matlab
 clc,clear,close all
@@ -470,7 +506,8 @@ Length = 1: 1 run(s)
 Length = 4: 1 run(s)
 ```
 
-If we just view it as "+", we have a total of $4$ runs
+If we just view it as "+", we have a total of $4$ runs:
+
 $$
 \textcolor{red}{\underline{-\ -\ -}}\ 
 \textcolor{green}{\underline{+\ +\ +\ +}}\ 
@@ -504,7 +541,8 @@ Length = 2: 1 run(s)
 Length = 4: 1 run(s)
 ```
 
-If we just view it as "-", we have a total of $4$ runs:
+and if we just view it as "$-$", we have a total of $4$ runs:
+
 $$
 \textcolor{red}{\underline{-\ -\ -}}\ 
 \textcolor{green}{\underline{+\ +\ +\ +}}\ 
@@ -538,9 +576,10 @@ Length = 1: 1 run(s)
 Length = 4: 1 run(s)
 ```
 
-Therefore, this is called a "non-critical tie"  since the runs are not influenced by the choice.
+In this example, this tie called a "non-critical tie"  since the runs are not influenced by the choice.
 
-If we skip it and discard it, we have a total of $3$ runs:
+However, if we skip it and discard it:
+
 $$
 \textcolor{red}{\underline{-\ -\ -}}\ 
 \textcolor{green}{\underline{+\ +\ +\ +}}\ 
@@ -577,24 +616,20 @@ Length = 4: 1 run(s)
 
 then there are still two runs up and two runs down for a total of four runs, **but the number if signs is  reduced to 9 instead of 10, which will influence test results.**
 
-Although not demonstrated by this example, the treatment of ties can have an impact on the run totals and,  therefore, on the resulting hypothesis tests, particularly in the case of small samples. If the signs before and  after the tied values are different (as was the case in this example) it won't matter whether you count the tie  as "up" or "down" since the run counts won't change. This is called a "non-critical tie." On the other hand, if  the signs before and after the tie are the same, the run counts will depend on the way the tie is treated. A  common practice is to see if the results change dramatically when ties are counted as "up" as then as "down". It is also not uncommon to skip ties altogether and exclude them from runs tests.
+So, although not demonstrated by this example, the treatment of ties can have an impact on the run totals and, therefore, on the resulting hypothesis tests, particularly in small-sample case. If the signs before and after the tied values are different (like in this example) it won't matter whether we count the tie as "up" or "down" since the run counts won't change. This is called a "non-critical tie". On another hand, if the signs before and after the tie are the same, the run counts will depend on the way how the tie is treated. A common practice is to see if the results change dramatically when ties are counted as "up" as then as "down". It is also *not uncommon* to skip ties and exclude them from runs tests.
 
 <br>
 
 # Something else ...
 
-seemingly a simple topology
+At last, I what to explain why I decided to write this blog. The first reason is that, recently, I've been learning Wald-Wolfowitz Runs Test, where "run" is a basic notion, and this NCSS documentation [^2] indeed provides me a lot of information. Another motivation is that I think this notion may have relation to other more general notions and problems, because a data series seemingly corresponds a certain one-dimensional "topology". Actually, in 1979, Friedman and Rafsky [^4] generalized Wald-Wolfowitz test to multivariate case, using the notion of Minimal Spanning Tree in Graph theory, which may imply this idea. On another hand, when looking at these colorful data series, like $\eqref{eq1}$ and $\eqref{eq3}$, I feel it looks like a Graph Coloring Problem [^5]. Perhaps, there is a relationship between them. 
 
-color problem
-
-<div id="ref"></div>
+<br>
 
 **References**
 
-[1] [Statistical Software - NCSS](https://www.ncss.com/).
-
-[2] [Analysis of Runs - NCSS](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf).
-
-[3] [Wald–Wolfowitz runs test - Wikipedia](https://en.wikipedia.org/wiki/Wald%E2%80%93Wolfowitz_runs_test).
-
-https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm
+[^1]: [Statistical Software - NCSS](https://www.ncss.com/).
+[^2]: [Analysis of Runs - NCSS](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Analysis_of_Runs.pdf).
+[^3]:[Wald-Wolfowitz runs test - Wikipedia](https://en.wikipedia.org/wiki/Wald%E2%80%93Wolfowitz_runs_test).
+[^4]: J. H. Friedman and L. C. Rafsky, "Multivariate generalizations of the Wald-Wolfowitz and Smirnov two-sample tests," *Ann. Stat.*, vol. 7, no. 4, pp. 697-717, Jul. 1979, doi: [https://doi.org/10.1214/aos/1176344722.](https://doi.org/10.1214/aos/1176344722.)
+[^5]: [Graph coloring - Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring).

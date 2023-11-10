@@ -1,10 +1,8 @@
-Dyads (Rank-one Matrix) in Linear Algebra
+Dyadic Product and Dyads (Rank-one Matrix) in Linear Algebra
 
 
 
-# Dyadic product of two vectors and dyad
-
-## Dyadic product of two vectors in three-dimensional Euclidean space
+# Dyadic product of two vectors
 
 Consider three-dimensional Euclidean space [^1], and let:
 $$
@@ -80,7 +78,9 @@ $$
 > \end{split}\label{eq2}
 > $$
 
-## Dyad
+<br>
+
+# Dyad
 
 From $\eqref{eq1}$, we could obtain a series of **standard basis (and unit) dyads**:
 $$
@@ -250,7 +250,9 @@ Similarly, if select vectors $\boldsymbol{a}\in\mathbb{R}^2$, $\boldsymbol{b}\in
 
 ==try other rank-one matrix, i.e., from rank-one matrix to $u$==
 
-## Normalized dyads [^7]
+<br>
+
+# Normalized dyads [^7]
 
 We could always normalize the dyad, by assuming that both $\boldsymbol{a}$, $\boldsymbol{b}$ are of unit (Euclidean) norm, and using a factor to capture their scale. That is, any dyad can be written in normalized form:
 $$
@@ -260,39 +262,35 @@ where $\sigma>0$, and $\vert\vert\boldsymbol{a}\vert\vert_2\cdot\vert\vert\bolds
 
 <br>
 
-## Unit dyadic [^1]
+# Unit dyadic [^1]
 
-As described above, equation $\eqref{eq4}$ shows nine unit dyads in $\mathbb{R}^3$. Similarly, we could define unit dyadic $\boldsymbol{I}$: For any vector $\boldsymbol{a}$, if:
+As described above, equation $\eqref{eq4}$ shows nine unit *dyads* in $\mathbb{R}^3$. Similarly, we could define unit *dyadic* $\boldsymbol{I}$: For any vector $\boldsymbol{a}$, if:
 $$
 I\cdot\boldsymbol{a}=\boldsymbol{a}\cdot\boldsymbol{I}=\boldsymbol{a}
 $$
 then $I$ is a unit dyadic.
 
-==this is standard basis== From $\eqref{eq4}$, we could obtain the unit dyadic in three-dimension vector space $\mathbb{R}^3$: 
+From $\eqref{eq4}$, we could obtain the unit dyadic in three-dimension vector space $\mathbb{R}^3$ (or rather, Cartesian coordinates [^9]): 
 $$
 I=
+(\boldsymbol{\mathrm{i}}\otimes\boldsymbol{\mathrm{i}}^T)
++(\boldsymbol{\mathrm{j}}\otimes\boldsymbol{\mathrm{j}}^T)
++(\boldsymbol{\mathrm{k}}\otimes\boldsymbol{\mathrm{k}}^T)
 $$
 
-
-
-
-
-
-
-
+i.e.,
+$$
+I=\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1\\
+\end{bmatrix}
+$$
 <br>
 
 # Conclusion
 
 
-
-
-
-
-
-
-
-[Dyadic - from Wolfram MathWorld](https://mathworld.wolfram.com/Dyadic.html).
 
 
 
@@ -310,3 +308,4 @@ $$
 [^6]: [Vector Direct Product - from Wolfram MathWorld](https://mathworld.wolfram.com/VectorDirectProduct.html).
 [^7]: [Special Matrices](https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/l_mats_special.html).
 [^8]: [`kron`: Kronecker tensor product - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/kron.html).
+[^9]: [Dyadic - from Wolfram MathWorld](https://mathworld.wolfram.com/Dyadic.html).

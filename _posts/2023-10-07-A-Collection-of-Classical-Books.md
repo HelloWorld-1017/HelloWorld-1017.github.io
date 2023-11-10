@@ -5,6 +5,7 @@ date: 2023-10-07 21:16:34 +0800
 categories:
  - Collections
 toc: false
+last_modified_at: 2023-11-08 21:11:11 +0800
 ---
 
 **Mathematical Statistics**
@@ -13,6 +14,7 @@ toc: false
 2. *Applied Multivariate Statistical Analysis*, R. A. Johnson *et al.*, available at: [Applied Multivariate Statistical Analysis by Johnson and Wichern.pdf (uidaho.edu)](https://www.webpages.uidaho.edu/~stevel/519/Applied Multivariate Statistical Analysis by Johnson and Wichern.pdf).
 3. *Methods-of-Multivariate-Analysis (Second Edition)*, A. C. Rencher, available at: [Methods of Multivariate Analysis 2 Ed-02 - Rencher](https://www.ipen.br/biblioteca/slr/cel/0241).
 4. *Probability and Statistics Cookbook (Version 0.2.6)*, available at: [The Probability and Statistics Cookbook](http://statistics.zone/), GitHub repository: [mavam/stat-cookbook: :orange_book: The probability and statistics cookbook](https://github.com/mavam/stat-cookbook).
+5. *Methods for Statistical Data Analysis of Multivariate Observations (Second Edition)*, R. Gnanadesikan, available at: [Methods for Statistical Data Analysis of Multivariate Observations](http://ndl.ethernet.edu.et/bitstream/123456789/33247/1/R.%20Gnanadesikan_1997.pdf).
 
 <br>
 

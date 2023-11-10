@@ -73,7 +73,7 @@ for i = 1:numel(ps)
 end
 ```
 
-![image-20231108223611015](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311082236939.png)
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311082236939.png" alt="image-20231108223611015" style="zoom:67%;" />
 
 `andrewplot` function integrates the calculation and plot for Andrews’ curves, and in whose source code, the lines for calculating shows as follow: 
 
@@ -223,27 +223,36 @@ legend("Location","northwest")
 
 The function representation preserves distances. One measure of the distance between two functions that seems in accord with distance as judged by the human eye is:
 $$
-\vert\vert f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)\vert\vert_{L_2}=\int_{-\pi}^\pi[f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)]^2\mathrm{d}t
+\vert\vert f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)\vert\vert_{L_2}^2=\int_{-\pi}^\pi[f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)]^2\mathrm{d}t
 $$
+
 
 $$
 \begin{split}
-&\vert\vert f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)\vert\vert_{L_2}
+&\vert\vert f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)\vert\vert_{L_2}^2
 =\int_{-\pi}^\pi[f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)]^2\mathrm{d}t\\
 =&\int_{-\pi}^\pi
 \Big[(x_1-y_1)\dfrac1{\sqrt2}+(x_2-y_2)\sin(t)+(x_3-y_3)\cos(t)+\cdots\Big]^2\mathrm{d}t\\
-=&\dfrac12(x_1-y_1)^2+\pi\sum_{i=2}^p(x_i-y_i)^2
+=&\pi\sum_{i=1}^p(x_i-y_i)^2
 \end{split}
 $$
 [Fourier Series of Periodic Signals - What a starry night~](https://helloworld-1017.github.io/2023-01-25/17-25-27.html)
 
 
 
-==here==
+```matlab
+idx1 = 7;
+idx2 = 71;
+sum((F(idx1,:)-F(idx2,:)).^2*0.001)
+pi*sum((meas(idx1,:)-meas(idx2,:)).^2)
+```
 
-
-
-
+```
+ans =
+   48.8254
+ans =
+   48.8203
+```
 
 
 
@@ -254,6 +263,8 @@ $$
 \vert\vert f_\boldsymbol{x}(t)-f_\boldsymbol{y}(t)\vert\vert_{L_2}=\pi\vert\vert \boldsymbol{x}-\boldsymbol{y}\vert\vert^2=\pi\sum_{i=1}^k(x_i-y_i)^2
 $$
 Because this relation, close points will appear as close functions and distant points as distant functions. Thus multivariate clusters and outliers may be identified visually from the plot of the function. It is this distance-preserving property that determined the coefficient $1/\sqrt2$ and restricts the coefficients of $t$ to integers.
+
+
 
 ## Yields one-dimensional projections
 
@@ -269,14 +280,77 @@ f_{\boldsymbol{x}}(t_0)=\Big(\boldsymbol{x}^\prime f_\boldsymbol{1}(t_0)/[f_{\bo
 $$
 The projection on this one-dimensional space may reveal clusterings, outlier patterns, or other peculiarities that occur in this subspace and which may be otherwise obscured by other dimensions. The advantage of this plot is that a continuum of such one-dimensional projections is plotted on one graph.
 
+
+
 ## preserves variances
 
 The representation preserves variances. If the components of the data uncorrelated with common variance $\sigma^2$ then the function value at $t$, $f_x(t)$, has variance:
+
+if mutually uncorrelated
 $$
-\mathrm{Var}[f_{\boldsymbol{x}}(t)]=\sigma^2(\dfrac12+\sin^2(t)+\cos^2(t)+\sin^2(2t)+\cos^2(2t)+\cdots)
+\begin{split}
+\mathrm{Var}[f_{\boldsymbol{x}}(t)]
+&=\mathrm{Var}[x_1\dfrac1{\sqrt2}+x_2\sin^2(t)+x_3\cos^2(t)+x_4\sin^2(2t)+x_5\cos^2(2t)+\cdots]\\
+&=\mathrm{Var}(x_1)\dfrac12+\mathrm{Var}(x_2)\sin^2(t)+\mathrm{Var}(x_3)\cos^2(t)+\mathrm{Var}(x_4)\sin^2(2t)+\mathrm{Var}(x_5)\cos^2(2t)+\cdots\\
+&=\sigma_1^2\dfrac12+\sigma_2^2\sin^2(t)+\sigma_3^2\cos^2(t)+\sigma_4^2\sin^2(2t)+\sigma_5^2\cos^2(2t)+\cdots
+\end{split}
 $$
 
-If $k$ is odd this reduces to a constant, $\dfrac12\sigma^2k$; if $k$ is even, the variance lies between $\dfrac12\sigma^2(k-1)$ and $\dfrac12\sigma^2(k+1)$. In the first case, the variance does not depend on $t$ and in the second the relative dependence on $t$ is slight and decreases as $k$ increases. Thus the variability of the plotted function is almost constant across the graph. This standard deviation of $f$ is denoted by $\sigma_f$ where it appears on the plots. <u>This facilitates the interpretation of the plot as outlined in the next section.</u>
+and further if has common variance, i.e., $$\sigma_1^2=\sigma_2^2=\cdots=\sigma^2$$, we have:
+$$
+\mathrm{Var}[f_{\boldsymbol{x}}(t)]=\sigma^2(\dfrac12+\sin^2(t)+\cos^2(t)+\sin^2(2t)+\cos^2(2t)+\cdots)\\
+$$
+
+
+
+
+If $k$ is odd this reduces to a constant, $\dfrac12\sigma^2k$, for example, if $k=3$, we have:
+$$
+\mathrm{Var}[f_{\boldsymbol{x}}(t)]=\sigma^2(\dfrac12+\sin^2(t)+\cos^2(t))=\dfrac32\sigma^2
+$$
+ if $k$ is even, the variance lies between $\dfrac12\sigma^2(k-1)$ and $\dfrac12\sigma^2(k+1)$, for example, if $k=4$
+$$
+\dfrac32\sigma^2<\mathrm{Var}[f_{\boldsymbol{x}}(t)]=\sigma^2(\dfrac12+\sin^2(t)+\cos^2(t)+\sin^2(2t))=\sigma^2(\dfrac32+\sin^2(2t))<\dfrac52\sigma^2
+$$
+In the former case, the variance does not depend on $t$, while in the latter case, the relative dependence on $t$ is slight and decreases as $k$ increases. Thus the variability of the plotted function is almost constant across the graph. This standard deviation of $f$ is denoted by $\sigma_f$ where it appears on the plots. <u>This facilitates the interpretation of the plot as outlined in the next section.</u>
+
+```matlab
+clc,clear,close all
+
+rng("default")
+features = rand(150,3);
+
+% Calculate Andrews' curve for each sample
+[n,p] = size(features);
+t = -pi:.001:pi;
+omega = 1:floor(p/2);
+omegaSin = omega(1:floor(p/2));
+omegaCos = omega(1:floor((p-1)/2));
+A = [ones(1,length(t))./sqrt(2); sin(omegaSin' * t); cos(omegaCos' * t)];
+F = features(:,[1 (2:2:p) (3:2:p)])*A;
+
+disp(var(features)-1/12),disp(mean(var(F)-(1.5/12)))
+```
+
+```
+>> disp(var(features,0,1)-1/12),disp(mean(var(F,0,1)-(1.5/12)))
+    0.0057   -0.0066   -0.0040
+   -0.0024
+```
+
+## Clustering
+
+If some plotted functions form a band by remaining close together for all values of $t$, then the corresponding points are close together in the Euclidean metric. Such a band represents a cluster of data points. If a group of functions come close together for only one or a few values of $t$, then the corresponding points are close in the directions defined by the corresponding points vectors $\boldsymbol{f}_\boldsymbol{1}(t)$. Thus it is possible to identify clusters of points even when some additional variables are present.
+
+## Conduct hypothesis test or to construct confidence interval
+
+
+
+
+
+
+
+
 
 <br>
 

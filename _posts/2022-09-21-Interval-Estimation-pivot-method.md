@@ -1,11 +1,12 @@
 ---
 layout: single
-title: Interval Estimation -- Pivot Method
+title: "Interval Estimation: Pivot Method"
 date: 2022-09-21 19:15:11 +0800
 categories: 
  - Mathematics
 tags:
  - Probability Theory and Mathematical Statistics
+last_modified_at: 2023-11-11 21:45:51 +0800
 ---
 
 # Definition

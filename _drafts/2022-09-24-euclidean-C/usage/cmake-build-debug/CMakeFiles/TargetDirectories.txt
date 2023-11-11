@@ -1,3 +1,0 @@
-C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/_drafts/0924-euclidean-C/usage/cmake-build-debug/CMakeFiles/usage.dir
-C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/_drafts/0924-euclidean-C/usage/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/whatastarrynight/Desktop/QinghuaMa.github.io/_drafts/0924-euclidean-C/usage/cmake-build-debug/CMakeFiles/rebuild_cache.dir

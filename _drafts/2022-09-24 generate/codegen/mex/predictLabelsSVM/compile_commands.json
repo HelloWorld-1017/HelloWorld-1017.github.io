@@ -1,0 +1,68 @@
+[
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   predictLabelsSVM_data.c /Fobuild\\win64\\predictLabelsSVM_data.obj",
+    "file": "predictLabelsSVM_data.c",
+    "output": "build/win64/predictLabelsSVM_data.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   predictLabelsSVM_initialize.c /Fobuild\\win64\\predictLabelsSVM_initialize.obj",
+    "file": "predictLabelsSVM_initialize.c",
+    "output": "build/win64/predictLabelsSVM_initialize.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   predictLabelsSVM_terminate.c /Fobuild\\win64\\predictLabelsSVM_terminate.obj",
+    "file": "predictLabelsSVM_terminate.c",
+    "output": "build/win64/predictLabelsSVM_terminate.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   predictLabelsSVM.c /Fobuild\\win64\\predictLabelsSVM.obj",
+    "file": "predictLabelsSVM.c",
+    "output": "build/win64/predictLabelsSVM.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   Linear.c /Fobuild\\win64\\Linear.obj",
+    "file": "Linear.c",
+    "output": "build/win64/Linear.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   interface\\_coder_predictLabelsSVM_api.c /Fobuild\\win64\\_coder_predictLabelsSVM_api.obj",
+    "file": "interface/_coder_predictLabelsSVM_api.c",
+    "output": "build/win64/_coder_predictLabelsSVM_api.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   interface\\_coder_predictLabelsSVM_mex.c /Fobuild\\win64\\_coder_predictLabelsSVM_mex.obj",
+    "file": "interface/_coder_predictLabelsSVM_mex.c",
+    "output": "build/win64/_coder_predictLabelsSVM_mex.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   eml_int_forloop_overflow_check.c /Fobuild\\win64\\eml_int_forloop_overflow_check.obj",
+    "file": "eml_int_forloop_overflow_check.c",
+    "output": "build/win64/eml_int_forloop_overflow_check.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   interface\\_coder_predictLabelsSVM_info.c /Fobuild\\win64\\_coder_predictLabelsSVM_info.obj",
+    "file": "interface/_coder_predictLabelsSVM_info.c",
+    "output": "build/win64/_coder_predictLabelsSVM_info.obj"
+  },
+  {
+    "directory": "C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\\codegen\\mex\\predictLabelsSVM",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\whatastarrynight\\Desktop\\QinghuaMa.github.io\\_drafts\\fitcnet\\generate\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022a\\extern\\include\" /I \".\" -DMODEL=predictLabelsSVM_mex   \"C:\\Program Files\\MATLAB\\R2022a\\extern\\version\\c_mexapi_version.c\" /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "C:/Program Files/MATLAB/R2022a/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]

@@ -5,6 +5,10 @@ date: 2022-08-19 15:07:21 +0800
 categories: 
  - Uncertainty
  - Signals and Systems
+ - MATLAB
+tags:
+ - MATLAB Animation
+last_modified_at: 2023-11-14 14:08:53 +0800
 ---
 
 # 混沌电路
@@ -169,7 +173,7 @@ end
 
 <br>
 
-**参考**
+**References**
 
 [1] 邱关源. 电路（第5版）.
 

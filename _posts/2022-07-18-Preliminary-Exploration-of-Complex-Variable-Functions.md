@@ -6,6 +6,8 @@ categories:
  - Mathematics
 tags: 
  - Complex Analysis
+ - MATLAB Animation
+last_modified_at: 2023-11-14 14:07:29 +0800
 ---
 
 > 迄今为止，虚数这个引发许多纠缠不清的问题，在很大程度上可以认为是不恰当的记法系统导致的。比如，如果把 $+1$、$-1$、$\sqrt{-1}$ 称为正、逆和侧的单位，而不是正、负、虚（甚至不可能）的单位，就不有这样的麻烦了。

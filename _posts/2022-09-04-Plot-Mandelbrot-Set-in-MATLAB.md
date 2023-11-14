@@ -11,6 +11,8 @@ tags:
  - Complex Analysis
  - Fractal
  - MATLAB Graphics
+ - MATLAB Animation
+last_modified_at: 2023-11-14 14:12:04 +0800
 ---
 
 # Mandelbrot Set 
@@ -364,7 +366,7 @@ close(V) % DO NOT forget to close, otherwise, the .avi file could not be played
 
 <br>
 
-**参考**
+**References**
 
 [1] [Mandelbrot set - Wikipedia](https://en.wikipedia.org/wiki/Mandelbrot_set).
 

@@ -2,18 +2,19 @@
 layout: single
 title: Scalar Projection, Vector Projection, Scalar Rejection and Vector Rejection
 date: 2023-05-09 13:36:31 +0800
-last_modified_at: 2023-11-02 21:08:27 +0800
 categories:
  - Mathematics
  - MATLAB
 tags:
  - Matrix
  - Geometry
+modified_at1: 2023-11-02 21:08:27 +0800
+last_modified_at: 2023-11-14 13:00:01 +0800
 ---
 
 # Definitions based on angle $\theta$
 
-**（1）标量投影（Scalar projection）**
+**（1）标量投影（Scalar projection）[^1]**
 
 向量$\boldsymbol{a}$对向量$\boldsymbol{b}$的标量投影定义为：
 
@@ -62,10 +63,10 @@ $$
 
 # Definitions in terms of $\boldsymbol{a}$ and $\boldsymbol{b}$
 
-在有些情况下，角度$\theta$未知，我们需要基于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$的计算出角度$\theta$（根据点积的定义 [2]）：
+在有些情况下，角度$\theta$未知，我们需要基于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$的计算出角度$\theta$（根据点积的定义 [^2]）：
 
 $$
-\cos\theta=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{\vert\vert\boldsymbol{a}\vert\vert\ \vert\vert\boldsymbol{b}\vert\vert}
+\cos\theta=\dfrac{\langle\boldsymbol{a},\boldsymbol{b}\rangle}{\vert\vert\boldsymbol{a}\vert\vert\ \vert\vert\boldsymbol{b}\vert\vert}
 $$
 
 因此，直接基于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$定义上述四个量是更加方便的。
@@ -73,25 +74,25 @@ $$
 **（1）标量投影（Scalar projection）**
 
 $$
-a_1=\vert\vert\boldsymbol{a}\vert\vert\cos\theta=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{\vert\vert\boldsymbol{b}\vert\vert}
+a_1=\vert\vert\boldsymbol{a}\vert\vert\cos\theta=\dfrac{\langle\boldsymbol{a},\boldsymbol{b}\rangle}{\vert\vert\boldsymbol{b}\vert\vert}
 $$
 
 **（2）向量投影（Vector projection）**
 
 $$
-\boldsymbol{a}_1=a_1\hat{\boldsymbol{b}}=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{\vert\vert\boldsymbol{b}\vert\vert}\dfrac{\boldsymbol{b}}{\vert\vert\boldsymbol{b}\vert\vert}
+\boldsymbol{a}_1=a_1\hat{\boldsymbol{b}}=\dfrac{\langle\boldsymbol{a},\boldsymbol{b}\rangle}{\vert\vert\boldsymbol{b}\vert\vert}\dfrac{\boldsymbol{b}}{\vert\vert\boldsymbol{b}\vert\vert}
 $$
 
 等价于：
 
 $$
-\boldsymbol{a}_1=(\boldsymbol{a}\cdot\hat{\boldsymbol{b}})\hat{\boldsymbol{b}}
+\boldsymbol{a}_1=\langle\boldsymbol{a},\hat{\boldsymbol{b}}\rangle\hat{\boldsymbol{b}}
 $$
 
 或者：
 
 $$
-\boldsymbol{a}_1=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{\vert\vert\boldsymbol{b}\vert\vert^2}\boldsymbol{b}=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{\boldsymbol{b}\cdot\boldsymbol{b}}\boldsymbol{b}
+\boldsymbol{a}_1=\dfrac{\langle\boldsymbol{a},\boldsymbol{b}\rangle}{\vert\vert\boldsymbol{b}\vert\vert^2}\boldsymbol{b}=\dfrac{\langle\boldsymbol{a},\boldsymbol{b}\rangle}{\langle\boldsymbol{b},\boldsymbol{b}\rangle}\boldsymbol{b}
 $$
 
 **（3）Scalar rejection**
@@ -99,21 +100,23 @@ $$
 记向量$\boldsymbol{b}=(b_x,b_y)$的正交向量为$\boldsymbol{b}^\perp=(-b_y,b_x)$，则Scalar rejection可以写作：
 
 $$
-a_2=\vert\vert\boldsymbol{a}\vert\vert\sin\theta=\vert\vert\boldsymbol{a}\vert\vert\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}^\perp}{\vert\vert\boldsymbol{a}\vert\vert\ \vert\vert\boldsymbol{b}^\perp\vert\vert}=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}^\perp}{\vert\vert\boldsymbol{b}\vert\vert}
+a_2
+=\vert\vert\boldsymbol{a}\vert\vert\sin\theta
+=\vert\vert\boldsymbol{a}\vert\vert\dfrac{\langle\boldsymbol{a},\boldsymbol{b}^\perp\rangle}{\vert\vert\boldsymbol{a}\vert\vert\ \vert\vert\boldsymbol{b}^\perp\vert\vert}
+=\dfrac{\langle\boldsymbol{a},\boldsymbol{b}^\perp\rangle}{\vert\vert\boldsymbol{b}\vert\vert}
 $$
 
 其中，点积$\boldsymbol{a}\cdot\boldsymbol{b}^\perp$也被称作**垂直点积（perp dot product）**。
 
 **（4）Vector rejection**
-
 $$
 \begin{split}
 \boldsymbol{a}_2&=\boldsymbol{a}-\boldsymbol{a}_1\\
-&=\boldsymbol{a}-\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{\boldsymbol{b}\cdot\boldsymbol{b}}\boldsymbol{b}
+&=\boldsymbol{a}-\dfrac{\langle\boldsymbol{a},\boldsymbol{b}\rangle}{\langle\boldsymbol{b},\boldsymbol{b}\rangle}\boldsymbol{b}
 \end{split}
 $$
 
-**Added on Nov. 2, 2023**: The notions of vector projection and vector rejection are used in Gram-Schmidt Process, which could be found in [[3](#ref-3)].
+**Added on Nov. 2, 2023**: The notions of vector projection and vector rejection are used in Gram-Schmidt Process, which could be found in [^3].
 {: .notice--primary}
 
 基于向量$\boldsymbol{a}$和向量$\boldsymbol{b}$的定义在编程时更方便计算。以向量$\boldsymbol{a}=(1,1)$，$\boldsymbol{b}=(0.4,1.6)$进行验证：
@@ -149,12 +152,6 @@ legend('Interpreter','latex')
 
 **References**
 
-<div id="ref-1"></div>
-[1] [Vector projection - Wikipedia](https://en.wikipedia.org/wiki/Vector_projection).
-
-<div id="ref-2"></div>
-[2] [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
-
-<div id="ref-3"></div>
-[3] [Gram-Schmidt Process - What a starry night~](https://helloworld-1017.github.io/2023-11-01/22-00-27.html).
-
+[^1]: [Vector projection - Wikipedia](https://en.wikipedia.org/wiki/Vector_projection).
+[^2]: [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
+[^3]: [Gram-Schmidt Process - What a starry night~](https://helloworld-1017.github.io/2023-11-01/22-00-27.html).

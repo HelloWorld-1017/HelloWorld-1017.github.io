@@ -1,3 +1,7 @@
+T-digest algorithm
+
+<br>
+
 **References**
 
 [` quantile `: Quantiles of data set - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/quantile.html).

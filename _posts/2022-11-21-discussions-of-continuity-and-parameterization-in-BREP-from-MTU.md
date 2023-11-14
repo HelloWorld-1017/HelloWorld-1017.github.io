@@ -4,8 +4,11 @@ title: Discussions of Continuity and Parameterization in BREP From MTU
 date: 2022-11-21 20:46:43 +0800
 categories: 
  - Mathematics
+ - MATLAB
 tags:
  - Geometry
+ - MATLAB Animation
+last_modified_at: 2023-11-14 14:13:40 +0800
 ---
 
 # Introduction

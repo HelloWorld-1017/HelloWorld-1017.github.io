@@ -8,6 +8,8 @@ categories:
 tags:
  - Numerical Analysis
  - MATLAB Graphics
+ - MATLAB Animation
+last_modified_at: 2023-11-14 14:12:50 +0800
 ---
 
 # Bernstein polynomial

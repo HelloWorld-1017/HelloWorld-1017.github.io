@@ -358,7 +358,9 @@ confidence interval [^11]
 
 
 
-[Percentiles of data set - MATLAB prctile - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/prctile.html).
+
+
+[`prctile`: Percentiles of data set - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/prctile.html).
 
 
 
@@ -464,9 +466,52 @@ exportgraphics(gcf,"pic-2.jpg","Resolution",600)
 
 ![pic-2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311112130948.jpg)
 
-As can be seen, Paul’s way, that is put the most important variables **last**, could make the separation between “setosa” class and another two classes more clear. At this point, I think reference [^8] probably wrong. Having said that, determining the order based on principle components provided by reference [^8] is indeed a feasible approach. 
+As can be seen, Paul’s way, that is put the most important variables **last**, could make the separation between “setosa” class and another two classes more clear. At this point, I think reference [^8] probably wrong. Having said that, determining the order based on principle components provided by reference [^8] is indeed a feasible approach.
 
 <br>
+
+选取三个空间，然后选取不同的$t$值，绘制出不同的三维坐标；但是并不是向量，
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+## Normalization
+
+ 
+
+
+
+```matlab
+clc,clear,close all
+
+load fisheriris
+meas = normalise(meas);
+
+figure
+hold(gca,"on"),box(gca,"on"),grid(gca,"on")
+ps = andrewsplot(meas,"group",species,"LineWidth",1);
+for i = 1:numel(ps)
+    ps(i).Color(4) = 0.7;
+end
+xlim([-pi,pi])
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311141044874.png" alt="image-20231114104438690" style="zoom: 67%;" />
+
+
+
+
+
+
 
 # Methods for statistical data analysis of multivariate observations
 

@@ -10,6 +10,7 @@ categories:
 tags:
  - MATLAB Deep Learning Toolbox
 classes: wide
+last_modified_at: 2023-11-14 14:11:23 +0800
 ---
 
 # 动态系统
@@ -54,7 +55,7 @@ $$
 
 我们可以用 MATLAB 求解这个方程的数值解以及迭代过程，画出相轨迹。
 
-![pic1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic1.svg)
+![pic1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic1.svg?raw=true)
 
 ```matlab
 clc, clear, close
@@ -183,6 +184,8 @@ title('Phase plain')
 ```
 
 可以看出，方程 $\eqref{eg}$ 的数值解形式和解析解形式的结果是一致的。
+
+<br>
 
 # Neural ODE
 
@@ -631,9 +634,9 @@ plotTrueAndPredictedSolutions(xTrue8, xPred8);
 另外还有一点，上述状态方程只是很简单很简单的一个双变量线性状态方程，除此之外，还存在许多很复杂的状态方程。很多状态方程的解对于不同初始点的选取非常敏感，比如 [混沌电路：蔡氏电路](http://whatastarrynight.com/uncertainty/signals%20and%20systems/chua's-circuit/) 和 [二阶非线性电路的状态方程和相图](http://whatastarrynight.com/uncertainty/signals%20and%20systems/state-function-and-phase-trajectory-linear-RLC/) ，Neural ODE 能否解决这样的问题？我觉得有极大的困难。使用数据驱动模型也需要对所解决的问题本身有深刻的理解，才能最大程度避免这样的风险。
 {: .notice--danger}
 
+<br>
 
-
-## 总结
+# 总结
 
 总结上述过程：
 
@@ -645,7 +648,7 @@ plotTrueAndPredictedSolutions(xTrue8, xPred8);
 
 <br>
 
-**参考**
+**References**
 
 [1] [Dynamical system - Wikipedia](https://en.wikipedia.org/wiki/Dynamical_system).
 

@@ -9,6 +9,7 @@ tags:
  - Prime Obsession
  - Number Theory
  - MATLAB Mathematics
+last_modified_at: 2023-11-14 14:15:46 +0800
 ---
 
 # Sieve of Eratosthenes
@@ -21,7 +22,7 @@ tags:
 
 Wikipedia词条 [1] 中的动图形象地展示了这一过程：
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Animation_Sieve_of_Eratosth.gif#/media/File:Animation_Sieve_of_Eratosth.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Animation_Sieve_of_Eratosth.gif" alt="Animation Sieve of Eratosth.gif"></a><br>By <a href="https://de.wikipedia.org/wiki/User:SKopp" class="extiw" title="de:User:SKopp">SKopp</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1506732">Link</a></p>
+![](https://upload.wikimedia.org/wikipedia/commons/9/94/Animation_Sieve_of_Eratosth.gif?20061230143851)
 
 并且给出了相应的伪代码 [1]：
 

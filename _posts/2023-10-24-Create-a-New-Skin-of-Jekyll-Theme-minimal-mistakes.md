@@ -1,20 +1,21 @@
 ---
 layout: single
-title: "Create a New Skin of Jekyll Theme \"minimal-mistakes\""
+title: "Style a New Skin of Jekyll Theme \"minimal-mistakes\""
 date: 2023-10-24 16:15:45 +0800
 categories:
  - Jekyll
+last_modified_at: 2023-11-14 19:44:26 +0800
 ---
 
 # Introduction
 
-Jekyll theme "minimal-mistakes" [[1]](#ref) provides nine optional skins [[2]](#ref), and we could specify it in `_config.yml`:
+Jekyll theme "minimal-mistakes" [^1] provides nine optional skins [^2], and we could specify it in `_config.yml`:
 
 ```yaml
 minimal_mistakes_skin : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 ```
 
-These skins are defined by `.scss` files (SCSS, i.e., Sassy Cascading Style Sheets, is a more advanced and evolved variant of the CSS language [[3]](#ref)), and these files, named `_<name>.scss`, are stored in the `.\_sass\minimal-mistakes\skins` folder. For example, `.\_sass\minimal-mistakes\skins\_air.scss` file is like:
+These skins are defined by `.scss` files (SCSS, i.e., Sassy Cascading Style Sheets, is a more advanced and evolved variant of the CSS language [^3], and these files, named `_<name>.scss`, are stored in the `.\_sass\minimal-mistakes\skins` folder. For example, `.\_sass\minimal-mistakes\skins\_air.scss` file is like:
 
 ```scss
 /* ==========================================================================
@@ -92,12 +93,51 @@ will make it work.
 
 <br>
 
+# Change the color matching of code block
+
+Added on Nov. 14, 2023.
+{: .notice--warning}
+
+Adding the following code in the `_myskin.scss` will make the color matching of code block the same as that of `"contrast" ` skin:
+
+```scss
+/* contrast syntax highlighting (base16) */
+$base00: #000000;
+$base01: #242422;
+$base02: #484844;
+$base03: #6c6c66;
+$base04: #918f88;
+$base05: #b5b3aa;
+$base06: #d9d7cc;
+$base07: #fdfbee;
+$base08: #ff6c60;
+$base09: #e9c062;
+$base0a: #ffffb6;
+$base0b: #a8ff60;
+$base0c: #c6c5fe;
+$base0d: #96cbfe;
+$base0e: #ff73fd;
+$base0f: #b18a3d;
+```
+
+i.e., changing from:
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311141942472.png" alt="image-20231114194242380" style="zoom:50%;" />
+
+to:
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311141942728.png" alt="image-20231114194253691" style="zoom:50%;" />
+
+The detailed information could be found in references [^4] and [^5].
+
+<br>
+
 <div id = "ref"></div>
 
 **References**
 
-[1] [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes). 
-
-[2] [mmistakes/minimal-mistakes: Skins (color variations) - GitHub](https://github.com/mmistakes/minimal-mistakes).
-
-[3] [Difference Between CSS and SCSS - BYJU's](https://byjus.com/gate/difference-between-css-and-scss/).
+[^1]: [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes). 
+[^2]: [mmistakes/minimal-mistakes: Skins (color variations) - GitHub](https://github.com/mmistakes/minimal-mistakes).
+[^3]: [Difference Between CSS and SCSS - BYJU's](https://byjus.com/gate/difference-between-css-and-scss/).
+[^4]: [基于Pages+Jekyll+Minimal-Mistakes搭建个人博客 - 悟尘记 - 李小龙的博客网站](https://www.lixl.cn/2019/061036412.html#toc-heading-4).
+[^5]: [Stylesheets - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#colors).

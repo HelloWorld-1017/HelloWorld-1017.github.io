@@ -8,14 +8,15 @@ categories:
  - MATLAB
 tags:
  - MATLAB Animation
-last_modified_at: 2023-11-14 14:09:36 +0800
+modified_at1: 2023-11-14 14:09:36 +0800
+last_modified_at: 2023-11-15 09:04:07 +0800
 ---
 
 # 非线性振荡电路
 
 电子振荡电路一般至少含有两个储能元件和一个非线性元件。本文所介绍的范德坡(Van del Pol)电路是一种典型的非线性振荡电路，它是由一个线性电感、一个线性电容和一个非线性电阻构成，如下图所示。
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220819181910505.png?raw=true" alt="image-20220819181910505" style="zoom:50%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220819181910505.png?raw=true" alt="image-20220819181910505" style="zoom: 33%;" />
 
 其中，非线性电阻为电流控制型，伏安特性为：
 
@@ -84,7 +85,7 @@ $$
 
 下图展示了当 $\varepsilon=0.1$ ，初始条件分别为 $(0,1)$ $(0, 5)$ $(0,9) $ 时的相轨迹。
 
-![PhaceTractories](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/PhaceTractories.gif)
+![PhaceTractories](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/PhaceTractories.gif?raw=true)
 
 ![image-20220820133239047](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820133239047.png?raw=true)
 

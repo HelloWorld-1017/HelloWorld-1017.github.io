@@ -10,10 +10,10 @@ axis([-3,3,-0.4,0.4,-4,4])
 h = animatedline(gca,"LineWidth",1.3);
 
 firstFrame = true;
-framesPerSecond = 120;
+framesPerSecond = 60;
 delayTime = 1/framesPerSecond;
 
-gifFile = sprintf("Chua-%s.gif",num2str(framesPerSecond));
+gifFile = sprintf("Chuasf-%s.gif",num2str(framesPerSecond));
 if exist(gifFile,"file")
     delete(gifFile)
 end
@@ -35,7 +35,7 @@ end
 for i = 1:numPoints
     if firstFrame
         firstFrame = false;
-        imwrite(As{i},maps{i},gifFile,LoopCount=Inf,DelayTime=delayTime);
+        imwrite(As{i},maps{i},gifFile,LoopCount=1,DelayTime=delayTime);
     else
         imwrite(As{i},maps{i},gifFile,WriteMode="append",DelayTime=delayTime);
     end

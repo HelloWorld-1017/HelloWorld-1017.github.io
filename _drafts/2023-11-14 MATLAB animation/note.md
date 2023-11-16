@@ -101,7 +101,7 @@ function contestAnimator()
 end
 ```
 
-Luckily, it works. [Script 2](#script-2) gets each frame using `getframe` function and post-process it by `rgb2ind` function, and finally appends frame to `.gif` file by `imwrite` function. And in fact, it is similar to the way of generating `.gif` file provided by `imwrite` documentation [^10]:
+Luckily, it works. [Script 2](#script-2) gets each frame using `getframe` function and post-process it by `rgb2ind` function, and finally appends frame to `.gif` file by `imwrite` function. And in fact, it is similar to the way of generating `.gif` file provided by `imwrite` official documentation [^15]:
 
 ```matlab
 ...
@@ -301,7 +301,7 @@ Error in script6 (line 14)
 imwrite(F.cdata,"gif.gif",WriteMode="append");
 ```
 
-So, it explains why [Script 2](#script-2) adopts the second way, that is saving indexed image by `imwrite` function. 
+So, it explains why [Script 2](#script-2) adopts the second way, that is saving indexed image by `imwrite` function (`imwrite` document [^15] mentions this point as well.)
 
 The outputs of code in [Script 3](#script-3):
 
@@ -360,7 +360,7 @@ ans =
 N.B., Here, we add one to the elements in `A` to find a corresponding color in `map`. This detail is obtained from [^13], “If the image matrix is of data type `logical`, `uint8` or `uint16`, the colormap normally contains integer values in the range $[0, p–1]$ (where $p$ is the length of the colormap). The value 0 points to the first row in the colormap, the value 1 points to the second row, and so on.”
 {: .notice--warning}
 
-As can be seen, the RGB-tuple found based on `A` and `map`, `(59,29,59)`, is very similar to that original RGB array in `F.cdata`, `(63,31,62)`. However, they are not exactly the same, so in this image conversion process, some color information is lost. If we decrease the `Q` value further, this distortion becomes more serious:
+As can be seen, the RGB-tuple found based on `A` and `map`, `(59,29,59)`, is very similar to that original RGB array in `F.cdata`, `(63,31,62)`. However, they are not exactly the same, so in this image conversion process, some color information is lost. If we decrease the `Q` value further, this kind of distortion becomes more serious:
 
 <div id="script-4"></div>
 
@@ -395,12 +395,10 @@ The maximum value of `Q` is $65,536$ [^12]:
 
 However, in [Script 4](#script-4), specifying `Q` as the value over $256$ will occur some problems.
 
-**(1) For `imwrite` function**
-
 If we use the following code, which is similar to [Script 4](#script-4), to convert and save image:
 
 ```matlab
-[A4,map4] = rgb2ind(F.cdata,257);
+[A4,map4] = rgb2ind(F.cdata,65536);
 imwrite(A4,map4,"img-4.jpg")
 ```
 
@@ -423,58 +421,77 @@ imwrite(A4,map4,"img-4.jpg")
 It reminds us to specify a higher value for `"BitDepth"` property, i.e.,
 
 ```matlab
-[A4,map4] = rgb2ind(F.cdata,257);
+[A4,map4] = rgb2ind(F.cdata,65536);
 imwrite(A4,map4,"img-4.jpg","BitDepth",16)
 ```
 
-It works and without any error, however, image `img-4.jpg` can’t inspected using Windows 
-
-
+It works and without any error, however, image `img-4.jpg` can’t inspected in Windows image viewer:
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161046111.png" alt="image-20231116104612055" style="zoom:50%;" />
 
+I suppose that Windows image viewer doesn't support viewing the image with this kind of bit depth.
 
+But on another hand, we could import this `unit16` image using `imread` function, and view it by `imshow` function:
 
+```matlab
+clc,clear,close all
 
+img = imread("img-4.jpg");
+imshow(img)
+```
 
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161240708.png" alt="image-20231116124042514" style="zoom: 67%;" />
 
+```
+>> class(img)
+ans =
+    'uint16'
+```
 
-
-
-
-
-
-
-caused by image format 
-
-
-
-we can’t input a `Q` over , otherwise an error will occur:
-
-
-
-
-
-
-
-More detailed information of indexed image could be found in [^12] and [^13].
-
-
-
-
+In addition, more detailed information about indexed image could be found in [^12] and [^13].
 
 
 <br>
 
 # `imwrite` function
 
+As described above, `imwrite` function [^10] could be used to append multiple indexed images to an identical `.gif` file, and specifically, the corresponding code in [Script 2](#script-2) is:
+
+```matlab
+...
+	firstFrame = true;
+	...
+    for frame = 1:48
+        ...
+        if firstFrame
+            firstFrame = false;
+            imwrite(A,map,animFilename,LoopCount=Inf,DelayTime=delayTime);
+        else
+            imwrite(A,map,animFilename,WriteMode="append",DelayTime=delayTime);
+        end
+    end
+...
+```
+
+When saving the first fame, two properties of `imwrite` function, `LoopCount` and `DelayTime`, are specified, and when appending the subsequence frames, `WriteMode` and `DelayTime` are used. The meaning of specifying `WriteMode` as `"append"` is clear, so here we just need to understand what `LoopCount` and `DelayTime` are.
+
+(1) `LoopCount` is the number of times to repeat the animation, and a `LoopCount` value of `Inf` causes the animation to loop continuously:
+
+==screenshot==
+
+and we just need to set it when add the first frame.
 
 
 
+(2) `DelayTime` 
 
-
+reciprocal of FPS (Frames Per Second, i.e., frame rate)
 
 <br>
+
+
+
+
 
 ```matlab
 clc,clear,close all
@@ -675,13 +692,12 @@ a new start!
 [^8]: [MATLAB Flipbook Mini Hack Gallery](https://ww2.mathworks.cn/matlabcentral/communitycontests/contests/6/entries).
 [^9]:[MATLAB - 官方举办的动图绘制大赛 - 第一周赛情回顾 - 知乎](https://zhuanlan.zhihu.com/p/666676042).
 [^10]:[MATLAB `imwrite`: Write image to graphics file - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/imwrite.html).
-
 [^11]: [MATLAB `getframe`: Capture axes or figure as movie frame - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/getframe.html).
 [^12]: [MATLAB `rgb2ind`: Convert RGB image to indexed image - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/rgb2ind.html).
 [^13]: [Image Types in the Toolbox: Indexed Images - MathWorks](https://ww2.mathworks.cn/help/images/image-types-in-the-toolbox.html#f14-17587).
 [^14]: [MATLAB `rgb2ind`: Tolerance used for uniform quantization `tol` - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/rgb2ind.html#mw_8a9ac938-c58d-4751-87ca-2cb78b014c3a).
 
-
+[^15]: [MATLAB `imwrite`: Write Animated GIF - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/imwrite.html#mw_00bce5fe-d730-4bcb-8104-bcebe7d5262a).
 
 
 

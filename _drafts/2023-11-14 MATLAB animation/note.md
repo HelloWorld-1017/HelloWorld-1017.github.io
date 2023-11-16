@@ -120,7 +120,361 @@ So, in the following text, I will make a detailed analysis for `getframe`, `rgb2
 
 <br>
 
+# `getframe` function
 
+MATLAB `getframe` function [^11] is used to “Capture axes or figure as movie frame”. The basic usage of it is:
+
+```matlab
+rng("default")
+x = rand(1,4);
+y = rand(1,4);
+scatter(x,y)
+fig = gcf();
+ax = gca();
+
+% Capture axes as movie frame
+F1 = getframe(ax)
+% Capture figure as movie frame
+F2 = getframe(fig)
+```
+
+where the figure will show like this:
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311151907036.png" alt="image-20231115190706974" style="zoom: 67%;" />
+
+and both `F1` and `F2` are all `struct` variable:
+
+```
+F1 = 
+  struct with fields:
+       cdata: [514×652×3 uint8]
+    colormap: []
+
+F2 = 
+  struct with fields:
+       cdata: [630×840×3 uint8]
+    colormap: []
+```
+
+and whose `cdata` fields are RGB-tuple:
+
+```
+>> F1.cdata(1,1,:), F2.cdata(1,1,:)
+
+  1×1×3 uint8 array
+ans(:,:,1) =
+   240
+ans(:,:,2) =
+   240
+ans(:,:,3) =
+   240
+
+  1×1×3 uint8 array
+ans(:,:,1) =
+   240
+ans(:,:,2) =
+   240
+ans(:,:,3) =
+   240
+```
+
+We could reproduce axes or figure using `imshow` function:
+
+```matlab
+figure("Color",[7,84,213]/255)
+imshow(F1.cdata)
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311151920340.png" alt="image-20231115192044302" style="zoom:67%;" />
+
+```matlab
+figure("Color",[7,84,213]/255)
+imshow(F2.cdata)
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311151921765.png" alt="image-20231115192115724" style="zoom:67%;" />
+
+The difference of capturing axes and capturing figure is clear to see. And what’s more, we could specify the second input argument, which is a four-element array, to get the specified area, like “Calculate Region to Include Title and Labels” example obtained from official documentation [^11]:
+
+```matlab
+clc,clear,close all
+
+rng("default")
+x = rand(1,4);
+y = rand(1,4);
+scatter(x,y)
+title("Four andom points")
+
+ax = gca();
+ax.Units = "pixels";
+pos = ax.Position;
+ti = ax.TightInset;
+
+rect = [-ti(1), -ti(2), pos(3)+ti(1)+ti(3), pos(4)+ti(2)+ti(4)];
+F = getframe(ax,rect);
+
+figure("Color",[7,84,213]/255)
+imshow(F.cdata)
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311151934154.png" alt="image-20231115193403108" style="zoom:67%;" />
+
+<br>
+
+# `rgb2ind` function
+
+After getting the frame, we could save it using `imwrite` function [^10], by (1) saving RGB image, or by (2) saving indexed image. The second way relies on using `rgb2ind` function [^12] to convert RGB image to indexed image. For example:
+
+<div id="script-3"></div>
+
+```matlab
+clc,clear,close all
+
+rng("default")
+x = rand(1,4);
+y = rand(1,4);
+scatter(x,y)
+fig = gcf();
+ax = gca();
+
+% Capture axes as movie frame
+F = getframe(ax);
+
+% Save figure by RGB image
+imwrite(F.cdata,"jpg-1.jpg");
+
+% Save figure by indexed image
+[A,map] = rgb2ind(F.cdata,256);
+imwrite(A,map,"jpg-2.jpg")
+```
+
+The `jpg-1.jpg` and `jpg-2.jpg` is exactly the same:
+
+```matlab
+clc,clear,close all
+
+a = imread("jpg-1.jpg");
+b = imread("jpg-2.jpg");
+whos
+```
+
+```
+ Name        Size                 Bytes  Class    Attributes
+  a         514x652x3            1005384  uint8              
+  b         514x652x3            1005384  uint8              
+```
+
+```
+>> sum(a-b,"all")
+ans =
+     0
+```
+
+So, I speculate that, at this case, if the input of `imwrite` function is index image and whose map, `imwrite` function will convert it to RGB image automatically. However, if we want to use `imwrite` to save RGB image to a `.gif` file, it will throw an error:
+
+```matlab
+clc,clear,close all
+
+rng("default")
+x = rand(1,4);
+y = rand(1,4);
+scatter(x,y)
+fig = gcf();
+ax = gca();
+
+% Capture axes as movie frame
+F = getframe(ax);
+
+% Save figure by RGB-tuple
+imwrite(F.cdata,"gif.gif",WriteMode="append");
+```
+
+```
+Error using writegif
+3-D data not supported for GIF files. Data
+must be 2-D or 4-D.
+
+Error in imwrite (line 566)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+
+Error in script6 (line 14)
+imwrite(F.cdata,"gif.gif",WriteMode="append");
+```
+
+So, it explains why [Script 2](#script-2) adopts the second way, that is saving indexed image by `imwrite` function. 
+
+The outputs of code in [Script 3](#script-3):
+
+```matlab
+[A,map] = rgb2ind(F.cdata,256);
+```
+
+`A` is indexed image, and `map` is the associated colormap. 
+
+Each row of `map` is a RGB tuple, representing a specific color, and the number of colors is determined by the second input argument “Number of quantized colors” `Q` (here is `256`) or “Tolerance used for uniform quantization” `tol` (concerning quantization algorithm [^14]). As for `A`, if the size of `F.cdata` is $h\times w\times 3$, then the size of `A` is $h \times w$, and each element $e_{i,j}$ in `A` denotes an index corresponding to the color order in `map`. 
+
+For example, I found a colorful image “pepper.png” downloaded with MATLAB: 
+
+```matlab
+clc,clear,close all
+
+img = imread("peppers.png");
+imshow(img)
+F = getframe(gca());
+
+[A,map] = rgb2ind(F.cdata,256);
+```
+
+N.B., If we choose a more colorful image, the number of colors in `map` is determined by “Number of quantized colors” `Q` more, otherwise, it will mainly determined by “Tolerance used for uniform quantization” `tol`, that is, it is more less than the `Q` we specified.
+{: .notice--warning}
+
+For `A` and `map` int this case:
+
+```
+>> size(F.cdata), size(A), size(map)
+ans =
+   384   512     3
+ans =
+   384   512
+ans =
+   256     3
+```
+
+```
+>> F.cdata(2,1,:)
+  1×1×3 uint8 array
+ans(:,:,1) =
+   63
+ans(:,:,2) =
+   31
+ans(:,:,3) =
+   62
+```
+
+```
+>> map(A(2,1)+1,:)*255
+ans =
+    59    29    59
+```
+
+N.B., Here, we add one to the elements in `A` to find a corresponding color in `map`. This detail is obtained from [^13], “If the image matrix is of data type `logical`, `uint8` or `uint16`, the colormap normally contains integer values in the range $[0, p–1]$ (where $p$ is the length of the colormap). The value 0 points to the first row in the colormap, the value 1 points to the second row, and so on.”
+{: .notice--warning}
+
+As can be seen, the RGB-tuple found based on `A` and `map`, `(59,29,59)`, is very similar to that original RGB array in `F.cdata`, `(63,31,62)`. However, they are not exactly the same, so in this image conversion process, some color information is lost. If we decrease the `Q` value further, this distortion becomes more serious:
+
+<div id="script-4"></div>
+
+```matlab
+clc,clear,close all
+
+img = imread("peppers.png");
+imshow(img)
+F = getframe(gca());
+
+[A1,map1] = rgb2ind(F.cdata,4);
+[A2,map2] = rgb2ind(F.cdata,50);
+[A3,map3] = rgb2ind(F.cdata,256);
+
+imwrite(A1,map1,"img-1.jpg")
+imwrite(A2,map2,"img-2.jpg")
+imwrite(A3,map3,"img-3.jpg")
+```
+
+The original and the three saved figures show as follows:
+
+<figure class="half">
+    <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311152220330.png">
+    <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311152059917.jpg">
+    <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311152059120.jpg">
+    <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311152100843.jpg">
+    <figcaption>(a) Original "peppers.png", 280 KB; (b) "img-1.jpg", 50 KB; (c) "img-2.jpg", 36 kB; (d) "img-3.jpg", 27 KB</figcaption>
+</figure>
+The maximum value of `Q` is $65,536$ [^12]:
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161018258.png" alt="image-20231116101821045" style="zoom:67%;" />
+
+However, in [Script 4](#script-4), specifying `Q` as the value over $256$ will occur some problems.
+
+**(1) For `imwrite` function**
+
+If we use the following code, which is similar to [Script 4](#script-4), to convert and save image:
+
+```matlab
+[A4,map4] = rgb2ind(F.cdata,257);
+imwrite(A4,map4,"img-4.jpg")
+```
+
+`imwrite` function will throw an error while saving: 
+
+```
+Error using writejpg>set_jpeg_props
+UINT16 image data requires bitdepth specifically set to either 12 or 16.
+
+Error in writejpg (line 49)
+props = set_jpeg_props(data,varargin{:});
+
+Error in imwrite (line 566)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+
+Error in script5 (line 16)
+imwrite(A4,map4,"img-4.jpg")
+```
+
+It reminds us to specify a higher value for `"BitDepth"` property, i.e.,
+
+```matlab
+[A4,map4] = rgb2ind(F.cdata,257);
+imwrite(A4,map4,"img-4.jpg","BitDepth",16)
+```
+
+It works and without any error, however, image `img-4.jpg` can’t inspected using Windows 
+
+
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161046111.png" alt="image-20231116104612055" style="zoom:50%;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+caused by image format 
+
+
+
+we can’t input a `Q` over , otherwise an error will occur:
+
+
+
+
+
+
+
+More detailed information of indexed image could be found in [^12] and [^13].
+
+
+
+
+
+
+<br>
+
+# `imwrite` function
+
+
+
+
+
+
+
+<br>
 
 ```matlab
 clc,clear,close all
@@ -322,11 +676,16 @@ a new start!
 [^9]:[MATLAB - 官方举办的动图绘制大赛 - 第一周赛情回顾 - 知乎](https://zhuanlan.zhihu.com/p/666676042).
 [^10]:[MATLAB `imwrite`: Write image to graphics file - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/imwrite.html).
 
+[^11]: [MATLAB `getframe`: Capture axes or figure as movie frame - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/getframe.html).
+[^12]: [MATLAB `rgb2ind`: Convert RGB image to indexed image - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/rgb2ind.html).
+[^13]: [Image Types in the Toolbox: Indexed Images - MathWorks](https://ww2.mathworks.cn/help/images/image-types-in-the-toolbox.html#f14-17587).
+[^14]: [MATLAB `rgb2ind`: Tolerance used for uniform quantization `tol` - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/rgb2ind.html#mw_8a9ac938-c58d-4751-87ca-2cb78b014c3a).
 
 
-[MATLAB `getframe`: Capture axes or figure as movie frame - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/getframe.html).
 
-[MATLAB `rgb2ind`: Convert RGB image to indexed image - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/rgb2ind.html).
+
+
+
 
 [MATLAB `VideoWriter`: Create object to write video files - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/videowriter.html).
 

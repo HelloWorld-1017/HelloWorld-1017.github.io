@@ -1,3 +1,4 @@
+drawframe(f)
 function drawframe(f)
 cla
 mtx2apply = [0, 1; 1, 0];

@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "xxxx"
-date: 2023-11-xx xx:xx:xx +0800
+title: "Create Animation in MATLAB: Render `.gif` and `.avi` File"
+date: 2023-11-16 15:18:58 +0800
 categories:
  - MATLAB
 tags:
@@ -12,7 +12,7 @@ tags:
 
 # Introduction
 
-In the previous Blogs, I ever used MATLAB to create GIF file, like animating Bézier curve [^1], plotting phase trajectories of Van del Pol Circuit [^2] and Chua's circuit [^3]. It is a better way to  show a changing progress using GIF file rather than static figure, but according my ever experience, MATLAB seems not good at creating GIF, and the worst problem is that it will spend a lot of time in the generation problem. For example, I use the following codes to plot the dynamic solutions of Chua's circuit  in [^3] :
+In the previous Blogs, I ever used MATLAB to create `.gif` file, like animating Bézier curve [^1], phase trajectories of Van del Pol Circuit [^2] and Chua's circuit [^3]. It is a better way to show a changing progress through `.gif` file rather than static image, but according to my ever experience, MATLAB seems not good at creating GIF, and the worst problem is that it will spend a lot of time for rendering. For example, I use the following script to plot the dynamic solutions of Chua's circuit  in [^3] :
 
 <div id="script-1"></div>
 
@@ -64,16 +64,13 @@ end
 
 ![Chua1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142120396.gif)
 
-The size of this `.gif` file is 71,387 KB.
-{: .notice--primary}
+It will create a 71,387 KB `.gif` file, and the result is fine, but this progress will cost 289.32 seconds, which is too long. So, at that time, I supposed that this is an inherent problem of MATLAB software itself, so I ever tried to learn Python manim package [^4][^5], but I didn't persist since I have no much extra time to do it.
 
-The result is fine, but this progress will cost 289.32 seconds, which is too long. So, at that time, I believed that this is an inherent problem of MATLAB itself, so I ever tried to learn Python manim package [^4][^5], but I didn't persist since I have no much extra time to do it.
-
-In [Script 1](#script-1), generating GIF file is realized by appending each figure frame to a `.gif` file by `exportgraphic` function with `"append"` property `true`. This approach is obtained from official documentation of `exportgraphic` function [^6]:
+In [Script 1](#script-1), rendering `.gif` file is realized by appending each figure frame to a `.gif` file by `exportgraphic` function with `"append"` property `true`. This approach is obtained from official documentation of `exportgraphic` function [^6]:
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311150949958.png" alt="image-20231115094913877" style="zoom: 80%;" />
 
-Today, I hear about an interesting officially-held contest "MATLAB Flipbook mini Hack" [^7]. In this small contest, users could upload their code, that is a user-defined `drawframe` function [^8] which is used to generate a frame of animation, therefore constructing a animation clip. I didn't find the main function used for invoking `drawframe` on the official website, but I find a slandarer's blog [^9], providing a `contestAnimation` function to create `.gif` file:
+Today, I hear about an interesting officially-held contest "MATLAB Flipbook mini Hack" [^7]. In this small contest, users could upload their code, that is a user-defined `drawframe` function [^8] which is used to generate a frame of animation, therefore rendering an animation clip. I don’t find out the main function used for invoking `drawframe` on the official website, but I find a blog of slandarer [^9], providing a `contestAnimation` function to create `.gif` file:
 
 <div id="script-2"></div>
 
@@ -116,7 +113,7 @@ for idx = 1:nImages
 end
 ```
 
-So, in the following text, I will make a detailed analysis for `getframe`, `rgb2ind` and `imwrite` functions in [Script 2](#script-2), and afterward, apply this method to plotting dynamic solutions of Chua's circuit, comparing it with [Script 1](#script-1). ==Finally, xxx==
+So, in the following text, I will make a detailed analysis for `getframe`, `rgb2ind` and `imwrite` functions in [Script 2](#script-2), and afterward, apply this method to rendering dynamic solutions of Chua's circuit, and compare it with [Script 1](#script-1). Finally, a similar way of creating `.avi` video file is provided.
 
 <br>
 
@@ -142,7 +139,7 @@ where the figure will show like this:
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311151907036.png" alt="image-20231115190706974" style="zoom: 67%;" />
 
-and both `F1` and `F2` are all `struct` variable:
+and both `F1` and `F2` are `struct` variables:
 
 ```
 F1 = 
@@ -156,7 +153,7 @@ F2 =
     colormap: []
 ```
 
-and whose `cdata` fields are RGB-tuple:
+and whose `cdata` fields are RGB-tuples:
 
 ```
 >> F1.cdata(1,1,:), F2.cdata(1,1,:)
@@ -223,7 +220,7 @@ imshow(F.cdata)
 
 # `rgb2ind` function
 
-After getting the frame, we could save it using `imwrite` function [^10], by (1) saving RGB image, or by (2) saving indexed image. The second way relies on using `rgb2ind` function [^12] to convert RGB image to indexed image. For example:
+After getting a frame, we could save it using `imwrite` function [^10], by (1) saving RGB image, or by (2) saving indexed image. The second way relies on using `rgb2ind` function [^12] to convert RGB image to indexed image. For example:
 
 <div id="script-3"></div>
 
@@ -248,7 +245,7 @@ imwrite(F.cdata,"jpg-1.jpg");
 imwrite(A,map,"jpg-2.jpg")
 ```
 
-The `jpg-1.jpg` and `jpg-2.jpg` is exactly the same:
+and the `jpg-1.jpg` and `jpg-2.jpg` is exactly the same:
 
 ```matlab
 clc,clear,close all
@@ -270,7 +267,9 @@ ans =
      0
 ```
 
-So, I speculate that, at this case, if the input of `imwrite` function is index image and whose map, `imwrite` function will convert it to RGB image automatically. However, if we want to use `imwrite` to save RGB image to a `.gif` file, it will throw an error:
+So, I speculate that, at this case, if the input of `imwrite` function is indexed image and whose map, `imwrite` function will convert it to RGB image automatically.
+
+However, if we want to use `imwrite` to save RGB image to a `.gif` file, it will throw an error:
 
 ```matlab
 clc,clear,close all
@@ -301,7 +300,7 @@ Error in script6 (line 14)
 imwrite(F.cdata,"gif.gif",WriteMode="append");
 ```
 
-So, it explains why [Script 2](#script-2) adopts the second way, that is saving indexed image by `imwrite` function (`imwrite` document [^15] mentions this point as well.)
+So, it explains why [Script 2](#script-2) adopts the second way, that is saving indexed image by `imwrite` function, rather than RGB image. (`imwrite` document [^15] mentions this point as well.)
 
 The outputs of code in [Script 3](#script-3):
 
@@ -311,7 +310,7 @@ The outputs of code in [Script 3](#script-3):
 
 `A` is indexed image, and `map` is the associated colormap. 
 
-Each row of `map` is a RGB tuple, representing a specific color, and the number of colors is determined by the second input argument “Number of quantized colors” `Q` (here is `256`) or “Tolerance used for uniform quantization” `tol` (concerning quantization algorithm [^14]). As for `A`, if the size of `F.cdata` is $h\times w\times 3$, then the size of `A` is $h \times w$, and each element $e_{i,j}$ in `A` denotes an index corresponding to the color order in `map`. 
+Specifically, each row of `map` is a RGB-tuple, representing a specific color, and the number of colors is determined by the second input argument “Number of quantized colors” `Q` (here is `256`) or “Tolerance used for uniform quantization” `tol` (concerning quantization algorithm [^14]). As for `A`, if the size of `F.cdata` is $h\times w\times 3$, then the size of `A` is $h \times w$, and each element $e_{i,j}$ in `A` denotes an index corresponding to the color order in `map`. 
 
 For example, I found a colorful image “pepper.png” downloaded with MATLAB: 
 
@@ -325,10 +324,10 @@ F = getframe(gca());
 [A,map] = rgb2ind(F.cdata,256);
 ```
 
-N.B., If we choose a more colorful image, the number of colors in `map` is determined by “Number of quantized colors” `Q` more, otherwise, it will mainly determined by “Tolerance used for uniform quantization” `tol`, that is, it is more less than the `Q` we specified.
+N.B., If we choose a more colorful image, the number of colors in `map` is determined by “Number of quantized colors” `Q` more, otherwise, it will mainly determined by “Tolerance used for uniform quantization” `tol`. And at the latter case, it is more less than the `Q` we specified.
 {: .notice--warning}
 
-For `A` and `map` int this case:
+For `A` and `map` at this case:
 
 ```
 >> size(F.cdata), size(A), size(map)
@@ -357,7 +356,7 @@ ans =
     59    29    59
 ```
 
-N.B., Here, we add one to the elements in `A` to find a corresponding color in `map`. This detail is obtained from [^13], “If the image matrix is of data type `logical`, `uint8` or `uint16`, the colormap normally contains integer values in the range $[0, p–1]$ (where $p$ is the length of the colormap). The value 0 points to the first row in the colormap, the value 1 points to the second row, and so on.”
+N.B., Here, we add one to each element in `A` to find a corresponding color in `map`. This detail is obtained from [^13], “If the image matrix is of data type `logical`, `uint8` or `uint16`, the colormap normally contains integer values in the range $[0, p–1]$ (where $p$ is the length of the colormap). The value 0 points to the first row in the colormap, the value 1 points to the second row, and so on.”
 {: .notice--warning}
 
 As can be seen, the RGB-tuple found based on `A` and `map`, `(59,29,59)`, is very similar to that original RGB array in `F.cdata`, `(63,31,62)`. However, they are not exactly the same, so in this image conversion process, some color information is lost. If we decrease the `Q` value further, this kind of distortion becomes more serious:
@@ -393,7 +392,7 @@ The maximum value of `Q` is $65,536$ [^12]:
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161018258.png" alt="image-20231116101821045" style="zoom:67%;" />
 
-However, in [Script 4](#script-4), specifying `Q` as the value over $256$ will occur some problems.
+However, in [Script 4](#script-4), specifying `Q` as the value over $256$ will cause some problems.
 
 If we use the following code, which is similar to [Script 4](#script-4), to convert and save image:
 
@@ -448,14 +447,14 @@ ans =
     'uint16'
 ```
 
-In addition, more detailed information about indexed image could be found in [^12] and [^13].
+More detailed information about indexed image could be found in [^12] and [^13].
 
 
 <br>
 
 # `imwrite` function
 
-As described above, `imwrite` function [^10] could be used to append multiple indexed images to an identical `.gif` file, and specifically, the corresponding code in [Script 2](#script-2) is:
+As described above, `imwrite` function [^10] is used to append multiple indexed images to an identical `.gif` file, and specifically, the corresponding code in [Script 2](#script-2) is:
 
 ```matlab
 ...
@@ -475,23 +474,25 @@ As described above, `imwrite` function [^10] could be used to append multiple in
 
 When saving the first fame, two properties of `imwrite` function, `LoopCount` and `DelayTime`, are specified, and when appending the subsequence frames, `WriteMode` and `DelayTime` are used. The meaning of specifying `WriteMode` as `"append"` is clear, so here we just need to understand what `LoopCount` and `DelayTime` are.
 
-(1) `LoopCount` is the number of times to repeat the animation, and a `LoopCount` value of `Inf` causes the animation to loop continuously:
+(1) `LoopCount` is the number of times to repeat the animation, and a `LoopCount` value of `Inf` causes the animation to loop continuously [^10]:
 
-==screenshot==
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161418551.png" alt="image-20231116141806460" style="zoom: 50%;" />
 
-and we just need to set it when add the first frame.
+For example, if we specify it as `1`, the generated `.gif` will stop repeating after animating $1$ times. We just need to set this property when creating the first frame.
 
+(2) `DelayTime` is the delay before displaying next image (frame) [^10]:
 
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311161418369.png" alt="image-20231116141834314" style="zoom:50%;" />
 
-(2) `DelayTime` 
-
-reciprocal of FPS (Frames Per Second, i.e., frame rate)
+Actually, it is the reciprocal of FPS (Frames Per Second, i.e., frame rate). The small tip in the documentation (the above figure) should be noted, “*Setting `DelayTime` to a lower value will slow down the actual animation rate in many image viewers and web browsers.*” This point will be discussed in the following section.
 
 <br>
 
+# Render `.gif` file by `imwrite` function
 
+After learning about details in [Script 2](#script-2), we could modify [Script 1](#script-1), which is used to generate a `.gif` file showing dynamic solutions of Chua's circuit, to the following code:
 
-
+<div id="script-5"></div>
 
 ```matlab
 clc,clear,close all
@@ -552,48 +553,52 @@ out = [xdot,ydot,zdot]';
 end
 ```
 
-
+It will generate a 24-fps `.gif` file, showing below:
 
 ![Chua24](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142248003.gif)
 
-24, 55.35 seconds, and the file size is 69,244 KB:
+the generation process spends 55.35 seconds, and the file size is 69,244 KB. 
 
+As can be seen, compared with [Script 1](#script-1), using [Script 5](#script-5) to generate `.gif ` file makes rendering time reduce from 289.32 seconds to 55.35 seconds, which is a great improvement. 
 
+What’s more, in [Script 5](#script-5), the PFS of `.gif` file (and hence animation speed) could be adjusted, while in [Script 1](#script-1) it is not possible, cause `exportgraphics` function [^6] doesn’t provide a similar property like `DelayTime` of `imwrite` function.
 
-If we change `framesPerSecond` from 24 to 60, and 200, respectively:
+If we change `framesPerSecond` in [Script 5](#script-5) from 24 to 60, and 200, respectively (that is changing `DelayTime` from 1/24, to 1/60, and 1/200), the generated `.gif` file show as follows:
 
 <figure class="half">
     <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142306557.gif">
     <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142312222.gif">
-    <figcaption>(a) 60 fps, costs 56.96 seconds, file size 69,244 KB; (b) 200 fps, costs 59.37 seconds, file size 69,244 KB</figcaption>
+    <figcaption>(a) 60 fps, spending 56.96 seconds, file size 69,244 KB; (b) 200 fps, spending 59.37 seconds, file size 69,244 KB.</figcaption>
 </figure>
 
 
+The results show that, (1) basically, changing `DelayTime` doesn’t influence the script rendering time and `.gif` file size, and (2) decreasing `DelayTime` indeed could increase the animation speed, but as mentioned above, specifying too small `DelayTime` value will slow down the speed instead. 
 
-
-<br>
-
-
+Actually, the second item is commonsensible, because `.gif` format itself isn’t designed for presenting high-FPS animation, and commonly, the FPS of a `.gif` file is between 15  and 24 [^16]:
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142354778.png" alt="image-20231114235303980" style="zoom: 67%;" />
 
-[How To Change GIF Frame Rate 🚀 Speechify](https://speechify.com/blog/change-gif-frame-rate/?landing_url=https%3A%2F%2Fspeechify.com%2Fblog%2Fchange-gif-frame-rate%2F).
+If we want to present high frame rate, video file is a better choice, and some concerned content will be discussed in the next section.
 
+On another hand, if we maximize the `.gif` in the viewer, we could find that its resolution is kinda low. To improve this point, we could change the `Position` property at the beginning when creating the figure:
 
+```matlab
+...
+figure("Color","w")
+fig = gcf();
+fig.Position(3:4) = [1920,1080];
+...
+```
 
-About Resolution
-
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142350981.png" alt="image-20231114235032925" style="zoom: 67%;" />
+it will increase the resolution of `.gif` file, but meanwhile, rendering time will significantly level up to 304.08 seconds, and file size will also increase to 278 MB.
 
 <br>
 
-# `.avi` file
+# Render `.avi` video file
 
+Using `.gif` file to present animation is very convenient when sharing contents on the Internet, as it could be stored in image hosting service, and others could get access to it through external link. But as described in the above section, the FPS of `.gif` file is limited when using `imwrite` function. Therefore, if we want to increase the frame rate further and don’t expect to put the animation file in the image hosting service, creating video file is a better approach. In fact, Python manim package [^4], which is used to create animation in Python, also supports both options.
 
-
-Python manim package [^4] also supports to generate `.avi` video file, 
-
-
+In MATLAB, creating video file is similar to creating `.gif` file, that is frame by frame. But at this case, we should use `VideoWriter` [^17] and `writeVideo` [^18] instead. The complete code for rendering a `.avi` file shows as follows:
 
 ```matlab
 clc,clear,close all
@@ -649,34 +654,38 @@ out = [xdot,ydot,zdot]';
 end
 ```
 
+Among which, `v.FrameRate = FrameRate;` is to specify the frame rate, if we change it and increase to a relatively high value, we could find video duration is decreased accordingly:
 
+| `.avi` File | `FrameRate` | Script running time | File size  | Video duration |
+| ----------- | ----------- | ------------------- | ---------- | -------------- |
+| 1           | 24          | 31.38               | 118,449 KB | 01 min 35 sec  |
+| 2           | 60          | 38.73               | 118,449 KB | 38 sec         |
+| 3           | 120         | 33.90               | 118,449 KB | 19 sec         |
+| 4           | 200         | 35.05               | 118,449 KB | 11 sec         |
 
+Similarly, if we want to increase resolution, we could change the `Position` property (like we do for `.gif` file), and change the `Quality` property of `VideoWriter`:
 
+```matlab
+...
+figure("Color","w")
+fig = gcf();
+fig.Position(3:4) = [3840,2160];
+...
+Quality = 100;
+v = VideoWriter(aviFile);
+v.FrameRate = FrameRate;
+v.Quality = Quality;
+open(v)
+...
+```
 
+and of course, it will spend a rather long time for rendering, and occupies much more storage space.
 
+What’s more, choosing other video file format of `VideoWriter` function (default value is `"Motion JPEG AVI"`)[^17] may help:
 
+![](https://github.com/HelloWorld-1017/blog-images/blob/main/imgs/202311161601332.png?raw=true)
 
-
-| `.avi` File | `FrameRate` | Elapsed time | File size  | Video duration |
-| ----------- | ----------- | ------------ | ---------- | -------------- |
-| 1           | 24          | 31.38        | 118,449 KB | 01 min 35 sec  |
-| 2           | 60          | 38.73        | 118,449 KB | 38 sec         |
-| 3           | 120         | 33.90        | 118,449 KB | 19 sec         |
-| 4           | 200         | 35.05        | 118,449 KB | 11 sec         |
-
-
-
-"Uncompressed AVI"
-
-Resolution
-
-
-
-<br>
-
-# Conclusion 
-
-a new start!
+but I know less about compression and encoding methods of video file, so here I don’t try this way and make a comparison.
 
 <br>
 
@@ -699,15 +708,7 @@ a new start!
 
 [^15]: [MATLAB `imwrite`: Write Animated GIF - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/imwrite.html#mw_00bce5fe-d730-4bcb-8104-bcebe7d5262a).
 
-
-
-
-
-[MATLAB `VideoWriter`: Create object to write video files - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/videowriter.html).
-
-[MATLAB `writeVideo`: Write video data to file - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/videowriter.writevideo.html).
-
-
-
-
+[^16]: [How To Change GIF Frame Rate 🚀 Speechify](https://speechify.com/blog/change-gif-frame-rate/?landing_url=https%3A%2F%2Fspeechify.com%2Fblog%2Fchange-gif-frame-rate%2F).
+[^17]: [MATLAB `VideoWriter`: Create object to write video files - MathWorks China](https://ww2.mathworks.cn/help/matlab/ref/videowriter.html).
+[^18]: [MATLAB `writeVideo`: Write video data to file - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/videowriter.writevideo.html).
 

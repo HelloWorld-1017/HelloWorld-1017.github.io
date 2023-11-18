@@ -7,11 +7,10 @@ categories:
 tags:
  - MATLAB Graphics
 toc: false
+last_modified_at: 2023-11-18 18:32:51 +0800
 ---
 
-
-
-今天在学MATLAB的GMM示例时，看到了一个添加图像标题比较漂亮的实现方法，使用了`sprintf`向`title`添加参数：
+今天在学MATLAB的GMM示例时 [^1]，看到了一个添加图像标题比较漂亮的实现方法，使用了`sprintf` [^2]向`title` [^3]添加参数：
 
 ```matlab
 clc, clear, close all
@@ -30,9 +29,12 @@ grid on
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912231156922.png?raw=true" alt="image-20220912231156922" style="zoom:50%;" />
 
-但是‍♂️！`sprintf`函数的目的是为了向命令行中打印文本，所以它不支持LaTeX解释器，这一点使得这种用法其实不是很实用。
+但是，`sprintf`函数的目的是为了向命令行中打印文本，所以它不支持LaTeX解释器，这一点使得这种用法其实不是很实用。
 
-但是‍♂️！受此启发，可以使用`sprintf`函数向`eval`函数传递参数，可以提高代码的可读性。
+**Added on Nov. 18, 2023.** Actually, `sprintf` function could be used while adopting text interpreter, by formatting control sequence as well. The more information could be found in Blogs [^4] and [^5].
+{: .notice--warning}
+
+但是，受此启发，可以使用`sprintf`函数向`eval`函数传递参数，可以提高代码的可读性。
 
 顺便学习了一下`title`函数的用法，`title`函数是可以支持双行标题和子标题的。
 
@@ -66,7 +68,7 @@ grid on
 
 其中，变量`tt`和`ss`是标题和子标题所对应的Text对象，可以分别修改它们的行为：
 
-```matlab
+```
 tt = 
   Text (Normal Distribution PDF) with properties:
 
@@ -126,8 +128,10 @@ tt =
 
 <br>
 
-**参考**
+**References**
 
-[1] [sprintf - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/sprintf.html).
-
-[2] [title - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/title.html).
+[^1]: [Gaussian Mixture Model (GMM) - What a starry night~](https://helloworld-1017.github.io/2022-09-12/12-28-37.html).
+[^2]: [MATLAB `sprintf`: Format data into string or character vector - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/sprintf.html)
+[^3]: [MATLAB `title`: Add title - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/title.html).
+[^4]: [matlab sprintf latex interpreter - 掘金](https://juejin.cn/s/matlab%20sprintf%20latex%20interpreter).
+[^5]: [Monte Carlo Simulation to Estimate $\pi$ - What a starry night~](https://helloworld-1017.github.io/2023-11-18/17-40-37.html).

@@ -6,10 +6,10 @@ contestAnimator()
 
 function contestAnimator()
 animFilename = "gif.gif"; % Output file name
-fps = 24;
+fps = 12;
 % Create the gif
 for frame = 1:48
-    text1 = drawframe(frame);
+    drawframe(frame);
     fig = gcf();
     im = getframe(fig);
     [A,map] = rgb2ind(im.cdata,256);
@@ -18,14 +18,13 @@ for frame = 1:48
     else
         imwrite(A,map,animFilename,"WriteMode","append","DelayTime",1/fps);
     end
-    if frame ~= 48
-        delete(text1)
-    end
 end
 end
 
-function text1 = drawframe(f)
-persistent totalFrames eachFrame fig ax h
+function drawframe(f)
+persistent fig ax h colors  texts
+persistent totalFrames eachFrame string x y textRotation
+
 if f == 1
     % Define the frame vector
     totalFrames = 48;
@@ -43,35 +42,44 @@ if f == 1
     h.h4 = animatedline(ax,"LineWidth",1.5,"Color","b");
     h.h5 = animatedline(ax,"LineWidth",1.5,"Color","b");
     h.h6 = animatedline(ax,"LineWidth",1.5,"Color","b");
+
+    colors = get(ax,"ColorOrder");
+
+    % Falling string
+    string = 'MATLAB';
+
+    % Compute x
+    x = eachFrame/totalFrames*0.5-0.2;
+
+    % Compute y
+    y = 1-0.5*((eachFrame*10)/totalFrames).^8;
+    y = 0.5+y/10^8;
+
+    % compute rotation
+    textRotation = (y-0.5)*180;
+
+    texts = gobjects(length(string),1);
 end
 
-% Falling string
-string = 'MATLAB';
 
-% Compute x
-x = eachFrame/totalFrames*0.5-0.2;
-
-% Compute y
-y = 1-0.5*((eachFrame*10)/totalFrames).^8;
-y = 0.5+y/10^8;
-
-% compute rotation
-textRotation = (y-0.5)*180;
-
-% draw the letters
-text1 = gobjects(length(string),1);
-colors = get(ax,"ColorOrder");
+if f ~= 1
+    delete(texts)
+    texts = gobjects(length(string),1);
+end
 
 for i=1:length(string)
-    index = i*4+f;
-    if index <= 48
-        xPosition = x(index)+0.08*i;
-        yPosition = y(index);
+    idx = i*4+f;
+    if idx <= 48
+        xPosition = x(idx)+0.08*i;
+        yPosition = y(idx);
         addpoints(h.("h"+num2str(i)),xPosition,yPosition)
-        text1(i) = text(xPosition,yPosition,string(i), ...
-            "Rotation",textRotation(index), ...
-            "FontSize",30, ...
-            "Color",colors(i,:));
+        texts(i) = text(xPosition,yPosition,string(i), ...
+            "Rotation",textRotation(idx), ...
+            "FontSize",30,"Color",colors(i,:), ...
+            "EdgeColor","k","LineWidth",1.5,...
+            "FontName","Times New Roman", ...
+            "BackgroundColor","none", ...
+            "Margin",0.1,"HorizontalAlignment","center");
     end
 end
 end

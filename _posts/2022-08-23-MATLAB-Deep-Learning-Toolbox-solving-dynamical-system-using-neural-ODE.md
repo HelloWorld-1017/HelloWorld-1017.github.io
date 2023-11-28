@@ -10,7 +10,8 @@ categories:
 tags:
  - MATLAB Deep Learning Toolbox
 classes: wide
-last_modified_at: 2023-11-14 14:11:23 +0800
+modified_at1: 2023-11-14 14:11:23 +0800
+last_modified_at: 2023-11-28 21:13:57 +0800
 ---
 
 # 动态系统
@@ -21,8 +22,7 @@ last_modified_at: 2023-11-14 14:11:23 +0800
 
 在给定的时间，状态空间中都有一个状态(state)，该状态表征状态空间中的一个点。这个状态经常由实数元组(tuple of real numbers)或几何流形中的向量(vector in a geometrical manifold)给出。动态系统的演化规则是一个描述从当前状态到未来状态的方程。这个方程通常是**确定性的(deterministic)**，也就是说，对于给定的时间间隔，当前状态只对应一种未来状态。然而，有一些系统是随机的(stochastic)，随机时间会影响状态变量的演化。
 
-**确定系统的不确定性行为**
-尽管是确定性系统，在实践中，由当前状态根据演化规则推出的未来状态仍然有可能是不确定性的，因为极小的误差也会导致结果的巨大差异性。类似于解在朱利亚集上。
+**确定系统的不确定性行为**：尽管是确定性系统，在实践中，由当前状态根据演化规则推出的未来状态仍然有可能是不确定性的，因为极小的误差也会导致结果的巨大差异性。类似于解在朱利亚集上。
 {: .notice--primary}
 
 在物理学中，动态系统被描述为状态随时间变化的粒子(particle)或粒子系综(ensemble of particles)，其状态变量服从包含时间导数的微分方程。可以通过求出微分方程的解析解，或者随时间变化的数值解来预测系统未来的行为。
@@ -631,7 +631,7 @@ plotTrueAndPredictedSolutions(xTrue8, xPred8);
 
 虽然有一些瑕疵，但是它仍然为我们求解状态方程提供了新的思路，它有它自己的优势，这个训练好的 Neural ODE 模型可以替代 `ode45` 求解器对微分方程进行求解，它不需要准确的状态方程，只需要输入状态变量的初始值就可以得到一条相轨迹。
 
-另外还有一点，上述状态方程只是很简单很简单的一个双变量线性状态方程，除此之外，还存在许多很复杂的状态方程。很多状态方程的解对于不同初始点的选取非常敏感，比如 [混沌电路：蔡氏电路](http://whatastarrynight.com/uncertainty/signals%20and%20systems/chua's-circuit/) 和 [二阶非线性电路的状态方程和相图](http://whatastarrynight.com/uncertainty/signals%20and%20systems/state-function-and-phase-trajectory-linear-RLC/) ，Neural ODE 能否解决这样的问题？我觉得有极大的困难。使用数据驱动模型也需要对所解决的问题本身有深刻的理解，才能最大程度避免这样的风险。
+另外还有一点，上述状态方程只是很简单很简单的一个双变量线性状态方程，除此之外，还存在许多很复杂的状态方程。很多状态方程的解对于不同初始点的选取非常敏感，比如蔡氏电路[^4]和二阶非线性电路的状态方程和相图[^5]，Neural ODE 能否解决这样的问题？我觉得有极大的困难。使用数据驱动模型也需要对所解决的问题本身有深刻的理解，才能最大程度避免这样的风险。
 {: .notice--danger}
 
 <br>
@@ -656,7 +656,8 @@ plotTrueAndPredictedSolutions(xTrue8, xPred8);
 
 [3] [Dynamical System Modeling Using Neural ODE - MATLAB & Simulink - MathWorks China](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ug/dynamical-system-modeling-using-neural-ode.html).
 
-
+[^4]: [Chaotic Circuit: Chua’s Circuit - What a starry night~](https://helloworld-1017.github.io/2022-08-19/15-07-21.html).
+[^5]: [State Function and Phase Portrait of Second-order Linear RLC Circuits - What a starry night~](https://helloworld-1017.github.io/2022-08-19/09-17-37.html).
 
 
 

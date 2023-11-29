@@ -1,3 +1,0 @@
-C:/Users/Tsing/Desktop/QinghuaMa.github.io/_drafts/2023-04-22 Prime Obsession/Calculate pi(N)/PiN/cmake-build-debug/CMakeFiles/PiN.dir
-C:/Users/Tsing/Desktop/QinghuaMa.github.io/_drafts/2023-04-22 Prime Obsession/Calculate pi(N)/PiN/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Tsing/Desktop/QinghuaMa.github.io/_drafts/2023-04-22 Prime Obsession/Calculate pi(N)/PiN/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -4,4 +4,4 @@ This repository is supporting my personal blog website: [What a starry night~](h
 
 To my mind, writing things down is to forget it and carry on. If lucky, I hope these dots could be connected one day when I looking backward.
 
-The `.md` file of posted blogs could be found in [_posts](https://github.com/Ma1017/Ma1017.github.io/tree/main/_posts) folder and attachments of which are in another repository [HelloWorld-1017/HelloWorld-1017.github.io-post-assets](https://github.com/HelloWorld-1017/HelloWorld-1017.github.io-post-assets). You are welcome to email me at starrynight1921@163.com if have any question.
+The `.md` source files of posted blogs could be found in [_posts](https://github.com/Ma1017/Ma1017.github.io/tree/main/_posts) folder, and the attachments of posted blogs and unposted drafts are stored in another public repository [HelloWorld-1017/HelloWorld-1017.github.io-post-and-draft-attachments](https://github.com/HelloWorld-1017/HelloWorld-1017.github.io-post-and-draft-attachments). You are welcome to email me at [maqinghua1017@gmail.com](maqinghua1017@gmail.com) if have any question.

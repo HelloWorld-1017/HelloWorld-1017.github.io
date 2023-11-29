@@ -1,8 +1,0 @@
-# ninja log v5
-8	71	6858946460145822	CMakeFiles/usage.dir/norm.c.obj	9be7cf9dfa99d77f
-1	72	6858946460155830	CMakeFiles/usage.dir/main.c.obj	99a8a79f4c36c5bb
-5	73	6858946460165822	CMakeFiles/usage.dir/euclidean.c.obj	f8e5c7d5dcecd30c
-1	55	6858946790283171	CMakeFiles/usage.dir/main.c.obj	99a8a79f4c36c5bb
-56	138	6858946791093738	usage.exe	d3a9c13ce2eb0afe
-2	55	6858947284337969	CMakeFiles/usage.dir/main.c.obj	99a8a79f4c36c5bb
-56	135	6858947285109319	usage.exe	d3a9c13ce2eb0afe

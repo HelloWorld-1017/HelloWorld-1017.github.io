@@ -7,6 +7,7 @@ categories:
 tags: 
  - Matrix
 toc: false
+last_modified_at: 2023-12-02 20:57:13 +0800
 ---
 
 变换(transformation)实际上可以看作是一种函数(function)，它接收一个向量，对其进行运算后输出一个向量。
@@ -102,4 +103,4 @@ $$
 
 **References**
 
-[1]  [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9).
+[1] [Linear transformations and matrices - Chapter 3, Essence of linear algebra - YouTube](https://www.youtube.com/watch?v=kYB8IZa5AuE&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=5).

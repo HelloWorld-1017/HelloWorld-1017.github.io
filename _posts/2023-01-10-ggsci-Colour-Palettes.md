@@ -1,13 +1,15 @@
 ---
 layout: single
 title:  ggsci Colour Palettes 
-date: 2023-01-10 21:18:17 +0800
+date: 2023-01-10 20:17:19 +0800
 categories: 
  - Graphic Design and Typography
  - R
  - MATLAB
 tags:
  - MATLAB Graphics
+modified_at1: 2023-12-07 20:02:37 +0800
+last_modified_at: 2023-12-07 20:02:37 +0800
 ---
 
 # Introduction

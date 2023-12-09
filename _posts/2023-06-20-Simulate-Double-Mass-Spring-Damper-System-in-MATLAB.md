@@ -7,13 +7,15 @@ categories:
  - Signals and Systems
 tags:
  - MATLAB Simulink
+modified_at1: 2023-12-09 01:32:35 +0800
+last_modified_at: 2023-12-09 01:32:35 +0800
 ---
 
 # Introduction to Double Mass-Spring-Damper System
 
 ## Basic concepts
 
-两个质量-弹簧-阻尼系统 [1] 连接在一起就可以得到一个二自由度的质量-弹簧-阻尼系统：
+两个质量-弹簧-阻尼系统 [^1] 连接在一起就可以得到一个二自由度的质量-弹簧-阻尼系统：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230620083127863.png?raw=true" alt="image-20230620083127863" style="zoom:50%;" />
 
@@ -35,7 +37,7 @@ $$
 \end{split}\label{eq1}
 $$
 
-若系统的初始条件为两个弹簧的形变量为$x_0=1\ \mathrm{m}$，则根据系统方程$\eqref{eq1}$，就可以搭建出相对应的Simulink仿真模型 [1]：
+若系统的初始条件为两个弹簧的形变量为$x_0=1\ \mathrm{m}$，则根据系统方程$\eqref{eq1}$，就可以搭建出相对应的Simulink仿真模型 [^1]：
 
 ![image-20230619153329559](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230619153329559.png?raw=true)
 
@@ -43,7 +45,7 @@ $$
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230619160411359.png?raw=true" alt="image-20230619160411359" style="zoom:67%;" />
 
-> 注：上面的模型取自MATLAB官方示例 [2] 的一部分：
+> 注：上面的模型取自MATLAB官方示例 [^2] 的一部分：
 >
 > ![image-20230620194555104](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620194555104.png?raw=true)
 >
@@ -202,8 +204,7 @@ z_4\\
 \begin{bmatrix}
 F_1\\
 F_2\\
-\end{bmatrix}\\
-&=A\cdot z+B\cdot u
+\end{bmatrix}=A\cdot z+B\cdot u
 \end{split}
 $$
 
@@ -256,7 +257,7 @@ $$
 
 矩阵$C$和矩阵$D$的取值与$\eqref{eq3}$是一致的。
 
-在计算得到以上的参数后，我们就可以使用Simulink中的线性状态空间模块`State-Space`[5, 6] 进行建模：
+在计算得到以上的参数后，我们就可以使用Simulink中的线性状态空间模块`State-Space`[^4] [^5] 进行建模：
 
 ![image-20230620192920475](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230620192920475.png?raw=true)
 
@@ -272,14 +273,10 @@ $$
 
 **References**
 
-[1] [Mass-Spring-Damper Simulation in MATLAB - What a starry night~](https://ma1017.github.io/matlab/Mass-Spring-Damper-Simulation-in-MATLAB/).
+[^1]: [Mass-Spring-Damper Simulation in MATLAB - What a starry night~](https://helloworld-1017.github.io/2023-06-19/14-51-29.html).
+[^2]: [Double Mass-Spring-Damper in Simulink and Simscape - MathWorks](https://ww2.mathworks.cn/help/simscape/ug/double-mass-spring-damper-in-simulink-and-simscape.html).
+[^4]: [Implement linear state-space system - MathWorks](https://ww2.mathworks.cn/help/simulink/slref/statespace.html).
+[^5]: [Double Spring Mass System - MathWorks](https://ww2.mathworks.cn/help/simulink/slref/double-spring-mass-system.html).
 
-[2] [Double Mass-Spring-Damper in Simulink and Simscape - MathWorks](https://ww2.mathworks.cn/help/simscape/ug/double-mass-spring-damper-in-simulink-and-simscape.html).
-
-[3] [Spring-Mass-Damper System, 2DOF - YouTube](https://www.youtube.com/watch?v=s5zO2fuiW7c).
-
-[4] [二自由度质量-弹簧-阻尼串联系统的Simulink仿真 - 知乎](https://zhuanlan.zhihu.com/p/104566650).
-
-[5] [Implement linear state-space system - MathWorks](https://ww2.mathworks.cn/help/simulink/slref/statespace.html).
-
-[6] [Double Spring Mass System - MathWorks](https://ww2.mathworks.cn/help/simulink/slref/double-spring-mass-system.html).
+-  [Spring-Mass-Damper System, 2DOF - YouTube](https://www.youtube.com/watch?v=s5zO2fuiW7c).
+-  [二自由度质量-弹簧-阻尼串联系统的Simulink仿真 - 知乎](https://zhuanlan.zhihu.com/p/104566650).

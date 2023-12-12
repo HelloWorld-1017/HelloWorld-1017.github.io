@@ -8,7 +8,8 @@ categories:
 tags:
  - MATLAB Simulink
 modified_at1: 2023-12-09 01:32:35 +0800
-last_modified_at: 2023-12-09 01:32:35 +0800
+modified_at2: 2023-12-09 21:24:33 +0800
+last_modified_at: 2023-12-09 21:24:33 +0800
 ---
 
 # Introduction to Double Mass-Spring-Damper System
@@ -213,7 +214,7 @@ $$
 假设我们只对质量块的位置感兴趣，则有：
 
 $$
-y=Cz+Du
+y=C(A\cdot z+B\cdot u)+Du
 $$
 
 其中，$y$为**输出向量**，$C$为**输出矩阵**：

@@ -1,11 +1,13 @@
 ---
 layout: single
-title: The Terminology of Graph Theory
+title: Some Terminologies of Graph Theory
 date: 2023-10-20 22:08:34 +0800
 categories:
  - Mathematics
-tag: 
+ - Collections
+tag:
  - Graph Theory
+last_modified_at: 2021-01-15 12:37:43 +0800
 ---
 
 Recently, I've been learning multivariate normality test. During this process, I found Friedman-Rafsky test, which is proposed by J. H. Friedman and L. C. Rafsky in 1979 [[1]](#ref). Friedman and Rafsky generalised Wald-Wolfowitz test and Smirnov two-sample test to multivariate case, by replacing the notion of univariate sorted list by **Minimal Spanning Tree** in graph theory. I think this generalisation is really artful and inspiring. I ever know the graph theory is an important branch of mathematics, but I rarely use it. The Friedman and Rafsky's paper gave a brief introduction about some terminology of graph theory, so I recorded down here, and more basic knowledge will be added if I meet it in the future.

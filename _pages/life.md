@@ -3,7 +3,7 @@ title: What a starry life ~
 layout: collection
 permalink: /life/
 collection: life
-classes: wide
+entries_layout: grid
 sort_by: date
 sort_order: reverse
 ---

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Test Working with Collections in Jekyll-based Websi
+title: Test Working with Collections in Jekyll-based Website
 date: 2022-08-21 13:25:23 +0800
 categories: 
  - Jekyll

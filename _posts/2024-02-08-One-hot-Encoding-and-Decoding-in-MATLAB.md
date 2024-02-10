@@ -1,6 +1,6 @@
 ---
- layout: single
-title: "One-hot Encoding and Decoding in MATLAB"
+layout: single
+title: "One-Hot Encoding and Decoding in MATLAB"
 date: 2024-02-08 16:34:49 +0800
 categories:
  - MATLAB

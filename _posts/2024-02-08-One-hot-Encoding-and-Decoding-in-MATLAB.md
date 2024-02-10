@@ -6,10 +6,11 @@ categories:
  - MATLAB
  - Machine Learning
 tags:
- - MATLAB Simulink
  - MATLAB Deep Learning Toolbox
  - Image Semantic Segmentation
-last_modified_at: 2024-02-08 16:34:49 +0800
+last_modified_at0: 2024-02-08 16:34:49 +0800
+last_modified_at1: 2024-02-10 19:19:29 +0800
+last_modified_at: 2024-02-10 19:19:29 +0800
 ---
 
 # Introduction

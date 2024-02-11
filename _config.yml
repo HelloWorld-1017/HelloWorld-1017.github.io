@@ -70,6 +70,18 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
+
+# jemoji (https://github.com/jekyll/jemoji)
+# https://stackoverflow.com/a/27421126/22763127
+# Step 1: `gem install jemoji` (N.B., using administrator identity)
+# Step 2: add `- jemoji` to `plugins` in `_config.yml` file
+# Step 3: add `gem "jemoji"` to `Gemfile` file, and delete `Gemfile.lock` file
+# Step 4: `bundle install`
+# Step 5: `bundle exec jekyll serve`
+
+
+
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -164,6 +176,10 @@ defaults:
       author_profile: true
       show_date: true
       date_format: "%Y-%m-%d HH:MM:SS"
+      toc: true
+      toc_label: "Table of Contents"
+      toc_icon: "heart"
+      toc_sticky: true
       classes: wide
 
   # # _foo

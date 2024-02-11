@@ -6,6 +6,7 @@ gem "minimal-mistakes-jekyll"
 gem "faraday-retry"
 gem "wdm", '>=0.1.0'
 gem "kramdown-parser-gfm"
+gem "jemoji"
 
 gem 'jekyll-paginate'
 gem 'tzinfo-data'

@@ -6,7 +6,11 @@ categories:
  - Mathematics
 tags:
  - Probability Theory and Mathematical Statistics
-last_modified_at: 2023-11-11 21:45:51 +0800
+ - Hypothesis Test
+last_modified_at0: 2022-09-21 19:15:11 +0800
+last_modified_at1: 2023-11-11 21:45:51 +0800
+last_modified_at2: 2024-02-10 23:10:52 +0800
+last_modified_at: 2024-02-10 23:10:52 +0800
 ---
 
 # Definition

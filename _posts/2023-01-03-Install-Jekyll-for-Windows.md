@@ -1,13 +1,16 @@
 ---
 layout: single
 title:  Install Jekyll for Windows
-date: 2023-01-03 09:55:32 +0800
 categories: 
  - Jekyll
 toc: false
+date: 2023-01-03 09:55:32 +0800
+last_modified_at0: 2023-01-03 09:55:32 +0800
+last_modified_at1: 2024-02-12 12:02:05 +0800
+last_modified_at: 2024-02-12 12:02:05 +0800
 ---
 
-前两天我给现在使用的这台笔记本电脑换了一块固态硬盘，重装了系统，电脑上的Jekyll也没有了，没有办法在本地预览Github pages上的内容，因此需要重装一下Jekyll，本博客就简单记录一下安装的过程。主要的流程参考了博客 [1]。
+前两天我给现在使用的这台笔记本电脑换了一块固态硬盘，重装了系统，电脑上的Jekyll也没有了，没有办法在本地预览Github pages上的内容，因此需要重装一下Jekyll，本博客就简单记录一下安装的过程。主要的流程参考了博客 [^1]。
 
 **Step 1：安装Ruby环境**
 
@@ -19,7 +22,7 @@ toc: false
 
 下载地址：[https://rubygems.org/pages/download](https://rubygems.org/pages/download)
 
-下载`.zip`版本的压缩包，下载完成后解压缩到电脑的任任意一个位置中。
+下载`.zip`版本的压缩包，下载完成后解压缩到电脑的任意一个位置中。
 
 注：我是将该文件夹放在了C盘的某一个位置，这导致在后面步骤中，需要以管理员的身份打开Git Bash再运行命令。
 {: .notice--warning}
@@ -36,11 +39,13 @@ gem install jekyll
 gem install bundler
 ```
 
+bundler程序是一个用于自动安装其他程序的程序。
+
 **Step 5：本地启动服务**
 
 原本我想要直接使用`bundle exec jekyll serve`启动服务，但是出现了以下提示：
 
-```bash
+```
 C:\Users\Tsing\Desktop\QinghuaMa.github.io>bundle exec jekyll serve
 
 https://github.com/jekyll/jekyll-commonmark.git (at refs/pull/44/head@53092e1) is not yet checked out. Run `bundle install` first.
@@ -49,7 +54,7 @@ https://github.com/jekyll/jekyll-commonmark.git (at refs/pull/44/head@53092e1) i
 根据提示，先使用`bundle install`命令，但是又出现了新的错误：
 
 
-```bash
+```
 C:\Users\Tsing\Desktop\QinghuaMa.github.io> bundle install
 
 Fetching gem metadata from https://rubygems.org/.........
@@ -63,7 +68,7 @@ If this error persists you could try removing the cache directory 'C:/Ruby31-x64
 
 最后一句话提示我们删除一个在ruby下的cache目录，应该是之前的缓存文件导致的冲突。但我并没有删除它所提示的这个文件，而是直接删除了网站根目录下的`.sass-cache`文件夹，删除后再在终端中运行`bundle exec jekyll serve`即可启动后台服务器：
 
-```matlab
+```
 C:\Users\Tsing\Desktop\QinghuaMa.github.io>bundle exec jekyll serve
 
 Configuration file: C:/Users/Tsing/Desktop/QinghuaMa.github.io/_config.yml
@@ -84,13 +89,4 @@ Configuration file: C:/Users/Tsing/Desktop/QinghuaMa.github.io/_config.yml
 
 **Reference**
 
-[1] [Windows 系统上安装 Jekyll（简单详细教程） - pergrand - 博客园 (cnblogs.com)](https://www.cnblogs.com/pergrand/p/12875597.html)
-
-
-
-
-
-
-
-
-
+[^1]: [Windows 系统上安装 Jekyll（简单详细教程） - pergrand - 博客园](https://www.cnblogs.com/pergrand/p/12875597.html).

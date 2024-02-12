@@ -164,6 +164,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  bundler (>= 2.4.2)
   faraday-retry
   jekyll (~> 3.7)
   jekyll-algolia

@@ -7,6 +7,7 @@ gem "faraday-retry"
 gem "wdm", '>=0.1.0'
 gem "kramdown-parser-gfm"
 gem "jemoji"
+gem "bundler", ">=2.4.2"
 
 gem 'jekyll-paginate'
 gem 'tzinfo-data'

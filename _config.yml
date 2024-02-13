@@ -80,9 +80,6 @@ plugins:
 # Step 4: `bundle install`
 # Step 5: `bundle exec jekyll serve`
 
-
-
-
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -219,7 +216,7 @@ tag_archive:
 collections:
   life:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:year-:month-:day/:hour-:minute-:second:output_ext
 # collections ------------------------------------------------------
 
 # Conversion

@@ -16,7 +16,6 @@ layout: archive
   {% endfor %}
 </ul>
 
-
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.life | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear reversed %} <!-- https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
@@ -24,7 +23,7 @@ layout: archive
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items reversed %} <!-- https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
-        {% include archive-single.html type=entries_layout %}
+        {% include archive-single_life.html type=entries_layout %}
       {% endfor %}
     </div>
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>

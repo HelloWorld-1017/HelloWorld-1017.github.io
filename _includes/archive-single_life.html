@@ -31,8 +31,7 @@
     {% endif %}
 
     <div style="width:100%;height:50px;"> 
-      <div style="float:left"> {{ date | date: date_format }}. </div>
-      <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+      {{ date | date: date_format }}. <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
     </div>
  </article>
 </div>

@@ -26,3 +26,5 @@ slprj
 *.log
 *.gz
 *.out
+
+Gemfile.lock

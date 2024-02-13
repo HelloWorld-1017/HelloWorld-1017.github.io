@@ -1,14 +1,17 @@
 ---
 layout: single
-title: Test Working with Collections in Jekyll-based Website
-date: 2022-08-21 13:25:23 +0800
+title: Working with Collections in Jekyll-based Website
 categories: 
  - Jekyll
 toc: false
 classes: wide
+date: 2022-08-21 13:25:23 +0800
+last_modified_at0: 2022-08-21 13:25:23 +0800
+last_modified_at1: 2024-02-13 13:22:14 +0800
+last_modified_at: 2024-02-13 13:22:14 +0800
 ---
 
-（1）在 `_config.yml` 中配置 portfolio collection
+（1）在 `_config.yml`文件 中配置名为portfolio的collection
 
 ```yaml
 collections:
@@ -17,7 +20,7 @@ collections:
     permalink: /:collection/:path/
 ```
 
-并设置 posts 和 pages 的默认 Front Matter
+并设置  pages 和 posts 默认的 Front Matter：
 
 ```yaml
 defaults:
@@ -35,15 +38,19 @@ defaults:
 ```markdown
 ---
 title: Portfolio
-layout: collection
 permalink: /portfolio/
+layout: collection
 collection: portfolio
 entries_layout: grid
 classes: wide
+sort_by: date
+sort_order: reverse
 ---
 ```
 
-这个文件设置了呈现所有 portfolio 中所有文件的页面。
+该文件设置了portfolio的显示页面格式。
+
+其中，页面的布局为`collection`，是由`/_layouts/collection.html`定义的。
 
 （3）在 `/_data/navigation.yml` 文件中添加如下代码
 
@@ -80,8 +87,6 @@ title: Portfolio3
 ---
 ```
 
-<br>
-
 最后，在本地 `bundle exec jekyll serve` ，查看效果：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220821125002104.png?raw=true" alt="image-20220821125002104"  />
@@ -92,8 +97,8 @@ title: Portfolio3
 
 **References**
 
-[1] [Working with Collections - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/docs/collections/)
+[1] [Working with Collections - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/docs/collections/).
 
-[2] [Portfolio - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/portfolio/)
+[2] [Portfolio - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/portfolio/).
 
-[3] [mmistakes/jekyll-sample-content: Sample Jekyll content (posts, pages, collections, and images) to test your theme against. (github.com)](https://github.com/mmistakes/jekyll-sample-content)
+[3] [mmistakes/jekyll-sample-content: Sample Jekyll content (posts, pages, collections, and images) to test your theme against](https://github.com/mmistakes/jekyll-sample-content).

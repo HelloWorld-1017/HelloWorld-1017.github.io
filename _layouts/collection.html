@@ -6,7 +6,7 @@ layout: archive
 
 <ul class="taxonomy__index">
   {% assign postsInYear = site.life | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear reversed %} <!-- https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
+  {% for year in postsInYear reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
     <li>
       <a href="#{{ year.name }}">
         <strong>{{ year.name }}</strong> 
@@ -18,11 +18,11 @@ layout: archive
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.life | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear reversed %} <!-- https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
+{% for year in postsByYear reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
   <section id="{{ year.name }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
-      {% for post in year.items reversed %} <!-- https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
+      {% for post in year.items reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
         {% include archive-single_life.html type=entries_layout %}
       {% endfor %}
     </div>

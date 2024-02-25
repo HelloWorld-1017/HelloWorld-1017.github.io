@@ -1,14 +1,17 @@
 ---
 layout: single
-title: Recording How to Make Annotations in LaTeX
-date: 2023-08-31 08:52:55 +0800
+title: Make Annotations in LaTeX
 categories:
  - LaTeX
+date: 2023-08-31 08:52:55 +0800
+last_modified_at0: 2023-08-31 08:52:55 +0800
+last_modified_at1: 2024-02-25 15:26:26 +0800
+last_modified_at: 2024-02-25 15:26:26 +0800
 ---
 
 # Highlight
 
-Highlight in LaTeX could be realised by  `soul` macro package [1]. But note that don’t forget to import `color` package, otherwise the color cannot display normally. In addition, we could use `\sethlcolor` defined in `soul` package to change highlight color, but this setting will influence the whole following context unless we reset color setting using `\sethlcolor` again. For example: 
+Highlight in LaTeX could be realised by  `soul` macro package [^1]. But note that don’t forget to import `color` package, otherwise the color cannot display normally. In addition, we could use `\sethlcolor` defined in `soul` package to change highlight color, but this setting will influence the whole following context unless we reset color setting using `\sethlcolor` again. For example: 
 
 ```latex
 \documentclass{article}
@@ -32,7 +35,7 @@ We test \hl{highlight} here.
 
 # Recording Modification and Making Remarks
 
-If we want to record what have changed in the content, the `changes` macro package is a good choice [1], and at which point we could make some necessary comments for it. Like: 
+If we want to record what have changed in the content, the `changes` macro package is a good choice [^1], and at which point we could make some necessary comments for it. Like: 
 
 ```latex
 \documentclass{article}
@@ -55,10 +58,10 @@ This is a \replaced{replacement}{replace}.
 
 ![image-20230830221530665](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230830221530665.png?raw=true)
 
-N.B.: In origin blog [1], the remark is added by keyword `remark`, like `This is \added[id=Ma,remark={This is added by Ma.}]{added} text.` However, an error occurs, “Package xkeyval Error: ‘remark’ undefined in families ‘Changes@added’. ...id=Ma,remark={This is added by Ma.}]{added}” as actually there exists no `remark` defined in `changes` package (at least in my `changes` edition installed) [2]. The keyword `comment` should be used instead.
+Note: In origin blog [^1], the remark is added by keyword `remark`, like `This is \added[id=Ma,remark={This is added by Ma.}]{added} text.` However, an error occurs, “Package xkeyval Error: ‘remark’ undefined in families ‘Changes@added’. ...id=Ma,remark={This is added by Ma.}]{added}” as actually there exists no `remark` defined in `changes` package (at least in my `changes` edition installed) [^2]. The keyword `comment` should be used instead.
 {: .notice--warning}
 
-Apart from using functions provided by `changes` package, Nebil [3] provided an interesting way to make inline annotations within the context, by a user-defining approach using `\newcommand` keyword:
+Apart from using functions provided by `changes` package, Nebil [^3] provided an interesting way to make inline annotations within the context, by a user-defining approach using `\newcommand` keyword:
 
 ```latex
 % This example is from github repository by Nebil: https://gist.github.com/nebil/4e114e433c193297c0f3802bc9c33ef4
@@ -93,8 +96,6 @@ The generated PDF is showed as follow:
 
 **References**
 
-[1] [https://www.neusncp.com/user/blog?id=305#](https://www.neusncp.com/user/blog?id=305#).
-
-[2] [xkeyval error when using the changes package - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/618627/xkeyval-error-when-using-the-changes-package).
-
-[3] [ remark -- a simple command to add inline notes in LaTeX · GitHub](https://gist.github.com/nebil/4e114e433c193297c0f3802bc9c33ef4).
+[^1]: [https://www.neusncp.com/user/blog?id=305#](https://www.neusncp.com/user/blog?id=305#).
+[^2]: [xkeyval error when using the changes package - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/618627/xkeyval-error-when-using-the-changes-package).
+[^3]: [ remark -- a simple command to add inline notes in LaTeX · GitHub](https://gist.github.com/nebil/4e114e433c193297c0f3802bc9c33ef4).

@@ -1,7 +1,6 @@
 ---
 layout: single
-title: Build a Solenoid Parameterized with FEM Data Using MATLAB Simulink
-date: 2022-08-28 14:49:01 +0800
+title: Build a Solenoid Parameterized with FEM Data using MATLAB Simulink
 categories:
  - MATLAB
  - Signals and Systems
@@ -10,24 +9,26 @@ categories:
 tags:
  - Numerical Analysis
  - MATLAB Simulink
+date: 2022-08-28 14:49:01 +0800
+last_modified_at0: 2022-08-28 14:49:01 +0800
+last_modified_at1: 2024-03-07 04:07:57 +0800
+last_modified_at: 2024-03-07 04:07:57 +0800
 ---
 
 # 模型介绍
 
 ## 简介
 
-[Solenoid Parameterized with FEM Data - MATLAB & Simulink - MathWorks 中国](https://ww2.mathworks.cn/help/physmod/sps/ug/solenoid-parameterized-with-fem-data.html)
+MATLAB示例[^1]展示了一个连接了复位弹簧（return spring）的有限行程电磁铁（limited travel solenoid）。当线圈回路不通电时，弹簧将铁芯保持在0.1 mm处；在0.01 s时，线圈通电，铁芯会运动到0 mm处；在0.06 s时，向动铁芯施加一个比保持力更大的力（50N），在这个力的作用下，动铁芯会向反向运动，直到0.2 mm处。
 
-该示例展示了一个连接了复位弹簧(return spring)的有限行程电磁铁(limited travel solenoid)。当线圈回路不通电时，弹簧将铁芯保持在0.1mm处；在0.01s时，线圈通电，铁芯会运动到0mm处；在0.06s时，向动铁芯施加一个比保持力更大的力(50N)，在这个力的作用下，动铁芯会向反向运动，直到0.2mm处。
+电磁力（solenoid force）和反电动势特征（back emf characteristics）通过模型中的 `FEM-Parameterized Linear Actuator`组件进行定义。该模块可以调用由有限元磁场建模工具输出的格式化数据。
 
-电磁力(solenoid force)和反电动势特征(back emf characteristics)通过模型中的 `FEM-Parameterized Linear Actuator`组件进行定义。该模块可以调用由有限元磁场建模工具输出的格式化数据。
-
-这个模型和[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)最主要的差别是本模型可以很好地捕捉磁饱和效应(magnetic saturation effects)，相反，后者假设电流和电磁力是线性关系。这个线性假设也是[Simscape Electrical™ Solenoid](https://ww2.mathworks.cn/help/physmod/sps/ref/solenoid.html)构建的基础。
+这个模型和[^2]最主要的差别是本模型可以很好地捕捉磁饱和效应（magnetic saturation effects），相反，后者假设电流和电磁力是线性关系。这个线性假设也是 MATLAB Simscape模块[^3]构建的基础。
 
 原文： Conversely the Simscape example assumes a linear relationship between current and magnetic force. 这里表述不准确，电磁力$F$和电流$i$之间的关系是：$F=\dfrac12i^2\Big(\mathrm{d}L(x)/\mathrm{d}x\Big)$。
 {: .notice--danger}
 
-在这个示例中，子系统`Linear Solenoid`是基于0.1A时的电磁铁电感数据进行参数化的。这个电感是磁链关于电流的偏导数，同样是通过初始文件进行计算的。
+在这个示例中，子系统`Linear Solenoid`是基于0.1 A时的电磁铁电感数据进行参数化的。这个电感是磁链关于电流的偏导数，同样是通过初始文件进行计算的。
 
 将该模型的结果与电磁铁线性模型作比较，可以看出磁饱和效应。
 
@@ -53,7 +54,7 @@ tags:
 
 （1）变量 `current`
 
-```matlab
+```
 current =
 
          0    0.1000    0.2000    0.3000    0.4000    0.5000    0.6000    0.7000    0.8000    0.9000    1.0000
@@ -61,21 +62,21 @@ current =
 
 （2）变量 `x`，`xmin`，`xmax`，`x0`
 
-```matlab
+```
 x =
    1.0e-03 *
          0    0.0500    0.1000    0.1500    0.2000
 ```
-```matlab
+```
 xmin =
      0
 ```
 
-```matlab
+```
 xmax =
    2.0000e-04
 ```
-```matlab
+```
 x0 =
    1.0000e-04
 ```
@@ -92,27 +93,79 @@ x0 =
 
 （3）变量 `flux_linkage`
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826201555904.png?raw=true" alt="image-20220826201555904" style="zoom:50%;" />
+```
+flux_linkage =
+         0         0         0         0         0
+    0.0085    0.0079    0.0075    0.0071    0.0067
+    0.0171    0.0160    0.0151    0.0143    0.0137
+    0.0254    0.0239    0.0226    0.0215    0.0206
+    0.0330    0.0312    0.0297    0.0283    0.0271
+    0.0396    0.0377    0.0360    0.0345    0.0331
+    0.0452    0.0433    0.0415    0.0399    0.0384
+    0.0495    0.0478    0.0461    0.0446    0.0431
+    0.0526    0.0512    0.0498    0.0485    0.0472
+    0.0545    0.0537    0.0528    0.0519    0.0508
+    0.0554    0.0553    0.0551    0.0548    0.0542
+```
 
 后面可以看到，FEM-Parameterized Linear Actuator组件有两种使用磁链的方式，当选择直接使用磁链数据时，需要用到该变量。
 
 （4）变量 `dfluxdi`，`dfluxdx`
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826200111158.png?raw=true" alt="image-20220826200111158" style="zoom:50%;" />
+```
+dfluxdi =
+    0.0918    0.0858    0.0799    0.0739    0.0680
+    0.0877    0.0828    0.0780    0.0732    0.0683
+    0.0825    0.0787    0.0750    0.0713    0.0675
+    0.0762    0.0735    0.0709    0.0683    0.0656
+    0.0687    0.0672    0.0657    0.0642    0.0626
+    0.0602    0.0598    0.0594    0.0589    0.0585
+    0.0506    0.0512    0.0519    0.0526    0.0533
+    0.0398    0.0416    0.0434    0.0452    0.0470
+    0.0279    0.0308    0.0337    0.0366    0.0395
+    0.0150    0.0190    0.0230    0.0270    0.0310
+    0.0009    0.0060    0.0111    0.0162    0.0213
+```
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826200450424.png?raw=true" alt="image-20220826200450424" style="zoom:50%;" />
+```
+dfluxdx =
+         0         0         0         0         0
+  -11.2641  -11.2641  -11.2641  -11.2641  -11.2641
+  -19.8442  -19.8442  -19.8442  -19.8442  -19.8442
+  -26.2136  -26.2136  -26.2136  -26.2136  -26.2136
+  -30.3724  -30.3724  -30.3724  -30.3724  -30.3724
+  -32.3204  -32.3204  -32.3204  -32.3204  -32.3204
+  -32.0576  -32.0576  -32.0576  -32.0576  -32.0576
+  -29.5842  -29.5842  -29.5842  -29.5842  -29.5842
+  -24.9001  -24.9001  -24.9001  -24.9001  -24.9001
+  -18.0052  -18.0052  -18.0052  -18.0052  -18.0052
+   -8.8996   -8.8996   -8.8996   -8.8996   -8.8996
+```
 
 同样地，FEM-Parameterized Linear Actuator组件有两种使用磁链的方式，当选择使用磁链对于电流和位移的偏导数时，需要用到这两个变量。
 
 （5）变量`force`
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220826200620400.png?raw=true" alt="image-20220826200620400" style="zoom:50%;" />
+```
+force =
+         0         0         0         0         0
+   -0.6000   -0.5000   -0.4000   -0.3000   -0.3000
+   -2.3000   -2.0000   -1.7000   -1.4000   -1.2000
+   -4.9000   -4.3000   -3.7000   -3.2000   -2.7000
+   -8.3000   -7.3000   -6.4000   -5.5000   -4.7000
+  -12.2000  -10.7000   -9.4000   -8.2000   -7.2000
+  -16.2000  -14.4000  -12.7000  -11.3000  -10.0000
+  -20.0000  -17.9000  -15.9000  -14.3000  -12.9000
+  -23.3000  -20.9000  -18.8000  -17.1000  -15.7000
+  -25.7000  -23.1000  -21.1000  -19.4000  -18.2000
+  -26.5000  -24.1000  -22.2000  -20.9000  -20.1000
+```
 
 FEM-Parameterized Linear Actuator组件电磁力的计算方式也有两种，一种是直接使用导入数据，一种是模块自动计算。该模型使用的是第一种，需要用到变量`force`。在后面会再提及这一点，并且在代码文件中会对两种方式得到的Force matirx结果进行对比分析。
 
 （6）变量 `R`
 
-```matlab
+```
 R =
     14
 ```
@@ -120,12 +173,12 @@ R =
 变量`R`作为线圈电阻输入到两个模型之中。
 
 （7）变量 `lambda`，`mass`
-```matlab
+```
 mass =
     0.1000
 ```
 
-```matlab
+```
 lambda =
     20
 ```
@@ -134,14 +187,14 @@ lambda =
 
 （8）变量 `L` 和 `dLdx`
 
-```matlab
+```
 L =
     0.0877    0.0828    0.0780    0.0732    0.0683
 ```
 
 变量`L`用于输入到`ee_solenoid_fem/Linear Solenoid/Calculate Force and Current`中的`LUT PtoL`模块，与变量`x`对应，表示L(x)。
 
-```matlab
+```
 dLdx =
   -96.8551  -96.8551  -96.8551  -96.8551  -96.8551
 ```
@@ -163,9 +216,9 @@ dLdx =
     <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220827111019193.png?raw=true">
     <figcaption>The (a) Settings and (b) Description of FEM-parameterized Linear Actuator component.</figcaption>
 </figure>
-该组件的官方介绍文档见：[FEM-Parameterized Linear Actuator](https://ww2.mathworks.cn/help/physmod/sps/ref/femparameterizedlinearactuator.html)。该组件的各个参数都有默认值，但这里用的是`ee_solenoid_fem_data.mat`中的数据。
+该组件的官方介绍文档见[^4]。该组件的各个参数都有默认值，但这里用的是`ee_solenoid_fem_data.mat`中的数据。
 
-## 电磁学模型(Magnetic Force)
+## 电磁学模型（Magnetic Force）
 
 该组件的电磁学模型最终目的是计算Magnetic Force，根据用户的需要，组件提供了两个一级选项，分别是：
 
@@ -177,7 +230,7 @@ dLdx =
 
 ### （1）使用磁链的两种方式
 
-该组件使用磁链数据有两种方式，一种是直接使用磁链数据(flux data)，另一种是使用磁链对电流和位移的偏导数，通过设置`Electrical model`进行选择。
+该组件使用磁链数据有两种方式，一种是直接使用磁链数据（flux data），另一种是使用磁链对电流和位移的偏导数，通过设置`Electrical model`进行选择。
 
 #### 直接使用磁链数据
 
@@ -211,7 +264,7 @@ $$
 
 #### 两种方式的比较
 
-从数值计算的角度看，第二种方式通常是更好的选择，因为反电动势是分段连续的(piecewise continuous)，它能在给定电流和位置提供处更准确的结果。但是，这也需要更多的预处理步骤。如果直接使用磁链数据，选择更合理的电流和位移网格尺寸、选择三次插值或样条插值可以改善结果。
+从数值计算的角度看，第二种方式通常是更好的选择，因为反电动势是分段连续的（piecewise continuous），它能在给定电流和位置提供处更准确的结果。但是，这也需要更多的预处理步骤。如果直接使用磁链数据，选择更合理的电流和位移网格尺寸、选择三次插值或样条插值可以改善结果。
 
 ### （2）电磁力的两种计算方式
 
@@ -271,7 +324,7 @@ $$
 
 `Winding resistance`的默认值是14 ohm，
 
-磁阻的值必须要大于0，默认值是inf，表示没有铁损(iron losses)。
+磁阻的值必须要大于0，默认值是inf，表示没有铁损（iron losses）。
 
 ### （6）其他
 
@@ -281,7 +334,7 @@ $$
 - 零电流所对应磁链必须是0；
 - 磁链对位移的偏导数在零电流处为0；
 
-## 机械模型(Mechanical)
+## 机械模型（Mechanical）
 
 组件的机械模型就是一个简单的带有Hard stop的铁芯运动模型。
 
@@ -299,11 +352,7 @@ $$
 
 ![image-20220827150557237](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827150557237.png?raw=true)
 
-
-
-
-
-## 模型热效应(Model Thermal Effects)
+## 模型热效应（Model Thermal Effects）
 
 当考虑模型的热效应时，需要将组件的`Modeling option`参数设置为`Show thermal port`：
 
@@ -317,7 +366,7 @@ $$
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827133129968.png?raw=true" alt="image-20220827133129968" style="zoom: 67%;" />
 
-thermal port的使用可以参考另一个示例：[Simulating Thermal Effects in Rotational and Translational Actuators](https://ww2.mathworks.cn/help/physmod/sps/ug/simulating-thermal-effects-in-rotational-and-translational-actuators.html)。
+thermal port的使用可以参考另一个示例[^6]。
 
 <br>
 
@@ -327,7 +376,7 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 ![image-20220827160600571](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827160600571.png?raw=true)
 
-该模型与[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁铁模型基本上是一致的，只有两点需要注意的差异。
+该模型与博客[^2]中的电磁铁模型基本上是一致的，只有两点需要注意的差异。
 
 ## Hard stop
 
@@ -341,13 +390,13 @@ thermal port的使用可以参考另一个示例：[Simulating Thermal Effects i
 
 ## L(x) 和 dL/dx
 
-虽然该示例的线性电磁铁模型的L(x)和dL/dx仍然采用的PS Lookup Table(1D)进行描述，但是这里的L(x)是线性的：
+虽然该示例的线性电磁铁模型的L(x)和dL/dx仍然采用的PS Lookup Table(1D)模块进行描述，但是这里的L(x)是线性的：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827161214103.png?raw=true"/>
 
 ![image-20220827161612092](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220827161612092.png?raw=true)
 
-而 [【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中采用的是非线性L(x)：
+而博客[^2]中的模型采用的是非线性L(x)：
 
 <figure class="half">
     <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825135120035.png?raw=true">
@@ -432,7 +481,7 @@ xmin = x(1);
 首先，该文件所选择了一个多项式函数：
 
 $$
-f(x,i)=a_0i^3+a_1xi^2+a_2i^2+a_3i+a_4x+a_5xi\label{eq4}
+\Psi(x,i)=a_0i^3+a_1xi^2+a_2i^2+a_3i+a_4x+a_5xi\label{eq4}
 $$
 
 之后求解了一个超定方程所对应的法线方程，得到系数向量的最小二乘解：
@@ -448,7 +497,7 @@ Coeff = (X'*X)\(X'*data_coeff);% Solve normal equation to get least square solut
 flux_linkage2 = reshape(X*Coeff,length(current),length(x));% flux_linkage2, 11-by-5.
 ```
 
-关于最小二乘法的描述见：[从曲线拟合、参数估计角度、超定方程求解的几何角度看最小二乘法](http://whatastarrynight.com/mathematics/MLE/)。
+Note: 关于最小二乘法的描述见参考博客[^5]。
 {: .notice--primary}
 
 最终绘制出真实的磁链数据图像以及多项式拟合图像：
@@ -487,11 +536,11 @@ hold(gca, "off")
 由式$\eqref{eq4}$可以得到：
 
 $$
-\dfrac{\partial f(x,i)}{\partial x}=a_1x^2+a_4+a_5x
+\dfrac{\partial\Psi(x,i)}{\partial x}=a_1x^2+a_4+a_5x
 $$
 
 $$
-\dfrac{\partial f(x,i)}{\partial i}=3a_0i^2+2a_1xi+2a_2i+a_3+a_5x\label{eq6}
+\dfrac{\partial\Psi(x,i)}{\partial i}=3a_0i^2+2a_1xi+2a_2i+a_3+a_5x\label{eq6}
 $$
 
 ```matlab
@@ -546,9 +595,9 @@ dfluxdx(1,:)=zeros(1,5); % Set partial derivative to exactly zero for zero curre
 
 这个操作是很有必要的，因为这里的电流只有非负值，在上面提到过，这种情况下零电流处的各个值要额外注意。
 
-### Part 4：计算在i=0.1A时的L值和dL/dx值
+### Part 4：计算在i=0.1 A时的L值和dL/dx值
 
-代码的第4部分计算i=0.1A时的L值和dL/dx值，这两个值是用于上面提到的`ee_solenoid_fen/Linear Solenoid/Calculate Force and Current`中的两个`PS Lookup Table(1D)`中的。
+代码的第4部分计算i=0.1 A时的L值和dL/dx值，这两个值是用于上面提到的`ee_solenoid_fen/Linear Solenoid/Calculate Force and Current`中的两个`PS Lookup Table(1D)`中的。
 
 因为有关系式：
 
@@ -722,8 +771,6 @@ clear simlog_t simlog_handles
 clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 ```
 
-
-
 ![image-20220828192245220](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828192245220.png?raw=true)
 
 <br>
@@ -732,10 +779,7 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 ## 磁饱和效应
 
-这个模型和[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)最主要的差别是本模型可以很好地捕捉磁饱和效应。
-{: .notice--primary}
-
-这个示例的目的就是为了展现磁饱和效应。磁饱和效应最明显的现象就是，需要更大的电流才能产生和线性情况相同的磁场：
+这个模型和博客[^2]中电磁铁模型最主要的差别是本模型可以很好地捕捉磁饱和效应。这个示例的目的就是为了展现磁饱和效应。磁饱和效应最明显的现象就是，需要更大的电流才能产生和线性情况相同的磁场：
 
 ![image-20220828143915042](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828143915042.png?raw=true)
 
@@ -745,27 +789,27 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 
 
-## 虚假的保持力(数值计算的误差)
+## “虚假的”保持力（数值计算的误差）
 
-[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁体模型有一个很重要的特点就是它在最终的位置没有保持力，当电磁铁停止通电后，动铁芯就会在弹簧力的作用下迅速向反方向运动。
+博客[^2]中的电磁体模型有一个很重要的特点就是它在最终的位置没有保持力，当电磁铁停止通电后，动铁芯就会在弹簧力的作用下迅速向反方向运动。
 
-在该示例的模型中，我们将开关换为一个方波信号，使电路在0.01s通电，在0.02s断电：
+在该示例的模型中，我们将开关换为一个方波信号，使电路在0.01 s通电，在0.02 s断电：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828114347407.png?raw=true" alt="image-20220828114347407" style="zoom:67%;" />
 
-并且去掉在0.06s添加的50N的作用力。之后，观察结果：
+并且去掉在0.06 s添加的50 N的作用力。之后，观察结果：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828114706220.png?raw=true" alt="image-20220828114706220" style="zoom:67%;" />
 
-可以看到在0.02s断电后，电磁力能够在最终位置保持，但是也仅仅是保持一会儿，之后就会缓慢地向反方向移动。
+可以看到在0.02 s断电后，电磁力能够在最终位置保持，但是也仅仅是保持一会儿，之后就会缓慢地向反方向移动。
 
-如果我们延长仿真时间到2s（并且相应修改Pulse开关的参数），则结果：
+如果我们延长仿真时间到2 s（并且相应修改Pulse开关的参数），则结果：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220828114950237.png?raw=true" alt="image-20220828114950237" style="zoom:67%;" />
 
 可以看到，动铁芯最终会返回并且稳定在初始位置。
 
-‍♂️‍♂️‍♂️但是这里的保持力并不是我们所期望的保持力（永磁体所提供的保持力），因为电磁力是通过数据文件中的`force`变量所定义的，`force`变量的行表示电流，列表示位移：
+但是这里的保持力并不是我们所期望的保持力（永磁体所提供的保持力），因为电磁力是通过数据文件中的`force`变量所定义的，`force`变量的行表示电流，列表示位移：
 
 ![image-20220828133727244](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828133727244.png?raw=true)
 
@@ -783,13 +827,13 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 当切断电流后，电磁力并没有立即变为0。
 
-‍♂️‍♂️‍♂️如果想要得到例如永磁体所产生的保持力，`force`变量的第一行一定不能都是零值：
+Note: 如果想要得到例如永磁体所产生的保持力，`force`变量的第一行一定不能都是零值：
 
 ![image-20220828134739949](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220828134739949.png?raw=true)
 
 ## 线圈电流的双峰以及振荡现象
 
-[【MATLAB Simscape】电磁铁的电路-机械模型](http://whatastarrynight.com/programming/signals%20and%20systems/electromagnetism/MATLAB-Simscape-solenoid/)中的电磁铁模型得到结果：
+博客[^2]中的电磁铁模型得到结果：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220825133727626.png?raw=true" alt="image-20220825133727626" style="zoom:50%;" />
 
@@ -801,7 +845,17 @@ clear simlog_xFEM simlog_xlin simlog_iFEM simlog_ilin
 
 只是很不明显。不明显的原因的原因有两个方面：
 
-（1）本示例的模型的运动距离是0.1mm，而前者的运动距离5mm，这使得双峰现象很不明显；
+（1）本示例的模型的运动距离是0.1 mm，而前者的运动距离5 mm，这使得双峰现象很不明显；
 
 （2）由于运动距离过小，就导致速度很小，于是Mass-Spring-Damper系统的振荡现象就不明显；
 
+<br>
+
+**References**
+
+[^1]: [Solenoid Parameterized with FEM Data - MathWorks](https://ww2.mathworks.cn/help/physmod/sps/ug/solenoid-parameterized-with-fem-data.html).
+[^2]: [Simulate Solenoid in MATLAB Simulink - What a starry night~](https://helloworld-1017.github.io/2022-08-25/17-03-51.html).
+[^3]:  [Simscape Electrical™ Solenoid - MathWorks](https://ww2.mathworks.cn/help/physmod/sps/ref/solenoid.html).
+[^4]: [FEM-Parameterized Linear Actuator - MathWorks](https://ww2.mathworks.cn/help/physmod/sps/ref/femparameterizedlinearactuator.html).
+[^5]: [Inspect the Least Square Method from Perspective of Curve Fitting, Parameter Estimation, and Geometry View of Solving Over-determined Equations - What a starry night~](https://helloworld-1017.github.io/2022-07-07/15-36-27.html).
+[^6]: [Simulating Thermal Effects in Rotational and Translational Actuators](https://ww2.mathworks.cn/help/physmod/sps/ug/simulating-thermal-effects-in-rotational-and-translational-actuators.html).

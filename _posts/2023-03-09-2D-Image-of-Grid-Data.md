@@ -1,7 +1,6 @@
 ---
 layout: single
 title: "Idea 3: 2D Image of Grid Data"
-date: 2023-03-09 22:24:25 +0800
 categories: 
  - Ideas
  - Uncertainty
@@ -9,14 +8,19 @@ categories:
  - Circuit Breaker
  - Computational Fluid Dynamics
  - Machine Learning
+ - Finite Element Simulation
 tags:
  - MATLAB Graphics
 toc: false
+date: 2023-03-09 22:24:25 +0800
+last_modified_at0: 2023-03-09 22:24:25 +0800
+last_modified_at1: 2024-03-07 04:23:16 +0800
+last_modified_at: 2024-03-07 04:23:16 +0800
 ---
 
-博客[Build a Solenoid Parameterized with FEM Data Using MATLAB Simulink](http://whatastarrynight.com/matlab/signals and systems/electromagnetism/circuit breaker/MATLAB-Simscape-Electrical-solenoid-parameterized-with-FEM-data/)介绍了MATLAB提供的一个示例[Solenoid Parameterized with FEM Data - MathWorks](https://ww2.mathworks.cn/help/sps/ug/solenoid-parameterized-with-fem-data.html)，该示例使用在建模Solenoid时，使用了外部导入的FEM数据，包括磁链数据`flux_linkage`和电磁力数据`force`：
+博客[^1] 介绍了MATLAB提供的一个示例[^2]，该示例使用在建模Solenoid时，使用了外部导入的FEM数据，包括磁链数据`flux_linkage`和电磁力数据`force`：
 
-```matlab
+```
 >> flux_linkage
 flux_linkage =
          0         0         0         0         0
@@ -32,7 +36,7 @@ flux_linkage =
     0.0554    0.0553    0.0551    0.0548    0.0542
 ```
 
-```matlab
+```
 >> force
 force =
          0         0         0         0         0
@@ -50,13 +54,13 @@ force =
 
 这两个变量都是11行5列，行对应的是电流`current`，而列对应的是行程`x`：
 
-```matlab
+```
 >> current
 current =
 0    0.1000    0.2000    0.3000    0.4000    0.5000    0.6000    0.7000    0.8000    0.9000    1.0000
 ```
 
-```matlab
+```
 >> x
 x =
    1.0e-03 *
@@ -110,7 +114,7 @@ hold(gca, "off")
 
 <br>
 
-但是今天看了一篇文献[PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182)，这篇论文为使用机器学习技术求解PDEs（Partial Differential Equations），即*Scientific Machine Learning*领域（or *machine learning for physical sciences* or *data driven science*），提供了一个新的benchmark，很有意思。
+但是今天看了一篇文献[^3]，这篇论文为使用机器学习技术求解PDEs（Partial Differential Equations），即*Scientific Machine Learning*领域（or *machine learning for physical sciences* or *data driven science*），提供了一个新的benchmark，很有意思。
 
 这篇论文在描述类似的一个因变量随两个自变量变化时，采用的是用颜色区分的二维图像，例如：
 
@@ -179,14 +183,21 @@ set(gca, "YDir", "normal")
 
 这种图形的表现形式更加得紧凑；并且将数据表现为这样的图像后，就可能有更多的应用。
 
-例如，文献[Encoding Time Series as Images for Visual Inspection and Classification Using Tiled Convolutional Neural Networks](https://www.researchgate.net/publication/275970614_Encoding_Time_Series_as_Images_for_Visual_Inspection_and_Classification_Using_Tiled_Convolutional_Neural_Networks)就将时间序列编码成矩阵数据后，将其表示为图像（利用Gramian Angular Fields（GAF）和Markov Transition Fields （MTF）方法），之后依据图像信息训练了一个CNN分类器：
+例如，文献[^4]就将时间序列编码成矩阵数据后，将其表示为图像（利用Gramian Angular Fields（GAF）和Markov Transition Fields （MTF）方法），之后依据图像信息训练了一个CNN分类器：
 
-![image-20230309222100713](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222100713.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222100713.png?raw=true" alt="image-20230309222100713" style="zoom: 33%;" />
 
-![image-20230309222119453](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222119453.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222119453.png?raw=true" alt="image-20230309222119453" style="zoom: 33%;" />
 
-![image-20230309222136502](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222136502.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230309222136502.png?raw=true" alt="image-20230309222136502" style="zoom: 33%;" />
 
 还是一个比较有意思的工作。
 
 <br>
+
+**References**
+
+[^1]: [Build a Solenoid Parameterized with FEM Data using MATLAB Simulink - What a starry night~](https://helloworld-1017.github.io/2022-08-28/14-49-01.html).
+[^2]: [Solenoid Parameterized with FEM Data - MathWorks](https://ww2.mathworks.cn/help/sps/ug/solenoid-parameterized-with-fem-data.html).
+[^3]: [PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182).
+[^4]: [Encoding Time Series as Images for Visual Inspection and Classification Using Tiled Convolutional Neural Networks](https://www.researchgate.net/publication/275970614_Encoding_Time_Series_as_Images_for_Visual_Inspection_and_Classification_Using_Tiled_Convolutional_Neural_Networks).

@@ -1,10 +1,13 @@
 ---
 layout: single
 title: A Brief Introduction to Deep Learning
-date: 2023-04-01 17:08:09 +0800
 categories: 
  - Machine Learning
-last_modified_at: 2023-11-28 21:22:37 +0800
+date: 2023-04-01 17:08:09 +0800
+last_modified_at0: 2023-04-01 17:08:09 +0800
+last_modified_at1: 2023-11-28 21:22:37 +0800
+last_modified_at2: 2024-03-09 14:22:03 +0800
+last_modified_at: 2024-03-09 14:22:03 +0800
 ---
 
 # Introduction
@@ -42,21 +45,21 @@ last_modified_at: 2023-11-28 21:22:37 +0800
 
 我们可以通过ILSVRC（ImageNet Large Scale Visual Recognition Challenge）竞赛的错误率下降的趋势看出传统机器学习遇到的挑战和深度学习发展的进程：
 
-![image-20230401161548318](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401161548318.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401161548318.png?raw=true" alt="image-20230401161548318" style="zoom: 33%;" />
 
 一些经典的神经网络结构的出现，能够极大程度上推动深度学习的发展：
 
-![](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401162948166.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230401162948166.png?raw=true" style="zoom:33%;" />
 
-(1) **LeNet**：Y. Lecun, L. Bottou, Y. Bengio and P. Haffner, "Gradient-based learning applied to document recognition," in *Proceedings of the IEEE*, vol. 86, no. 11, pp. 2278-2324, Nov. 1998, doi: 10.1109/5.726791, available: https://ieeexplore.ieee.org/abstract/document/726791.
+(1) **LeNet**：Y. Lecun, L. Bottou, Y. Bengio and P. Haffner, "Gradient-based learning applied to document recognition," in *Proceedings of the IEEE*, vol. 86, no. 11, pp. 2278-2324, Nov. 1998, doi: 10.1109/5.726791, available: [https://ieeexplore.ieee.org/abstract/document/726791](https://ieeexplore.ieee.org/abstract/document/726791).
 
-(2) **AlexNet**: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton, "Imagenet classification with deep convolutional neural networks." *Communications of the ACM* 60.6 (2017): 84-90, available: https://dl.acm.org/doi/abs/10.1145/3065386.
+(2) **AlexNet**: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton, "Imagenet classification with deep convolutional neural networks." *Communications of the ACM* 60.6 (2017): 84-90, available: [https://dl.acm.org/doi/abs/10.1145/3065386](https://dl.acm.org/doi/abs/10.1145/3065386).
 
-(3) **GoogLeNet**: Szegedy, Christian, *et al.*, "Going deeper with convolutions," *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2015, available: https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html.
+(3) **GoogLeNet**: Szegedy, Christian, *et al.*, "Going deeper with convolutions," *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2015, available: [https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html](https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html).
 
-(4) **VGG**: Simonyan, Karen, and Andrew Zisserman, "Very deep convolutional networks for large-scale image recognition," *arXiv preprint arXiv:1409.1556* (2014), available: https://arxiv.org/abs/1409.1556.
+(4) **VGG**: Simonyan, Karen, and Andrew Zisserman, "Very deep convolutional networks for large-scale image recognition," *arXiv preprint arXiv:1409.1556* (2014), available: [https://arxiv.org/abs/1409.1556](https://arxiv.org/abs/1409.1556).
 
-(5) **ResNet**: He, Kaiming, *et al.*, "Deep residual learning for image recognition," *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016, available: https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html.
+(5) **ResNet**: He, Kaiming, *et al.*, "Deep residual learning for image recognition," *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016, available: [https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html).
 
 <br>
 

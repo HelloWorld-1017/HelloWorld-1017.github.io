@@ -1,13 +1,16 @@
 ---
 layout: single
-title: "Built-in Colour Names in LaTeX xcolor Package"
-date: 2023-10-17 18:16:22 +0800
-last_modified_at: 2023-11-03 12:40:47 +0800
+title: "Built-in Colors in LaTeX xcolor Package"
 categories:
  - LaTeX
  - Graphic Design and Typography
  - R
  - MATLAB
+date: 2023-10-17 18:16:22 +0800
+last_modified_at0: 2023-10-17 18:16:22 +0800
+last_modified_at1: 2023-11-03 12:40:47 +0800
+last_modified_at2: 2024-03-14 16:56:03 +0800
+last_modified_at: 2024-03-14 16:56:03 +0800
 ---
 
 # 19 base colours (always available)
@@ -252,495 +255,575 @@ where
 
 <br>
 
-# Something more ...
+# RGB tuples and hexadecimal color value
 
-Garrick’s blog [[3]](#ref) provides a way using `tidyverse` [[4]](#ref), a collection of R packages, to gather RGB-tuple of the colors defined in `xcolor` package. He extracts colour information from zipped files which are downloaded from `http://www.ukern.de/tex/xcolor/tex/svgnam.def.gz` and `http://www.ukern.de/tex/xcolor/tex/x11nam.def.gz`, and then organises colour tuples into a `.csv` file (Garrick provides this file in his blog [[3]](#ref) as wel). I want to reproduce it using MATLAB, but these two zipped files seems not common compressed format; I tried different ways but finally failed to open them. 
+Garrick’s blog[^3] provides a way using `tidyverse`[^4], a collection of R packages, to gather RGB-tuple of the colors defined in `xcolor` package. He extracts colour information from zipped files which are downloaded from `http://www.ukern.de/tex/xcolor/tex/svgnam.def.gz` and `http://www.ukern.de/tex/xcolor/tex/x11nam.def.gz`, and then organises colour tuples into a `.csv` file (Garrick provides this file in his blog[^3] as well). I want to reproduce it using MATLAB, but these two zipped files seems not common compressed format; I tried different ways but finally failed to open them. 
 
-So here, for the convenience of future use, I just downloaded the `xcolors.csv` file which Garrick provides [[3]](#ref), and then display its content in MATLAB: 
+So here, for the convenience of future use, I downloaded the `xcolors.csv` file which Garrick provides [^3], and display its contents in MATLAB: 
 
 ```matlab
+clc,clear,close all
+
 colorTable = readtable("xcolors.csv");
-% colorStruct = table2struct(colorTable);
-disp(colorTable)
+colorStruct = table2struct(colorTable);
+colors = struct();
+
+numPerFig = 36;
+vertSpace = 20;
+colorBoxPositions = repmat([0,0,70,15],numPerFig,1)-[zeros(numPerFig,1),vertSpace*(1:numPerFig)',zeros(numPerFig,1),zeros(numPerFig,1)];
+textxPosition_color1 = 100;
+textxPosition_color2 = textxPosition_color1+170;
+textxPosition_color3 = textxPosition_color2+170;
+textxPosition_color4 = textxPosition_color3+170;
+
+FontSize = 12;
+FontName = "Helvetiva";
+pic_idx = 0;
+for idx = 1:height(colorStruct)
+    i = mod(idx-1,numPerFig)+1;
+    if i == 1
+        figure("Color","w","Position",[682,42,902,953])
+        hold(gca,"on")
+        set(gca,"FontName","Times New Roman","DataAspectRatio",[1,1,1])
+        pic_idx = pic_idx+1;
+    end
+
+    colorName = colorStruct(idx).color;
+    RGBtuple1 = [colorStruct(idx).r,colorStruct(idx).g,colorStruct(idx).b];
+    RGBtuple2 = round(RGBtuple1*255);
+    RGBHEX = sprintf("%s%s","#",string(dec2hex(RGBtuple2,2))');
+    colors(idx).colorName = colorName;
+    colors(idx).RGBtuple1 = {RGBtuple1};
+    colors(idx).RGBtuple2 = {RGBtuple2};
+    colors(idx).RGBHex = {RGBHEX};
+
+    r = rectangle("Position",colorBoxPositions(i,:), ...
+        "FaceColor",RGBtuple1,"Curvature",0.5,"LineWidth",1.2);
+
+    textyPosition = r.Position(2)+r.Position(4)/2;
+    text(textxPosition_color1,textyPosition, ...
+        colorName,"FontSize",FontSize,"FontName",FontName)
+    text(textxPosition_color2,textyPosition, ...
+        sprintf("(%.3f %.3f %.3f)",RGBtuple1), ...
+        "FontSize",FontSize,"FontName",FontName)
+    text(textxPosition_color3,textyPosition, ...
+        sprintf("(%-3d %-3d %-3d)",RGBtuple2), ...
+        "FontSize",FontSize,"FontName",FontName)
+    text(textxPosition_color4,textyPosition, ...
+        sprintf("%s",RGBHEX), ...
+        "FontSize",FontSize,"FontName",FontName)
+    xlim([-10,600])
+    axis(gca,"off")
+
+    if i == numPerFig
+        exportgraphics(gca,sprintf("pic_%d.jpg",pic_idx),"Resolution",600)
+    end
+end
+
+disp(struct2table(colors))
 ```
 
-```
-             color                r        g        b  
-    ________________________    _____    _____    _____
+![pic_1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141644874.jpg)
 
-    {'AliceBlue'           }     0.94    0.972        1
-    {'AntiqueWhite'        }     0.98     0.92    0.844
-    {'AntiqueWhite1'       }        1    0.936     0.86
-    {'AntiqueWhite2'       }    0.932    0.875      0.8
-    {'AntiqueWhite3'       }    0.804    0.752     0.69
-    {'AntiqueWhite4'       }    0.545    0.512     0.47
-    {'Aqua'                }        0        1        1
-    {'Aquamarine'          }    0.498        1     0.83
-    {'Aquamarine1'         }    0.498        1     0.83
-    {'Aquamarine2'         }    0.464    0.932    0.776
-    {'Aquamarine3'         }      0.4    0.804    0.668
-    {'Aquamarine4'         }     0.27    0.545    0.455
-    {'Azure'               }     0.94        1        1
-    {'Azure1'              }     0.94        1        1
-    {'Azure2'              }     0.88    0.932    0.932
-    {'Azure3'              }    0.756    0.804    0.804
-    {'Azure4'              }    0.512    0.545    0.545
-    {'Beige'               }     0.96     0.96    0.864
-    {'Bisque'              }        1    0.894     0.77
-    {'Bisque1'             }        1    0.894     0.77
-    {'Bisque2'             }    0.932    0.835    0.716
-    {'Bisque3'             }    0.804    0.716     0.62
-    {'Bisque4'             }    0.545     0.49     0.42
-    {'Black'               }        0        0        0
-    {'BlanchedAlmond'      }        1     0.92    0.804
-    {'Blue'                }        0        0        1
-    {'Blue1'               }        0        0        1
-    {'Blue2'               }        0        0    0.932
-    {'Blue3'               }        0        0    0.804
-    {'Blue4'               }        0        0    0.545
-    {'BlueViolet'          }     0.54     0.17    0.888
-    {'Brown'               }    0.648    0.165    0.165
-    {'Brown1'              }        1     0.25     0.25
-    {'Brown2'              }    0.932     0.23     0.23
-    {'Brown3'              }    0.804      0.2      0.2
-    {'Brown4'              }    0.545    0.136    0.136
-    {'BurlyWood'           }     0.87     0.72     0.53
-    {'Burlywood1'          }        1    0.828    0.608
-    {'Burlywood2'          }    0.932    0.772     0.57
-    {'Burlywood3'          }    0.804    0.668     0.49
-    {'Burlywood4'          }    0.545     0.45    0.332
-    {'CadetBlue'           }    0.372     0.62    0.628
-    {'CadetBlue1'          }    0.596     0.96        1
-    {'CadetBlue2'          }    0.556    0.898    0.932
-    {'CadetBlue3'          }     0.48    0.772    0.804
-    {'CadetBlue4'          }    0.325    0.525    0.545
-    {'Chartreuse'          }    0.498        1        0
-    {'Chartreuse1'         }    0.498        1        0
-    {'Chartreuse2'         }    0.464    0.932        0
-    {'Chartreuse3'         }      0.4    0.804        0
-    {'Chartreuse4'         }     0.27    0.545        0
-    {'Chocolate'           }    0.824     0.41    0.116
-    {'Chocolate1'          }        1    0.498     0.14
-    {'Chocolate2'          }    0.932    0.464     0.13
-    {'Chocolate3'          }    0.804      0.4    0.112
-    {'Chocolate4'          }    0.545     0.27    0.075
-    {'Coral'               }        1    0.498    0.312
-    {'Coral1'              }        1    0.448    0.336
-    {'Coral2'              }    0.932    0.415    0.312
-    {'Coral3'              }    0.804    0.356     0.27
-    {'Coral4'              }    0.545    0.244    0.185
-    {'CornflowerBlue'      }    0.392    0.585     0.93
-    {'Cornsilk'            }        1    0.972    0.864
-    {'Cornsilk1'           }        1    0.972    0.864
-    {'Cornsilk2'           }    0.932     0.91    0.804
-    {'Cornsilk3'           }    0.804    0.785    0.694
-    {'Cornsilk4'           }    0.545    0.532     0.47
-    {'Crimson'             }    0.864     0.08    0.235
-    {'Cyan'                }        0        1        1
-    {'Cyan1'               }        0        1        1
-    {'Cyan2'               }        0    0.932    0.932
-    {'Cyan3'               }        0    0.804    0.804
-    {'Cyan4'               }        0    0.545    0.545
-    {'DarkBlue'            }        0        0    0.545
-    {'DarkCyan'            }        0    0.545    0.545
-    {'DarkGoldenrod'       }     0.72    0.525    0.044
-    {'DarkGoldenrod1'      }        1    0.725     0.06
-    {'DarkGoldenrod2'      }    0.932     0.68    0.055
-    {'DarkGoldenrod3'      }    0.804    0.585    0.048
-    {'DarkGoldenrod4'      }    0.545    0.396     0.03
-    {'DarkGray'            }    0.664    0.664    0.664
-    {'DarkGreen'           }        0    0.392        0
-    {'DarkGrey'            }    0.664    0.664    0.664
-    {'DarkKhaki'           }     0.74    0.716     0.42
-    {'DarkMagenta'         }    0.545        0    0.545
-    {'DarkOliveGreen'      }    0.332     0.42    0.185
-    {'DarkOliveGreen1'     }    0.792        1     0.44
-    {'DarkOliveGreen2'     }    0.736    0.932    0.408
-    {'DarkOliveGreen3'     }    0.635    0.804    0.352
-    {'DarkOliveGreen4'     }     0.43    0.545     0.24
-    {'DarkOrange'          }        1     0.55        0
-    {'DarkOrange1'         }        1    0.498        0
-    {'DarkOrange2'         }    0.932    0.464        0
-    {'DarkOrange3'         }    0.804      0.4        0
-    {'DarkOrange4'         }    0.545     0.27        0
-    {'DarkOrchid'          }      0.6    0.196      0.8
-    {'DarkOrchid1'         }     0.75    0.244        1
-    {'DarkOrchid2'         }    0.698    0.228    0.932
-    {'DarkOrchid3'         }    0.604    0.196    0.804
-    {'DarkOrchid4'         }    0.408    0.132    0.545
-    {'DarkRed'             }    0.545        0        0
-    {'DarkSalmon'          }    0.912     0.59     0.48
-    {'DarkSeaGreen'        }     0.56    0.736     0.56
-    {'DarkSeaGreen1'       }    0.756        1    0.756
-    {'DarkSeaGreen2'       }    0.705    0.932    0.705
-    {'DarkSeaGreen3'       }    0.608    0.804    0.608
-    {'DarkSeaGreen4'       }     0.41    0.545     0.41
-    {'DarkSlateBlue'       }    0.284     0.24    0.545
-    {'DarkSlateGray'       }    0.185     0.31     0.31
-    {'DarkSlateGray1'      }    0.592        1        1
-    {'DarkSlateGray2'      }    0.552    0.932    0.932
-    {'DarkSlateGray3'      }    0.475    0.804    0.804
-    {'DarkSlateGray4'      }     0.32    0.545    0.545
-    {'DarkSlateGrey'       }    0.185     0.31     0.31
-    {'DarkTurquoise'       }        0    0.808     0.82
-    {'DarkViolet'          }     0.58        0    0.828
-    {'DeepPink'            }        1     0.08    0.576
-    {'DeepPink1'           }        1     0.08    0.576
-    {'DeepPink2'           }    0.932     0.07    0.536
-    {'DeepPink3'           }    0.804    0.064    0.464
-    {'DeepPink4'           }    0.545     0.04    0.312
-    {'DeepSkyBlue'         }        0     0.75        1
-    {'DeepSkyBlue1'        }        0     0.75        1
-    {'DeepSkyBlue2'        }        0    0.698    0.932
-    {'DeepSkyBlue3'        }        0    0.604    0.804
-    {'DeepSkyBlue4'        }        0    0.408    0.545
-    {'DimGray'             }     0.41     0.41     0.41
-    {'DimGrey'             }     0.41     0.41     0.41
-    {'DodgerBlue'          }    0.116    0.565        1
-    {'DodgerBlue1'         }    0.116    0.565        1
-    {'DodgerBlue2'         }     0.11    0.525    0.932
-    {'DodgerBlue3'         }    0.094    0.455    0.804
-    {'DodgerBlue4'         }    0.064    0.305    0.545
-    {'FireBrick'           }    0.698    0.132    0.132
-    {'Firebrick1'          }        1     0.19     0.19
-    {'Firebrick2'          }    0.932    0.172    0.172
-    {'Firebrick3'          }    0.804     0.15     0.15
-    {'Firebrick4'          }    0.545      0.1      0.1
-    {'FloralWhite'         }        1     0.98     0.94
-    {'ForestGreen'         }    0.132    0.545    0.132
-    {'Fuchsia'             }        1        0        1
-    {'Gainsboro'           }    0.864    0.864    0.864
-    {'GhostWhite'          }    0.972    0.972        1
-    {'Gold'                }        1    0.844        0
-    {'Gold1'               }        1    0.844        0
-    {'Gold2'               }    0.932     0.79        0
-    {'Gold3'               }    0.804     0.68        0
-    {'Gold4'               }    0.545     0.46        0
-    {'Goldenrod'           }    0.855    0.648    0.125
-    {'Goldenrod1'          }        1    0.756    0.145
-    {'Goldenrod2'          }    0.932    0.705    0.132
-    {'Goldenrod3'          }    0.804    0.608    0.112
-    {'Goldenrod4'          }    0.545     0.41     0.08
-    {'Gray'                }      0.5      0.5      0.5
-    {'Gray0'               }    0.745    0.745    0.745
-    {'Green'               }        0      0.5        0
-    {'Green0'              }        0        1        0
-    {'Green1'              }        0        1        0
-    {'Green2'              }        0    0.932        0
-    {'Green3'              }        0    0.804        0
-    {'Green4'              }        0    0.545        0
-    {'GreenYellow'         }     0.68        1    0.185
-    {'Grey'                }      0.5      0.5      0.5
-    {'Grey0'               }    0.745    0.745    0.745
-    {'Honeydew'            }     0.94        1     0.94
-    {'Honeydew1'           }     0.94        1     0.94
-    {'Honeydew2'           }     0.88    0.932     0.88
-    {'Honeydew3'           }    0.756    0.804    0.756
-    {'Honeydew4'           }    0.512    0.545    0.512
-    {'HotPink'             }        1     0.41    0.705
-    {'HotPink1'            }        1     0.43    0.705
-    {'HotPink2'            }    0.932    0.415    0.655
-    {'HotPink3'            }    0.804    0.376    0.565
-    {'HotPink4'            }    0.545    0.228    0.385
-    {'IndianRed'           }    0.804     0.36     0.36
-    {'IndianRed1'          }        1    0.415    0.415
-    {'IndianRed2'          }    0.932     0.39     0.39
-    {'IndianRed3'          }    0.804    0.332    0.332
-    {'IndianRed4'          }    0.545    0.228    0.228
-    {'Indigo'              }    0.294        0     0.51
-    {'Ivory'               }        1        1     0.94
-    {'Ivory1'              }        1        1     0.94
-    {'Ivory2'              }    0.932    0.932     0.88
-    {'Ivory3'              }    0.804    0.804    0.756
-    {'Ivory4'              }    0.545    0.545    0.512
-    {'Khaki'               }     0.94      0.9     0.55
-    {'Khaki1'              }        1    0.965     0.56
-    {'Khaki2'              }    0.932      0.9     0.52
-    {'Khaki3'              }    0.804    0.776     0.45
-    {'Khaki4'              }    0.545    0.525    0.305
-    {'Lavender'            }      0.9      0.9     0.98
-    {'LavenderBlush'       }        1     0.94     0.96
-    {'LavenderBlush1'      }        1     0.94     0.96
-    {'LavenderBlush2'      }    0.932     0.88    0.898
-    {'LavenderBlush3'      }    0.804    0.756    0.772
-    {'LavenderBlush4'      }    0.545    0.512    0.525
-    {'LawnGreen'           }    0.488     0.99        0
-    {'LemonChiffon'        }        1     0.98    0.804
-    {'LemonChiffon1'       }        1     0.98    0.804
-    {'LemonChiffon2'       }    0.932    0.912     0.75
-    {'LemonChiffon3'       }    0.804     0.79    0.648
-    {'LemonChiffon4'       }    0.545    0.536     0.44
-    {'LightBlue'           }     0.68    0.848      0.9
-    {'LightBlue1'          }     0.75    0.936        1
-    {'LightBlue2'          }    0.698    0.875    0.932
-    {'LightBlue3'          }    0.604    0.752    0.804
-    {'LightBlue4'          }    0.408    0.512    0.545
-    {'LightCoral'          }     0.94      0.5      0.5
-    {'LightCyan'           }     0.88        1        1
-    {'LightCyan1'          }     0.88        1        1
-    {'LightCyan2'          }     0.82    0.932    0.932
-    {'LightCyan3'          }    0.705    0.804    0.804
-    {'LightCyan4'          }     0.48    0.545    0.545
-    {'LightGoldenrod'      }    0.933    0.867     0.51
-    {'LightGoldenrod1'     }        1    0.925    0.545
-    {'LightGoldenrod2'     }    0.932    0.864     0.51
-    {'LightGoldenrod3'     }    0.804    0.745     0.44
-    {'LightGoldenrod4'     }    0.545    0.505    0.298
-    {'LightGoldenrodYellow'}     0.98     0.98    0.824
-    {'LightGray'           }    0.828    0.828    0.828
-    {'LightGreen'          }    0.565    0.932    0.565
-    {'LightGrey'           }    0.828    0.828    0.828
-    {'LightPink'           }        1    0.712    0.756
-    {'LightPink1'          }        1    0.684    0.725
-    {'LightPink2'          }    0.932    0.635     0.68
-    {'LightPink3'          }    0.804     0.55    0.585
-    {'LightPink4'          }    0.545    0.372    0.396
-    {'LightSalmon'         }        1    0.628     0.48
-    {'LightSalmon1'        }        1    0.628     0.48
-    {'LightSalmon2'        }    0.932    0.585    0.448
-    {'LightSalmon3'        }    0.804    0.505    0.385
-    {'LightSalmon4'        }    0.545     0.34     0.26
-    {'LightSeaGreen'       }    0.125    0.698    0.668
-    {'LightSkyBlue'        }     0.53    0.808     0.98
-    {'LightSkyBlue1'       }     0.69    0.888        1
-    {'LightSkyBlue2'       }    0.644    0.828    0.932
-    {'LightSkyBlue3'       }    0.552    0.712    0.804
-    {'LightSkyBlue4'       }    0.376    0.484    0.545
-    {'LightSlateBlue'      }    0.518     0.44        1
-    {'LightSlateGray'      }    0.468    0.532      0.6
-    {'LightSlateGrey'      }    0.468    0.532      0.6
-    {'LightSteelBlue'      }     0.69     0.77     0.87
-    {'LightSteelBlue1'     }    0.792    0.884        1
-    {'LightSteelBlue2'     }    0.736    0.824    0.932
-    {'LightSteelBlue3'     }    0.635     0.71    0.804
-    {'LightSteelBlue4'     }     0.43    0.484    0.545
-    {'LightYellow'         }        1        1     0.88
-    {'LightYellow1'        }        1        1     0.88
-    {'LightYellow2'        }    0.932    0.932     0.82
-    {'LightYellow3'        }    0.804    0.804    0.705
-    {'LightYellow4'        }    0.545    0.545     0.48
-    {'Lime'                }        0        1        0
-    {'LimeGreen'           }    0.196    0.804    0.196
-    {'Linen'               }     0.98     0.94      0.9
-    {'Magenta'             }        1        0        1
-    {'Magenta1'            }        1        0        1
-    {'Magenta2'            }    0.932        0    0.932
-    {'Magenta3'            }    0.804        0    0.804
-    {'Magenta4'            }    0.545        0    0.545
-    {'Maroon'              }      0.5        0        0
-    {'Maroon0'             }     0.69     0.19    0.376
-    {'Maroon1'             }        1    0.204      0.7
-    {'Maroon2'             }    0.932     0.19    0.655
-    {'Maroon3'             }    0.804     0.16    0.565
-    {'Maroon4'             }    0.545     0.11    0.385
-    {'MediumAquamarine'    }      0.4    0.804    0.668
-    {'MediumBlue'          }        0        0    0.804
-    {'MediumOrchid'        }     0.73    0.332    0.828
-    {'MediumOrchid1'       }     0.88      0.4        1
-    {'MediumOrchid2'       }     0.82    0.372    0.932
-    {'MediumOrchid3'       }    0.705     0.32    0.804
-    {'MediumOrchid4'       }     0.48    0.215    0.545
-    {'MediumPurple'        }    0.576     0.44     0.86
-    {'MediumPurple1'       }     0.67     0.51        1
-    {'MediumPurple2'       }    0.624    0.475    0.932
-    {'MediumPurple3'       }    0.536    0.408    0.804
-    {'MediumPurple4'       }    0.365     0.28    0.545
-    {'MediumSeaGreen'      }    0.235      0.7    0.444
-    {'MediumSlateBlue'     }    0.484    0.408    0.932
-    {'MediumSpringGreen'   }        0     0.98    0.604
-    {'MediumTurquoise'     }    0.284     0.82      0.8
-    {'MediumVioletRed'     }     0.78    0.084     0.52
-    {'MidnightBlue'        }    0.098    0.098     0.44
-    {'MintCream'           }     0.96        1     0.98
-    {'MistyRose'           }        1    0.894    0.884
-    {'MistyRose1'          }        1    0.894    0.884
-    {'MistyRose2'          }    0.932    0.835    0.824
-    {'MistyRose3'          }    0.804    0.716     0.71
-    {'MistyRose4'          }    0.545     0.49    0.484
-    {'Moccasin'            }        1    0.894     0.71
-    {'NavajoWhite'         }        1     0.87     0.68
-    {'NavajoWhite1'        }        1     0.87     0.68
-    {'NavajoWhite2'        }    0.932     0.81     0.63
-    {'NavajoWhite3'        }    0.804      0.7    0.545
-    {'NavajoWhite4'        }    0.545    0.475     0.37
-    {'Navy'                }        0        0      0.5
-    {'NavyBlue'            }        0        0      0.5
-    {'OldLace'             }    0.992     0.96      0.9
-    {'Olive'               }      0.5      0.5        0
-    {'OliveDrab'           }     0.42    0.556    0.136
-    {'OliveDrab1'          }    0.752        1    0.244
-    {'OliveDrab2'          }      0.7    0.932    0.228
-    {'OliveDrab3'          }    0.604    0.804    0.196
-    {'OliveDrab4'          }     0.41    0.545    0.132
-    {'Orange'              }        1    0.648        0
-    {'Orange1'             }        1    0.648        0
-    {'Orange2'             }    0.932    0.604        0
-    {'Orange3'             }    0.804     0.52        0
-    {'Orange4'             }    0.545    0.352        0
-    {'OrangeRed'           }        1     0.27        0
-    {'OrangeRed1'          }        1     0.27        0
-    {'OrangeRed2'          }    0.932     0.25        0
-    {'OrangeRed3'          }    0.804    0.215        0
-    {'OrangeRed4'          }    0.545    0.145        0
-    {'Orchid'              }    0.855     0.44     0.84
-    {'Orchid1'             }        1    0.512     0.98
-    {'Orchid2'             }    0.932     0.48    0.912
-    {'Orchid3'             }    0.804     0.41     0.79
-    {'Orchid4'             }    0.545     0.28    0.536
-    {'PaleGoldenrod'       }    0.932     0.91    0.668
-    {'PaleGreen'           }    0.596    0.985    0.596
-    {'PaleGreen1'          }    0.604        1    0.604
-    {'PaleGreen2'          }    0.565    0.932    0.565
-    {'PaleGreen3'          }    0.488    0.804    0.488
-    {'PaleGreen4'          }     0.33    0.545     0.33
-    {'PaleTurquoise'       }    0.688    0.932    0.932
-    {'PaleTurquoise1'      }    0.732        1        1
-    {'PaleTurquoise2'      }    0.684    0.932    0.932
-    {'PaleTurquoise3'      }     0.59    0.804    0.804
-    {'PaleTurquoise4'      }      0.4    0.545    0.545
-    {'PaleVioletRed'       }     0.86     0.44    0.576
-    {'PaleVioletRed1'      }        1     0.51     0.67
-    {'PaleVioletRed2'      }    0.932    0.475    0.624
-    {'PaleVioletRed3'      }    0.804    0.408    0.536
-    {'PaleVioletRed4'      }    0.545     0.28    0.365
-    {'PapayaWhip'          }        1    0.936    0.835
-    {'PeachPuff'           }        1    0.855    0.725
-    {'PeachPuff1'          }        1    0.855    0.725
-    {'PeachPuff2'          }    0.932    0.796     0.68
-    {'PeachPuff3'          }    0.804    0.688    0.585
-    {'PeachPuff4'          }    0.545    0.468    0.396
-    {'Peru'                }    0.804     0.52    0.248
-    {'Pink'                }        1    0.752    0.796
-    {'Pink1'               }        1     0.71    0.772
-    {'Pink2'               }    0.932    0.664     0.72
-    {'Pink3'               }    0.804     0.57     0.62
-    {'Pink4'               }    0.545     0.39    0.424
-    {'Plum'                }    0.868    0.628    0.868
-    {'Plum1'               }        1    0.732        1
-    {'Plum2'               }    0.932    0.684    0.932
-    {'Plum3'               }    0.804     0.59    0.804
-    {'Plum4'               }    0.545      0.4    0.545
-    {'PowderBlue'          }     0.69     0.88      0.9
-    {'Purple'              }      0.5        0      0.5
-    {'Purple0'             }    0.628    0.125     0.94
-    {'Purple1'             }    0.608     0.19        1
-    {'Purple2'             }     0.57    0.172    0.932
-    {'Purple3'             }     0.49     0.15    0.804
-    {'Purple4'             }    0.332      0.1    0.545
-    {'Red'                 }        1        0        0
-    {'Red1'                }        1        0        0
-    {'Red2'                }    0.932        0        0
-    {'Red3'                }    0.804        0        0
-    {'Red4'                }    0.545        0        0
-    {'RosyBrown'           }    0.736     0.56     0.56
-    {'RosyBrown1'          }        1    0.756    0.756
-    {'RosyBrown2'          }    0.932    0.705    0.705
-    {'RosyBrown3'          }    0.804    0.608    0.608
-    {'RosyBrown4'          }    0.545     0.41     0.41
-    {'RoyalBlue'           }    0.255     0.41    0.884
-    {'RoyalBlue1'          }    0.284    0.464        1
-    {'RoyalBlue2'          }    0.264     0.43    0.932
-    {'RoyalBlue3'          }    0.228    0.372    0.804
-    {'RoyalBlue4'          }    0.152     0.25    0.545
-    {'SaddleBrown'         }    0.545     0.27    0.075
-    {'Salmon'              }     0.98      0.5    0.448
-    {'Salmon1'             }        1     0.55     0.41
-    {'Salmon2'             }    0.932     0.51    0.385
-    {'Salmon3'             }    0.804     0.44     0.33
-    {'Salmon4'             }    0.545    0.298    0.224
-    {'SandyBrown'          }    0.956    0.644    0.376
-    {'SeaGreen'            }     0.18    0.545     0.34
-    {'SeaGreen1'           }     0.33        1    0.624
-    {'SeaGreen2'           }    0.305    0.932     0.58
-    {'SeaGreen3'           }    0.264    0.804      0.5
-    {'SeaGreen4'           }     0.18    0.545     0.34
-    {'Seashell'            }        1     0.96    0.932
-    {'Seashell1'           }        1     0.96    0.932
-    {'Seashell2'           }    0.932    0.898     0.87
-    {'Seashell3'           }    0.804    0.772     0.75
-    {'Seashell4'           }    0.545    0.525     0.51
-    {'Sienna'              }    0.628     0.32    0.176
-    {'Sienna1'             }        1     0.51     0.28
-    {'Sienna2'             }    0.932    0.475     0.26
-    {'Sienna3'             }    0.804    0.408    0.224
-    {'Sienna4'             }    0.545     0.28     0.15
-    {'Silver'              }    0.752    0.752    0.752
-    {'SkyBlue'             }     0.53    0.808     0.92
-    {'SkyBlue1'            }     0.53    0.808        1
-    {'SkyBlue2'            }    0.494    0.752    0.932
-    {'SkyBlue3'            }    0.424     0.65    0.804
-    {'SkyBlue4'            }     0.29     0.44    0.545
-    {'SlateBlue'           }    0.415    0.352    0.804
-    {'SlateBlue1'          }    0.512    0.435        1
-    {'SlateBlue2'          }     0.48    0.404    0.932
-    {'SlateBlue3'          }     0.41     0.35    0.804
-    {'SlateBlue4'          }     0.28    0.235    0.545
-    {'SlateGray'           }     0.44      0.5    0.565
-    {'SlateGray1'          }    0.776    0.888        1
-    {'SlateGray2'          }    0.725    0.828    0.932
-    {'SlateGray3'          }    0.624    0.712    0.804
-    {'SlateGray4'          }    0.424    0.484    0.545
-    {'SlateGrey'           }     0.44      0.5    0.565
-    {'Snow'                }        1     0.98     0.98
-    {'Snow1'               }        1     0.98     0.98
-    {'Snow2'               }    0.932    0.912    0.912
-    {'Snow3'               }    0.804     0.79     0.79
-    {'Snow4'               }    0.545    0.536    0.536
-    {'SpringGreen'         }        0        1    0.498
-    {'SpringGreen1'        }        0        1    0.498
-    {'SpringGreen2'        }        0    0.932    0.464
-    {'SpringGreen3'        }        0    0.804      0.4
-    {'SpringGreen4'        }        0    0.545     0.27
-    {'SteelBlue'           }    0.275     0.51    0.705
-    {'SteelBlue1'          }     0.39     0.72        1
-    {'SteelBlue2'          }     0.36    0.675    0.932
-    {'SteelBlue3'          }     0.31     0.58    0.804
-    {'SteelBlue4'          }     0.21    0.392    0.545
-    {'Tan'                 }    0.824    0.705     0.55
-    {'Tan1'                }        1    0.648     0.31
-    {'Tan2'                }    0.932    0.604    0.288
-    {'Tan3'                }    0.804     0.52    0.248
-    {'Tan4'                }    0.545    0.352     0.17
-    {'Teal'                }        0      0.5      0.5
-    {'Thistle'             }    0.848     0.75    0.848
-    {'Thistle1'            }        1    0.884        1
-    {'Thistle2'            }    0.932    0.824    0.932
-    {'Thistle3'            }    0.804     0.71    0.804
-    {'Thistle4'            }    0.545    0.484    0.545
-    {'Tomato'              }        1     0.39     0.28
-    {'Tomato1'             }        1     0.39     0.28
-    {'Tomato2'             }    0.932     0.36     0.26
-    {'Tomato3'             }    0.804     0.31    0.224
-    {'Tomato4'             }    0.545     0.21     0.15
-    {'Turquoise'           }     0.25     0.88    0.815
-    {'Turquoise1'          }        0     0.96        1
-    {'Turquoise2'          }        0    0.898    0.932
-    {'Turquoise3'          }        0    0.772    0.804
-    {'Turquoise4'          }        0    0.525    0.545
-    {'Violet'              }    0.932     0.51    0.932
-    {'VioletRed'           }    0.816    0.125    0.565
-    {'VioletRed1'          }        1    0.244     0.59
-    {'VioletRed2'          }    0.932    0.228     0.55
-    {'VioletRed3'          }    0.804    0.196     0.47
-    {'VioletRed4'          }    0.545    0.132     0.32
-    {'Wheat'               }     0.96     0.87      0.7
-    {'Wheat1'              }        1    0.905     0.73
-    {'Wheat2'              }    0.932    0.848    0.684
-    {'Wheat3'              }    0.804     0.73     0.59
-    {'Wheat4'              }    0.545    0.494      0.4
-    {'White'               }        1        1        1
-    {'WhiteSmoke'          }     0.96     0.96     0.96
-    {'Yellow'              }        1        1        0
-    {'Yellow1'             }        1        1        0
-    {'Yellow2'             }    0.932    0.932        0
-    {'Yellow3'             }    0.804    0.804        0
-    {'Yellow4'             }    0.545    0.545        0
-    {'YellowGreen'         }    0.604    0.804    0.196
+![pic_2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141645437.jpg)
+
+![pic_3](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141645505.jpg)
+
+![pic_4](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141645352.jpg)
+
+![pic_5](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141645444.jpg)
+
+![pic_6](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141645095.jpg)
+
+![pic_7](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141646123.jpg)
+
+![pic_8](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141646277.jpg)
+
+![pic_9](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141646720.jpg)
+
+![pic_10](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141646365.jpg)
+
+![pic_11](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141646682.jpg)
+
+![pic_12](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141648117.jpg)
+
+![pic_13](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403141648317.jpg)
+
+```
+           colorName                   RGBtuple1               RGBtuple2          RGBHex    
+    ________________________    ________________________    _______________    _____________
+
+    {'AliceBlue'           }    {[     0.9400 0.9720 1]}    {[240 248 255]}    {["#F0F8FF"]}
+    {'AntiqueWhite'        }    {[0.9800 0.9200 0.8440]}    {[250 235 215]}    {["#FAEBD7"]}
+    {'AntiqueWhite1'       }    {[     1 0.9360 0.8600]}    {[255 239 219]}    {["#FFEFDB"]}
+    {'AntiqueWhite2'       }    {[0.9320 0.8750 0.8000]}    {[238 223 204]}    {["#EEDFCC"]}
+    {'AntiqueWhite3'       }    {[0.8040 0.7520 0.6900]}    {[205 192 176]}    {["#CDC0B0"]}
+    {'AntiqueWhite4'       }    {[0.5450 0.5120 0.4700]}    {[139 131 120]}    {["#8B8378"]}
+    {'Aqua'                }    {[               0 1 1]}    {[  0 255 255]}    {["#00FFFF"]}
+    {'Aquamarine'          }    {[     0.4980 1 0.8300]}    {[127 255 212]}    {["#7FFFD4"]}
+    {'Aquamarine1'         }    {[     0.4980 1 0.8300]}    {[127 255 212]}    {["#7FFFD4"]}
+    {'Aquamarine2'         }    {[0.4640 0.9320 0.7760]}    {[118 238 198]}    {["#76EEC6"]}
+    {'Aquamarine3'         }    {[0.4000 0.8040 0.6680]}    {[102 205 170]}    {["#66CDAA"]}
+    {'Aquamarine4'         }    {[0.2700 0.5450 0.4550]}    {[ 69 139 116]}    {["#458B74"]}
+    {'Azure'               }    {[          0.9400 1 1]}    {[240 255 255]}    {["#F0FFFF"]}
+    {'Azure1'              }    {[          0.9400 1 1]}    {[240 255 255]}    {["#F0FFFF"]}
+    {'Azure2'              }    {[0.8800 0.9320 0.9320]}    {[224 238 238]}    {["#E0EEEE"]}
+    {'Azure3'              }    {[0.7560 0.8040 0.8040]}    {[193 205 205]}    {["#C1CDCD"]}
+    {'Azure4'              }    {[0.5120 0.5450 0.5450]}    {[131 139 139]}    {["#838B8B"]}
+    {'Beige'               }    {[0.9600 0.9600 0.8640]}    {[245 245 220]}    {["#F5F5DC"]}
+    {'Bisque'              }    {[     1 0.8940 0.7700]}    {[255 228 196]}    {["#FFE4C4"]}
+    {'Bisque1'             }    {[     1 0.8940 0.7700]}    {[255 228 196]}    {["#FFE4C4"]}
+    {'Bisque2'             }    {[0.9320 0.8350 0.7160]}    {[238 213 183]}    {["#EED5B7"]}
+    {'Bisque3'             }    {[0.8040 0.7160 0.6200]}    {[205 183 158]}    {["#CDB79E"]}
+    {'Bisque4'             }    {[0.5450 0.4900 0.4200]}    {[139 125 107]}    {["#8B7D6B"]}
+    {'Black'               }    {[               0 0 0]}    {[      0 0 0]}    {["#000000"]}
+    {'BlanchedAlmond'      }    {[     1 0.9200 0.8040]}    {[255 235 205]}    {["#FFEBCD"]}
+    {'Blue'                }    {[               0 0 1]}    {[    0 0 255]}    {["#0000FF"]}
+    {'Blue1'               }    {[               0 0 1]}    {[    0 0 255]}    {["#0000FF"]}
+    {'Blue2'               }    {[          0 0 0.9320]}    {[    0 0 238]}    {["#0000EE"]}
+    {'Blue3'               }    {[          0 0 0.8040]}    {[    0 0 205]}    {["#0000CD"]}
+    {'Blue4'               }    {[          0 0 0.5450]}    {[    0 0 139]}    {["#00008B"]}
+    {'BlueViolet'          }    {[0.5400 0.1700 0.8880]}    {[ 138 43 226]}    {["#8A2BE2"]}
+    {'Brown'               }    {[0.6480 0.1650 0.1650]}    {[  165 42 42]}    {["#A52A2A"]}
+    {'Brown1'              }    {[     1 0.2500 0.2500]}    {[  255 64 64]}    {["#FF4040"]}
+    {'Brown2'              }    {[0.9320 0.2300 0.2300]}    {[  238 59 59]}    {["#EE3B3B"]}
+    {'Brown3'              }    {[0.8040 0.2000 0.2000]}    {[  205 51 51]}    {["#CD3333"]}
+    {'Brown4'              }    {[0.5450 0.1360 0.1360]}    {[  139 35 35]}    {["#8B2323"]}
+    {'BurlyWood'           }    {[0.8700 0.7200 0.5300]}    {[222 184 135]}    {["#DEB887"]}
+    {'Burlywood1'          }    {[     1 0.8280 0.6080]}    {[255 211 155]}    {["#FFD39B"]}
+    {'Burlywood2'          }    {[0.9320 0.7720 0.5700]}    {[238 197 145]}    {["#EEC591"]}
+    {'Burlywood3'          }    {[0.8040 0.6680 0.4900]}    {[205 170 125]}    {["#CDAA7D"]}
+    {'Burlywood4'          }    {[0.5450 0.4500 0.3320]}    {[ 139 115 85]}    {["#8B7355"]}
+    {'CadetBlue'           }    {[0.3720 0.6200 0.6280]}    {[ 95 158 160]}    {["#5F9EA0"]}
+    {'CadetBlue1'          }    {[     0.5960 0.9600 1]}    {[152 245 255]}    {["#98F5FF"]}
+    {'CadetBlue2'          }    {[0.5560 0.8980 0.9320]}    {[142 229 238]}    {["#8EE5EE"]}
+    {'CadetBlue3'          }    {[0.4800 0.7720 0.8040]}    {[122 197 205]}    {["#7AC5CD"]}
+    {'CadetBlue4'          }    {[0.3250 0.5250 0.5450]}    {[ 83 134 139]}    {["#53868B"]}
+    {'Chartreuse'          }    {[          0.4980 1 0]}    {[  127 255 0]}    {["#7FFF00"]}
+    {'Chartreuse1'         }    {[          0.4980 1 0]}    {[  127 255 0]}    {["#7FFF00"]}
+    {'Chartreuse2'         }    {[     0.4640 0.9320 0]}    {[  118 238 0]}    {["#76EE00"]}
+    {'Chartreuse3'         }    {[     0.4000 0.8040 0]}    {[  102 205 0]}    {["#66CD00"]}
+    {'Chartreuse4'         }    {[     0.2700 0.5450 0]}    {[   69 139 0]}    {["#458B00"]}
+    {'Chocolate'           }    {[0.8240 0.4100 0.1160]}    {[ 210 105 30]}    {["#D2691E"]}
+    {'Chocolate1'          }    {[     1 0.4980 0.1400]}    {[ 255 127 36]}    {["#FF7F24"]}
+    {'Chocolate2'          }    {[0.9320 0.4640 0.1300]}    {[ 238 118 33]}    {["#EE7621"]}
+    {'Chocolate3'          }    {[0.8040 0.4000 0.1120]}    {[ 205 102 29]}    {["#CD661D"]}
+    {'Chocolate4'          }    {[0.5450 0.2700 0.0750]}    {[  139 69 19]}    {["#8B4513"]}
+    {'Coral'               }    {[     1 0.4980 0.3120]}    {[ 255 127 80]}    {["#FF7F50"]}
+    {'Coral1'              }    {[     1 0.4480 0.3360]}    {[ 255 114 86]}    {["#FF7256"]}
+    {'Coral2'              }    {[0.9320 0.4150 0.3120]}    {[ 238 106 80]}    {["#EE6A50"]}
+    {'Coral3'              }    {[0.8040 0.3560 0.2700]}    {[  205 91 69]}    {["#CD5B45"]}
+    {'Coral4'              }    {[0.5450 0.2440 0.1850]}    {[  139 62 47]}    {["#8B3E2F"]}
+    {'CornflowerBlue'      }    {[0.3920 0.5850 0.9300]}    {[100 149 237]}    {["#6495ED"]}
+    {'Cornsilk'            }    {[     1 0.9720 0.8640]}    {[255 248 220]}    {["#FFF8DC"]}
+    {'Cornsilk1'           }    {[     1 0.9720 0.8640]}    {[255 248 220]}    {["#FFF8DC"]}
+    {'Cornsilk2'           }    {[0.9320 0.9100 0.8040]}    {[238 232 205]}    {["#EEE8CD"]}
+    {'Cornsilk3'           }    {[0.8040 0.7850 0.6940]}    {[205 200 177]}    {["#CDC8B1"]}
+    {'Cornsilk4'           }    {[0.5450 0.5320 0.4700]}    {[139 136 120]}    {["#8B8878"]}
+    {'Crimson'             }    {[0.8640 0.0800 0.2350]}    {[  220 20 60]}    {["#DC143C"]}
+    {'Cyan'                }    {[               0 1 1]}    {[  0 255 255]}    {["#00FFFF"]}
+    {'Cyan1'               }    {[               0 1 1]}    {[  0 255 255]}    {["#00FFFF"]}
+    {'Cyan2'               }    {[     0 0.9320 0.9320]}    {[  0 238 238]}    {["#00EEEE"]}
+    {'Cyan3'               }    {[     0 0.8040 0.8040]}    {[  0 205 205]}    {["#00CDCD"]}
+    {'Cyan4'               }    {[     0 0.5450 0.5450]}    {[  0 139 139]}    {["#008B8B"]}
+    {'DarkBlue'            }    {[          0 0 0.5450]}    {[    0 0 139]}    {["#00008B"]}
+    {'DarkCyan'            }    {[     0 0.5450 0.5450]}    {[  0 139 139]}    {["#008B8B"]}
+    {'DarkGoldenrod'       }    {[0.7200 0.5250 0.0440]}    {[ 184 134 11]}    {["#B8860B"]}
+    {'DarkGoldenrod1'      }    {[     1 0.7250 0.0600]}    {[ 255 185 15]}    {["#FFB90F"]}
+    {'DarkGoldenrod2'      }    {[0.9320 0.6800 0.0550]}    {[ 238 173 14]}    {["#EEAD0E"]}
+    {'DarkGoldenrod3'      }    {[0.8040 0.5850 0.0480]}    {[ 205 149 12]}    {["#CD950C"]}
+    {'DarkGoldenrod4'      }    {[0.5450 0.3960 0.0300]}    {[  139 101 8]}    {["#8B6508"]}
+    {'DarkGray'            }    {[0.6640 0.6640 0.6640]}    {[169 169 169]}    {["#A9A9A9"]}
+    {'DarkGreen'           }    {[          0 0.3920 0]}    {[    0 100 0]}    {["#006400"]}
+    {'DarkGrey'            }    {[0.6640 0.6640 0.6640]}    {[169 169 169]}    {["#A9A9A9"]}
+    {'DarkKhaki'           }    {[0.7400 0.7160 0.4200]}    {[189 183 107]}    {["#BDB76B"]}
+    {'DarkMagenta'         }    {[     0.5450 0 0.5450]}    {[  139 0 139]}    {["#8B008B"]}
+    {'DarkOliveGreen'      }    {[0.3320 0.4200 0.1850]}    {[  85 107 47]}    {["#556B2F"]}
+    {'DarkOliveGreen1'     }    {[     0.7920 1 0.4400]}    {[202 255 112]}    {["#CAFF70"]}
+    {'DarkOliveGreen2'     }    {[0.7360 0.9320 0.4080]}    {[188 238 104]}    {["#BCEE68"]}
+    {'DarkOliveGreen3'     }    {[0.6350 0.8040 0.3520]}    {[ 162 205 90]}    {["#A2CD5A"]}
+    {'DarkOliveGreen4'     }    {[0.4300 0.5450 0.2400]}    {[ 110 139 61]}    {["#6E8B3D"]}
+    {'DarkOrange'          }    {[          1 0.5500 0]}    {[  255 140 0]}    {["#FF8C00"]}
+    {'DarkOrange1'         }    {[          1 0.4980 0]}    {[  255 127 0]}    {["#FF7F00"]}
+    {'DarkOrange2'         }    {[     0.9320 0.4640 0]}    {[  238 118 0]}    {["#EE7600"]}
+    {'DarkOrange3'         }    {[     0.8040 0.4000 0]}    {[  205 102 0]}    {["#CD6600"]}
+    {'DarkOrange4'         }    {[     0.5450 0.2700 0]}    {[   139 69 0]}    {["#8B4500"]}
+    {'DarkOrchid'          }    {[0.6000 0.1960 0.8000]}    {[ 153 50 204]}    {["#9932CC"]}
+    {'DarkOrchid1'         }    {[     0.7500 0.2440 1]}    {[ 191 62 255]}    {["#BF3EFF"]}
+    {'DarkOrchid2'         }    {[0.6980 0.2280 0.9320]}    {[ 178 58 238]}    {["#B23AEE"]}
+    {'DarkOrchid3'         }    {[0.6040 0.1960 0.8040]}    {[ 154 50 205]}    {["#9A32CD"]}
+    {'DarkOrchid4'         }    {[0.4080 0.1320 0.5450]}    {[ 104 34 139]}    {["#68228B"]}
+    {'DarkRed'             }    {[          0.5450 0 0]}    {[    139 0 0]}    {["#8B0000"]}
+    {'DarkSalmon'          }    {[0.9120 0.5900 0.4800]}    {[233 150 122]}    {["#E9967A"]}
+    {'DarkSeaGreen'        }    {[0.5600 0.7360 0.5600]}    {[143 188 143]}    {["#8FBC8F"]}
+    {'DarkSeaGreen1'       }    {[     0.7560 1 0.7560]}    {[193 255 193]}    {["#C1FFC1"]}
+    {'DarkSeaGreen2'       }    {[0.7050 0.9320 0.7050]}    {[180 238 180]}    {["#B4EEB4"]}
+    {'DarkSeaGreen3'       }    {[0.6080 0.8040 0.6080]}    {[155 205 155]}    {["#9BCD9B"]}
+    {'DarkSeaGreen4'       }    {[0.4100 0.5450 0.4100]}    {[105 139 105]}    {["#698B69"]}
+    {'DarkSlateBlue'       }    {[0.2840 0.2400 0.5450]}    {[  72 61 139]}    {["#483D8B"]}
+    {'DarkSlateGray'       }    {[0.1850 0.3100 0.3100]}    {[   47 79 79]}    {["#2F4F4F"]}
+    {'DarkSlateGray1'      }    {[          0.5920 1 1]}    {[151 255 255]}    {["#97FFFF"]}
+    {'DarkSlateGray2'      }    {[0.5520 0.9320 0.9320]}    {[141 238 238]}    {["#8DEEEE"]}
+    {'DarkSlateGray3'      }    {[0.4750 0.8040 0.8040]}    {[121 205 205]}    {["#79CDCD"]}
+    {'DarkSlateGray4'      }    {[0.3200 0.5450 0.5450]}    {[ 82 139 139]}    {["#528B8B"]}
+    {'DarkSlateGrey'       }    {[0.1850 0.3100 0.3100]}    {[   47 79 79]}    {["#2F4F4F"]}
+    {'DarkTurquoise'       }    {[     0 0.8080 0.8200]}    {[  0 206 209]}    {["#00CED1"]}
+    {'DarkViolet'          }    {[     0.5800 0 0.8280]}    {[  148 0 211]}    {["#9400D3"]}
+    {'DeepPink'            }    {[     1 0.0800 0.5760]}    {[ 255 20 147]}    {["#FF1493"]}
+    {'DeepPink1'           }    {[     1 0.0800 0.5760]}    {[ 255 20 147]}    {["#FF1493"]}
+    {'DeepPink2'           }    {[0.9320 0.0700 0.5360]}    {[ 238 18 137]}    {["#EE1289"]}
+    {'DeepPink3'           }    {[0.8040 0.0640 0.4640]}    {[ 205 16 118]}    {["#CD1076"]}
+    {'DeepPink4'           }    {[0.5450 0.0400 0.3120]}    {[  139 10 80]}    {["#8B0A50"]}
+    {'DeepSkyBlue'         }    {[          0 0.7500 1]}    {[  0 191 255]}    {["#00BFFF"]}
+    {'DeepSkyBlue1'        }    {[          0 0.7500 1]}    {[  0 191 255]}    {["#00BFFF"]}
+    {'DeepSkyBlue2'        }    {[     0 0.6980 0.9320]}    {[  0 178 238]}    {["#00B2EE"]}
+    {'DeepSkyBlue3'        }    {[     0 0.6040 0.8040]}    {[  0 154 205]}    {["#009ACD"]}
+    {'DeepSkyBlue4'        }    {[     0 0.4080 0.5450]}    {[  0 104 139]}    {["#00688B"]}
+    {'DimGray'             }    {[0.4100 0.4100 0.4100]}    {[105 105 105]}    {["#696969"]}
+    {'DimGrey'             }    {[0.4100 0.4100 0.4100]}    {[105 105 105]}    {["#696969"]}
+    {'DodgerBlue'          }    {[     0.1160 0.5650 1]}    {[ 30 144 255]}    {["#1E90FF"]}
+    {'DodgerBlue1'         }    {[     0.1160 0.5650 1]}    {[ 30 144 255]}    {["#1E90FF"]}
+    {'DodgerBlue2'         }    {[0.1100 0.5250 0.9320]}    {[ 28 134 238]}    {["#1C86EE"]}
+    {'DodgerBlue3'         }    {[0.0940 0.4550 0.8040]}    {[ 24 116 205]}    {["#1874CD"]}
+    {'DodgerBlue4'         }    {[0.0640 0.3050 0.5450]}    {[  16 78 139]}    {["#104E8B"]}
+    {'FireBrick'           }    {[0.6980 0.1320 0.1320]}    {[  178 34 34]}    {["#B22222"]}
+    {'Firebrick1'          }    {[     1 0.1900 0.1900]}    {[  255 48 48]}    {["#FF3030"]}
+    {'Firebrick2'          }    {[0.9320 0.1720 0.1720]}    {[  238 44 44]}    {["#EE2C2C"]}
+    {'Firebrick3'          }    {[0.8040 0.1500 0.1500]}    {[  205 38 38]}    {["#CD2626"]}
+    {'Firebrick4'          }    {[0.5450 0.1000 0.1000]}    {[  139 26 26]}    {["#8B1A1A"]}
+    {'FloralWhite'         }    {[     1 0.9800 0.9400]}    {[255 250 240]}    {["#FFFAF0"]}
+    {'ForestGreen'         }    {[0.1320 0.5450 0.1320]}    {[  34 139 34]}    {["#228B22"]}
+    {'Fuchsia'             }    {[               1 0 1]}    {[  255 0 255]}    {["#FF00FF"]}
+    {'Gainsboro'           }    {[0.8640 0.8640 0.8640]}    {[220 220 220]}    {["#DCDCDC"]}
+    {'GhostWhite'          }    {[     0.9720 0.9720 1]}    {[248 248 255]}    {["#F8F8FF"]}
+    {'Gold'                }    {[          1 0.8440 0]}    {[  255 215 0]}    {["#FFD700"]}
+    {'Gold1'               }    {[          1 0.8440 0]}    {[  255 215 0]}    {["#FFD700"]}
+    {'Gold2'               }    {[     0.9320 0.7900 0]}    {[  238 201 0]}    {["#EEC900"]}
+    {'Gold3'               }    {[     0.8040 0.6800 0]}    {[  205 173 0]}    {["#CDAD00"]}
+    {'Gold4'               }    {[     0.5450 0.4600 0]}    {[  139 117 0]}    {["#8B7500"]}
+    {'Goldenrod'           }    {[0.8550 0.6480 0.1250]}    {[ 218 165 32]}    {["#DAA520"]}
+    {'Goldenrod1'          }    {[     1 0.7560 0.1450]}    {[ 255 193 37]}    {["#FFC125"]}
+    {'Goldenrod2'          }    {[0.9320 0.7050 0.1320]}    {[ 238 180 34]}    {["#EEB422"]}
+    {'Goldenrod3'          }    {[0.8040 0.6080 0.1120]}    {[ 205 155 29]}    {["#CD9B1D"]}
+    {'Goldenrod4'          }    {[0.5450 0.4100 0.0800]}    {[ 139 105 20]}    {["#8B6914"]}
+    {'Gray'                }    {[0.5000 0.5000 0.5000]}    {[128 128 128]}    {["#808080"]}
+    {'Gray0'               }    {[0.7450 0.7450 0.7450]}    {[190 190 190]}    {["#BEBEBE"]}
+    {'Green'               }    {[          0 0.5000 0]}    {[    0 128 0]}    {["#008000"]}
+    {'Green0'              }    {[               0 1 0]}    {[    0 255 0]}    {["#00FF00"]}
+    {'Green1'              }    {[               0 1 0]}    {[    0 255 0]}    {["#00FF00"]}
+    {'Green2'              }    {[          0 0.9320 0]}    {[    0 238 0]}    {["#00EE00"]}
+    {'Green3'              }    {[          0 0.8040 0]}    {[    0 205 0]}    {["#00CD00"]}
+    {'Green4'              }    {[          0 0.5450 0]}    {[    0 139 0]}    {["#008B00"]}
+    {'GreenYellow'         }    {[     0.6800 1 0.1850]}    {[ 173 255 47]}    {["#ADFF2F"]}
+    {'Grey'                }    {[0.5000 0.5000 0.5000]}    {[128 128 128]}    {["#808080"]}
+    {'Grey0'               }    {[0.7450 0.7450 0.7450]}    {[190 190 190]}    {["#BEBEBE"]}
+    {'Honeydew'            }    {[     0.9400 1 0.9400]}    {[240 255 240]}    {["#F0FFF0"]}
+    {'Honeydew1'           }    {[     0.9400 1 0.9400]}    {[240 255 240]}    {["#F0FFF0"]}
+    {'Honeydew2'           }    {[0.8800 0.9320 0.8800]}    {[224 238 224]}    {["#E0EEE0"]}
+    {'Honeydew3'           }    {[0.7560 0.8040 0.7560]}    {[193 205 193]}    {["#C1CDC1"]}
+    {'Honeydew4'           }    {[0.5120 0.5450 0.5120]}    {[131 139 131]}    {["#838B83"]}
+    {'HotPink'             }    {[     1 0.4100 0.7050]}    {[255 105 180]}    {["#FF69B4"]}
+    {'HotPink1'            }    {[     1 0.4300 0.7050]}    {[255 110 180]}    {["#FF6EB4"]}
+    {'HotPink2'            }    {[0.9320 0.4150 0.6550]}    {[238 106 167]}    {["#EE6AA7"]}
+    {'HotPink3'            }    {[0.8040 0.3760 0.5650]}    {[ 205 96 144]}    {["#CD6090"]}
+    {'HotPink4'            }    {[0.5450 0.2280 0.3850]}    {[  139 58 98]}    {["#8B3A62"]}
+    {'IndianRed'           }    {[0.8040 0.3600 0.3600]}    {[  205 92 92]}    {["#CD5C5C"]}
+    {'IndianRed1'          }    {[     1 0.4150 0.4150]}    {[255 106 106]}    {["#FF6A6A"]}
+    {'IndianRed2'          }    {[0.9320 0.3900 0.3900]}    {[  238 99 99]}    {["#EE6363"]}
+    {'IndianRed3'          }    {[0.8040 0.3320 0.3320]}    {[  205 85 85]}    {["#CD5555"]}
+    {'IndianRed4'          }    {[0.5450 0.2280 0.2280]}    {[  139 58 58]}    {["#8B3A3A"]}
+    {'Indigo'              }    {[     0.2940 0 0.5100]}    {[   75 0 130]}    {["#4B0082"]}
+    {'Ivory'               }    {[          1 1 0.9400]}    {[255 255 240]}    {["#FFFFF0"]}
+    {'Ivory1'              }    {[          1 1 0.9400]}    {[255 255 240]}    {["#FFFFF0"]}
+    {'Ivory2'              }    {[0.9320 0.9320 0.8800]}    {[238 238 224]}    {["#EEEEE0"]}
+    {'Ivory3'              }    {[0.8040 0.8040 0.7560]}    {[205 205 193]}    {["#CDCDC1"]}
+    {'Ivory4'              }    {[0.5450 0.5450 0.5120]}    {[139 139 131]}    {["#8B8B83"]}
+    {'Khaki'               }    {[0.9400 0.9000 0.5500]}    {[240 230 140]}    {["#F0E68C"]}
+    {'Khaki1'              }    {[     1 0.9650 0.5600]}    {[255 246 143]}    {["#FFF68F"]}
+    {'Khaki2'              }    {[0.9320 0.9000 0.5200]}    {[238 230 133]}    {["#EEE685"]}
+    {'Khaki3'              }    {[0.8040 0.7760 0.4500]}    {[205 198 115]}    {["#CDC673"]}
+    {'Khaki4'              }    {[0.5450 0.5250 0.3050]}    {[ 139 134 78]}    {["#8B864E"]}
+    {'Lavender'            }    {[0.9000 0.9000 0.9800]}    {[230 230 250]}    {["#E6E6FA"]}
+    {'LavenderBlush'       }    {[     1 0.9400 0.9600]}    {[255 240 245]}    {["#FFF0F5"]}
+    {'LavenderBlush1'      }    {[     1 0.9400 0.9600]}    {[255 240 245]}    {["#FFF0F5"]}
+    {'LavenderBlush2'      }    {[0.9320 0.8800 0.8980]}    {[238 224 229]}    {["#EEE0E5"]}
+    {'LavenderBlush3'      }    {[0.8040 0.7560 0.7720]}    {[205 193 197]}    {["#CDC1C5"]}
+    {'LavenderBlush4'      }    {[0.5450 0.5120 0.5250]}    {[139 131 134]}    {["#8B8386"]}
+    {'LawnGreen'           }    {[     0.4880 0.9900 0]}    {[  124 252 0]}    {["#7CFC00"]}
+    {'LemonChiffon'        }    {[     1 0.9800 0.8040]}    {[255 250 205]}    {["#FFFACD"]}
+    {'LemonChiffon1'       }    {[     1 0.9800 0.8040]}    {[255 250 205]}    {["#FFFACD"]}
+    {'LemonChiffon2'       }    {[0.9320 0.9120 0.7500]}    {[238 233 191]}    {["#EEE9BF"]}
+    {'LemonChiffon3'       }    {[0.8040 0.7900 0.6480]}    {[205 201 165]}    {["#CDC9A5"]}
+    {'LemonChiffon4'       }    {[0.5450 0.5360 0.4400]}    {[139 137 112]}    {["#8B8970"]}
+    {'LightBlue'           }    {[0.6800 0.8480 0.9000]}    {[173 216 230]}    {["#ADD8E6"]}
+    {'LightBlue1'          }    {[     0.7500 0.9360 1]}    {[191 239 255]}    {["#BFEFFF"]}
+    {'LightBlue2'          }    {[0.6980 0.8750 0.9320]}    {[178 223 238]}    {["#B2DFEE"]}
+    {'LightBlue3'          }    {[0.6040 0.7520 0.8040]}    {[154 192 205]}    {["#9AC0CD"]}
+    {'LightBlue4'          }    {[0.4080 0.5120 0.5450]}    {[104 131 139]}    {["#68838B"]}
+    {'LightCoral'          }    {[0.9400 0.5000 0.5000]}    {[240 128 128]}    {["#F08080"]}
+    {'LightCyan'           }    {[          0.8800 1 1]}    {[224 255 255]}    {["#E0FFFF"]}
+    {'LightCyan1'          }    {[          0.8800 1 1]}    {[224 255 255]}    {["#E0FFFF"]}
+    {'LightCyan2'          }    {[0.8200 0.9320 0.9320]}    {[209 238 238]}    {["#D1EEEE"]}
+    {'LightCyan3'          }    {[0.7050 0.8040 0.8040]}    {[180 205 205]}    {["#B4CDCD"]}
+    {'LightCyan4'          }    {[0.4800 0.5450 0.5450]}    {[122 139 139]}    {["#7A8B8B"]}
+    {'LightGoldenrod'      }    {[0.9330 0.8670 0.5100]}    {[238 221 130]}    {["#EEDD82"]}
+    {'LightGoldenrod1'     }    {[     1 0.9250 0.5450]}    {[255 236 139]}    {["#FFEC8B"]}
+    {'LightGoldenrod2'     }    {[0.9320 0.8640 0.5100]}    {[238 220 130]}    {["#EEDC82"]}
+    {'LightGoldenrod3'     }    {[0.8040 0.7450 0.4400]}    {[205 190 112]}    {["#CDBE70"]}
+    {'LightGoldenrod4'     }    {[0.5450 0.5050 0.2980]}    {[ 139 129 76]}    {["#8B814C"]}
+    {'LightGoldenrodYellow'}    {[0.9800 0.9800 0.8240]}    {[250 250 210]}    {["#FAFAD2"]}
+    {'LightGray'           }    {[0.8280 0.8280 0.8280]}    {[211 211 211]}    {["#D3D3D3"]}
+    {'LightGreen'          }    {[0.5650 0.9320 0.5650]}    {[144 238 144]}    {["#90EE90"]}
+    {'LightGrey'           }    {[0.8280 0.8280 0.8280]}    {[211 211 211]}    {["#D3D3D3"]}
+    {'LightPink'           }    {[     1 0.7120 0.7560]}    {[255 182 193]}    {["#FFB6C1"]}
+    {'LightPink1'          }    {[     1 0.6840 0.7250]}    {[255 174 185]}    {["#FFAEB9"]}
+    {'LightPink2'          }    {[0.9320 0.6350 0.6800]}    {[238 162 173]}    {["#EEA2AD"]}
+    {'LightPink3'          }    {[0.8040 0.5500 0.5850]}    {[205 140 149]}    {["#CD8C95"]}
+    {'LightPink4'          }    {[0.5450 0.3720 0.3960]}    {[ 139 95 101]}    {["#8B5F65"]}
+    {'LightSalmon'         }    {[     1 0.6280 0.4800]}    {[255 160 122]}    {["#FFA07A"]}
+    {'LightSalmon1'        }    {[     1 0.6280 0.4800]}    {[255 160 122]}    {["#FFA07A"]}
+    {'LightSalmon2'        }    {[0.9320 0.5850 0.4480]}    {[238 149 114]}    {["#EE9572"]}
+    {'LightSalmon3'        }    {[0.8040 0.5050 0.3850]}    {[ 205 129 98]}    {["#CD8162"]}
+    {'LightSalmon4'        }    {[0.5450 0.3400 0.2600]}    {[  139 87 66]}    {["#8B5742"]}
+    {'LightSeaGreen'       }    {[0.1250 0.6980 0.6680]}    {[ 32 178 170]}    {["#20B2AA"]}
+    {'LightSkyBlue'        }    {[0.5300 0.8080 0.9800]}    {[135 206 250]}    {["#87CEFA"]}
+    {'LightSkyBlue1'       }    {[     0.6900 0.8880 1]}    {[176 226 255]}    {["#B0E2FF"]}
+    {'LightSkyBlue2'       }    {[0.6440 0.8280 0.9320]}    {[164 211 238]}    {["#A4D3EE"]}
+    {'LightSkyBlue3'       }    {[0.5520 0.7120 0.8040]}    {[141 182 205]}    {["#8DB6CD"]}
+    {'LightSkyBlue4'       }    {[0.3760 0.4840 0.5450]}    {[ 96 123 139]}    {["#607B8B"]}
+    {'LightSlateBlue'      }    {[     0.5180 0.4400 1]}    {[132 112 255]}    {["#8470FF"]}
+    {'LightSlateGray'      }    {[0.4680 0.5320 0.6000]}    {[119 136 153]}    {["#778899"]}
+    {'LightSlateGrey'      }    {[0.4680 0.5320 0.6000]}    {[119 136 153]}    {["#778899"]}
+    {'LightSteelBlue'      }    {[0.6900 0.7700 0.8700]}    {[176 196 222]}    {["#B0C4DE"]}
+    {'LightSteelBlue1'     }    {[     0.7920 0.8840 1]}    {[202 225 255]}    {["#CAE1FF"]}
+    {'LightSteelBlue2'     }    {[0.7360 0.8240 0.9320]}    {[188 210 238]}    {["#BCD2EE"]}
+    {'LightSteelBlue3'     }    {[0.6350 0.7100 0.8040]}    {[162 181 205]}    {["#A2B5CD"]}
+    {'LightSteelBlue4'     }    {[0.4300 0.4840 0.5450]}    {[110 123 139]}    {["#6E7B8B"]}
+    {'LightYellow'         }    {[          1 1 0.8800]}    {[255 255 224]}    {["#FFFFE0"]}
+    {'LightYellow1'        }    {[          1 1 0.8800]}    {[255 255 224]}    {["#FFFFE0"]}
+    {'LightYellow2'        }    {[0.9320 0.9320 0.8200]}    {[238 238 209]}    {["#EEEED1"]}
+    {'LightYellow3'        }    {[0.8040 0.8040 0.7050]}    {[205 205 180]}    {["#CDCDB4"]}
+    {'LightYellow4'        }    {[0.5450 0.5450 0.4800]}    {[139 139 122]}    {["#8B8B7A"]}
+    {'Lime'                }    {[               0 1 0]}    {[    0 255 0]}    {["#00FF00"]}
+    {'LimeGreen'           }    {[0.1960 0.8040 0.1960]}    {[  50 205 50]}    {["#32CD32"]}
+    {'Linen'               }    {[0.9800 0.9400 0.9000]}    {[250 240 230]}    {["#FAF0E6"]}
+    {'Magenta'             }    {[               1 0 1]}    {[  255 0 255]}    {["#FF00FF"]}
+    {'Magenta1'            }    {[               1 0 1]}    {[  255 0 255]}    {["#FF00FF"]}
+    {'Magenta2'            }    {[     0.9320 0 0.9320]}    {[  238 0 238]}    {["#EE00EE"]}
+    {'Magenta3'            }    {[     0.8040 0 0.8040]}    {[  205 0 205]}    {["#CD00CD"]}
+    {'Magenta4'            }    {[     0.5450 0 0.5450]}    {[  139 0 139]}    {["#8B008B"]}
+    {'Maroon'              }    {[          0.5000 0 0]}    {[    128 0 0]}    {["#800000"]}
+    {'Maroon0'             }    {[0.6900 0.1900 0.3760]}    {[  176 48 96]}    {["#B03060"]}
+    {'Maroon1'             }    {[     1 0.2040 0.7000]}    {[ 255 52 179]}    {["#FF34B3"]}
+    {'Maroon2'             }    {[0.9320 0.1900 0.6550]}    {[ 238 48 167]}    {["#EE30A7"]}
+    {'Maroon3'             }    {[0.8040 0.1600 0.5650]}    {[ 205 41 144]}    {["#CD2990"]}
+    {'Maroon4'             }    {[0.5450 0.1100 0.3850]}    {[  139 28 98]}    {["#8B1C62"]}
+    {'MediumAquamarine'    }    {[0.4000 0.8040 0.6680]}    {[102 205 170]}    {["#66CDAA"]}
+    {'MediumBlue'          }    {[          0 0 0.8040]}    {[    0 0 205]}    {["#0000CD"]}
+    {'MediumOrchid'        }    {[0.7300 0.3320 0.8280]}    {[ 186 85 211]}    {["#BA55D3"]}
+    {'MediumOrchid1'       }    {[     0.8800 0.4000 1]}    {[224 102 255]}    {["#E066FF"]}
+    {'MediumOrchid2'       }    {[0.8200 0.3720 0.9320]}    {[ 209 95 238]}    {["#D15FEE"]}
+    {'MediumOrchid3'       }    {[0.7050 0.3200 0.8040]}    {[ 180 82 205]}    {["#B452CD"]}
+    {'MediumOrchid4'       }    {[0.4800 0.2150 0.5450]}    {[ 122 55 139]}    {["#7A378B"]}
+    {'MediumPurple'        }    {[0.5760 0.4400 0.8600]}    {[147 112 219]}    {["#9370DB"]}
+    {'MediumPurple1'       }    {[     0.6700 0.5100 1]}    {[171 130 255]}    {["#AB82FF"]}
+    {'MediumPurple2'       }    {[0.6240 0.4750 0.9320]}    {[159 121 238]}    {["#9F79EE"]}
+    {'MediumPurple3'       }    {[0.5360 0.4080 0.8040]}    {[137 104 205]}    {["#8968CD"]}
+    {'MediumPurple4'       }    {[0.3650 0.2800 0.5450]}    {[  93 71 139]}    {["#5D478B"]}
+    {'MediumSeaGreen'      }    {[0.2350 0.7000 0.4440]}    {[ 60 179 113]}    {["#3CB371"]}
+    {'MediumSlateBlue'     }    {[0.4840 0.4080 0.9320]}    {[123 104 238]}    {["#7B68EE"]}
+    {'MediumSpringGreen'   }    {[     0 0.9800 0.6040]}    {[  0 250 154]}    {["#00FA9A"]}
+    {'MediumTurquoise'     }    {[0.2840 0.8200 0.8000]}    {[ 72 209 204]}    {["#48D1CC"]}
+    {'MediumVioletRed'     }    {[0.7800 0.0840 0.5200]}    {[ 199 21 133]}    {["#C71585"]}
+    {'MidnightBlue'        }    {[0.0980 0.0980 0.4400]}    {[  25 25 112]}    {["#191970"]}
+    {'MintCream'           }    {[     0.9600 1 0.9800]}    {[245 255 250]}    {["#F5FFFA"]}
+    {'MistyRose'           }    {[     1 0.8940 0.8840]}    {[255 228 225]}    {["#FFE4E1"]}
+    {'MistyRose1'          }    {[     1 0.8940 0.8840]}    {[255 228 225]}    {["#FFE4E1"]}
+    {'MistyRose2'          }    {[0.9320 0.8350 0.8240]}    {[238 213 210]}    {["#EED5D2"]}
+    {'MistyRose3'          }    {[0.8040 0.7160 0.7100]}    {[205 183 181]}    {["#CDB7B5"]}
+    {'MistyRose4'          }    {[0.5450 0.4900 0.4840]}    {[139 125 123]}    {["#8B7D7B"]}
+    {'Moccasin'            }    {[     1 0.8940 0.7100]}    {[255 228 181]}    {["#FFE4B5"]}
+    {'NavajoWhite'         }    {[     1 0.8700 0.6800]}    {[255 222 173]}    {["#FFDEAD"]}
+    {'NavajoWhite1'        }    {[     1 0.8700 0.6800]}    {[255 222 173]}    {["#FFDEAD"]}
+    {'NavajoWhite2'        }    {[0.9320 0.8100 0.6300]}    {[238 207 161]}    {["#EECFA1"]}
+    {'NavajoWhite3'        }    {[0.8040 0.7000 0.5450]}    {[205 179 139]}    {["#CDB38B"]}
+    {'NavajoWhite4'        }    {[0.5450 0.4750 0.3700]}    {[ 139 121 94]}    {["#8B795E"]}
+    {'Navy'                }    {[          0 0 0.5000]}    {[    0 0 128]}    {["#000080"]}
+    {'NavyBlue'            }    {[          0 0 0.5000]}    {[    0 0 128]}    {["#000080"]}
+    {'OldLace'             }    {[0.9920 0.9600 0.9000]}    {[253 245 230]}    {["#FDF5E6"]}
+    {'Olive'               }    {[     0.5000 0.5000 0]}    {[  128 128 0]}    {["#808000"]}
+    {'OliveDrab'           }    {[0.4200 0.5560 0.1360]}    {[ 107 142 35]}    {["#6B8E23"]}
+    {'OliveDrab1'          }    {[     0.7520 1 0.2440]}    {[ 192 255 62]}    {["#C0FF3E"]}
+    {'OliveDrab2'          }    {[0.7000 0.9320 0.2280]}    {[ 179 238 58]}    {["#B3EE3A"]}
+    {'OliveDrab3'          }    {[0.6040 0.8040 0.1960]}    {[ 154 205 50]}    {["#9ACD32"]}
+    {'OliveDrab4'          }    {[0.4100 0.5450 0.1320]}    {[ 105 139 34]}    {["#698B22"]}
+    {'Orange'              }    {[          1 0.6480 0]}    {[  255 165 0]}    {["#FFA500"]}
+    {'Orange1'             }    {[          1 0.6480 0]}    {[  255 165 0]}    {["#FFA500"]}
+    {'Orange2'             }    {[     0.9320 0.6040 0]}    {[  238 154 0]}    {["#EE9A00"]}
+    {'Orange3'             }    {[     0.8040 0.5200 0]}    {[  205 133 0]}    {["#CD8500"]}
+    {'Orange4'             }    {[     0.5450 0.3520 0]}    {[   139 90 0]}    {["#8B5A00"]}
+    {'OrangeRed'           }    {[          1 0.2700 0]}    {[   255 69 0]}    {["#FF4500"]}
+    {'OrangeRed1'          }    {[          1 0.2700 0]}    {[   255 69 0]}    {["#FF4500"]}
+    {'OrangeRed2'          }    {[     0.9320 0.2500 0]}    {[   238 64 0]}    {["#EE4000"]}
+    {'OrangeRed3'          }    {[     0.8040 0.2150 0]}    {[   205 55 0]}    {["#CD3700"]}
+    {'OrangeRed4'          }    {[     0.5450 0.1450 0]}    {[   139 37 0]}    {["#8B2500"]}
+    {'Orchid'              }    {[0.8550 0.4400 0.8400]}    {[218 112 214]}    {["#DA70D6"]}
+    {'Orchid1'             }    {[     1 0.5120 0.9800]}    {[255 131 250]}    {["#FF83FA"]}
+    {'Orchid2'             }    {[0.9320 0.4800 0.9120]}    {[238 122 233]}    {["#EE7AE9"]}
+    {'Orchid3'             }    {[0.8040 0.4100 0.7900]}    {[205 105 201]}    {["#CD69C9"]}
+    {'Orchid4'             }    {[0.5450 0.2800 0.5360]}    {[ 139 71 137]}    {["#8B4789"]}
+    {'PaleGoldenrod'       }    {[0.9320 0.9100 0.6680]}    {[238 232 170]}    {["#EEE8AA"]}
+    {'PaleGreen'           }    {[0.5960 0.9850 0.5960]}    {[152 251 152]}    {["#98FB98"]}
+    {'PaleGreen1'          }    {[     0.6040 1 0.6040]}    {[154 255 154]}    {["#9AFF9A"]}
+    {'PaleGreen2'          }    {[0.5650 0.9320 0.5650]}    {[144 238 144]}    {["#90EE90"]}
+    {'PaleGreen3'          }    {[0.4880 0.8040 0.4880]}    {[124 205 124]}    {["#7CCD7C"]}
+    {'PaleGreen4'          }    {[0.3300 0.5450 0.3300]}    {[  84 139 84]}    {["#548B54"]}
+    {'PaleTurquoise'       }    {[0.6880 0.9320 0.9320]}    {[175 238 238]}    {["#AFEEEE"]}
+    {'PaleTurquoise1'      }    {[          0.7320 1 1]}    {[187 255 255]}    {["#BBFFFF"]}
+    {'PaleTurquoise2'      }    {[0.6840 0.9320 0.9320]}    {[174 238 238]}    {["#AEEEEE"]}
+    {'PaleTurquoise3'      }    {[0.5900 0.8040 0.8040]}    {[150 205 205]}    {["#96CDCD"]}
+    {'PaleTurquoise4'      }    {[0.4000 0.5450 0.5450]}    {[102 139 139]}    {["#668B8B"]}
+    {'PaleVioletRed'       }    {[0.8600 0.4400 0.5760]}    {[219 112 147]}    {["#DB7093"]}
+    {'PaleVioletRed1'      }    {[     1 0.5100 0.6700]}    {[255 130 171]}    {["#FF82AB"]}
+    {'PaleVioletRed2'      }    {[0.9320 0.4750 0.6240]}    {[238 121 159]}    {["#EE799F"]}
+    {'PaleVioletRed3'      }    {[0.8040 0.4080 0.5360]}    {[205 104 137]}    {["#CD6889"]}
+    {'PaleVioletRed4'      }    {[0.5450 0.2800 0.3650]}    {[  139 71 93]}    {["#8B475D"]}
+    {'PapayaWhip'          }    {[     1 0.9360 0.8350]}    {[255 239 213]}    {["#FFEFD5"]}
+    {'PeachPuff'           }    {[     1 0.8550 0.7250]}    {[255 218 185]}    {["#FFDAB9"]}
+    {'PeachPuff1'          }    {[     1 0.8550 0.7250]}    {[255 218 185]}    {["#FFDAB9"]}
+    {'PeachPuff2'          }    {[0.9320 0.7960 0.6800]}    {[238 203 173]}    {["#EECBAD"]}
+    {'PeachPuff3'          }    {[0.8040 0.6880 0.5850]}    {[205 175 149]}    {["#CDAF95"]}
+    {'PeachPuff4'          }    {[0.5450 0.4680 0.3960]}    {[139 119 101]}    {["#8B7765"]}
+    {'Peru'                }    {[0.8040 0.5200 0.2480]}    {[ 205 133 63]}    {["#CD853F"]}
+    {'Pink'                }    {[     1 0.7520 0.7960]}    {[255 192 203]}    {["#FFC0CB"]}
+    {'Pink1'               }    {[     1 0.7100 0.7720]}    {[255 181 197]}    {["#FFB5C5"]}
+    {'Pink2'               }    {[0.9320 0.6640 0.7200]}    {[238 169 184]}    {["#EEA9B8"]}
+    {'Pink3'               }    {[0.8040 0.5700 0.6200]}    {[205 145 158]}    {["#CD919E"]}
+    {'Pink4'               }    {[0.5450 0.3900 0.4240]}    {[ 139 99 108]}    {["#8B636C"]}
+    {'Plum'                }    {[0.8680 0.6280 0.8680]}    {[221 160 221]}    {["#DDA0DD"]}
+    {'Plum1'               }    {[          1 0.7320 1]}    {[255 187 255]}    {["#FFBBFF"]}
+    {'Plum2'               }    {[0.9320 0.6840 0.9320]}    {[238 174 238]}    {["#EEAEEE"]}
+    {'Plum3'               }    {[0.8040 0.5900 0.8040]}    {[205 150 205]}    {["#CD96CD"]}
+    {'Plum4'               }    {[0.5450 0.4000 0.5450]}    {[139 102 139]}    {["#8B668B"]}
+    {'PowderBlue'          }    {[0.6900 0.8800 0.9000]}    {[176 224 230]}    {["#B0E0E6"]}
+    {'Purple'              }    {[     0.5000 0 0.5000]}    {[  128 0 128]}    {["#800080"]}
+    {'Purple0'             }    {[0.6280 0.1250 0.9400]}    {[ 160 32 240]}    {["#A020F0"]}
+    {'Purple1'             }    {[     0.6080 0.1900 1]}    {[ 155 48 255]}    {["#9B30FF"]}
+    {'Purple2'             }    {[0.5700 0.1720 0.9320]}    {[ 145 44 238]}    {["#912CEE"]}
+    {'Purple3'             }    {[0.4900 0.1500 0.8040]}    {[ 125 38 205]}    {["#7D26CD"]}
+    {'Purple4'             }    {[0.3320 0.1000 0.5450]}    {[  85 26 139]}    {["#551A8B"]}
+    {'Red'                 }    {[               1 0 0]}    {[    255 0 0]}    {["#FF0000"]}
+    {'Red1'                }    {[               1 0 0]}    {[    255 0 0]}    {["#FF0000"]}
+    {'Red2'                }    {[          0.9320 0 0]}    {[    238 0 0]}    {["#EE0000"]}
+    {'Red3'                }    {[          0.8040 0 0]}    {[    205 0 0]}    {["#CD0000"]}
+    {'Red4'                }    {[          0.5450 0 0]}    {[    139 0 0]}    {["#8B0000"]}
+    {'RosyBrown'           }    {[0.7360 0.5600 0.5600]}    {[188 143 143]}    {["#BC8F8F"]}
+    {'RosyBrown1'          }    {[     1 0.7560 0.7560]}    {[255 193 193]}    {["#FFC1C1"]}
+    {'RosyBrown2'          }    {[0.9320 0.7050 0.7050]}    {[238 180 180]}    {["#EEB4B4"]}
+    {'RosyBrown3'          }    {[0.8040 0.6080 0.6080]}    {[205 155 155]}    {["#CD9B9B"]}
+    {'RosyBrown4'          }    {[0.5450 0.4100 0.4100]}    {[139 105 105]}    {["#8B6969"]}
+    {'RoyalBlue'           }    {[0.2550 0.4100 0.8840]}    {[ 65 105 225]}    {["#4169E1"]}
+    {'RoyalBlue1'          }    {[     0.2840 0.4640 1]}    {[ 72 118 255]}    {["#4876FF"]}
+    {'RoyalBlue2'          }    {[0.2640 0.4300 0.9320]}    {[ 67 110 238]}    {["#436EEE"]}
+    {'RoyalBlue3'          }    {[0.2280 0.3720 0.8040]}    {[  58 95 205]}    {["#3A5FCD"]}
+    {'RoyalBlue4'          }    {[0.1520 0.2500 0.5450]}    {[  39 64 139]}    {["#27408B"]}
+    {'SaddleBrown'         }    {[0.5450 0.2700 0.0750]}    {[  139 69 19]}    {["#8B4513"]}
+    {'Salmon'              }    {[0.9800 0.5000 0.4480]}    {[250 128 114]}    {["#FA8072"]}
+    {'Salmon1'             }    {[     1 0.5500 0.4100]}    {[255 140 105]}    {["#FF8C69"]}
+    {'Salmon2'             }    {[0.9320 0.5100 0.3850]}    {[ 238 130 98]}    {["#EE8262"]}
+    {'Salmon3'             }    {[0.8040 0.4400 0.3300]}    {[ 205 112 84]}    {["#CD7054"]}
+    {'Salmon4'             }    {[0.5450 0.2980 0.2240]}    {[  139 76 57]}    {["#8B4C39"]}
+    {'SandyBrown'          }    {[0.9560 0.6440 0.3760]}    {[ 244 164 96]}    {["#F4A460"]}
+    {'SeaGreen'            }    {[0.1800 0.5450 0.3400]}    {[  46 139 87]}    {["#2E8B57"]}
+    {'SeaGreen1'           }    {[     0.3300 1 0.6240]}    {[ 84 255 159]}    {["#54FF9F"]}
+    {'SeaGreen2'           }    {[0.3050 0.9320 0.5800]}    {[ 78 238 148]}    {["#4EEE94"]}
+    {'SeaGreen3'           }    {[0.2640 0.8040 0.5000]}    {[ 67 205 128]}    {["#43CD80"]}
+    {'SeaGreen4'           }    {[0.1800 0.5450 0.3400]}    {[  46 139 87]}    {["#2E8B57"]}
+    {'Seashell'            }    {[     1 0.9600 0.9320]}    {[255 245 238]}    {["#FFF5EE"]}
+    {'Seashell1'           }    {[     1 0.9600 0.9320]}    {[255 245 238]}    {["#FFF5EE"]}
+    {'Seashell2'           }    {[0.9320 0.8980 0.8700]}    {[238 229 222]}    {["#EEE5DE"]}
+    {'Seashell3'           }    {[0.8040 0.7720 0.7500]}    {[205 197 191]}    {["#CDC5BF"]}
+    {'Seashell4'           }    {[0.5450 0.5250 0.5100]}    {[139 134 130]}    {["#8B8682"]}
+    {'Sienna'              }    {[0.6280 0.3200 0.1760]}    {[  160 82 45]}    {["#A0522D"]}
+    {'Sienna1'             }    {[     1 0.5100 0.2800]}    {[ 255 130 71]}    {["#FF8247"]}
+    {'Sienna2'             }    {[0.9320 0.4750 0.2600]}    {[ 238 121 66]}    {["#EE7942"]}
+    {'Sienna3'             }    {[0.8040 0.4080 0.2240]}    {[ 205 104 57]}    {["#CD6839"]}
+    {'Sienna4'             }    {[0.5450 0.2800 0.1500]}    {[  139 71 38]}    {["#8B4726"]}
+    {'Silver'              }    {[0.7520 0.7520 0.7520]}    {[192 192 192]}    {["#C0C0C0"]}
+    {'SkyBlue'             }    {[0.5300 0.8080 0.9200]}    {[135 206 235]}    {["#87CEEB"]}
+    {'SkyBlue1'            }    {[     0.5300 0.8080 1]}    {[135 206 255]}    {["#87CEFF"]}
+    {'SkyBlue2'            }    {[0.4940 0.7520 0.9320]}    {[126 192 238]}    {["#7EC0EE"]}
+    {'SkyBlue3'            }    {[0.4240 0.6500 0.8040]}    {[108 166 205]}    {["#6CA6CD"]}
+    {'SkyBlue4'            }    {[0.2900 0.4400 0.5450]}    {[ 74 112 139]}    {["#4A708B"]}
+    {'SlateBlue'           }    {[0.4150 0.3520 0.8040]}    {[ 106 90 205]}    {["#6A5ACD"]}
+    {'SlateBlue1'          }    {[     0.5120 0.4350 1]}    {[131 111 255]}    {["#836FFF"]}
+    {'SlateBlue2'          }    {[0.4800 0.4040 0.9320]}    {[122 103 238]}    {["#7A67EE"]}
+    {'SlateBlue3'          }    {[0.4100 0.3500 0.8040]}    {[ 105 89 205]}    {["#6959CD"]}
+    {'SlateBlue4'          }    {[0.2800 0.2350 0.5450]}    {[  71 60 139]}    {["#473C8B"]}
+    {'SlateGray'           }    {[0.4400 0.5000 0.5650]}    {[112 128 144]}    {["#708090"]}
+    {'SlateGray1'          }    {[     0.7760 0.8880 1]}    {[198 226 255]}    {["#C6E2FF"]}
+    {'SlateGray2'          }    {[0.7250 0.8280 0.9320]}    {[185 211 238]}    {["#B9D3EE"]}
+    {'SlateGray3'          }    {[0.6240 0.7120 0.8040]}    {[159 182 205]}    {["#9FB6CD"]}
+    {'SlateGray4'          }    {[0.4240 0.4840 0.5450]}    {[108 123 139]}    {["#6C7B8B"]}
+    {'SlateGrey'           }    {[0.4400 0.5000 0.5650]}    {[112 128 144]}    {["#708090"]}
+    {'Snow'                }    {[     1 0.9800 0.9800]}    {[255 250 250]}    {["#FFFAFA"]}
+    {'Snow1'               }    {[     1 0.9800 0.9800]}    {[255 250 250]}    {["#FFFAFA"]}
+    {'Snow2'               }    {[0.9320 0.9120 0.9120]}    {[238 233 233]}    {["#EEE9E9"]}
+    {'Snow3'               }    {[0.8040 0.7900 0.7900]}    {[205 201 201]}    {["#CDC9C9"]}
+    {'Snow4'               }    {[0.5450 0.5360 0.5360]}    {[139 137 137]}    {["#8B8989"]}
+    {'SpringGreen'         }    {[          0 1 0.4980]}    {[  0 255 127]}    {["#00FF7F"]}
+    {'SpringGreen1'        }    {[          0 1 0.4980]}    {[  0 255 127]}    {["#00FF7F"]}
+    {'SpringGreen2'        }    {[     0 0.9320 0.4640]}    {[  0 238 118]}    {["#00EE76"]}
+    {'SpringGreen3'        }    {[     0 0.8040 0.4000]}    {[  0 205 102]}    {["#00CD66"]}
+    {'SpringGreen4'        }    {[     0 0.5450 0.2700]}    {[   0 139 69]}    {["#008B45"]}
+    {'SteelBlue'           }    {[0.2750 0.5100 0.7050]}    {[ 70 130 180]}    {["#4682B4"]}
+    {'SteelBlue1'          }    {[     0.3900 0.7200 1]}    {[ 99 184 255]}    {["#63B8FF"]}
+    {'SteelBlue2'          }    {[0.3600 0.6750 0.9320]}    {[ 92 172 238]}    {["#5CACEE"]}
+    {'SteelBlue3'          }    {[0.3100 0.5800 0.8040]}    {[ 79 148 205]}    {["#4F94CD"]}
+    {'SteelBlue4'          }    {[0.2100 0.3920 0.5450]}    {[ 54 100 139]}    {["#36648B"]}
+    {'Tan'                 }    {[0.8240 0.7050 0.5500]}    {[210 180 140]}    {["#D2B48C"]}
+    {'Tan1'                }    {[     1 0.6480 0.3100]}    {[ 255 165 79]}    {["#FFA54F"]}
+    {'Tan2'                }    {[0.9320 0.6040 0.2880]}    {[ 238 154 73]}    {["#EE9A49"]}
+    {'Tan3'                }    {[0.8040 0.5200 0.2480]}    {[ 205 133 63]}    {["#CD853F"]}
+    {'Tan4'                }    {[0.5450 0.3520 0.1700]}    {[  139 90 43]}    {["#8B5A2B"]}
+    {'Teal'                }    {[     0 0.5000 0.5000]}    {[  0 128 128]}    {["#008080"]}
+    {'Thistle'             }    {[0.8480 0.7500 0.8480]}    {[216 191 216]}    {["#D8BFD8"]}
+    {'Thistle1'            }    {[          1 0.8840 1]}    {[255 225 255]}    {["#FFE1FF"]}
+    {'Thistle2'            }    {[0.9320 0.8240 0.9320]}    {[238 210 238]}    {["#EED2EE"]}
+    {'Thistle3'            }    {[0.8040 0.7100 0.8040]}    {[205 181 205]}    {["#CDB5CD"]}
+    {'Thistle4'            }    {[0.5450 0.4840 0.5450]}    {[139 123 139]}    {["#8B7B8B"]}
+    {'Tomato'              }    {[     1 0.3900 0.2800]}    {[  255 99 71]}    {["#FF6347"]}
+    {'Tomato1'             }    {[     1 0.3900 0.2800]}    {[  255 99 71]}    {["#FF6347"]}
+    {'Tomato2'             }    {[0.9320 0.3600 0.2600]}    {[  238 92 66]}    {["#EE5C42"]}
+    {'Tomato3'             }    {[0.8040 0.3100 0.2240]}    {[  205 79 57]}    {["#CD4F39"]}
+    {'Tomato4'             }    {[0.5450 0.2100 0.1500]}    {[  139 54 38]}    {["#8B3626"]}
+    {'Turquoise'           }    {[0.2500 0.8800 0.8150]}    {[ 64 224 208]}    {["#40E0D0"]}
+    {'Turquoise1'          }    {[          0 0.9600 1]}    {[  0 245 255]}    {["#00F5FF"]}
+    {'Turquoise2'          }    {[     0 0.8980 0.9320]}    {[  0 229 238]}    {["#00E5EE"]}
+    {'Turquoise3'          }    {[     0 0.7720 0.8040]}    {[  0 197 205]}    {["#00C5CD"]}
+    {'Turquoise4'          }    {[     0 0.5250 0.5450]}    {[  0 134 139]}    {["#00868B"]}
+    {'Violet'              }    {[0.9320 0.5100 0.9320]}    {[238 130 238]}    {["#EE82EE"]}
+    {'VioletRed'           }    {[0.8160 0.1250 0.5650]}    {[ 208 32 144]}    {["#D02090"]}
+    {'VioletRed1'          }    {[     1 0.2440 0.5900]}    {[ 255 62 150]}    {["#FF3E96"]}
+    {'VioletRed2'          }    {[0.9320 0.2280 0.5500]}    {[ 238 58 140]}    {["#EE3A8C"]}
+    {'VioletRed3'          }    {[0.8040 0.1960 0.4700]}    {[ 205 50 120]}    {["#CD3278"]}
+    {'VioletRed4'          }    {[0.5450 0.1320 0.3200]}    {[  139 34 82]}    {["#8B2252"]}
+    {'Wheat'               }    {[0.9600 0.8700 0.7000]}    {[245 222 179]}    {["#F5DEB3"]}
+    {'Wheat1'              }    {[     1 0.9050 0.7300]}    {[255 231 186]}    {["#FFE7BA"]}
+    {'Wheat2'              }    {[0.9320 0.8480 0.6840]}    {[238 216 174]}    {["#EED8AE"]}
+    {'Wheat3'              }    {[0.8040 0.7300 0.5900]}    {[205 186 150]}    {["#CDBA96"]}
+    {'Wheat4'              }    {[0.5450 0.4940 0.4000]}    {[139 126 102]}    {["#8B7E66"]}
+    {'White'               }    {[               1 1 1]}    {[255 255 255]}    {["#FFFFFF"]}
+    {'WhiteSmoke'          }    {[0.9600 0.9600 0.9600]}    {[245 245 245]}    {["#F5F5F5"]}
+    {'Yellow'              }    {[               1 1 0]}    {[  255 255 0]}    {["#FFFF00"]}
+    {'Yellow1'             }    {[               1 1 0]}    {[  255 255 0]}    {["#FFFF00"]}
+    {'Yellow2'             }    {[     0.9320 0.9320 0]}    {[  238 238 0]}    {["#EEEE00"]}
+    {'Yellow3'             }    {[     0.8040 0.8040 0]}    {[  205 205 0]}    {["#CDCD00"]}
+    {'Yellow4'             }    {[     0.5450 0.5450 0]}    {[  139 139 0]}    {["#8B8B00"]}
+    {'YellowGreen'         }    {[0.6040 0.8040 0.1960]}    {[ 154 205 50]}    {["#9ACD32"]}
 ```
 
 <br>
-
-<div id="ref"></div>
 
 **References**
 
@@ -748,6 +831,5 @@ disp(colorTable)
 
 [2] 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
 
-[3] [The Colors  of `xcolor` - Garrick](https://www.garrickadenbuie.com/blog/colors-of-xcolor/).
-
-[4] [tidyverse.org](https://www.tidyverse.org/).
+[^3]: [The Colors  of `xcolor` - Garrick](https://www.garrickadenbuie.com/blog/colors-of-xcolor/).
+[^4]: [tidyverse.org](https://www.tidyverse.org/).

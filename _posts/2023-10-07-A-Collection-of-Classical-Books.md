@@ -103,6 +103,6 @@ last_modified_at: 2024-03-22 09:27:20 +0800
 - **Security Analysis (Sixth Edition)**, Benjamin Graham, David L. Dood, available at: [Security-Analysis (Sixth Edition).pdf](https://glenbradford.com/files/Stocks/security-analysis-benjamin-graham-6th-edition-pdf-february-24-2010-12-08-am-3-0-meg.pdf).
 - **The Psychology of Money: Timeless lessons on wealth, greed, and happiness**, Morgan Housel, available at: [The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness](https://pdflake.com/wp-content/uploads/2021/08/The-Psychology-of-Money-PDF-Book-By-Morgan-Housel.pdf).
 - **The Essays of Warren Buffett: Lessons for Corporate America**, Essays by Warren E. Buffett, available at: [The Essays of Warren Buffett : Lessons for Corporate America.pdf](http://csinvesting.org/wp-content/uploads/2015/05/Essays-of-Warren-Buffett-_-Lessons-for-Corporate-America_Cunningham.pdf).
-- **Reminiscences of a Stock Operator**, Jesse Lauriston Livermore, available at: [Reminiscences of a Stock Operator.pdf](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf).
+- **Reminiscences of a Stock Operator: to Jesse Lauriston Livermore**, Edwin LeFevre, available at: [Reminiscences of a Stock Operator.pdf](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf).
 
 <br>

@@ -1,14 +1,17 @@
 ---
 layout: single
 title: Some Terminologies and Methods in the Fields of Large Language Models
-date: 2024-01-15 20:35:28 +0800
+
 categories:
  - Machine Learning
  - Collections
 tags:
  - NLP (Natural Language Processing)
-last_modified_at: 2024-01-15 20:35:28 +0800
 toc: false
+date: 2024-01-15 20:35:28 +0800
+last_modified_at0: 2024-01-15 20:35:28 +0800
+last_modified_at1: 2024-03-22 21:19:30 +0800
+last_modified_at: 2024-03-22 21:19:30 +0800
 ---
 
 - **LLM (Large Language Model)** [^1] [^12]
@@ -30,6 +33,8 @@ toc: false
   - **PPO (Proximal Policy Optimizer)** [^7] [^8]
   
 - **SSF (Scaling & Shifting Your Features)** [^9]
+
+- **AIGC (Artificial Intelligence Generated Content)**
 
 <br>
 

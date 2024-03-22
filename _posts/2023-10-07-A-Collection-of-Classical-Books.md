@@ -11,7 +11,8 @@ last_modified_at2: 2023-12-05 20:10:39 +0800
 last_modified_at3: 2023-12-07 19:10:49 +0800
 last_modified_at4: 2024-03-03 01:43:50 +0800
 last_modified_at5: 2024-03-03 20:48:51 +0800
-last_modified_at: 2024-03-03 20:48:51 +0800
+last_modified_at6: 2024-03-22 09:27:20 +0800
+last_modified_at: 2024-03-22 09:27:20 +0800
 ---
 
 # Mathematics
@@ -24,6 +25,7 @@ last_modified_at: 2024-03-03 20:48:51 +0800
 - **Probability and Statistics Cookbook (Version 0.2.6)**, available at: [The Probability and Statistics Cookbook](http://statistics.zone/), GitHub repository: [mavam/stat-cookbook: The probability and statistics cookbook](https://github.com/mavam/stat-cookbook).
 - **Methods for Statistical Data Analysis of Multivariate Observations (Second Edition)**, R. Gnanadesikan, available at: [Methods for Statistical Data Analysis of Multivariate Observations](http://ndl.ethernet.edu.et/bitstream/123456789/33247/1/R.%20Gnanadesikan_1997.pdf).
 - **Bayesian Data Analysis (Third Edition)**, Andrew Gelman, John B. Carlin, Hal S. Stern and *et al.*, available at: [Bayesian Data Analysis (Third Edition).pdf](http://www.stat.columbia.edu/~gelman/book/BDA3.pdf).
+- **Upper and Lower Bounds for Stochastic Processes: Decomposition Theorems (Second Edition)**, Michel Talagrand, available at: [Upper and Lower Bounds for Stochastic Processes: Decomposition Theorems (Second Edition).pdf](https://michel.talagrand.net/ULBSPRINGER.pdf). (Personal homepage of Michel Talagrand: [Michel Talagrand's Webpage](https://michel.talagrand.net/)).
 
 ## Matrix
 
@@ -100,5 +102,7 @@ last_modified_at: 2024-03-03 20:48:51 +0800
 
 - **Security Analysis (Sixth Edition)**, Benjamin Graham, David L. Dood, available at: [Security-Analysis (Sixth Edition).pdf](https://glenbradford.com/files/Stocks/security-analysis-benjamin-graham-6th-edition-pdf-february-24-2010-12-08-am-3-0-meg.pdf).
 - **The Psychology of Money: Timeless lessons on wealth, greed, and happiness**, Morgan Housel, available at: [The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness](https://pdflake.com/wp-content/uploads/2021/08/The-Psychology-of-Money-PDF-Book-By-Morgan-Housel.pdf).
+- **The Essays of Warren Buffett: Lessons for Corporate America**, Essays by Warren E. Buffett, available at: [The Essays of Warren Buffett : Lessons for Corporate America.pdf](http://csinvesting.org/wp-content/uploads/2015/05/Essays-of-Warren-Buffett-_-Lessons-for-Corporate-America_Cunningham.pdf).
+- **Reminiscences of a Stock Operator**, Jesse Lauriston Livermore, available at: [Reminiscences of a Stock Operator.pdf](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf).
 
 <br>

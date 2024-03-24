@@ -1,10 +1,6 @@
 ---
 layout: single
-title: When a measure becomes a target, it cease to a good measure. 
-tagline: p-hacking
-header:
-  overlay_color: "#333"
-date: 2022-09-28 23:42:17 +0800
+title: "\"When a measure becomes a target, it cease to be a good measure.\""
 categories: 
  - Mathematics
  - Wisdom
@@ -12,12 +8,15 @@ tags:
  - Probability Theory and Mathematical Statistics
  - Experiment
 toc: false
+date: 2022-09-28 23:42:17 +0800
+last_modified_at0: 2022-09-28 23:42:17 +0800
+last_modified_at1: 2024-03-25 01:05:07 +0800
+last_modified_at: 2024-03-25 01:05:07 +0800
 ---
 
-When a measure becomes a target, it cease to a good measure. —— British economist Charles Goodhart.
-{: .notice--warning}
+![png-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403250120552.png)
 
-Significance test是一个科学的统计推断形式，在学术研究中，研究人员也常用$p$值衡量实验数据的可靠性，以及对比处理方法优劣。但是，正如Goodhart' law指出的：When a measure becomes a target, it cease to a good measure。当科学**指标**$p$值，作为一个实验人员追求的**目标**时，往往就会变得不可靠。实验人员甚至会主观地强加“实验者预期效应”，即$p$值操纵(p-hacking)。
+Significance test是一个科学的统计推断形式，在学术研究中，研究人员也常用$p$值衡量实验数据的可靠性，以及对比处理方法优劣。但是，正如Goodhart's law指出的：When a measure becomes a target, it cease to a good measure。当科学**指标**$p$值，作为一个实验人员追求的**目标**时，往往就会变得不可靠。实验人员甚至会主观地强加“实验者预期效应”，即$p$值操纵(p-hacking)。
 
 p-hacking主要发生在两个阶段，一是在**数据采集阶段**，实验人员会根据当前的显著性结果决定是否停止收集样本，因为$p$值对样本量非常敏感，比如当样本量增加的时候，$p$值可能从不显著转为显著。因此，有些研究者先收集一部分样本，统计分析发现结果不显著，于是再接着补充一部分样本，直到统计显著后才停止收集数据。这种错误的做法会对研究的可重复造成影响；二是在**数据分析阶段**，采用不合理的手段使数据达到显著，使用各种方式“折磨”数据，让它“吐出”$p<0.05$的结果。
 

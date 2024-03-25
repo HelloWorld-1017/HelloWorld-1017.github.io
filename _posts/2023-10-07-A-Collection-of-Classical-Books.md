@@ -12,7 +12,8 @@ last_modified_at3: 2023-12-07 19:10:49 +0800
 last_modified_at4: 2024-03-03 01:43:50 +0800
 last_modified_at5: 2024-03-03 20:48:51 +0800
 last_modified_at6: 2024-03-22 09:27:20 +0800
-last_modified_at: 2024-03-22 09:27:20 +0800
+last_modified_at7: 2024-03-25 18:53:48 +0800
+last_modified_at: 2024-03-25 18:53:48 +0800
 ---
 
 # Mathematics
@@ -25,7 +26,9 @@ last_modified_at: 2024-03-22 09:27:20 +0800
 - **Probability and Statistics Cookbook (Version 0.2.6)**, available at: [The Probability and Statistics Cookbook](http://statistics.zone/), GitHub repository: [mavam/stat-cookbook: The probability and statistics cookbook](https://github.com/mavam/stat-cookbook).
 - **Methods for Statistical Data Analysis of Multivariate Observations (Second Edition)**, R. Gnanadesikan, available at: [Methods for Statistical Data Analysis of Multivariate Observations](http://ndl.ethernet.edu.et/bitstream/123456789/33247/1/R.%20Gnanadesikan_1997.pdf).
 - **Bayesian Data Analysis (Third Edition)**, Andrew Gelman, John B. Carlin, Hal S. Stern and *et al.*, available at: [Bayesian Data Analysis (Third Edition).pdf](http://www.stat.columbia.edu/~gelman/book/BDA3.pdf).
-- **Upper and Lower Bounds for Stochastic Processes: Decomposition Theorems (Second Edition)**, Michel Talagrand, available at: [Upper and Lower Bounds for Stochastic Processes: Decomposition Theorems (Second Edition).pdf](https://michel.talagrand.net/ULBSPRINGER.pdf). (Personal homepage of Michel Talagrand: [Michel Talagrand's Webpage](https://michel.talagrand.net/)).
+- **Upper and Lower Bounds for Stochastic Processes: Decomposition Theorems (Second Edition)**, Michel Talagrand, available at: [Upper and Lower Bounds for Stochastic Processes: Decomposition Theorems (Second Edition).pdf](https://michel.talagrand.net/ULBSPRINGER.pdf).
+  - Personal homepage of Michel Talagrand: [Michel Talagrand's Webpage](https://michel.talagrand.net/).
+
 
 ## Matrix
 
@@ -48,6 +51,11 @@ last_modified_at: 2024-03-22 09:27:20 +0800
 ## Fractals
 
 - **Fractals Everywhere (Second Edition)**, Michael F. Barnsley, available at: [Fractals Everywhere (2nd Edition).pdf](https://mate.dm.uba.ar/~umolter/materias/referencias/B.pdf).
+
+## Popular Science
+
+- **Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics**, John Derbyshire, available at: [Prime Obsession.pdf](http://tomlr.free.fr/Math%E9matiques/Fichiers%20Claude/Nombres/Derbyshire%20-%20Prime%20Obsession%20-%20Bernhard%20Riemann%20and%20the%20Greatest%20Unsolved%20Problem%20in%20MathematicsAAA.pdf).
+- **The End of Certainty**, I. Prigogine, available at: [End-of-Certainty.pdf (sackett.net)](http://sackett.net/End-of-Certainty.pdf).
 
 <br>
 
@@ -82,19 +90,13 @@ last_modified_at: 2024-03-22 09:27:20 +0800
 
 ## C
 
-- **C Primer Plus (Sixth Edition)**, Stephen Prata, available at: [C Primer Plus (6th Edition).pdf](http://54.186.36.238/C%20Primer%20Plus%206th%20%282013%29.pdf).
+- **C Primer Plus (Sixth Edition)**, Stephen Prata, available at: [C Primer Plus (Sixth Edition).pdf](http://54.186.36.238/C%20Primer%20Plus%206th%20%282013%29.pdf).
+- **C++ Primer Plus (Sixth Edition)**, Stephen Prata, available at: [C++ Primer Plus (Sixth Edition).pdf](https://zhjwpku.com/assets/pdf/books/C++.Primer.Plus.6th.Edition.Oct.2011.pdf).
 
 ## LaTeX
 
 - **LaTeX入门**，刘海洋编著，[LaTeX入门.pdf](https://yun.weicheng.men/Book/LaTeX%E5%85%A5%E9%97%A8.pdf).
 - **Manual for Package PGFPLOTS**, Dr. Christian Feuersänger, available at: [Manual for Package PGFPLOTS.pdf](https://sourceforge.net/projects/pgfplots/).
-
-<br>
-
-# Popular Science
-
-- **The End of Certainty**, I. Prigogine, available at: [End-of-Certainty.pdf (sackett.net)](http://sackett.net/End-of-Certainty.pdf).
-- **Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics**, John Derbyshire, available at: [Prime Obsession.pdf](http://tomlr.free.fr/Math%E9matiques/Fichiers%20Claude/Nombres/Derbyshire%20-%20Prime%20Obsession%20-%20Bernhard%20Riemann%20and%20the%20Greatest%20Unsolved%20Problem%20in%20MathematicsAAA.pdf).
 
 <br>
 
@@ -104,5 +106,11 @@ last_modified_at: 2024-03-22 09:27:20 +0800
 - **The Psychology of Money: Timeless lessons on wealth, greed, and happiness**, Morgan Housel, available at: [The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness](https://pdflake.com/wp-content/uploads/2021/08/The-Psychology-of-Money-PDF-Book-By-Morgan-Housel.pdf).
 - **The Essays of Warren Buffett: Lessons for Corporate America**, Essays by Warren E. Buffett, available at: [The Essays of Warren Buffett : Lessons for Corporate America.pdf](http://csinvesting.org/wp-content/uploads/2015/05/Essays-of-Warren-Buffett-_-Lessons-for-Corporate-America_Cunningham.pdf).
 - **Reminiscences of a Stock Operator: to Jesse Lauriston Livermore**, Edwin LeFevre, available at: [Reminiscences of a Stock Operator.pdf](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf).
+
+<br>
+
+# Psychology
+
+- **Forty Studies that Changed Psychology**, Roger R. Hock, available at: [Forty Studies that Changed Psychology.pdf](https://www.mayfieldschools.org/Downloads/All%2040%20Studies.pdf).
 
 <br>

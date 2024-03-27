@@ -9,7 +9,8 @@ tags:
 toc: false
 date: 2024-03-25 17:20:09 +0800
 last_modified_at0: 2024-03-25 17:20:09 +0800
-last_modified_at: 2024-03-25 17:20:09 +0800
+last_modified_at1: 2024-03-26 09:40:29 +0800
+last_modified_at: 2024-03-26 09:40:29 +0800
 ---
 
 In MATLAB, the loop running time can be linearly estimated using the following code:
@@ -27,7 +28,7 @@ for epoch = 1:numEpochs
     if ~mod(epoch,10)
         elapsedTime = duration(0,0,toc(start),"Format","hh:mm:ss");
         estimatedRemainingTime = (numEpochs/epoch-1)*elapsedTime; % Linear estimation
-        currentTime = datetime("now","format","dd/MM/yyyy hh:mm:ss");
+        currentTime = datetime("now","format","dd/MM/yyyy HH:mm:ss"); % Attention here: "dd/MM/yyyy HH:mm:ss", not "dd/MM/yyyy hh:mm:ss"
         ETA = currentTime+estimatedRemainingTime;
 
         fprintf("%s/%s (%.2f%%), Elapsed time: %s, Estimated remaining time: %s, Current time: %s, ETA: %s\n", ...

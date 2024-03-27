@@ -13,7 +13,8 @@ last_modified_at4: 2024-03-03 01:43:50 +0800
 last_modified_at5: 2024-03-03 20:48:51 +0800
 last_modified_at6: 2024-03-22 09:27:20 +0800
 last_modified_at7: 2024-03-25 18:53:48 +0800
-last_modified_at: 2024-03-25 18:53:48 +0800
+last_modified_at8: 2024-03-27 11:04:59 +0800
+last_modified_at: 2024-03-27 11:04:59 +0800
 ---
 
 # Mathematics
@@ -79,7 +80,8 @@ last_modified_at: 2024-03-25 18:53:48 +0800
 ## Machine Learning
 
 - **Deep Learning**, I. Goodfellow *et al.*, available at: [Deep Learning (deeplearningbook.org)](https://www.deeplearningbook.org/).
-- **浅谈人工智能：人工智能的现状、任务、架构与统一**，朱松纯，[浅谈人工智能.pdf](http://www.stat.ucla.edu/~sczhu/Blog_articles/%E6%B5%85%E8%B0%88%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.pdf).
+- **浅谈人工智能：人工智能的现状、任务、架构与统一**，朱松纯，2017，[浅谈人工智能.pdf](http://www.stat.ucla.edu/~sczhu/Blog_articles/%E6%B5%85%E8%B0%88%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.pdf).
+- **Artificial Intelligence: A Modern Approach (Third Edition)**, Stuart J. Russell and Peter Norvig, 2010, available at: [Artificial Intelligence: A Modern Approach.pdf](https://people.engr.tamu.edu/guni/csce421/files/AI_Russell_Norvig.pdf).
 
 ## MATLAB
 

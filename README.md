@@ -1,6 +1,6 @@
 # README
 
-This repository was created on *16 July 2022*, and is supporting my personal blog website: [WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/). The website is based on Jekyll theme [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes) by Michael Rose *et al.*
+This repo is supporting my personal blog website: [WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/). The website is based on Jekyll theme [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes) by Michael Rose *et al.*
 
 To my mind, writing things down is to forget it and carry on. If lucky, I hope these dots could be connected one day when I looking backward.
 

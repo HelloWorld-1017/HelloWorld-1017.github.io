@@ -1,0 +1,53 @@
+/* ==========================================================================
+   myskin skin, modified from Air skin, available from Oct. 24, 2023.
+   Oct. 24, 2023:
+    background-color: #eeeeee -> #ffffff;
+    link-color: #393e46 -> #0076A8 -> #3366CC ;
+    primary-color: #0092ca -> #0076A8;
+    text-color: #222831 -> #000000;
+  Nov. 14, 2023:
+  Add contrast syntax highlighting (base16),
+  refer to: 
+    [1] https: //www.lixl.cn/2019/061036412.html.
+    [2] https: //mmistakes.github.io/minimal-mistakes/docs/stylesheets/#colors
+   ========================================================================== */
+
+/* Colors */
+$background-color: #ffffff !default;
+$link-color: #3366CC !default;
+$primary-color: #3366CC !default; // #0076A8, #0754D5
+$text-color: #000000 !default;
+$muted-text-color: #393e46 !default;
+$border-color: mix(#fff, #393e46, 75%) !default;
+$footer-background-color: $primary-color !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+/* syntax highlighting (base16) from "contrast" skin */
+$base00: #000000;
+$base01: #242422;
+$base02: #484844;
+$base03: #6c6c66;
+$base04: #918f88;
+// $base05: #b5b3aa;
+$base05: #ffffff;
+$base06: #d9d7cc;
+$base07: #fdfbee;
+$base08: #ff6c60;
+$base09: #e9c062;
+$base0a: #ffffb6;
+$base0b: #a8ff60;
+$base0c: #c6c5fe;
+$base0d: #96cbfe;
+$base0e: #ff73fd;
+$base0f: #b18a3d;
+

@@ -1,0 +1,33 @@
+// https://duter2016.github.io/2019/10/04/Jekyll%E6%B7%BB%E5%8A%A0%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E6%8C%89%E9%92%AE/#
+// Define "back to top" button
+#backtop a { /* back to top button */
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    color: #fff;
+    z-index: 1000;
+    background: $primary-color;// $behance-color;
+    padding: auto;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none !important;
+    border-color: $behance-color;
+    border-width: 20px;
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3)
+    // -moz-border-radius: 50px;
+    // -webkit-border-radius: 50px;
+    // box-shadow:0 1px 2px rgba(0,0,0,.15), 0 1px 0 #ffffff inset;
+}
+// #backtop a:hover {
+//   background: #87CEFA;
+//   color: #fff;
+// }
+// Add following code in file ..\_includes\footer.html
+// <div id="backtop">
+//   <a href="#">TOP</a>
+// </div>

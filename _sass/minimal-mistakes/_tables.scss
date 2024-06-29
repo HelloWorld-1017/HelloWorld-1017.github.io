@@ -1,0 +1,60 @@
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table {
+    color: black; // text color
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    // border-radius: $border-radius-table;
+    border-collapse: collapse; //separte
+    border-spacing: 2;
+    display: table; // NOTE HERE: Realize filling the whole webpage width.
+    overflow: auto;
+    width: 100%;
+    box-shadow: $box-shadow2;
+    margin-bottom: 1em;
+    font-family: $global-font-family;
+    font-size: $type-size-6;
+    overflow-x: auto;
+    & + table {
+        margin-top: 1em;
+    }
+}
+
+th {
+    padding: 0.5em;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+}
+
+td {
+    padding: 0.5em;
+ }
+
+table thead th {
+    color: white; // text color in table head
+    background-color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+    vertical-align: bottom;
+    // padding: 5px 10px;
+}
+
+
+table tbody td {
+    // border-top: 1px solid gray;
+    border-top: 1px solid black;
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+hr {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

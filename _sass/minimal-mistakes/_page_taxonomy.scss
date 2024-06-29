@@ -1,0 +1,108 @@
+/*
+   Page taxonomy
+   ========================================================================== */
+
+.page__taxonomy {
+    .sep {
+        display: none;
+    }
+    strong {
+        margin-right: 10px;
+    }
+}
+
+.page__taxonomy-item {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    text-decoration: none;
+    // border: 1px solid mix(#000, $border-color, 25%);
+    border-radius: $border-radius;
+
+    &:hover {
+        text-decoration: none;
+        color: $link-color-hover;
+    }
+}
+
+.taxonomy__section {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+
+    &:not(:last-child) {
+        border-bottom: solid 1px $border-color;
+    }
+
+    .archive__item-title {
+        margin-top: 0;
+    }
+
+    .archive__subtitle {
+        clear: both;
+        border: 0;
+    }
+
+    + .taxonomy__section {
+        margin-top: 2em;
+    }
+}
+
+.taxonomy__title {
+    margin-bottom: 0.5em;
+    color: $muted-text-color;
+}
+
+.taxonomy__count {
+    // color: $muted-text-color;
+    color: white;
+
+    :before {
+        content: "(";
+    }
+}
+
+.taxonomy__index {
+    display: block;
+    // grid-column-gap: 1em;
+    // grid-template-columns: repeat(2, 1fr);
+    margin: 1.414em 0;
+    padding: 0;
+    font-size: 0.75em;
+    list-style: none;
+
+    a {
+        color: white;
+        background-color: blue;
+        display: -ms-flexbox;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    // @include breakpoint($large) {
+    //   grid-template-columns: repeat(4, 1fr);
+    // }
+
+    // a {
+    //     // display: -webkit-box;
+    //     // -ms-flex-pack: justify;
+    //     display: flex;
+    //     padding: 0.25em 0;
+    //     
+    //     
+    //     
+    //     text-decoration: none;
+    //     border-bottom: 1px solid $border-color;
+    // }
+}
+
+
+.back-to-top {
+    display: block;
+    clear: both;
+    color: $muted-text-color;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    text-align: right;
+    text-decoration: none;
+}

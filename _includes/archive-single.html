@@ -1,0 +1,46 @@
+<style type="text/css">
+  a:link,a:visited{
+    text-decoration: none;
+    /* font-size: larger; */
+  }
+  /* a:hover{
+    text-decoration: underline;
+    color: red;
+    font-size: 150%;
+    background-color: blue;
+    color: white;
+    color: blue;
+    font-weight: bold;
+  } */
+</style>
+<!-- Reference: https://blog.csdn.net/chelen_jak/article/details/25962665 -->
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign date = post.date  %}
+{% assign date_format = site.date_format | default: "%b. %d, %Y" %}
+
+<div class="{{ include.type | default: 'list' }}__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src="{{ teaser | relative_url }}" alt="">
+      </div>
+    {% endif %}
+
+    <div style="width:100%;margin-top:20px;margin-bottom:20px;font-size:x-large;"> 
+      {{ date | date: date_format }} <br>
+      <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a><br>
+    </div>
+ </article>
+</div>

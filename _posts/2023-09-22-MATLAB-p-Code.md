@@ -1,0 +1,145 @@
+---
+layout: single
+title: MATLAB p Code
+categories:
+ - MATLAB
+ - C
+tags:
+ - MATLAB Software Development Tools
+ - MATLAB Coder
+toc: false
+date: 2023-09-22 19:07:51 +0800
+last_modified_at0: 2023-09-22 19:07:51 +0800
+last_modified_at1: 2024-04-20 17:15:43 +0800
+last_modified_at: 2024-04-20 17:15:43 +0800
+---
+
+MATLAB `.p` file is a content-obscured version of `.m` source file[^1], and it is commonly used in some scenarios where technicians only want to share some functions they have realized using MATLAB with other people, rather than the whole source code. This usually occurs during the procession of cooperation between different companies or organizations as some technologies are patented and protected by intellectual property.
+
+The conversion of `.p` file from `.m` source file is very easy to perform using MATLAB `pcode` function[^2], and the performance of both files is equivalent[^1].
+
+![image-20230922165851519](https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230922165851519.png)
+
+An official example shows how to use `pcode` function to generate `.p` code corresponding to the original `.m` file[^2]:
+
+```matlab
+% myfunc.m file
+function y = myfunc(x)
+y = sqrt(x.^3 + x.^2 + x + 1);
+end
+```
+
+```matlab
+% Command line
+pcode myfunc -R2022a
+```
+
+> Using parameter `-R2020a` is to choose a more complex obfuscation algorithm than default setting `-R2007b`.
+>
+> <img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230922193005875.png" alt="image-20230922193005875"  />
+
+After executing the command, the `myfunc.p` file will occur in the current folder. The `myfunc.p` file is not permitted to be inspected, edited, or converted to C code. For example, if we execute[^3]:
+
+```matlab
+codegen myfunc -config:lib -args {3.14}
+```
+
+MATLAB will throw an error while generating:
+
+```
+??? P-file '...\myfunc.p' is not authorized for compilation. To support compilation,
+please consider using 'coder.allowpcode('plain')' in this file.
+
+Error in ==> myfunc Line: 1 Column: 1
+Code generation failed: View Error Report
+
+Error using codegen
+```
+
+But, the error information implies a solution that we could add the code `coder.allowpcode('plain')` in the `myfunc.m` file[^4]:
+
+```matlab
+function y = myfunc(x)  %#codegen
+coder.allowpcode('plain')
+y = sqrt(x.^3 + x.^2 + x + 1);
+end
+```
+
+<img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230922184850710.png" alt="image-20230922184850710"  />
+
+At this time, we could re-convert this function to `.p` file and try to generate C language code again; it will generate successfully. 
+
+```
+>> codegen myfunc -config:lib -args {3.14}
+Code generation successful.
+```
+
+We could open `...\codegen\lib\myfunc\myfunc.c` to inspect the results:
+
+```c
+/* ... */
+static double rt_powd_snf(double u0, double u1)
+{
+  double y;
+  if (rtIsNaN(u0) || rtIsNaN(u1)) {
+    y = rtNaN;
+  } else {
+    double d;
+    double d1;
+    d = fabs(u0);
+    d1 = fabs(u1);
+    if (rtIsInf(u1)) {
+      if (d == 1.0) {
+        y = 1.0;
+      } else if (d > 1.0) {
+        if (u1 > 0.0) {
+          y = rtInf;
+        } else {
+          y = 0.0;
+        }
+      } else if (u1 > 0.0) {
+        y = 0.0;
+      } else {
+        y = rtInf;
+      }
+    } else if (d1 == 0.0) {
+      y = 1.0;
+    } else if (d1 == 1.0) {
+      if (u1 > 0.0) {
+        y = u0;
+      } else {
+        y = 1.0 / u0;
+      }
+    } else if (u1 == 2.0) {
+      y = u0 * u0;
+    } else if ((u1 == 0.5) && (u0 >= 0.0)) {
+      y = sqrt(u0);
+    } else if ((u0 < 0.0) && (u1 > floor(u1))) {
+      y = rtNaN;
+    } else {
+      y = pow(u0, u1);
+    }
+  }
+  return y;
+}
+
+/*
+ * Arguments    : double x
+ * Return Type  : double
+ */
+
+double myfunc(double x)
+{
+  return sqrt(((rt_powd_snf(x, 3.0) + x * x) + x) + 1.0);
+}
+/* ... */
+```
+
+<br>
+
+# References
+
+[^1]: [Create a Content-Obscured File with P-Code - MathWorks](https://ww2.mathworks.cn/help/matlab/matlab_prog/building-a-content-obscured-format-with-p-code.html).
+[^2]: [pcode - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/pcode.html).
+[^3]: [codegen - MathWorks](https://ww2.mathworks.cn/help/coder/ref/codegen.html).
+[^4]: [coder.allowpcode - MathWorks](https://ww2.mathworks.cn/help/simulink/slref/coder.allowpcode.html).

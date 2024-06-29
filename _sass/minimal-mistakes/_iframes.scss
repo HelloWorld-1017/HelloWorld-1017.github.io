@@ -1,0 +1,18 @@
+/* ==========================================================================
+   IFRAMES
+   ========================================================================== */
+
+// iframe {
+//   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+// }
+
+.iframe--video {
+   box-shadow: $box-shadow2;
+   border-radius: 7px;
+}
+
+.iframe--music {
+   // box-shadow: $box-shadow2;
+   border-radius: 7px;
+   width: 50%;
+}

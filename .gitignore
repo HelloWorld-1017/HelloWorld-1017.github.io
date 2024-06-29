@@ -1,0 +1,30 @@
+# Ignore website compile files
+# vendor
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Ignore figure files
+*.gif
+*.avi
+
+# Ignore Visual Studio compile files
+.vscode
+
+# Ignore PyCharm compile files
+__pycache__
+.idea
+.ipynb_checkpoints
+
+# Ignore MATLAB simulation compile files
+slprj
+*.slxc
+
+# Ignore TeXstudio automatically generated files
+*.aux
+*.log
+*.gz
+*.out
+
+Gemfile.lock

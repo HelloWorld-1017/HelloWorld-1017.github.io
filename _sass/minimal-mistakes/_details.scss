@@ -1,0 +1,27 @@
+/* ==========================================================================
+   DETAILS
+   ========================================================================== */
+
+.details--exmaple summary {
+    color: blue;
+    width: 50%;
+    padding: 4px;
+    margin: auto;
+    text-align: center;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 1px 1px 5px #bbbbbb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details--exmaple div {
+    display: block;
+    color: red;
+    width: 90%;
+    padding: 17px;
+    margin: auto;
+    background-color: #eeeeee;
+    box-shadow: 1px 1px 5px #bbbbbb;
+    border-radius: 5px;
+}

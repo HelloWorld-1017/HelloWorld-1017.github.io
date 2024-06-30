@@ -1,18 +1,21 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
+<div style="height:74px"></div>
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="https://github.com/HelloWorld-1017">
+            <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
         <a href="https://github.com/HelloWorld-1017">
-          <i class="fab fa-fw fa-github" aria-hidden="true" style="font-size:36px"></i> 
+          <!-- <i class="fab fa-fw fa-github" aria-hidden="true" style="font-size:36px"></i>  -->
           <!-- https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github) -->
         </a>
         <ul class="visible-links">

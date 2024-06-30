@@ -1,13 +1,14 @@
 ---
-layout: single
 title: Clauses in English Grammar
-date: 2023-01-15 16:30:31 +0800
 categories: 
  - English
-toc: false
-classes: wide
 header:
   image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/20230115-clause.png?raw=true
+date: 2023-01-15 16:30:31 +0800
+last_modified_at: 2024-06-29 23:48:08 +0800
+modification_history:
+ - 2023-01-15 16:30:31 +0800
+ - 2024-06-29 23:48:08 +0800
 ---
 
 # Introduction
@@ -41,9 +42,9 @@ header:
 
 <br>
 
-# Three Distinct Functions
+# Three distinct functions
 
-在英语中，*Caluse* 有三种不同的功能：充当 *adverbs*，*adjectives*，或者 *nouns*。如果 *<u>dependent clause</u>* 在 *sentences* 中充当副词，那么它就是副词性子句；如果充当形容词，就是形容词性子句；如果充当名词，就是名词性子句。
+在英语中，*Clause* 有三种不同的功能：充当 *adverbs*，*adjectives*，或者 *nouns*。如果 *<u>dependent clause</u>* 在 *sentences* 中充当副词，那么它就是副词性子句；如果充当形容词，就是形容词性子句；如果充当名词，就是名词性子句。
 
 - The pool was installed **after they built the deck**. (adverb clause)
 - **My friend who rides a motorcycle** said it’s a great weekend to ride. (adjective clause)
@@ -53,7 +54,7 @@ header:
 
 # Types of clauses
 
-### **Independent clauses**
+## **Independent clauses**
 
 *Independent clause* 是指那些能够独立成句的子句，也称为 *simple sentence*. 
 
@@ -68,7 +69,7 @@ header:
 
 实际上，除了 *complex sentences*，其他结构的句子，例如 *compound sentences* 和 *compound-complex sentences*，都是通过结合 *independent clauses* 和 *dependent clauses* 构成的。
 
-### Dependent clauses
+## Dependent clauses
 
 *Dependent clause* （也被称为 *subordinate clauses*，即从句）不是一个完整的句子，*Dependent clause* 必须依赖于*independent clauses* 才能清楚地表达出观点。
 
@@ -90,7 +91,7 @@ header:
 
 <br>
 
-# Clauses Combination
+# Clauses combination
 
 在英语中，所有的句子都至少包含一个 *independent clause*。在很多时候，我们需要将多个 *clause* 结合起来，构成一个完整的句子：
 
@@ -145,9 +146,9 @@ header:
 
 <br>
 
-**References**
+# References
 
-[1] [Clauses: How Do We Use Them in English? - Grammarly Blog](https://www.grammarly.com/blog/clauses/?gclid=CjwKCAiAwomeBhBWEiwAM43YIOJX1u6_kaxc-ZyurHZghnf-K5U2bl0cyVkYtNHbs8RB5zMtDXiYdRoCztQQAvD_BwE&gclsrc=aw.ds)
+[1] [Clauses: How Do We Use Them in English? - Grammarly Blog](https://www.grammarly.com/blog/clauses/?gclid=CjwKCAiAwomeBhBWEiwAM43YIOJX1u6_kaxc-ZyurHZghnf-K5U2bl0cyVkYtNHbs8RB5zMtDXiYdRoCztQQAvD_BwE&gclsrc=aw.ds).
 
-[2] [All the Common Types of Sentences, Explained - Grammarly](https://www.grammarly.com/blog/types-of-sentences/)
+[2] [All the Common Types of Sentences, Explained - Grammarly](https://www.grammarly.com/blog/types-of-sentences/).
 

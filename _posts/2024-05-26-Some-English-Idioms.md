@@ -13,6 +13,9 @@ notes:
  - got the idea
  - that's that
  - Out of thin air
+ - in a way
+ - That said; Having said that; That being said
+ - tighten your belts
 ---
 
 ## At any rate

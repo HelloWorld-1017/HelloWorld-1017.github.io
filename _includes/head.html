@@ -15,18 +15,38 @@
       }
     };
   </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-</head>
 
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Ban zoom in and out -->
+  <!-- https://blog.csdn.net/qq_36451496/article/details/120955798 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+  <script>
+    document.addEventListener('mousewheel', function (e) {
+      e = e || window.event;
+      if ((e.wheelDelta && event.ctrlKey) || e.detail) {
+        event.preventDefault();
+      }
+    }, {
+      capture: false,
+      passive: false
+    });
+    document.addEventListener('keydown', function (event) {
+      if ((event.ctrlKey === true || event.metaKey === true)
+        && (event.keyCode === 61 || event.keyCode === 107
+          || event.keyCode === 173 || event.keyCode === 109
+          || event.keyCode === 187 || event.keyCode === 189)) {
+        event.preventDefault();
+      }
+    }, false);
+  </script>
+</head>
 
 {% include seo.html %}
 
 {% unless site.atom_feed.hide %}
   <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 {% endunless %}
-
-<!-- https://t.co/dKP3o1e -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';

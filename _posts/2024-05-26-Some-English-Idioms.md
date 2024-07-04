@@ -17,6 +17,7 @@ notes:
  - That said; Having said that; That being said
  - tighten your belts
  - to date
+ - One and the same
 ---
 
 ## At any rate

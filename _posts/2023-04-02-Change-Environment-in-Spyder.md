@@ -1,13 +1,17 @@
 ---
-layout: single
-title: Create and Change Python Environment in Spyder Software
+title: Create and Change Python Environment in Spyder IDE (through Python conda)
+toc: false
 categories: 
  - Python
-toc: false
+tags:
+ - Python conda
+ - Python Virtual Environments
 date: 2023-04-02 16:42:49 +0800
-last_modified_at0: 2023-04-02 16:42:49 +0800
-last_modified_at1: 2024-05-22 19:41:35 +0800
-last_modified_at: 2024-05-22 19:41:35 +0800
+last_modified_at: 2024-07-04 16:04:54 +0800
+modification_history:
+ - 2023-04-02 16:42:49 +0800
+ - 2024-05-22 19:41:35 +0800
+ - 2024-07-04 16:04:54 +0800
 ---
 
 首先，创建一个新的环境`newenv1`：

@@ -1,4 +1,5 @@
-// Self-defined division class
+// Self-defined division classes
+
 .quote--center {
     display: block;
     width: 90%;
@@ -21,6 +22,20 @@
     // background: #FFFFF0;
     // box-shadow: $box-shadow2;
     // border-radius: 7px;
+    quotes: "\201C" "\201C";
+}
+
+// Add quote mark
+// https://stackoverflow.com/a/32911561/22763127
+// https://www.geeksforgeeks.org/how-to-set-the-marks-for-quotations-in-css/
+.quote--left:before {
+    content: open-quote;
+    position: absolute;
+    color: $Ivory4;
+    font-size: 4em;
+    margin-left: -0.5em;
+    margin-top: 0.27em;
+    vertical-align: top;
 }
 
 .quote--lyrics {

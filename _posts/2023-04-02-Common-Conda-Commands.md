@@ -6,12 +6,14 @@ categories:
 tags:
  - Python conda
 date: 2023-04-02 16:15:03 +0800
-last_modified_at0: 2023-04-02 16:15:03 +0800
-last_modified_at1: 2024-05-23 13:54:55 +0800
-last_modified_at: 2024-05-23 13:54:55 +0800
+last_modified_at: 2024-07-01 18:29:47 +0800
+modification_history:
+ - 2023-04-02 16:15:03 +0800
+ - 2024-05-23 13:54:55 +0800
+ - 2024-07-01 18:29:47 +0800
 ---
 
-# Manage Environment
+# Manage environment
 
 ## Create environment
 
@@ -45,7 +47,7 @@ conda deactivate
 
 ![image-20230402150133736](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230402150133736.png?raw=true)
 
-## List all environments
+## List all available environments
 
 
 查看conda中的环境信息：
@@ -61,7 +63,7 @@ conda info --envs
 注：其中的\*代表当前所处的环境。
 {: .notice--primary}
 
-## Modify the default installing path
+## Modify default installment path
 
 从上面的例子中可以看到，虽然Anaconda安装在D盘，但是新环境安装在了C盘，默认安装在`C:\Users\username\.conda\envs`下。可以按照博客 [2] 中提供的方法修改环境的默认安装路径。
 
@@ -104,7 +106,7 @@ conda remove -n newevns2 python
 
 <br>
 
-# Manage Packages
+# Manage packages
 
 ## Install packages
 
@@ -193,4 +195,4 @@ conda list --export
 
 [2] [Anaconda 安装及修改环境默认位置 - 物联沃.](https://www.iotword.com/10057.html#:~:text=Anaconda 安装及修改环境默认位置 1 1.官网下载安装包 2 2.安装 一路next即可，安装位置可改到D盘 3,如果安装在D盘，但是默认虚拟环境会在C盘 可用以下命令进行查看虚拟环境位置 conda info onda环境默认安装在用户目录C%3A\Users\username.conda\envs下，如果选择默认路径，那么之后创建虚拟环境，也是安装在用户目录下。 不想占用C盘空间，可以修改conda虚拟环境路径。 (1)首先，找到用户目录下的.condarc文件（C%3A\Users\username）。 )
 
-[3] [**Command reference - Conda documentation**](https://docs.conda.io/projects/conda/en/latest/commands.html).
+[3] [Command reference - Conda documentation](https://docs.conda.io/projects/conda/en/latest/commands.html).

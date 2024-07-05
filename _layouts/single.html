@@ -16,7 +16,7 @@ layout: default
   </script>
 
 <!-- https://developer.aliyun.com/article/25464 -->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     $(document).ready(function () {
       $('a[href^="#"][href!="#"]').click(function () {
         var target = document.getElementById(this.hash.slice(1));
@@ -26,6 +26,33 @@ layout: default
         return false;
       });
     });
+  </script> -->
+
+  <!-- Prevent the fixed website head from blocking <a> tag whose `href` beginning with `#` when jumping to it-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('a[href^="#"][href!="#"]').click(function (e) {
+        e.preventDefault();
+        var hash = this.hash;
+        var target = document.getElementById(hash.slice(1));
+        if (!target) return;
+
+        history.pushState(null, null, hash);
+
+        var targetOffset = $(target).offset().top - 77;
+        $('html,body').animate({ scrollTop: targetOffset }, 5);
+      });
+
+      window.addEventListener('popstate', function (event) {
+        if (location.hash) {
+          var target = document.getElementById(location.hash.slice(1));
+          if (target) {
+            var targetOffset = $(target).offset().top - 77;
+            $('html,body').animate({ scrollTop: targetOffset }, 5);
+          }
+        }
+      });
+    });  
   </script>
 </head>
 

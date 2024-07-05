@@ -8,11 +8,8 @@ layout: default
       $('a[href^="http"]').each(function() {
         $(this).attr('target', '_blank');
       });
-    });
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('a[href^="/"]').each(function() {
+      
+      $('a[href^="/"]').each(function () {
         $(this).attr('target', '_blank');
       });
     });

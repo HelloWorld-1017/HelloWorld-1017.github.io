@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .footnote {
-    color: #3366CC;
+    color: $link-color;
     text-decoration: none;
 }
 
@@ -15,9 +15,9 @@
     content: "]";
 }
 
+// Footnotes at the bottom of the page
 .footnotes {
     color: black;
-
     ol,
     li,
     p {
@@ -26,12 +26,23 @@
         text-decoration: none;
     }
 }
+// https://codepen.io/SitePoint/pen/QbMgvY
+// https://wpshout.com/snippets/highlighted-footnotes-wikipedia-css/
+// :target {
+//     background: #ccc;
+//     border: solid 1px #aaa;
+//     transition: all .8s;
+// }
 
+// Reverse footnote symbol settings
 a.reversefootnote {
-    color: #FF0000;
+    color: red;
+    font-weight: bold;
+    vertical-align: super;
     text-decoration: none;
 
     &:hover {
         text-decoration: underline;
     }
 }
+

@@ -145,11 +145,16 @@ kramdown:
   hard_wrap: false
   auto_ids: true
   footnote_nr: 1
+  footnote_backlink: "&#708;"
+  # https://stackoverflow.com/a/69426077/22763127
+  # https://kramdown.gettalong.org/options.html
+  # https://en.wikipedia.org/wiki/List_of_Unicode_characters
+  # &#708; (˄): https://www.compart.com/en/unicode/U+02C4 
+  # &#710; (ˆ): https://www.compart.com/en/unicode/U+02C6
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 
 footer:
   links:

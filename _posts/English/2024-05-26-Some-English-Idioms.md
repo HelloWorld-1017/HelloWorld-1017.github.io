@@ -18,6 +18,9 @@ notes:
  - tighten your belts
  - to date
  - One and the same
+ - cross the line
+ - paint a picture (of something)
+ - so much so
 ---
 
 ## At any rate

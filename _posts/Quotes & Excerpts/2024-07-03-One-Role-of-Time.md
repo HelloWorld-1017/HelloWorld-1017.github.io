@@ -14,8 +14,6 @@ modification_history:
 ---
 
 <div class="quote--left" markdown="1">
-
-
 What is the role of time? ... Time prevents everything from being given at once ... It is not the vehicle of creativity and choice? Is not the existence of time the proof of indeterminism in nature?
 
 --- *Possible and the Real* by Henri Bergson[^1] 

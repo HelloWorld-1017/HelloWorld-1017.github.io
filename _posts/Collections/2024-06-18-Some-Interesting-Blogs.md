@@ -3,11 +3,12 @@ title: Some Interesting Blogs
 categories:
  - Collections
 date: 2024-06-18 12:47:51 +0800
-last_modified_at: 2024-07-01 18:12:05 +0800
+last_modified_at: 2024-07-06 21:24:59 +0800
 modification_history:
  - 2024-06-18 12:47:51 +0800
  - 2024-06-26 18:23:42 +0800
  - 2024-07-01 18:12:05 +0800
+ - 2024-07-06 21:24:59 +0800
 ---
 
 # Technology
@@ -17,6 +18,8 @@ modification_history:
   - [Understanding LSTM Networks -- colah's blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/).
 
 - Tesla blog: [News \| Tesla](https://www.tesla.com/blog).
+
+- [Ahead of AI \| Sebastian Raschka, PhD \| Substack](https://magazine.sebastianraschka.com/).
 
 # Finance
 

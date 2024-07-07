@@ -58,11 +58,18 @@ body {
     clear: both;
 
     .page__content {
-      // https://github.com/mmistakes/minimal-mistakes/issues/167
-      // https://dlonng.com/posts/bolg-config
-      // https://lvv.me/posts/2021/02/06_h5_lineheight/
       line-height: 150%;
       text-align: left;
+
+      a:link,
+        a:visited {
+          text-decoration: none;
+        }
+      
+        a:hover {
+          text-decoration: underline;
+          color: black;
+        }
     }
 
     }

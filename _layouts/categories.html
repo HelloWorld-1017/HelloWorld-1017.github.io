@@ -14,7 +14,7 @@ layout: archive
 {% for i in (1..categories_max) reversed %}
   {% for category in site.categories %}
     {% if category[1].size == i %}
-        <a class = "btn btn-primary tag-btn" href="#{{ category[0] | slugify }}" style="background-color:#104E8B;color:white;box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);">
+        <a class = "btn btn--primary" href="#{{ category[0] | slugify }}" style="background-color:#104E8B;color:white;box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);">
           <i class="fa fa-folder-open" aria-hidden="true"></i> {{ category[0] }} ({{ i }})
         </a>
     {% endif %}

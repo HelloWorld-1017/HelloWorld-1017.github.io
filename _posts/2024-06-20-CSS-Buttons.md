@@ -9,10 +9,11 @@ tags:
  - Bootstrap
 drafted_at: 2024-06-19 15:20:44 +0800
 date: 2024-06-20 16:40:13 +0800
-last_modified_at: 2024-06-20 18:19:00 +0800
+last_modified_at: 2024-07-07 15:36:35 +0800
 modification_history:
  - 2024-06-20 16:40:13 +0800
  - 2024-06-20 18:19:00 +0800
+ - 2024-07-07 15:36:35 +0800
 ---
 
 # CSS button classes in Jekyll theme "minimal-mistakes"
@@ -391,6 +392,9 @@ Animation with Bootstrap framework available:
 Other animations of jumping to a `#` tag on the current webpage have also changed like this.
 
 Maybe there are more changes I didn't find.
+
+However for the same reason, on July 07, 2024, I delete Bootstrap framework from my website folder.
+{: .notice--warning}
 
 <br>
 

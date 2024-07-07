@@ -31,6 +31,16 @@
   a[rel="permalink"] {
     position: static;
   }
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: black;
+  }
 }
 
 .archive__subtitle {

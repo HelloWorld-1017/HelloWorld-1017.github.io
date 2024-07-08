@@ -19,6 +19,13 @@ last_modified_at10: 2024-05-28 10:16:31 +0800
 last_modified_at: 2024-05-28 10:16:31 +0800
 notes: 
  - https://www.damtp.cam.ac.uk/user/tong/teaching.html
+ - Python cookbook
+ - CSS in depth
+ - Python Tutorial
+ - Fluent Python
+ - Python cookbook
+ - Learning Python
+ - CPython Internals
 ---
 
 # Mathematics

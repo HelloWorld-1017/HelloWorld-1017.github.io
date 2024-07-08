@@ -14,14 +14,7 @@ author:
   name: "Qinghua Ma"
   avatar: "/images/huachi.jpg"
   location: "Xi'an, China"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: https://github.com/helloworld-1017
 
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:starrynight1921@163.com"
 include:
   - _pages
 
@@ -134,7 +127,7 @@ collections:
 
 # Conversion
 markdown: kramdown
-highlighter: rouge
+# highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
@@ -155,18 +148,12 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/HelloWorld-1017"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   url: "https://twitter.com/mmistakes"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   url: "https://instagram.com/mmistakes"
+  syntax_highlighter: rouge  
+  syntax_highlighter_opts: # https://rouge-ruby.github.io/docs/#jekyll
+    block:  
+      start_line: 1
+      line_numbers: true
+      line_class: 'lineno'
 
 comments:
   provider             : "giscus" 

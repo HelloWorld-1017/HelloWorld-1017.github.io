@@ -17,7 +17,8 @@ figure.highlight {
   > pre,
   pre.highlight {
     margin: 0;
-    padding: 1em;
+    padding-left: 0.1em;
+    padding-top: 1em;
     // white-space: nowrap;
   }
 }
@@ -331,6 +332,12 @@ p>code,
 a>code,
 li>code,
 figcaption>code,
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+h5>code,
+h6>code,
 td>code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
@@ -338,4 +345,18 @@ td>code {
   background: $Seashell; // $Snow1
   border-radius: 4px;
   color: #D63384;
+}
+
+.rouge-table {
+  border: 5px solid white;
+  background-color: black;
+  color: white;
+}
+.highlight table td.rouge-gutter {
+  width: 1px;
+  border-right: 1.5px solid white;
+}
+
+.lineno {
+  color: white;
 }

@@ -26,23 +26,15 @@
         text-decoration: none;
     }
 }
-// https://codepen.io/SitePoint/pen/QbMgvY
-// https://wpshout.com/snippets/highlighted-footnotes-wikipedia-css/
-// :target {
-//     background: #ccc;
-//     border: solid 1px #aaa;
-//     transition: all .8s;
-// }
 
 // Reverse footnote symbol settings
 a.reversefootnote {
     color: red;
     font-weight: bold;
-    vertical-align: super;
+    // vertical-align: super;
     text-decoration: none;
 
     &:hover {
         text-decoration: underline;
     }
 }
-

@@ -13,7 +13,6 @@ creation_day             : 2022-07-16
 author:
   name: "Qinghua Ma"
   avatar: "/images/huachi.jpg"
-  location: "Xi'an, China"
 
 include:
   - _pages
@@ -81,7 +80,6 @@ defaults:
       author_profile: false
       classes: wide
       excerpt_separator: "" # https://jekyllcn.com/docs/posts/
-      comments: false
   # _pages
   - scope:
       path: ""
@@ -104,7 +102,6 @@ defaults:
       toc_icon: "heart"
       toc_sticky: true
       classes: wide
-      comments: false
 
 permalink: /:year-:month-:day/:hour-:minute-:second:output_ext
 paginate_path: /page:num/
@@ -132,18 +129,13 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Markdown Processing
+# Markdown renderer
 kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
   footnote_nr: 1
-  footnote_backlink: "&#708;"
-  # https://stackoverflow.com/a/69426077/22763127
-  # https://kramdown.gettalong.org/options.html
-  # https://en.wikipedia.org/wiki/List_of_Unicode_characters
-  # &#708; (˄): https://www.compart.com/en/unicode/U+02C4 
-  # &#710; (ˆ): https://www.compart.com/en/unicode/U+02C6
+  footnote_backlink: "&#708;" # &#8617;
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
@@ -154,16 +146,3 @@ kramdown:
       start_line: 1
       line_numbers: true
       line_class: 'lineno'
-
-comments:
-  provider             : "giscus" 
-  # repo_id              : "R_kgDOHqrB5w"
-  # category_name        : "Announcements"
-  # category_id          : "DIC_kwDOHqrB584CgFeu"
-  # discussion_term      : "url"
-  # reactions_enabled    : '1'
-  # theme                : "dark" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-  # strict               : '0'
-  # input_position       : "bottom"
-  # emit_metadata        : '0'
-  # lang                 : "en"

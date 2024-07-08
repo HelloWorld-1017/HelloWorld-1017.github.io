@@ -48,7 +48,8 @@
 
 .page__footer-copyright {
   font-family: $global-font-family;
-  font-size: $type-size-7;
+  font-size: $type-size-6;
+  text-align: center;
 }
 
 .page__footer-follow {
@@ -78,6 +79,8 @@
   }
 
   .social-icons {
+    padding-bottom: 1em;
+    text-align: center;
     a {
       white-space: nowrap;
     }

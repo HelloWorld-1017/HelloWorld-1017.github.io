@@ -49,12 +49,6 @@ layout: default
   {% include page__hero_video.html %}
 {% endif %}
 
-<!-- {% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %} -->
-
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -96,19 +90,8 @@ layout: default
         {% include page__taxonomy.html %}
         {% include page__date.html %}
       </footer>
-
-      <!-- <div style="width:100%;margin-top: 9em;" >
-        <br> <b>Comments</b> <br>
-        {% include /comments-providers/scripts.html %}
-      </div> -->
-
-      <!-- {% if page.share %}{% include social-share.html %}{% endif %} -->
-
-      <!-- {% include post_pagination.html %} -->
     </div>
-    
-    <!-- {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}{% include comments.html %}{% endif %} -->
-  </article>
+</article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}

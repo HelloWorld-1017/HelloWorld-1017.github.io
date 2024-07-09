@@ -1,28 +1,29 @@
 ---
-title: Create and Change Python Environment in Spyder IDE (through Python conda)
+title: Create and Change Python Environment in Spyder IDE (through Python Conda)
 toc: false
 categories: 
  - Python
 tags:
  - Python conda
- - Python Virtual Environments
+ - Python Virtual Environment
 date: 2023-04-02 16:42:49 +0800
-last_modified_at: 2024-07-04 16:04:54 +0800
+last_modified_at: 2024-07-09 16:07:12 +0800
 modification_history:
  - 2023-04-02 16:42:49 +0800
  - 2024-05-22 19:41:35 +0800
  - 2024-07-04 16:04:54 +0800
+ - 2024-07-09 16:07:12 +0800
 ---
 
 首先，创建一个新的环境`newenv1`：
 
-```shell
+```powershell
 conda create --name newenv1 python
 ```
 
 此时可以查看Anaconda中包含两个环境：
 
-```shell
+```powershell
 conda info --envs
 ```
 
@@ -32,7 +33,7 @@ conda info --envs
 
 此时，打开Spyder软件，在命令行中输入命令：
 
-```shell
+```python
 import sys
 sys.executable
 ```
@@ -43,7 +44,7 @@ sys.executable
 
 并且具有很多之前安装的包：
 
-```shell
+```powershell
 conda list
 ```
 
@@ -63,7 +64,7 @@ conda list
 
 提示缺乏`spyder-kernels`。因此，我们需要使用命令在化境`newenv1`中安装`spyder-kernels`：
 
-```shell
+```powershell
 conda activate newenv1
 conda install spyder-kernels=2.4
 ```

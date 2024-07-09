@@ -1,3 +1,25 @@
+<style>
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 0.5px solid #ccc;
+  }
+
+  .title {
+    /* font-weight: bold; */
+    padding-right: 3em;
+  }
+
+  .date {
+    font-size: 0.875em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    min-width: 110px;
+  }
+</style>
+
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
@@ -11,19 +33,14 @@
 {% endif %}
 
 {% assign date = post.date  %}
-{% assign date_format = site.date_format | default: "%b. %d, %Y" %}
+<!-- {% assign date_format = site.date_format | default: "%b. %d, %Y" %} -->
+{% assign date_format = site.date_format | default: "%Y-%m-%d" %}
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
-      </div>
-    {% endif %}
-
-    <div style="width:100%;margin-top:20px;margin-bottom:20px;font-size:x-large;"> 
-      {{ date | date: date_format }} <br>
-      <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a><br>
-    </div>
+    <li class="list-item">
+      <div class="title"><a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a></div>
+      <div class="date">{{ date | date: date_format }}</div>
+    </li>
  </article>
 </div>

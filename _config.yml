@@ -105,7 +105,7 @@ defaults:
 
 permalink: /:year-:month-:day/:hour-:minute-:second:output_ext
 paginate_path: /page:num/
-paginate: 17
+paginate: 31
 timezone: Asia/Shanghai
 
 category_archive:

@@ -18,9 +18,8 @@ layout: archive_life
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
-        {% include archive-single_life.html type=entries_layout %}
+        {% include archive-single.html type=entries_layout %}
       {% endfor %}
     </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}

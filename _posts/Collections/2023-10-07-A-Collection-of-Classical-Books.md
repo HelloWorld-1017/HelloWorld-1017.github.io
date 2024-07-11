@@ -26,6 +26,8 @@ notes:
  - Python cookbook
  - Learning Python
  - CPython Internals
+ - Tao Teh Ching, Lao Tzu
+ - The Art of War, Sun Tzu
 ---
 
 # Mathematics

@@ -21,6 +21,8 @@ notes:
  - cross the line
  - paint a picture (of something)
  - so much so
+ - show you hand
+ - all in all
 ---
 
 ## At any rate

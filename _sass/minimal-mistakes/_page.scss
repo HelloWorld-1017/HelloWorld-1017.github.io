@@ -158,8 +158,8 @@ body {
   }
 
 	h1, h2, h3, h4, h5, h6 {
-    // border-bottom: 1px solid $border-color;
-    color: $DodgerBlue4;
+    // color: $DodgerBlue4;
+    color: black;
 
 		.header-link {
 			position: relative;
@@ -176,6 +176,10 @@ body {
 			opacity: 1;
 		}
 	}
+  
+  h1, h2, h3, h4, h5 {
+    border-bottom: 1.5px solid $border-color;
+  }
 
   p,
   li,

@@ -1,5 +1,5 @@
 ---
-title: "Two Ways to Check Python Package Version: by `pip show` and by `__version__` attribute"
+title: "Two Ways to Check Python Package Version: by `__version__` attribute and by `pip show` command"
 categories:
  - Python
 tags:

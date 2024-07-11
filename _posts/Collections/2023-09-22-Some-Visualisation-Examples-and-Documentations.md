@@ -6,7 +6,7 @@ categories:
  - Collections
 toc: false
 date: 2023-09-22 21:08:09 +0800
-last_modified_at: 2024-06-25 20:32:49 +0800
+last_modified_at: 2024-07-11 05:44:00 +0800
 modification_history: 
  - 2023-09-22 21:08:09 +0800
  - 2023-12-05 20:08:20 +0800
@@ -15,6 +15,7 @@ modification_history:
  - 2024-05-28 10:18:01 +0800
  - 2024-06-01 15:05:36 +0800
  - 2024-06-25 20:32:49 +0800
+ - 2024-07-11 05:44:00 +0800
 ---
 
 ## LaTeX TikZ and PGF (Portable Graphics Format for TeX)
@@ -27,6 +28,10 @@ modification_history:
 - [TikZ examples technical area: Electrical engineering](https://texample.net/tikz/examples/area/electrical-engineering/).
 - [GitHub - mvoelk/nn_graphics: Artificial Neural Network related TikZ Graphics](https://github.com/mvoelk/nn_graphics/tree/master).
 - [GitHub - lebedov/tikzumlx: Fork of tikzuml with a few modifications](https://github.com/lebedov/tikzumlx).
+- [Index of /PSTricks/doc/sarovar](https://tug.org/PSTricks/doc/sarovar/).
+- [LaTeX Cookbook – Collection of LaTeX recipes](https://latex-cookbook.net/).
+- [alexpovel/latex-cookbook: A comprehensive LaTeX template with examples for theses, books and more, employing the 'latest and greatest' (UTF8, glossaries, fonts, ...). The PDF artifact is built using CI/CD, with a Python testing framework.](https://github.com/alexpovel/latex-cookbook?tab=readme-ov-file).
+- [PacktPublishing/LaTeX-Cookbook: LaTeX Cookbook, published by Packt](https://github.com/PacktPublishing/LaTeX-Cookbook?tab=readme-ov-file).
 
 ## Python
 

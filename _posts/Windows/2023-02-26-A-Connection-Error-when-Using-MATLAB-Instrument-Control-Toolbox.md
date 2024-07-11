@@ -1,7 +1,6 @@
 ---
-layout: single
 title: A Connection Error when Using MATLAB Instrument Control Toolbox
-date: 2023-02-26 21:30:29 +0800
+toc: false
 categories: 
  - MATLAB
  - Windows
@@ -9,14 +8,18 @@ tags:
  - MATLAB Instrument Control Toolbox
  - Experiment
  - MATLAB Warnings and Errors
-toc: false
+date: 2023-02-26 21:30:29 +0800
+last_modified_at: 2024-07-11 12:21:27 +0800
+modification_history:
+ - 2023-02-26 21:30:29 +0800
+ - 2024-07-11 12:21:27 +0800
 ---
 
-最近在学习MATLAB与PicoScope采集卡的连接，想要直接将采集卡采集到的数据直接传输到MATLAB中显示并使用。如博客[Connecting PicoScope 4824A in MATLAB](http://whatastarrynight.com/matlab/Connecting-PicoScope-4824A-in-MATLAB/)中介绍的，想要实现这一想法需要使用到：MATLAB Instrument Control Toolbox，PicoScope Support Toolbox和适配于PicoScope 4824A的PicoScope 4000 Series A API MATLAB Generic Instrument Driver。
+最近在学习MATLAB与PicoScope采集卡的连接，想要直接将采集卡采集到的数据直接传输到MATLAB中显示并使用。如博客[^1]中介绍的，想要实现这一想法需要使用到：MATLAB Instrument Control Toolbox，PicoScope Support Toolbox和适配于PicoScope 4824A的PicoScope 4000 Series A API MATLAB Generic Instrument Driver。
 
 但是在调试学习代码的过程中，有时候总是会出现下面的报错：
 
-```matlab
+```
 Warning: Disconnect: No devices found. 
 Error using icdevice
 An error occurred while executing the driver create code.
@@ -32,7 +35,7 @@ ps4000aDeviceObj = icdevice('picotech_ps4000a_generic','ObjectVisibility','on');
 
 <br>
 
-但是我记得一开始采用关掉MATLAB再运行的方式是不解决不了的，再运行还是会出现这样的报错，必须重启计算机才能解决，因此就极其麻烦 于是我就尝试着解决这个问题。
+但是我记得一开始采用关掉MATLAB再运行的方式是不解决不了的，再运行还是会出现这样的报错，必须重启计算机才能解决，因此就极其麻烦，于是我就尝试解决这个问题。
 
 首先，在一般的流程下，MATLAB需要先创建Device Object，并与设备进行连接：
 
@@ -57,9 +60,9 @@ delete(ps4000aDeviceObj);
 
 ![image-20230226203117055](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230226203117055.png?raw=true)
 
-虽然看似把“连接”都删除掉了，但其实还在。此时在cmd中输入（参考[使用tasklist将任务管理器的进程导出-百度经验](https://jingyan.baidu.com/article/148a1921f2e8f94d71c3b1d0.html)，[tasklist - Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/tasklist)）：
+虽然看似把“连接”都删除掉了，但其实还在。此时在CMD中输入[^2][^3]：
 
-```
+```powershell
 tasklist /v /fo csv>>d:\tasklist.csv
 ```
 
@@ -83,15 +86,10 @@ tasklist /v /fo csv>>d:\tasklist.csv
 
 总之，之前建立的驱动连接就保存在MATLAB软件中，无论是重启计算机，还是直接关闭软件，亦或是在任务管理器中将进程关闭，只要保证将MATLAB软件完全关闭，原先建立的连接就能够完全删除，再次运行程序就可以重新建立与设备的连接。
 
+<br>
 
+# References
 
-
-
-
-
-
-
-
-
-
-
+[^1]: [Connecting PicoScope 4824A in MATLAB - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2023-02-22/20-41-42.html).
+[^2]: [使用tasklist将任务管理器的进程导出-百度经验](https://jingyan.baidu.com/article/148a1921f2e8f94d71c3b1d0.html).
+[^3]: [tasklist - Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/tasklist).

@@ -1,26 +1,33 @@
 ---
-layout: single
 title: Some English Learning Resources and Tools
+toc: false
 categories:
  - English
  - Collections
-toc: false
 date: 2023-10-01 20:33:53 +0800
-last_modified_at0: 2023-10-01 20:33:53 +0800
-last_modified_at1: 2023-12-05 20:14:58 +0800
-last_modified_at2: 2023-12-07 19:05:33 +0800
-last_modified_at3: 2024-04-26 15:10:40 +0800
-last_modified_at4: 2024-05-25 13:57:45 +0800
-last_modified_at5: 2024-05-28 10:17:19 +0800
-last_modified_at: 2024-05-28 10:17:19 +0800
+last_modified_at: 2024-07-10 19:06:59 +0800
+modification_history:
+ - 2023-10-01 20:33:53 +0800
+ - 2023-12-05 20:14:58 +0800
+ - 2023-12-07 19:05:33 +0800
+ - 2024-04-26 15:10:40 +0800
+ - 2024-05-25 13:57:45 +0800
+ - 2024-05-28 10:17:19 +0800
+ - 2024-07-10 19:06:59 +0800
 ---
 
 **Dictionary**
 
-- [Longman Dictionary of Contemporary English](https://www.ldoceonline.com/).
+- British English dictionary
+  - [Longman Dictionary of Contemporary English](https://www.ldoceonline.com/).
+
+- American English dictionary
+  - [Merriam-Webster: America's Most Trusted Dictionary](https://www.merriam-webster.com/).
+  - [Cambridge Essential American English Dictionary](https://dictionary.cambridge.org/dictionary/essential-american-english/).
+  - [Cambridge Thesaurus \| Synonyms, antonyms and examples](https://dictionary.cambridge.org/thesaurus/).
+
 - [The Free Dictionary: Dictionary, Encyclopedia and Thesaurus](https://www.thefreedictionary.com/).
-- [Merriam-Webster: America's Most Trusted Dictionary](https://www.merriam-webster.com/).
-- [Cambridge Thesaurus \| Synonyms, antonyms and examples](https://dictionary.cambridge.org/thesaurus/).
+- [Word Roots \| Membean](https://membean.com/roots).
 
 <br>
 

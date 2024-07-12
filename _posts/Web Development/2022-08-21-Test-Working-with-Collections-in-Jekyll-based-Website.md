@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Working with Collections in Jekyll-based Website
 toc: false
 classes: wide
@@ -8,11 +7,7 @@ categories:
 tags:
  - Jekyll
 date: 2022-08-21 13:25:23 +0800
-last_modified_at: 2024-06-20 12:29:21 +0800
-modification_history:
- - 2022-08-21 13:25:23 +0800
- - 2024-02-13 13:22:14 +0800
- - 2024-06-20 12:29:21 +0800
+last_modified_at: 2024-07-12 12:33:18 +0800
 ---
 
 （1）在 `_config.yml`文件 中配置名为portfolio的collection

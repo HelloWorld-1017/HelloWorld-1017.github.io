@@ -1,7 +1,6 @@
 ---
 permalink: /about/
 title: "Qinghua Ma 🇨🇳"
-author_profile: false
 ---
 
 *"You can only connect the dots looking backwards."*

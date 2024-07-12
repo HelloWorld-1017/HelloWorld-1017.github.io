@@ -62,24 +62,6 @@ body:hover .visually-hidden button {
 }
 
 /*
-   Skip links
-   ========================================================================== */
-
-.skip-link {
-  position: fixed;
-  z-index: 20;
-  margin: 0;
-  font-family: $sans-serif;
-  white-space: nowrap;
-}
-
-.skip-link li {
-  height: 0;
-  width: 0;
-  list-style: none;
-}
-
-/*
    Type
    ========================================================================== */
 

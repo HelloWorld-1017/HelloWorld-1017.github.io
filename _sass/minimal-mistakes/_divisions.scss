@@ -7,9 +7,6 @@
     text-align: center;
     padding: 2em;
     color: $Ivory4;
-    // background: #5F85DB;
-    // box-shadow: $box-shadow2;
-    // border-radius: 7px;
 }
 
 .quote--left {
@@ -19,22 +16,18 @@
     text-align: justify;
     padding: 2em;
     color: $Ivory4;
-    // background: #FFFFF0;
-    // box-shadow: $box-shadow2;
-    // border-radius: 7px;
     quotes: "\201C" "\201C";
 }
 
 // Add quote mark
-// https://stackoverflow.com/a/32911561/22763127
-// https://www.geeksforgeeks.org/how-to-set-the-marks-for-quotations-in-css/
 .quote--left:before {
     content: open-quote;
+    font-family: 'Times New Roman', Times, serif;
     position: absolute;
     color: $Ivory4;
     font-size: 4em;
-    margin-left: -0.5em;
-    margin-top: 0.27em;
+    margin-left: -0.6em;
+    margin-top: 0.20em;
     vertical-align: top;
 }
 

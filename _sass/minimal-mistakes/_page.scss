@@ -99,67 +99,9 @@ body {
 }
 
 .page__content {
-  // // Add a serial number to the title
-  // // https://www.geeksforgeeks.org/css-counter-reset-property/
-  // body {
-  //   counter-reset: section1 1;
-  //   counter-reset: section2 1;
-  //   counter-reset: section3 1;
-  //   counter-reset: section4 1;
-  //   counter-reset: section5 1;
-  //   counter-reset: section6 1;
-  // }
-  // // For the 1st level title
-  // h1 {
-  //   counter-increment: section1;
-  // }
-  // h1:before {
-  //   content: counter(section1)". "
-  // }
-  // // For the 2nd level title
-  // h2 {
-  //   counter-increment: section2;
-  // }
-  // h2:before {
-  //   content: counter(section1)"."counter(section2)" "
-  // }
-  // // For the 3rd level title  
-  // h3 {
-  //   counter-increment: section3;
-  // }
-  // h3:before {
-  //   content: counter(section1)"."counter(section2)"."counter(section3)" "
-  // }
-  // // For the 4th level title
-  // h4 {
-  //   counter-increment: section4;
-  // }
-  // h4:before {
-  //   content: counter(section1)"."counter(section2)"."counter(section3)"."counter(section4)" "
-  // }
-  // // For the 5th level title
-  // h5 {
-  //   counter-increment: section5;
-  // }
-  // h5:before {
-  //   content: counter(section1)"."counter(section2)"."counter(section3)"."counter(section4)"."counter(section5)" "
-  // }
-  // // For the 6th level title
-  // h6 {
-  //   counter-increment: section6;
-  // }
-  // h6:before {
-  //   content: counter(section1)"."counter(section2)"."counter(section3)"."counter(section4)"."counter(section5)"."counter(section6)" "
-  // }
-
-  h2 {
-    padding-bottom: -0.5em;
-    // border-bottom: 1px solid $border-color;
-  }
-
 	h1, h2, h3, h4, h5, h6 {
-    // color: $DodgerBlue4;
-    color: black;
+    color: black; // $DodgerBlue4;
+    padding-bottom: 0.25em;
 
 		.header-link {
 			position: relative;
@@ -176,10 +118,16 @@ body {
 			opacity: 1;
 		}
 	}
+
+  h2 {
+    padding-bottom: -0.5em;
+  }
   
   h1, h2, h3, h4, h5 {
     border-bottom: 1.5px solid $border-color;
   }
+
+
 
   p,
   li,
@@ -190,8 +138,7 @@ body {
   /* paragraph indents */
   p {
     // Change paragraph spacing
-    // margin: 0 0 $indent-var;
-    margin: 0 0 0.7em;
+    margin: 0 0 0.7em; // margin: 0 0 $indent-var;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {

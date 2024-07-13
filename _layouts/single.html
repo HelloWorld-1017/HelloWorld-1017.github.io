@@ -4,15 +4,29 @@ layout: default
 <head>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('a[href^="http"]').each(function() {
-        $(this).attr('target', '_blank');
+    $(document).ready(function () {
+      $('a[href^="#"][href!="#"]').click(function (e) {
+        e.preventDefault();
+        var hash = this.hash;
+        var target = document.getElementById(hash.slice(1));
+        if (!target) return;
+
+        history.pushState(null, null, hash);
+
+        var targetOffset = $(target).offset().top - 77;
+        $('html,body').animate({ scrollTop: targetOffset }, 5);
       });
-      
-      $('a[href^="/"]').each(function () {
-        $(this).attr('target', '_blank');
+
+      window.addEventListener('popstate', function (event) {
+        if (location.hash) {
+          var target = document.getElementById(location.hash.slice(1));
+          if (target) {
+            var targetOffset = $(target).offset().top - 77;
+            $('html,body').animate({ scrollTop: targetOffset }, 5);
+          }
+        }
       });
-    });
+    });  
   </script>
 </head>
 

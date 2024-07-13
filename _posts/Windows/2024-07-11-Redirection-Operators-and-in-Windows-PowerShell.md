@@ -1,6 +1,7 @@
 ---
 title: Redirection Operators `>` and `>>` in Windows PowerShell
 toc: false
+classes: wide
 categories:
  - Windows
  - Python

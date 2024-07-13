@@ -70,10 +70,8 @@ defaults:
       show_date: true
       date_format: "%Y-%m-%d HH:MM:SS"
       toc: true
-      toc_label: "Table of Contents"
-      toc_icon: "heart"
       toc_sticky: true
-      classes: wide
+      # classes: wide
       excerpt_separator: "" # https://jekyllcn.com/docs/posts/
   # _pages
   - scope:
@@ -91,8 +89,6 @@ defaults:
       show_date: true
       date_format: "%Y-%m-%d HH:MM:SS"
       toc: true
-      toc_label: "Table of Contents"
-      toc_icon: "heart"
       toc_sticky: true
       classes: wide
 

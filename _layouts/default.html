@@ -8,26 +8,29 @@
     {% include head.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+  {% if page.classes or layout.classes %}
+    {% assign CLASSES = page.classes | default: layout.classes %}
+  {% endif %}
+
+  {% if page.toc == false or layout.toc == false %}
+    {% assign CLASSES = " wide" %}
+  {% endif %}
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{{ CLASSES }}">
+
     {% include_cached masthead.html %}
 
-    <div class="initial-content">
-      {{ content }}
-    </div>
+    <div class="initial-content">{{ content }}</div>
 
     {% if site.search == true %}
-      <div class="search-content">
-        {% include_cached search/search_form.html %}
-      </div>
+      <div class="search-content">{% include_cached search/search_form.html %}</div>
     {% endif %}
 
     <div id="footer" class="page__footer">
-      <footer>
-        {% include_cached footer.html %}
-      </footer>
+      <footer>{% include_cached footer.html %}</footer>
     </div>
 
     {% include scripts.html %}
-
   </body>
 </html>

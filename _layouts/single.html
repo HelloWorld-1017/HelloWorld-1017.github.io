@@ -14,33 +14,6 @@ layout: default
       });
     });
   </script>
-
-  <!-- Prevent the fixed website head from blocking <a> tag whose `href` beginning with `#` when jumping to it-->
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('a[href^="#"][href!="#"]').click(function (e) {
-        e.preventDefault();
-        var hash = this.hash;
-        var target = document.getElementById(hash.slice(1));
-        if (!target) return;
-
-        history.pushState(null, null, hash);
-
-        var targetOffset = $(target).offset().top - 77;
-        $('html,body').animate({ scrollTop: targetOffset }, 5);
-      });
-
-      window.addEventListener('popstate', function (event) {
-        if (location.hash) {
-          var target = document.getElementById(location.hash.slice(1));
-          if (target) {
-            var targetOffset = $(target).offset().top - 77;
-            $('html,body').animate({ scrollTop: targetOffset }, 5);
-          }
-        }
-      });
-    });  
-  </script>
 </head>
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -67,12 +40,13 @@ layout: default
       {% endunless %}
 
       {% if page.toc %}
+      
       <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
         <nav class="toc">
           <header>
             <h4 class="nav__title">
-              <i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> 
-              {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}
+              <i class="fa-solid fa-list"></i>
+              Table of Contents
             </h4>
           </header>
           {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}

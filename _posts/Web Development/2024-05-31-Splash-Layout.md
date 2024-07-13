@@ -76,11 +76,7 @@ feature_row4:
     btn_class: "btn--primary"
 
 date: 2024-05-31 20:08:05 +0800
-last_modified_at: 2024-06-20 12:51:29 +0800
-modification_history:
- - 2024-05-31 20:08:05 +0800
- - 2024-06-05 21:23:05 +0800
- - 2024-06-20 12:51:29 +0800
+last_modified_at: 2024-07-13 16:44:21 +0800
 ---
 
 {% include feature_row id="intro" type="center" %}

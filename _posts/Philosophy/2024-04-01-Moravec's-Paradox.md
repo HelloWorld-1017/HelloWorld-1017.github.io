@@ -3,12 +3,10 @@ layout: single
 title: "Moravec's Paradox in AI and Robotics"
 categories:
  - Machine Learning
+ - Philosophy
  - Biology
-drafted_at: 2024-03-27 10:39:13 +0800
 date: 2024-04-01 04:37:17 +0800
-last_modified_at0: 2024-04-01 04:37:17 +0800
-last_modified_at1: 2024-04-02 09:57:51 +0800
-last_modified_at: 2024-04-02 09:57:51 +0800
+drafted_at: 2024-07-13 16:43:23 +0800
 ---
 
 # Moravec's paradox

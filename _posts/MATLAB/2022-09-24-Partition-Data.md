@@ -1,12 +1,12 @@
 ---
-layout: single
-title: Partition Data (MATLAB `cvpartition` Function)
-date: 2022-09-24 13:47:45 +0800
+title: Partition Data by MATLAB `cvpartition` Function
 categories: 
  - MATLAB
  - Machine Learning
 tags:
  - MATLAB Statistics and Machine Learning Toolbox
+date: 2022-09-24 13:47:45 +0800
+last_modified_at: 2024-07-13 17:04:38 +0800
 ---
 
 # Introduction

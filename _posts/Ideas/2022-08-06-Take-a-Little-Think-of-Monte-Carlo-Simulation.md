@@ -1,16 +1,14 @@
 ---
-layout: single
 title: Take a Little Think of Monte Carlo Simulation
+toc: false
 categories:
  - Mathematics
- - Uncertainty 
+ - Uncertainty
+ - Ideas
 tags: 
  - Numerical Analysis
-toc: false
 date: 2022-08-06 14:28:59 +0800
-last_modified_at0: 2022-08-06 14:28:59 +0800
-last_modified_at1: 2024-06-05 18:50:35 +0800
-last_modified_at: 2024-06-05 18:50:35 +0800
+last_modified_at: 2024-07-13 16:54:23 +0800
 ---
 
 说到随机数，说到蒙特卡洛模拟(Monte Carlo)，就会回想起大学本科参加数学建模比赛的那段时光。我记得第一次看到蒙特卡洛模拟是在 Giordano 写的《数学建模》(*A First Course in Mathematical Modeling)* 书中，于是后来每次参加数学建模竞赛都会尝试使用计算机仿真现实世界中的过程，有时候结果很好，有时候却不尽如人意。

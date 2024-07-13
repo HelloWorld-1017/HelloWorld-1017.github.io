@@ -1,13 +1,13 @@
 ---
-layout: single
-title: Batch Modify Files and Folders Name
-date: 2022-10-06 22:35:37 +0800
+title: Batch Modify Files and Folders Name in MATLAB
 categories: 
   - MATLAB
   - Windows
 tags:
  - MATLAB Language Fundamentals
  - Regular Expression
+date: 2022-10-06 22:35:37 +0800
+last_modified_at: 2024-07-13 17:08:57 +0800
 ---
 
 # Batch Modify Files Name

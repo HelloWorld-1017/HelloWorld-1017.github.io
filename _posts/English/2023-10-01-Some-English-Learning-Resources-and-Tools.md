@@ -5,15 +5,7 @@ categories:
  - English
  - Collections
 date: 2023-10-01 20:33:53 +0800
-last_modified_at: 2024-07-10 19:06:59 +0800
-modification_history:
- - 2023-10-01 20:33:53 +0800
- - 2023-12-05 20:14:58 +0800
- - 2023-12-07 19:05:33 +0800
- - 2024-04-26 15:10:40 +0800
- - 2024-05-25 13:57:45 +0800
- - 2024-05-28 10:17:19 +0800
- - 2024-07-10 19:06:59 +0800
+last_modified_at: 2024-07-13 21:14:13 +0800
 ---
 
 **Dictionary**
@@ -26,6 +18,7 @@ modification_history:
   - [Cambridge Essential American English Dictionary](https://dictionary.cambridge.org/dictionary/essential-american-english/).
   - [Cambridge Thesaurus \| Synonyms, antonyms and examples](https://dictionary.cambridge.org/thesaurus/).
 
+- [Collins Online Dictionary \| Definitions, Thesaurus and Translations](https://www.collinsdictionary.com/).
 - [The Free Dictionary: Dictionary, Encyclopedia and Thesaurus](https://www.thefreedictionary.com/).
 - [Word Roots \| Membean](https://membean.com/roots).
 

@@ -510,6 +510,13 @@
   background-color: $background-color;
   border-collapse: collapse;
 
+  height: 700px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin; 
+  scrollbar-color: WhiteSmoke white; 
+  scrollbar-arrow-color: white;
+  
   .nav__title {
     color: black;
     font-size: $type-size-6;

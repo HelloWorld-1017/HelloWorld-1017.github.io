@@ -3,14 +3,16 @@ title: Some English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-07-13 21:52:59 +0800
+last_modified_at: 2024-07-15 13:57:21 +0800
 ---
 
 # A
 
 ## at any rate
 
-> At any rate: [AT ANY RATE \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/at-any-rate).
+> at any rate
+>
+> - [AT ANY RATE \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/at-any-rate).
 
 (1) whatever happens
 
@@ -19,6 +21,18 @@ last_modified_at: 2024-07-13 21:52:59 +0800
 (2) something you say to show that you are going to say something more exactly (or more clearly)
 
 - I don't think they liked my idea. ***At any rate***, they weren't very enthusiastic about it.
+
+<br>
+
+## against (all) the odds/against all odds
+
+> against (all) the odds/against all odds
+>
+> - [AGAINST (ALL) THE ODDS/AGAINST ALL ODDS in Traditional Chinese - Cambridge](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/against-all-the-odds-against-all-odds).
+
+If you do or achieve something against (all) the odds/against all odds, you do or achieve it although there were a lot of problems and you were not likely to succeed.
+
+- ***Against all the odds***, he recovered.
 
 <br>
 
@@ -41,6 +55,42 @@ last_modified_at: 2024-07-13 21:52:59 +0800
 
 - We both thought that ***all in all*** it might not be a bad idea. 
 - ***All in all***, getting insufficient sleep is bad news.
+
+<br>
+
+# B
+
+## be bound to 
+
+> be bound to
+>
+> - [be bound to - LDOCE](https://www.ldoceonline.com/dictionary/be-bound-to).
+
+to be very likely to do or feel a particular thing.
+
+- Don’t lie to her. She***’s bound to*** find out.
+- ‘It’s hot!’ ‘Well, ***it was bound to be*** --- I just took it out of the oven.’ (***it is bound to be*** (=used to say that something should have been expected))
+- When you are dealing with so many patients, mistakes ***are bound to*** happen.
+
+<br>
+
+## blend into/in
+
+> blend into/in
+>
+> - [BLEND IN definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/blend-in).
+
+(1) If something blends into the background, it is so similar to the background that it is difficult to see or hear it separately.
+
+- The toad had changed its colour to ***blend in with*** its new environment.
+- ...a continuous pale neutral grey, almost ***blending into*** the sky.
+- You can ***blend in*** so that the voice becomes just another instrument in the band.
+
+(2) If someone blends into a particular group or situation, they seem to belong there, because their appearance or behaviour is similar to that of the other people involved.
+
+- It must have reinforced my determination to ***blend into*** my surroundings.
+- She felt she would ***blend in*** nicely.
+- He ***blended in with*** the crowd at the art sale.
 
 <br>
 
@@ -495,7 +545,20 @@ to spend less money than you did before because you have less money; If you have
 
 <br>
 
-## to add insult to injury
+## time and (time) again
+
+> time and (time) again
+>
+> - [TIME AND TIME AGAIN definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/time-and-time-again).
+
+repeatedly; often.
+
+- ***Time and time again*** I warned her to stop smoking.
+- I've told ***time and time again***, not to ring me at the office!
+
+<br>
+
+## to add insult to injury vs. the icing on the cake
 
 > to add insult to injury
 >
@@ -505,6 +568,17 @@ to spend less money than you did before because you have less money; If you have
 You say ‘to add insult to injury’ when mentioning an action or fact that makes an unfair or unacceptable situation even worse.
 
 - They told me I was too old for the job, and then ***to add insult to injury***, they refused to pay my expenses!
+
+> the icing on the case
+>
+> - [THE ICING ON THE CAKE definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/the-icing-on-the-cake).
+> - [THE ICING ON THE CAKE - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/icing-on-the-cake).
+
+If you describe something as the icing on the cake, you mean that it makes a good thing even better, <mark>but it is not essential</mark>; an <mark>extra</mark> good thing that happens and makes a situation or activity even better. In American English, you can also talk about the frosting on the cake.
+
+- The third goal was ***the icing on the cake***.
+- I was just content to see my daughter in such a stable relationship but a grandchild, that really was ***the icing on the cake***.
+- I love my job and getting public recognition is merely ***the icing on the cake***.
 
 <br>
 

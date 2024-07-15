@@ -61,32 +61,10 @@
   }
 }
 
-/* Default notice */
-.notice {
-  @include notice($light-gray);
-}
-
-/* Primary notice */
-.notice--primary {
-  @include notice($primary-color);
-}
-
-/* Info notice */
-.notice--info {
-  @include notice($info-color);
-}
-
-/* Warning notice */
-.notice--warning {
-  @include notice($warning-color);
-}
-
-/* Success notice */
-.notice--success {
-  @include notice($success-color);
-}
-
-/* Danger notice */
-.notice--danger {
-  @include notice($danger-color);
-}
+/* notice */
+.notice { @include notice($light-gray); }
+.notice--primary { @include notice($primary-color); }
+.notice--info { @include notice($info-color); }
+.notice--warning { @include notice($warning-color); }
+.notice--success { @include notice($success-color); }
+.notice--danger { @include notice($danger-color); }

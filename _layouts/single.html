@@ -58,10 +58,7 @@ layout: default
       <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
         <nav class="toc">
           <header>
-            <h4 class="nav__title">
-              <i class="fa-solid fa-list"></i>
-              Table of Contents
-            </h4>
+            <h4 class="nav__title"><i class="fa-solid fa-list"></i>&nbsp;&nbsp;Table of Contents</h4>
           </header>
           {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
         </nav>

@@ -509,13 +509,6 @@
   color: $gray;
   background-color: $background-color;
   border-collapse: collapse;
-
-  height: 700px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scrollbar-width: thin; 
-  scrollbar-color: WhiteSmoke white; 
-  scrollbar-arrow-color: white;
   
   .nav__title {
     color: black;
@@ -526,6 +519,15 @@
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
     @include yiq-contrasted($primary-color);
+  }
+
+  @include breakpoint($large) {
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: WhiteSmoke white;
+    scrollbar-arrow-color: white;
   }
 }
 

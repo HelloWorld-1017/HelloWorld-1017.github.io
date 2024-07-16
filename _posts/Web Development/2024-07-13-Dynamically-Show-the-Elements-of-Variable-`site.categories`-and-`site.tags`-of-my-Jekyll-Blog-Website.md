@@ -1,11 +1,11 @@
 ---
-title: Dynamically Show Elements of Variable `site.categories` and `site.tags` of My Jekyll Blog Website
+title: Elements in `site.categories` and `site.tags` of My Jekyll Blog Website
 categories:
  - Web Development
 tags:
  - Jekyll
 date: 2024-07-13 15:59:18 +0800
-last_modified_at: 2024-07-13 15:59:18 +0800
+last_modified_at: 2024-07-16 16:08:10 +0800
 ---
 
 # `site.categories` elements

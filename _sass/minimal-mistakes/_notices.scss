@@ -61,7 +61,7 @@
   }
 }
 
-/* notice */
+/* notice definitions*/
 .notice { @include notice($light-gray); }
 .notice--primary { @include notice($primary-color); }
 .notice--info { @include notice($info-color); }

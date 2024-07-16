@@ -3,7 +3,7 @@ title: Some English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-07-15 13:57:21 +0800
+last_modified_at: 2024-07-16 16:25:48 +0800
 ---
 
 # A
@@ -605,6 +605,20 @@ To date means up until the present time. (Synonyms: up to now, yet, so far, unti
 to become worth nothing.
 
 - Every promise they have made has ***turned to dust***.
+
+<br>
+
+# V
+
+## vice versa
+
+> vice versa
+>
+> - [VICE VERSA \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/vice-versa).
+
+used to say that what you have just said is also true in the opposite order:
+
+- He doesn't trust her, and ***vice versa*** (= she also doesn't trust him).
 
 <br>
 

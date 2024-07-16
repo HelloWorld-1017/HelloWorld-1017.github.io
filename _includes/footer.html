@@ -118,3 +118,12 @@
       });
     });
 </script>
+
+<script type="text/javascript">
+    const codeElements = document.querySelectorAll('code[class*="language-mermaid"]');
+    codeElements.forEach(function (element) {
+      if (element.classList.contains('language-mermaid')) {
+        element.classList.replace('language-mermaid', 'mermaid');
+      }
+    });
+</script>

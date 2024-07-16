@@ -252,6 +252,8 @@ sur-/super- (over, above)
   - Tragically, a shoulder injury cut short the pitching career of one of baseball's brightest supernovas.
 - survive
 - supreme
+  - supremacy
+
 - supersede
 
 <br>

@@ -5,10 +5,9 @@ classes: wide
 categories:
  - Windows
  - Python
+ - PowerShell
 date: 2024-07-11 11:44:01 +0800
-last_modified_at: 2024-07-11 11:44:01 +0800
-modification_history:
- - 2024-07-11 11:44:01 +0800
+last_modified_at: 2024-07-15 17:28:15 +0800
 ---
 
 For Windows PowerShell, `>` and `>>` are redirection operators[^1] used to redirect output[^2]:
@@ -84,7 +83,7 @@ As expected, operator `>` overwrites the original file, while `>>` appends outpu
 
 <br>
 
-# References
+**References**
 
 [^1]: [about Operators - PowerShell \| Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.4#redirection-operators).
 [^2]: [about Redirection - PowerShell \| Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7.4).

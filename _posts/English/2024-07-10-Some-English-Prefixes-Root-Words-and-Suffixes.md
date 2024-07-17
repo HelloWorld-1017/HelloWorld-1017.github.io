@@ -153,6 +153,7 @@ med
 - prescient
 - predilection
 - presumption
+- prerequisite
 
 <br>
 

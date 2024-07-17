@@ -3,7 +3,7 @@ title: Some English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-07-16 16:25:48 +0800
+last_modified_at: 2024-07-16 19:05:46 +0800
 ---
 
 # A
@@ -399,6 +399,24 @@ The author paints a disturbing picture of life in the camp.
 <br>
 
 # S
+
+## set (one's) hair on fire
+
+> set (one's) hair on fire
+>
+> - [Set hair on fire - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/set+hair+on+fire).
+
+(1) To fill one with intense or overwhelming passion, often causing them to behave erratically or wildly.
+
+- John and I have very different political leanings, so hearing him rant about these issues always ***sets my hair on fire***.
+- I don't want to settle for a lukewarm, casual fling --- I want to be with a man who really ***sets my hair on fire***, someone I connect with deeply and passionately.
+
+(2) By extension, to behave erratically or wildly.
+
+- Sure, I used to party and really ***set my hair on fire*** as a teenager. But those days are long gone now that I'm a mom.
+- Leiningen, for automating Clojure projects without ***setting your hair on fire***. (From [Leiningen](https://leiningen.org/).)
+
+<br>
 
 ## show your hand
 

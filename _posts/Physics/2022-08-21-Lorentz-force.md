@@ -1,9 +1,11 @@
 ---
-layout: single
 title: Lorentz force
-date: 2022-08-21 21:34:01 +0800
-categories: 
+categories:
+ - Physics
+tags: 
  - Electromagnetism
+date: 2022-08-21 21:34:01 +0800
+last_modified_at: 2024-07-17 14:59:58 +0800
 ---
 
 # 背景

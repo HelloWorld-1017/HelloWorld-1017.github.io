@@ -1,9 +1,11 @@
 ---
-layout: single
 title: Common Definitions for Circuit Breaker Diagnosis
-date: 2023-02-04 10:47:43 +0800
-categories: 
+Categories:
+ - Electrical Engineering
+tags:
  - Circuit Breaker
+date: 2023-02-04 10:47:43 +0800
+last_modified_at: 2024-07-17 12:27:45 +0800
 ---
 
 # Major Failure (MF), Minor Failure (mF), and Defect

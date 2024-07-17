@@ -1,9 +1,11 @@
 ---
-layout: single
 title: B Filed, H Filed, and M Filed
-date: 2022-08-24 13:02:47 +0800
-categories: 
+categories:
+ - Physics
+tags: 
  - Electromagnetism
+date: 2022-08-24 13:02:47 +0800
+last_modified_at: 2024-07-17 14:59:24 +0800
 ---
 
 

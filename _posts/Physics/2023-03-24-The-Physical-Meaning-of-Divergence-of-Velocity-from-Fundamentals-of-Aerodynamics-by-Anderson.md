@@ -1,13 +1,14 @@
 ---
-layout: single
 title: The Physical Meaning of Divergence of Velocity from *Fundamentals of Aerodynamics* by Anderson
-date: 2023-03-24 19:45:37 +0800
+toc: false
 categories: 
  - Mathematics
- - Computational Fluid Dynamics
+ - Physics
 tags:
  - Mathematical Analysis
-toc: false
+ - Computational Fluid Dynamics
+date: 2023-03-24 19:45:37 +0800
+last_modified_at: 2024-07-17 14:57:56 +0800
 ---
 
 考虑一个随流线运动的有限控制体（参考博客：[Three Different Models of the Fluid from *Fundamentals of Aerodynamics* by Anderson](http://whatastarrynight.com/mathematics/computational%20fluid%20dynamics/Three-Different-Models-of-the-Fluid-from-Fundamentals-of-Aerodynamics-by-Anderson/)）：

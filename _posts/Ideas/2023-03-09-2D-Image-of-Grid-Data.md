@@ -1,22 +1,20 @@
 ---
-layout: single
 title: "2D Image of Grid Data"
+toc: false
 categories: 
  - Ideas
  - Uncertainty
  - MATLAB
- - Circuit Breaker
- - Computational Fluid Dynamics
+ - Electrical Engineering
  - Machine Learning
  - Finite Element Simulation
+ - Physics
 tags:
+ - Computational Fluid Dynamics
  - MATLAB Graphics
-toc: false
+ - Circuit Breaker
 date: 2023-03-09 22:24:25 +0800
-last_modified_at0: 2023-03-09 22:24:25 +0800
-last_modified_at1: 2024-03-07 04:23:16 +0800
-last_modified_at2: 2024-04-21 17:14:45 +0800
-last_modified_at: 2024-04-21 17:14:45 +0800
+last_modified_at: 2024-07-17 12:25:38 +0800
 ---
 
 博客[^1] 介绍了MATLAB提供的一个示例[^2]，该示例使用在建模Solenoid时，使用了外部导入的FEM数据，包括磁链数据`flux_linkage`和电磁力数据`force`：

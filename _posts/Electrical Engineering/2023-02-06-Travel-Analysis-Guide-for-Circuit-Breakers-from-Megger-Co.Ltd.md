@@ -1,9 +1,11 @@
 ---
-layout: single
 title: Travel Analysis Guide for Circuit Breakers from Megger Co.Ltd
-date: 2023-02-06 19:44:31 +0800
 categories: 
+ - Electrical Engineering
+tags:
  - Circuit Breaker
+date: 2023-02-06 19:44:31 +0800
+last_modified_at: 2024-07-17 12:26:55 +0800
 ---
 
 本博客学习[Megger公司](https://megger.com/)技术文章：[*Circuit Breaker and Transducer: Where do I connect?*](https://uk.megger.com/support/technical-library/application-notes/circuit-breaker-and-transducer-where-do-i-connect) ，该文章主要讨论的是断路器的Travel analysis.

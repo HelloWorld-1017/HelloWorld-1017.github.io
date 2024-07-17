@@ -1,20 +1,15 @@
 ---
-layout: single
 title: Use MATLAB Script to Construct Solenoid Model in Ansys Electronics Desktop
 categories:
  - MATLAB
  - Finite Element Simulation
- - Electromagnetism
+ - Physics
  - VBScript
 tags:
+ - Electromagnetism
  - MATLAB External Language Interfaces
 date: 2023-08-26 06:10:11 +0800
-last_modified_at: 2024-06-28 17:49:20 +0800
-modification_history:
- - 2023-08-26 06:10:11 +0800
- - 2023-11-04 01:55:07 +0800
- - 2024-05-25 10:02:12 +0800
- - 2024-06-28 17:49:20 +0800
+last_modified_at: 2024-07-17 15:02:48 +0800
 ---
 
 # Introduction

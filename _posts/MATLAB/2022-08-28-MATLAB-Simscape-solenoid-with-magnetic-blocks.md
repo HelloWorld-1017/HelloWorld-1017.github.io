@@ -1,15 +1,17 @@
 ---
-layout: single
-title: Building a Solenoid with Magnetic Blocks Using MATLAB Simulink
-date: 2022-08-28 18:41:41 +0800
+title: Build a Solenoid with Magnetic Blocks Using MATLAB Simulink
 categories: 
  - MATLAB
  - Signals and Systems
- - Electromagnetism
- - Circuit Breaker
+ - Physics
+ - Electrical Engineering
 tags:
+ - Electromagnetism
  - Numerical Analysis
  - MATLAB Simulink
+ - Circuit Breaker
+date: 2022-08-28 18:41:41 +0800
+last_modified_at: 2024-07-17 12:28:39 +0800
 ---
 
 

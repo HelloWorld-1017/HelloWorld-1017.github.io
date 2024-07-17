@@ -1,18 +1,17 @@
 ---
-layout: single
 title: Build a Solenoid Parameterized with FEM Data using MATLAB Simulink
 categories:
  - MATLAB
  - Signals and Systems
- - Electromagnetism
- - Circuit Breaker
+ - Physics
+ - Electrical Engineering
 tags:
+ - Electromagnetism
  - Numerical Analysis
  - MATLAB Simulink
+ - Circuit Breaker
 date: 2022-08-28 14:49:01 +0800
-last_modified_at0: 2022-08-28 14:49:01 +0800
-last_modified_at1: 2024-03-07 04:07:57 +0800
-last_modified_at: 2024-03-07 04:07:57 +0800
+last_modified_at: 2024-07-17 12:29:14 +0800
 ---
 
 # 模型介绍

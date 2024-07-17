@@ -1,12 +1,13 @@
 ---
-layout: single
 title: Continuity Equations of the Fluid from *Fundamentals of Aerodynamics* by Anderson
-date: 2023-03-24 20:29:01 +0800
 categories: 
  - Mathematics
- - Computational Fluid Dynamics
+ - Physics
 tags:
  - Mathematical Analysis
+ - Computational Fluid Dynamics
+date: 2023-03-24 20:29:01 +0800
+last_modified_at: 2024-07-17 14:57:19 +0800
 ---
 
 # The Definitions of Mass Flow and Mass Flux

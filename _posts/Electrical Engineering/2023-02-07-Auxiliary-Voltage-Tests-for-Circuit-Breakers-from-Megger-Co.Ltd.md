@@ -1,9 +1,11 @@
 ---
-layout: single
 title: Auxiliary Voltage Tests for Circuit Breakers from Megger Co.Ltd
-date: 2023-02-07 11:36:27 +0800
-categories: 
+categories:
+ - Electrical Engineering
+tags: 
  - Circuit Breaker
+date: 2023-02-07 11:36:27 +0800
+last_modified_at: 2024-07-17 12:26:21 +0800
 ---
 
 本博客学习[Megger公司](https://megger.com/)技术文章：[*Auxiliary voltage tests of circuit breakers*](https://uk.megger.com/support/technical-library/application-notes/auxiliary-voltage-tests-of-circuit-breakers)，该文章主要讨论的是断路器的Auxiliary voltage tests of cir.

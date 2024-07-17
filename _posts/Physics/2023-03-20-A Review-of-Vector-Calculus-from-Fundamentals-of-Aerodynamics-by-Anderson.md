@@ -1,12 +1,13 @@
 ---
-layout: single
 title: A Review of Vector Calculus from *Fundamentals of Aerodynamics* by Anderson
-date: 2023-03-20 20:43:35 +0800
 categories: 
  - Mathematics
- - Computational Fluid Dynamics
+ - Physics
 tags:
  - Mathematical Analysis
+ - Computational Fluid Dynamics
+date: 2023-03-20 20:43:35 +0800
+last_modified_at: 2024-07-17 14:56:11 +0800
 ---
 
 # Gradient of a Scalar Filed (Isoline, Gradient line, Directional derivative)

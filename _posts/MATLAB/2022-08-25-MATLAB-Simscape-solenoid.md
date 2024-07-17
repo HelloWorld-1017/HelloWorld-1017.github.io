@@ -1,14 +1,16 @@
 ---
-layout: single
 title: Simulate Solenoid in MATLAB Simulink
-date: 2022-08-25 17:03:51 +0800
 categories: 
  - MATLAB
  - Signals and Systems
- - Electromagnetism
- - Circuit Breaker
+ - Physics
+ - Electrical Engineering
 tags:
  - MATLAB Simulink
+ - Circuit Breaker
+ - Electromagnetism
+date: 2022-08-25 17:03:51 +0800
+last_modified_at: 2024-07-17 12:29:47 +0800
 ---
 
 # 电磁铁的电路-机械模型

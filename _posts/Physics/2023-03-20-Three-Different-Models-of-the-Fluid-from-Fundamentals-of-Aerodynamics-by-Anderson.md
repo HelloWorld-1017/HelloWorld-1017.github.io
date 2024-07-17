@@ -1,12 +1,13 @@
 ---
-layout: single
 title: Three Different Models of the Fluid from *Fundamentals of Aerodynamics* by Anderson
-date: 2023-03-20 20:53:27 +0800
 categories: 
  - Mathematics
- - Computational Fluid Dynamics
+ - Physics
 tags:
  - Mathematical Analysis
+ - Computational Fluid Dynamics
+date: 2023-03-20 20:53:27 +0800
+last_modified_at: 2024-07-17 14:56:50 +0800
 ---
 
 # Introduction

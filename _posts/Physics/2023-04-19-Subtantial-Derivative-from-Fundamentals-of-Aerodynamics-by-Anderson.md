@@ -1,12 +1,13 @@
 ---
-layout: single
 title: Subtantial Derivative from *Fundamentals of Aerodynamics* by Anderson
-date: 2023-04-19 14:31:29 +0800
 categories: 
  - Mathematics
- - Computational Fluid Dynamics
+ - Physics
 tags:
  - Mathematical Analysis
+ - Computational Fluid Dynamics
+date: 2023-04-19 14:31:29 +0800
+last_modified_at: 2024-07-17 14:58:46 +0800
 ---
 
 # Substantial Derivative

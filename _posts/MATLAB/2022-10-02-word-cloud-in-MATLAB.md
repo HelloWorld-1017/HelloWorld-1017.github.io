@@ -1,17 +1,14 @@
 ---
-layout: single
 title: Create Word Cloud in MATLAB
 categories: 
  - MATLAB
  - Machine Learning
 tags:
  - MATLAB Text Analytics Toobox
- - NLP (Natural Language Processing)
+ - Natural Language Processing
  - MATLAB Graphics
 date: 2022-10-02 11:03:17 +0800
-last_modified_at0: 2022-10-02 11:03:17 +0800
-last_modified_at1: 2024-04-04 08:31:52 +0800
-last_modified_at: 2024-04-04 08:31:52 +0800
+last_modified_at: 2024-07-18 15:53:25 +0800
 ---
 
 # Example 1: Visualize Text Data Using Word Clouds
@@ -92,7 +89,7 @@ wc = wordcloud(textData);
 title("Factory Reports")
 ```
 
-```matlab
+```
 wc = 
 
   WordCloudChart (Factory Reports) with properties:
@@ -156,7 +153,7 @@ title("Factory Reports")
 sonnets = fileread('sonnets.txt');
 ```
 
-```matlab
+```
 >> whos sonnets
   Name         Size                 Bytes  Class    Attributes
 
@@ -169,7 +166,7 @@ sonnets = fileread('sonnets.txt');
 sonnets = string(sonnets);
 ```
 
-```matlab
+```
 >> whos sonnets
   Name         Size             Bytes  Class     Attributes
 
@@ -186,7 +183,7 @@ sonnets = string(sonnets);
 sonnets = splitlines(sonnets);
 ```
 
-```matlab
+```
 >> whos sonnets
   Name            Size             Bytes  Class     Attributes
   sonnets      2625x1             320806  string
@@ -208,7 +205,7 @@ sonnets = join(sonnets);
 sonnets = split(sonnets);
 ```
 
-```matlab
+```
 >> whos sonnets
   Name             Size             Bytes  Class     Attributes
 
@@ -236,7 +233,7 @@ title("Sonnets Word Cloud")
 
 <br>
 
-# Reference
+**Reference**
 
 [1] [Visualize Text Data Using Word Clouds - MathWorks](https://ww2.mathworks.cn/help/textanalytics/ug/visualize-text-data-using-word-clouds.html).
 

@@ -1,23 +1,12 @@
 ---
-layout: single
 title: Some Terminology and Methods in the Field of Large Language Models
 categories:
  - Machine Learning
  - Collections
 tags:
- - NLP (Natural Language Processing)
+ - Natural Language Processing
 toc: false
 date: 2024-01-15 20:35:28 +0800
-last_modified_at0: 2024-01-15 20:35:28 +0800
-last_modified_at1: 2024-03-22 21:19:30 +0800
-last_modified_at2: 2024-03-23 23:58:47 +0800
-last_modified_at3: 2024-03-26 09:17:19 +0800
-last_modified_at4: 2024-04-26 11:17:50 +0800
-last_modified_at5: 2024-05-10 23:12:36 +0800
-last_modified_at6: 2024-05-21 17:38:46 +0800
-last_modified_at7: 2024-05-22 06:25:50 +0800
-last_modified_at8: 2024-05-23 08:11:35 +0800
-last_modified_at9: 2024-05-29 10:01:26 +0800
 last_modified_at: 2024-05-29 10:01:26 +0800
 ---
 

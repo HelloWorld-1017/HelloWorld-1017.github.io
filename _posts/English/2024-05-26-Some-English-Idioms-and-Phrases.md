@@ -227,6 +227,31 @@ to succeed in understanding something difficult or strange.
 
 <br>
 
+## go further/take something further
+
+> go further/take something further
+>
+> take something a stage/step further
+>
+> take the matter further
+>
+> - [GO FURTHER/TAKE SOMETHING FURTHER - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/go-further-take-further).
+> - [take something further - LDOCE](https://www.ldoceonline.com/dictionary/take-something-further).
+> - [FURTHER definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/further).
+
+If you go or take something further, you take it to a more advanced stage; to take action at a more serious or higher level, <mark>especially in order to get the result you want</mark>; If you go or get further with something, or take something further, you make some progress.
+
+- Before we ***go any further with*** the project, I think we should make sure that there's enough money to fund it.
+- If you wish to ***take the matter further***, you can file charges against him.
+- A lot of eateries now buy some local produce, but this restaurant ***goes much further*** by serving seasonal dishes and local produce at every meal.
+- They're demanding legislation that ***goes further*** than the administration proposal.
+- I'd really enjoyed my work experience and wanted to ***take it further***.
+- The police do not propose to ***take the matter further***.
+- Critics want the government to ***take this a stage further*** and ban the film altogether.
+- They lacked the scientific personnel to develop the technical apparatus much further. 
+
+<br>
+
 # I
 
 ## in a way & to some extent
@@ -634,7 +659,7 @@ to become worth nothing.
 >
 > - [VICE VERSA \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/vice-versa).
 
-used to say that what you have just said is also true in the opposite order:
+used to say that what you have just said is also true in the opposite order.
 
 - He doesn't trust her, and ***vice versa*** (= she also doesn't trust him).
 

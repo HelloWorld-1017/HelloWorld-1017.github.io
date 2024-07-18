@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Maybe \"Story-driven\" Model? 
 toc: false
 categories:
@@ -8,11 +7,8 @@ categories:
  - Economics & Finance
  - Machine Learning
 tags:
- - NLP (Natural Language Processing)
-drafted_at: 2024-04-22 13:24:53 +0800
+ - Natural Language Processing
 date: 2024-04-26 14:34:45 +0800
-last_modified_at0: 2024-04-26 14:34:45 +0800
-last_modified_at1: 2024-06-16 00:04:08 +0800
 last_modified_at: 2024-06-16 00:04:08 +0800
 ---
 

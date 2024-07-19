@@ -1,9 +1,9 @@
 ---
-title: English Expressions with Common Verbs
+title: Some Common English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2024-07-03 19:33:49 +0800
+last_modified_at: 2024-07-19 03:07:15 +0800
 ---
 
 # Bring
@@ -192,6 +192,36 @@ to promise
 
 - ***Look me up*** next time you're in Los Angeles.
 - Don’t forget to ***look me up*** when you come to Atlanta.
+
+<br>
+
+# Put
+
+## put it
+
+> put it
+>
+> - [PUT definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/put).
+
+When you put an idea or remark in a particular way, you express it in that way. You can use expressions like to ‘*put it simply*’ and to ‘*put it bluntly*’ before saying something when you want to explain how you are going to express it. (Synonyms: express, say, state, word.)
+
+- I had already met him a couple of times through–how should I ***put it***–friends in low places.
+- He doesn't, ***to put it very bluntly***, give a damn about the woman or the baby.
+- If I was auditioning for a vocalist, let me ***put it*** this way, he wouldn't get to sing in my band.
+- He admitted the security forces might have made some mistakes, as he ***put it***.
+- You can't ***put*** that sort of fear ***into words***.
+
+## put someone to something
+
+> put someone to something
+>
+> - [PUT SOMEONE TO SOMETHING - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/put-to).
+
+to cause someone to experience or do something.
+
+- Your generosity ***puts me to shame***.
+- I've ***put the children to work*** clearing the snow from the path.
+- I hope we're not ***putting you to any inconvenience***.
 
 <br>
 

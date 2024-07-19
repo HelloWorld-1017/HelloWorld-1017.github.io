@@ -8,7 +8,7 @@ tags:
  - Python PyTorch
  - Natural Language Processing
 date: 2024-07-18 15:45:09 +0800
-last_modified_at: 2024-07-18 15:45:09 +0800
+last_modified_at: 2024-07-18 18:16:00 +0800
 ---
 
 In Natural Language Processing, a word embedding is a representation of a word[^1], and it is a common way to represent a word by a unique real-valued vector. Although there are some advanced techniques to make these ‘real-valued vectors’ look more reasonable, like making those words have similar meanings get closer in the vector space[^1], some simple ones are also popular. One way is by random vectors.
@@ -82,6 +82,32 @@ In this example, we can see that:
 - This 10-by-3 random matrix is the dictionary, which means that in this example there are 10 words in total, and each word is represented by a 3-dimensional row vector.
 - Variable `sentences` is a 2-by-4 tensor, which represents two sentences with 4 words. And, both two sentences have been indexed in advance (as described before, these indexes are row indexes of corresponding words).
 - `embedding(sentences)` is the final mapping process, that is find out each specific row vector in `embedding` by each index in `sentences` and then put it in the resulting matrix. At last, a 2-by-4-by-3 matrix is constructed to represent the two sentences in variable `sentences`.
+
+And of course, if the number of words in dictionary (`9` in the following case) is less than the maximum index in the sentences plus 1 (`10`), an error will occur:
+
+```python
+import torch
+import torch.nn as nn
+torch.manual_seed(17) # For reproductivity
+
+sentences = torch.LongTensor([[1, 2, 4, 5], [4, 3, 2, 9]])
+embedding = nn.Embedding(9, 3)
+embedding(sentences)
+```
+
+```
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[6], line 7
+      5 sentences = torch.LongTensor([[1, 2, 4, 5], [4, 3, 2, 9]])
+      6 embedding = nn.Embedding(9, 3)
+----> 7 embedding(sentences)
+
+...
+...
+
+IndexError: index out of range in self
+```
 
 <br>
 

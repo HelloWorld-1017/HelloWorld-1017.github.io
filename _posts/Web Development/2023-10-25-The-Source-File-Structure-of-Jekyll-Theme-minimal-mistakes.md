@@ -1,7 +1,6 @@
 ---
-layout: single
 title: "The Source File Structure of Jekyll Theme \"minimal-mistakes\""
-subtitle: Realise file tree using MATLAB
+subtitle: Realize file tree in MATLAB
 categories:
  - Web Development
  - MATLAB
@@ -9,19 +8,16 @@ categories:
 tags:
  - Jekyll
  - Regular Expression
- - Tree (Data Structure)
+ - Data Structure
  - MATLAB Language Fundamentals
  - MATLAB Programming
 date: 2023-10-25 21:25:49 +0800
-last_modified_at: 2024-06-20 12:44:10 +0800
-modification_history:
- - 2023-10-25 21:25:49 +0800
- - 2024-06-20 12:44:10 +0800
+last_modified_at: 2024-07-19 04:21:10 +0800
 ---
 
 # Introduction
 
-My personal website is based on a Jekyll theme "minimal-mistakes" [[1]](#ref), but I don't know much about Jekyll as well as other languages for website establishment, like HTML, CSS for instance, as I have no idea about how to debug it. So, taking "minimal-mistakes" theme as an example, I want to learn these step by step. As the first step, I want to obtain a file tree of website folder.
+My personal website is based on a Jekyll theme "minimal-mistakes"[^1], but I don't know much about Jekyll as well as other languages for website establishment, like HTML, CSS for instance, as I have no idea about how to debug it. So, taking "minimal-mistakes" theme as an example, I want to learn these step by step. As the first step, I want to obtain a file tree of website folder.
 
 In the website root folder, we could type the command:
 
@@ -29,7 +25,7 @@ In the website root folder, we could type the command:
 dir /b/og
 ```
 
-N.B., `/b`: Displays a bare list of directories and files, with no additional information; `/og`: Sorts the output according to "Group directories first" rule. More details could be found in [[2]](#ref).
+N.B., `/b`: Displays a bare list of directories and files, with no additional information; `/og`: Sorts the output according to "Group directories first" rule. More details could be found in[^2].
 {: .notice--primary}
 
 in Windows CMD, a list of files and folders in the first level folder will show up:
@@ -62,7 +58,7 @@ README.md
 
 where the files for constructing website components are mainly put in `_data`, `_includes`, `_layouts`, `_pages`, `_sass`, and `assets` folders. But when I try to list all subfolders and files in these six folders, I encountered some problems.
 
-At first, `tree` command actually is more suitable for listing file tree compare with `dir`, however, `tree` command in Windows CMD [[3]](#ref) is not that powerful and flexible as that in Linux system [[4]](#ref). I found many sources on the Internet, but didn't find how to list file tree for *some certain* subfolders (i.e., it seems to only support to list file tree for *all* subfolders).
+At first, `tree` command actually is more suitable for listing file tree compare with `dir`, however, `tree` command in Windows CMD[^3] is not that powerful and flexible as that in Linux system[^4]. I found many sources on the Internet, but didn't find how to list file tree for *some certain* subfolders (i.e., it seems to only support to list file tree for *all* subfolders).
 
 On another hand, `dir` command in Windows CMD, which is used above, provides various options. We could use:
 
@@ -70,7 +66,7 @@ On another hand, `dir` command in Windows CMD, which is used above, provides var
 dir /d/s "_data" "_includes" "_layouts" "_pages" "_sass" "assets"
 ```
 
-N.B., `/s`: Lists every occurrence of the specified file name within the specified directory and all subdirectories [[2]](#ref).
+N.B., `/s`: Lists every occurrence of the specified file name within the specified directory and all subdirectories[^2].
 {: .notice--primary}
 
 > or output the lists to `list.txt`:
@@ -369,7 +365,7 @@ The above MATLAB code running results will be presented in the following text, a
                                         _utilities.scss
 ```
 
-In this folder, all files are `.scss` files for styling website components, like files for setting website skins in `.\_sass\minimal-mistakes\skins` folder (could refer to [[5]](#ref)).
+In this folder, all files are `.scss` files for styling website components, like files for setting website skins in `.\_sass\minimal-mistakes\skins` folder (could refer to[^5]).
 
 <br>
 
@@ -403,16 +399,10 @@ In this folder, all files are `.scss` files for styling website components, like
 
 <br>
 
-<div id="ref"></div>
-
 **References**
 
-[1] [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes).
-
-[2] [`dir` - Windows Server](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir).
-
-[3] [`tree` - Windows Server](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree).
-
-[4] [Tree command in Linux with examples - GeeksforGeeks](https://www.geeksforgeeks.org/tree-command-unixlinux/).
-
-[5] [Create a New Skin of Jekyll Theme "minimal-mistakes" - What a starry night~](https://helloworld-1017.github.io/2023-10-24/16-15-45.html).
+[^1]: [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes).
+[^2]: [`dir` - Windows Server](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir).
+[^3]: [`tree` - Windows Server](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree).
+[^4]: [Tree command in Linux with examples - GeeksforGeeks](https://www.geeksforgeeks.org/tree-command-unixlinux/).
+[^5]: [Create a New Skin of Jekyll Theme "minimal-mistakes" - What a starry night~](https://helloworld-1017.github.io/2023-10-24/16-15-45.html).

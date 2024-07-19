@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Column- and Row-major Layout Array
+title: Column- vs. Row-major Layout Array
 toc: false
 categories: 
  - MATLAB
@@ -12,10 +11,9 @@ tags:
  - MATLAB Coder
  - Prime Obsession
  - Number Theory
+ - Data Structure
 date: 2023-04-27 14:20:22 +0800
-last_modified0: 2023-04-27 14:20:22 +0800
-last_modified1: 2024-05-12 03:19:22 +0800
-last_modified: 2024-05-12 03:19:22 +0800
+last_modified: 2024-07-19 04:26:52 +0800
 ---
 
 前两天在逛知乎的时候，在一篇回答的下面看到了一个回答：“[在MATLAB中，] 先列后行比先行后列快很多”[^1] 。也就是说，在不得以循环遍历矩阵中的每一个数组的元素时，“先遍历列元素，再遍历行元素”所花费的时间更短。于是，今天我就简单地测试了一下，采用的测试程序是“100次循环`10e4`阶矩阵的元素自增1”：
@@ -65,7 +63,7 @@ Elapsed time is 263.073480 seconds.
 
 在MATLAB的编程语言和编程环境中，所有的数据都是默认采用单一的**column-major layout**。
 
-常见的采用column-major layout（有时也被称为"Fortran" style ordering[^3]，Fortran-style contiguous array[^4]）的编程语言：MATLAB，Fortran（许多流体力学的仿真采用的是这种语言），R。常见的采用row-major layout（有时也被称为"C" style ordering [2] C-style contiguous array [4]）的编程语言：C，C++，Python NumPy package[^4][^5]。
+常见的采用column-major layout（有时也被称为"Fortran" style ordering[^3]，Fortran-style contiguous array[^4]）的编程语言：MATLAB，Fortran（许多流体力学的仿真采用的是这种语言），R。常见的采用row-major layout（有时也被称为"C" style ordering，或者C-style contiguous array）的编程语言：C，C++，Python NumPy package[^4][^5]。
 {: .notice--primary}
 
 <br>

@@ -6,7 +6,7 @@ categories:
 tags:
  - Python PyTorch
 date: 2024-07-18 12:21:50 +0800
-last_modified_at: 2024-07-18 12:21:50 +0800
+last_modified_at: 2024-07-18 18:16:44 +0800
 ---
 
 # `requires_grad` attribute
@@ -72,41 +72,8 @@ Cell In[5], line 9
 ----> 9 y.backward()
      11 print("x.grad:", x.grad)
 
-File G:\PythonLearning\venv\Lib\site-packages\torch\_tensor.py:525, in Tensor.backward(self, gradient, retain_graph, create_graph, inputs)
-    515 if has_torch_function_unary(self):
-    516     return handle_torch_function(
-    517         Tensor.backward,
-    518         (self,),
-   (...)
-    523         inputs=inputs,
-    524     )
---> 525 torch.autograd.backward(
-    526     self, gradient, retain_graph, create_graph, inputs=inputs
-    527 )
-
-File G:\PythonLearning\venv\Lib\site-packages\torch\autograd\__init__.py:267, in backward(tensors, grad_tensors, retain_graph, create_graph, grad_variables, inputs)
-    262     retain_graph = create_graph
-    264 # The reason we repeat the same comment below is that
-    265 # some Python versions print out the first line of a multi-line function
-    266 # calls in the traceback and some print out the last line
---> 267 _engine_run_backward(
-    268     tensors,
-    269     grad_tensors_,
-    270     retain_graph,
-    271     create_graph,
-    272     inputs,
-    273     allow_unreachable=True,
-    274     accumulate_grad=True,
-    275 )
-
-File G:\PythonLearning\venv\Lib\site-packages\torch\autograd\graph.py:744, in _engine_run_backward(t_outputs, *args, **kwargs)
-    742     unregister_hooks = _register_logging_hooks_on_whole_graph(t_outputs)
-    743 try:
---> 744     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-    745         t_outputs, *args, **kwargs
-    746     )  # Calls into the C++ engine to run the backward pass
-    747 finally:
-    748     if attach_logging_hooks:
+...
+...
 
 RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
 ```

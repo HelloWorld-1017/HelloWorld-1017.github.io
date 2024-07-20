@@ -7,12 +7,7 @@ tags:
  - Python conda
  - Python Virtual Environment
 date: 2023-04-02 16:42:49 +0800
-last_modified_at: 2024-07-09 16:07:12 +0800
-modification_history:
- - 2023-04-02 16:42:49 +0800
- - 2024-05-22 19:41:35 +0800
- - 2024-07-04 16:04:54 +0800
- - 2024-07-09 16:07:12 +0800
+last_modified_at: 2024-07-20 16:31:25 +0800
 ---
 
 首先，创建一个新的环境`newenv1`：
@@ -66,7 +61,7 @@ conda list
 
 ```powershell
 conda activate newenv1
-conda install spyder-kernels=2.4
+conda install spyder-kernels==2.4.*
 ```
 
 安装完成后，再次打开Spyder可以看到错误提示消失了。此时再查看当前的环境信息：

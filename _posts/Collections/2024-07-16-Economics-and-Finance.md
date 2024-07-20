@@ -5,7 +5,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-07-16 23:16:52 +0800
+last_modified_at: 2024-07-19 22:08:03 +0800
 ---
 
 **Books**
@@ -14,6 +14,7 @@ last_modified_at: 2024-07-16 23:16:52 +0800
 - [The Psychology of Money: Timeless lessons on wealth, greed, and happiness](https://pdflake.com/wp-content/uploads/2021/08/The-Psychology-of-Money-PDF-Book-By-Morgan-Housel.pdf), Morgan Housel.
 - [The Essays of Warren Buffett: Lessons for Corporate America](http://csinvesting.org/wp-content/uploads/2015/05/Essays-of-Warren-Buffett-_-Lessons-for-Corporate-America_Cunningham.pdf), Essays by Warren E. Buffett.
 - [Reminiscences of a Stock Operator: to Jesse Lauriston Livermore](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf), Edwin LeFevre.
+- [Quantitative trading: how to build your own algorithmic trading business](https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf), Ernest P. Chan, 2021.
 
 **Blogs**
 

@@ -53,13 +53,6 @@ header:
 logo: "/images/huachi.jpg" # "/assets/images/88x88.png"
 masthead_title: # "My Custom Title"
 
-# search
-search: true
-search_provider: lunr
-lunr:
-  search_within_pages: true
-  search_full_content: true
-
 defaults:
   # _posts
   - scope:
@@ -103,7 +96,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
 
 # collections
 collections:

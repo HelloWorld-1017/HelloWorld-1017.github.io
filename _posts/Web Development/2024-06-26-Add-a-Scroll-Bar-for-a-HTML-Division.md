@@ -1,13 +1,11 @@
 ---
-title: Add a Scroll Bar for a HTML Division (HTML `<div>` Tag)
+title: Add a Scroll Bar for an HTML `<div>` Element
 categories:
  - Web Development
 tags:
  - HTML
 date: 2024-06-26 11:41:42 +0800
-last_modified_at: 2024-06-26 11:41:42 +0800
-modification_history:
- - 2024-06-26 11:41:42 +0800
+last_modified_at: 2024-07-20 22:20:50 +0800
 ---
 
 # Add a vertical scroll bar

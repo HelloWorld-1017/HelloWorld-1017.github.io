@@ -1,5 +1,5 @@
 ---
-title: Some Static Websites
+title: Some Static Blog Websites
 categories:
  - Web Development
  - Collections
@@ -7,10 +7,12 @@ tags:
  - Jekyll
  - HTML
 date: 2024-02-22 22:37:33 +0800
-last_modified_at: 2024-07-16 23:24:10 +0800
+last_modified_at: 2024-07-20 23:27:12 +0800
 ---
 
 In this post, I want to record some blog websites I’ve ever seen. They are basically static websites, and hosted in GitHub. All of these websites are found when I was searching information online. I think their website styles or certain elements are simple but beautiful. So, if I need to improve my personal website one day, they could be good references, because I could view their source codes in GitHub or inspect their elements in browser debug mode. Actually, I had been doing it.
+
+<br>
 
 # Websites based on Jekyll
 
@@ -38,6 +40,9 @@ In this post, I want to record some blog websites I’ve ever seen. They are bas
   - GitHub repository: [zorchp/zorchp.github.io: Welcome to my blog~](https://github.com/zorchp/zorchp.github.io)
 - [aptx1231の博客](https://aptx1231.github.io/)
   - GitHub repository: [aptx1231/aptx1231.github.io](https://github.com/aptx1231/aptx1231.github.io)
+- [Beautiful Jekyll](https://beautifuljekyll.com/)
+  - GitHub repository: [daattali/beautiful-jekyll: ✨ Build a beautiful and simple website in literally minutes. Demo at https://beautifuljekyll.com](https://github.com/daattali/beautiful-jekyll).
+
 
 ## Jekyll theme "minimal-mistakes"
 
@@ -58,8 +63,6 @@ In this post, I want to record some blog websites I’ve ever seen. They are bas
 <br>
 
 # Websites based on Hexo
-
-## Hexo theme
 
 - [jerryc127/hexo-theme-butterfly: 🦋 A Hexo Theme: Butterfly](https://github.com/jerryc127/hexo-theme-butterfly/)
 

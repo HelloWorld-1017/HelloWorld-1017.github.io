@@ -7,7 +7,7 @@ layout: archive_life
 {% assign postsInYear = site.life | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsInYear reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
   <a class = "btn btn--primary" href="#{{ year.name }}" style="background-color:#104E8B;color:white;box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);">
-    <i class="fa fa-hashtag" aria-hidden="true"></i> {{ year.name }} ({{ year.items | size }})
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ year.name }} ({{ year.items | size }})
   </a>
 {% endfor %}
 
@@ -15,7 +15,7 @@ layout: archive_life
 {% assign postsByYear = site.life | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
   <section id="{{ year.name }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ year.name }}</h2>
+    <h2 class="archive__subtitle"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items reversed %} <!-- Reference: https://gist.github.com/shwinshaker/9e5107271c38d8fb7130d2d2c433273e -->
         {% include archive-single.html type=entries_layout %}

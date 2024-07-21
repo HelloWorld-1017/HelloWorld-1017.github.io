@@ -6,14 +6,14 @@ tags:
  - Python NumPy
  - Python PyTorch
 date: 2024-07-20 17:30:00 +0800
-last_modified_at: 2024-07-20 17:30:00 +0800
+last_modified_at: 2024-07-20 23:33:23 +0800
 ---
 
 # NumPy array
 
 <div class="quote--left" markdown="1">
-<br>
 `numpy.shape(a)`[^1]: Return the shape of an array.
+
 
 - Parameters:
   - `a`: *array\_like*. Input array.
@@ -55,7 +55,6 @@ print(a.ndim, np.ndim(a))
 # PyTorch tensor
 
 <div class="quote--left" markdown="1">
-<br>
 
 `torch.Tensor.shape`[^3]: Returns the size of the `self` tensor. Alias for `size`.
 

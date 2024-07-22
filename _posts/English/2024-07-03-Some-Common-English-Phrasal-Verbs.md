@@ -3,10 +3,10 @@ title: Some Common English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2024-07-19 03:07:15 +0800
+last_modified_at: 2024-07-22 16:11:15 +0800
 ---
 
-# Bring
+# BRING
 
 ## bring about
 
@@ -21,7 +21,7 @@ to cause something to happen.
 
 <br>
 
-# Come
+# COME
 
 ## come down to
 
@@ -54,7 +54,24 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-# Get
+# GET
+
+## get away
+
+> get away
+>
+> - [GET AWAY \| definition in the Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/get-away).
+
+(1) to leave or escape from a person or place, often when it is difficult to do this.
+
+- We walked to the next beach to ***get away*** from the crowds.
+- I'll ***get away*** from work as soon as I can.
+
+(2) to go somewhere to have a vacation, often because you need to rest.
+
+- I just need to ***get away*** for a few days.
+
+<br>
 
 ## get into
 
@@ -104,7 +121,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-# Give
+# GIVE
 
 ## give in 
 
@@ -120,6 +137,8 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 - The rebels were eventually forced to ***give in***.
 - We will carry on fighting to the end. We will never ***give in***.
+
+<br>
 
 ## give up
 
@@ -141,6 +160,8 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 - give somebody up
   - The siege ended peacefully after the gunman ***gave himself up***.
 
+<br>
+
 ## give one’s word
 
 > give one’s word
@@ -153,7 +174,69 @@ to promise
 
 <br>
 
-# Look
+# LAY and LIE
+
+## Lay vs. Lie
+
+> Lay vs. Lie
+>
+> - ['Lay' vs. 'Lie': Which is Right? \| Merriam-Webster](https://www.merriam-webster.com/grammar/how-to-use-lay-and-lie).
+
+- LAY
+  - to place (something or someone) down in a flat position.
+  - transitive verb: it requires that the verb have an object; there has to be a thing or person being placed, like ‘Lay it down’.
+  - tenses: lay, laying, laid, have laid.
+  
+- LIE
+  - to be in a flat position on a surface.
+  
+  - intransitive verb: It's for something or someone moving on their own or something that's already in position: ‘You can lie down there’. ‘You can lie there all day.’
+  
+  - tenses: lie, lying, lay, have lain.
+  
+    tenses (for unrelated verb meaning "to tell an untruth."): lie, lying, lied, have lied.
+
+<br>
+
+## lie at the heart/centre/root of something
+
+> lie at the heart/centre/root of something
+>
+> - [lie at the heart/centre/root of something - LDOCE](https://www.ldoceonline.com/dictionary/lie-at-the-heart-centre-root-of-something).
+
+to be the most important part of something, especially the main cause of it.
+
+- the issue that ***lies at the heart of*** the present conflict.
+- That view ***lies at the root of*** a government drive against the racist right.
+- Basic compassion, not just for the old but for the younger generation too, ***lies at the heart of*** this idea.
+
+<br>
+
+## lay something on
+
+> lay something on
+>
+> - [lay something on - LDOCE](https://www.ldoceonline.com/dictionary/lay-on).
+> - [Lie on/upon Definition \& Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/lie%20on%2Fupon).
+
+(1) to provide something such as food, entertainment, or transport for a group of people.
+
+- They ***laid on*** a buffet for his farewell party.
+- A bus ***has been laid on*** to take you home.
+
+(2) to ask someone to do something, especially something that is difficult or something they will not want to do.
+
+- Sorry to ***lay*** this ***on*** you, but we need someone to give a talk at the conference next week.
+
+(3) *lay on/upon; lain on/upon; lying on/upon; lies on/upon*: to affect (someone) in a specified way.
+
+- Sorrow ***lay*** heavily ***on*** him.
+- Guilt ***lies on*** his conscience.
+- She keeps herself healthy so her years ***lie*** lightly ***upon*** her.
+
+<br>
+
+# LOOK
 
 ## look into
 
@@ -168,6 +251,8 @@ to promise
 (2) to try to find out about something:
 
 - I’ll ***look into*** the reasons for the decision.
+
+<br>
 
 ## look up
 
@@ -195,7 +280,7 @@ to promise
 
 <br>
 
-# Put
+# PUT
 
 ## put it
 
@@ -211,6 +296,8 @@ When you put an idea or remark in a particular way, you express it in that way. 
 - He admitted the security forces might have made some mistakes, as he ***put it***.
 - You can't ***put*** that sort of fear ***into words***.
 
+<br>
+
 ## put someone to something
 
 > put someone to something
@@ -225,7 +312,7 @@ to cause someone to experience or do something.
 
 <br>
 
-# Take
+# TAKE
 
 ## take away
 
@@ -251,7 +338,7 @@ to cause someone to experience or do something.
 
 <br>
 
-# Throw
+# THROW
 
 ## throw oneself at sb.
 
@@ -265,5 +352,39 @@ If someone throws themselves at you, they make it very obvious that they want to
 
 - I'll say you started it, that you ***threw yourself at me***.
 - I don't know what it is about John, but women just seem to ***throw themselves at him***.
+
+<br>
+
+# TRIP
+
+## trip up
+
+> trip up
+>
+> - [TRIP UP definition in American English \| Collins English Dictionary](https://www.collinsdictionary.com/us/dictionary/english/trip-up).
+> - [TRIP definition in American English \| Collins English Dictionary](https://www.collinsdictionary.com/us/dictionary/english/trip).
+
+<div class="notice--primary" markdown="1">
+
+(1) \[countable noun\] A trip is a journey that you make to a particular place.
+
+- We're taking a ***trip*** to Montana. 
+- On Thursday we went out on a day ***trip***.
+
+(2) \[intransitive verb\] If you trip when you are walking, you knock your foot against something and fall or nearly fall.
+
+- She ***tripped*** and fell last night and broke her hip.
+
+(3) \[transitive verb\] If you trip someone who is walking or running, you put your foot or something else in front of them, so that they knock their own foot against it and fall or nearly fall.
+
+- One guy stuck his foot out and tried to ***trip*** me.
+
+</div>
+
+If someone or something trips a person up, or if they trip up, they fail or make a mistake.
+
+- Your own lies will ***trip*** you ***up***. 
+- He will do all he can to ***trip up*** the new right-wing government.
+- The two occasions she ***tripped up*** tell you nothing about how often she got away with it.
 
 <br>

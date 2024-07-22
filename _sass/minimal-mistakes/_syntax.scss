@@ -342,9 +342,9 @@ td>code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 0.8em;
-  background: $Seashell; // $Snow1
   border-radius: 4px;
-  color: #D63384;
+  color: $DodgerBlue4; // #D63384; $SteelBlue4
+  background: $WhiteSmoke; // $Seashell; $AliceBlue
 }
 
 .rouge-table {

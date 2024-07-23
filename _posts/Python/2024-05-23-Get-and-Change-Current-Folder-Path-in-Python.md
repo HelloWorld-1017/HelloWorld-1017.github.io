@@ -1,14 +1,11 @@
 ---
-layout: single
 title: Get and Change Current Folder Path in Python
 toc: false
 categories:
  - Python
 tags:
  - Python os
-drafted_at: 2024-05-22 22:51:12 +0800
 date: 2024-05-23 10:26:04 +0800
-last_modified_at0: 2024-05-23 10:26:04 +0800
 last_modified_at: 2024-05-23 10:26:04 +0800
 ---
 ```

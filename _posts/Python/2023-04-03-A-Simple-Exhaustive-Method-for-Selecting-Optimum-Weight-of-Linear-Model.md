@@ -1,5 +1,4 @@
 ---
-layout: single
 title: A Simple Exhaustive Method for Selecting Optimum Weight of Linear Model
 toc: false
 categories: 
@@ -7,11 +6,8 @@ categories:
  - Python
 tags:
  - Python Graphics
- - Python matplotlib
+ - Python Matplotlib
 date: 2023-04-03 16:44:31 +0800
-last_modified_at0: 2023-04-03 16:44:31 +0800
-last_modified_at1: 2024-05-22 22:19:05 +0800
-last_modified_at2: 2024-05-25 09:48:11 +0800
 last_modified_at: 2024-05-25 09:48:11 +0800
 ---
 

@@ -6,6 +6,7 @@ categories:
 tags:
  - Python conda
  - Python Virtual Environment
+ - Spyder IDE
 date: 2023-04-02 16:42:49 +0800
 last_modified_at: 2024-07-20 16:31:25 +0800
 ---

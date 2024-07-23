@@ -2,9 +2,10 @@
 title: "Specify Local Storage Directory of Images in Markdown Files when Markdown Editing with VS Code"
 toc: false
 categories:
- - VS Code
+ - Web Development
 tags:
-- Markdown
+ - Markdown
+ - VS Code
 date: 2024-07-22 16:08:34 +0800
 last_modified_at: 2024-07-22 16:08:34 +0800
 ---

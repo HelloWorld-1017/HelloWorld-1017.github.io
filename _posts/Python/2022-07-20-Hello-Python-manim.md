@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Hello, Python manim!
 categories: 
  - Python
@@ -7,9 +6,6 @@ tags:
  - Python manim
  - Python Graphics
 date: 2022-07-20 21:23:43 +0800
-last_modified_at0: 2022-07-20 21:23:43 +0800
-last_modified_at1: 2024-05-22 21:13:23 +0800
-last_modified_at2: 2024-05-25 09:49:06 +0800
 last_modified_at: 2024-05-25 09:49:06 +0800
 ---
 

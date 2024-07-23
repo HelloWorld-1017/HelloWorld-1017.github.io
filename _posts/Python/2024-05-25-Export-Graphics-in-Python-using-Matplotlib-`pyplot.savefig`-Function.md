@@ -6,10 +6,8 @@ categories:
  - Python
 tags:
  - Python Graphics
- - Python matplotlib
-drafted_at: 2024-05-25 10:00:02 +0800
+ - Python Matplotlib
 date: 2024-05-25 11:09:18 +0800
-last_modified_at0: 2024-05-25 11:09:18 +0800
 last_modified_at: 2024-05-25 11:09:18 +0800
 ---
 

@@ -5,14 +5,9 @@ categories:
  - Graphic Design and Typography
 tags:
  - Python Graphics
- - Python matplotlib
-drafted_at: 2024-05-27 16:19:11 +0800
+ - Python Matplotlib
 date: 2024-06-05 19:43:57 +0800
 last_modified_at: 2024-06-20 17:50:31 +0800
-modification_history:
- - 2024-06-05 19:43:57 +0800
- - 2024-06-06 08:27:10 +0800
- - 2024-06-20 17:50:31 +0800
 ---
 
 # Matplotlib `matplotlibrc` file

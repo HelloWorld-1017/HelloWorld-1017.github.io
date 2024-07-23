@@ -1,15 +1,12 @@
 ---
-layout: single
 title: Update Python Package using Pip
 toc: false
 categories:
  - Python
 tags:
  - Python pip
- - Python matplotlib
-drafted_at: 2024-05-22 23:16:41 +0800
+ - Python Matplotlib
 date: 2024-05-23 13:20:47 +0800
-last_modified_at0: 2024-05-23 13:20:47 +0800
 last_modified_at: 2024-05-23 13:20:47 +0800
 ---
 

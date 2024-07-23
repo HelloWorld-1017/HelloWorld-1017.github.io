@@ -4,11 +4,8 @@ categories:
  - Python
 tags:
  - Python Graphics
- - Python matplotlib
-drafted_at: 2024-05-25 14:38:26 +0800
+ - Python Matplotlib
 date: 2024-06-10 20:34:16 +0800
-last_modified_at0: 2024-06-10 20:34:16 +0800
-last_modified_at1: 2024-06-16 01:34:05 +0800
 last_modified_at: 2024-06-16 01:34:05 +0800
 ---
 

@@ -1,16 +1,13 @@
 ---
-title: Wrap Text Around an Image in Webpage
+title: Wrap Text Around Figures in Webpages
 toc: false
 categories:
  - Web Development
 tags:
  - HTML
  - CSS
-drafted_at: 2024-07-02 08:28:43 +0800
 date: 2024-07-04 11:09:08 +0800
 last_modified_at: 2024-07-04 11:09:08 +0800
-modification_history:
- - 2024-07-04 11:09:08 +0800
 ---
 
 To wrap text around an image in webpages, blog[^1] provides two ways. The first one is by specifying `align` attribute of  HTML `<img>` tag as `"left"` (or `"right"`), and the second is by putting the image into a `<div>` tag and then specifying the division’s style as `"float:left"` (or `"float:right"`). Take the `"left"` case.

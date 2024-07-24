@@ -1,13 +1,13 @@
 ---
-layout: single
 title: Solve Nonlinear Equation (System) using Iterative Method
-date: 2022-07-12 13:45:17 +0800
 categories: 
  - Mathematics
  - Python
 tags: 
  - Numerical Analysis
  - Matrix
+date: 2022-07-12 13:45:17 +0800
+last_modified_at: 2022-07-12 13:45:17 +0800
 ---
 
 # 迭代法原理

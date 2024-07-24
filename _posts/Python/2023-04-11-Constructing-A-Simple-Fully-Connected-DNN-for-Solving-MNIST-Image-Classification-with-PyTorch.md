@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Construct A Simple Fully-Connected DNN for Solving MNIST Image Classification with PyTorch
 categories: 
  - Machine Learning
@@ -8,10 +7,6 @@ tags:
  - Python PyTorch
  - Computer Vision
 date: 2023-04-11 16:34:31 +0800
-last_modified_at0: 2023-04-11 16:34:31 +0800
-last_modified_at1: 2024-04-22 20:46:27 +0800
-last_modified_at2: 2024-05-22 20:53:57 +0800
-last_modified_at3: 2024-05-25 09:58:38 +0800
 last_modified_at: 2024-05-25 09:58:38 +0800
 ---
 

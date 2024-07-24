@@ -6,7 +6,7 @@ categories:
 tags:
  - Python PyTorch
  - <i>Deep Learning with PyTorch</i>
- - Python Warnings and Errors
+ - PyTorch Warnings and Errors
 date: 2024-07-24 11:17:37 +0800
 last_modified_at: 2024-07-24 11:17:37 +0800
 ---

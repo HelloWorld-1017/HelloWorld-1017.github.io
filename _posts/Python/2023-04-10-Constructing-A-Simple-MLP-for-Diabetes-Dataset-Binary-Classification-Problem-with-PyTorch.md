@@ -6,7 +6,7 @@ categories:
 tags:
  - Python PyTorch
  - Computer Vision
- - Python Warnings and Errors
+ - PyTorch Warnings and Errors
 date: 2023-04-10 13:44:03 +0800
 last_modified_at: 2024-07-24 21:16:52 +0800
 ---

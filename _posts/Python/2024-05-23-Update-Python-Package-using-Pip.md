@@ -6,6 +6,7 @@ categories:
 tags:
  - Python pip
  - Python Matplotlib
+ - Python Warnings and Errors
 date: 2024-05-23 13:20:47 +0800
 last_modified_at: 2024-05-23 13:20:47 +0800
 ---

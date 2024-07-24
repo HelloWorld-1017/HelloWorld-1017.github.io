@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Construct A Simple CNN for Solving MNIST Image Classification with PyTorch
 categories: 
  - Machine Learning
@@ -7,11 +6,8 @@ categories:
 tags:
  - Python PyTorch
  - Computer Vision
+ - PyTorch Warnings and Errors
 date: 2023-04-13 17:28:01 +0800
-last_modified_at0: 2023-04-13 17:28:01 +0800
-last_modified_at1: 2024-04-22 20:47:52 +0800
-last_modified_at2: 2024-05-22 20:53:17 +0800
-last_modified_at3: 2024-05-25 09:58:11 +0800
 last_modified_at: 2024-05-25 09:58:11 +0800
 ---
 

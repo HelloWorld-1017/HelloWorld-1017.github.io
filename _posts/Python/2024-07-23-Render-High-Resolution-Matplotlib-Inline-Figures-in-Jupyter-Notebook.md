@@ -8,7 +8,7 @@ tags:
  - Python Jupyter Notebook
  - Python Matplotlib
 date: 2024-07-23 17:42:55 +0800
-last_modified_at: 2024-07-23 17:42:55 +0800
+last_modified_at: 2024-07-24 22:03:13 +0800
 ---
 
 For Matplotlib inline plots showed in Jupyter Notebook, their format is PNG by default. And, they look not clear. To enhance figure resolution, we can use following magic command to change rendering backend from default `'png'` to `'svg'`[^1]:
@@ -69,7 +69,7 @@ plt.show()
 
 I guess the reason why SVG figure has higher resolution is that it’s more compatible with such Web application like Jupyter Notebook.
 
-By the way, if inspect HTML source code of above two figures, we can find that they are both HTML `<img>` elements, and from their `src` attributes it can be inferred that the PNG figure is base64-encoded[^2], and the SVG figure is URL-encoded[^3][^4]. This is my first time encountering these two encoding methods and I feel it interesting, because the figures based on these two encoding methods can be normally rendered in Markdown files and Web pages (by those lengthy code), and meanwhile their mechanisms are very different from the ways of inserting images hosted on CDN and inserting images through external links.
+By the way, if inspect HTML source code of above two figures, we can find that they are both HTML `<img>` elements, and from their `src` attributes it can be inferred that the PNG figure is base64-encoded[^2], and the SVG figure is URL-encoded[^3][^4]. This is my first time encountering these two encoding methods and I feel it interesting, because the figures based on these two encoding methods can be normally rendered in Markdown files and Web pages (by those lengthy code), and meanwhile their mechanisms are very different from the ways of inserting images that hosted on CDN, stored on website folder, or imported through external links.
 
 **(1) PNG figure**
 

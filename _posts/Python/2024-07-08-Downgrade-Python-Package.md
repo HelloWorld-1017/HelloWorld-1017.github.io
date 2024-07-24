@@ -6,11 +6,9 @@ categories:
 tags:
  - Python pip
  - Python NumPy
- - Python Warnings and Errors
+ - Python Dependency Conflicts
 date: 2024-07-08 19:04:51 +0800
 last_modified_at: 2024-07-08 19:04:51 +0800
-modification_history:
- - 2024-07-08 19:04:51 +0800
 ---
 
 Recently, when I execute a Python command, a warning occurred:
@@ -62,7 +60,7 @@ I think this is the reason for above packages clash problem.
 
 <br>
 
-# References
+**References**
 
 [^1]: [NumPy 2.0.0 Release Notes — NumPy v2.1.dev0 Manual](https://numpy.org/devdocs/release/2.0.0-notes.html).
 

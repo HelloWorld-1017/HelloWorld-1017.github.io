@@ -1,17 +1,11 @@
 ---
-layout: single
 title: Some English Time Words
-toc: false
 categories:
  - English
-drafted_at: 2024-05-26 06:15:09 +0800
 date: 2024-05-26 09:31:45 +0800
-last_modified_at0: 2024-05-26 09:31:45 +0800
-last_modified_at1: 2024-05-27 07:38:26 +0800
-last_modified_at: 2024-05-27 07:38:26 +0800
+last_modified_at: 2024-07-24 18:55:44 +0800
 note: 
  - https://www.youtube.com/watch?v=Se5zT8Sjtg4
- - before, previously
 ---
 
 ## Simple present
@@ -39,6 +33,8 @@ note:
 |                 | just now (a very short time ago)[^3]                         | Who was that at the door ***just now***?                     |
 |                 |                                                              | He had his agent call me ***just now*** to ask for more money. |
 |                 | once upon a time[^4]<br>(a) *spoken*. at a time in the past that you think was much better than now;<br>(b) a long time ago – used at the beginning of children’s stories. | ***Once upon a time*** you used to be able to leave your front door unlocked. |
+|                 | before                                                       |                                                              |
+|                 | previously                                                   |                                                              |
 
 <br>
 

@@ -518,7 +518,9 @@
 
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
-    @include yiq-contrasted($primary-color);
+    @include yiq-contrasted(white);
+    color: black;
+    text-decoration: underline;
   }
 
   @include breakpoint($large) {
@@ -545,15 +547,15 @@
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: $muted-text-color;
+    color: $link-color; //#104E8B; #527dd4
     font-weight: bold;
     line-height: 1.5;
   }
   
   a:hover {
-    color: white;
-    text-decoration: none;
-    background-color: $DodgerBlue4;
+    color: black;
+    text-decoration: underline;
+    // background-color: $DodgerBlue4;
   }
 
   li ul > li a {

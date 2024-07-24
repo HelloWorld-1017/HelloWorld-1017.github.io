@@ -1,20 +1,14 @@
 ---
-layout: single
 title: Construct A Simple MLP for Diabetes Dataset Binary Classification Problem with PyTorch (Load Datasets using PyTorch `DataSet` and `DataLoader`)
 categories: 
  - Machine Learning
  - Python
 tags:
  - Python PyTorch
- - Python Warnings and Errors
  - Computer Vision
+ - Python Warnings and Errors
 date: 2023-04-10 13:44:03 +0800
-last_modified_at0: 2023-04-10 13:44:03 +0800
-last_modified_at1: 2024-04-22 20:45:10 +0800
-last_modified_at2: 2024-05-22 20:55:31 +0800
-last_modified_at3: 2024-05-25 09:59:18 +0800
-last_modified_at4: 2024-06-13 22:14:27 +0800
-last_modified_at: 2024-06-13 22:14:27 +0800
+last_modified_at: 2024-07-24 21:16:52 +0800
 ---
 
 # Construct A Simple MLP for Diabetes Dataset Binary Classification Problem with PyTorch
@@ -295,7 +289,7 @@ test_loader = DataLoader(dataset=test_dataset,
 
 <br>
 
-# References
+**References**
 
 [^1]: [07.处理多维特征的输入 - 刘二大人](https://www.bilibili.com/video/BV1Y7411d7Ys?p=7&vd_source=8aeddead7f39b0189fff9b14fa090a75).
 [^2]: [Construct A Simple Logistic Regression Model for Binary Classification Problem with PyTorch - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2023-04-09/16-38-03.html).
@@ -304,8 +298,4 @@ test_loader = DataLoader(dataset=test_dataset,
 [^5]: [TypeError: can't pickle Environment objects · Issue #526 · pytorch/examples](https://github.com/pytorch/examples/issues/526).
 
 - [08.加载数据集 - 刘二大人](https://www.bilibili.com/video/BV1Y7411d7Ys?p=8&vd_source=8aeddead7f39b0189fff9b14fa090a75).
-
-<br>
-
-
 

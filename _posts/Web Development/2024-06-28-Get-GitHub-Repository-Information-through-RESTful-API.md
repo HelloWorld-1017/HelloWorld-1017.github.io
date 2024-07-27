@@ -1,5 +1,5 @@
 ---
-title: Get GitHub Repository Information through RESTful API
+title: Get GitHub Repository Information (in JSON Format) through RESTful API
 toc: false
 categories:
  - Web Development
@@ -8,12 +8,10 @@ tags:
  - RESTful API
  - JSON
 date: 2024-06-28 00:19:15 +0800
-last_modified_at: 2024-06-28 00:19:15 +0800
-modification_history:
- - 2024-06-28 00:19:15 +0800
+last_modified_at: 2024-07-27 21:40:33 +0800
 ---
 
-For a GitHub repository `$REPO_NAME` owned by user `$USER_NAME`, we can get its repository information through url `https://api.github.com/repos/$USER_NAME/$REPO_NAME`. For example, for the public repository hosting my personal website, through [https://api.github.com/repos/HelloWorld-1017/HelloWorld-1017.github.io](https://api.github.com/repos/HelloWorld-1017/HelloWorld-1017.github.io) I have these following information in JSON data format (or, a JSON file):
+For a GitHub repository `$REPO_NAME` owned by user `$USER_NAME`, we can get its repository information through url `https://api.github.com/repos/$USER_NAME/$REPO_NAME`. For example, for the public repository hosting my personal website, through [https://api.github.com/repos/HelloWorld-1017/HelloWorld-1017.github.io](https://api.github.com/repos/HelloWorld-1017/HelloWorld-1017.github.io) I have these following information in JSON (JavaScript Object Notation) data format (or, a JSON file):
 
 ```json
 {
@@ -125,7 +123,7 @@ For a GitHub repository `$REPO_NAME` owned by user `$USER_NAME`, we can get its 
 
 <br>
 
-# References
+**References**
 
 [1] [GitHub REST API documentation - GitHub Docs](https://docs.github.com/en/rest?apiVersion=2022-11-28).
 

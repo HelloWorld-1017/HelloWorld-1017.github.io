@@ -8,7 +8,7 @@ tags:
  - <i>Deep Learning with PyTorch</i>
  - PyTorch Warnings and Errors
 date: 2024-07-24 11:17:37 +0800
-last_modified_at: 2024-07-24 11:17:37 +0800
+last_modified_at: 2024-07-27 14:49:30 +0800
 ---
 
 # Available pre-trained deep learning models
@@ -301,7 +301,7 @@ Based on these *functions* (whose name begins with lowercase), we can obtain usa
 from torchvision.models import ResNet101_Weights
 
 resnet = models.resnet101(weights=ResNet101_Weights.IMAGENET1K_V1)
-resnet
+print(resnet)
 ```
 
 ```
@@ -657,7 +657,7 @@ Downloading: "https://download.pytorch.org/models/resnet101-63fe2227.pth" to C:\
 
 </div>
 
-There are 100 convolution layers and 1 fully-connected layer, and for this reason the model is called ResNet-**101**[^4].
+There are 100 convolution layers and 1 fully-connected layer, and for this reason the model is called ResNet-**101**[^4]. By the way, in addition to `print` function, blog[^5] also provides several other visualization methods to help users to better know about network structure of ResNet-101.
 
 <br>
 
@@ -668,3 +668,4 @@ There are 100 convolution layers and 1 fully-connected layer, and for this reaso
 
 [^3]: [resnet101 — Torchvision 0.18 documentation](https://pytorch.org/vision/stable/models/generated/torchvision.models.resnet101.html#torchvision.models.ResNet101_Weights).
 [^4]: [Resnet网络中数字的含义以及连接方式\_resnet18、50、101的区别-CSDN博客](https://blog.csdn.net/herr_kun/article/details/103312387).
+[^5]: [Ways of Visualizing PyTorch Neural Network Structure: with the help of `torchsummary`, `torchinfo`, `netron`, and `tensorboardX` packages respectively - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-07-25/10-42-24.html#torchsummary-package).

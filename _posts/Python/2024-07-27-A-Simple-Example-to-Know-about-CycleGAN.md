@@ -158,7 +158,7 @@ To my understandings, it is a “lightweight” method to save and load model by
 
 <br>
 
-# Appendix
+<div id="appendix"><b>Appendix</b></div>
 
 `ResNetGenerator` class:
 

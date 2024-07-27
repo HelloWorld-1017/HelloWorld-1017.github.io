@@ -12,10 +12,14 @@
         </a>
       {% endunless %}
     </li>
+    <li><span id="timeSpan" style="font-weight:bold;" title="The website was built on 16 July, 2022."></span></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; {{ site.creation_day | date: '%Y' }}-{{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} 
+<div class="page__footer-copyright">&copy; 
+  {{ site.creation_day | date: '%Y' }}-{{ site.time | date: '%Y' }}
+  {{ site.name | default: site.title }}.
+  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} 
   <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> 
   &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>
   &amp; <a href="https://pages.github.com/" rel="nofollow">GitHub Pages</a>.
@@ -65,6 +69,18 @@
 
   handleClick('.footnote', 'reverse_footnote_highlight');
   handleClick('.reversefootnote', 'footnote_highlight');    
+</script>
+
+<script>
+  function calculateSiteAge(startDateStr) {
+    const startDate = new Date(startDateStr);
+    const today = new Date();
+    const diff = today - startDate;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById('timeSpan').textContent = `${days} Days`;
+  }
+
+  calculateSiteAge('2022-07-16');  
 </script>
 
 

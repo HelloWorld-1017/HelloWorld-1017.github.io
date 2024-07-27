@@ -7,8 +7,9 @@ categories:
 tags:
  - Python PyTorch
  - <i>Deep Learning with PyTorch</i>
+ - Computer Vision
 date: 2024-07-26 15:58:39 +0800
-last_modified_at: 2024-07-26 15:58:39 +0800
+last_modified_at: 2024-07-27 11:24:26 +0800
 ---
 
 Stevens et al.’s book, *Deep Learning with PyTorch*[^1] (on Subchapter 2.1, *A pretrained network that recognizes the subject of an image*), provides a simple example showing how to realize model inference based on the pretrained ResNet-101. The complete script shows as follows:
@@ -73,6 +74,9 @@ _, indices = torch.sort(out, descending=True)
 **Required files**
 
 - `bobby.jpg`: [dlwpt-code/data/p1ch2/bobby.jpg at master · deep-learning-with-pytorch/dlwpt-code](https://github.com/deep-learning-with-pytorch/dlwpt-code/blob/master/data/p1ch2/bobby.jpg).
+
+  <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202407271120489.jpg" alt="bobby" style="zoom:50%;" />
+
 - `imagenet_classes.txt`: [dlwpt-code/data/p1ch2/imagenet_classes.txt at master · deep-learning-with-pytorch/dlwpt-code](https://github.com/deep-learning-with-pytorch/dlwpt-code/blob/master/data/p1ch2/imagenet_classes.txt).
 
 **Notes**

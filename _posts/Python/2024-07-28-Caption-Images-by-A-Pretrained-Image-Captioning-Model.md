@@ -1,5 +1,5 @@
 ---
-title: Caption Images by a Pretrained Image-Captioning Model
+title: Caption Images by A Pretrained Image-Captioning Model
 categories:
  - Python
  - Machine Learning
@@ -9,7 +9,7 @@ tags:
  - Natural Language Processing
  - Computer Vision
 date: 2024-07-28 19:10:54 +0800
-last_modified_at: 2024-07-28 19:10:54 +0800
+last_modified_at: 2024-07-29 14:57:28 +0800
 ---
 
 # Introduction to image-captioning model
@@ -28,17 +28,17 @@ The second half of the model is called *recurrent* because it generates its outp
 
 </div>
 
-Briefly speaking, this image-captioning model looks like an end-to-end RNN trained on the basis of image(features)-caption(labels) data set (supervised training).
+Briefly speaking, this image-captioning model looks like an end-to-end RNN trained by image(features)-caption(labels) data (supervised training).
 
 Above model, named ImageCaptioning.pytorch, can be obtained from the GitHub repo[^2]. It is a clone from Ruotian Luo’s repository[^3], and as said in the book, Luo’s model is an implementation of model NeuralTalk2[^4] by Andrej Karpathy.
 
 <br>
 
-# Make model inference
+# Caption images (model inference)
 
 ## Caption one image
 
-To realized a model inference---like ResNet-101[^5] and CycleGAN[^6] introduced in the book---based on the pretrained model ImageCaptioning.pytorch, we should download the repository[^2]. After downloading, we could firstly have a glance at repository structure:
+To caption image, that is realize a model inference---like ResNet-101[^5] and CycleGAN[^6] introduced in the book---based on the pretrained model ImageCaptioning.pytorch, we should download the repository[^2]. After downloading, we could firstly have a glance at repository structure:
 
 ```powershell
 tree /F
@@ -103,10 +103,10 @@ As can be seen, there’s a `data` folder in root folder, and at this point we c
 python eval.py --model .\data\FC\fc-model.pth --infos_path .\data\FC\fc-infos.pkl --image_folder .\data\images\ --dump_images 0 --batch_size 1
 ```
 
-By the way, to make it run, I install two packages, i.e. `h5py`, `scikit-image`. When installing `scikit-image`, an error, `ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE.`, occurs due to unstable Internet connection[^11].
+By the way, to make it run as expected, I installed two packages, i.e. `h5py`, `scikit-image`. When installing `scikit-image`, an error, `ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE.`, occurs due to unstable Internet connection[^11].
 {: .notice--primary}
 
-then I have:
+so we have:
 
 <div id="first-result"></div>
 
@@ -124,13 +124,13 @@ evaluating validation preformance... -1/1 (0.000000)
 loss:  0.0
 ```
 
-where message on 9th line shows that predicted caption for the image is “a group of zebras standing in a field”. 
+where message on the 9th line shows that predicted caption for the image is “a group of zebras standing in a field”. 
 
-The result is so-so, not that accurate, but before further discussing model performance, some points about the [inference command](#command-1) should be firstly introduced.
+The result is so-so, not that accurate. Before further discussing model performance, some points about the [inference command](#command-1) should be firstly introduced.
 
 ## Option `batch_size`
 
-At first, option `batch_size` specify the batch size while making model inference. Its default value is `10`, and if the number of remained images is less than `10`, script will automatically repeat images from the beginning in order. For example, if we don’t specify value for this option
+At first, option `batch_size` specify the batch size while making model inference. Its default value is `10`, and if the number of remained images is less than `10`, script will automatically repeat images from the beginning in order. For example, if we don’t specify value for this option (that is adopt default value):
 
 ```powershell
 python eval.py --model .\data\FC\fc-model.pth --infos_path .\data\FC\fc-infos.pkl --image_folder .\data\images\ --dump_images 0
@@ -154,11 +154,11 @@ evaluating validation preformance... -1/1 (0.000000)
 loss:  0.0
 ```
 
-Batch size influence the model inference speed in a way---if the batch size is too small, total inference time will become long. However, if the total number of image to be tested is relatively small, it’s better to specify a suitable value, as we set `--batch_size 1` above.
+Batch size setting influences the model inference speed in a way---if the batch size is too small, total inference time will become long. However, if the total number of images to be captioned is relatively small, it’s better to specify a suitable batch size, as we set `--batch_size 1` above.
 
 ## Option `dump_images`
 
-In the [command](#command-1), option `dump_images` determines “whether dump images into vis/imgs folder for vis”: value `1` (default) means “yes”, `0` means “no”. However, on Windows systems, some errors will occur if we choose “yes”:
+In the [command](#command-1), option `dump_images` determines “whether dump images into vis/imgs folder for vis”---value `1` (default) means “yes”, whereas `0` means “no”. However, on Windows systems, some errors will occur if we choose “yes”:
 
 <div id="command-2"></div>
 
@@ -176,9 +176,9 @@ evaluating validation preformance... -1/1 (0.000000)
 loss:  0.0
 ```
 
-where printed information `cp ".\data\images\zebra.jpg" vis/imgs/img1.jpg` states that `cp` is not a valid command, although dump images or not doesn’t influence model inference. This error is caused by command `cp` is not valid on Windows systems, we should use `copy` function instead[^7]. 
+where printed information `cp ".\data\images\zebra.jpg" vis/imgs/img1.jpg` states that `cp` is not a valid command, although dump images or not doesn’t influence model inference. This error is caused by that command `cp` is not valid on Windows, we should use `copy` instead[^7]. 
 
-Another point would incur error is the path delimiter `/`  --- we should replace it with `\` on Windows.
+Another point that would incur errors is the path delimiter `/` ---we should replace it with `\` on Windows.
 
 In order to avoid both errors, we should modify the code snippet in file `.\eval_utils.py`:
 
@@ -258,13 +258,11 @@ After above discussions, we could go further, captioning multiple images. I put 
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202407272109504.png" alt="image-20240727210900379" style="zoom:67%;" />
 
-and run the command:
+and run following command to get results:
 
 ```powershell
 python eval.py --model .\data\FC\fc-model.pth --infos_path .\data\FC\fc-infos.pkl --image_folder .\data\images\ --dump_images 0 --batch_size 8
 ```
-
-to get result:
 
 <div id="multiple-captions"></div>
 
@@ -281,13 +279,13 @@ evaluating validation preformance... -1/8 (0.000000)
 loss:  0.0
 ```
 
-By the way, if the image to be tested has four channels, i.e. RGBA, an error will occur. We should convert it into three channels[^10].
+By the way, if an image has four channels, i.e. RGBA, an error will occur. At this point, we should convert it to that with three channels[^10].
 
 <br>
 
 # In closing
 
-Look at those [images](#multiple-images) and their [corresponding captions](#multiple-captions), truth to be told, ability of the model is really limited. The book attribute it to “insufficient” training samples---the model didn’t ever seen images with certain content while training. But on the other hand, believe deep training, without too many rules, is fascinating and promising (and surely it is):
+Look at those [images](#multiple-images) and their [corresponding captions](#multiple-captions). Truth to be told, captioning ability of the model is really limited. The book attributes it to “insufficient” training samples---the model didn’t ever seen images with certain content while training. But on the other hand, believe such deep training technology, without too many rules, is fascinating and promising (and surely it is):
 
 <div class="quote--left" markdown="1">
 
@@ -301,7 +299,7 @@ At the time of this writing, **models such as these exist more as applied resear
 
 </div>
 
-See footnotes[^2][^3][^4], aforementioned three GitHub repos were created between 2016 and 2018 (creation time is obtained by GitHub REST API[^8][^9]), and the book was published on 2020[^1]. During that period, image-captioning models or some models like this, as the book says, hadn’t become mature products. However in recent years, LLMs, like ChatGPTs, more functional and user-friendly, are booming. Deeper network structure and more training data. 
+Aforementioned three GitHub repos were created between 2015 and 2018 (see footnotes[^2][^3][^4], where repo creation time is obtained by GitHub REST API[^8][^9]), and the book was published on 2020[^1]. During that period, image-captioning models or some models like this, as the book says, hadn’t become mature products. However in recent years, LLMs, like ChatGPTs, more functional and user-friendly, are booming. Deeper network structure and more training data. This kind of “small” model may be not appealing anymore, but to my mind, some fundamentals and flaws are basically the same. Anyway, it’s a good start for me to know about those LLMs.
 
 <br>
 

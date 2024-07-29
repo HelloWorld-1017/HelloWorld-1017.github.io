@@ -1,22 +1,22 @@
 ---
-title: Convert 4D-array Image (with RGBA Channels) to Normal 3D-array Image
+title: Convert 4D-Array Image (with RGBA Channels) to Normal 3D-Array Image
 toc: false
 categories:
  - Python
 tags:
- - Python Imaging Library
- - PyTorch Warnings and Errors
- - Python os
  - Computer Vision
+ - PyTorch Warnings and Errors
+ - Python Imaging Library
+ - Python os
 date: 2024-07-29 11:37:06 +0800
-last_modified_at: 2024-07-29 11:37:06 +0800
+last_modified_at: 2024-07-29 15:18:57 +0800
 ---
 
-Blog[^1] takes following images to test an image-captioning model:
+In blog[^1] I take following images to test the image-captioning model ImageCaptioning.pytorch[^4]:
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202407272109504.png" alt="image-20240727210900379" style="zoom:67%;" />
 
-However, when I added the following image, `R66.png`, to be tested:
+However, when I added the image below, `R66.png`, to be captioned:
 
 ![R66](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202407282102356.png)
 
@@ -54,7 +54,7 @@ Traceback (most recent call last):
 RuntimeError: The size of tensor a (4) must match the size of tensor b (3) at non-singleton dimension 0
 ```
 
-which prompts that, besides RGB channels this image file has an additional alpha channel[^2], that is the image is a 4D array (RGBA). So, it cannot be normally processed by certain function. We can verify this point by printing image array size:
+which prompts that, the image is a 4D array, that is besides RGB channels this image file has an additional alpha (A) channel (used to specify opacity)[^2]. So, it cannot be normally processed by certain PyTorch function. We can verify this point by printing array size of each input image:
 
 ```python
 from PIL import Image
@@ -84,7 +84,7 @@ YourName.jpg       : (1200, 1920, 3)
 zebra.jpg          : (256, 316, 3)
 ```
 
-To avoid above error, we could use `.convert` function[^3] to convert RGBA image to RGB image:
+To avoid above error, we could use `convert` function[^3] to convert RGBA image to RGB image:
 
 ```python
 image = Image.open("R66.png").convert('RGB')
@@ -96,7 +96,7 @@ image.save("R66_RGB.png")
 (1800, 2880, 3)
 ```
 
-After conversion, the image-captioning model can caption it normally:
+After conversion, the image-captioning model can caption it as usual:
 
 <div id="caption"></div>
 
@@ -104,16 +104,17 @@ After conversion, the image-captioning model can caption it normally:
 ".\data\images\new_images\R66_RGB.png": a close up of a yellow and orange cat
 ```
 
-But, in this caption the only right part is “orange” 😂 Having said that, anyway, this image become a valid input for the model.
+But, in this caption the only right part is “yellow” 😂 Having said that, anyway, this image becomes a valid input for the model.
 
 <br>
 
-By the way, due to that `R66.png` is only the image with `.png` extension among [those figures](#figures-information), so I suspect that PNG file may be always an image with RGBA channel, but [above result](#caption) illustrates it’s not a right guess.
+By the way, due to that `R66.png` is the only image with `.png` extension among [those figures](#figures-information), so I guess that PNG file may be *always* an image with RGBA channels, but [above result](#caption) illustrates that I was wrong.
 
 <br>
 
 **References**
 
-[^1]: [Caption Images by a Pretrained Image-Captioning Model - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-07-28/19-10-54.html).
+[^1]: [Caption Images by A Pretrained Image-Captioning Model - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-07-28/19-10-54.html).
 [^2]: [https://stackoverflow.com/a/58497441/22763127](https://stackoverflow.com/a/58497441/22763127).
 [^3]: [Image Module: `Image.convert()` - Pillow (PIL Fork) 10.4.0 documentation](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert).
+[^4]: [deep-learning-with-pytorch/ImageCaptioning.pytorch: image captioning codebase in pytorch(finetunable cnn in branch "with_finetune";diverse beam search can be found in 'dbs' branch; self-critical training is under my self-critical.pytorch repository.)](https://github.com/deep-learning-with-pytorch/ImageCaptioning.pytorch).

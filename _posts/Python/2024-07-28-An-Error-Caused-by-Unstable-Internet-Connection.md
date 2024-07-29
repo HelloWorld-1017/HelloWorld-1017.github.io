@@ -4,20 +4,19 @@ toc: false
 categories:
  - Python
 tags:
- - Python PyTorch
  - Python Warnings and Errors
  - Python pip
 date: 2024-07-28 19:48:44 +0800
-last_modified_at: 2024-07-28 19:48:46 +0800
+last_modified_at: 2024-07-29 14:59:37 +0800
 ---
 
-In blog[^1], when I tried to caption images by image-captioning model, ImageCaptioning.pytorch, in GitHub repo[^2], I found I needed to install package `scikit-image` in advance:
+In blog[^1], when I tried to caption images by the image-captioning model, ImageCaptioning.pytorch[^2], I found I needed to install package `scikit-image` in advance:
 
-```python
+```powershell
 pip install scikit-image
 ```
 
-but after a long while, I got a mistake:
+but after a long while, I got an error:
 
 ```
 Collecting scikit-image
@@ -46,7 +45,7 @@ ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. If you
              Got        a5b45b36e97482fc9c9f423cb8b213e1967622bed720474c1462073d9c654263
 ```
 
-according to information, I firstly try to install `pip install hashes` to solve it, but it doesn’t help, the same error occurs again. I looked for possible solutions on the Internet, and found Ritabrata’s question[^3] about a similar error and his own answer[^4]:
+according to the error message, at first I tried to update `hashes`, `pip install hashes`, to solve it, but it doesn’t help, and the same error occurs again. I looked for possible solutions on Internet, and found Ritabrata reported a similar error on Stack Overflow[^3] and his own answer[^4]:
 
 <div class="quote--left" markdown="1">
 
@@ -58,9 +57,7 @@ Anyway, we ran the same docker image on a VM and it worked like a charm.
 
 </div>
 
-Internet connection is unstable. It’s true. I even feel that it even longer than installing PyTorch!
-
-So, finally I decide to change another installing source by using `pip install` with `-i` option[^5]:
+Internet connection is unstable. I think it’s true, because I even feel that it costs longer time to install than PyTorch! So, I decide to change installing source using `pip install` with `-i` option[^5]:
 
 <div class="quote--left" markdown="1">
 
@@ -72,21 +69,21 @@ Base URL of the Python Package Index (default [https://pypi.org/simple](https://
 
 </div>
 
- and which I used is Tsinghua Open Source Mirror[^6]:
+ and the source I choose is Tsinghua Open Source Mirror[^6]:
 
 ```powershell
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scikit-image
 ```
 
-Finally, it solve the problem, installing `scikit-image` successfully.
+At last, it solves the problem, installing `scikit-image` successfully and very quickly.
 
 <br>
 
 **References**
 
-[^1]: [Caption Images by a Pretrained Image-Captioning Model - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-07-28/19-10-54.html).
-
+[^1]: [Caption Images by A Pretrained Image-Captioning Model - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-07-28/19-10-54.html).
 [^2]: [deep-learning-with-pytorch/ImageCaptioning.pytorch: image captioning codebase in pytorch(finetunable cnn in branch "with_finetune";diverse beam search can be found in 'dbs' branch; self-critical training is under my self-critical.pytorch repository.)](https://github.com/deep-learning-with-pytorch/ImageCaptioning.pytorch).
+
 [^3]: [python - Sha256 Mismatch for pip install on fresh docker image - Stack Overflow](https://stackoverflow.com/questions/62726398/sha256-mismatch-for-pip-install-on-fresh-docker-image).
 [^4]: [https://stackoverflow.com/a/62737561/22763127](https://stackoverflow.com/a/62737561/22763127).
 [^5]: [`pip install`: `-i`, `--index-url` `<url>` - pip documentation v24.1.2](https://pip.pypa.io/en/stable/cli/pip_install/#cmdoption-i).

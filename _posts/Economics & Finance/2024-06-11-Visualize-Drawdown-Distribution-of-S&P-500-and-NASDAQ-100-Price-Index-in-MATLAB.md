@@ -1,5 +1,5 @@
 ---
-title: Visualize Drawdown Distribution of S&P 500, NASDAQ 100, and Dow Jones Industrial Average in MATLAB
+title: "Visualize Drawdown Distribution of Several Main Stock Market Indexes in MATLAB: S&P 500, NASDAQ 100, and Dow Jones Industrial Average"
 categories:
  - MATLAB
  - Mathematics
@@ -9,12 +9,8 @@ tags:
  - MATLAB Computational Finance
  - Probability Theory and Mathematical Statistics
  - MATLAB Graphics
-drafted_at: 2024-05-01 14:13:59 +0800
 date: 2024-06-11 11:10:48 +0800
-last_modified_at: 2024-06-28 15:19:06 +0800
-modification_history:
- - 2024-06-11 11:10:48 +0800
- - 2024-06-28 15:19:06 +0800
+last_modified_at: 2024-07-28 17:06:30 +0800
 ---
 
 # Definition of drawdown, maximum drawdown, and maximum drawdown duration
@@ -27,7 +23,7 @@ A figure in Ernest P. Chan’s book, *Quantitative trading: how to build your ow
 
 # By June 11, 2024
 
-## S&P 500 price index
+## S&P 500 price index (11 June, 2014 --- 10 June, 2024)
 
 `script1.m`, to retrieve series from FRED server[^1]:
 
@@ -185,7 +181,7 @@ There is a 90.08% possibility to reach a new high within 46 days.
 There is a 100.00% possibility to reach a new high within 744 days. 
 ```
 
-## NASDAQ 100 price index
+## NASDAQ 100 price index (02 Jan, 1986 --- 07 June, 2024)
 
 Change `seriesID` in [Script 1](#script-1) and [Script 2](#script-2) as `"NASDAQ100"` to get the results for NASDAQ 100 price index:
 
@@ -208,7 +204,7 @@ There is a 100.00% possibility to reach a new high within 5697 days.
 
 # By June 28, 2024
 
-## Dow Jones Industrial Average
+## Dow Jones Industrial Average (30 June, 2014 --- 27 June 2024)
 
 Change `seriesID` in [Script 1](#script-1) and [Script 2](#script-2) as `"DJIA"` to get the results for ‘Dow Jones Industrial Average’:
 
@@ -229,7 +225,7 @@ There is a 100.00% possibility to reach a new high within 706 days.
 
 <br>
 
-# References
+**References**
 
 [^1]: [Fetch S&P 500 Price Index (or Other Available Series) from FRED (Federal Reserve Economic Data) Server in MATLAB - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-04-17/13-58-11.html).
 [^2]: Chan, Ernest P. *Quantitative trading: how to build your own algorithmic trading business*. John Wiley & Sons, 2021, available at: [Quantitative Trading: How to Build Your Own Algorithmic Trading Business (Wiley Trading)](https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf).

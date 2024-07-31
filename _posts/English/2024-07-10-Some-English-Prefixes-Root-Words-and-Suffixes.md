@@ -23,9 +23,7 @@ published: false
 </style>
 # Prefixes
 
-## C
-
-### circum-/circ: around
+## circum-/circ: around
 
 > - [Word Root: circum- (Prefix) \| Membean](https://membean.com/roots/circum-around): The prefix **circum-** which means “around” and the Latin root word **circ** which mean “ring” both are influential in making up English words. For instance, the prefix **circum-** gave rise to the words **circum**ference and **circum**stances, whereas the root **circ** gave rise to **circ**le and **circ**ulation. Clearly a **circum**ference is the bearing “around” a circle, whereas a **circ**le itself is in the form of a “ring.”
 > - [Word Root: circ (Root) \| Membean](https://membean.com/roots/circ-ring).
@@ -36,9 +34,7 @@ published: false
 
 <br>
 
-## D
-
-### du-
+## du-
 
 > [Word Root: du- (Prefix) \| Membean](https://membean.com/roots/du-two): du: two.
 
@@ -46,9 +42,7 @@ published: false
 
 <br>
 
-## E
-
-### e, ex, ec: ‘out’
+## e, ex, ec: out
 
 > - [Word Root: e- (Prefix) \| Membean](https://membean.com/roots/e-out); [Word Root: ex- (Prefix) \| Membean](https://membean.com/roots/ex-out): Prefixes are key morphemes in English vocabulary that begin words. The prefix **ex-**, with its variants **e-** and **ec-**, mean “out.” Examples using this prefix include **ex**ceed, **e**ject, and **ec**centric. An easy way to remember that the prefix **ex-** means “out” is through the word **ex**it, for when you **ex**it a room, you go “out” of it.
 > - [Word Root: ex- (Prefix) \| Membean](https://membean.com/roots/ex-thoroughly): The prefixes **e-** and **ex-**, besides meaning “out,” can also act as intensive prefixes. These prefixes can effectively be translated as “thoroughly” to highlight their intensive function. For instance, the prefix **e-**, such as in **e**lude, means to “thoroughly” avoid someone, whereas the intensive prefix **ex-** in **ex**claim means to “thoroughly” shout out.
@@ -79,24 +73,20 @@ published: false
 
 <br>
 
-## F
-
-### for-
+## for-
 
 > [Word Root: for (Root) \| Membean](https://membean.com/roots/for-outside): for-: outside.
 
 <br>
 
-### fore-
+## fore-
 
 - foreseen, unforeseen
 - <span class="prefix">fore</span>stall: to prevent something from happening or prevent someone from doing something <mark>by doing something first</mark>: a measure intended to *forestall* further attacks.
 
 <br>
 
-## I
-
-### in, im
+## in, im
 
 > - [Word Root: in- (Prefix) \| Membean](https://membean.com/roots/in-in): in- (in, on, into)
 > - [Word Root: im- (Prefix) \| Membean](https://membean.com/roots/im-in):  im- (in, on).
@@ -110,7 +100,7 @@ published: false
 
 <br>
 
-### inter-
+## inter-
 
 > [Word Root: inter- (Prefix) \| Membean](https://membean.com/roots/inter-between): Prefixes are key morphemes in English vocabulary that begin words. The prefix **inter-** means “between.” This prefix appears in numerous English vocabulary words, such as **Inter**net, **inter**esting, and **inter**view. An easy way to remember that the prefix **inter-** means “between” is through the word **inter**national, for **inter**national competitions occur “between” nations.
 
@@ -122,9 +112,7 @@ published: false
 
 <br>
 
-## M
-
-### mid, medi
+## mid, medi
 
 mid
 
@@ -141,9 +129,19 @@ med
 
 <br>
 
-## P
+## para-
 
-### pre-
+> [Word Root: para- (Prefix) \| Membean](https://membean.com/roots/para-beside): beside, alongside.
+
+- paradox
+- paragraph
+- parallel
+- paralyze: make powerless and unable to function
+- paralympics
+
+<br>
+
+## pre-
 
 > [Word Root: pre- (Prefix) \| Membean](https://membean.com/roots/pre-before): Prefixes are key morphemes in English vocabulary that begin words. The prefix **pre-**, which means “before,” appears in numerous English vocabulary words, for example: **pre**dict, **pre**vent, and **pre**fix! An easy way to remember that the prefix **pre-** means “before” is through the word **pre**vent, for when you come “before” something else to stop it from happening, you **pre**vent it.
 
@@ -157,7 +155,7 @@ med
 
 <br>
 
-### pro-
+## pro-: forward; for
 
 > [Word Root: pro- (Prefix) \| Membean](https://membean.com/roots/pro-forward): The prefix **pro-** primarily means “forward” but can also mean “for.” Some words that the prefix **pro-** gave rise to are **pro**mise, **pro**, and **pro**mote. When you, for instance, make **pro**gress, you are stepping “forward,” whereas if you give the **pro**s in an argument, you are speaking “for” something by stating its advantages.
 
@@ -171,10 +169,8 @@ med
   - (the fact of being important and well known): (e.g. 1) the prominence of pressure groups as political forces; (e.g. 2) She first came to *prominence* as an artist in 1989.
   - (give something prominence/give prominence to something, meaning ‘to treat something as specially important’): Every newspaper gave *prominence* to the success of England’s cricketers.
 
-- <span class="prefix">pro</span><span class="root">min</span>ent
-  - (important): a *prominent* Russian scientist
-  - (play a prominent part/role in something): Mandela played a *prominent* role in the early years of the ANC.
-  - (something that is in a prominent place is easily seen): The statue was in a *prominent* position outside the railway station.
+- <span class="prefix">pro</span><span class="root">min</span>ent: important, e.g. a *prominent* Russian scientist; Mandela played a *prominent* role in the early years of the ANC.
+- promise
 - prophet, prophetic, be prophetic of sth
 - propitious (pit - pet?)
 - proscribe
@@ -185,7 +181,7 @@ med
 
 <br>
 
-### post-
+## post-
 
 - <span class="prefix">post</span>modernism
 - <span class="prefix">post</span><span class="root">pon</span>e
@@ -193,9 +189,7 @@ med
 
 <br>
 
-## R
-
-### re-
+## re-
 
 > [Word Root: re- (Prefix) \| Membean](https://membean.com/roots/re-back): Prefixes are key morphemes in English vocabulary that begin words. The prefix **re-**, which means “back” or “again,” appears in hundreds of English vocabulary words, for example: **re**ject, **re**generate, and **re**vert. You can remember that the prefix **re-** means “back” via the word **re**turn, or turn “back;” to remember that **re-** means “again” consider **re**arrange, or arrange “again.”
 
@@ -208,19 +202,16 @@ med
 
 <br>
 
-## S
-
-### se-
+## se-: apart
 
 > [Word Root: se- (Prefix) \| Membean](https://membean.com/roots/se-apart): Prefixes are key morphemes in English vocabulary that begin words. A large number of English vocabulary words contain the prefix **se-**, which means “apart.” Examples using this prefix include **se**parate, **se**cret and **se**lect. An easy way to remember that the prefix **se-** means “apart” is through the word **se**cure, for when you feel **se**cure you are “apart” from worrying or undue care about something potentially troubling.
 
 - separate
-- seclude: shut “apart”.
-  - seclude oneself from the world
+- seclude: shut “apart”, e.g. seclude oneself from the world.
 
 <br>
 
-### sub-/sup-/sur-
+## sub-/sup-/sur-
 
 > - [Word Root: sub- (Prefix) \| Membean](https://membean.com/roots/sub-under): Prefixes are key morphemes in English vocabulary that begin words. The prefix **sub-**, with its variants which all begin with **su-**, is a prolific part of the English language. Examples using this prefix include **sub**way, **suf**fer, **sup**ply, and **sug**gest. An easy way to remember that the prefix **sub-** means “under” is through the word **sub**marine, or a vehicle that travels “under” the sea.
 > - [Word Root: sup- (Prefix) \| Membean](https://membean.com/roots/sup-under): sup: under.
@@ -234,15 +225,14 @@ med
 
 <br>
 
-### sur-/super-
+## sur-/super-
 
 sur-/super- (over, above)
 
 > [Word Root: sur- (Prefix) \| Membean](https://membean.com/roots/sur-over); [Word Root: super- (Prefix) \| Membean](https://membean.com/roots/super-over): Prefixes are key morphemes in English vocabulary that begin words. The prefix **super-** and its variant **sur-** mean “over.” Examples using this prefix include **super**ior, **super**vise, **sur**name, and **sur**face. An easy way to remember that the prefix **super-** means “over” is through the comic book hero **Super**man, who is the man “over” all other men in terms of physical power.
 
 - <span class="prefix">sur</span>face
-- <span class="prefix">sur</span>feit: If you have a surfeit of something, you have much more than what you need.
-  - a surfeit of food and drink
+- <span class="prefix">sur</span>feit: If you have a surfeit of something, you have much more than what you need. e.g. a surfeit of food and drink.
 - <span class="prefix">sur</span>mount: If you surmount a problem or difficulty, you get the better of it by conquering or overcoming it.
   - surmount difficulties
   - insurmountable: insurmountable problem
@@ -253,17 +243,16 @@ sur-/super- (over, above)
   - Tragically, a shoulder injury cut short the pitching career of one of baseball's brightest supernovas.
 - survive
 - supreme
-  - supremacy
-
+  
+- supremacy
+  
 - supersede
 
 <br>
 
 # Root words
 
-## A
-
-### acerb
+## acerb
 
 > [Word Root: acerb (Root) \| Membean](https://membean.com/roots/acerb-bitter): bitter, sharp, tart.
 
@@ -272,9 +261,14 @@ sur-/super- (over, above)
 
 <br>
 
-## C
+## cap: take, seize
 
-### capit
+> [Word Root: cap (Root) \| Membean](https://membean.com/roots/cap-take): take, seize.
+
+- capsule
+- encapsulate: enclose in a **cap**sule or other small container
+
+## capit
 
 > [Word Root: capit (Root) \| Membean](https://membean.com/roots/capit-head): The Latin root word **capit** means “head.” This Latin root is the word origin of a good number of English vocabulary words, including **capt**ain and de**capit**ate. The root word **capit** is easily recalled through the word **capit**al, the “head” city of a state, such as Madison being the **capit**al of Wisconsin.
 
@@ -282,7 +276,7 @@ sur-/super- (over, above)
 
 <br>
 
-### ced: go
+## ced: go
 
 > [Word Root: ced (Root) \| Membean](https://membean.com/roots/ced-go): The Latin root word **ced** means “go.” This root is the word origin of many English vocabulary words, including ac**ced**e, se**ced**e, and re**ced**e. An easy way to remember this root word is by the word pre**ced**e, for when one thing pre**ced**es another, it “goes” before it.
 
@@ -291,7 +285,7 @@ sur-/super- (over, above)
 
 <br>
 
-### cis (cis, cid, cide): cut, kill
+## cis (cis, cid, cide): cut, kill
 
 > [Word Root: cis (Root) \| Membean](https://membean.com/roots/cis-cut): **Cis** and its variants **cid** and **-cide** come from a Latin root which means both ‘cut’ and ‘kill.’ Some common words derived from this root include de**cid**e, de**cis**ion, and sui**cide**. Perhaps the best way to remember this root is by thinking of s**cis**sors — a scissor cuts.
 
@@ -309,7 +303,7 @@ sur-/super- (over, above)
 
 <br>
 
-### cip/cept/ceiv
+## cip/cept/ceiv
 
 > [Word Root: cip (Root) \| Membean](https://membean.com/roots/cip-take): When studying root words, there are often numerous variants to a primary root word. The primary root word **cept**: “taken,” for instance, present in the words con**cept** and in**cept**ion, has variant spellings of **cap**, **cip**, and **ceiv**. Examples containing these variant spellings, all of which mean “take” as well, are **cap**able, re**cip**ient, and re**ceiv**e.
 
@@ -326,7 +320,7 @@ sur-/super- (over, above)
 
 <br>
 
-### cliv: slope, hill
+## cliv: slope, hill
 
 > [Word Root: cliv (Root) \| Membean](https://membean.com/roots/cliv-slope): cliv: slope, hill.
 
@@ -336,7 +330,7 @@ sur-/super- (over, above)
 
 <br>
 
-### clud/clus/clos: shut
+## clud/clus/clos: shut
 
 > - [Word Root: clud (Root) \| Membean](https://membean.com/roots/clud-shut): The Latin root word <font class="root">clud</font> and its variants <font class="root">clus</font> and <font class="root">clos</font> all mean “shut.” These roots are the word origin of many English vocabulary words, including ex<font class="root">clud</font>e, ex<font class="root">clus</font>ive, and <font class="root">clos</font>et. When you in<font class="root">clud</font>e someone, you “shut” him in, thus performing the act of in<font class="root">clus</font>ion, thereby <font class="root">clos</font>ing or “shutting” him into your group. 
 > - [Word Root: clus (Root) \| Membean](https://membean.com/roots/clus-shut) clus: shut, closed.
@@ -349,7 +343,7 @@ sur-/super- (over, above)
 
 <br>
 
-### curs: ran, hurried
+## curs: ran, hurried
 
 > [Word Root: curs (Root) \| Membean](https://membean.com/roots/curs-ran): curs: ran, hurried.
 
@@ -358,7 +352,7 @@ sur-/super- (over, above)
 
 <br>
 
-### culp: fault, blame, guilt.
+## culp: fault, blame, guilt.
 
 > [Word Root: culp (Root) \| Membean](https://membean.com/roots/culp-fault): fault, blame, guilt.
 
@@ -368,9 +362,7 @@ sur-/super- (over, above)
 
 <br>
 
-## D
-
-### dom: house
+## dom: house
 
 > [Word Root: dom (Root) \| Membean](https://membean.com/roots/dom-house): <span class="root">dom</span>: house.
 
@@ -380,7 +372,7 @@ sur-/super- (over, above)
 
 <br>
 
-### duc: lead
+## duc: lead
 
 > [Word Root: duc (Root) \| Membean](https://membean.com/roots/duc-lead): The Latin root words **duc** and **duct** mean to ‘lead.’ Some common English vocabulary words that come from this root word include e**duc**ate, re**duc**e, pro**duc**e, and pro**duct**. Perhaps the best way to remember this root word is to think of someone who is e**duc**ated, or has been ‘led’ forth into knowledge.
 
@@ -390,9 +382,7 @@ sur-/super- (over, above)
 
 <br>
 
-## F
-
-### fac
+## fac
 
 > [Word Root: fac (Root) \| Membean](https://membean.com/roots/fac-face) fac: face, surface.
 
@@ -401,18 +391,19 @@ sur-/super- (over, above)
 
 <br>
 
-### fact/fic/fit
+## fact/fic/fit: make
 
 > - [Word Root: fact (Root) \| Membean](https://membean.com/roots/fact-made): It’s a **fact** that the Latin root word **fact** has ‘made’ many words in English; in point of **fact**, it even means ‘made’ or ‘done.’ Some common English words that come from **fact** include manu**fact**ure, arti**fact**, and satis**fact**ion. A very easy way to remember **fact** is the original idea behind the word **fact**ory, which is a place where products are ‘made.’
 > - [Word Root: fic (Root) \| Membean](https://membean.com/roots/fic-make): The Latin root word **fic** means to ‘make.’ A good number of common English vocabulary words come from this root, including magni**fic**ent, dif**fic**ult, and arti**fic**ial. One easy word that is helpful in remembering **fic** is ef**fic**ient, for ef**fic**ient people are able to ‘make’ things happen.
-> - [Word Root: fit (Root) \| Membean](https://membean.com/roots/fit-make): fit: make, do.
+> - [Word Root: fit (Root) \| Membean](https://membean.com/roots/fit-make): make, do.
 
 - benefit, beneficence
-- fiction, nonfiction (=documentary) (?)
+- fiction
+- nonfiction: books about real facts or events, not imagined ones.
 
 <br>
 
-### flig/flict
+## flig/flict
 
 > [Word Root: flict (Root) \| Membean](https://membean.com/roots/flict-struck) flict: struck, struck down.
 
@@ -420,9 +411,7 @@ sur-/super- (over, above)
 
 <br>
 
-## G
-
-### grat: pleasing, welcome
+## grat: pleasing, welcome
 
 > [Word Root: grat (Root) | Membean](https://membean.com/roots/grat-pleasing): grat: pleasing, welcome.
 
@@ -431,7 +420,7 @@ sur-/super- (over, above)
 
 <br>
 
-### gress
+## gress
 
 > [Word Root: gress (Root) \| Membean](https://membean.com/roots/gress-step): gress: step.
 
@@ -439,7 +428,7 @@ sur-/super- (over, above)
 
 <br>
 
-### gnost
+## gnost
 
 > [Word Root: gnost (Root) \| Membean](https://membean.com/roots/gnost-know): gnost: know.
 
@@ -448,9 +437,7 @@ sur-/super- (over, above)
 
 <br>
 
-## I
-
-### ig
+## ig
 
 > [Word Root: ig (Root) \| Membean](https://membean.com/roots/ig-do): ig: do, act.
 
@@ -458,9 +445,7 @@ sur-/super- (over, above)
 
 <br>
 
-## J
-
-### ject
+## ject
 
 > [Word Root: ject (Root) \| Membean](https://membean.com/roots/ject-thrown): The Latin word root **ject** means ‘throw.’ Many common words are ‘thrown’ about each day which use this root, including e**ject**, re**ject**, ob**ject**, and pro**ject**or. Perhaps a pointed way to help remember this word is when you receive an in**ject**ion, which is a shot ‘thrown’ into your body.
 
@@ -470,7 +455,7 @@ sur-/super- (over, above)
 
 <br>
 
-### juven
+## juven
 
 > [Word Root: juven (Root) \| Membean](https://membean.com/roots/juven-young): juven: young, young man.
 
@@ -479,9 +464,7 @@ sur-/super- (over, above)
 
 <br>
 
-## L
-
-### luc
+## luc
 
 > [Word Root: luc (Root) \| Membean](https://membean.com/roots/luc-light): luc: light, brightness, clarity.
 
@@ -489,7 +472,7 @@ sur-/super- (over, above)
 
 <br>
 
-### lect
+## lect
 
 > [Word Root: lect (Root) \| Membean](https://membean.com/roots/lect-gathered): lect, gathered, chosen.
 
@@ -498,7 +481,7 @@ sur-/super- (over, above)
 
 <br>
 
-### leg
+## leg
 
 > [Word Root: leg (Root) \| Membean](https://membean.com/roots/leg-law): leg: law.
 
@@ -507,9 +490,7 @@ sur-/super- (over, above)
 
 <br>
 
-## M
-
-### man
+## man
 
 > [Word Root: man (Root) \| Membean](https://membean.com/roots/man-hand): The Latin root word **man** means “hand.” This root word is the word origin of a number of English vocabulary words, including **manu**script, **manu**facture, and **mani**cure. An easy way to remember that **man** means “hand” is through the word **manu**al, an adjective which describes a task done by “hand.”
 
@@ -517,25 +498,21 @@ sur-/super- (over, above)
 - manacle
 - manual
 - manufacture
-- manipulate
-  - manipulate sb. into doing sth.
+- manipulate: e.g. manipulate sb. into doing sth.
 
 
 <br>
 
-### min: lean forward, threaten
+## min: lean forward, threaten
 
 > [Word Root: min (Root) \| Membean](https://membean.com/roots/min-lean): min: lean forward, threaten.
 
 - <span class="prefix">pro</span><span class="root">min</span>ence
-- <span class="prefix">e</span><span class="root">min</span>ent: an eminent person is famous, important, and respected.
-  - an *eminent* lawyer
+- <span class="prefix">e</span><span class="root">min</span>ent: an eminent person is famous, important, and respected, e.g. an *eminent* lawyer.
 
 <br>
 
-## N
-
-### nova: ‘new’
+## nova: ‘new’
 
 > [Word Root: nov (Root) \| Membean](https://membean.com/roots/nov-new): The Latin root word **nov** means “new.” This Latin root is the word origin of a good number of English vocabulary words, including **nov**el, super**nov**a, and re**nov**ate. The Latin root word **nov** is easily recalled through the English word **nov**el, for a **nov**el experience is one that has never happened before and so is “new” to you.
 
@@ -547,9 +524,7 @@ sur-/super- (over, above)
 
 <br>
 
-## P
-
-### ped
+## ped
 
 > [Word Root: ped (Root) \| Membean](https://membean.com/roots/ped-foot): The Latin root word **ped** and its Greek counterpart **pod** both mean “foot.” These roots are the word origin of many English vocabulary words, including **ped**al centi**ped**e, **pod**ium, and **pod**iatrist. Humans, for instance, are bi**ped**al because they walk on two “feet,” whereas a tri**pod** is a stand for a camera that has three “feet.”
 
@@ -559,9 +534,9 @@ sur-/super- (over, above)
 
 <br>
 
-### pens
+## pens: hang, weigh
 
-> [Word Root: pens (Root) \| Membean](https://membean.com/roots/pens-hang) pens: hang, weigh.
+> [Word Root: pens (Root) \| Membean](https://membean.com/roots/pens-hang) hang, weigh.
 
 - expensive
 - indispensable: An indis**pens**able item is absolutely necessary or essential --- it cannot be done without.
@@ -569,7 +544,7 @@ sur-/super- (over, above)
 
 <br>
 
-### plac
+## plac
 
 > [Word Root: plac (Root) \| Membean](https://membean.com/roots/plac-please): plac: please, suit, be acceptable.
 
@@ -577,7 +552,7 @@ sur-/super- (over, above)
 
 <br>
 
-### plic
+## plic
 
 > [Word Root: plic (Root) \| Membean](https://membean.com/roots/plic-fold): The English stem **plic** comes from a Latin root word meaning ‘fold.’ Some common English words that come from this word root include ap**plic**ation, multi**plic**ation, and re**plic**ate. Perhaps the easiest way to remember **plic** is through the word du**plic**ate, or to ‘fold’ twice, thus making two things.
 
@@ -586,7 +561,7 @@ sur-/super- (over, above)
 
 <br>
 
-### pon
+## pon
 
 > [Word Root: pon (Root) \| Membean](https://membean.com/roots/pon-put): pon-: put, place.
 
@@ -597,7 +572,7 @@ sur-/super- (over, above)
 
 <br>
 
-### pud
+## pud
 
 > [Word Root: pud (Root) \| Membean](https://membean.com/roots/pud-ashamed): pud: be ashamed.
 
@@ -606,9 +581,7 @@ sur-/super- (over, above)
 
 <br>
 
-## R
-
-### radic
+## radic
 
 > [Word Root: radic (Root) \| Membean](https://membean.com/roots/radic-root): radic: root.
 
@@ -616,16 +589,14 @@ sur-/super- (over, above)
 
 <br>
 
-### rept
+## rept
 
 - surreptitious
 - reptile
 
 <br>
 
-## S
-
-### sed
+## sed
 
 > [Word Root: sed (Root) \| Membean](https://membean.com/roots/sed-sit): sed: sit, settle, rest.
 
@@ -633,7 +604,7 @@ sur-/super- (over, above)
 
 <br>
 
-### sent
+## sent
 
 > [Word Root: sent (Root) \| Membean](https://membean.com/roots/sent-feel): The Latin root **sent** and its variant form **sens** mean to ‘feel.’ Some common English words that come from these two roots include **sens**ation, **sens**ible, re**sent**, and con**sent**. Remember that when you **sens**e something you ‘feel’ it, and when you are being **sent**imental, your ‘feelings’ take precedence over anything else.
 
@@ -645,7 +616,7 @@ sur-/super- (over, above)
 
 <br>
 
-### scribe: write
+## scribe: write
 
 > [Word Root: scrib (Root) \| Membean](https://membean.com/roots/scrib-write): The Latin root word **scrib** and its variant **script** both mean “write.” These roots are the word origin of a fair number of English vocabulary words, including **scrib**e, de**scrib**e, post**script**, and manu**script**. The root **scrib** is easily recalled through the word **scrib**e, whose job is “writing,” and **script**, a “written” document.
 
@@ -661,13 +632,13 @@ sur-/super- (over, above)
 
 <br>
 
-### sed: sit, settle, rest
+## sed: sit, settle, rest
 
 > [Word Root: sed (Root) \| Membean](https://membean.com/roots/sed-sit): sed: sit, settle, rest.
 
 <br>
 
-### sci: know
+## sci: know
 
 > [Word Root: sci (Root) \| Membean](https://membean.com/roots/sci-know): sci: know.
 
@@ -679,7 +650,17 @@ sur-/super- (over, above)
 
 <br>
 
-### stant
+## son: sound
+
+> [Word Root: son (Root) \| Membean](https://membean.com/roots/son-sound): The Latin root word **son** means “sound.” This root is the word origin of a fair number of English vocabulary words, including **son**ar and **son**ata. The root **son** is easily recalled through the word **son**ic, for a **son**ic boom makes a deafening “sound.”
+
+- sonar
+- sonnet: a short poem which therefore has little ‘sound’.
+- sonic
+
+<br>
+
+## stant
 
 > [Word Root: stant (Root) \| Membean](https://membean.com/roots/stant-stand): stant: stand, stand still.
 
@@ -688,18 +669,16 @@ sur-/super- (over, above)
 
 <br>
 
-### sum/sumpt
+## sum/sumpt
 
 > - [Word Root: sum (Root) \| Membean](https://membean.com/roots/sum-take): sum: take up, put on.
 > - [Word Root: sumpt (Root) \| Membean](https://membean.com/roots/sumpt-taken): summ: taken up, put on.
 
-- presumption
+- presume, presumption
 
 <br>
 
-## T
-
-### terr: earth, land
+## terr: earth, land
 
 > [Word Root: terr (Root) \| Membean](https://membean.com/roots/terr-earth): The Latin root word **terr** means “earth, land.” This Latin root is the word origin of a good number of English vocabulary words, including **terr**ain, **terr**arium, and Medi**terr**anean. The Latin root word **terr** is easily recalled through the English word **terr**ain, for the **terr**ain of an area is what the “earth” or “land” is like there.
 
@@ -709,21 +688,18 @@ sur-/super- (over, above)
 
 <br>
 
-### terr: frighten
+## terr: frighten
 
 > [Word Root: terr (Root) \| Membean](https://membean.com/roots/terr-frighten): terr: frighten.
 
-- <span class="root">terr</span>ible
-  - (extremely severe in a way that causes harm or damage): (e.g. 1) Their son had been injured in a terrible accident. (e.g. 2) a terrible storm.
-  - (very bad): The hotel was absolutely terrible.
-  - (making you feel afraid or shocked): She wept when she heard the terrible news.
-- <span class="root">terr</span>ific
-  - (very good, especially in a way that makes you feel happy and excited): (e.g. 1) That’s a terrific idea! (e.g. 2) The actress who played the lawyer was terrific.
-  - (very large in size or degree): (e.g. 1) a terrific bang; (e.g. 2) He drank a terrific amount of beer.
+- terror: If you feel **terr**or, you feel great fear or are very scared of something.
+- <span class="root">terr</span>ible: causing fear or dread or **terr**or
+- <span class="root">terr</span>ific: very great or intense.
+- terrified
 
 <br>
 
-### toxic
+## toxic
 
 > [Word Root: toxic (Root) \| Membean](https://membean.com/roots/toxic-poison) toxic: poison.
 
@@ -732,7 +708,7 @@ sur-/super- (over, above)
 
 <br>
 
-### tric
+## tric
 
 > [Word Root: tric (Root) \| Membean](https://membean.com/roots/tric-entangle) tric: entangle, make difficulties.
 
@@ -741,9 +717,7 @@ sur-/super- (over, above)
 
 <br>
 
-## V
-
-### vit/viv/vig
+## vit/viv/vig
 
 > - [Word Root: vit (Root) \| Membean](https://membean.com/roots/vit-life) vit: life.
 > - [Word Root: viv (Root) \| Membean](https://membean.com/roots/viv-live) viv: live.
@@ -757,7 +731,7 @@ sur-/super- (over, above)
 
 <br>
 
-### van/vac
+## van/vac
 
 > [Word Root: van (Root) \| Membean](https://membean.com/roots/van-empty): empty, illusory.
 
@@ -772,7 +746,7 @@ sur-/super- (over, above)
 
 <br>
 
-### vap
+## vap
 
 > [Word Root: vap (Root) \| Membean](https://membean.com/roots/vap-steam): vap: steam, spoiled, flat.
 
@@ -780,7 +754,7 @@ sur-/super- (over, above)
 
 <br>
 
-### ven/vent: ‘come’
+## ven/vent: ‘come’
 
 > [Word Root: ven (Root) \| Membean](https://membean.com/roots/ven-come): The Latin root word **ven** and its variant **vent** both mean “come.” These roots are the word origin of many English vocabulary words, including pre**vent**, in**vent**, **ven**ue, and con**ven**ient. When you in**vent** something, for instance, you “come” upon it for the first time, whereas a **ven**ue is a place to which people “come,” often for an e**vent**.
 
@@ -791,7 +765,7 @@ sur-/super- (over, above)
 
 <br>
 
-### verb
+## verb
 
 > [Word Root: verb (Root) \| Membean](https://membean.com/roots/verb-word): The Latin root word **verb** means “word.” This Latin root is the word origin of a good number of English vocabulary words, including **verb**, ad**verb**, and pro**verb**. The Latin root word **verb** is easily recalled through the English word **verb**, for a **verb** is simply a “word” which tells what’s going on in a sentence, usually an action of some sort.
 
@@ -799,7 +773,7 @@ sur-/super- (over, above)
 
 <br>
 
-### vers/vert: turn
+## vers/vert: turn
 
 > - [Word Root: vers (Root) \| Membean](https://membean.com/roots/vers-turned): The Latin root word **vers** means “turned.” This root gives rise to many English vocabulary words, including re**vers**e, **vers**ion, and con**vers**ation. Perhaps the easiest way to remember this root word is through the English word anni**vers**ary, a calendrical marker that yet another year has “turned.”
 > - [Word Root: vert (Root) \| Membean](https://membean.com/roots/vert-turn): The Latin root word **vert** means ‘turn.’ This root gives rise to many English vocabulary words, including **vert**ical, re**vert**, and con**vert**. This root word can keep your word sense right-side up instead of in**vert**ing it by ‘turning’ you upside-down.
@@ -810,18 +784,19 @@ sur-/super- (over, above)
 
 <br>
 
-### vinc
+## vinc: conquer, win
 
 > [Word Root: vinc (Root) \| Membean](https://membean.com/roots/vinc-conquer): conquer, win.
 
-- provincialism
+- provincial: relating to or coming from a province, e.g., a ***provincial*** election.
+- provincialism: provincial attitudes, e.g. In a science which is supposed to be international, such ***provincialism*** is inexcusable.
 
 <br>
 
-### voc/vok: call
+## voc/vok: call
 
 > - [Word Root: voc (Root) \| Membean](https://membean.com/roots/voc-call): The Latin root word **voc** and its variant **vok** both mean “call.” These roots are the word origins of a fair number of English vocabulary words, including **voc**al, **voc**abulary, in**vok**e, and pro**vok**e. The roots **voc** and **vok** are easily recalled through the words **voc**al, of “calling,” and re**vok**e, to “call” back.
-> - [Word Root: vok (Root) \| Membean](https://membean.com/roots/vok-call): vok: call, call upon.
+> - [Word Root: vok (Root) \| Membean](https://membean.com/roots/vok-call): call, call upon.
 
 - vocalization
 - provoke
@@ -833,7 +808,7 @@ sur-/super- (over, above)
 
 <br>
 
-# Suffix
+# Suffixes
 
 ## -ant
 
@@ -843,15 +818,15 @@ sur-/super- (over, above)
 
 <br>
 
-## -escent
+## -escent: becoming; beginning to be
 
-> [Word Root: -escent (Suffix) \| Membean](https://membean.com/roots/escent-becoming): -escent: becoming; beginning to be.
+> [Word Root: -escent (Suffix) \| Membean](https://membean.com/roots/escent-becoming): becoming; beginning to be.
 
-- evanescent
+- evanescent: something that is evanescent does not last very long, e.g. Talk is evanescent but writing leaves footprints.
 
 <br>
 
-## -cle
+## -cle: little
 
 > [Word Root: -cle (Suffix) \| Membean](https://membean.com/roots/cle-little): little.
 
@@ -860,7 +835,7 @@ sur-/super- (over, above)
 
 <br>
 
-## -ish
+## -ish: to do something
 
 > [Word Root: -ish (Suffix) \| Membean](https://membean.com/roots/ish-do): to do something.
 
@@ -871,7 +846,7 @@ sur-/super- (over, above)
 ## -ic
 
 > [Word Root: -ic (Suffix) \| Membean](https://membean.com/roots/ic-like): like,of.
-
+>
 > [Word Root: -ic (Suffix) \| Membean](https://membean.com/roots/ic-relating): one relating to.
 
 - probabilistic

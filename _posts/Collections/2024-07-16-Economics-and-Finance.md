@@ -5,7 +5,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-07-19 22:08:03 +0800
+last_modified_at: 2024-07-31 09:36:13 +0800
 ---
 
 **Books**
@@ -51,6 +51,11 @@ last_modified_at: 2024-07-19 22:08:03 +0800
 - Sahm Rule Recession Indicator (Sahm rule)
   - [Sahm rule - Wikipedia](https://en.wikipedia.org/wiki/Sahm_rule).
   - U.S.A: [Real-time Sahm Rule Recession Indicator (SAHMREALTIME) \| FRED \| St. Louis Fed](https://fred.stlouisfed.org/series/SAHMREALTIME).
+- VIX (Volatility Index)
+  - [Volatility Index Methodology - Cboe Global Markets](https://cdn.cboe.com/api/global/us_indices/governance/Volatility_Index_Methodology_Cboe_Volatility_Index.pdf).
+  - [VIX Methodology - Cboe Global Markets](https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf).
+- CNN Fear and Greed Index
+  - [Fear and Greed Index - Investor Sentiment \| CNN](https://www.cnn.com/markets/fear-and-greed).
 - Li Keqiang Index
   - [Li Keqiang index - Wikipedia](https://en.wikipedia.org/wiki/Li_Keqiang_index).
   - [China - Li Keqiang Index vs. CSI 300 Index \| MacroMicro](https://en.macromicro.me/charts/778/mm-cn-li-keqiang-index).

@@ -1,18 +1,9 @@
 ---
-layout: single
 title: Some Romantic Acknowledgements
 toc: false
 categories:
  - Collections
 date: 2023-11-27 23:56:05 +0800
-last_modified_at0: 2023-11-27 23:56:05 +0800
-last_modified_at1: 2023-12-05 20:09:04 +0800
-last_modified_at2: 2023-12-07 19:02:35 +0800
-last_modified_at3: 2024-02-25 00:10:35 +0800
-last_modified_at4: 2024-03-23 23:37:47 +0800
-last_modified_at5: 2024-05-28 10:15:30 +0800
-last_modified_at6: 2024-06-16 10:56:40 +0800
-last_modified_at7: 2024-06-19 19:10:08 +0800
 last_modified_at: 2024-06-19 19:10:08 +0800
 ---
 

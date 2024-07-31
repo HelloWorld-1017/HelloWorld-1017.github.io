@@ -3,11 +3,9 @@ title: Close the Program Occupying Specific Port in Windows System
 toc: false
 categories: 
  - Windows
+ - PowerShell
 date: 2023-07-25 22:31:47 +0800
 last_modified_at: 2024-07-11 12:20:01 +0800
-modification_history:
- - 2023-07-25 22:31:47 +0800
- - 2024-07-11 12:20:01 +0800
 ---
 
 最近在启动一个Windows软件的时候，弹出了这样的一个警告：
@@ -36,7 +34,7 @@ TCP    192.168.1.107:1089    20.198.162.78:443    ESTABLISHED    5288
 
 <br>
 
-# References
+**References**
 
 [1] [win10系统下查看端口是否被占用 - CSDN博客](https://blog.csdn.net/qq_34207366/article/details/85068839).
 

@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Fetch S&P 500 Price Index (or Other Available Series) from FRED (Federal Reserve Economic Data) Server in MATLAB
+title: "Fetch Series Data from Federal Reserve Economic Data (FRED) Sever in MATLAB: take S&P 500 price index"
 categories:
  - MATLAB
  - Economics & Finance
@@ -10,8 +9,7 @@ tags:
  - MATLAB Datafeed Toolbox
  - MATLAB Language Fundamentals
 date: 2024-04-17 13:58:11 +0800
-last_modified_at0: 2024-04-17 13:58:11 +0800
-last_modified_at: 2024-04-17 13:58:11 +0800
+last_modified_at: 2024-07-30 23:48:49 +0800
 ---
 
 # Fetch S&P 500 price index from FRED server

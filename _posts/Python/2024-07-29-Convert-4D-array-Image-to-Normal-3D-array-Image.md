@@ -3,6 +3,7 @@ title: Convert 4D-Array Image (with RGBA Channels) to Normal 3D-Array Image
 toc: false
 categories:
  - Python
+ - Machine Learning
 tags:
  - Computer Vision
  - PyTorch Warnings and Errors

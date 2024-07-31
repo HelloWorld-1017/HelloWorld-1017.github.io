@@ -26,7 +26,7 @@ Interesting anyway.
 
 <br>
 
-# References
+**References**
 
 [^1]: Housel, Morgan. *The Psychology of Money: Timeless lessons on wealth, greed, and happiness*. Harriman House Limited, 2020.
 [^2]: Hariri, Yuval Noah. "Homo deus." *A Brief History of Tomorrow. Vintage* (2017).

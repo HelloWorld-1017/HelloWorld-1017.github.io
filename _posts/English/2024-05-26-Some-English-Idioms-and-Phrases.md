@@ -3,7 +3,7 @@ title: Some English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-07-16 19:05:46 +0800
+last_modified_at: 2024-08-01 21:30:56 +0800
 ---
 
 # A
@@ -111,6 +111,23 @@ to start to behave in a way that is not socially acceptable; to go beyond what i
 
 <br>
 
+# D
+
+## dive into
+
+> dive into
+>
+> - [DIVE IN/DIVE INTO SOMETHING definition \| Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/dive-in-dive-into).
+> - [DIVING (INTO) Synonyms: 42 Similar and Opposite Words \| Merriam-Webster Thesaurus](https://www.merriam-webster.com/thesaurus/diving%20%28into%29).
+
+to start doing something suddenly and energetically, often without stopping to think; to start doing (something) with enthusiasm.
+
+- When I start a new project, I like to ***dive*** ***right in*** and see how it works.
+- They ***dove into*** their work.
+- I'm just not ready to ***dive (right) into*** another romantic relationship.
+
+<br>
+
 # E
 
 ## each to his/their own
@@ -167,6 +184,14 @@ something you say when you want something to stop.
 said when you are pretending to be sorry for using a word that may be considered offensive.
 
 - ***Pardon my French***, but that's a damned shame!
+
+<br>
+
+# F
+
+## for whatever reason
+
+*(skip over)*
 
 <br>
 
@@ -353,6 +378,32 @@ To cause a noticeable change in something. The imagery refers to the pointer ("n
 
 <br>
 
+## not even close
+
+> and it’s not even close
+>
+> - [And it is not even close - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/and+it+is+not+even+close).
+
+Said to highlight a large disparity between someone or something and the other people or things concerned.
+
+- “But we did something which cannot match what happened, ***not even close***.”
+
+<br>
+
+# N
+
+## not have the stomach for something
+
+> not have the stomach for something
+>
+> - [NOT HAVE THE STOMACH FOR SOMETHING definition \| Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/not-have-the-stomach-for).
+
+to not feel brave or determined enough to do something unpleasant.
+
+- I did*n't have the stomach for* another fight.
+
+<br>
+
 # O
 
 ## one and the same
@@ -505,6 +556,18 @@ used to say that you will do something in the future but not now; used to tell s
 
 <br>
 
+## take it with a grain of salt
+
+> take something with a grain of salt
+>
+> - [TAKE SOMETHING WITH A GRAIN OF SALT definition \| Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/take-with-a-grain-of-salt).
+
+to not completely believe something that you are told, because you think it is unlikely to be true.
+
+- You have to ***take everything she says with a grain of salt***, because she tends to exaggerate.
+
+<br>
+
 ## take ... as it comes. / take it as it comes.
 
 > take ... as it comes. / take it as it comes.
@@ -558,6 +621,12 @@ despite what one just said.
 
 - Much of the book was very dull. ***That said***, I have to admit that the ending was extremely clever.
 - He forgets most things, but ***having said that***, he always remembers my birthday.
+
+<br>
+
+## there’s always a bigger fish.
+
+*(skip over)*
 
 <br>
 

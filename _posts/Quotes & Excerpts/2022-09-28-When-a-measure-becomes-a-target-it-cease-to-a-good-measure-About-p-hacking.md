@@ -1,21 +1,16 @@
 ---
-title: "Goodhart's law: \"When a measure becomes a target, it cease to be a good measure.\""
+title: "Goodhart's law, \"When a measure becomes a target, it cease to be a good measure.\""
 toc: false
 categories:
  - Mathematics
+ - Psychology
  - Philosophy
  - Quotes
 tags:
  - Probability Theory and Mathematical Statistics
  - Experiment
 date: 2022-09-28 23:42:17 +0800
-last_modified_at: 2024-06-27 17:04:05 +0800
-modification_history:
- - 2022-09-28 23:42:17 +0800
- - 2024-03-25 01:05:07 +0800
- - 2024-05-25 09:53:20 +0800
- - 2024-06-05 04:29:19 +0800
- - 2024-06-27 17:04:05 +0800
+last_modified_at: 2024-08-02 16:23:37 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -36,6 +31,6 @@ p-hacking主要发生在两个阶段，一是在**数据采集阶段**，实验�
 
 <br>
 
-# References
+**References**
 
 [^1]: [Goodhart's law - Wikipedia](https://en.wikipedia.org/wiki/Goodhart%27s_law).

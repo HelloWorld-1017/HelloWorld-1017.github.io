@@ -3,7 +3,7 @@ title: Some English Prefixes, Root Words, and Suffixes
 categories:
  - English
 date: 2024-07-13 22:43:47 +0800
-last_modified_at: 2024-07-13 22:43:47 +0800
+last_modified_at: 2024-08-01 21:31:15 +0800
 published: false
 ---
 
@@ -528,9 +528,10 @@ sur-/super- (over, above)
 
 > [Word Root: ped (Root) \| Membean](https://membean.com/roots/ped-foot): The Latin root word **ped** and its Greek counterpart **pod** both mean “foot.” These roots are the word origin of many English vocabulary words, including **ped**al centi**ped**e, **pod**ium, and **pod**iatrist. Humans, for instance, are bi**ped**al because they walk on two “feet,” whereas a tri**pod** is a stand for a camera that has three “feet.”
 
-- expeditious
+- expedition, expeditious
 - centipede
 - millipede
+- stampede
 
 <br>
 
@@ -791,6 +792,13 @@ sur-/super- (over, above)
 - provincial: relating to or coming from a province, e.g., a ***provincial*** election.
 - provincialism: provincial attitudes, e.g. In a science which is supposed to be international, such ***provincialism*** is inexcusable.
 
+## vid: see, take care
+
+> [Word Root: vid (Root) \| Membean](https://membean.com/roots/vid-see): see, take care.
+
+- providential: A pro**vid**ential event is a very lucky one because it happens at exactly the right time and often when it is needed most. e.g. providential moment.
+- evident, evidence
+
 <br>
 
 ## voc/vok: call
@@ -880,6 +888,100 @@ sur-/super- (over, above)
 - superfluous
 - vacuous
 - ambiguous, unambiguous
+
+<br>
+
+# Unclassified
+
+## A
+
+- assassination
+- arguably
+
+## B
+
+- beholder
+
+## C
+
+- candidacy
+- capacity
+- cardio
+- competitor
+
+## D
+
+- devastate, devastated
+- diploma
+
+## E
+
+- ensuing
+- energize
+- entrant
+- exotic: exotic country
+
+## F
+
+- fate, fateful
+- flattering
+- forsaken
+- freak
+
+## I
+
+- inherit
+- intrigued
+
+## J
+
+- janitor
+
+## L
+
+- lottery
+- loom
+
+## M
+
+- mattresses
+- moral
+
+## N
+
+- nominee
+
+## O
+
+- oftentimes
+
+## P
+
+- patriot
+- peanuts
+
+## R
+
+- rally
+- roar
+
+## S
+
+- staggering
+- strive
+- stuffed
+
+## T
+
+- tedious
+- tempt
+- trajectory
+- tremendous
+
+## W
+
+- warriors
+- wounded: e.g. wounded soldier.
 
 <br>
 

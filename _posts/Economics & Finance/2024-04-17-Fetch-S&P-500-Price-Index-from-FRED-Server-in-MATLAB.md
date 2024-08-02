@@ -4,12 +4,13 @@ categories:
  - MATLAB
  - Economics & Finance
 tags:
- - MATLAB Computational Finance 
+ - Computational Finance
+ - MATLAB Computational Finance
  - MATLAB Test and Measurement
  - MATLAB Datafeed Toolbox
  - MATLAB Language Fundamentals
 date: 2024-04-17 13:58:11 +0800
-last_modified_at: 2024-07-30 23:48:49 +0800
+last_modified_at: 2024-08-01 12:45:02 +0800
 ---
 
 # Fetch S&P 500 price index from FRED server
@@ -242,7 +243,7 @@ s =
 
 <br>
 
-# References
+**References**
 
 [^1]: [MATLAB `fred`: Connect to FRED data servers - MathWorks](https://ww2.mathworks.cn/help/datafeed/fred.html).
 [^2]: [Federal Reserve Economic Data \| FRED \| St. Louis Fed](https://fred.stlouisfed.org/).

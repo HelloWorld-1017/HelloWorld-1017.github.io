@@ -1,17 +1,15 @@
 ---
-title: Hyphen, En Dash, vs. Em Dash
+title: Spell Hyphen (-), En Dash (--), vs. Em Dash (---)
 toc: false
 categories:
  - English
+ - Web Development
 drafted_at: 2024-07-01 21:53:49 +0800
 date: 2024-07-03 22:01:23 +0800
-last_modified_at: 2024-07-05 10:07:35 +0800
-modification_history:
- - 2024-07-03 22:01:23 +0800
- - 2024-07-05 10:07:35 +0800
+last_modified_at: 2024-08-02 16:30:54 +0800
 ---
 
-During the process of transcribing some English texts, I find ‘dash’ is actually often used when someone wants to make an explanation within a sentence. However, I rarely use ‘dash’; leaving aside the grammar, there is one point always confusing me. That is, the dash length seem different at different cases, and I don’t know how to type them correctly. Specifically, in English typing mode, when I type `[hyphen/minus]` key[^4] on the keyboard, I have ‘-’, which looks kind of short; while in Chinese typing mode, if I type `[Shift]` + `[hyphen/minus]`, I have ‘——’, and after deleting one of them at which case, I’ll get ‘—’. It indeed looks like those dashes I ever saw to connect two parts of a sentence, but this method of typing an ‘English’ dash sounds ugly.
+During the process of transcribing some English texts, I find ‘dash’ is actually often used when someone wants to make an explanation within a sentence. However, I rarely use ‘dash’; leaving aside the grammar, there is one point always confusing me. That is, the dash length seem different at different cases, and I don’t know how to type them correctly. Specifically, in English typing mode, when I type `[hyphen/minus]` key[^4] on the keyboard, I have ‘-’, which looks kind of short; while in Chinese typing mode, if I type `[Shift]` + `[hyphen/minus]`, I have ‘——’, and after deleting one of them I’ll get ‘—’. It indeed looks like those dashes I ever saw to connect two parts of a sentence, but this method of typing an ‘English’ dash sounds ugly.
 
 So, how to type a long dash in a standard way? To figure out this point, I looked up some references, and found that those dashes looks like the same but with different lengths can be categorized into three categories, i.e. hyphen, en dash, and em dash; they also have different functions from the perspective of English grammar. As in reference[^6]:
 

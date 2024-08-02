@@ -6,6 +6,7 @@ categories:
  - Economics & Finance
  - Time Series Analysis
 tags:
+ - Computational Finance
  - MATLAB Computational Finance
  - Probability Theory and Mathematical Statistics
  - MATLAB Graphics

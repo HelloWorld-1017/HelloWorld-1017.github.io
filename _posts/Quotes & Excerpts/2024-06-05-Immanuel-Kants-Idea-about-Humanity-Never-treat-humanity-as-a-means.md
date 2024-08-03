@@ -1,14 +1,11 @@
 ---
-title: "Immanuel Kant's Idea about Humanity: \"Never treat humanity merely as a means.\""
+title: "Immanuel Kant's Idea about Humanity, \"Never treat humanity merely as a means.\""
 toc: false
 categories:
  - Philosophy
  - Quotes
 date: 2024-06-05 04:12:45 +0800
 last_modified_at: 2024-06-27 23:58:26 +0800
-modification_history:
- - 2024-06-05 04:12:45 +0800
- - 2024-06-27 23:58:26 +0800
 ---
 
 <div class="quote--left" markdown="1">

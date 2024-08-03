@@ -6,7 +6,7 @@ layout: archive_year
 
 {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsInYear %}
-  <a class = "btn btn--primary" href="#{{ year.name }}" style="background-color:#104E8B;color:white;">
+  <a class = "btn btn--label" href="#{{ year.name }}"">
     <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ year.name }} ({{ year.items | size }})
   </a>
 {% endfor %}

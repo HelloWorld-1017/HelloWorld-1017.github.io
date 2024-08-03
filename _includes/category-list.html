@@ -12,7 +12,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
     {% for category_word in categories_sorted %}
-    <a class = "btn btn--primary" href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" rel="tag" style="background-color:#104E8B;color:white;">
+    <a class = "btn btn--label" href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" rel="tag">
       <i class="fa fa-folder-open" aria-hidden="true"></i> {{ category_word }}
     </a>
     {% unless forloop.last %}<span class="sep">, </span>{% endunless %}

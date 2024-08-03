@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Rudiger Dornbusch's Idea about Crisis: \"The crisis takes a much longer time coming than you think, and then it happens much faster than you would have thought.\""
+title: "Rudiger Dornbusch's Idea about Crisis, \"The crisis takes a much longer time coming than you think, and then it happens much faster than you would have thought.\""
 categories:
  - Philosophy
  - Quotes
@@ -8,11 +8,6 @@ categories:
 toc: false
 date: 2024-04-07 14:05:12 +0800
 last_modified_at: 2024-06-27 16:57:08 +0800
-modification_history:
- - 2024-04-07 14:05:12 +0800
- - 2024-05-25 09:52:11 +0800
- - 2024-06-05 04:28:22 +0800
- - 2024-06-27 16:57:08 +0800
 ---
 
 <div class="quote--left" markdown="1">

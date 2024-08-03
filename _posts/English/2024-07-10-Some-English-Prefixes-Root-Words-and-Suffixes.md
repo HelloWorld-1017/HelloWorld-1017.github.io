@@ -900,7 +900,9 @@ sur-/super- (over, above)
 
 ## B
 
-- beholder
+- bandit: e.g. clean bandit.
+- bay
+- beholder: The beholder of something is the person who is looking at it.
 
 ## C
 
@@ -912,7 +914,9 @@ sur-/super- (over, above)
 ## D
 
 - devastate, devastated
+- desalination
 - diploma
+- duly
 
 ## E
 
@@ -924,9 +928,10 @@ sur-/super- (over, above)
 ## F
 
 - fate, fateful
-- flattering
-- forsaken
-- freak
+- fiscal
+- flattering: making someone look or seem better or more attractive than usual, e.g. a flattering photograph.
+- forsake: to leave someone forever, especially when they need you, e.g. Do not forsake me!
+- freak: e.g. I’m a freak.
 
 ## I
 
@@ -959,16 +964,27 @@ sur-/super- (over, above)
 
 - patriot
 - peanuts
+- pursuant: e.g. pursuant to the requirements of the Securities Exchange Act of 1934 ...
 
 ## R
 
 - rally
 - roar
+- registrant
 
 ## S
 
-- staggering
+- sediment
+- sentiment, sentimental
+- stagger
+  - If you stagger, you walk very unsteadily, for example because you are ill or drunk.
+  - If you say that someone or something staggers on, you mean that they only just succeed in continuing.
+  - If something staggers you, it surprises you very much.
+  - To stagger things such as people's holidays or hours of work means to arrange them so that they do not all happen at the same time.
+
+- staggering: Something that is staggering is very surprising.
 - strive
+- stroll
 - stuffed
 
 ## T
@@ -977,6 +993,14 @@ sur-/super- (over, above)
 - tempt
 - trajectory
 - tremendous
+
+## U
+
+- undersigned
+
+## V
+
+- vibe, vibes.
 
 ## W
 

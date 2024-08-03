@@ -1,14 +1,13 @@
 ---
 title: Some Resources about Economics and Finance
-toc: false
 categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-07-31 09:36:13 +0800
+last_modified_at: 2024-08-03 09:34:56 +0800
 ---
 
-**Books**
+## Books
 
 - [Security Analysis (Sixth Edition)](https://glenbradford.com/files/Stocks/security-analysis-benjamin-graham-6th-edition-pdf-february-24-2010-12-08-am-3-0-meg.pdf), Benjamin Graham, David L. Dood.
 - [The Psychology of Money: Timeless lessons on wealth, greed, and happiness](https://pdflake.com/wp-content/uploads/2021/08/The-Psychology-of-Money-PDF-Book-By-Morgan-Housel.pdf), Morgan Housel.
@@ -16,7 +15,21 @@ last_modified_at: 2024-07-31 09:36:13 +0800
 - [Reminiscences of a Stock Operator: to Jesse Lauriston Livermore](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf), Edwin LeFevre.
 - [Quantitative trading: how to build your own algorithmic trading business](https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf), Ernest P. Chan, 2021.
 
-**Blogs**
+<br>
+
+## Data source
+
+- [Federal Reserve Economic Data (FRED) - St. Louis Fed](https://fred.stlouisfed.org/).
+- [Securities and Exchange Commission (SEC)](https://www.sec.gov/) (e.g. [EDGAR Search Results: Apple Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&owner=include&count=40))
+  - [Form 10-Q](https://www.sec.gov/files/form10-q.pdf): [quarterly report](https://www.investopedia.com/terms/1/10q.asp)
+  - [Form 10-K](https://www.sec.gov/files/form10-k.pdf): [annual report](https://www.investopedia.com/terms/1/10-k.asp)
+  - [Form 8-K](https://www.sec.gov/files/form8-k.pdf): [to announce significant events](https://www.investopedia.com/terms/1/8-k.asp)
+- [上海证券交易所 (Shanghai Stock Exchange, SSE)](https://www.sse.com.cn/).
+- [U.S. Department of Labor](https://www.dol.gov/): Employment status and nonfarm payrolls.
+
+<br>
+
+## Blogs
 
 - [Collab Blog · Collab Fund](https://collabfund.com/blog/).
 - [FRED Blog \| Interesting graphs from the FRED library](https://fredblog.stlouisfed.org/).
@@ -26,7 +39,9 @@ last_modified_at: 2024-07-31 09:36:13 +0800
 - [Causal Inference The Mixtape](https://mixtape.scunning.com/).
 - [Andrew Hallam - Personal Finance Journalist, Speaker, Author](https://andrewhallam.com/).
 
-**Some economic indicators and indexes**
+<br>
+
+## Economic indicators and indexes
 
 - PPI (Producer Price Index)
   - [Producer price index - Wikipedia](https://en.wikipedia.org/wiki/Producer_price_index).

@@ -13,21 +13,6 @@
 
   <link href="/assets/fontawesome_v6.6.0/css/all.css" rel="stylesheet" />
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-  <!-- Ban zoom in and out -->
-  <!-- https://blog.csdn.net/qq_36451496/article/details/120955798 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <script>
-    document.addEventListener('mousewheel', function (e) {
-      e = e || window.event;
-      if ((e.wheelDelta && event.ctrlKey) || e.detail) {
-        event.preventDefault();
-      }
-    }, {
-      capture: false,
-      passive: false
-    });
-  </script>
 </head>
 
 {% include seo.html %}

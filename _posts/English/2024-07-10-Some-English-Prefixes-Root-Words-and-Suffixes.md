@@ -896,7 +896,9 @@ sur-/super- (over, above)
 ## A
 
 - assassination
-- arguably
+- [appeal](https://www.ldoceonline.com/dictionary/appeal)
+- [appraisal](https://www.ldoceonline.com/dictionary/appraisal): e.g. appraisal of existing solutions
+- [arguably](https://dictionary.cambridge.org/dictionary/english/arguably)
 
 ## B
 
@@ -908,21 +910,27 @@ sur-/super- (over, above)
 
 - candidacy
 - capacity
-- cardio
+- [cardio](https://www.ldoceonline.com/dictionary/cardio)
 - competitor
+- [console](https://www.ldoceonline.com/dictionary/console)
+- consult, consultation
 
 ## D
 
-- devastate, devastated
-- desalination
-- diploma
-- duly
+- devastate, devastated, devastating
+- [desalination](https://www.ldoceonline.com/dictionary/desalination)
+- [detrimental](https://www.ldoceonline.com/dictionary/detrimental): e.g. the detrimental effect of pollution on the environment
+- [diploma](https://www.ldoceonline.com/dictionary/diploma)
+- [diplomat](https://www.ldoceonline.com/dictionary/diplomat), diplomatic
+- [duly](https://www.collinsdictionary.com/dictionary/english/duly)
 
 ## E
 
 - ensuing
+- endure
 - energize
 - entrant
+- [evacuate](https://www.ldoceonline.com/dictionary/evacuate)
 - exotic: exotic country
 
 ## F
@@ -935,6 +943,7 @@ sur-/super- (over, above)
 
 ## I
 
+- inadvertent, [inadvertently](https://www.ldoceonline.com/dictionary/inadvertently): inadvertent operation
 - inherit
 - intrigued
 
@@ -962,9 +971,13 @@ sur-/super- (over, above)
 
 ## P
 
+- [particular](https://www.ldoceonline.com/dictionary/particular): e.g. a particular type of food.
 - patriot
-- peanuts
-- pursuant: e.g. pursuant to the requirements of the Securities Exchange Act of 1934 ...
+- [peanuts](https://www.ldoceonline.com/dictionary/peanuts): e.g. I’m tired of working for peanuts.
+- [penultimate](https://www.ldoceonline.com/dictionary/penultimate)
+- predominant: e.g. predominant causes of failure.
+- [puberty](https://www.ldoceonline.com/dictionary/puberty)
+- [pursuant](https://www.ldoceonline.com/dictionary/pursuant-to-something) (to something): e.g. pursuant to the requirements of the Securities Exchange Act of 1934 ...
 
 ## R
 
@@ -974,14 +987,13 @@ sur-/super- (over, above)
 
 ## S
 
-- sediment
+- [sacrifice](https://www.ldoceonline.com/dictionary/sacrifice)
+- [sarcastic](https://www.ldoceonline.com/dictionary/sarcastic)
+- [sediment](https://www.ldoceonline.com/dictionary/sediment)
 - sentiment, sentimental
-- stagger
-  - If you stagger, you walk very unsteadily, for example because you are ill or drunk.
-  - If you say that someone or something staggers on, you mean that they only just succeed in continuing.
-  - If something staggers you, it surprises you very much.
-  - To stagger things such as people's holidays or hours of work means to arrange them so that they do not all happen at the same time.
-
+- secure
+- [stagger](https://www.collinsdictionary.com/dictionary/english/stagger)
+  
 - staggering: Something that is staggering is very surprising.
 - strive
 - stroll
@@ -989,18 +1001,22 @@ sur-/super- (over, above)
 
 ## T
 
-- tedious
+- [tedious](https://www.collinsdictionary.com/dictionary/english/tedious)
 - tempt
-- trajectory
+- [timid](https://www.ldoceonline.com/dictionary/timid), timidity
+- [trajectory](https://www.ldoceonline.com/dictionary/trajectory)
 - tremendous
 
 ## U
 
-- undersigned
+- [undersigned](https://www.ldoceonline.com/dictionary/the-undersigned)
 
 ## V
 
-- vibe, vibes.
+- vacuum
+- vacant, vacancy
+- [vacuous](https://www.ldoceonline.com/dictionary/vacuous)
+- vibe, [vibes](https://www.ldoceonline.com/dictionary/vibes)
 
 ## W
 

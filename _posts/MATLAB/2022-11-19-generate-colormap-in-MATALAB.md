@@ -1,17 +1,17 @@
 ---
-layout: single
 title: Generate colormap in MATLAB
-date: 2022-11-19 22:34:33 +0800
+toc: false
 categories: 
  - MATLAB
- - Graphic Design and Typography
+ - Design
 tags:
  - MATLAB Graphics
-toc: false
+date: 2022-11-19 22:34:33 +0800
+last_modified_at: 2024-08-04 23:22:21 +0800
 ---
 
 
-前两天看到了一个很漂亮、很有启发性的关于使用MATLAB生成色卡的工作。该工作来自slandarer，实现原理和代码都记录在他的CSDN博客中，详见：[还在纠结配色问题？手把手教你用MATLAB一键生成高质量色卡 - slandarer](https://slandarer.blog.csdn.net/article/details/119056214)。
+前两天看到了一个很漂亮、很有启发性的关于使用MATLAB生成色卡的工作。该工作来自slandarer，实现原理和代码都记录在他的CSDN博客中[^1]。
 
 提取图片颜色及生成色卡的代码如下：
 
@@ -71,7 +71,7 @@ ax.ZLabel.FontName = 'Cambria';
 exportgraphics(gcf, "pic.png")
 ```
 
-![pic](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic.png)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic.png?raw=true" style="zoom:67%;" />
 
 聚类中心对应的色卡，可以修改变量`colorNum`，改变色卡中颜色的数量。
 
@@ -121,4 +121,10 @@ exportgraphics(gcf, "pic.png")
 ![pic1_2](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic1_2.png?raw=true)
 
 虽然有一些的局限性，但是瑕不掩瑜，这仍然是一个很好的方法，因为这一点的偏移是完全可以忽略的，只要我们看着右边的图像感觉到和谐美观，那么我们就可以将其作为一个色卡，可以不必理会人眼无法识别的差异。但是，假如我们设计一种色卡，想要从科学或者量化的角度解释它为什么是美观的，那就是另外一回事了。
+
+<br>
+
+**References**
+
+[^1]: [还在纠结配色问题？手把手教你用MATLAB一键生成高质量色卡 - slandarer](https://slandarer.blog.csdn.net/article/details/119056214).
 

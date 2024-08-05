@@ -5,7 +5,7 @@ categories:
  - Collections
  - Web Development
 date: 2024-07-17 11:12:38 +0800
-last_modified_at: 2024-08-04 15:47:26 +0800
+last_modified_at: 2024-08-05 16:41:00 +0800
 ---
 
 **Books**
@@ -31,3 +31,4 @@ last_modified_at: 2024-08-04 15:47:26 +0800
   - [List of Unicode characters - Wikipedia](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
   - [SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode](https://symbl.cc/en/).
 - [Shields.io](https://shields.io/).
+- Internal website search engine: [Algolia](https://www.algolia.com/).

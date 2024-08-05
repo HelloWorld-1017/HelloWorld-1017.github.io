@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-08-03 09:34:56 +0800
+last_modified_at: 2024-08-05 09:32:11 +0800
 ---
 
 ## Books
@@ -19,11 +19,16 @@ last_modified_at: 2024-08-03 09:34:56 +0800
 
 ## Data source
 
+- [Yahoo Finance](https://finance.yahoo.com/).
 - [Federal Reserve Economic Data (FRED) - St. Louis Fed](https://fred.stlouisfed.org/).
-- [Securities and Exchange Commission (SEC)](https://www.sec.gov/) (e.g. [EDGAR Search Results: Apple Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&owner=include&count=40))
+- [Securities and Exchange Commission (SEC)](https://www.sec.gov/)
   - [Form 10-Q](https://www.sec.gov/files/form10-q.pdf): [quarterly report](https://www.investopedia.com/terms/1/10q.asp)
   - [Form 10-K](https://www.sec.gov/files/form10-k.pdf): [annual report](https://www.investopedia.com/terms/1/10-k.asp)
   - [Form 8-K](https://www.sec.gov/files/form8-k.pdf): [to announce significant events](https://www.investopedia.com/terms/1/8-k.asp)
+  - [How to Read a 10-K/10-Q](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/how-read)
+  - EDGAR Search Results
+    - [Apple Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&owner=include&count=40) (see also in Apple Newsroom, e.g. [Apple reports third quarter results](https://www.apple.com/newsroom/2024/08/apple-reports-third-quarter-results/))
+    - [Berkshire Hathaway Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001067983&type=&dateb=&owner=include&count=40) ([BERKSHIRE HATHAWAY ANNUAL & INTERIM REPORTS](https://www.berkshirehathaway.com/reports.html))
 - [上海证券交易所 (Shanghai Stock Exchange, SSE)](https://www.sse.com.cn/).
 - [U.S. Department of Labor](https://www.dol.gov/): Employment status and nonfarm payrolls.
 

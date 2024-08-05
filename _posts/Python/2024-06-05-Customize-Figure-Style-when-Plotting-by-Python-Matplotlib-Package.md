@@ -2,12 +2,12 @@
 title: "Customize Figure Style when Plotting by Python Matplotlib Package: `matplotlibrc` File and `.mplstyle` File"
 categories:
  - Python
- - Graphic Design and Typography
+ - Design
 tags:
  - Python Graphics
  - Python Matplotlib
 date: 2024-06-05 19:43:57 +0800
-last_modified_at: 2024-06-20 17:50:31 +0800
+last_modified_at: 2024-08-04 23:31:45 +0800
 ---
 
 # Matplotlib `matplotlibrc` file

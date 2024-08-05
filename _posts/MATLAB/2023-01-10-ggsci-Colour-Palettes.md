@@ -1,15 +1,13 @@
 ---
-layout: single
-title:  ggsci Colour Palettes 
-date: 2023-01-10 20:17:19 +0800
+title: ggsci Colour Palettes 
 categories: 
- - Graphic Design and Typography
+ - Design
  - R
  - MATLAB
 tags:
  - MATLAB Graphics
-modified_at1: 2023-12-07 20:02:37 +0800
-last_modified_at: 2023-12-07 20:02:37 +0800
+date: 2023-01-10 20:17:19 +0800
+last_modified_at: 2024-08-04 23:21:09 +0800
 ---
 
 # Introduction
@@ -18,7 +16,7 @@ last_modified_at: 2023-12-07 20:02:37 +0800
 
 > 官方网站：[Scientific Journal and Sci-Fi ThemedColor Palettes for ggplot2 - ggsci](https://nanx.me/ggsci/articles/ggsci.html)
 >
-> Github仓库：[nanxstats/ggsci:  Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci)
+> Github仓库：[nanxstats/ggsci: Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci)
 
 官网中给出了获取palette中色彩RGB值的方式，在安装了R语言和RStudio后，输入指定的代码即可。
 

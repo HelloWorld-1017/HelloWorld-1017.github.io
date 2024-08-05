@@ -1,12 +1,11 @@
 ---
-layout: single
 title: Chinese Font Size
-date: 2024-02-04 21:08:59 +0800
+toc: false
 categories:
  - LaTeX
- - Graphic Design and Typography
-last_modified_at: 2024-02-04 21:08:59 +0800
-toc: false
+ - Design
+date: 2024-02-04 21:08:59 +0800
+last_modified_at: 2024-08-04 23:28:47 +0800
 notes:
  - Font size has relationship with global font setting, https://www.sascha-frank.com/latex-font-size.html
 ---

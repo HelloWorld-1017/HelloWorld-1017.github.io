@@ -5,7 +5,7 @@ categories:
  - Collections
  - Philosophy
 date: 2024-07-17 11:06:58 +0800
-last_modified_at: 2024-07-17 11:06:58 +0800
+last_modified_at: 2024-08-05 15:57:33 +0800
 ---
 
 **Books**
@@ -14,7 +14,8 @@ last_modified_at: 2024-07-17 11:06:58 +0800
 - [The Art of War](https://sites.ualberta.ca/~enoch/Readings/The_Art_Of_War.pdf), Sun Tzu.
 - 鲁迅文章合集：[北京鲁迅博物馆(北京新文化运动纪念馆)](http://www.luxunmuseum.com.cn/cx/works.php).
 
-**Blogs**
+**Websites**
 
 - [智识@IdeoBook™ – 文章评论 · 读书随笔 · 文化资讯](http://www.ideobook.com/).
+- [National Geographic](https://www.nationalgeographic.com/).
 

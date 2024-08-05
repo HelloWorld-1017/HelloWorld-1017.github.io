@@ -1,16 +1,12 @@
 ---
-layout: single
-title: "Built-in Colors in LaTeX xcolor Package"
+title: Built-in Colors in LaTeX xcolor Package
 categories:
  - LaTeX
- - Graphic Design and Typography
+ - Design
  - R
  - MATLAB
 date: 2023-10-17 18:16:22 +0800
-last_modified_at0: 2023-10-17 18:16:22 +0800
-last_modified_at1: 2023-11-03 12:40:47 +0800
-last_modified_at2: 2024-03-14 16:56:03 +0800
-last_modified_at: 2024-03-14 16:56:03 +0800
+last_modified_at: 2024-08-04 23:28:19 +0800
 ---
 
 # 19 base colours (always available)

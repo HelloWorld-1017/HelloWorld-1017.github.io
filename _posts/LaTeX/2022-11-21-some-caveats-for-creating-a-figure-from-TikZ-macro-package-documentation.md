@@ -1,16 +1,12 @@
 ---
-layout: single
 title: Some Caveats for Creating a Figure from TikZ Macro Package Documentation
 categories: 
  - LaTeX
- - Graphic Design and Typography
+ - Design
  - Philosophy
 tags:
  - LaTeX TikZ
 date: 2022-11-21 10:43:41 +0800
-last_modified_at0: 2022-11-21 10:43:41 +0800
-last_modified_at1: 2024-04-01 05:06:21 +0800
-last_modified_at2: 2024-05-25 09:52:48 +0800
 last_modified_at: 2024-05-25 09:52:48 +0800
 ---
 

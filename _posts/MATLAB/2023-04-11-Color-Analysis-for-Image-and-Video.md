@@ -1,14 +1,13 @@
 ---
-layout: single
 title: Color Analysis for Image and Video
-date: 2023-04-11 18:51:49 +0800
 categories: 
  - MATLAB
- - Graphic Design and Typography
+ - Design
 tags:
  - MATLAB Graphics
  - MATLAB Data Import and Analysis
-toc: false
+date: 2023-04-11 18:51:49 +0800
+last_modified_at: 2024-08-04 23:26:46 +0800
 ---
 
 # Analysis for MATLAB `pepers.png`

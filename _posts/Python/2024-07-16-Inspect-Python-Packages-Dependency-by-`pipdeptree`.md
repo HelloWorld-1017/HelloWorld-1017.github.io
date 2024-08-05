@@ -2,11 +2,10 @@
 title: Inspect Python Packages Dependency by `pipdeptree` (including a Simple Practice with Graphviz)
 categories:
  - Python
- - Graphic Design and Typography
 tags:
  - Graphviz
 date: 2024-07-16 23:08:22 +0800
-last_modified_at: 2024-07-16 23:08:22 +0800
+last_modified_at: 2024-08-04 23:30:55 +0800
 ---
 
 # Introduction

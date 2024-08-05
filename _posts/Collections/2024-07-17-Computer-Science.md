@@ -4,7 +4,7 @@ toc: false
 categories:
  - Collections
 date: 2024-07-17 11:17:16 +0800
-last_modified_at: 2024-07-17 11:17:16 +0800
+last_modified_at: 2024-08-05 16:39:32 +0800
 ---
 
 **Books**
@@ -13,10 +13,12 @@ last_modified_at: 2024-07-17 11:17:16 +0800
   - [But How Do It Know - the book. The basic principles of computers](https://www.buthowdoitknow.com/).
   - [How a CPU Works? - YouTube](https://www.youtube.com/watch?v=cNN_tTXABUA). 
 
-**Blogs**
+**Blogs & Websites**
 
 - Tesla blog: [News \| Tesla](https://www.tesla.com/blog).
 - [Hacker News](https://news.ycombinator.com/).
+- TIOBE (The Importance Of Being Earnest) Programming Community Index: [TIOBE  Index](https://www.tiobe.com/tiobe-index/).
+- [HelloGitHub](https://hellogithub.com/).
 
 **Courses**
 

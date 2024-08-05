@@ -2,7 +2,7 @@
 title: Paris 2024 Olympic Pictograms
 toc: false
 categories:
- - Graphic Design and Typography
+ - Design
  - Collections
 header:
  image: https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202407300051059.png

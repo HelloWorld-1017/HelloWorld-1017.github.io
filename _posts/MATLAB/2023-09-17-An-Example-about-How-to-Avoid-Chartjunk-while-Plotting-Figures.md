@@ -1,13 +1,13 @@
 ---
-layout: single
 title: An Example about How to Avoid "Chartjunk" while Plotting Figures
-date: 2023-09-17 21:01:10 +0800
+toc: false
 categories:
  - MATLAB
- - Graphic Design and Typography
+ - Design
 tags:
  - MATLAB Graphics
-toc: false
+date: 2023-09-17 21:01:10 +0800
+last_modified_at: 2024-08-04 23:27:23 +0800
 ---
 
 Reference [1] provides 10 simple rules for improvement of figure plotting, i.e., (1) Know Your Audience, (2) Identify Your Message, (3) Adapt the Figure to the Support Medium, (4) Captions Are Not Optional, (5) Do Not Trust the Defaults, (6) Use Color Effectively, (7) Do Not Mislead the Reader, (8) Avoid Chartjunk, (9) Message Trumps Beauty, and (10) Get the Right Tool. Among which, the article provides an example in **Avoid Chartjunk** section, to show what is “Chartjunk” and how to improve it: 

@@ -1,13 +1,13 @@
 ---
-layout: single
-title:  Color Spaces
-date: 2023-01-03 22:33:31 +0800
+title: Color Spaces
 categories: 
  - MATLAB
- - Graphic Design and Typography
+ - Design
 tags:
  - MATLAB Graphics
  - MATLAB Image Processing Toolbox
+date: 2023-01-03 22:33:31 +0800
+last_modified_at: 2024-08-04 23:26:15 +0800
 ---
 
 # Introduction

@@ -905,6 +905,7 @@ sur-/super- (over, above)
 - bandit: e.g. clean bandit.
 - bay
 - beholder: The beholder of something is the person who is looking at it.
+- bystander
 
 ## C
 
@@ -914,11 +915,15 @@ sur-/super- (over, above)
 - competitor
 - [console](https://www.ldoceonline.com/dictionary/console)
 - consult, consultation
+- crabs
 
 ## D
 
 - devastate, devastated, devastating
 - [desalination](https://www.ldoceonline.com/dictionary/desalination)
+- [desert](https://www.ldoceonline.com/dictionary/desert) /ˈdezət/ 
+- [dessert](https://www.ldoceonline.com/dictionary/dessert) /dɪˈzɜːt/
+- deteriorate, deteriorating
 - [detrimental](https://www.ldoceonline.com/dictionary/detrimental): e.g. the detrimental effect of pollution on the environment
 - [diploma](https://www.ldoceonline.com/dictionary/diploma)
 - [diplomat](https://www.ldoceonline.com/dictionary/diplomat), diplomatic
@@ -926,12 +931,14 @@ sur-/super- (over, above)
 
 ## E
 
-- ensuing
+- [ensuing](https://www.ldoceonline.com/dictionary/ensuing)
 - endure
 - energize
 - entrant
+- escalator
 - [evacuate](https://www.ldoceonline.com/dictionary/evacuate)
 - exotic: exotic country
+- extradition: e.g. extradition bill.
 
 ## F
 
@@ -944,17 +951,20 @@ sur-/super- (over, above)
 ## I
 
 - inadvertent, [inadvertently](https://www.ldoceonline.com/dictionary/inadvertently): inadvertent operation
+- [incident](https://www.ldoceonline.com/dictionary/incident)
 - inherit
-- intrigued
+- [intrigued](https://www.ldoceonline.com/dictionary/intrigued)
 
 ## J
 
-- janitor
+- [janitor](https://www.ldoceonline.com/dictionary/janitor)
 
 ## L
 
 - lottery
 - loom
+- lunatic
+- lush: e.g. lush green lawns.
 
 ## M
 
@@ -992,9 +1002,11 @@ sur-/super- (over, above)
 - [sediment](https://www.ldoceonline.com/dictionary/sediment)
 - sentiment, sentimental
 - secure
+- shrimp
+- spit
 - [stagger](https://www.collinsdictionary.com/dictionary/english/stagger)
   
-- staggering: Something that is staggering is very surprising.
+- staggering: something that is staggering is very surprising.
 - strive
 - stroll
 - stuffed

@@ -4,7 +4,7 @@ categories:
  - Psychology
  - Collections
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-08-03 16:41:28 +0800
+last_modified_at: 2024-08-04 22:59:41 +0800
 ---
 
 ## Illusory superiority
@@ -12,6 +12,7 @@ last_modified_at: 2024-08-03 16:41:28 +0800
 > [Illusory superiority](https://en.wikipedia.org/wiki/Illusory_superiority)
 >
 > - The term "illusory superiority" was first used by the researchers Van Yperen and Buunk, in 1991.
+> - [Can names shape facial appearance? \| PNAS](https://www.pnas.org/doi/10.1073/pnas.2405334121).
 
 In social psychology, illusory superiority is a cognitive bias wherein people overestimate their own qualities and abilities compared to others. Illusory superiority is one of many positive illusions, relating to the self, that are evident in the study of intelligence, the effective performance of tasks and tests, and the possession of desirable personal characteristics and personality traits. Overestimation of abilities compared to an objective measure is known as the overconfidence effect.
 
@@ -24,7 +25,7 @@ The phenomenon is also known as the *above-average effect*, the *superiority bia
 > [Dunning–Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect)
 >
 > - It was first described by Justin Kruger and David Dunning in 1999.
-> - [With some knowledge comes great confidence (and negative attitudes toward science) \| Nature Human Behaviour](https://www.nature.com/articles/s41562-023-01678-7?utm_medium=organic_social&utm_source=wechat&utm_campaign=CONR_NAJRN_ATT1_AP_CNCM_002E6_nfh) ([“一瓶子不响，半瓶子咣当”，知识水平中等时，过度自信达到顶峰 \| 《自然-人类行为》](https://mp.weixin.qq.com/s/qBUixYC7PBt3btQSjxKmSw))
+> - [With some knowledge comes great confidence (and negative attitudes toward science) \| Nature Human Behaviour](https://www.nature.com/articles/s41562-023-01678-7?utm_medium=organic_social&utm_source=wechat&utm_campaign=CONR_NAJRN_ATT1_AP_CNCM_002E6_nfh).
 
 The Dunning–Kruger effect is a cognitive bias in which people with limited competence in a particular domain overestimate their abilities. Some researchers also include the opposite effect for high performers: their tendency to underestimate their skills. In popular culture, the Dunning–Kruger effect is often misunderstood as a claim about general overconfidence of people with low intelligence instead of specific overconfidence of people unskilled at a particular task.
 

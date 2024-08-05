@@ -3,9 +3,9 @@ title: Some Resources about Science Drawing
 toc: false
 categories:
  - Collections
- - Graphic Design and Typography
+ - Design
 date: 2024-07-17 11:54:03 +0800
-last_modified_at: 2024-07-17 11:54:03 +0800
+last_modified_at: 2024-08-04 23:31:25 +0800
 ---
 
 **Books**

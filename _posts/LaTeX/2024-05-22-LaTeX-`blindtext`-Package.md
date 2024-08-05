@@ -1,17 +1,12 @@
 ---
-layout: single
 title: "LaTeX `blindtext` Package: Generate Dummy Text (\"Blind\" Text)"
 categories:
- - Graphic Design and Typography
+ - Design
  - LaTeX
 tags:
  - LaTeX Page Settings
-drafted_at: 2024-05-09 19:31:45 +0800
 date: 2024-05-22 22:26:44 +0800
-last_modified_at0: 2024-05-22 22:26:44 +0800
-last_modified_at1: 2024-05-27 21:36:07 +0800
-last_modified_at2: 2024-05-31 18:39:58 +0800
-last_modified_at: 2024-05-31 18:39:58 +0800
+last_modified_at: 2024-08-04 23:29:41 +0800
 ---
 
 # Introduction

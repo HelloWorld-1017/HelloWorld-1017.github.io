@@ -1,12 +1,11 @@
 ---
-layout: single
 title: Display the Background Grid while Drawing Graphics by LaTeX TikZ
-date: 2023-09-23 16:09:23 +0800
 categories: 
  - LaTeX
- - Graphic Design and Typography
 tags:
  - LaTeX TikZ
+date: 2023-09-23 16:09:23 +0800
+last_modified_at: 2024-08-04 23:27:53 +0800
 ---
 
 While using LaTeX TikZ to draw diagrams, users maybe confused with determining the coordinate of each object. A background grid of drawing area could visually help user draw the figure.

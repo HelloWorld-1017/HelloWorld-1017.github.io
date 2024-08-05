@@ -1,23 +1,14 @@
 ---
-layout: single
 title: From LaTeX `lipsum` Package to Cicero's *de Finibus Bonorum et Malorum* (*On the ends of good and evil*) and *Cato Maior de Senectute* (*Cato the Elder on Old Age*)
 categories:
  - LaTeX
- - Graphic Design and Typography
+ - Design
  - Psychology
  - Philosophy
 tags:
  - LaTeX Page Settings
-drafted_at: 2024-05-09 16:15:13 +0800
 date: 2024-05-11 22:05:01 +0800
-last_modified_at0: 2024-05-11 22:05:01 +0800
-last_modified_at1: 2024-05-14 02:21:31 +0800
-last_modified_at2: 2024-05-21 20:37:41 +0800
-last_modified_at3: 2024-05-25 09:51:42 +0800
-last_modified_at4: 2024-05-27 21:36:38 +0800
-last_modified_at5: 2024-05-31 18:40:29 +0800
-last_modified_at6: 2024-06-14 14:15:04 +0800
-last_modified_at: 2024-06-14 14:15:04 +0800
+last_modified_at: 2024-08-04 23:29:17 +0800
 ---
 
 # LaTeX `lipsum` package

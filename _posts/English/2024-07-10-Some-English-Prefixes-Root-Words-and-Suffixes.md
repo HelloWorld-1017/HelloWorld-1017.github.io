@@ -927,6 +927,7 @@ sur-/super- (over, above)
 - [detrimental](https://www.ldoceonline.com/dictionary/detrimental): e.g. the detrimental effect of pollution on the environment
 - [diploma](https://www.ldoceonline.com/dictionary/diploma)
 - [diplomat](https://www.ldoceonline.com/dictionary/diplomat), diplomatic
+- [downtown](https://www.ldoceonline.com/dictionary/downtown)
 - [duly](https://www.collinsdictionary.com/dictionary/english/duly)
 
 ## E
@@ -943,10 +944,16 @@ sur-/super- (over, above)
 ## F
 
 - fate, fateful
+- fidelity
 - fiscal
 - flattering: making someone look or seem better or more attractive than usual, e.g. a flattering photograph.
 - forsake: to leave someone forever, especially when they need you, e.g. Do not forsake me!
 - freak: e.g. I’m a freak.
+
+## H
+
+- hangout
+- [headquarters](https://www.ldoceonline.com/dictionary/headquarters)
 
 ## I
 
@@ -968,6 +975,7 @@ sur-/super- (over, above)
 
 ## M
 
+- massacre: e.g. The Boston Massacre.
 - mattresses
 - moral
 
@@ -978,6 +986,7 @@ sur-/super- (over, above)
 ## O
 
 - oftentimes
+- oppress
 
 ## P
 

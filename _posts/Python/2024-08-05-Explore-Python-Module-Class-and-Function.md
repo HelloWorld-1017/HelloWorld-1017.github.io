@@ -4,7 +4,7 @@ categories:
  - Python
 tags:
  - Native Python
- - Python Numpy
+ - Python NumPy
  - Python PyTorch
 date: 2024-08-05 16:41:24 +0800
 last_modified_at: 2024-08-05 16:41:24 +0800

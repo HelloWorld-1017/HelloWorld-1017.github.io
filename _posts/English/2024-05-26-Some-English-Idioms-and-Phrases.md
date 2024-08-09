@@ -3,7 +3,7 @@ title: Some English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-08-01 21:30:56 +0800
+last_modified_at: 2024-08-09 10:51:30 +0800
 ---
 
 # A
@@ -553,6 +553,18 @@ used to say that you will do something in the future but not now; used to tell s
 - I'm sorry but I'm busy on Saturday - can I ***take a rain check***?
 - The warning voice could go ***take a rain check***, she thought.
 - Mind if I ***take a rain check on*** that drink? I have to work late tonight.
+
+<br>
+
+## take it or leave it
+
+> take it or leave it
+>
+> - [TAKE IT OR LEAVE IT definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/take-it-or-leave-it).
+
+If you say to someone ' take it or leave it', you are telling them that they can accept something or not accept it, but that you are not prepared to discuss any other alternatives.
+
+- A 72-hour week, 12 hours a day, six days a week, take it or leave it. 
 
 <br>
 

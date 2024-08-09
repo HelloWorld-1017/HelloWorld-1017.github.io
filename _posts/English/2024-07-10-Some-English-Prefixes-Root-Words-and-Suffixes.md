@@ -913,6 +913,7 @@ sur-/super- (over, above)
 - capacity
 - [cardio](https://www.ldoceonline.com/dictionary/cardio)
 - competitor
+- confer
 - [console](https://www.ldoceonline.com/dictionary/console)
 - consult, consultation
 - crabs

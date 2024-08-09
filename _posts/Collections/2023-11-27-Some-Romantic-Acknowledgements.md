@@ -4,7 +4,7 @@ toc: false
 categories:
  - Collections
 date: 2023-11-27 23:56:05 +0800
-last_modified_at: 2024-06-19 19:10:08 +0800
+last_modified_at: 2024-08-07 15:35:27 +0800
 ---
 
 ***Computer vision: models, learning and inference* by Simon J. D. Prince.**
@@ -87,3 +87,18 @@ who asked me to write it
 
 </div>
 
+<br>
+
+***Python Crash Course: A Hands-on, Project-based Introduction to Programming (Second Edition)* by Eric Matthes.**
+
+<div class="quote--center" markdown="1">
+
+For my father, who always made time to
+
+answer my questions about programming,
+
+and for Ever, who is just beginning to ask me
+
+his questions
+
+</div>

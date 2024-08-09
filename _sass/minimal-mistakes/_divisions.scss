@@ -31,10 +31,24 @@
     vertical-align: top;
 }
 
-.quote--lyrics {
+
+:root {
+    --lyrics-color: $DodgerBlue;
+    --poem-color: black;
+}
+
+.quote--lyrics,
+.quote--poem {
     width: 100%;
-    margin: auto auto;
+    margin: auto;
     text-align: center;
     padding-bottom: 0.5em;
-    color: $DodgerBlue4;
+}
+
+.quote--lyrics {
+    color: var(--lyrics-color);
+}
+
+.quote--poem {
+    color: var(--poem-color);
 }

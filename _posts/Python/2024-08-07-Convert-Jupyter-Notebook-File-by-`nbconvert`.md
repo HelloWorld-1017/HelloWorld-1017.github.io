@@ -9,7 +9,7 @@ tags:
  - Markdown
  - Jekyll
 date: 2024-08-07 16:54:21 +0800
-last_modified_at: 2024-08-07 16:54:21 +0800
+last_modified_at: 2024-08-09 16:57:13 +0800
 ---
 
 ## Introduction
@@ -18,7 +18,7 @@ Python `nbconvert` tool is to convert Jupyter Notebook file, i.e. `.ipynb` file,
 
 `nbconvert` provides users two ways to realize conversion, “using as a command line tool”[^2] and “using `nbconvert` as a library” (i.e. import `nbconvert` in a `.py` file)[^3]. The former is more straightforward to me, so I only test those commands in the documentation[^2].
 
-I create an example file named `notebook.ipynb` in advance, and use following commands to make corresponding conversion. Here are results. 
+I create an example file [`notebook.ipynb`](https://github.com/HelloWorld-1017/HelloWorld-1017.github.io-post-attachments/blob/main/2024/2024-08-07%20Convert%20Jupyter%20Notebook%20File%20by%20%60nbconvert%60/notebook.ipynb) in advance, and use following commands to make corresponding conversion. Here are results. 
 
 <br>
 
@@ -36,11 +36,11 @@ jupyter nbconvert --to html --embed-images notebook.ipynb
 
 and corresponding generated HTML webpages are (I’ve uploaded them into my website folder):
 
-- Default style: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_default.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_default.html).
-- `--template lab` (the same as default setting): [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_lab.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_lab.html).
-- `--template classic`: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_classic.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_classic.html).
-- `--template basic`: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_basic.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_basic.html).
-- `--embed-images`: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_embed-images.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_embed-images.html).
+- Default style: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_default.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_default.html) (312 KB).
+- `--template lab` (the same as default setting): [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_lab.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_lab.html) (312 KB).
+- `--template classic`: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_classic.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_classic.html) (319 KB).
+- `--template basic`: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_basic.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_basic.html) (40 KB).
+- `--embed-images`: [http://helloworld-1017.github.io/webpages/2024-08-07/notebook\_embed-images.html](http://helloworld-1017.github.io/webpages/2024-08-07/notebook_embed-images.html) (312 KB).
 
 <br>
 
@@ -52,7 +52,7 @@ Convert to Markdown file by:
 jupyter nbconvert --to markdown notebook.ipynb
 ```
 
-after it, a `notebook.md` file and a subfolder `notebook_files` appear in the current folder. Attached image files are stored in `notebook_files` (in this case there’s only one image, i.e. `notebook_2_0.svg`), and the generated Markdown file `notebook.md` looks very normative, showing as follows:
+after it, a `notebook.md` file and a subfolder `notebook_files` appear in the current folder. Attached image files are stored in `notebook_files` (in this case there’s only one image, i.e. [`notebook_2_0.svg`](https://github.com/HelloWorld-1017/HelloWorld-1017.github.io-post-attachments/blob/main/2024/2024-08-07%20Convert%20Jupyter%20Notebook%20File%20by%20%60nbconvert%60/notebook_files/notebook_2_0.svg)), and the generated Markdown file `notebook.md` looks very normative, showing as follows:
 
 ````markdown
 ```python

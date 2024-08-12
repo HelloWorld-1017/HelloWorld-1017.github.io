@@ -1,13 +1,14 @@
 ---
-title: Color Spaces
+title: Color Spaces in MATLAB
 categories: 
  - MATLAB
  - Design
 tags:
  - MATLAB Graphics
  - MATLAB Image Processing Toolbox
+ - Computer Vision
 date: 2023-01-03 22:33:31 +0800
-last_modified_at: 2024-08-04 23:26:15 +0800
+last_modified_at: 2024-08-11 16:32:23 +0800
 ---
 
 # Introduction
@@ -18,11 +19,15 @@ last_modified_at: 2024-08-04 23:26:15 +0800
 
 <br>
 
-# `rgb2gray` Function in MALTAB 
+# `rgb2gray` function in MALTAB 
 
-MATLAB提供了将RGB图像转化为灰度图像的函数：[rgb2gray](https://ww2.mathworks.cn/help/matlab/ref/rgb2gray.html)，并且`rgb2gray` 的官方文档将上述转化的过程描述为：
+MATLAB提供了将RGB图像转化为灰度图像的函数`rgb2gray`[^1]：
 
-> `rgb2gray` function converts RGB images to grayscale by **eliminating the hue (色调) and saturation (饱和度) information while retaining the luminance (亮度)**. 
+<div class="quote--left" markdown="1">
+
+`rgb2gray` function converts RGB images to grayscale by **eliminating the hue (色调) and saturation (饱和度) information while retaining the luminance (亮度)**. 
+
+</div>
 
 尽管没有办法完全理解这段话，但是不影响使用这个简单的函数，下面就简单尝试了官方文档提供的两个示例。
 
@@ -49,7 +54,7 @@ imshow(I)
 
 图片转换前后的变量类型和size：
 
-```matlab
+```
 >> whos
   Name        Size                Bytes  Class    Attributes
   I         384x512              196608  uint8              
@@ -66,7 +71,7 @@ imshow(I)
 
 此时，workspace中有两个变量`X`，`map`，分别表示indxed image，和colormap：
 
-```matlab
+```
 >> whos
   Name        Size              Bytes  Class     Attributes
 
@@ -98,44 +103,68 @@ colorbar
 
 ## Conversion formula
 
-MATLAB的`rgb2gray`的转化算法是：
+MATLAB的`rgb2gray`的转化算法是[^1]：
 
-![image-20230103103235677](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103103235677.png?raw=true)
+<div class="quote--left" markdown="1">
+`rgb2gray` converts RGB values to grayscale values by forming a weighted sum of the $R$, $G$, and $B$ components:
+$$
+0.298936021293775 * R + 0.587043074451121 * G + 0.114020904255103 * B\notag
+$$
 
-并且说明了：
+The coefficients used to calculate grayscale values in `rgb2gray` are identical to those used to calculate luminance (E'y) in Rec.ITU-R BT.601-7[^2] after rounding to 3 decimal places. Rec.ITU-R BT.601-7 calculates E'y using this formula:
 
-- These are the same weights used by the [`rgb2ntsc`](https://ww2.mathworks.cn/help/images/ref/rgb2ntsc.html) (Image Processing Toolbox) function to compute the Y component.
-- The coefficients used to calculate grayscale values in `rgb2gray` are identical to those used to calculate luminance (E'y) in Rec.ITU-R BT.601-7 [2] after rounding to 3 decimal places.
+$$
+0.299 * R + 0.587 * G + 0.114 * B\notag
+$$
 
-Rec.ITU-R BT.601-7是ITU-R(Radiocommunication Sector of International Telecommunication Union)所发布的一项关于Broadcasting service (television)的标准； `rgb2ntsc`是MATLAB是Image Processing Toolbox的一个函数。
+</div>
 
-下文简要介绍一下MATLAB的`rgb2ntsc`函数。
+Rec.ITU-R BT.601-7是ITU-R（Radiocommunication Sector of International Telecommunication Union）所发布的一项关于Broadcasting service (television)的标准。
 
 <br>
 
-# `rgb2ntsc` Function in MATLAB (YIQ color space)
+# `rgb2ntsc` function in MATLAB (YIQ color space)
 
-MATLAB的`rgb2ntsc`函数的官方文档：[rgb2ntsc - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2ntsc.html)
-
-`rgb2ntsc`函数的作用是：Convert RGB color values to NTSC color space，其基本语法是：
+`rgb2ntsc`函数[^6]的作用是：Convert RGB color values to NTSC color space，其基本语法是：
 
 ```matlab
 YIQ = rgb2ntsc(RGB)
 ```
 
-即：converts the red, green, and blue values of an RGB image to luminance (*Y*) and chrominance (*I* and *Q*) values of an NTSC image.
+<div class="quote--left" markdown="1">
+`YIQ = rgb2ntsc(RGB)` converts the red, green, and blue values of an RGB image to luminance (*Y*) and chrominance (*I* and *Q*) values of an NTSC image.
 
-转换算法为：
+...
 
-![image-20230103112911461](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103112911461.png?raw=true)
+In the NTSC color space, the luminance is the grayscale signal used to display pictures on monochrome (black and white) televisions. The other components carry the hue and saturation information. The value `0` corresponds to the absence of the component, while the value `1` corresponds to full saturation of the component.
 
-> In the NTSC color space, the luminance is the grayscale signal used to display pictures on monochrome (black and white) televisions. The other components carry the hue and saturation information. The value `0` corresponds to the absence of the component, while the value `1` corresponds to full saturation of the component.
+`rgb2ntsc` defines the NTSC components using
+
+$$
+\begin{bmatrix}
+Y\\I\\Q
+\end{bmatrix}=
+\begin{bmatrix}
+0.299 & 0.587 & 0.114\\
+0.596 & -0.274 & -0.322\\
+0.211 & -0.523 & 0.312\\
+\end{bmatrix}
+\begin{bmatrix}
+R\\G\\B
+\end{bmatrix}\notag
+$$
+
+</div>
 
 对于`rgb2ntsc`函数而言，它的输出（即Converted YIQ color values）和输入的size保持一致，其含义分别为：
+
+<div class="quote--left" markdown="1">
 
 - *Y*: **Luma**, or **brightness of the image**. Values are in the range [0, 1], where 0 specifies black and 1 specifies white. Colors increase in brightness as *Y* increases.
 - *I*: **In-phase**, which is approximately the amount of **<u>blue</u>** or **<u>orange</u>** tones in the image. *I* in the range [-0.5959, 0.5959], where negative numbers indicate blue tones and positive numbers indicate orange tones. As the magnitude of *I* increases, the saturation of the color increases.
 - *Q*: **Quadrature**, which is approximately the amount of **<u>green</u>** or **<u>purple</u>** tones in the image. *Q* in the range [-0.5229, 0.5229], where negative numbers indicate green tones and positive numbers indicate purple tones. As the magnitude of *Q* increases, the saturation of the color increases.
+
+</div>
 
 仍然使用官方示例进行展示。
 
@@ -178,46 +207,111 @@ title('Luminance in YIQ Color Space');
 
 ![image-20230103120210328](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103120210328.png?raw=true)
 
-```matlab
+```
 >> mean(double(rgb2gray(RGB))/255-YIQ(:, :, 1), "all")
 ans =
    6.7028e-06
 ```
 
-可以看到，`rgb2gray`的输出值在[0, 255]之间，而`rgb2ntsc`每一个分量的输出值在[0,1]之间，两者统一到同一标准下是几乎相同的。这也验证了两个转换公式的一致性。
+可以看到，`rgb2gray`的输出值在[0, 255]之间，而`rgb2ntsc`每一个分量的输出值在[0,1]之间，两者统一到同一标准下是几乎相同的，这也验证了两个转换公式的一致性[^7]。
 
-> ![image-20230103223026662](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103223026662.png?raw=true)
->
-> [Understanding Color Spaces and Color Space Conversion - MATLAB & Simulink - MathWorks China](https://ww2.mathworks.cn/help/images/understanding-color-spaces-and-color-space-conversion.html#mw_7bb4a637-62c8-4e41-8376-785c243782a7)
+<div class="quote--left" markdown="1">
+
+The RGB color space represents images as an *m*-by-*n*-by-3 numeric array whose elements specify the intensity values of the red, green, and blue color channels. The range of numeric values depends on the data type of the image.
+
+- For `single` or `double` arrays, RGB values range from [0, 1].
+- For `uint8` arrays, RGB values range from [0, 255].
+- For `uint16` arrays, RGB values range from [0, 65535].
+
+</div>
 
 <br>
 
-# Various Color Spaces
+# Various color spaces
 
 `rgb2ntsc`函数的官方文档提到了两个概念：NTSC(Natioanl Television System Committee) color space和YIQ color space (valuses)，从表述来看，两者似乎是一致的。但我查找了一些资料，发现和文档所述有所冲突。
 
-[NTSC Color Space](https://www.saji8k.com/displays/color-space/ntsc-1953/#:~:text=NTSC Color Space The NTSC Color Space is,in modern displays%2C it is commonly used to)就认为NTSC Color Space代表1953年引入的一种RGB color space，它的色域(color gamut)比sRGB宽得多；Wikipedia词条[YIQ - Wikipedia](https://en.wikipedia.org/wiki/YIQ#NTSC_1953_colorimetry)中的这段描述：
+NTSC Color Space[^8]就认为NTSC Color Space代表1953年引入的一种RGB color space，它的色域(color gamut)比sRGB宽得多。维基百科词条YIQ中的这段描述[^14]：
 
-![image-20230103124105887](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103124105887.png?raw=true)
+<div class="quote--left" markdown="1">
 
-也认为RGB就是original 1953 color NTSC specification，他们都不认为NTSC color space和YIQ是一致的。综上，我个人是倾向于认为NTSC Color Space这个表述很宽泛，就是指NTSC这个组织所规定的色彩空间，并且在不同的场合所指代的色彩空间是不一样的。
+**NTSC 1953 colorimetry**
 
-除此之外，其他色彩空间也存在这样的问题。比如[Wikipedia的YUV color model词条](https://en.wikipedia.org/wiki/YUV)中提到的：
+These formulas approximate the conversion between the original 1953 color NTSC specification and YIQ.
 
-![image-20230103214804335](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103214804335.png?raw=true)
+**From RGB to YIQ**:
+
+$$
+\begin{bmatrix}
+Y\\I\\Q
+\end{bmatrix}\approx
+\begin{bmatrix}
+0.299 & 0.587 & 0.114\\
+0.5959 & -0.2746 & -0.3213\\
+0.2115 & -0.5227 & 0.3112\\
+\end{bmatrix}
+\begin{bmatrix}
+R\\G\\B
+\end{bmatrix}\notag
+$$
+
+**From YIQ to RGB**:
+
+$$
+\begin{bmatrix}
+R\\G\\B
+\end{bmatrix}\approx
+\begin{bmatrix}
+1 & 0.956 & 0.619\\
+1 & -0.272 & -0.647\\
+1 & -1.106 & 1.703\\
+\end{bmatrix}
+\begin{bmatrix}
+Y\\I\\Q
+\end{bmatrix}\notag
+$$
+
+Note that the top row is identical to that of the YUV color space
+
+$$
+\begin{bmatrix}
+R\\G\\B
+\end{bmatrix}=
+\begin{bmatrix}
+1\\1\\1
+\end{bmatrix}\Rightarrow
+\begin{bmatrix}
+Y\\I\\Q
+\end{bmatrix}=
+\begin{bmatrix}
+1\\0\\0
+\end{bmatrix}\notag
+$$
+
+</div>
+
+也认为RGB就是original 1953 color NTSC specification，他们都不认为NTSC color space和YIQ是一致的。综上，我个人是倾向于认为NTSC Color Space这个表述很宽泛，就是指NTSC这个组织所规定的色彩空间，并且在不同的场合所指代的色彩空间是不一样的。除此之外，其他色彩空间也存在这样的问题：
+
+<div class="quote--left" markdown="1">
+
+The scope of the terms Y′UV, YUV, YCbCr, YPbPr, etc., is sometimes ambiguous and overlapping.[^13]
+
+</div>
 
 <br>
 
-# Supported Color Spaces in MATLAB
+# Supported color spaces in MATLAB
 
-MATLAB的Image Processing Toolbox单独撰写了一个专题，讲解工具箱所支持的色彩空间以及不同色彩空间之间的转换：[Understanding Color Spaces and Color Space Conversion - MathWorks](https://ww2.mathworks.cn/help/images/understanding-color-spaces-and-color-space-conversion.html)。
+MATLAB的Image Processing Toolbox单独撰写了一个专题，讲解工具箱所支持的色彩空间以及不同色彩空间之间的转换[^9].
+
+<div class="quote--left" markdown="1">
 
 **(1) RGB**
 
 The RGB color space represents images as an *m*-by-*n*-by-3 numeric array whose elements specify the intensity values of the red, green, and blue color channels. The range of numeric values depends on the data type of the image.
 
 - **Linear RGB**:  Linear RGB values are raw data obtained from a camera sensor. The value of R, G, and B are directly proportional to the amount of light that illuminates the sensor. Preprocessing of raw image data, such as white balance, color balance, and chromatic aberration compensation, are performed on linear RGB values.
-- **sRGB**: sRGB values apply a nonlinear function, called [gamma correction](https://ww2.mathworks.cn/help/images/gamma-correction.html), to linear RGB values. Images are frequently displayed in the sRGB color space because they appear brighter and colors are easier to distinguish.
+- **sRGB**: sRGB values apply a nonlinear function, called gamma correction, to linear RGB values. Images are frequently displayed in the sRGB color space because they appear brighter and colors are easier to distinguish.
 - **Adobe RGB (1998)**：  Adobe RGB (1998) RGB values apply gamma correction to linear RGB values using a simple power function.
 
 **(2) HSV**
@@ -230,55 +324,62 @@ The HSV (Hue, Saturation, Value) color space corresponds better to how people ex
 
 ![image-20230103131746724](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103131746724.png?raw=true)
 
-**(3) Deviced-independent Color Spaces** ([Device-Independent Color Spaces  - MathWorks](https://ww2.mathworks.cn/help/images/device-independent-color-spaces.html))
+**(3) Deviced-independent Color Spaces**[^5]
 
 **CIE 1976 XYZ** and **CIE 1976 L\*a\*b\*** are device-independent color spaces developed by the International Commission on Illumination, known by the acronym CIE. These color spaces model colors according to the typical sensitivity of the three types of cone cells in the human eye.
 
-- The XYZ color space is the original model developed by the CIE. The *Y* channel represents the luminance of a color. The *Z* channel approximately relates to the amount of blue in an image, but the value of *Z* in the XYZ color space is not identical to the value of B in the RGB color space. The *X* channel does not have a clear color analogy. However, if you consider the XYZ color space as a 3-D coordinate system, then *X* values lie along the axis that is orthogonal to the *Y* (luminance) axis and the *Z* axis.
+- The XYZ color space is the original model developed by the CIE. The *Y* channel represents the luminance of a color. The *Z* channel approximately relates to the amount of blue in an image, but the value of *Z* in the XYZ color space is not identical to the value of B in the RGB color space. The *X* channel does not have a clear color analogy. However, if you consider the XYZ color space as a 3-D coordinate system, then *X* values lie along the axis that is orthogonal to the *Y* (luminance) axis and the *Z* axis.[^10]
 
-  [rgn2xyz - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2xyz.html).
+- The L\*a\*b\* color space provides a more perceptually uniform color space than the XYZ model. **Colors in the L\*a\*b\* color space can exist outside the RGB gamut (the valid set of RGB colors)**. For example, when you convert the L\*a\*b\* value [100, 100, 100] to the RGB color space, the returned value is [1.7682, 0.5746, 0.1940], which is not a valid RGB color. For more information, see [Determine If L\*a\*b\* Value Is in RGB Gamut](https://ww2.mathworks.cn/help/images/use-color-space-conversion-to-handle-out-of-gamut-colors.html).[^11]
 
-- The L\*a\*b\* color space provides a more perceptually uniform color space than the XYZ model. **Colors in the L\*a\*b\* color space can exist outside the RGB gamut (the valid set of RGB colors)**. For example, when you convert the L\*a\*b\* value [100, 100, 100] to the RGB color space, the returned value is [1.7682, 0.5746, 0.1940], which is not a valid RGB color. For more information, see [Determine If L\*a\*b\* Value Is in RGB Gamut](https://ww2.mathworks.cn/help/images/use-color-space-conversion-to-handle-out-of-gamut-colors.html).
 
-  [rgb2lab - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2lab.html).
-  {: .notice--primay}
-
-**(4) YCbCr**
+**(4) YCbCr**[^4]
 
 The YCbCr color space is widely used for digital video. In this format, luminance information is stored as a single component (*Y*) and chrominance information is stored as two color-difference components (*Cb* and *Cr*). Cb and Cr represent the difference between a reference value and the blue or red component, respectively. 
 
-[rgb2ycbcr - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2ycbcr.html).
-{: .notice--primary}
-
-**YUV, another color space widely used for digital video, is very similar to YCbCr but not identical.**
-{: .notice--warning}
+**YUV, another color space widely used for digital video, is very similar to YCbCr but not identical.**
 
 **(5) YIQ**
 
 The National Television Systems Committee (NTSC) defines a color space known as YIQ. This color space is used in televisions in the United States. This color space separates grayscale information from color data, so the same signal can be used for both color and black and white television sets.
 
+</div>
+
 <br>
 
-# Why Use Diffenret Color Spaces?
+# Why use different color spaces?
 
-不同色彩空间之间也可以进行转换，比如说上面提到的各种的转换函数，有些甚至就是简单的线性转换，那为什么还要引入这么多的色彩空间呢？这是因为不同的色彩空间的用处不同，可能某种色彩空间在某些应用场景下就非常有优势，比如MATLAB文档中提到的计算方便、理解直观等优势：
+不同色彩空间之间也可以进行转换，比如说上面提到的各种的转换函数，有些甚至就是简单的线性转换，那为什么还要引入这么多的色彩空间呢？这是因为不同的色彩空间的用处不同，可能某种色彩空间在某些应用场景下就非常有优势，比如MATLAB文档中提到的计算方便、理解直观等优势。
 
-- because they present color information in ways that make certain calculations more convenient
-- or because they provide a way to identify colors that is more intuitive. For example, the RGB color space defines a color as the percentages of red, green, and blue hues mixed together. Other color models describe colors by their hue (shade of color), saturation (amount of gray or pure color), and luminance (intensity, or overall brightness).
+<div class="quote--left" markdown="1">
 
-再比如[YIQ的Wikipedia词条](https://en.wikipedia.org/wiki/YIQ)中提到的：
+... because they present color information in ways that make certain calculations more convenient
 
-- The YIQ system is intended to take advantage of [**human color-response**](https://en.wikipedia.org/wiki/Color_vision) characteristics. The eye is more sensitive to changes in the orange-blue (I) range than in the purple-green range (Q)—therefore less bandwidth is required for Q than for I.
+... or because they provide a way to identify colors that is more intuitive. For example, the RGB color space defines a color as the percentages of red, green, and blue hues mixed together. Other color models describe colors by their hue (shade of color), saturation (amount of gray or pure color), and luminance (intensity, or overall brightness).
+
+</div>
+
+再比如YIQ的Wikipedia词条[^12]中提到的：
+
+<div class="quote--left" markdown="1">
+
+The YIQ system is intended to take advantage of human color-response characteristics. The eye is more sensitive to changes in the orange-blue (I) range than in the purple-green range (Q)—therefore less bandwidth is required for Q than for I.
+
+</div>
 
 以及YIQ色彩空间在image processing transformations中的优势：
 
-> The YIQ representation is sometimes employed in color [image processing](https://en.wikipedia.org/wiki/Image_processing) transformations. For example, applying a [histogram equalization](https://en.wikipedia.org/wiki/Histogram_equalization) directly to the channels in an RGB image would alter the [color balance](https://en.wikipedia.org/wiki/Color_balance) of the image. Instead, the histogram equalization is applied to the Y channel of the YIQ or YUV representation of the image, which only normalizes the brightness levels of the image.
+<div class="quote--left" markdown="1">
+
+The YIQ representation is sometimes employed in color image processing transformations. For example, applying a histogram equalization directly to the channels in an RGB image would alter the color balance of the image. Instead, the histogram equalization is applied to the Y channel of the YIQ or YUV representation of the image, which only normalizes the brightness levels of the image.
+
+</div>
 
 <br>
 
-# Supplement
+# Something else ...
 
-在学习YIQ色彩空间时，感觉I和Q所代表的的含义——In-phase和Quadrature——陌生但熟悉。找了一下之前学习的文献，发现这两个概念出现在参考 [3] 中。这篇论文将electromagnetic in-phase and quadrature signal data作为训练集训练了一个semi-supervised GAN，实现了end-to-end electromagnetic signal classification。
+在学习YIQ色彩空间时，感觉I和Q所代表的的含义——In-phase和Quadrature——陌生但熟悉。找了一下之前学习的文献，发现这两个概念出现在参考[^3]中。这篇论文将electromagnetic in-phase and quadrature signal data作为训练集训练了一个semi-supervised GAN，实现了end-to-end electromagnetic signal classification。
 
 ![image-20230103222341337](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103222341337.png?raw=true)
 
@@ -288,9 +389,18 @@ The National Television Systems Committee (NTSC) defines a color space known as 
 
 **Reference**
 
-[1] [rgb2gray - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/rgb2gray.html).
-
-[2] [Studio encoding parameters of digital television for standard 4:3 and wide-screen 16:9 aspect ratios (itu.int)](https://extranet.itu.int/brdocsearch/R-REC/R-REC-BT/R-REC-BT.601/R-REC-BT.601-7-201103-I/R-REC-BT.601-7-201103-I!!PDF-E.pdf).
-
-[3] Zhou H, Jiao L, Zheng S, et al. Generative adversarial network-based electromagnetic signal classification: A semi-supervised learning framework[J]. China Communications, 2020, 17(10): 157-169.[https://ieeexplore.ieee.org/abstract/document/9248524](https://ieeexplore.ieee.org/abstract/document/9248524)
+[^1]: [rgb2gray - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/rgb2gray.html).
+[^2]: [Studio encoding parameters of digital television for standard 4:3 and wide-screen 16:9 aspect ratios (itu.int)](https://extranet.itu.int/brdocsearch/R-REC/R-REC-BT/R-REC-BT.601/R-REC-BT.601-7-201103-I/R-REC-BT.601-7-201103-I!!PDF-E.pdf).
+[^3]: Zhou H, Jiao L, Zheng S, et al. Generative adversarial network-based electromagnetic signal classification: A semi-supervised learning framework[J]. China Communications, 2020, 17(10): 157-169, available at: [https://ieeexplore.ieee.org/abstract/document/9248524](https://ieeexplore.ieee.org/abstract/document/9248524).
+[^4]: [rgb2ycbcr - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2ycbcr.html).
+[^5]: [Device-Independent Color Spaces  - MathWorks](https://ww2.mathworks.cn/help/images/device-independent-color-spaces.html).
+[^6]: [rgb2ntsc - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2ntsc.html).
+[^7]: [Understanding Color Spaces and Color Space Conversion: RGB - MathWorks](https://ww2.mathworks.cn/help/images/understanding-color-spaces-and-color-space-conversion.html#mw_7bb4a637-62c8-4e41-8376-785c243782a7).
+[^8]: [NTSC Color Space](https://www.saji8k.com/displays/color-space/ntsc-1953/#:~:text=%EE%80%80NTSC%20Color%20Space%EE%80%81%20The%20%EE%80%80NTSC%20Color%20Space%EE%80%81%20is,in%20modern%20displays%2C%20it%20is%20commonly%20used%20to).
+[^9]: [Understanding Color Spaces and Color Space Conversion - MathWorks](https://ww2.mathworks.cn/help/images/understanding-color-spaces-and-color-space-conversion.html).
+[^10]: [rgn2xyz - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2xyz.html).
+[^11]: [rgb2lab - MathWorks](https://ww2.mathworks.cn/help/images/ref/rgb2lab.html).
+[^12]: [YIQ - Wikipedia](https://en.wikipedia.org/wiki/YIQ).
+[^13]: [Y′UV - Wikipedia](https://en.wikipedia.org/wiki/Y%E2%80%B2UV).
+[^14]: [YIQ: NTSC 1953 colorimetry - Wikipedia](https://en.wikipedia.org/wiki/YIQ#NTSC_1953_colorimetry).
 

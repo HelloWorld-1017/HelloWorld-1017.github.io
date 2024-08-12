@@ -5,13 +5,14 @@ categories:
  - Collections
  - Design
 date: 2024-07-17 11:54:03 +0800
-last_modified_at: 2024-08-04 23:31:25 +0800
+last_modified_at: 2024-08-11 16:52:04 +0800
 ---
 
 **Books**
 
 - [The art of color: the subjective experience and objective rationale of color.](https://www.irenebrination.com/files/johannes-ittens_theartofcolor.pdf), Johannes Itten, 1961.
 - [Data Sketches](https://www.datasketch.es/), Nadieh Bremer and Shirley Wu, 2021.
+- [The None-Designer’s Design Book (Third Edition)](https://misalonweb.org/wp-content/uploads/2020/09/Non-Designers-Design-Book.pdf), Robin Williams.
 
 **Blogs**
 

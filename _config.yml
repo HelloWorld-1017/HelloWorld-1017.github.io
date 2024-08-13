@@ -73,17 +73,6 @@ defaults:
     values:
       layout: single
       classes: wide
-  # _life
-  - scope:
-      path: ""
-      type: life
-    values:
-      layout: single
-      show_date: true
-      date_format: "%Y-%m-%d HH:MM:SS"
-      toc: true
-      toc_sticky: true
-      classes: wide
 
 permalink: /:year-:month-:day/:hour-:minute-:second:output_ext
 paginate_path: /page:num/
@@ -96,12 +85,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-# collections
-collections:
-  life:
-    output: true
-    permalink: /:collection/:year-:month-:day/:hour-:minute-:second:output_ext
 
 # Conversion
 markdown: kramdown

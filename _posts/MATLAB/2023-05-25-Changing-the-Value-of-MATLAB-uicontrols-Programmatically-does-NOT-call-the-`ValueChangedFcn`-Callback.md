@@ -1,12 +1,12 @@
 ---
-layout: single
-title: Changing the Value of MATLAB uicontrols **Programmatically** does NOT call the `ValueChangedFcn` Callback
-date: 2023-05-25 14:20:21 +0800
+title: Changing the Value of MATLAB uicontrols *Programmatically* does NOT call the `ValueChangedFcn` Callback
+toc: false
 categories: 
  - MATLAB
 tags: 
  - MATLAB App Building
-toc: false
+date: 2023-05-25 14:20:21 +0800
+last_modified_at: 2024-08-12 16:25:00 +0800
 ---
 
 今天在调试MATLAB GUI程序时发现了一个关于`ValueChangedFcn`回调函数的调用特性：**使用代码修改UI控件时并不会调用控件的`ValueChangedFcn`回调函数**。

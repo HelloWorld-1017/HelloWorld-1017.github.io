@@ -3,7 +3,7 @@ title: Some Common English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2024-07-22 16:11:15 +0800
+last_modified_at: 2024-08-13 16:16:11 +0800
 ---
 
 # BRING
@@ -174,6 +174,32 @@ to promise
 
 <br>
 
+# HAND
+
+## hand over
+
+> hand over
+>
+> - [HAND OVER definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/hand-over).
+
+If you hand something over to someone, you pass it to them.
+
+- He also ***handed over*** a letter of apology from the Prime Minister.
+- 'I've got his card,' Judith said, ***handing it over***.
+
+When you hand over someone such as a prisoner to someone else, you give the control of and responsibility for them to that other person.
+
+- They would just catch the robbers and ***hand them over*** to the police.
+- This morning the American was formally ***handed over*** to the ambassador.
+
+If you hand over to someone or hand something over to them, you give them the responsibility for dealing with a particular situation or problem.
+
+- The present leaders have to decide whether to stand down and ***hand over*** to a younger generation.
+- I wouldn't dare ***hand*** this project ***over*** to anyone else.
+- They would like to ***hand over*** their financial affairs to another body.
+
+<br>
+
 # LAY and LIE
 
 ## Lay vs. Lie
@@ -312,6 +338,37 @@ to cause someone to experience or do something.
 
 <br>
 
+# SIT
+
+## sit back
+
+> sit back
+>
+> - [SIT BACK definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/sit-back).
+
+If you sit back while something is happening, you relax and do not become involved in it.
+
+- They didn't have to do anything except ***sit back*** and enjoy life.
+- American firms handed over technologies to their partners and then ***sat back*** to enjoy the cash flow.
+
+<br>
+
+# STAND
+
+## stand down
+
+> stand down
+>
+> - [STAND DOWN definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/stand-down).
+
+If someone stands down, they resign from an important job or position, often in order to let someone else take their place.
+
+- Four days later, the despised leader finally ***stood down***, just 17 days after taking office.
+- Profits plunged and he ***stood down*** as chairman last January.
+- The present leaders have to decide whether to ***stand down*** and hand over to a younger generation.
+
+<br>
+
 # TAKE
 
 ## take away
@@ -367,9 +424,6 @@ If someone throws themselves at you, they make it very obvious that they want to
 <div class="notice--primary" markdown="1">
 
 (1) \[countable noun\] A trip is a journey that you make to a particular place.
-
-- We're taking a ***trip*** to Montana. 
-- On Thursday we went out on a day ***trip***.
 
 (2) \[intransitive verb\] If you trip when you are walking, you knock your foot against something and fall or nearly fall.
 

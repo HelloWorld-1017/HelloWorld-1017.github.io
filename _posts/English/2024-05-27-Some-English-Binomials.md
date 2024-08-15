@@ -3,7 +3,7 @@ title: Some English Binomials
 categories:
  - English
 date: 2024-05-27 15:24:32 +0800
-last_modified_at: 2024-07-30 18:44:52 +0800
+last_modified_at: 2024-08-14 15:33:40 +0800
 ---
 
 # What is English binomial?
@@ -97,6 +97,25 @@ refers to the detailed information about a situation
 ## more and more
 
 *(skip over)*
+
+<br>
+
+## nuts and bolts (of something)
+
+> nuts and bolts (of something)
+>
+> - [NUTS AND BOLTS definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/nuts-and-bolts).
+> - [the nuts and bolts of something - LDOCE](https://www.ldoceonline.com/dictionary/the-nuts-and-bolts-of-something).
+
+If you talk about the nuts and bolts of a subject or an activity, you are referring to the detailed practical aspects of it rather than abstract ideas about it.
+
+- He's more concerned about ***the nuts and bolts of*** location work.
+- ***the nuts and bolts of*** government
+- That meant that they could not stand the Central Office youths involved in ***the nuts and bolts of*** the campaign.
+- He did pioneering work in figuring out ***the nuts and bolts of*** sustainability.
+- They're good guys, but I'm not sure how familiar they are with ***the nuts and bolts of*** the banking system.
+
+Synonyms: essentials, basics, fundamentals, nitty-gritty.
 
 <br>
 

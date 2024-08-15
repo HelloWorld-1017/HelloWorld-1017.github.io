@@ -4,9 +4,10 @@ categories:
  - Python
 tags: 
  - Native Python
+ - Data Structure
  - <i>Python Crash Course</i>
 date: 2024-08-13 09:05:43 +0800
-last_modified_at: 2024-08-13 09:05:43 +0800
+last_modified_at: 2024-08-13 20:05:12 +0800
 ---
 
 This post is a record made while learning Chapter 3 “Introducing Lists” and Chapter 4 “ Working with Lists” in Eric Matthes’s book, Python Crash Course.[^1]
@@ -549,9 +550,9 @@ for player in players[:3]:
 
 More ways to slice list can be found in GeeksforGeeks blog[^5].
 
-## Copy a list
+## Copy a list: `[:]`, `copy` method, and equal sign
 
-To copy a list, we can make a slice that includes the entire original list by omitting the first index and the second index (`[:]`), and at this point we have two separate lists:
+To copy a list, we can make a slice that includes the entire original list by omitting the first index and the second index, i.e. `[:]`, and at this point we have two separate lists:
 
 
 ```python
@@ -600,7 +601,7 @@ print(friend_foods)
 
 </div>
 
-If we had simply set `friend_foods` equal to `my_foods`, we would NOT produce two separate lists.
+If we had simply set `friend_foods` equal to `my_foods` by an equal sign, we would NOT produce two separate lists.
 
 <div id="script-1"></div>
 
@@ -936,8 +937,6 @@ I’m not certain which is right, and at this moment I won’t step further abou
 [^1]: [Python Crash Course: A Hands-on, Project-based Introduction to Programming (Second Edition)](https://khwarizmi.org/wp-content/uploads/2021/04/Eric_Matthes_Python_Crash_Course_A_Hands.pdf), Eric Matthes, pp. 33-70.
 [^2]: [Off-by-one error - Wikipedia](https://en.wikipedia.org/wiki/Off-by-one_error).
 [^3]: [Mutable vs Immutable Objects in Python - GeeksforGeeks](https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/).
-
 [^4]: [Difference Between List and Tuple in Python - GeeksforGeeks](https://www.geeksforgeeks.org/python-difference-between-list-and-tuple/).
-
 [^5]: [Python List Slicing - GeeksforGeeks](https://www.geeksforgeeks.org/python-list-slicing/).
 [^6]: [Python - Copy Lists](https://www.w3schools.com/python/python_lists_copy.asp).

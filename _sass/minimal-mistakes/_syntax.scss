@@ -346,12 +346,11 @@ h5>code,
 h6>code,
 td>code,
 strong>code {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  padding: 0.1rem;
   font-size: 0.8em;
   border-radius: 4px;
-  color: $DodgerBlue4; // #D63384; $SteelBlue4
-  background: $WhiteSmoke; // $Seashell; $AliceBlue
+  background: $WhiteSmoke;
+  border: 1px solid #d3dce6;
 }
 
 .rouge-table {

@@ -1,5 +1,5 @@
 ---
-title: "Convert Jupyter Notebook File to HTML, Markdown, and Python Script File by `nbconvert` Tool"
+title: "Convert Jupyter Notebook File to HTML, Markdown, and Python Script File by `jupyter nbconvert`"
 categories:
  - Python
  - Web Development
@@ -9,7 +9,7 @@ tags:
  - Markdown
  - Jekyll
 date: 2024-08-07 16:54:21 +0800
-last_modified_at: 2024-08-09 16:57:13 +0800
+last_modified_at: 2024-08-20 16:25:34 +0800
 ---
 
 ## Introduction

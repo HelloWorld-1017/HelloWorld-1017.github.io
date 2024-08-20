@@ -1,5 +1,5 @@
 ---
-title: "Explore Python Module, Class, and Function by `help` function, `__doc__` attribute, and `dir` function"
+title: "Explore Python Module, Class, and Function by `help` Function, `__doc__` Attribute, and `dir` Function"
 categories:
  - Python
 tags:

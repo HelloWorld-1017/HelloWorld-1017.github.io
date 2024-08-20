@@ -6,7 +6,7 @@ tags:
  - Native Python
  - <i>Python Crash Course</i>
 date: 2024-08-19 15:58:32 +0800
-last_modified_at: 2024-08-20 20:01:00 +0800
+last_modified_at: 2024-08-20 23:17:23 +0800
 ---
 
 This post is a record made while learning Chapter 8 “Functions” in Eric Matthes’s book, Python Crash Course.[^1]
@@ -27,7 +27,7 @@ greet_user()
 
 (1) `def` in `def greet_user():` is a Python keyword.
 
-(2) `def greet_user():` is the *function definition*, where `greet_user()` is the *function name*. This function needs no information to receive, so there is nothing in its parentheses (even so, the parentheses are required). Finally, the definition ends in a colon.
+(2) `def greet_user():` is the <i class="term">function definition</i>, where `greet_user()` is the <i class="term">function name</i>. This function needs no information to receive, so there is nothing in its parentheses (even so, the parentheses are required). Finally, the definition ends in a colon.
 
 <div class="notice--warning" markdown="1">
 
@@ -50,11 +50,11 @@ SyntaxError: expected '('
 
 </div>
 
-(3) Any indented lines that follow `def greet_user():` make up the *body* of the function.
+(3) Any indented lines that follow `def greet_user():` make up the <i class="term">body</i> of the function.
 
-(4) The text `"""Display a simple greeting."""` enclosed in triple quotes is a comment called *docstring*, which describes what the function does.[^2]
+(4) The text `"""Display a simple greeting."""` enclosed in triple quotes is a comment called <i class="term">docstring</i>, which describes what the function does.[^2]
 
-(5) `greet_user()` in the 5th line is a *function call*. A *function call* tells Python to execute the code in the function. To *call* a function, we should write the function name, followed by any necessary information in parentheses. There is no information needed in this case, so we call the function simply by entering `greet_user()`.
+(5) `greet_user()` in the 5th line is a <i class="term">function call</i>. A <i class="term">function call</i> tells Python to execute the code in the function. To <i class="term">call</i> a function, we should write the function name, followed by any necessary information in parentheses. There is no information needed in this case, so we call the function simply by entering `greet_user()`.
 
 Here is a case of passing information to a function:
 
@@ -69,7 +69,7 @@ greet_user('jesse')
 
     Hello, Jesse!
 
-The variable `username` in the function definition (1st line) is a *parameter*, and the value `'jesse'` in the function call (5th line) is an *argument*. An argument is a piece of information that’s passed from a *function call* to a *function*.
+The variable `username` in the function definition (1st line) is a <i class="term">parameter</i>, and the value `'jesse'` in the function call (5th line) is an <i class="term">argument</i>. An argument is a piece of information that’s passed from a <i class="term">function call</i> to a <i class="term">function</i>.
 
 <br>
 
@@ -77,7 +77,7 @@ The variable `username` in the function definition (1st line) is a *parameter*, 
 
 ## Positional arguments
 
-When we call a function, Python must match each argument in the function call with a parameter in the function definition. The simplest way to do this is based on the order of the arguments provided. Values matched up in this way are called *positional arguments*. Definitely, arguments order matters in this case.
+When we call a function, Python must match each argument in the function call with a parameter in the function definition. The simplest way to do this is based on the order of the arguments provided. Values matched up in this way are called <i class="term">positional arguments</i>. Definitely, arguments order matters in this case.
 
 
 ```python
@@ -95,7 +95,7 @@ describe_pet('hamster', 'harry')
 
 ## Keyword arguments
 
-A *keyword argument* is a name-value pair that we pass to a function. Keyword arguments free us from worrying about having to worry about correctly ordering arguments in the function call because Python knows where each value should go.
+A <i class="term">keyword argument</i> is a name-value pair that we pass to a function. Keyword arguments free us from worrying about having to worry about correctly ordering arguments in the function call because Python knows where each value should go.
 
 
 ```python
@@ -113,7 +113,7 @@ describe_pet(pet_name='harry', animal_type='hamster')
 
 ## Specify default values
 
-In the function definition, we can specify a *default value* for each parameter. Using default values can simplify function calls and clarify the ways in which the functions are typically used.
+In the function definition, we can specify a <i class="term">default value</i> for each parameter. Using default values can simplify function calls and clarify the ways in which the functions are typically used.
 
 
 ```python
@@ -228,7 +228,7 @@ greet_users(usernames)
 
 ## Modify a list in a function
 
-We can modify a list by passing it to a defined function, and **any changes made to the list inside the function’s body are *permanent***, like `print_models()` function in the following example:
+We can modify a list by passing it to a defined function, and any changes made to the list inside the function’s body are <i class="term">permanent</i>, like `print_models()` function in the following example:
 
 ```python
 def print_models(unprinted_designs, completed_models):
@@ -270,7 +270,7 @@ print(unprinted_designs)
     The following models have not been printed:
     []
 
-This example also demonstrates the idea that **every function should have one specific job**. This is more beneficial than using one function to do all jobs.
+This example also demonstrates the idea that every function should have one specific job. This is more beneficial than using one function to do all jobs.
 
 ## Prevent a function from modifying a list
 
@@ -315,7 +315,7 @@ print(f"\n{unprinted_designs}")
     
     ['phone case', 'robot pendant', 'dodecahedron']
 
-However, it’s not recommended unless we have a specific reason. **It’s more efficient for a function to work with an existing list to avoid using the time and memory needed to make a separate copy, especially when we’re working with large lists.**
+However, it’s not recommended unless we have a specific reason. It’s more efficient for a function to work with an existing list to avoid using the time and memory needed to make a separate copy, especially when we’re working with large lists.
 
 <br>
 
@@ -336,7 +336,7 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
     ('pepperoni',)
     ('mushrooms', 'green peppers', 'extra cheese')
 
-The asterisk in the parameter name `*toppings` tells Python to make an *empty tuple* called `toppings` and pack whatever values it receives into this tuple. Above results show that Python can handle a function call with one value and a call with three values. It treats different calls similarly. Note that Python packs the arguments into a tuple, even if the function only receives one value.
+The asterisk in the parameter name `*toppings` tells Python to make an <i class="term">empty tuple</i> called `toppings` and pack whatever values it receives into this tuple. Above results show that Python can handle a function call with one value and a call with three values. It treats different calls similarly. Note that Python packs the arguments into a tuple, even if the function only receives one value.
 
 Besides, if we want a function to accept several different kinds of arguments (like mix positional arguments and arbitrary arguments for example), the parameter that accepts an arbitrary number of arguments must be placed last in the function definition. Python matches positional and keyword arguments first and then collects any remaining arguments in the final parameter.
 
@@ -383,7 +383,7 @@ print(user_profile)
 
     {'location': 'princeton', 'field': 'physics', 'first_name': 'albert', 'last_name': 'einstein'}
 
-The double asterisks in the parameter `**user_info` inform Python to create an *empty dictionary* called `user_info` and pack whatever name-value pairs it receives into this dictionary. Within the function, we can access the key-value pairs in `user_info` as other ordinary dictionaries.
+The double asterisks in the parameter `**user_info` inform Python to create an <i class="term">empty dictionary</i> called `user_info` and pack whatever name-value pairs it receives into this dictionary. Within the function, we can access the key-value pairs in `user_info` as other ordinary dictionaries.
 
 Similarly, generic parameter name `**kwargs` is generally used, stating to collect non-specific keyword arguments.
 
@@ -450,7 +450,7 @@ SyntaxError: positional argument follows keyword argument
 
 # Store functions in the module
 
-We can store all self-defined functions in a separate file (called a *module*) and then *import* the module into the main script file by the `import` statement.
+We can store all self-defined functions in a separate file (called a <i class="term">module</i>) and then <i class="term">import</i> the module into the main script file by the `import` statement.
 
 For instance, one function named `make_pizza()` is defined and put in the module `pizza.py`:
 
@@ -483,7 +483,7 @@ pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
     - green peppers
     - extra cheese
 
-The line `import pizza` tells Python to *open* the file `pizza.py` and *copy* all the functions from it into the current script file before running the subsequent code.
+The line `import pizza` tells Python to <i class="term">open</i> the file `pizza.py` and <i class="term">copy</i> all the functions from it into the current script file before running the subsequent code.
 
 ## Import specific functions: `from module_name import function_0, function_1, function_2`
 
@@ -575,13 +575,13 @@ Due to that every function in `pizza` module is imported, we can call each funct
 
 There are several conventions when styling functions and modules.
 
-- Functions and modules should have *descriptive names*, which can help others to understand what the function and module are trying to do.
+- Functions and modules should have <i class="term">descriptive names</i>, which can help others to understand what the function and module are trying to do.
 
-- Function and module names should be composed of *lowercase letters* and *underscores*.
+- Function and module names should be composed of <i class="term">lowercase letters</i> and <i class="term">underscores</i>.
 
-- Every function should have a comment that explains concisely what the function does. This comment should appear immediately after the function definition and use the *docstring* format. In a well-documented function, other programmers can use the function by reading only the description in the docstring.
+- Every function should have a comment that explains concisely what the function does. This comment should appear immediately after the function definition and use the <i class="term">docstring</i> format. In a well-documented function, other programmers can use the function by reading only the description in the docstring.
 
-- When specifying a default value for a parameter, *no spaces* should be used on either side of the equal sign:
+- When specifying a default value for a parameter, <i class="term">no spaces</i> should be used on either side of the equal sign:
 
   ```python
   def function_name(parameter_0, parameter_1='default value')
@@ -593,7 +593,7 @@ There are several conventions when styling functions and modules.
   function_name(value_0, parameter_1='value')
   ```
 
-- PEP 8 recommends that programmers limit lines of code to *79 characters* so every line is visible in a reasonably sized editor window[^3]. If a set of parameters causes a function definition longer than 79 characters, press `[Enter]` after the opening parenthesis on the definition line. On the next line, press `[Tab]` *twice* to separate the list of arguments from the function body, which will only be indented one level.
+- PEP 8 recommends that programmers limit lines of code to <i class="term">79 characters</i> so every line is visible in a reasonably sized editor window[^3]. If a set of parameters causes a function definition longer than 79 characters, press `[Enter]` after the opening parenthesis on the definition line. On the next line, press `[Tab]` <i class="term">twice</i> to separate the list of arguments from the function body, which will only be indented one level.
 
   ```python
   def function_name(
@@ -603,9 +603,9 @@ There are several conventions when styling functions and modules.
       pass
   ```
 
-- If a module has more than one function, we can separate each by *two blank lines* to make it easier to see where one function ends and the next one begins. 
+- If a module has more than one function, we can separate each by <i class="term">two blank lines</i> to make it easier to see where one function ends and the next one begins. 
 
-- All `import` statements should be written *at the beginning of a file*. The only exception is if we write comments at the beginning of the file to describe the overall script.
+- All `import` statements should be written <i class="term">at the beginning of a file</i>. The only exception is if we write comments at the beginning of the file to describe the overall script.
 
 <br>
 

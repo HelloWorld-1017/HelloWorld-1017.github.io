@@ -8,7 +8,7 @@ tags:
  - Native Python
  - <i>Python Crash Course</i>
 date: 2024-05-29 21:22:52 +0800
-last_modified_at: 2024-08-20 20:25:41 +0800
+last_modified_at: 2024-08-21 04:13:18 +0800
 ---
 
 By entering `import this`, we can get “The Zen of Python”[^1][^2] by Tim Peters:
@@ -59,14 +59,14 @@ If two Python programmers are asked to solve the same problem, they  should come
 Now is better than never.
 ```
 
-You could spend the rest of your life learning all the intricacies of Python and of programming in general, but then you’d never complete any projects. *Don’t try to write perfect code*; *write code that works*, and then decide whether to improve your code for that project or move on to something new.[^3]
+You could spend the rest of your life learning all the intricacies of Python and of programming in general, but then you’d never complete any projects. <i class="emphasize">Don’t try to write perfect code</i>; <i class="emphasize">write code that works</i>, and then decide whether to improve your code for that project or move on to something new.[^3]
 
 </div>
 
 <div class="quote--left" markdown="1">
 **Model Real-World Objects**[^4]
 
-... This brings you to an interesting point in your growth as a programmer. When you wrestle with questions like these, you’re thinking at a higher logical level rather than a syntax-focused level. You’re thinking not about Python, but about how to represent the real world in code. When you reach this point, *you’ll realize there are often no right or wrong approaches to modeling real-world situations*. Some approaches are more efficient than others, but it takes practice to find the most efficient representations. *If your code is working as you want it to, you’re doing well!* Don’t be discouraged if you find you’re ripping apart your classes and rewriting them several times using different approaches. In the quest to write accurate, efficient code, everyone goes through this process.
+... This brings you to an interesting point in your growth as a programmer. When you wrestle with questions like these, you’re thinking at a higher logical level rather than a syntax-focused level. You’re thinking not about Python, but about how to represent the real world in code. When you reach this point, <i class="emphasize">you’ll realize there are often no right or wrong approaches to modeling real-world situations</i>. Some approaches are more efficient than others, but it takes practice to find the most efficient representations. <i class="emphasize">If your code is working as you want it to, you’re doing well!</i> Don’t be discouraged if you find you’re ripping apart your classes and rewriting them several times using different approaches. In the quest to write accurate, efficient code, everyone goes through this process.
 
 </div>
 
@@ -74,9 +74,9 @@ You could spend the rest of your life learning all the intricacies of Python and
 
 **Finding Your Own Workflow**[^5]
 
-As you can see, Python gives you many options for how to structure code in a large project. It’s important to know all these possibilities so you can determine the best ways to organize your projects as well as understand  other people’s projects.
+As you can see, Python gives you many options for how to structure code in a large project. It’s important to know all these possibilities so you can determine the best ways to organize your projects as well as understand other people’s projects.
 
-*When you’re starting out, keep your code structure simple.* Try doing everything in one file and moving your classes to separate modules once everything is working. If you like how modules and files interact, try storing your classes in modules when you start a project. *Find an approach that lets you write code that works, and go from there.*
+<i class="emphasize">When you’re starting out, keep your code structure simple.</i> Try doing everything in one file and moving your classes to separate modules once everything is working. If you like how modules and files interact, try storing your classes in modules when you start a project. <i class="emphasize">Find an approach that lets you write code that works, and go from there.</i>
 
 </div>
 

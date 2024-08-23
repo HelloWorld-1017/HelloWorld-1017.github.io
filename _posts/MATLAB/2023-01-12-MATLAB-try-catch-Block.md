@@ -1,6 +1,5 @@
 ---
-layout: single
-title:  MATLAB `try,catch` Block
+title:  MATLAB `try-catch` Block
 date: 2023-01-12 16:12:03 +0800
 categories: 
  - MATLAB
@@ -11,7 +10,7 @@ tags:
 
 # Introduction
 
-在MATLAB中，代码块（[try, catch- MathWorks](https://ww2.mathworks.cn/help/matlab/ref/try.html)）：
+在MATLAB中，`try-catch`块[^1]：
 
 ```matlab
 try
@@ -48,7 +47,7 @@ Error in script1 (line 6)
 C = [A; B];
 ```
 
-如果我们将`C = [A; B];`放入到下面简单的`try/catch`块中：
+如果我们将`C = [A; B];`放入到下面简单的`try-catch`块中：
 
 ```matlab
 try
@@ -79,7 +78,7 @@ ans =
 
 如果我们想要像之前一样在命令行窗口中抛出错误，则可以使用`rethrow`函数：
 
-注：也可以使用`throw`函数，`rethrow`函数和`throw`函数是有一些区别的，具体可以参考：[`throw`: Compare Behavior of `throw` and `rethrow`](https://ww2.mathworks.cn/help/matlab/ref/mexception.throw.html#bud2vjm-4)。
+注：也可以使用`throw`函数，`rethrow`函数和`throw`函数是有一些区别的，具体可以参考[^2]。
 {: .notice--primary}
 
 ```matlab
@@ -166,7 +165,7 @@ ME1.cause{1} =
 
 # Example 2: Repackage Error as Warning
 
-`try/catch`块可以用来将错误repackage为warning。例如在正常情况下，当我们调用一个没有定义的函数`notaFunction`，软件会报错：
+`try-catch`块可以用来将错误repackage为warning。例如在正常情况下，当我们调用一个没有定义的函数`notaFunction`，软件会报错：
 
 ```matlab
 a = notaFunction(5,6);
@@ -202,7 +201,7 @@ end
 
 # Example 3: Handle Different Types of Errors
 
-`try/catch`代码块中`catch`后的`exception`变量是一个`MException`对象，我们可以通过它来识别错误。因此，我们可以使用`try/catch`以不同的方式处理不同类型的错误。例如还是针对上面的例子，我们想要实现：
+`try-catch`代码块中`catch`后的`exception`变量是一个`MException`对象，我们可以通过它来识别错误。因此，我们可以使用`try-catch`以不同的方式处理不同类型的错误。例如还是针对上面的例子，我们想要实现：
 
 - If the function `notaFunction` is undefined, issue a warning instead of an error and assign the output a value of `NaN`.
 - If `notaFunction.m` exists, but is a script instead of a function, issue a warning instead of an error, run the script, and assign the output a value of `0`.
@@ -235,7 +234,7 @@ end
 
 # Example 4: When There Exist No Mistakes
 
-当语句不存在错误时，`try/catch`是捕捉不到任何错误的，并且不会执行`catch`块中的内容。例如运行代码：
+当语句不存在错误时，`try-catch`是捕捉不到任何错误的，并且不会执行`catch`块中的内容。例如运行代码：
 
 ```matlab
 a = 1;
@@ -258,17 +257,7 @@ end
 
 <br>
 
+**References**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+[^1]: [try, catch- MathWorks](https://ww2.mathworks.cn/help/matlab/ref/try.html).
+[^2]: [`throw`: Compare Behavior of `throw` and `rethrow`](https://ww2.mathworks.cn/help/matlab/ref/mexception.throw.html#bud2vjm-4).

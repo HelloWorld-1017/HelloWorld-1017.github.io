@@ -11,6 +11,7 @@ layout: archive
   {% endif %}
 {% endfor %}
 
+<div class="label-panel">
   {% for i in (1..tags_max) reversed %}
     {% for tag in site.tags %}
       {% if tag[1].size == i %}
@@ -20,13 +21,14 @@ layout: archive
       {% endif %}
     {% endfor %}
   {% endfor %}
+</div>
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% for i in (1..tags_max) reversed %}
   {% for tag in site.tags %}
     {% if tag[1].size == i %}
       <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle"><i class="fa fa-tags" aria-hidden="true"></i> {{ tag[0] }} ({{ i }})</h2>
+        <h2 class="archive__subtitle"><i class="fa fa-tags" aria-hidden="true" style="margin-right:0.3em;"></i>{{ tag[0] }} ({{ i }})</h2>
         <div class="entries-{{ entries_layout }}">
           {% for post in tag.last %}
             {% include archive-single.html type=entries_layout %}

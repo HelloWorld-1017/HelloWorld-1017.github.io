@@ -88,6 +88,12 @@ body {
   margin-top: 0;
   line-height: 1.5;
 
+  /* Deactive user selection */
+  -webkit-user-select: none;/* Chrome, Safari, Opera */
+  -moz-user-select: none;/* Firefox */
+  -ms-user-select: none;/* IE 10 and IE 11 */
+  user-select: none;/* Standard syntax */
+
   & + .page__meta {
     margin-top: -0.5em;
   }
@@ -181,6 +187,10 @@ body {
   }
 
   .term {
+    color: $DodgerBlue4;
+  }
+
+  .emphasize {
     color: $DodgerBlue4;
   }
 }

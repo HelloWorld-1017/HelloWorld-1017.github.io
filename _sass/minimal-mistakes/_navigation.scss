@@ -57,6 +57,12 @@
   padding-top: 1em;
   width: 100%;
 
+  /* Deactive user selection */
+  -webkit-user-select: none;/* Chrome, Safari, Opera */
+  -moz-user-select: none;/* Firefox */
+  -ms-user-select: none;/* IE 10 and IE 11 */
+  user-select: none;/* Standard syntax */
+
   ul {
     margin: 0;
     padding: 0;
@@ -509,6 +515,12 @@
   color: $gray;
   background-color: $background-color;
   border-collapse: collapse;
+
+  /* Deactive user selection */
+  -webkit-user-select: none;/* Chrome, Safari, Opera */
+  -moz-user-select: none;/* Firefox */
+  -ms-user-select: none;/* IE 10 and IE 11 */
+  user-select: none;/* Standard syntax */
   
   .nav__title {
     color: black;

@@ -4,18 +4,20 @@ layout: archive_year
 
 {{ content }}
 
-{% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsInYear %}
-  <a class = "btn btn--label" href="#{{ year.name }}"">
-    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ year.name }} ({{ year.items | size }})
-  </a>
-{% endfor %}
+<div class="label-panel">
+  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+  {% for year in postsInYear %}
+    <a class = "btn btn--label" href="#{{ year.name }}"">
+      <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ year.name }} ({{ year.items | size }})
+    </a>
+  {% endfor %}
+</div>
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy__section">
-    <h2 class="archive__subtitle"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ year.name }} ({{ year.items | size }})</h2>
+    <h2 class="archive__subtitle"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true" style="margin-right:0.3em;"></i>{{ year.name }} ({{ year.items | size }})</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items %}
         {% include archive-single.html type=entries_layout %}

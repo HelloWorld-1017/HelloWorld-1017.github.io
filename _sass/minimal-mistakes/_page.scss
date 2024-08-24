@@ -88,15 +88,17 @@ body {
   margin-top: 0;
   line-height: 1.5;
 
+  & + .page__meta {
+    margin-top: -0.5em;
+  }
+}
+
+.page__date {
   /* Deactive user selection */
   -webkit-user-select: none;/* Chrome, Safari, Opera */
   -moz-user-select: none;/* Firefox */
   -ms-user-select: none;/* IE 10 and IE 11 */
   user-select: none;/* Standard syntax */
-
-  & + .page__meta {
-    margin-top: -0.5em;
-  }
 }
 
 .page__lead {
@@ -184,6 +186,16 @@ body {
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
+  }
+
+  u {
+    border-bottom: none;
+    padding-bottom: 2px;
+
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #244FE7;
   }
 
   .term {

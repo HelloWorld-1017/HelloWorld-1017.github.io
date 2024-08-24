@@ -1,11 +1,15 @@
-{% if site.category_archive.type and page.categories[0] %}
-<div style="margin-top:1em;margin-bottom:1em;">
-  {% include category-list.html %}
-</div>
-{% endif %}
-
-{% if site.tag_archive.type and page.tags[0] %}
+<div class="label-panel">
+  {% if site.category_archive.type and page.categories[0] %}
   <div style="margin-top:1em;margin-bottom:1em;">
-    {% include tag-list.html %}
+    {% include category-list.html %}
   </div>
-{% endif %}
+  {% endif %}
+</div>
+
+<div class="label-panel">
+  {% if site.tag_archive.type and page.tags[0] %}
+    <div style="margin-top:1em;margin-bottom:1em;">
+      {% include tag-list.html %}
+    </div>
+  {% endif %}
+</div>

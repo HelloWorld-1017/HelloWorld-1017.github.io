@@ -1,0 +1,34 @@
+#footnotediv {
+	position: absolute;
+	width: 700px;
+	overflow: visible;
+	background-color: whitesmoke;
+	font-size: 0.6em;
+	color: black;
+	padding: 5px 12px;
+	border-radius: 4px;
+}
+
+#footnotediv p {
+	margin: 0;
+	padding: 5px 0;
+}
+
+a.footnotebacklink {
+	border-bottom: none;
+}
+
+a.footnotebacklink img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+sup a {
+	margin: 0;
+	padding: 0 4px 5px 4px;
+}
+
+sup {
+	padding: 0;
+}

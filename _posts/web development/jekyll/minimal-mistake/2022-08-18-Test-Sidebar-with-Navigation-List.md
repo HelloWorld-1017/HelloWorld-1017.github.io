@@ -6,6 +6,7 @@ categories:
  - Web Development
 tags: 
  - Jekyll
+ - Jekyll minimal-mistakes
 sidebar:
   title: "Sample Title"
   nav: sidebar-sample

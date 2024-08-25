@@ -4,6 +4,7 @@ categories:
  - Web Development
 tags: 
  - Jekyll
+ - Jekyll minimal-mistakes
 toc: false
 classes: wide
 header:

@@ -5,6 +5,7 @@ categories:
 tags:
  - Jekyll
  - CSS
+ - Jekyll minimal-mistakes
 date: 2023-10-24 16:15:45 +0800
 last_modified_at: 2024-08-25 18:54:11 +0800
 ---

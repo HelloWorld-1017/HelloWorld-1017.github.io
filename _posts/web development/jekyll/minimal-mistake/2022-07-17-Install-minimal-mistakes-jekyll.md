@@ -5,6 +5,7 @@ categories:
  - Web Development
 tags:
  - Jekyll
+ - Jekyll minimal-mistakes
 date: 2022-07-17 12:25:11 +0800
 last_modified_at: 2024-08-25 18:42:49 +0800
 ---

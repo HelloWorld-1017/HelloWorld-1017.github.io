@@ -5,6 +5,7 @@ categories:
  - Web Development
 tags:
  - Jekyll
+ - Jekyll minimal-mistakes
  - HTML
 
 header:

@@ -5,6 +5,7 @@ categories:
  - Web Development
 tags: 
  - Jekyll
+ - Jekyll minimal-mistakes
 classes: wide
 gallery:
  - url: /images/PeakyBlinders1.jpg

@@ -7,6 +7,7 @@ categories:
  - Windows
 tags:
  - Jekyll
+ - Jekyll minimal-mistakes
  - Regular Expression
  - Data Structure
  - MATLAB Language Fundamentals

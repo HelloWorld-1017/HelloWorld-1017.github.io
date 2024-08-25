@@ -4,6 +4,7 @@ categories:
  - Web Development
 tags:
  - Jekyll
+ - Jekyll minimal-mistakes
  - HTML
  - CSS
 date: 2022-08-12 17:03:13 +0800

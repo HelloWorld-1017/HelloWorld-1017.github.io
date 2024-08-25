@@ -3,6 +3,8 @@ title: Host Font Awesome by CDN or by Local Files
 toc: false
 categories:
  - Web Development
+tags:
+ - CSS
 date: 2024-07-31 16:09:23 +0800
 last_modified_at: 2024-07-31 16:09:23 +0800
 ---

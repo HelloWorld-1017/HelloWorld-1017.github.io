@@ -5,6 +5,7 @@ categories:
  - Web Development
 tags:
  - Jekyll
+ - Jekyll minimal-mistakes
 date: 2024-02-17 19:50:22 +0800
 last_modified_at: 2024-08-25 18:38:49 +0800
 ---
@@ -24,4 +25,3 @@ and the modified:
 ![image-20240217200534956](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202402172005975.png)
 
 <br>
-

@@ -4,6 +4,7 @@ categories:
  - Web Development
 tags:
  - Jekyll
+ - Jekyll minimal-mistakes
  - HTML
  - CSS
  - Bootstrap

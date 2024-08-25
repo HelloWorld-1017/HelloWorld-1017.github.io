@@ -166,7 +166,7 @@ It's okay!
 
 <br>
 
-# References
+**References**
 
 [^1]: [HelloWorld-1017/HelloWorld-1017.github.io: My personal website](https://github.com/HelloWorld-1017/HelloWorld-1017.github.io).
 [^2]: [pages build and deployment · HelloWorld-1017/HelloWorld-1017.github.io@8633359](https://github.com/HelloWorld-1017/HelloWorld-1017.github.io/actions/runs/7868662944/job/21466270928).

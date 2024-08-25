@@ -6,6 +6,7 @@ categories:
  - Web Development
 tags: 
  - Jekyll
+ - Jekyll minimal-mistakes
 sidebar:
   - title: "Title"
     image: "/images/PeakyBlinders1.jpg"

@@ -1,11 +1,11 @@
 ---
-title: Get GitHub Repository Information (in JSON Format) through REST API
+title: Get GitHub Repository Information through REST API (in JSON Format)
 toc: false
 categories:
  - Web Development
  - GitHub
 tags:
- - REST API
+ - API
  - JSON
 date: 2024-06-28 00:19:15 +0800
 last_modified_at: 2024-07-27 21:40:33 +0800

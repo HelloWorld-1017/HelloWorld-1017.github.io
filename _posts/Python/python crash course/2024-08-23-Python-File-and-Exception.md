@@ -8,7 +8,7 @@ tags:
  - JSON
  - Python Warnings and Errors
 date: 2024-08-23 23:28:32 +0800
-last_modified_at: 2024-08-24 20:31:03 +0800
+last_modified_at: 2024-08-25 15:20:47 +0800
 ---
 
 This post is a record made while learning Chapter 10 “Files and Exceptions” in Eric Matthes’s book, Python Crash Course.[^1]
@@ -760,7 +760,7 @@ greet_user()
 **References**
 
 [^1]: [Python Crash Course: A Hands-on, Project-based Introduction to Programming (Second Edition)](https://khwarizmi.org/wp-content/uploads/2021/04/Eric_Matthes_Python_Crash_Course_A_Hands.pdf), Eric Matthes, pp. 183-208.
-[^2]: [Python编程：从入门到实践](https://www.ituring.com.cn/book/1861).
+[^2]: [pcc\_2e/chapter\_10 at master · ehmatthes/pcc\_2e](https://github.com/ehmatthes/pcc_2e/tree/master/chapter_10).
 [^4]: [MATLAB `try-catch` Block - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2023-01-12/16-12-03.html).
 
 [^5]: [json — JSON encoder and decoder — Python 3.12.5 documentation](https://docs.python.org/3/library/json.html).

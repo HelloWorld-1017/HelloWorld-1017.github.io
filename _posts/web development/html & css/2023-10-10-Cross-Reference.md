@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Cross Reference in Markdown Files and Web Pages
 categories:
  - Web Development
@@ -8,13 +7,7 @@ tags:
  - Jekyll
  - Markdown
 date: 2023-10-10 16:37:25 +0800
-last_modified_at: 2024-06-20 12:41:30 +0800
-modification_history:
- - 2023-10-10 16:37:25 +0800
- - 2023-10-31 14:35:52 +0800
- - 2023-11-04 13:31:09 +0800
- - 2024-04-21 16:09:55 +0800
- - 2024-06-20 12:41:30 +0800
+last_modified_at: 2024-08-25 18:37:34 +0800
 ---
 
 # HTML `<div>` element
@@ -204,7 +197,7 @@ The new footnote style is like:
 
 <br>
 
-# References
+**References**
 
 <div id="ref-1"></div>
 [1] [Markdown 添加文献引用 - 别再闹了 - 博客园](https://www.cnblogs.com/jiading/articles/12966059.html).

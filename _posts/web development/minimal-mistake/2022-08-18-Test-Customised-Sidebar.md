@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Test Customised Sidebar in Jekyll-based
+title: "Test Customised Sidebar of Jekyll Theme \"minimal-mistakes\""
 toc: false
 classes: wide
 categories:
@@ -16,10 +15,7 @@ sidebar:
     text: "More text here."
     nav: sidebar-sample
 date: 2022-08-18 12:42:07 +0800
-last_modified_at: 2024-06-20 12:26:55 +0800
-modification_history:
- - 2022-08-18 12:42:07 +0800
- - 2024-06-20 12:26:55 +0800
+last_modified_at: 2024-08-25 18:35:26 +0800
 ---
 
 在 YAML Front Matter 中写入：
@@ -39,6 +35,6 @@ sidebar:
 
 <br>
 
-# References
+**References**
 
 [1] [https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/](https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/)

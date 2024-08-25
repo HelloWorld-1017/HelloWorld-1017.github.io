@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Test Header Overlay with Background Fill in Jekyll-based Website
+title: "Test Header Overlay with Background Fill of Jekyll Theme \"minimal-mistakes\""
 toc: false
 classes: wide
 tagline: 十六进制颜色填充
@@ -11,10 +10,7 @@ categories:
 tags:
  - Jekyll
 date: 2022-08-13 16:32:41 +0800
-last_modified_at: 2024-06-20 12:25:48 +0800
-modification_history:
- - 2022-08-13 16:32:41 +0800
- - 2024-06-20 12:25:48 +0800
+last_modified_at: 2024-08-25 18:35:01 +0800
 ---
 
 在 YAML Front Matter 中写入：
@@ -28,6 +24,6 @@ header:
 
 <br>
 
-# References
+**References**
 
 [1] [https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-color/](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-color/).

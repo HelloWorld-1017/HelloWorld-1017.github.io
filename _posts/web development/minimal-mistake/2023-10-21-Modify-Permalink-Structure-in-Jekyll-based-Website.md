@@ -1,16 +1,12 @@
 ---
-layout: single
-title: Modify Permalink Structure in Jekyll-based Website
+title: "Modify Permalink Structure of Jekyll Theme \"minimal-mistakes\""
 toc: false
 categories:
  - Web Development
 tags:
  - Jekyll
 date: 2023-10-21 19:27:36 +0800
-last_modified_at: 2024-06-20 12:42:47 +0800
-modification_history:
- - 2023-10-21 19:27:36 +0800
- - 2024-06-20 12:42:47 +0800
+last_modified_at: 2024-08-25 18:38:06 +0800
 ---
 
 My blog website is based on a Jekyll theme `minimal-mistake` [[1]](#ref). Under default settings, the permalink of a blog page is composite of `categories` key and the file name of corresponding `.md` file. For example, if I write a `.md` file named `2023-10-21-This-is-a-Test-File-(md-file-Name).md`, and whose content is:
@@ -92,7 +88,7 @@ not bad anyway ~
 
 <div id="ref"></div>
 
-# References
+**References**
 
 [1] [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes).
 

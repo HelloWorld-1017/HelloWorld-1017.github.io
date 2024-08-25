@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Realize Multiple Figure Layout in Web Pages using HTML `<figure>` Element
 categories:
  - Web Development
@@ -7,11 +6,7 @@ tags:
  - HTML
  - Markdown
 date: 2022-08-24 10:07:19 +0800
-last_modified_at: 2024-06-20 12:30:52 +0800
-modification_history:
- - 2022-08-24 10:07:19 +0800
- - 2024-04-21 16:13:04 +0800
- - 2024-06-20 12:30:52 +0800
+last_modified_at: 2024-08-25 18:36:34 +0800
 ---
 
 # 引用 COS 图像
@@ -96,6 +91,6 @@ https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-202
 </figure>
 <br>
 
-# References
+**References**
 
 [1] [Markup: Another Post with Images - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/markup-more-images/).

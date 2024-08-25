@@ -1,19 +1,13 @@
 ---
-layout: single
 title: "Test `notice` Division of Jekyll Theme \"minimal-mistakes\"" 
 categories:
  - Web Development
-tags: 
+tags:
  - Jekyll
  - HTML
  - CSS
 date: 2022-08-12 17:03:13 +0800
-last_modified_at: 2024-06-20 10:49:57 +0800
-modification_history:
- - 2022-08-12 17:03:13 +0800
- - 2023-11-16 09:55:06 +0800
- - 2024-06-05 21:44:07 +0800
- - 2024-06-20 10:49:57 +0800
+last_modified_at: 2024-08-25 18:33:39 +0800
 ---
 
 # Introduction
@@ -322,7 +316,7 @@ To my mind, this method is a more obvious way and by which the footnote works no
 
 <br>
 
-# References
+**References**
 
 - [Markup: HTML Tags and Formatting - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/#top).
 - [Layout: Post with Sticky Table of Contents - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/layout-table-of-contents-sticky/).

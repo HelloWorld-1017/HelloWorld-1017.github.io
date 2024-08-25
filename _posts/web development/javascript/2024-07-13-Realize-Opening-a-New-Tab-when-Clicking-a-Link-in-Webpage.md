@@ -6,10 +6,8 @@ categories:
 tags:
  - JavaScript
 date: 2024-07-13 18:36:02 +0800
-last_modified_at: 2024-07-13 18:36:02 +0800
+last_modified_at: 2024-08-25 18:26:35 +0800
 ---
-
-As shown in post title. Take Jekyll theme [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), we can add following JavaScript code in the file [`..\_layouts\single.html`](https://github.com/mmistakes/minimal-mistakes/blob/master/_layouts/single.html#L4):
 
 ```html
 <head>

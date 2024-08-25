@@ -1,11 +1,10 @@
 ---
-layout: single
-title: Test Gallery in Jekyll-based Website
+title: "Test Gallery of Jekyll Theme \"minimal-mistakes\""
+toc: false
 categories:
  - Web Development
 tags: 
  - Jekyll
-toc: false
 classes: wide
 gallery:
  - url: /images/PeakyBlinders1.jpg
@@ -25,13 +24,8 @@ gallery:
    alt: "placeholder image 4"
    title: "Peaky Blinders 4"
 date: 2022-08-12 20:16:09 +0800
-last_modified_at: 2024-06-20 12:20:49 +0800
-modification_history:
- - 2022-08-12 20:16:09 +0800
- - 2024-06-20 12:20:49 +0800
+last_modified_at: 2024-08-25 18:31:50 +0800
 ---
-
-<br>
 
 在 YAML Front Matter 中写入：
 
@@ -97,6 +91,6 @@ gallery:
 
 <br>
 
-# References
+**References**
 
 [1] [Post: Gallery - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/post formats/post-gallery/)

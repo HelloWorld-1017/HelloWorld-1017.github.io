@@ -1,16 +1,12 @@
 ---
-layout: single
-title: Install the Minimal-mistakes-jekyll Theme in GitHub Pages
+title: "Install the Jekyll Theme \"minimal-mistakes\" in GitHub Pages"
 categories: 
  - GitHub
  - Web Development
 tags:
  - Jekyll
 date: 2022-07-17 12:25:11 +0800
-last_modified_at: 2024-06-20 12:18:37 +0800
-modification_history:
- - 2022-07-17 12:25:11 +0800
- - 2024-06-20 12:18:37 +0800
+last_modified_at: 2024-08-25 18:42:49 +0800
 ---
 
 # Minimal-mistakes-jekyll theme installation
@@ -245,7 +241,7 @@ Lazy Ren也指出这种方式可能存在风险：
 
 ![image-20230417095125144](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230417095125144.png?raw=true)
 
-原先avatar是和文字是左端对齐的。
+原本avatar是和文字是左端对齐的。
 
 <br>
 

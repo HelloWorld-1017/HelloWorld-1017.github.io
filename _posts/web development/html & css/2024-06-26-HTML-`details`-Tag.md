@@ -6,9 +6,7 @@ tags:
  - HTML
  - CSS
 date: 2024-06-26 14:28:32 +0800
-last_modified_at: 2024-06-26 14:28:32 +0800
-modification_history:
- - 2024-06-26 14:28:32 +0800
+last_modified_at: 2024-08-25 18:51:33 +0800
 ---
 
 # Basic syntax
@@ -67,7 +65,7 @@ as a result we have:
 
 <br>
 
-# References
+**References**
 
 [^1]: [HTML details Tag](https://www.w3schools.com/tags/tag_details.asp).
 

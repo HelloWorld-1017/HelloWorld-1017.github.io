@@ -1,5 +1,5 @@
 ---
-title: Working with Collections in Jekyll-based Website
+title: "Test Working with Collections of Jekyll Theme \"minimal-mistakes\""
 toc: false
 classes: wide
 categories: 
@@ -7,7 +7,7 @@ categories:
 tags:
  - Jekyll
 date: 2022-08-21 13:25:23 +0800
-last_modified_at: 2024-07-12 12:33:18 +0800
+last_modified_at: 2024-08-25 18:36:21 +0800
 ---
 
 （1）在 `_config.yml`文件 中配置名为portfolio的collection
@@ -94,7 +94,7 @@ title: Portfolio3
 
 <br>
 
-# References
+**References**
 
 [1] [Working with Collections - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/docs/collections/).
 

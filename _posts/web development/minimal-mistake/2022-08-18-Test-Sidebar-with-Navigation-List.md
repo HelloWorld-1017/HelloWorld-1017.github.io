@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Test Sidebar with Navigation List in Jekyll-based Website
+title: "Test Sidebar with Navigation List of Jekyll Theme \"minimal-mistakes\""
 toc: false
 classes: wide
 categories:
@@ -11,10 +10,7 @@ sidebar:
   title: "Sample Title"
   nav: sidebar-sample
 date: 2022-08-18 11:36:13 +0800
-last_modified_at: 2024-06-20 12:27:40 +0800
-modification_history:
- - 2022-08-18 11:36:13 +0800
- - 2024-06-20 12:27:40 +0800
+last_modified_at: 2024-08-25 18:35:51 +0800
 ---
 
 首先在根目录的 `_data/navigation.yml` 文件中写入：
@@ -73,6 +69,6 @@ sidebar:
 
 <br>
 
-# References
+**References**
 
 [1] [Layout: Sidebar with Navigation List - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/layout-sidebar-nav-list/).

@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Test External Video Links and Header Video in Jekyll-based Website
+title: "Test External Video Links and Header Video of Jekyll Theme \"minimal-mistakes\""
 categories: 
  - Web Development
 tags:
@@ -12,13 +11,8 @@ header:
     provider: bilibili
 classes: wide
 date: 2022-08-12 13:44:15 +0800
-last_modified_at: 2024-06-20 12:19:34 +0800
-modification_history:
- - 2022-08-12 13:44:15 +0800
- - 2024-06-20 12:19:34 +0800
+last_modified_at: 2024-08-25 18:31:04 +0800
 ---
-
-<br>
 
 # 使用 YAML 嵌入 Header Video
 
@@ -53,7 +47,7 @@ header:
 
 <br>
 
-# References
+**References**
 
 [1] [Layout: Header Video - Minimal Mistakes (mmistakes.github.io)](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-video/).
 

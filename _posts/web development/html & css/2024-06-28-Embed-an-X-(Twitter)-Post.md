@@ -7,9 +7,7 @@ tags:
  - HTML
  - JavaScript
 date: 2024-06-28 09:28:31 +0800
-last_modified_at: 2024-06-28 09:28:31 +0800
-modification_history:
- - 2024-06-28 09:28:31 +0800
+last_modified_at: 2024-08-25 18:51:22 +0800
 ---
 
 To embed an X (Twitter) post in personal blog or website by external link, we can copy the post link and then paste it in website ‘Twitter Publish’[^1] to get a HTML code snippet. Take a post by Elon Musk, paste its link [https://x.com/elonmusk/status/1805804111037919520](https://x.com/elonmusk/status/1805804111037919520) to ‘Twitter Publish’[^1]. Next, if choose ‘Embedded Video’ style, we can get HTML code:
@@ -38,6 +36,6 @@ As can be seen, in the rendering process a JavaScript file named `widgets.js` is
 
 <br>
 
-# References
+**References**
 
 [^1]: [Twitter Publish](https://publish.twitter.com/#).

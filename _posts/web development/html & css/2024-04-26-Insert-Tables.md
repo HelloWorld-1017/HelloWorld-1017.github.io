@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Insert Tables in Jekyll Website
 toc: false
 categories:
@@ -11,12 +10,8 @@ tags:
  - HTML
  - CSS
  - Jekyll
-drafted_at: 2024-04-23 21:24:55 +0800
 date: 2024-04-26 11:31:06 +0800
-last_modified_at: 2024-06-20 10:53:24 +0800
-modification_history:
- - 2024-04-26 11:31:06 +0800
- - 2024-06-20 10:53:24 +0800
+last_modified_at: 2024-08-25 18:39:23 +0800
 ---
 
 For the website built based on Jekyll, if we insert a table in `.md` source file, static website generator Jekyll will render it into an HTML table while deploying. For example, a table created by Markdown syntax: 
@@ -172,7 +167,7 @@ Another one is that this kind of table can't be automatically adjusted as webpag
 
 <br>
 
-# References
+**References**
 
 [^1]: [What a starry night~](https://helloworld-1017.github.io/).
 [^2]: [mmistakes/minimal-mistakes: Jekyll theme for building a personal site, blog, project documentation, or portfolio.](https://github.com/mmistakes/minimal-mistakes)

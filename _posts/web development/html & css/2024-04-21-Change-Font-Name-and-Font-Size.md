@@ -1,18 +1,12 @@
 ---
-layout: single
 title: Specify Typeface and Font Size in Markdown Files and Web Pages by HTML `<font>` Tag
 categories:
  - Web Development
 tags:
  - HTML
  - Jekyll
-drafted_at: 2024-04-19 23:33:17 +0800
 date: 2024-04-21 15:39:18 +0800
-last_modified_at: 2024-06-20 12:49:18 +0800
-modification_history:
- - 2024-04-21 15:39:18 +0800
- - 2024-06-16 03:11:51 +0800
- - 2024-06-20 12:49:18 +0800
+last_modified_at: 2024-08-25 18:39:14 +0800
 ---
 
 # Introduction

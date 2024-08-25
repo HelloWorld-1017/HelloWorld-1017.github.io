@@ -1,5 +1,4 @@
 ---
-layout: single
 title: An Error when Deploying Website based on GitHub-Pages Jekyll Theme
 toc: false
 categories:
@@ -7,11 +6,7 @@ categories:
 tags:
  - Jekyll
 date: 2024-02-12 16:25:03 +0800
-last_modified_at: 2024-06-20 12:45:24 +0800
-modification_history:
- - 2024-02-12 16:25:03 +0800
- - 2024-04-22 20:51:56 +0800
- - 2024-06-20 12:45:24 +0800
+last_modified_at: 2024-08-25 18:38:41 +0800
 ---
 
 Recently, I try to commit changes to my repository, **HelloWorld-1017/HelloWorld-1017.github.io: My personal website** [^1], to update my GitHub-Pages based website just as usual. However, I failed to deploy it times and times again:

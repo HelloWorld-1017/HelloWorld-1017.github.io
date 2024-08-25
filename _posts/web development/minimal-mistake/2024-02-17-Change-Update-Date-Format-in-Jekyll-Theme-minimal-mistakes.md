@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Change \"Update Date\" Format in Jekyll Theme \"minimal-mistakes\"
 toc: false
 categories:
@@ -7,10 +6,7 @@ categories:
 tags:
  - Jekyll
 date: 2024-02-17 19:50:22 +0800
-last_modified_at: 2024-06-20 12:46:27 +0800
-modification_history:
- - 2024-02-17 19:50:22 +0800
- - 2024-06-20 12:46:27 +0800
+last_modified_at: 2024-08-25 18:38:49 +0800
 ---
 
 For Jekyll theme “minimal-mistakes”, users could change “update date” format by modifying the `.\_includes\page__date.html` file:

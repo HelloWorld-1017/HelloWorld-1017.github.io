@@ -7,13 +7,8 @@ tags:
  - HTML
  - CSS
  - Bootstrap
-drafted_at: 2024-06-19 15:20:44 +0800
 date: 2024-06-20 16:40:13 +0800
-last_modified_at: 2024-07-07 15:36:35 +0800
-modification_history:
- - 2024-06-20 16:40:13 +0800
- - 2024-06-20 18:19:00 +0800
- - 2024-07-07 15:36:35 +0800
+last_modified_at: 2024-08-25 18:50:18 +0800
 ---
 
 # CSS button classes in Jekyll theme "minimal-mistakes"

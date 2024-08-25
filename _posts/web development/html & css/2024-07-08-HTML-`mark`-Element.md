@@ -6,11 +6,8 @@ categories:
 tags:
  - HTML
  - Markdown
-drafted_at: 2024-07-07 21:00:37 +0800
 date: 2024-07-08 10:09:07 +0800
-last_modified_at: 2024-07-08 10:09:07 +0800
-modification_history:
- - 2024-07-08 10:09:07 +0800
+last_modified_at: 2024-08-25 18:49:30 +0800
 ---
 
 In Markdown files, we can use markup `==` to wrap text to highlight the content. However, Jekyll (at least for Markdown renderer kramdown[^1][^2] which my website use) doesn’t support converting this markup syntax to the HTML element for highlighting, for example:
@@ -57,7 +54,7 @@ Of course, the same effect can be achieved by CSS style:
 
 <br>
 
-# References
+**References**
 
 [^1]: [Markdown Options \| Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/configuration/markdown/).
 [^2]: [Home \| kramdown](https://kramdown.gettalong.org/).

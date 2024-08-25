@@ -1,5 +1,4 @@
 ---
-layout: single
 title: "Style a New Skin of Jekyll Theme \"minimal-mistakes\""
 categories:
  - Web Development
@@ -7,11 +6,7 @@ tags:
  - Jekyll
  - CSS
 date: 2023-10-24 16:15:45 +0800
-last_modified_at: 2024-06-20 10:51:43 +0800
-modification_history:
- - 2023-10-24 16:15:45 +0800
- - 2023-11-14 19:44:26 +0800
- - 2024-06-20 10:51:43 +0800
+last_modified_at: 2024-08-25 18:54:11 +0800
 ---
 
 # Introduction
@@ -139,7 +134,7 @@ The detailed information could be found in references [^4] and [^5].
 
 <br>
 
-# References
+**References**
 
 [^1]: [mmistakes/minimal-mistakes - GitHub](https://github.com/mmistakes/minimal-mistakes). 
 [^2]: [mmistakes/minimal-mistakes: Skins (color variations) - GitHub](https://github.com/mmistakes/minimal-mistakes).

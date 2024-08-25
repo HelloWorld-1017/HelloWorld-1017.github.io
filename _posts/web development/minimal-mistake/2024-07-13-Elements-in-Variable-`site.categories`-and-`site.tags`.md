@@ -5,7 +5,7 @@ categories:
 tags:
  - Jekyll
 date: 2024-07-13 15:59:18 +0800
-last_modified_at: 2024-07-16 16:08:10 +0800
+last_modified_at: 2024-08-25 18:48:29 +0800
 ---
 
 # `site.categories` elements
@@ -97,9 +97,8 @@ last_modified_at: 2024-07-16 16:08:10 +0800
     {% endfor %}
   {% endfor %}
 </ol>
-
 <br>
 
-# References
+**References**
 
 [1] [minimal-mistakes/\_includes/posts-taxonomy.html at master · mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/posts-taxonomy.html).

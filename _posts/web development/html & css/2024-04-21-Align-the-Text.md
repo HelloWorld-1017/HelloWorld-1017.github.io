@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Align the Text in Markdown Files and Web Pages
 toc: false
 categories:
@@ -8,10 +7,7 @@ tags:
  - HTML
  - Markdown
 date: 2024-04-21 19:08:48 +0800
-last_modified_at: 2024-06-20 12:55:03 +0800
-modification_history:
- - 2024-04-21 19:08:48 +0800
- - 2024-06-20 12:55:03 +0800
+last_modified_at: 2024-08-25 18:50:03 +0800
 ---
 
 In Markdown files and web page, we can use `<p>` element and its `style` attribute to realize aligning the text, center, left, and right. For example, 
@@ -148,7 +144,7 @@ by John Donne <br>
 
 <br>
 
-# References
+**References**
 
 [1] [html段落居中命令-掘金](https://juejin.cn/s/html%E6%AE%B5%E8%90%BD%E5%B1%85%E4%B8%AD%E5%91%BD%E4%BB%A4).
 

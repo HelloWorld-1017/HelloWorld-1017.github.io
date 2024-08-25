@@ -1,17 +1,12 @@
 ---
-layout: single
-title:  Install Jekyll for Windows
+title:  Install Jekyll on Windows
 toc: false
 categories:
  - Web Development
 tags: 
  - Jekyll
 date: 2023-01-03 09:55:32 +0800
-last_modified_at: 2024-06-20 12:38:50 +0800
-modification_history:
- - 2023-01-03 09:55:32 +0800
- - 2024-02-12 12:02:05 +0800
- - 2024-06-20 12:38:50 +0800
+last_modified_at: 2024-08-25 18:52:02 +0800
 ---
 
 前两天我给现在使用的这台笔记本电脑换了一块固态硬盘，重装了系统，电脑上的Jekyll也没有了，没有办法在本地预览Github pages上的内容，因此需要重装一下Jekyll，本博客就简单记录一下安装的过程。主要的流程参考了博客 [^1]。
@@ -91,6 +86,6 @@ Configuration file: C:/Users/Tsing/Desktop/QinghuaMa.github.io/_config.yml
 
 <br>
 
-# Reference
+**Reference**
 
 [^1]: [Windows 系统上安装 Jekyll（简单详细教程） - pergrand - 博客园](https://www.cnblogs.com/pergrand/p/12875597.html).

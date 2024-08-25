@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Colorize Text in Markdown Files and Web Pages
 categories:
  - Web Development
@@ -8,12 +7,7 @@ tags:
  - HTML
  - Markdown
 date: 2023-04-20 10:49:37 +0800
-last_modified_at: 2024-06-20 12:56:20 +0800
-modification_history:
- - 2023-04-20 10:49:37 +0800
- - 2024-02-25 00:12:53 +0800
- - 2024-04-21 16:06:40 +0800
- - 2024-06-20 12:56:20 +0800
+last_modified_at: 2024-08-25 18:37:23 +0800
 ---
 
 # Color text in `.md` files and HTML
@@ -60,7 +54,7 @@ $$
 
 <br>
 
-# References
+**References**
 
 [^1]: [HTML 颜色名](https://www.w3school.com.cn/tags/html_ref_colornames.asp).
 [^2]: [LaTeX知识分享: 如何设置字体颜色 - 知乎](https://zhuanlan.zhihu.com/p/426780029).

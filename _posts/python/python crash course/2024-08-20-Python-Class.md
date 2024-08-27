@@ -1,5 +1,5 @@
 ---
-title: Python Class
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Class"
 categories:
  - Python
 tags:

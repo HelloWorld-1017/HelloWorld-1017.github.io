@@ -1,5 +1,5 @@
 ---
-title: Read and Write Files, and Handle Exceptions in Python
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Read and Write Files, and Handle Exceptions in Python"
 categories:
  - Python
 tags:

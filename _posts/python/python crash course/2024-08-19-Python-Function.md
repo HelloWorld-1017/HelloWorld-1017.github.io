@@ -1,5 +1,5 @@
 ---
-title: Python Function
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Function"
 categories:
  - Python
 tags:

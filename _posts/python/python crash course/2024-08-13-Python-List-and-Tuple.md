@@ -1,5 +1,5 @@
 ---
-title: Python List and Tuple
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python List and Tuple"
 categories:
  - Python
 tags: 

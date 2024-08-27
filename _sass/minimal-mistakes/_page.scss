@@ -191,7 +191,6 @@ body {
   u {
     border-bottom: none;
     padding-bottom: 2px;
-
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 2px;
@@ -199,7 +198,11 @@ body {
   }
 
   .term {
-    color: $DodgerBlue4;
+    color: #D63384;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $Seashell4;
   }
 
   .emphasize {

@@ -1,5 +1,5 @@
 ---
-title: Python Dictionary
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Dictionary"
 categories:
  - Python
 tags:

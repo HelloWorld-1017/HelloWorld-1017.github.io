@@ -1,5 +1,5 @@
 ---
-title: Python `input` Function and `while` Loop
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python `input` Function and `while` Loop"
 categories:
  - Python
 tags: 

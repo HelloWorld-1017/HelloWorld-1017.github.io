@@ -1,5 +1,5 @@
 ---
-title: Python `if` Statements
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python `if` Statements"
 categories:
  - Python
 tags:

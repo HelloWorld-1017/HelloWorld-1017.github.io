@@ -1,5 +1,5 @@
 ---
-title: "Python Variable Types: string, integer, float, and constant"
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Variable Types: string, integer, float, and constant"
 categories:
  - Python
 tags:

@@ -4,7 +4,7 @@ categories:
  - GitHub
 tags:
  - JSON
- - API
+ - GitHub API
 date: 2024-07-28 16:03:22 +0800
 last_modified_at: 2024-07-28 16:03:22 +0800
 ---

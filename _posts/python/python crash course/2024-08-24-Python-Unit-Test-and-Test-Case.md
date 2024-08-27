@@ -1,5 +1,5 @@
 ---
-title: Python Unit Test and Test Case by `unittest` Module
+title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Unit Test and Test Case by `unittest` Module"
 categories:
  - Python
 tags:

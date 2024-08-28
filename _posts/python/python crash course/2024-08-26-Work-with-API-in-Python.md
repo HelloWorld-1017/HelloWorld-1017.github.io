@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Work with API in Python"
+title: "Takeaways from <i>Python Crash Course</i>: Work with API in Python"
 categories:
  - Python
  - Web Development
@@ -15,7 +15,7 @@ date: 2024-08-26 22:00:40 +0800
 last_modified_at: 2024-08-28 05:36:58 +0800
 ---
 
-This post is a record made while learning Chapter 17 “Working with APIs” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 17 “Working with APIs” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Web API

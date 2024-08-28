@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Plotly"
+title: "Takeaways from <i>Python Crash Course</i>: Python Plotly"
 categories:
  - Python
  - Web Development
@@ -15,7 +15,7 @@ date: 2024-08-26 16:32:26 +0800
 last_modified_at: 2024-08-28 03:39:09 +0800
 ---
 
-This post is a record made while learning Chapter 15 “Generating Data” and Chapter 16 “Downloading Data” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 15 “Generating Data” and Chapter 16 “Downloading Data” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Introduction

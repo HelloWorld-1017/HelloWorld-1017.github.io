@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Unit Test and Test Case by `unittest` Module"
+title: "Takeaways from <i>Python Crash Course</i>: Python Unit Test and Test Case by `unittest` Module"
 categories:
  - Python
 tags:
@@ -11,7 +11,7 @@ date: 2024-08-24 16:42:33 +0800
 last_modified_at: 2024-08-24 21:51:18 +0800
 ---
 
-This post is a record made while learning Chapter 11 “Testing Your Code” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 11 “Testing Your Code” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Test a function

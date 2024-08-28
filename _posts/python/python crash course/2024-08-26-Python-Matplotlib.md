@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Matplotlib"
+title: "Takeaways from <i>Python Crash Course</i>: Python Matplotlib"
 categories:
  - Python
  - Time Series Analysis
@@ -17,7 +17,7 @@ date: 2024-08-26 14:46:32 +0800
 last_modified_at: 2024-08-27 05:22:09 +0800
 ---
 
-This post is a record made while learning Chapter 15 “Generating Data” and Chapter 16 “Downloading Data” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 15 “Generating Data” and Chapter 16 “Downloading Data” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Python Matplotlib

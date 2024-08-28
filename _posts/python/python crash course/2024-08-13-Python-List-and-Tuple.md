@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python List and Tuple"
+title: "Takeaways from <i>Python Crash Course</i>: Python List and Tuple"
 categories:
  - Python
 tags: 
@@ -10,7 +10,7 @@ date: 2024-08-13 09:05:43 +0800
 last_modified_at: 2024-08-13 20:05:12 +0800
 ---
 
-This post is a record made while learning Chapter 3 “Introducing Lists” and Chapter 4 “ Working with Lists” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 3 “Introducing Lists” and Chapter 4 “ Working with Lists” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # List

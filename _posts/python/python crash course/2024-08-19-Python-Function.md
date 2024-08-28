@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Function"
+title: "Takeaways from <i>Python Crash Course</i>: Python Function"
 categories:
  - Python
 tags:
@@ -9,7 +9,7 @@ date: 2024-08-19 15:58:32 +0800
 last_modified_at: 2024-08-20 23:17:23 +0800
 ---
 
-This post is a record made while learning Chapter 8 “Functions” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 8 “Functions” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Python function terms

@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Variable Types: string, integer, float, and constant"
+title: "Takeaways from <i>Python Crash Course</i>: Python Variable Types: string, integer, float, and constant"
 categories:
  - Python
 tags:
@@ -11,7 +11,7 @@ date: 2024-08-15 10:04:56 +0800
 last_modified_at: 2024-08-15 10:04:56 +0800
 ---
 
-This post is a record made while learning Chapter 2 “Variables and Simple Data Types” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 2 “Variables and Simple Data Types” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # String

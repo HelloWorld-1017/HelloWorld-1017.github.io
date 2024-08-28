@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Read and Write Files, and Handle Exceptions in Python"
+title: "Takeaways from <i>Python Crash Course</i>: Read and Write Files, and Handle Exceptions in Python"
 categories:
  - Python
 tags:
@@ -11,7 +11,7 @@ date: 2024-08-23 23:28:32 +0800
 last_modified_at: 2024-08-25 15:20:47 +0800
 ---
 
-This post is a record made while learning Chapter 10 “Files and Exceptions” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 10 “Files and Exceptions” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Read text from a file

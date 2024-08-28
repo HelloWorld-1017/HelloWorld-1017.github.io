@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python `if` Statements"
+title: "Takeaways from <i>Python Crash Course</i>: Python `if` Statements"
 categories:
  - Python
 tags:
@@ -9,7 +9,7 @@ date: 2024-08-15 11:48:54 +0800
 last_modified_at: 2024-08-15 11:48:54 +0800
 ---
 
-This post is a record made while learning Chapter 5 “If Statements” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 5 “If Statements” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Conditional tests (i.e. Boolean expression)

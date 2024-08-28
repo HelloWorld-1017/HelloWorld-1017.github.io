@@ -1,5 +1,5 @@
 ---
-title: "Takeaways from Eric Matthes's book, <i>Python Crash Course</i>: Python Class"
+title: "Takeaways from <i>Python Crash Course</i>: Python Class"
 categories:
  - Python
 tags:
@@ -9,7 +9,7 @@ date: 2024-08-20 21:59:33 +0800
 last_modified_at: 2024-08-24 18:33:38 +0800
 ---
 
-This post is a record made while learning Chapter 9 “Classes” in Eric Matthes’s book, Python Crash Course.[^1]
+This post is a record made while learning Chapter 9 “Classes” in Eric Matthes’s book, *Python Crash Course*.[^1]
 {: .notice--primary}
 
 # Create and use a class

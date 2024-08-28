@@ -14,7 +14,6 @@ en: &DEFAULT_EN
   share_on_label             : "Share on"
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
-  date_label                 : "Updated:"
   comments_label             : "Leave a comment"
   comments_title             : "Comments"
   more_label                 : "Learn more"

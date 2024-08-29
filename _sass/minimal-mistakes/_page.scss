@@ -189,24 +189,19 @@ body {
   }
 
   u {
-    border-bottom: none;
-    padding-bottom: 2px;
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 2px;
-    text-decoration-color: #244FE7;
+    text-decoration-color: black;
+    text-underline-offset: 5px;
   }
 
   .term {
     color: #D63384;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: 2px;
-    text-decoration-color: $Seashell4;
   }
 
   .emphasize {
-    color: $DodgerBlue4;
+    color: #244FE7; // $DodgerBlue4
   }
 }
 

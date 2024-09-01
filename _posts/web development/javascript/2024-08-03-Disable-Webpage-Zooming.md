@@ -6,10 +6,11 @@ categories:
 tags:
  - JavaScript
 date: 2024-08-03 23:52:55 +0800
-last_modified_at: 2024-08-03 23:52:55 +0800
+last_modified_at: 2024-09-01 12:15:55 +0800
 ---
 
 ```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <script>
     document.addEventListener('wheel', function (e) {
       if (e.ctrlKey) {

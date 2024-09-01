@@ -345,12 +345,23 @@ h4>code,
 h5>code,
 h6>code,
 td>code,
-strong>code {
+strong>code,
+em>code {
   padding: 0.1rem;
   font-size: 0.8em;
   border-radius: 4px;
   background: $WhiteSmoke;
   border: 1px solid #D3DCE6;
+}
+
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+h5>code,
+h6>code,
+strong>code {
+  padding: 0.1rem 0.2rem 0.1rem 0.2rem;
 }
 
 .rouge-table {

@@ -5,7 +5,7 @@ categories:
  - Collections
  - Machine Learning
 date: 2024-07-17 09:48:31 +0800
-last_modified_at: 2024-07-24 09:24:33 +0800
+last_modified_at: 2024-08-30 19:02:14 +0800
 ---
 
 **Books**
@@ -15,6 +15,8 @@ last_modified_at: 2024-07-24 09:24:33 +0800
 - [Artificial Intelligence: A Modern Approach (Third Edition)](https://people.engr.tamu.edu/guni/csce421/files/AI_Russell_Norvig.pdf), Stuart J. Russell and Peter Norvig, 2010.
 - [Computer vision: models, learning, and inference](http://www.computervisionmodels.com/), Prince, Simon JD., 2012.
 - [Deep Learning with PyTorch](https://isip.piconepress.com/courses/temple/ece_4822/resources/books/Deep-Learning-with-PyTorch.pdf), Eli Stevens, Luca Antiga, and Thomas Viehmann, 2020, GitHub repository: [deep-learning-with-pytorch](https://github.com/deep-learning-with-pytorch/dlwpt-code).
+- [Computing Machinery and Intelligence](https://courses.cs.umbc.edu/471/papers/turing.pdf), A. M. Turing, 1950.
+- [The Essential Turing: Seminal Writings in Computing, Logic, Philosophy, Artificial Intelligence, and Artificial Life: Plus The Secrets of Enigma](https://www.cse.chalmers.se/~aikmitr/papers/Turing.pdf), B. Jack Copeland, Editor.
 
 **Blogs**
 

@@ -6,7 +6,7 @@ tags:
  - Native Python
  - <i>Python Crash Course</i>
 date: 2024-08-19 15:58:32 +0800
-last_modified_at: 2024-08-20 23:17:23 +0800
+last_modified_at: 2024-08-31 10:46:26 +0800
 ---
 
 This post is a record made while learning Chapter 8 “Functions” in Eric Matthes’s book, *Python Crash Course*.[^1]
@@ -54,7 +54,7 @@ SyntaxError: expected '('
 
 (4) The text `"""Display a simple greeting."""` enclosed in triple quotes is a comment called <i class="term">docstring</i>, which describes what the function does.[^2]
 
-(5) `greet_user()` in the 5th line is a <i class="term">function call</i>. A <i class="term">function call</i> tells Python to execute the code in the function. To <i class="term">call</i> a function, we should write the function name, followed by any necessary information in parentheses. There is no information needed in this case, so we call the function simply by entering `greet_user()`.
+(5) `greet_user()` in the 5th line is a function call. A <i class="term">function call</i> tells Python to execute the code in the function. To <i class="term">call</i> a function, we should write the function name, followed by any necessary information in parentheses. There is no information needed in this case, so we call the function simply by entering `greet_user()`.
 
 Here is a case of passing information to a function:
 
@@ -228,7 +228,7 @@ greet_users(usernames)
 
 ## Modify a list in a function
 
-We can modify a list by passing it to a defined function, and any changes made to the list inside the function’s body are <i class="term">permanent</i>, like `print_models()` function in the following example:
+We can modify a list by passing it to a defined function, and any changes made to the list inside the function’s body are <i class="emphasize">permanent</i>, like `print_models()` function in the following example:
 
 ```python
 def print_models(unprinted_designs, completed_models):
@@ -336,7 +336,7 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
     ('pepperoni',)
     ('mushrooms', 'green peppers', 'extra cheese')
 
-The asterisk in the parameter name `*toppings` tells Python to make an <i class="term">empty tuple</i> called `toppings` and pack whatever values it receives into this tuple. Above results show that Python can handle a function call with one value and a call with three values. It treats different calls similarly. Note that Python packs the arguments into a tuple, even if the function only receives one value.
+The asterisk in the parameter name `*toppings` tells Python to make an <i class="emphasize">empty tuple</i> called `toppings` and pack whatever values it receives into this tuple. Above results show that Python can handle a function call with one value and a call with three values. It treats different calls similarly. Note that Python packs the arguments into a tuple, even if the function only receives one value.
 
 Besides, if we want a function to accept several different kinds of arguments (like mix positional arguments and arbitrary arguments for example), the parameter that accepts an arbitrary number of arguments must be placed last in the function definition. Python matches positional and keyword arguments first and then collects any remaining arguments in the final parameter.
 
@@ -383,7 +383,7 @@ print(user_profile)
 
     {'location': 'princeton', 'field': 'physics', 'first_name': 'albert', 'last_name': 'einstein'}
 
-The double asterisks in the parameter `**user_info` inform Python to create an <i class="term">empty dictionary</i> called `user_info` and pack whatever name-value pairs it receives into this dictionary. Within the function, we can access the key-value pairs in `user_info` as other ordinary dictionaries.
+The double asterisks in the parameter `**user_info` inform Python to create an <i class="emphasize">empty dictionary</i> called `user_info` and pack whatever name-value pairs it receives into this dictionary. Within the function, we can access the key-value pairs in `user_info` as other ordinary dictionaries.
 
 Similarly, generic parameter name `**kwargs` is generally used, stating to collect non-specific keyword arguments.
 
@@ -483,7 +483,7 @@ pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
     - green peppers
     - extra cheese
 
-The line `import pizza` tells Python to <i class="term">open</i> the file `pizza.py` and <i class="term">copy</i> all the functions from it into the current script file before running the subsequent code.
+The line `import pizza` tells Python to <i class="emphasize">open</i> the file `pizza.py` and <i class="emphasize">copy</i> all the functions from it into the current script file before running the subsequent code.
 
 ## Import specific functions: `from module_name import function_0, function_1, function_2`
 
@@ -575,13 +575,13 @@ Due to that every function in `pizza` module is imported, we can call each funct
 
 There are several conventions when styling functions and modules.
 
-- Functions and modules should have <i class="term">descriptive names</i>, which can help others to understand what the function and module are trying to do.
+- Functions and modules should have <i class="emphasize">descriptive names</i>, which can help others to understand what the function and module are trying to do.
 
-- Function and module names should be composed of <i class="term">lowercase letters</i> and <i class="term">underscores</i>.
+- Function and module names should be composed of <i class="emphasize">lowercase letters</i> and <i class="emphasize">underscores</i>.
 
-- Every function should have a comment that explains concisely what the function does. This comment should appear immediately after the function definition and use the <i class="term">docstring</i> format. In a well-documented function, other programmers can use the function by reading only the description in the docstring.
+- Every function should have a comment that explains concisely what the function does. This comment should appear immediately after the function definition and use the <i class="emphasize">docstring format</i>. In a well-documented function, other programmers can use the function by reading only the description in the docstring.
 
-- When specifying a default value for a parameter, <i class="term">no spaces</i> should be used on either side of the equal sign:
+- When specifying a default value for a parameter, <i class="emphasize">no spaces</i> should be used on either side of the equal sign:
 
   ```python
   def function_name(parameter_0, parameter_1='default value')
@@ -593,7 +593,7 @@ There are several conventions when styling functions and modules.
   function_name(value_0, parameter_1='value')
   ```
 
-- PEP 8 recommends that programmers limit lines of code to <i class="term">79 characters</i> so every line is visible in a reasonably sized editor window[^3]. If a set of parameters causes a function definition longer than 79 characters, press `[Enter]` after the opening parenthesis on the definition line. On the next line, press `[Tab]` <i class="term">twice</i> to separate the list of arguments from the function body, which will only be indented one level.
+- PEP 8 recommends that programmers limit lines of code to <i class="emphasize">79 characters</i> so every line is visible in a reasonably sized editor window[^3]. If a set of parameters causes a function definition longer than 79 characters, press `[Enter]` after the opening parenthesis on the definition line. On the next line, press `[Tab]` <i class="emphasize">twice</i> to separate the list of arguments from the function body, which will only be indented one level.
 
   ```python
   def function_name(
@@ -603,9 +603,9 @@ There are several conventions when styling functions and modules.
       pass
   ```
 
-- If a module has more than one function, we can separate each by <i class="term">two blank lines</i> to make it easier to see where one function ends and the next one begins. 
+- If a module has more than one function, we can separate each by <i class="emphasize">two blank lines</i> to make it easier to see where one function ends and the next one begins.
 
-- All `import` statements should be written <i class="term">at the beginning of a file</i>. The only exception is if we write comments at the beginning of the file to describe the overall script.
+- All `import` statements should be written <i class="emphasize">at the beginning of a file</i>. The only exception is if we write comments at the beginning of the file to describe the overall script.
 
 <br>
 

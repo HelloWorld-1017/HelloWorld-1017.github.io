@@ -1,7 +1,5 @@
 ---
-layout: single
-title: Gaussian Mixture Model(GMM)
-date: 2022-09-12 12:28:37 +0800
+title: Gaussian Mixture Model (GMM)
 categories:
  - Mathematics
  - MATLAB
@@ -9,9 +7,11 @@ categories:
 tags:
  - Probability Theory and Mathematical Statistics
  - MATLAB Statistics and Machine Learning Toolbox
+date: 2022-09-12 12:28:37 +0800
+last_modified_at: 2024-09-02 18:21:14 +0800
 ---
 
-# Gaussian Mixture Model(GMM)
+# Gaussian Mixture Model (GMM)
 
 ## From the Point of View of Geometry
 
@@ -27,6 +27,7 @@ $$
 
 ```matlab
 clc, clear, close all
+rng("default")
 
 % Specify parameters
 x = -7:.1:7;
@@ -52,7 +53,7 @@ Y = normpdf(x, mu, sigma);
 alpha_1s = 0.1:0.2:0.7;
 
 LineWidth = 1.5;
-figure('Units', 'pixels', 'Position', [589 ,219, 1260, 1025])
+figure('Units', 'pixels', 'Position', [589 ,219, 1260, 1025], 'Color', 'w')
 % Plot schematics
 for idx = 1:4
     nexttile
@@ -72,15 +73,15 @@ for idx = 1:4
     box on
     grid on
 end
+
+exportgraphics(gcf, "fig.jpg", "Resolution", 900)
 ```
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220911233404599.png?raw=true" alt="image-20220911233404599" style="zoom:50%;" />
+![fig](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202409021805442.jpg)
 
 图中，黑线表示不同的高斯混合PDF，可以看到，选取不同的权重系数曲线是不同的；蓝线是认为样本属于单一的高斯分布而得到的PDF。
 
 假设样本属于单一的高斯分布，那么很容易得到样本对应的PDF，只需要求出样本均值和样本协方差矩阵，带入到高斯分布的PDF中即可；而假设样本属于混合高斯分布，那么PDF是很多样的，并且在真实情况的情况下，每一个高斯分布的$\mu_k$和$\Sigma_k$都是未知的，权重系数$\alpha_k$也是未知的，必须通过复杂的过程确定最优的参数集合，这也是高斯分布模型的核心。
-
-
 
 ## From the Point of View of Mixture Model
 
@@ -126,9 +127,7 @@ $$
 
 # GMM in MATLAB
 
-MATLAB官网提供了一个GMM拟合的示例：[Cluster Using Gaussian Mixture Model - MathWorks](https://ww2.mathworks.cn/help/stats/clustering-using-gaussian-mixture-models.html)。
-
-选用的数据集是Iris数据集，为了能够可视化，选取前两个特征：
+MATLAB官网提供了一个GMM拟合的示例，Cluster Using Gaussian Mixture Model[^1]，该实例选用的数据集是Iris数据集，为了能够可视化，选取前两个特征：
 
 ```matlab
 clc, clear, close all
@@ -149,7 +148,7 @@ ylabel('Sepal width (cm)');
 指定GMM component的个数和EM算法最大迭代数，以及协方差矩阵设置：
 
 ```matlab
-rng(3);
+rng("default");
 % Specify number of GMM components
 k = 3; 
 % Specify maximum iterations for EM algorith
@@ -163,7 +162,7 @@ SCtext = {'true' ,'false'};
 nSC = numel(SharedCovariance);
 ```
 
-这些参数在后面都要传入到`fitgmdist`函数([fitgmdist - MathWorks](https://ww2.mathworks.cn/help/stats/fitgmdist.html))中。
+这些参数在后面都要传入到`fitgmdist`函数[^2]中。
 
 注：`fitgmdist`函数用的就是EM算法。
 {: .notice--primary}
@@ -188,7 +187,7 @@ X0 = [x1grid(:) x2grid(:)];
 threshold = sqrt(chi2inv(0.99, 2));
 ```
 
-```matlab
+```
 threshold =
     3.0349
 ```
@@ -197,7 +196,7 @@ threshold =
 
 - 使用`fitgmdist`函数拟合GMM，返回变量`gmfit`。
 
-  ```matlab
+  ```
   gmfit = 
   
   Gaussian mixture distribution with 3 components in 2 dimensions
@@ -221,7 +220,7 @@ threshold =
 - 计算网格点到每个component均值的马氏距离，并根据马氏距离和`threshold`的关系进行网格点绘制。
 
 ```matlab
-figure('Units', 'pixels', 'Position', [585, 307, 1120, 793])
+figure('Units', 'pixels', 'Position', [585, 307, 1120, 793], 'Color', 'w')
 count = 1;
 for i = 1:nSigma
     for j = 1:nSC
@@ -246,10 +245,12 @@ for i = 1:nSigma
         count = count+1;
     end
 end
+
+exportgraphics(gcf, "fig.jpg", "Resolution", 900)
 ```
 最终得到不同`fitgmdist`函数option的结果和图像：
 
-![image-20220912114736265](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912114736265.png?raw=true)
+![fig](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202409021812167.jpg)
 
 除此之外，`fitgmdist`函数还支持设置初始条件：
 
@@ -283,9 +284,11 @@ for j = 1:4
     converged(j) = gmfit.Converged; % Indicator for convergence
 end
 sum(converged)
+
+exportgraphics(gcf, "fig1.jpg", "Resolution", 900)
 ```
 
-![image-20220912115804043](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220912115804043.png?raw=true)
+![fig1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202409021818938.jpg)
 
 以上设置的GMM都是收敛的，但是各个设置所得到的结果还是有比较大的差异。另外，以上的GMM拟合都是**非监督**聚类，完全没有用到标签的信息，因此哪一种GMM都可以认为是合理的。但是，Iris是一个有标签的数据集，我们可以绘制一下真实的数据情况，用真实的情况作为参考：
 
@@ -303,7 +306,7 @@ gscatter(X(:, 1), X(:, 2), species)
 
 # Generative Model
 
-当我们用通过样本拟合出了一个GMM，这就意味着我们知道了GMM的PDF，于是就可以用这个PDF来生成样本数据了。从这个角度看，GMM也是一个生成模型，并且是一个很简单的生成模型，其简单程度仅次于单个高斯分布模型MVN-RNG（见博客：[Train an SVM Using Generated Data by MVN-RNG, and Test with Real Data - whatastarrynight](http://whatastarrynight.com/mathematics/programming/machine%20learning/Train-An-SVM-Using-Generated-Data-by-MVN-RNG-and-Test-Using-Real-Data/)）
+当我们用通过样本拟合出了一个GMM，这就意味着我们知道了GMM的PDF，于是就可以用这个PDF来生成样本数据了。从这个角度看，GMM也是一个生成模型，并且是一个很简单的生成模型，其简单程度仅次于单个高斯分布模型MVN-RNG（见博客[^3]）。
 
 GMM的概率图如下所示：
 
@@ -313,9 +316,12 @@ GMM的概率图如下所示：
 
 <br>
 
-**参考**
+**References**
 
-[1] [机器学习-白板推导系列(十一)-高斯混合模型GMM（Gaussian Mixture Model）](https://www.bilibili.com/video/BV13b411w7Xj?spm_id_from=333.999.0.0&vd_source=8aeddead7f39b0189fff9b14fa090a75).
+- [机器学习-白板推导系列(十一)-高斯混合模型GMM（Gaussian Mixture Model）](https://www.bilibili.com/video/BV13b411w7Xj?spm_id_from=333.999.0.0&vd_source=8aeddead7f39b0189fff9b14fa090a75).
+- [Normal Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/normal-distribution.html).
 
-[2] [Normal Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/normal-distribution.html).
+[^1]: [Cluster Using Gaussian Mixture Model - MathWorks](https://ww2.mathworks.cn/help/stats/clustering-using-gaussian-mixture-models.html).
+[^2]: [MATLAB `fitgmdist`: Fit Gaussian mixture model to data](https://www.mathworks.com/help/stats/fitgmdist.html).
+[^3]: [Train an SVM Using Generated Data by MVN-RNG, and Test with Real Data - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2022-09-10/11-37-41.html).
 

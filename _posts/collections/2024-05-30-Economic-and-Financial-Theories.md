@@ -5,6 +5,9 @@ categories:
  - Collections
 date: 2024-05-30 21:03:45 +0800
 last_modified_at: 2024-08-31 21:36:26 +0800
+notes:
+ - Matthew effect
+ - Minsky moment
 ---
 
 ## Pareto efficiency (Pareto improvement)

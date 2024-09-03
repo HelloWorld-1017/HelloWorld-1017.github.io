@@ -2,7 +2,7 @@
 title: Takeaways from <i>Reminiscences of A Stock Operator</i>
 categories:
  - Economics & Finance
- - Excerpts
+ - Quotes
 date: 2024-07-30 17:54:27 +0800
 last_modified_at: 2024-08-01 14:55:24 +0800
 ---

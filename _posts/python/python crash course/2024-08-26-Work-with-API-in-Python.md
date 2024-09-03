@@ -5,6 +5,7 @@ categories:
  - Web Development
  - GitHub
 tags:
+ - <i>Python Crash Course</i>
  - Native Python
  - Python Plotly
  - Python requests

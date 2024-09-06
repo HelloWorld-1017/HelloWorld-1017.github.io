@@ -1,5 +1,5 @@
 ---
-title: Some English Learning Resources and Tools
+title: English Learning Resources and Tools
 toc: false
 categories:
  - English

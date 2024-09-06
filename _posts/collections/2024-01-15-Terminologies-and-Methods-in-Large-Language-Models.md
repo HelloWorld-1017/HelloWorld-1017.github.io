@@ -1,5 +1,5 @@
 ---
-title: Some Terminology and Methods in the Field of Large Language Models
+title: Terminologies and Methods in Large Language Models
 categories:
  - Machine Learning
  - Collections

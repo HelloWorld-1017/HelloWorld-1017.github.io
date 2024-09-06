@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Machine Learning
+title: Machine Learning Resources
 toc: false
 categories:
  - Collections

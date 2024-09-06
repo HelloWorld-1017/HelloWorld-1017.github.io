@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Economics and Finance
+title: Economics and Finance Resources
 categories:
  - Collections
  - Economics & Finance

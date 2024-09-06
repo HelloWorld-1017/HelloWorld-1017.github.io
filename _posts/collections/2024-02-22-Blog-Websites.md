@@ -1,5 +1,5 @@
 ---
-title: Some Static Blog Websites
+title: Static Blog Websites
 categories:
  - Web Development
  - Collections

@@ -1,5 +1,5 @@
 ---
-title: ggsci Colour Palettes 
+title: Color Palettes in R Package `ggsci`
 categories: 
  - Design
  - R
@@ -7,40 +7,40 @@ categories:
 tags:
  - MATLAB Graphics
 date: 2023-01-10 20:17:19 +0800
-last_modified_at: 2024-08-04 23:21:09 +0800
+last_modified_at: 2024-09-06 08:05:56 +0800
 ---
 
 # Introduction
 
-前两天找论文图像配色的时候发现了R语言的一个配色包ggsci，这个包通过总结一些著名期刊的论文插图配色，设置了几个palettes。
-
-> 官方网站：[Scientific Journal and Sci-Fi ThemedColor Palettes for ggplot2 - ggsci](https://nanx.me/ggsci/articles/ggsci.html)
->
-> Github仓库：[nanxstats/ggsci: Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci)
+前两天找论文图像配色的时候发现了R语言的一个配色包`ggsci`[^1][^2]，这个包通过总结一些著名期刊的论文插图配色，设置了几个palettes。
 
 官网中给出了获取palette中色彩RGB值的方式，在安装了R语言和RStudio后，输入指定的代码即可。
 
-> **R语言安装包时常用的代码**
->
-> （1）安装指定包，如安装`ssci`
->
-> ```R
-> install.packages("ggsci")
-> ```
->
-> （2） 查看已经安装的包
->
-> ```R
-> as.data.frame(installed.packages())$Package
-> ```
+<div class="notice--primary" markdown="1">
 
-本博客就记录一下ggsci中所包含palettes的RGB值。
+**R语言安装包时常用的代码**
+
+（1）安装指定包，如安装`ggssci`
+
+```R
+install.packages("ggsci")
+```
+
+（2） 查看已经安装的包
+
+```R
+as.data.frame(installed.packages())$Package
+```
+
+本博客就记录一下`ggsci`中所包含palettes的RGB值。
+
+</div>
 
 <br>
 
 #  NPG (Nature Publishing Group)
 
-The NPG palette is inspired by the plots in the journals published by Nature Publishing Group (自然出版集团): 
+The NPG palette is inspired by the plots in the journals published by *Nature Publishing Group*: 
 
 ```R
 library("ggsci")
@@ -65,7 +65,7 @@ mypal <- pal_npg("nrc", alpha = 1)(10)
 
 （1）`pal_npg`，指定了使用NPG palette
 
-（2）`"nrc"`，这个属性指定了palette type，不同的palette的type选项是不同的，对于NPG而言，只有`"nrc"`这一个选项。具体的type属性可以在官方网站[ggsci](https://nanx.me/ggsci/articles/ggsci.html)中查看
+（2）`"nrc"`，这个属性指定了palette type，不同的palette的type选项是不同的，对于NPG而言，只有`"nrc"`这一个选项。具体的`type`属性可以在官方网站[^1]中查看
 
 ![image-20230110135137608](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110135137608.png?raw=true)
 
@@ -100,7 +100,7 @@ This manual palette can handle a maximum of 10 values. You have supplied 12.
 
 通过这种方式得到palette的RGB数组后，我们就可以很方便地将其应用到其他地方。
 
-但是，MATLAB中的函数大多数是不接受以十六进制表示的RGB值，因此我们可以借助MATLAB File Exchange 中Chad Greene提供的函数[rgb2hex and hex2rgb](https://ww2.mathworks.cn/matlabcentral/fileexchange/46289-rgb2hex-and-hex2rgb?s_tid=srchtitle_convert%20hex%20to%20RGB_1)将十六进制转换为RGB三元数组，并且采用官方文档常用的可视化`peaks`函数的方式可视化palette：
+但是，MATLAB中的函数大多数是不接受以十六进制表示的RGB值，因此我们可以借助MATLAB File Exchange 中Chad Greene提供的函数[^3]将十六进制转换为RGB三元数组，并且采用官方文档常用的可视化`peaks`函数的方式可视化palette：
 
 ```matlab
 clc, clear, close all
@@ -119,7 +119,7 @@ colormap(mypal)
 colorbar
 ```
 
-```matlab
+```
 mypal =
     0.9020    0.2941    0.2078
     0.3020    0.7333    0.8353
@@ -141,7 +141,7 @@ mypal =
 
 # AAAS (American Association for the Advancement of Science)
 
-The AAAS palette is inspired by the plots in the journals published by American Association for the Advancement of Science (美国科学促进会 ):
+The AAAS palette is inspired by the plots in the journals published by *American Association for the Advancement of Science*:
 
 ```R
 library("ggsci")
@@ -156,7 +156,7 @@ show_col(mypal)
 
 ![image-20230107180916214](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107180916214.png?raw=true)
 
-```matlab
+```
 mypal =
     0.2314    0.2863    0.5725
     0.9333         0         0
@@ -176,7 +176,7 @@ mypal =
 
 # NEJM (The New England Journal of Medicine)
 
-The NEJM palette is inspired by the plots in The New England Journal of Medicine (新英格兰医学杂志):
+The NEJM palette is inspired by the plots in *The New England Journal of Medicine*:
 
 ```R
 library("ggsci")
@@ -191,7 +191,7 @@ show_col(mypal)
 
 ![image-20230107181053174](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181053174.png?raw=true)
 
-```matlab
+```
 mypal =
     0.7373    0.2353    0.1608
          0    0.4471    0.7098
@@ -209,7 +209,7 @@ mypal =
 
 # Lancet (Lancet journals)
 
-The Lancet palette is inspired by the plots in Lancet journals (柳叶刀期刊), such as Lancet Oncology (柳叶刀肿瘤学):
+The Lancet palette is inspired by the plots in *Lancet journals*, such as *Lancet Oncology*:
 
 ```R
 library("ggsci")
@@ -224,7 +224,7 @@ show_col(mypal)
 
 ![image-20230107181307592](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181307592.png?raw=true)
 
-```matlab
+```
 mypal =
          0    0.2745    0.5451
     0.9294         0         0
@@ -241,7 +241,7 @@ mypal =
 
 # JAMA (The Journal of the American Medical Association)
 
-The JAMA palette is inspired by the plots in The Journal of the American Medical Association (美国医学协会杂志 ):
+The JAMA palette is inspired by the plots in *The Journal of the American Medical Association*:
 
 ```R
 library("ggsci")
@@ -256,7 +256,7 @@ show_col(mypal)
 
 ![image-20230107181635587](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181635587.png?raw=true)
 
-```matlab
+```
 mypal =
     0.2157    0.3059    0.3333
     0.8745    0.5608    0.2667
@@ -273,7 +273,7 @@ mypal =
 
 # JCO (Journal of Clinical Oncology)
 
-The JCO palette is inspired by the the plots in Journal of Clinical Oncology (临床肿瘤学杂志):
+The JCO palette is inspired by the the plots in *Journal of Clinical Oncology*:
 
 ```R
 library("ggsci")
@@ -288,7 +288,7 @@ show_col(mypal)
 
 ![image-20230107181737598](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181737598.png?raw=true)
 
-```matlab
+```
 mypal =
          0    0.4510    0.7608
     0.9373    0.7529         0
@@ -308,7 +308,7 @@ mypal =
 
 # UCSCGB (UCSC Genome Browser)
 
-The UCSCGB palette is from the colors used by [UCSC Genome Browser](https://genome.ucsc.edu/) for representing chromosomes (染色体). This palette (interpolated, with alpha) is intensively used in visualizations generated by Circos.
+The UCSCGB palette is from the colors used by [UCSC Genome Browser](https://genome.ucsc.edu/) for representing chromosomes. This palette (interpolated, with alpha) is intensively used in visualizations generated by Circos.
 
 ```R
 library("ggsci")
@@ -325,7 +325,7 @@ show_col(mypal)
 
 ![image-20230107181932500](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107181932500.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000         0         0
     1.0000    0.6000         0
@@ -378,7 +378,7 @@ show_col(mypal)
 
 ![image-20230107182033100](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182033100.png?raw=true)
 
-```matlab
+```
 mypal =
     0.1216    0.4667    0.7059
     1.0000    0.4980    0.0549
@@ -410,7 +410,7 @@ show_col(mypal)
 
 ![image-20230107182230369](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182230369.png?raw=true)
 
-```matlab
+```
 mypal =
     0.1216    0.4667    0.7059
     1.0000    0.4980    0.0549
@@ -452,7 +452,7 @@ show_col(mypal)
 
 ![image-20230107182319305](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182319305.png?raw=true)
 
-```matlab
+```
 mypal =
     0.2235    0.2314    0.4745
     0.3882    0.4745    0.2235
@@ -494,7 +494,7 @@ show_col(mypal)
 
 ![image-20230107182402054](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182402054.png?raw=true)
 
-```matlab
+```
 mypal =
     0.1922    0.5098    0.7412
     0.9020    0.3333    0.0510
@@ -542,7 +542,7 @@ show_col(mypal)
 
 ![image-20230107182638917](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182638917.png?raw=true)
 
-```matlab
+```
 mypal =
     0.8314    0.2471    0.2275
     0.9333    0.6353    0.2118
@@ -584,7 +584,7 @@ show_col(mypal)
 
 ![image-20230107182814332](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107182814332.png?raw=true)
 
-```matlab
+```
 mypal =
 
     0.3137    0.3137    1.0000
@@ -657,7 +657,7 @@ show_col(mypal)
 
 ![image-20230107183033024](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183033024.png?raw=true)
 
-```matlab
+```
 mypal =
     0.3412    0.4510    0.8000
     1.0000    0.7255         0
@@ -686,7 +686,7 @@ show_col(mypal)
 
 ![image-20230107183425569](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183425569.png?raw=true)
 
-```matlab
+```
 mypal =
 
     0.5020         0         0
@@ -717,7 +717,7 @@ show_col(mypal)
 
 ![image-20230107183513730](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183513730.png?raw=true)
 
-```matlab
+```
 mypal =
     0.5020         0         0
     0.8392    0.8392    0.8078
@@ -747,7 +747,7 @@ show_col(mypal)
 
 ![image-20230107183606275](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183606275.png?raw=true)
 
-```matlab
+```
 mypal =
     0.5020         0         0
     0.4627    0.4627    0.4627
@@ -766,7 +766,7 @@ mypal =
 
 # Star Trek (Film)
 
-This palette is inspired by the (uniform) colors in Star Trek (星际迷航):
+This palette is inspired by the (uniform) colors in *Star Trek*:
 
 ```R
 library("ggsci")
@@ -781,7 +781,7 @@ show_col(mypal)
 
 ![image-20230107183719487](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183719487.png?raw=true)
 
-```matlab
+```
 mypal =
 
     0.8000    0.0471         0
@@ -799,7 +799,7 @@ mypal =
 
 # Tron Legacy (Film)
 
-This palette is inspired by the colors used in Tron Legacy (创战纪). It is suitable for displaying data when using a dark theme:
+This palette is inspired by the colors used in *Tron Legacy*. It is suitable for displaying data when using a dark theme:
 
 ```R
 library("ggsci")
@@ -814,7 +814,7 @@ show_col(mypal)
 
 ![image-20230107183834191](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107183834191.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000    0.2549    0.0510
     0.4314    0.8863    1.0000
@@ -831,7 +831,7 @@ mypal =
 
 # Futurama (TV show)
 
-This palette is inspired by the colors used in the TV show Futurama:
+This palette is inspired by the colors used in the TV show *Futurama*:
 
 ```R
 library("ggsci")
@@ -847,7 +847,7 @@ show_col(mypal)
 
 ![image-20230107184811680](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107184811680.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000    0.4353         0
     0.7804    0.0627         0
@@ -871,7 +871,7 @@ mypal =
 
 # Rick and Morty (TV show)
 
-This palette is inspired by the colors used in the TV show Rick and Morty (瑞克和莫蒂):
+This palette is inspired by the colors used in the TV show *Rick and Morty*:
 
 ```R
 library("ggsci")
@@ -887,7 +887,7 @@ show_col(mypal)
 
 ![image-20230107184919859](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107184919859.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9804    0.9922    0.4863
     0.5098    0.2863    0.1176
@@ -909,7 +909,7 @@ mypal =
 
 # The Simpsons (TV show)
 
-This palette is inspired by the colors used in the TV show The Simpsons:
+This palette is inspired by the colors used in the TV show *The Simpsons*:
 
 ```R
 library("ggsci")
@@ -925,7 +925,7 @@ show_col(mypal)
 
 ![image-20230107185041128](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185041128.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9961    0.8314    0.2235
     0.4392    0.6039    0.8824
@@ -967,7 +967,7 @@ show_col(mypal)
 
 ![image-20230107185159554](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185159554.png?raw=true)
 
-```matlab
+```
 mypal =
     0.2706         0    0.6745
     0.1490         0    0.8196
@@ -989,9 +989,10 @@ mypal =
 
 # Material Design (Google)
 
-The Material Design color palettes are from the [Material Design color guidelines](https://material.io/guidelines/style/color.html) .
+The Material Design color palettes are from the Material Design color guidelines[^5].
 
-> **Material Design** (codenamed **Quantum Paper**) is a [design language](https://en.wikipedia.org/wiki/Design_language) developed by [Google](https://en.wikipedia.org/wiki/Google) in 2014. Expanding on the "cards" that debuted in [Google Now](https://en.wikipedia.org/wiki/Google_Now), Material Design uses more grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows. Google announced Material Design on June 25, 2014, at the 2014 [Google I/O](https://en.wikipedia.org/wiki/Google_I/O) conference.（[Material Design - Wikipedia](https://en.wikipedia.org/wiki/Material_Design)）
+**Material Design** (codenamed **Quantum Paper**) is a [design language](https://en.wikipedia.org/wiki/Design_language) developed by [Google](https://en.wikipedia.org/wiki/Google) in 2014. Expanding on the "cards" that debuted in [Google Now](https://en.wikipedia.org/wiki/Google_Now), Material Design uses more grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows. Google announced Material Design on June 25, 2014, at the 2014 [Google I/O](https://en.wikipedia.org/wiki/Google_I/O) conference.[^4]
+{: .notice--primary}
 
 Material Design是Google在2014年提出的设计规范，它所涵盖的内容非常广泛，颜色部分的设计只是其中一小部分。`ggsci`的Material Design色卡参考了Material Design，但是颜色的十六进制代码有细微的差异。
 
@@ -1010,7 +1011,7 @@ show_col(mypal)
 
 ![image-20230107185312320](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185312320.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000    0.9216    0.9294
     1.0000    0.8000    0.8235
@@ -1041,7 +1042,7 @@ show_col(mypal)
 
 ![image-20230107185408241](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185408241.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9882    0.8941    0.9216
     0.9725    0.7294    0.8157
@@ -1072,7 +1073,7 @@ show_col(mypal)
 
 ![image-20230107185504824](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185504824.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9490    0.8980    0.9569
     0.8784    0.7451    0.9020
@@ -1103,7 +1104,7 @@ show_col(mypal)
 
 ![image-20230107185558420](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185558420.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9255    0.9020    0.9647
     0.8196    0.7686    0.9137
@@ -1134,7 +1135,7 @@ show_col(mypal)
 
 ![image-20230107185650465](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185650465.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9059    0.9176    0.9647
     0.7725    0.7922    0.9137
@@ -1165,7 +1166,7 @@ show_col(mypal)
 
 ![image-20230107185755776](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185755776.png?raw=true)
 
-```matlab
+```
 mypal =
     0.8902    0.9490    0.9922
     0.7294    0.8706    0.9804
@@ -1196,7 +1197,7 @@ show_col(mypal)
 
 ![image-20230107185835704](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185835704.png?raw=true)
 
-```matlab
+```
 mypal =
     0.8784    0.9569    0.9961
     0.6980    0.8980    0.9882
@@ -1227,7 +1228,7 @@ show_col(mypal)
 
 ![image-20230107185918621](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107185918621.png?raw=true)
 
-```matlab
+```
 mypal =
     0.8745    0.9686    0.9765
     0.6980    0.9216    0.9490
@@ -1258,7 +1259,7 @@ show_col(mypal)
 
 ![image-20230107190002436](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190002436.png?raw=true)
 
-```matlab
+```
 mypal =
     0.8745    0.9490    0.9451
     0.6980    0.8745    0.8549
@@ -1289,7 +1290,7 @@ show_col(mypal)
 
 ![image-20230107190053988](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190053988.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9059    0.9569    0.9137
     0.7804    0.8980    0.7882
@@ -1320,7 +1321,7 @@ show_col(mypal)
 
 ![image-20230107190141869](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190141869.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9451    0.9725    0.9137
     0.8627    0.9255    0.7804
@@ -1351,7 +1352,7 @@ show_col(mypal)
 
 ![image-20230107190223020](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190223020.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9725    0.9804    0.9020
     0.9412    0.9529    0.7647
@@ -1382,7 +1383,7 @@ show_col(mypal)
 
 ![image-20230107193509183](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107193509183.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000    0.9922    0.9020
     1.0000    0.9725    0.7686
@@ -1413,7 +1414,7 @@ show_col(mypal)
 
 ![image-20230107190428547](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190428547.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000    0.9725    0.8784
     1.0000    0.9216    0.6980
@@ -1444,7 +1445,7 @@ show_col(mypal)
 
 ![image-20230107190537393](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190537393.png?raw=true)
 
-```matlab
+```
 mypal =
     1.0000    0.9490    0.8745
     1.0000    0.8745    0.6980
@@ -1475,7 +1476,7 @@ show_col(mypal)
 
 ![image-20230107190619158](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190619158.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9804    0.9137    0.9020
     1.0000    0.8000    0.7333
@@ -1506,7 +1507,7 @@ show_col(mypal)
 
 ![image-20230107190723867](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190723867.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9333    0.9216    0.9137
     0.8431    0.8000    0.7804
@@ -1537,7 +1538,7 @@ show_col(mypal)
 
 ![image-20230107190832170](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190832170.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9765    0.9765    0.9765
     0.9569    0.9569    0.9569
@@ -1568,7 +1569,7 @@ show_col(mypal)
 
 ![image-20230107190920083](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230107190920083.png?raw=true)
 
-```matlab
+```
 mypal =
     0.9216    0.9333    0.9451
     0.8078    0.8471    0.8627
@@ -1585,3 +1586,14 @@ mypal =
 ![image-20230110221222634](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230110221222634.png?raw=true)
 
 <br>
+
+**References**
+
+[^1]: [Scientific Journal and Sci-Fi ThemedColor Palettes for ggplot2 - ggsci](https://nanx.me/ggsci/articles/ggsci.html).
+[^2]: [nanxstats/ggsci: Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci).
+[^3]: [`rgb2hex` and `hex2rgb` - File Exchange - MATLAB Central](https://ww2.mathworks.cn/matlabcentral/fileexchange/46289-rgb2hex-and-hex2rgb?s_tid=srchtitle_convert%20hex%20to%20RGB_1).
+[^4]: [Material Design - Wikipedia](https://en.wikipedia.org/wiki/Material_Design).
+[^5]: [The color system - Material Design](https://m2.material.io/design/color/the-color-system.html#color-usage-and-palettes).
+
+
+

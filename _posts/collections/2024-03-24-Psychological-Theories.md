@@ -1,5 +1,5 @@
 ---
-title: Some Psychological Theories
+title: Psychological Theories
 categories:
  - Psychology
  - Collections

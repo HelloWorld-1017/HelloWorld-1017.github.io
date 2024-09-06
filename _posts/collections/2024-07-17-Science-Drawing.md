@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Science Drawing
+title: Science Drawing Resources
 toc: false
 categories:
  - Collections

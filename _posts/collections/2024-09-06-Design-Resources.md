@@ -1,0 +1,21 @@
+---
+title: Design Resources
+toc: false
+categories:
+ - Collections
+ - Design
+date: 2024-09-06 08:38:17 +0800
+last_modified_at: 2024-09-06 08:38:17 +0800
+---
+
+**UI Design**
+
+- [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines).
+- [Apple Materials](https://developer.apple.com/design/human-interface-guidelines/materials).
+- [Google Material Design (Material 3)](https://m3.material.io/) (e.g. [The color system](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)).
+- [Design Resources: The ultimate collection of digital design resources.](https://designresourc.es/)
+
+**Industrial Design & Product Design**
+
+- [50 Top Industrial Design and Engineering Learning Resources - Pannam](https://pannam.com/blog/industrial-design-resources/).
+- [Learning Product Design as a Beginner (52 Free Resources) \| by Caitlin Sowers \| Medium](https://caitlinsowers.medium.com/learning-product-design-as-a-beginner-52-free-resources-b3e34c7b445).

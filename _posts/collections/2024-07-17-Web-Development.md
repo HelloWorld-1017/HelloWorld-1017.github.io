@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Web Development
+title: Web Development Resources
 toc: false
 categories:
  - Collections

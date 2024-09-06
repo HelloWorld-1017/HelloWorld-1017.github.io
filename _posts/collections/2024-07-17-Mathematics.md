@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Mathematics
+title: Mathematics Resources
 toc: false
 categories:
  - Collections

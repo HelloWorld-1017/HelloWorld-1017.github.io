@@ -1,16 +1,13 @@
 ---
-layout: single
-title: Some Terminology and Methods in the Field of Object Detection
+title: Terminologies and Methods in Object Detection
 categories:
  - Machine Learning
  - Collections
 tags:
  - Computer Vision
  - Object Detection
-drafted_at: 2024-05-09 15:02:11 +0800
 date: 2024-05-23 09:39:02 +0800
-last_modified_at0: 2024-05-23 09:39:02 +0800
-last_modified_at: 2024-05-23 09:39:02 +0800
+last_modified_at: 2024-09-06 08:20:44 +0800
 ---
 
 # Fundamentals

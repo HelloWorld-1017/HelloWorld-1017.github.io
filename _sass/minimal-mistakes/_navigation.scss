@@ -85,8 +85,10 @@
       line-height: 1.5;
       text-align: center;
       text-decoration: none;
-      color: $muted-text-color;
-      border: 1px solid mix(#000, $border-color, 25%);
+      // color: $muted-text-color;
+      color: black;
+      // border: 1px solid mix(#000, $border-color, 25%);
+      border: 1px solid black;
       border-radius: 0;
 
       &:hover {
@@ -96,7 +98,8 @@
       &.current,
       &.current.disabled {
         color: #fff;
-        background: $primary-color;
+        // background: $primary-color;
+        background-color: black;
       }
 
       &.disabled {
@@ -531,7 +534,7 @@
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
     @include yiq-contrasted(white);
-    color: black;
+    color: $link-color;
     text-decoration: underline;
   }
 
@@ -562,12 +565,11 @@
     color: $link-color; //#104E8B; #527dd4
     font-weight: bold;
     line-height: 1.5;
-  }
-  
-  a:hover {
-    color: black;
-    text-decoration: underline;
-    // background-color: $DodgerBlue4;
+
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+    }
   }
 
   li ul > li a {

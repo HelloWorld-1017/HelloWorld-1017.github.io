@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Psychology
+title: Psychology Resources
 toc: false
 categories:
  - Collections

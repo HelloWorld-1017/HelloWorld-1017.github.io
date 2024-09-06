@@ -1,5 +1,5 @@
 ---
-title: Some Economic and Financial Theories
+title: Economic and Financial Theories
 categories:
  - Economics & Finance
  - Collections

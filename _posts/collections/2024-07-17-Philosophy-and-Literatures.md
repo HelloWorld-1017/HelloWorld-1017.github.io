@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Philosophy and Literatures
+title: Philosophy and Literatures Resources
 toc: false
 categories:
  - Collections

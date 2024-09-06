@@ -471,12 +471,11 @@ $YellowGreen: #9ACD32;
 
 /* Colors */
 $background-color: #ffffff !default;
-$link-color:  #3366CC !default; // #39619a, #1A0DAB
+$link-color: #0000EE !default; // #3366CC, #39619a, #1A0DAB
 $primary-color: $SlateGray4 !default;
 $text-color: black !default;
 $muted-text-color: #393e46 !default;
 $border-color: mix(#fff, #393e46, 75%) !default;
-$footer-background-color: $primary-color !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;

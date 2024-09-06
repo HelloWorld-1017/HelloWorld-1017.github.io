@@ -61,15 +61,10 @@ body {
       line-height: 150%;
       text-align: left;
 
-      a:link,
-        a:visited {
-          text-decoration: none;
-        }
-      
-        a:hover {
-          text-decoration: underline;
-          color: black;
-        }
+      a:hover {
+        text-decoration: underline;
+        color: $link-color;
+      }
     }
 
     }
@@ -131,9 +126,9 @@ body {
     padding-bottom: -0.5em;
   }
   
-  h1, h2, h3, h4, h5 {
-    border-bottom: 1.5px solid $border-color;
-  }
+  // h1, h2, h3, h4, h5 {
+  //   border-bottom: 1.5px solid $border-color;
+  // }
 
 
 

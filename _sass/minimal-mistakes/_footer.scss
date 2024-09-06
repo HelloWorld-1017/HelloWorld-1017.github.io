@@ -4,9 +4,9 @@
 
 .page__footer {
   @include clearfix;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   margin-top: 3em;
   color: $muted-text-color;
@@ -14,7 +14,7 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: $footer-background-color;
+  background-color: white;
 
   /* Deactive user selection */
   -webkit-user-select: none;/* Chrome, Safari, Opera */
@@ -55,7 +55,8 @@
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-6;
-  text-align: center;
+  text-align: left; // center
+  color: black;
 }
 
 .page__footer-follow {
@@ -63,6 +64,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    color: black;
   }
 
   li {
@@ -72,6 +74,7 @@
     font-family: $sans-serif-narrow;
     font-size: $type-size-6;
     text-transform: uppercase;
+    color: black;
   }
 
   li + li:before {
@@ -86,7 +89,7 @@
 
   .social-icons {
     padding-bottom: 1em;
-    text-align: center;
+    text-align: left; // center
     a {
       white-space: nowrap;
     }

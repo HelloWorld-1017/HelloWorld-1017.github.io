@@ -1,5 +1,5 @@
 ---
-title: Some Softwares and Web Tools
+title: Softwares and Web Tools
 toc: false
 categories:
  - Collections

@@ -5,6 +5,11 @@
 .footnote {
     color: $link-color;
     text-decoration: none;
+
+    a:hover {
+        text-decoration: underline;
+        color: $link-color;
+    }
 }
 
 .footnote:before {
@@ -34,7 +39,7 @@ a.reversefootnote {
     // vertical-align: super;
     text-decoration: none;
 
-    &:hover {
+    &:hover,&:visited {
         text-decoration: underline;
     }
 }

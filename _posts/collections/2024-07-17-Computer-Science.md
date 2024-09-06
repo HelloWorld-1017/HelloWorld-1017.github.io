@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Computer Science
+title: Computer Science Resources
 toc: false
 categories:
  - Collections

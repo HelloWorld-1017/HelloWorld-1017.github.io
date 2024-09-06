@@ -1,12 +1,12 @@
 ---
-title: Built-in Colors in LaTeX xcolor Package
+title: Built-in Colors in LaTeX `xcolor` Package
 categories:
  - LaTeX
  - Design
  - R
  - MATLAB
 date: 2023-10-17 18:16:22 +0800
-last_modified_at: 2024-08-04 23:28:19 +0800
+last_modified_at: 2024-09-06 07:43:45 +0800
 ---
 
 # 19 base colours (always available)
@@ -823,9 +823,8 @@ disp(struct2table(colors))
 
 **References**
 
-[1] [Extending LaTeX’s color facilities: the xcolor package (v2.14, 2022/06/12), page 39](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/xcolor/xcolor.pdf).
-
-[2] 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
+- [Extending LaTeX’s color facilities: the xcolor package (v2.14, 2022/06/12)](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/xcolor/xcolor.pdf), p. 39.
+- 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
 
 [^3]: [The Colors  of `xcolor` - Garrick](https://www.garrickadenbuie.com/blog/colors-of-xcolor/).
 [^4]: [tidyverse.org](https://www.tidyverse.org/).

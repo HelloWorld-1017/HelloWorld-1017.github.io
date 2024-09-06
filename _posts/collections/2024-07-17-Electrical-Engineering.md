@@ -1,5 +1,5 @@
 ---
-title: Some Resources about Electrical Engineering
+title: Electrical Engineering Resources
 toc: false
 categories:
  - Collections

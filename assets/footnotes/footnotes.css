@@ -7,6 +7,11 @@
 	color: black;
 	padding: 5px 12px;
 	border-radius: 4px;
+	
+	a:hover {
+		text-decoration: underline;
+		color: #0000EE;
+	}
 }
 
 #footnotediv p {

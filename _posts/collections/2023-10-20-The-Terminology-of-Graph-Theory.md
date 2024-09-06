@@ -1,17 +1,12 @@
 ---
-layout: single
-title: Some Terminology of Graph Theory
+title: Terminologies in Graph Theory
 categories:
  - Mathematics
  - Collections
 tag:
  - Graph Theory
 date: 2023-10-20 22:08:34 +0800
-last_modified_at0: 2023-10-20 22:08:34 +0800
-last_modified_at1: 2024-01-15 12:37:43 +0800
-last_modified_at2: 2024-03-23 23:47:14 +0800
-last_modified_at3: 2024-05-23 08:12:15 +0800
-last_modified_at: 2024-05-23 08:12:15 +0800
+last_modified_at: 2024-09-06 08:18:30 +0800
 ---
 
 Recently, I've been learning multivariate normality test. During this process, I found Friedman-Rafsky test, which is proposed by J. H. Friedman and L. C. Rafsky in 1979[^1]. Friedman and Rafsky generalised Wald-Wolfowitz test and Smirnov two-sample test to multivariate case, by replacing the notion of univariate sorted list by **Minimal Spanning Tree** in graph theory. I think this generalisation is really artful and inspiring. I ever know the graph theory is an important branch of mathematics, but I rarely use it. The Friedman and Rafsky's paper gave a brief introduction about some terminology of graph theory, so I recorded down here, and more basic knowledge will be added if I meet it in the future.
@@ -49,7 +44,7 @@ The edge between two nodes can also be called a **tie**[^2].
 
 <br>
 
-# References
+**References**
 
 [^1]: J. H. Friedman and L. C. Rafsky, "Multivariate generalizations of the Wald-Wolfowitz and Smirnov two-sample tests," *Ann. Stat.*, (1979): 697-717.
 [^2]: [Glossary of SNA Terms - People of Medieval Scotland](https://www.poms.ac.uk/help/social-network-analysis/glossary-of-sna-terms/).

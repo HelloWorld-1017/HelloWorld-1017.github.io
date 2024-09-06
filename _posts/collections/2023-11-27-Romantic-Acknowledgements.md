@@ -1,5 +1,5 @@
 ---
-title: Some Romantic Acknowledgements
+title: Romantic Acknowledgements
 toc: false
 categories:
  - Collections

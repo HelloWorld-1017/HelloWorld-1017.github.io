@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
+  background-color: black;
   // border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -58,7 +58,7 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: bold;
+  // font-weight: bold;
   // z-index: 20;
 }
 
@@ -94,6 +94,7 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  color: white;
 
   &--lg {
     padding-right: 2em;

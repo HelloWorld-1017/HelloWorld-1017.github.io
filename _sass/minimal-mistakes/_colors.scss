@@ -476,8 +476,6 @@ $primary-color: $SlateGray4 !default;
 $text-color: black !default;
 $muted-text-color: #393e46 !default;
 $border-color: mix(#fff, #393e46, 75%) !default;
-$masthead-link-color: $text-color !default;
-$masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
 .page__footer {
@@ -567,8 +565,6 @@ $xing-color: #006567 !default;
 $link-color: mix(#000, $info-color, 20%) !default;
 $link-color-hover: mix(#000, $link-color, 55%) !default;
 $link-color-visited: mix(#fff, $link-color, 15%) !default;
-$masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
 $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
 
 /* notices */

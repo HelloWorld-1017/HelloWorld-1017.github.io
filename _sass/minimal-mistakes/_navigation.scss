@@ -186,19 +186,15 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+  background-color: black;
 
   a {
     display: block;
     margin: 0 1rem;
-    color: $masthead-link-color;
+    color: white;
     text-decoration: none;
     -webkit-transition: none;
     transition: none;
-
-    &:hover {
-      color: $masthead-link-color-hover;
-    }
 
     &.site-logo {
       margin-left: 0;
@@ -206,6 +202,7 @@
     }
 
     &.site-title {
+      color: white;
       margin-left: 0;
     }
   }
@@ -252,12 +249,12 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: $primary-color;
-        width: 100%;
-        -webkit-transition: $global-transition;
-        transition: $global-transition;
-        -webkit-transform: scaleX(0) translate3d(0, 0, 0);
-        transform: scaleX(0) translate3d(0, 0, 0); // hide
+        // background: $primary-color;
+        // width: 100%;
+        // -webkit-transition: $global-transition;
+        // transition: $global-transition;
+        // -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+        // transform: scaleX(0) translate3d(0, 0, 0); // hide
       }
 
       &:hover:before {
@@ -289,11 +286,6 @@
       margin: 0;
       padding: 10px 20px;
       font-size: $type-size-5;
-
-      &:hover {
-        color: $masthead-link-color-hover;
-        background: $navicon-link-color-hover;
-      }
     }
 
     &:before {

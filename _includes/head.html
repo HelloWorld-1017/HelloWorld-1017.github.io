@@ -1,31 +1,6 @@
 <meta charset="utf-8">
 
-<head>
-   <script>
-    MathJax = {
-      tex: {
-        tags: 'all',  // should be 'ams', 'none', or 'all'
-        inlineMath: [['$','$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      }
-    };
-  </script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <script>
-    document.addEventListener('wheel', function (e) {
-      if (e.ctrlKey) {
-        e.preventDefault();
-      }
-    }, {
-      capture: false,
-      passive: false
-    });  
-  </script>
-
-  <link href="/assets/fontawesome_v6.6.0/css/all.css" rel="stylesheet" />
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-</head>
+{% include head_scripts.html %}
 
 {% unless site.atom_feed.hide %}
   <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
@@ -37,9 +12,3 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-
-{% if site.head_scripts %}
-  {% for script in site.head_scripts %}
-    <script src="{{ script | relative_url }}"></script>
-  {% endfor %}
-{% endif %}

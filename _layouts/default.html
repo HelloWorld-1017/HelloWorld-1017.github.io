@@ -8,7 +8,6 @@
     {% include head.html %}
   </head>
 
-
   {% if page.classes or layout.classes %}
     {% assign CLASSES = page.classes | default: layout.classes %}
   {% endif %}
@@ -31,6 +30,6 @@
       <footer>{% include_cached footer.html %}</footer>
     </div>
 
-    {% include scripts.html %}
+    {% include footer_scripts.html %}
   </body>
 </html>

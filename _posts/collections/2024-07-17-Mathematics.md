@@ -5,10 +5,8 @@ categories:
  - Collections
  - Mathematics
 date: 2024-07-17 10:28:34 +0800
-last_modified_at: 2024-07-17 10:28:34 +0800
+last_modified_at: 2024-09-08 11:02:20 +0800
 ---
-
-<br>
 
 **Books**
 
@@ -25,30 +23,28 @@ last_modified_at: 2024-07-17 10:28:34 +0800
   - [Estimation of dependences based on empirical data (Second Edition)](https://link.springer.com/book/10.1007/0-387-34239-7), Vladimir Vapnik. 2006.
   - [The nature of statistical learning theory (Second Edition)](https://link.springer.com/book/10.1007/978-1-4757-3264-1), Vladimir Vapnik, 2013.
   - [Measures of complexity: festschrift for alexey chervonenkis](https://link.springer.com/book/10.1007/978-3-319-21852-6), Vladimir Vapnik and A. Ya Chervonenkis. 2015.
-
--  Matrix
+- Matrix
 
   - [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf), K. B. Petersen and M. S. Pedersen.
   - [The Art of Linear Algebra: Graphic Notes on “Linear Algebra for Everyone”](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra/blob/main/The-Art-of-Linear-Algebra.pdf), Kenji Hiranabe.
-
+  - [Matrix Computations](https://math.ecnu.edu.cn/~jypan/Teaching/books/2013%20Matrix%20Computations%204th.pdf), Gene H. Golub, Charles F. Van Loan.
 - Numerical analysis
 
   - [Numerical Analysis (Second Edition)](https://eclass.aueb.gr/modules/document/file.php/MISC249/Sauer%20-%20Numerical%20Analysis%202e.pdf), T. Sauer.
   - [Numerical Analysis (Ninth Edition)](https://faculty.ksu.edu.sa/sites/default/files/numerical_analysis_9th.pdf), R. L. Burden.
-
-- Optimization Theory (Operation Research)
+- Mathematical analysis
+  - [A Course of Pure Mathematics](https://www.gutenberg.org/files/38769/38769-pdf.pdf), by G. H. Hardy.
+  - [Inequalities](https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/inequalities-hardy-littlewood-polya.pdf), G. H. Hardy, J. E. Littlewood, G. Polya.
+- Optimization theory (Operation research)
 
   - [Optimization In Operations Research (Second Edition)](https://industri.fatek.unpatti.ac.id/wp-content/uploads/2019/03/173-Optimization-in-Operations-Research-Ronald-L.-Rardin-Edisi-2-2015.pdf), Ronald L. Rardin.
-
-- Graph Theory
+- Graph theory
 
   - [Graph Theory (Fourth Edition)](https://www.maths.ed.ac.uk/~v1ranick/papers/wilsongraph.pdf), R. J. Wilson.
-
--  Fractals
+- Fractals
 
   - [Fractals Everywhere (Second Edition)](https://mate.dm.uba.ar/~umolter/materias/referencias/B.pdf), Michael F. Barnsley.
-
-- Popular Science
+- Popular science
 
   - [Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics](http://tomlr.free.fr/Math%E9matiques/Fichiers%20Claude/Nombres/Derbyshire%20-%20Prime%20Obsession%20-%20Bernhard%20Riemann%20and%20the%20Greatest%20Unsolved%20Problem%20in%20MathematicsAAA.pdf), John Derbyshire.
 

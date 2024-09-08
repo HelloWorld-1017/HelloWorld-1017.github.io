@@ -1,6 +1,5 @@
 /* NAVIGATION */
 
-
 /* Post pagination navigation links */
 .pagination {
   @include clearfix();
@@ -9,11 +8,7 @@
   padding-top: 1em;
   width: 100%;
 
-  /* Deactive user selection */
-  -webkit-user-select: none;/* Chrome, Safari, Opera */
-  -moz-user-select: none;/* Firefox */
-  -ms-user-select: none;/* IE 10 and IE 11 */
-  user-select: none;/* Standard syntax */
+  @extend %deactive-user-selection;
 
   ul {
     margin: 0;
@@ -452,11 +447,7 @@
   background-color: $background-color;
   border-collapse: collapse;
 
-  /* Deactive user selection */
-  -webkit-user-select: none;/* Chrome, Safari, Opera */
-  -moz-user-select: none;/* Firefox */
-  -ms-user-select: none;/* IE 10 and IE 11 */
-  user-select: none;/* Standard syntax */
+  @extend %deactive-user-selection;
   
   .nav__title {
     color: black;

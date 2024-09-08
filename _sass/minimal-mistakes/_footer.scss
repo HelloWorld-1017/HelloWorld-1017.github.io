@@ -13,12 +13,8 @@
   animation-delay: 0.45s;
   color: $footer-color;
   background-color: $footer-background-color;
-  
-  /* Deactive user selection */
-  -webkit-user-select: none;/* Chrome, Safari, Opera */
-  -moz-user-select: none;/* Firefox */
-  -ms-user-select: none;/* IE 10 and IE 11 */
-  user-select: none;/* Standard syntax */
+
+  @extend %deactive-user-selection;
 
   footer {
     @include clearfix;

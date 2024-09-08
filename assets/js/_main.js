@@ -1,6 +1,4 @@
-/* ==========================================================================
-   jQuery plugin settings and other scripts
-   ========================================================================== */
+/* jQuery plugin settings and other scripts */
 
 $(document).ready(function() {
   // FitVids init

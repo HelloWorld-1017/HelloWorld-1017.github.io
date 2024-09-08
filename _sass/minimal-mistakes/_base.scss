@@ -1,6 +1,4 @@
-/* ==========================================================================
-   BASE ELEMENTS
-   ========================================================================== */
+/* BASE ELEMENTS */
 
 html {
   /* sticky footer fix */
@@ -196,12 +194,9 @@ li ol {
   margin-top: 0.5em;
 }
 
-/*
-   Media and embeds
-   ========================================================================== */
+/* Media and embeds */
 
 /* Figures and images */
-
 figure {
   display: -webkit-box;
   display: flex;
@@ -280,9 +275,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/*
-   Navigation lists
-   ========================================================================== */
+/* Navigation lists */
 
 /**
  * Removes margins, padding, and bullet points from navigation lists
@@ -323,9 +316,7 @@ nav {
   }
 }
 
-/*
-   Global animation transition
-   ========================================================================== */
+/* Global animation transition */
 
 b,
 i,

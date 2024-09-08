@@ -1,6 +1,4 @@
-/* ==========================================================================
-   ARCHIVE
-   ========================================================================== */
+/* ARCHIVE */
 
 .archive {
   margin-top: 1em;
@@ -128,10 +126,7 @@
   }
 }
 
-/*
-   List view
-   ========================================================================== */
-
+/* List view */
 .list__item {
   .page__meta {
     margin: 0 0 4px;
@@ -139,9 +134,7 @@
   }
 }
 
-/*
-   Grid view
-   ========================================================================== */
+/* Grid view */
 
 .archive {
   .grid__wrapper {
@@ -242,9 +235,7 @@
   }
 }
 
-/*
-   Features
-   ========================================================================== */
+/* Features */
 
 .feature__wrapper {
   @include clearfix();
@@ -429,7 +420,6 @@
 }
 
 /* Place inside an archive layout */
-
 .archive {
   .feature__wrapper {
     .archive__item-title {
@@ -446,10 +436,7 @@
   }
 }
 
-/*
-   Wide Pages
-   ========================================================================== */
-
+/* Wide Pages */
   .wide {
   .archive {
     @include breakpoint($large) {
@@ -463,7 +450,6 @@
 }
 
 /* Place inside a single layout */
-
 .layout--single {
 	.feature__wrapper {
 		display: inline-block;

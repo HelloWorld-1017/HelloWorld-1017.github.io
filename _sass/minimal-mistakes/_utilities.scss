@@ -1,11 +1,6 @@
-/* ==========================================================================
-   UTILITY CLASSES
-   ========================================================================== */
+/* UTILITY CLASSES */
 
-/*
-   Visibility
-   ========================================================================== */
-
+/* Visibility */
 /* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
 
 .hidden,
@@ -61,10 +56,7 @@ body:hover .visually-hidden button {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-/*
-   Type
-   ========================================================================== */
-
+/* Type */
 .text-left {
   text-align: left;
 }
@@ -85,9 +77,7 @@ body:hover .visually-hidden button {
   white-space: nowrap;
 }
 
-/*
-   Task lists
-   ========================================================================== */
+/* Task lists */
 
 .task-list {
   padding:0;
@@ -106,10 +96,7 @@ body:hover .visually-hidden button {
   margin-left: 1em;
 }
 
-/*
-   Alignment
-   ========================================================================== */
-
+/* Alignment */
 /* clearfix */
 
 .cf {
@@ -122,12 +109,8 @@ body:hover .visually-hidden button {
   width: 100%;
 }
 
-/*
-   Images
-   ========================================================================== */
-
+/* Images */
 /* image align left */
-
 .align-left {
   display: block;
   margin-left: auto;
@@ -140,7 +123,6 @@ body:hover .visually-hidden button {
 }
 
 /* image align right */
-
 .align-right {
   display: block;
   margin-left: auto;
@@ -153,7 +135,6 @@ body:hover .visually-hidden button {
 }
 
 /* image align center */
-
 .align-center {
   display: block;
   margin-left: auto;
@@ -161,7 +142,6 @@ body:hover .visually-hidden button {
 }
 
 /* file page content container */
-
 .full {
   @include breakpoint($large) {
     margin-right: -1 * span(2.5 of 12) !important;
@@ -170,10 +150,7 @@ body:hover .visually-hidden button {
 
 
 
-/*
-   Navicons
-   ========================================================================== */
-
+/* Navicons */
 .navicon {
   position: relative;
   width: $navicon-width;
@@ -270,10 +247,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Sticky, fixed to top content
-   ========================================================================== */
-
+/* Sticky, fixed to top content */
 .sticky {
   @include breakpoint($large) {
     @include clearfix();
@@ -287,10 +261,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Wells
-   ========================================================================== */
-
+/* Wells */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -301,10 +272,7 @@ body:hover .visually-hidden button {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/*
-   Modals
-   ========================================================================== */
-
+/* Modals */
 .show-modal {
   overflow: hidden;
   position: relative;
@@ -355,19 +323,13 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Required
-   ========================================================================== */
-
+/* Required */
 .required {
   color: $danger-color;
   font-weight: bold;
 }
 
-/*
-   Google Custom Search Engine
-   ========================================================================== */
-
+/* Google Custom Search Engine */
 .gsc-control-cse {
   table,
   tr,
@@ -376,10 +338,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Responsive Video Embed
-   ========================================================================== */
-
+/* Responsive Video Embed */
 .responsive-video-container {
   position: relative;
   margin-bottom: 1em;

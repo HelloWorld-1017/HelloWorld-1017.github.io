@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Forms
-   ========================================================================== */
+/* Forms */
 
 form {
   margin: 0 0 5px 0;
@@ -196,9 +194,7 @@ input[type="hidden"] {
   margin-left: 10px;
 }
 
-/*
-     Disabled state
-     ========================================================================== */
+/* Disabled state */
 
 input[disabled],
 select[disabled],
@@ -210,9 +206,7 @@ textarea[readonly] {
   cursor: not-allowed;
 }
 
-/*
-     Focus & active state
-     ========================================================================== */
+/* Focus & active state */
 
 input:focus,
 textarea:focus {
@@ -230,9 +224,7 @@ select:focus {
   box-shadow: none;
 }
 
-/*
-     Help text
-     ========================================================================== */
+/* Help text */
 
 .help-block,
 .help-inline {
@@ -251,9 +243,7 @@ select:focus {
   padding-left: 5px;
 }
 
-/*
-     .form-group
-     ========================================================================== */
+/* .form-group */
 
 .form-group {
   margin-bottom: 5px;
@@ -261,9 +251,7 @@ select:focus {
   border-width: 0;
 }
 
-/*
-     .form-inline
-     ========================================================================== */
+/* .form-inline */
 
 .form-inline input,
 .form-inline textarea,
@@ -291,9 +279,7 @@ select:focus {
   margin-right: 3px;
 }
 
-/*
-     .form-search
-     ========================================================================== */
+/* .form-search */
 
 .form-search input,
 .form-search textarea,
@@ -328,9 +314,7 @@ select:focus {
   margin-right: 3px;
 }
 
-/*
-     .form--loading
-     ========================================================================== */
+/* .form--loading */
 
 .form--loading:before {
   content: "";

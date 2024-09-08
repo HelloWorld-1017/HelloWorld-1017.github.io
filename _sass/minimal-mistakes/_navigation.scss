@@ -1,55 +1,7 @@
-/* ==========================================================================
-   NAVIGATION
-   ========================================================================== */
+/* NAVIGATION */
 
-/*
-   Breadcrumb navigation links
-   ========================================================================== */
 
-.breadcrumbs {
-  @include clearfix;
-  margin: 0 auto;
-  max-width: 100%;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-family: $sans-serif;
-  -webkit-animation: $intro-transition;
-  animation: $intro-transition;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-
-  @include breakpoint($x-large) {
-    max-width: $x-large;
-  }
-
-  ol {
-    padding: 0;
-    list-style: none;
-    font-size: $type-size-6;
-
-    @include breakpoint($large) {
-      float: right;
-      width: calc(100% - #{$right-sidebar-width-narrow});
-    }
-
-    @include breakpoint($x-large) {
-      width: calc(100% - #{$right-sidebar-width});
-    }
-  }
-
-  li {
-    display: inline;
-  }
-
-  .current {
-    font-weight: bold;
-  }
-}
-
-/*
-     Post pagination navigation links
-     ========================================================================== */
-
+/* Post pagination navigation links */
 .pagination {
   @include clearfix();
   float: left;
@@ -87,8 +39,7 @@
       text-decoration: none;
       // color: $muted-text-color;
       color: black;
-      // border: 1px solid mix(#000, $border-color, 25%);
-      border: 1px solid black;
+      border: $pagination-color;
       border-radius: 0;
 
       &:hover {
@@ -97,9 +48,8 @@
 
       &.current,
       &.current.disabled {
-        color: #fff;
-        // background: $primary-color;
-        background-color: black;
+        color: #fff;;
+        background-color: $pagination-current-background-color;
       }
 
       &.disabled {
@@ -173,10 +123,7 @@
   border-top: 1px solid $border-color;
 }
 
-/*
-     Priority plus navigation
-     ========================================================================== */
-
+/* Priority plus navigation */
 .greedy-nav {
   position: relative;
   display: -webkit-box;
@@ -186,12 +133,12 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background-color: black;
+  background-color: $masthead-background-color;
 
   a {
     display: block;
     margin: 0 1rem;
-    color: white;
+    color: $masthead-color;
     text-decoration: none;
     -webkit-transition: none;
     transition: none;
@@ -202,7 +149,7 @@
     }
 
     &.site-title {
-      color: white;
+      color: $masthead-color;
       margin-left: 0;
     }
   }
@@ -335,10 +282,7 @@
   }
 }
 
-/*
-     Navigation list
-     ========================================================================== */
-
+/* Navigation list */
 .nav__list {
   margin-bottom: 1.5em;
 
@@ -500,10 +444,7 @@
   border-bottom: 1px solid $border-color;
 }
 
-/*
-     Table of contents navigation
-     ========================================================================== */
-
+/* Table of contents navigation */
 .toc {
   width: 100%;
   font-family: $sans-serif-narrow;

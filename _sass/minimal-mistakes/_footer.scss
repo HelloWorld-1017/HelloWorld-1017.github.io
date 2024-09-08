@@ -1,7 +1,4 @@
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
+/* FOOTER */
 .page__footer {
   @include clearfix;
   float: center;
@@ -14,9 +11,9 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: black;
-  color: white;
-
+  color: $footer-color;
+  background-color: $footer-background-color;
+  
   /* Deactive user selection */
   -webkit-user-select: none;/* Chrome, Safari, Opera */
   -moz-user-select: none;/* Firefox */
@@ -57,8 +54,8 @@
   font-family: $global-font-family;
   font-size: $type-size-6;
   text-align: left; // center
-  color: white;
-  background-color: black;
+  color: $footer-color;
+  background-color: $footer-background-color;
 }
 
 .page__footer-follow {
@@ -66,8 +63,8 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    color: white;
-    background-color: black;
+    color: $footer-color;
+    background-color: $footer-background-color;
   }
 
   li {
@@ -77,8 +74,8 @@
     font-family: $sans-serif-narrow;
     font-size: $type-size-6;
     text-transform: uppercase;
-    color: white;
-    background-color: black;
+    color: $footer-color;
+    background-color: $footer-background-color;
   }
 
   li + li:before {

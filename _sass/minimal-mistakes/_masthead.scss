@@ -1,13 +1,11 @@
-/* ==========================================================================
-   MASTHEAD
-   ========================================================================== */
+/* MASTHEAD */
 
 .masthead {
   top: 0;
   left: 0;
   right: 0;
-  background-color: black;
-  // border-bottom: 1px solid $border-color;
+  background-color: $masthead-background-color;
+  border-bottom: $masthead-border-bottom;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -58,8 +56,8 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  // font-weight: bold;
-  // z-index: 20;
+  color: $masthead-title-color;
+  font-weight: $masthead-title-font-weight;
 }
 
 .site-subtitle {
@@ -94,7 +92,7 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
-  color: white;
+  color: $masthead-menu-item-color;
 
   &--lg {
     padding-right: 2em;

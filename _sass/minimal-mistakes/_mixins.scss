@@ -1,6 +1,4 @@
-/* ==========================================================================
-   MIXINS
-   ========================================================================== */
+/* MIXINS */
 
 %tab-focus {
   /* Default*/
@@ -10,19 +8,14 @@
   outline-offset: -2px;
 }
 
-/*
-   em function
-   ========================================================================== */
+/* em function */
 
 @function em($target, $context: $doc-font-size) {
   @return ($target / $context) * 1em;
 }
 
 
-/*
-   Bourbon clearfix
-   ========================================================================== */
-
+/* Bourbon clearfix */
 /*
   * Provides an easy way to include a clearfix for containing floats.
   * link http://cssmojo.com/latest_new_clearfix_so_far/
@@ -52,11 +45,8 @@
   }
 }
 
-/*
-   Compass YIQ Color Contrast
-   https://github.com/easy-designs/yiq-color-contrast
-   ========================================================================== */
-
+/* Compass YIQ Color Contrast */
+// https://github.com/easy-designs/yiq-color-contrast
 @function yiq-is-light(
   $color,
   $threshold: $yiq-contrasted-threshold

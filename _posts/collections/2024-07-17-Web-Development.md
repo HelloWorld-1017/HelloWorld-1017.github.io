@@ -5,7 +5,7 @@ categories:
  - Collections
  - Web Development
 date: 2024-07-17 11:12:38 +0800
-last_modified_at: 2024-08-05 16:41:00 +0800
+last_modified_at: 2024-09-08 09:54:32 +0800
 ---
 
 **Books**
@@ -25,10 +25,11 @@ last_modified_at: 2024-08-05 16:41:00 +0800
 
 - JavaScript CDN: [jsDelivr - A free, fast, and reliable CDN for JS and open source](https://www.jsdelivr.com/).
 - [Font Awesome](https://fontawesome.com/).
+- [Academicons](https://jpswalsh.github.io/academicons/).
+- [Shields.io](https://shields.io/).
 - [GetEmoji - Copy \& Paste All Emojis From The Emoji Keyboard](https://getemoji.com/).
 - Unicode characters
   - [Unicode - Wikipedia](https://en.wikipedia.org/wiki/Unicode).
   - [List of Unicode characters - Wikipedia](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
   - [SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode](https://symbl.cc/en/).
-- [Shields.io](https://shields.io/).
 - Internal website search engine: [Algolia](https://www.algolia.com/).

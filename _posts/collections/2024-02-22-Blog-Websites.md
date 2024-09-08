@@ -7,7 +7,7 @@ tags:
  - Jekyll
  - HTML
 date: 2024-02-22 22:37:33 +0800
-last_modified_at: 2024-08-28 20:08:15 +0800
+last_modified_at: 2024-09-08 09:53:35 +0800
 ---
 
 > In this post, I want to record some blog websites I’ve ever seen. They are basically static websites, and hosted in GitHub. All of these websites are found when I was searching information online. I think their website styles or certain elements are simple but beautiful. So, if I need to improve my personal website one day, they could be good references, because I could view their source codes in GitHub or inspect their elements in browser debug mode. Actually, I had been doing it.
@@ -61,7 +61,8 @@ last_modified_at: 2024-08-28 20:08:15 +0800
 
 ## Hexo websites
 
-- [jerryc127/hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly/)
+- [jerryc127/hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly/).
+- [HugoBlox/hugo-blox-builder](https://github.com/HugoBlox/hugo-blox-builder?tab=readme-ov-file).
 
 ## Other websites
 

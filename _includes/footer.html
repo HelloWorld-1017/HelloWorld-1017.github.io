@@ -3,13 +3,15 @@
     <!-- <li><a href="https://getemoji.com/"><i class="fa-solid fa-face-smile-wink" aria-hidden="true" style="font-size:36px;"></i></a></li> -->
     <li><a href="mailto:maqinghua1017@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true" style="font-size:36px;"></i></a></li>
     <li><a href="https://github.com/HelloWorld-1017"><i class="fa-brands fa-github" aria-hidden="true" style="font-size:36px;"></i></a></li>
-    <li><a href="https://scholar.google.com/citations?user=otVTjbgAAAAJ"><i class="fa-brands fa-google-scholar" aria-hidden="true" style="font-size:36px;"></i></a></li>
-    <li><a href="https://orcid.org/0000-0002-8983-7477"><i class="fa-brands fa-orcid" aria-hidden="true" style="font-size:36px;"></i></a></li>
+    <li><a href="https://orcid.org/0000-0002-8983-7477"><i class="ai ai-orcid ai-4x" aria-hidden="true"style="font-size:36px;"></i></a></li>
+    <li><a href="https://scholar.google.com/citations?user=otVTjbgAAAAJ"><i class="ai ai-google-scholar ai-4x" aria-hidden="true" style="font-size:36px;"></i></a></li>
+    <li><a href="https://ieeexplore.ieee.org/author/37089647807"><i class="ai ai-ieee ai-4x" aria-hidden="true" style="font-size:36px;"></i></a></li>
+    <li><a href="https://www.webofscience.com/wos/author/record/GZK-2344-2022"><i class="ai ai-clarivate ai-4x" aria-hidden="true" style="font-size:36px;"></i></a></li>
     <li>
       {% unless site.atom_feed.hide %}
-        <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">
-          <i class="fa-solid fa-rss-square" aria-hidden="true" style="font-size:36px;"></i>
-        </a>
+      <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">
+        <i class="fa-solid fa-rss-square" aria-hidden="true" style="font-size:36px;"></i>
+      </a>
       {% endunless %}
     </li>
     <li><span id="timeSpan" style="font-weight:bold;" title="The website was built on 16 July, 2022."></span></li>

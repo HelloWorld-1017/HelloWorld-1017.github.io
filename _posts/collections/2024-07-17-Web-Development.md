@@ -5,23 +5,37 @@ categories:
  - Collections
  - Web Development
 date: 2024-07-17 11:12:38 +0800
-last_modified_at: 2024-09-08 10:39:16 +0800
+last_modified_at: 2024-09-08 20:28:21 +0800
 ---
 
-**Books**
-
-- CSS in Depth, Keith Grant.
-
-**Documentations**
+**HTML**
 
 - [HTML: HyperText Markup Language \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML).
+
+**CSS**
+
+- [CSS in Depth](https://www.k0d.cc/storage/books/HTML%20+%20CSS/[ENG]%20CSS%20in%20Depth%20[Grant,%202018].pdf), Keith Grant, 2018.
 - [CSS: Cascading Style Sheets \| MDN](https://developer.mozilla.org/en-US/docs/Web/CSS).
+
+**JavsScript**
+
 - [JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+- JavaScript CDN: [jsDelivr - A free, fast, and reliable CDN for JS and open source](https://www.jsdelivr.com/).
+
+**Vue**
+
 - [Getting started with Vue - Learn web development \| MDN](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started).
-  - [为什么Vue在国际上越来越没影响力？ - 尤雨溪的回答 - 知乎](https://www.zhihu.com/question/472193255/answer/2235015723).
+- [为什么Vue在国际上越来越没影响力？ - 尤雨溪的回答 - 知乎](https://www.zhihu.com/question/472193255/answer/2235015723).
+
+**Django**
+
 - [Django documentation \| Django documentation \| Django](https://docs.djangoproject.com/en/5.0/).
 
-**Icons**
+**Symbols & Icons**
+
+- Unicode characters
+  - [Unicode](https://en.wikipedia.org/wiki/Unicode), [List of Unicode characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
+  - [SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode](https://symbl.cc/en/).
 
 - [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#font-installation): Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).
 - [Font Awesome](https://fontawesome.com/).
@@ -30,11 +44,6 @@ last_modified_at: 2024-09-08 10:39:16 +0800
 - [Shields.io](https://shields.io/).
 - [GetEmoji](https://getemoji.com/).
 
-**Tool websites**
+**Tools**
 
-- JavaScript CDN: [jsDelivr - A free, fast, and reliable CDN for JS and open source](https://www.jsdelivr.com/).
-- Unicode characters
-  - [Unicode - Wikipedia](https://en.wikipedia.org/wiki/Unicode).
-  - [List of Unicode characters - Wikipedia](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
-  - [SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode](https://symbl.cc/en/).
 - Internal website search engine: [Algolia](https://www.algolia.com/).

@@ -6,28 +6,22 @@ tags:
  - CSS
  - HTML
 date: 2024-09-12 08:27:59 +0800
-last_modified_at: 2024-09-12 08:27:59 +0800
-published: false
+last_modified_at: 2024-09-14 15:45:07 +0800
 ---
 
 # CSS selectors
 
-A <i class="term">CSS rule</i> consists of a <i class="term">selector</i> and a <i class="term">declaration block</i>[^1], 
-
-- The selector points to the HTML element that is to style.
-- The declaration block contains one or more declarations separated by semicolons.
-- Each declaration includes a CSS property name and a value, separated by a colon.
-- Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
-
-e.g.
+A <i class="term">CSS rule</i> consists of a <i class="term">selector</i> and a <i class="term">declaration block</i>[^1], e.g.
 
 ```css
 h1 {color:blue; font-size:12px;}
 ```
 
-wherein `h1` is a selector, and `{color:blue; font-size:12px;}` is a declaration block.
+wherein `h1` is a selector, and `{color:blue; font-size:12px;}` is a declaration block. The declaration block includes two <i class="term">declarations</i>, `color:blue` and `font-size:12px`, in which `color` and `font-size` are <i class="term">property names</i> and `blue` and `12px` and corresponding <i class="term">values</i>.
 
-In this process, CSS selectors are used to "find" (or select) the HTML elements we want to style, and they can be classified into following five categories[^2].
+Basically, CSS selectors are used to "find" (or select) HTML elements that are to style, and they can be classified into following five kinds[^2].
+
+<br>
 
 **(1) Simple selectors[^2] (select elements based on name, id, class)**
 
@@ -64,7 +58,7 @@ In this process, CSS selectors are used to "find" (or select) the HTML elements 
 | [`:enabled`](https://www.w3schools.com/cssref/sel_enabled.asp) | `input:enabled`         | Selects every enabled `<input>` element                      |
 | [`:first-child`](https://www.w3schools.com/cssref/sel_firstchild.asp) | `p:first-child`         | Selects every `<p>` elements that is the first child of its parent |
 | [`:first-of-type`](https://www.w3schools.com/cssref/sel_first-of-type.asp) | `p:first-of-type`       | Selects every `<p>` element that is the first `<p>` element of its parent |
-| [`:focus`](https://www.w3schools.com/cssref/sel_focus.asp)   | `input:focus`           | Selects the `<input>`element that has focus                  |
+| [`:focus`](https://www.w3schools.com/cssref/sel_focus.asp)   | `input:focus`           | Selects the `<input>` element that has focus                 |
 | [`:hover`](https://www.w3schools.com/cssref/sel_hover.asp)   | `a:hover`               | Selects links on mouse over                                  |
 | [`:in-range`](https://www.w3schools.com/cssref/sel_in-range.asp) | `input:in-range`        | Selects `<input>` elements with a value within a specified range |
 | [`:invalid`](https://www.w3schools.com/cssref/sel_invalid.asp) | `input:invalid`         | Selects all `<input>` elements with an invalid value         |
@@ -99,7 +93,7 @@ In this process, CSS selectors are used to "find" (or select) the HTML elements 
 | [`::before`](https://www.w3schools.com/cssref/sel_before.asp) | `p::before`       | Insert something before the content of each `<p>` element    |
 | [`::first-letter`](https://www.w3schools.com/cssref/sel_firstletter.asp) | `p::first-letter` | Selects the first letter of each `<p>` element               |
 | [`::first-line`](https://www.w3schools.com/cssref/sel_firstline.asp) | `p::first-line`   | Selects the first line of each `<p>` element                 |
-| [`::marker`](https://www.w3schools.com/cssref/sel_marker.asp) | ` ::marker`       | Selects the markers of list items                            |
+| [`::marker`](https://www.w3schools.com/cssref/sel_marker.asp) | `::marker`        | Selects the markers of list items                            |
 | [`::selection`](https://www.w3schools.com/cssref/sel_selection.asp) | `p::selection`    | Selects the portion of an element that is selected by a user |
 
 <br>
@@ -110,7 +104,7 @@ In this process, CSS selectors are used to "find" (or select) the HTML elements 
 | ------------------------------------------------------------ | ---------------------- | ------------------------------------------------------------ |
 | [`[attribute]`](https://www.w3schools.com/cssref/sel_attribute.php) | `[target]`             | Selects all elements with a `target` attribute               |
 | [`[attribute=value]`](https://www.w3schools.com/cssref/sel_attribute_value.php) | `[target="_blank"]`    | Selects all elements with `target="_blank"`                  |
-| [`[attribute~=value]`](https://www.w3schools.com/cssref/sel_attribute_value_contains.php) | `[title~="flower"]`    | Selects all elements with a title attribute that contains a space-separated list of words, one of which is `"flower"` |
+| [`[attribute~=value]`](https://www.w3schools.com/cssref/sel_attribute_value_contains.php) | `[title~="flower"]`    | Selects all elements with a `title` attribute that contains a space-separated list of words, one of which is `"flower"` |
 | [`[attribute|=value]`](https://www.w3schools.com/cssref/sel_attribute_value_lang.php) | `[lang|="en"]`         | Selects all elements with a `lang` attribute value starting with `"en"` |
 | [`[attribute^=value]`](https://www.w3schools.com/cssref/sel_attr_begin.php) | `a[href^="https"]`     | Selects all `<a>` elements with a `href` attribute value starting with `"https"` |
 | [`[attribute$=value]`](https://www.w3schools.com/cssref/sel_attr_end.php) | `a[href$=".pdf"]`      | Selects all `<a>` elements with a `href` attribute value ending with `".pdf"` |
@@ -192,7 +186,7 @@ The <i class="term">class selector</i> selects HTML elements with a specific cla
 </html>
 ```
 
-You can also specify that only specific HTML elements should be affected by a class. Like in the following example, only `<p>` elements with `class="center"` will be red and center-aligned, [`html4.html`](/webpages/2024-09-12/html4.html):
+We can also select those specific HTML elements with specific class. Like in the following example, only `<p>` elements with `class="center"` will be red and center-aligned, [`html4.html`](/webpages/2024-09-12/html4.html):
 
 ```html
 <!DOCTYPE html>
@@ -245,7 +239,7 @@ HTML elements can also refer to more than one class, [`html5.html`](/webpages/20
 
 ## Universal selector
 
-The <i class="term">universal selector</i> `*` selects all HTML elements on the page, [`html6.html`](/webpages/2024-09-12/html6.html):
+The <i class="term">universal selector</i> `*` selects all HTML elements on the webpage, [`html6.html`](/webpages/2024-09-12/html6.html):
 
 ```html
 <!DOCTYPE html>
@@ -271,7 +265,7 @@ The <i class="term">universal selector</i> `*` selects all HTML elements on the 
 
 ## Grouping selector
 
-The <i class="term">grouping selector</i> selects all the HTML elements with the same style definitions. It will be better to group the selectors, to minimize the code, [`html7.html`](/webpages/2024-09-12/html7.html):
+The <i class="term">grouping selector</i> selects all the HTML elements with the same style definitions. It will be better to group selectors to minimize the code, [`html7.html`](/webpages/2024-09-12/html7.html):
 
 ```html
 <!DOCTYPE html>
@@ -302,18 +296,16 @@ The <i class="term">grouping selector</i> selects all the HTML elements with the
 
 # Combinator selectors
 
-A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.[^3]
-
-There are four different combinators in CSS:
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a <i class="term">combinator</i>.[^3] There are four different combinators in CSS:
 
 - descendant selector (space)
-- child selector (>)
-- adjacent sibling selector (+)
-- general sibling selector (~)
+- child selector (`>`)
+- adjacent sibling selector (`+`)
+- general sibling selector (`~`)
 
 ## Descendant selector vs. Child selector (`>`)
 
-The <i class="term">descendant selector</i> matches <i class="emphasize">all</i> elements that are descendants of a specified element, [`html8.html`](/webpages/2024-09-12/html8.html):
+The <i class="term">descendant selector</i> matches all elements that are <i class="emphasize">descendants</i> of a specified element, [`html8.html`](/webpages/2024-09-12/html8.html):
 
 ```html
 <!DOCTYPE html>
@@ -397,7 +389,7 @@ The <i class="term">adjacent sibling selector</i> is used to select an element t
 </html>
 ```
 
-The <i class="term">general sibling selector</i> selects <i class="emphasize">all</i> elements that are next siblings of a specified element, [`html11.html`](/webpages/2024-09-12/html11.html):
+The <i class="term">general sibling selector</i> selects <i class="emphasize">all</i> elements that are <i class="emphasize">next siblings</i> of a specified element, [`html11.html`](/webpages/2024-09-12/html11.html):
 
 ```html
 <!DOCTYPE html>
@@ -427,15 +419,13 @@ The <i class="term">general sibling selector</i> selects <i class="emphasize">al
 
 # Pseudo-class selectors
 
-A pseudo-class is used to define a special state of an element.[^4]
-
-For example, it can be used to:
+A <i class="term">pseudo-class</i> is used to define a <i class="emphasize">special state</i> of an element.[^4] For example, it can be used to:
 
 - Style an element when a user mouses over it;
 - Style visited and unvisited links differently;
 - Style an element when it gets focus.
 
-The syntax of pseudo-classes:
+The syntax of pseudo-classes is:
 
 ```scss
 selector:pseudo-class {
@@ -482,9 +472,9 @@ Links can be displayed in different ways, [`html12.html`](/webpages/2024-09-12/h
 </html>
 ```
 
-**Note:** `a:hover` MUST come after `a:link` and `a:visited` in the CSS definition in order to be effective! `a:active` MUST come after `a:hover` in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.
+Note that `a:hover` must come after `a:link` and `a:visited` in the CSS definition in order to be effective. `a:active` must come after `a:hover` in the CSS definition in order to be effective. Pseudo-class names are not case-sensitive.
 
-## Pseudo-classes and HTML classes
+## Pseudo-classes for a specific HTML class
 
 <i class="term">Pseudo-classes</i> can be combined with only a specific HTML class, [`html13.html`](/webpages/2024-09-12/html13.html):
 
@@ -507,8 +497,6 @@ Links can be displayed in different ways, [`html12.html`](/webpages/2024-09-12/h
 
 </html>
 ```
-
-only functional for the second `<a>` tag.
 
 ## Hover on `<div>`
 
@@ -542,7 +530,7 @@ An example of using the `:hover` pseudo-class on a `<div>` element, [`html14.htm
 
 ## Simple tooltip hover
 
-Hover over a `<div>` element to show a `<p>` element (like a tooltip), [`html15.html`](/webpages/2024-09-12/html15.html):
+Hover over a `<div>` element to show a `<p>` element, i.e. a tooltip, [`html15.html`](/webpages/2024-09-12/html15.html):
 
 ```html
 <!DOCTYPE html>
@@ -577,11 +565,9 @@ The text wrapped in the `<p>` tag outside the `<div>` block is not, and never, v
 
 ## The `:first-child` pseudo-class
 
-The `:first-child` pseudo-class matches a specified element that is the first child of another element.[^7]
+The `:first-child` pseudo-class[^7] matches a specified element that is the first child of another element.
 
-**(1) Match the first `<p>` element**
-
-In the following example, the selector matches any `<p>` element that is the first child of any element, [`html16.html`](/webpages/2024-09-12/html16.html):
+**(1) Match the first `<p>` element**: In the following example, the selector matches any `<p>` element that is the first child of any element, [`html16.html`](/webpages/2024-09-12/html16.html):
 
 ```html
 <!DOCTYPE html>
@@ -608,9 +594,7 @@ In the following example, the selector matches any `<p>` element that is the fir
 </html>
 ```
 
-**(2) Match the `<i>` element in all `<p>` elements**
-
-In the following example, the selector matches all `<i>` elements in `<p>` elements that are the first child of another element, [`html17.html`](/webpages/2024-09-12/html17.html):
+**(2) Match the `<i>` element in all `<p>` elements**: In the following example, the selector matches all `<i>` elements in `<p>` elements that are the first child of another element, [`html17.html`](/webpages/2024-09-12/html17.html):
 
 ```html
 <!DOCTYPE html>
@@ -672,14 +656,12 @@ The `:lang` pseudo-class is used to define special rules for different languages
 
 # Pseudo-elements
 
-A CSS pseudo-element is used to style specified parts of an element.[^5]
+A CSS <i class="term">pseudo-element</i> is used to style specified parts of an element.[^5] For example, it can be used to:
 
-For example, it can be used to:
+- Style the first letter, or line, of an element;
+- Insert content before, or after, the content of an element.
 
-- Style the first letter, or line, of an element
-- Insert content before, or after, the content of an element
-
-The syntax of pseudo-elements:
+The syntax of pseudo-elements looks like:
 
 ```css
 selector::pseudo-element {
@@ -689,9 +671,7 @@ selector::pseudo-element {
 
 ## The `::first-line` and `::first-letter` pseudo-element
 
-The `::first-line` pseudo-element is used to add a special style to the first line of a text.
-
-The `::first-letter` pseudo-element is used to add a special style to the first letter of a text, [`html20.html`](/webpages/2024-09-12/html20.html):
+The `::first-line` pseudo-element is used to add a special style to the first line of a text, and the `::first-letter` is to the first letter, [`html20.html`](/webpages/2024-09-12/html20.html):
 
 ```html
 <!DOCTYPE html>
@@ -700,12 +680,12 @@ The `::first-letter` pseudo-element is used to add a special style to the first 
 <head>
     <style>
         p::first-line {
-            color: #ff0000;
+            color: blue;
             font-variant: small-caps;
         }
 
         p::first-letter {
-            color: blue;
+            color: red;
             font-size: xx-large;
         }
     </style>
@@ -722,13 +702,12 @@ The `::first-letter` pseudo-element is used to add a special style to the first 
 </html>
 ```
 
-**Note:** The `::first-line` and `::first-letter` pseudo-element can only be applied to block-level elements.
+Note that `::first-line` and `::first-letter` can only be applied to block-level elements.
 
 <div class="notice--warning" markdown="1">
+**Notice the double colon notation: `::first-line` vs. `:first-line`** 
 
-**Notice the double colon notation -** `::first-line` versus `:first-line`
-
-The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between **pseudo-classes** and **pseudo-elements**.
+The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.
 
 The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
 
@@ -736,9 +715,9 @@ For backward compatibility, the single-colon syntax is acceptable for CSS2 and C
 
 </div>
 
-## Pseudo-elements and HTML classes
+## Pseudo-elements for a specific HTML class
 
-Pseudo-elements can be combined with HTML classes, [`html21.html`](/webpages/2024-09-12/html21.html):
+Pseudo-elements can be combined with a specific HTML class, [`html21.html`](/webpages/2024-09-12/html21.html):
 
 ```html
 <!DOCTYPE html>
@@ -747,12 +726,12 @@ Pseudo-elements can be combined with HTML classes, [`html21.html`](/webpages/202
 <head>
     <style>
         p::first-line {
-            color: #ff0000;
+            color: blue;
             font-variant: small-caps;
         }
 
         p.intro::first-letter {
-            color: #ff0000;
+            color: red;
             font-size: 200%;
         }
     </style>
@@ -775,13 +754,9 @@ Pseudo-elements can be combined with HTML classes, [`html21.html`](/webpages/202
 </html>
 ```
 
-The example above will display the first letter of paragraphs with `class="intro"`, in red and in a larger size.
-
 ## The `::before` and  `::after` pseudo-element
 
-The `::before` pseudo-element can be used to insert some content before the content of an element.
-
-The `::after` pseudo-element can be used to insert some content after the content of an element, [`html22.html`](/webpages/2024-09-12/html22.html):
+The `::before` pseudo-element can be used to insert some content before the content of an element, and the `::after` is to do so after the content of an element, [`html22.html`](/webpages/2024-09-12/html22.html):
 
 ```html
 <!DOCTYPE html>
@@ -850,9 +825,7 @@ The `::marker` pseudo-element selects the markers of list items, functional for 
 
 ## The `::selection` pseudo-element
 
-The `::selection` pseudo-element matches the portion of an element that is selected by a user.
-
-The following CSS properties can be applied to `::selection`: `color`, `background`, `cursor`, and `outline`, [`html24.html`](/webpages/2024-09-12/html24.html):
+The `::selection` pseudo-element matches the portion of an element that is selected by a user, [`html24.html`](/webpages/2024-09-12/html24.html):
 
 ```html
 <!DOCTYPE html>
@@ -883,7 +856,7 @@ The following CSS properties can be applied to `::selection`: `color`, `backgrou
 
 # Attribute selectors
 
-It is possible to style HTML elements that have specific attributes or attribute values.[^6]
+It is possible to style HTML elements that have specific <i class="emphasize">attributes</i> or <i class="emphasize">attribute values</i>.[^6]
 
 ## `[attribute]` selector
 
@@ -973,7 +946,7 @@ The `[attribute~="value"]` selector is used to select elements with an attribute
 
 The `[attribute|="value"]` selector is used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen `-`.
 
-**Note:** The value has to be <i class="emphasize">a whole word</i>, either alone, like `class="top"`, or followed by a hyphen `-`, like `class="top-text"`, [`html28.html`](/webpages/2024-09-12/html28.html):
+Note that the value has to be <i class="emphasize">a whole word</i>, either alone, like `class="top"`, or followed by a hyphen `-`, like `class="top-text"`, [`html28.html`](/webpages/2024-09-12/html28.html):
 
 ```html
 <!DOCTYPE html>
@@ -999,13 +972,13 @@ The `[attribute|="value"]` selector is used to select elements with the specifie
 
 ## `[attribute^="value"]`, `[attribute$="value"]`, and `[attribute*="value"]` selector
 
-The `[attribute^="value"]` selector is used to select elements with the specified attribute, whose value starts with the specified value. (A simple application[^9])
+The `[attribute^="value"]` selector is used to select elements with the specified attribute, whose value <i class="emphasize">starts with</i> the specified value. (A simple application can be found in[^9])
 
-The `[attribute$="value"]` selector is used to select elements whose attribute value ends with a specified value.
+The `[attribute$="value"]` selector is used to select elements whose attribute value <i class="emphasize">ends with</i> a specified value.
 
-The `[attribute*="value"]` selector is used to select elements whose attribute value contains a specified value.
+The `[attribute*="value"]` selector is used to select elements whose attribute value <i class="emphasize">contains</i> a specified value.
 
-**Note:** The value does NOT have to be a whole word, [`html29.html`](/webpages/2024-09-12/html29.html):
+Note that the value doesn’t have to be a whole word, [`html29.html`](/webpages/2024-09-12/html29.html):
 
 ```html
 <!DOCTYPE html>

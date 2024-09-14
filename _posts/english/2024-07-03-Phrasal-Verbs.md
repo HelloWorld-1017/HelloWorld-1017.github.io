@@ -1,14 +1,12 @@
 ---
-title: Some Common English Phrasal Verbs
+title: English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2024-08-13 16:16:11 +0800
+last_modified_at: 2024-09-14 11:46:51 +0800
 ---
 
-# BRING
-
-## bring about
+## (BRING) bring about
 
 > bring about
 >
@@ -21,9 +19,7 @@ to cause something to happen.
 
 <br>
 
-# COME
-
-## come down to
+## (COME) come down to
 
 > come down to
 >
@@ -37,7 +33,7 @@ If a problem, decision, or question comes down to a particular thing, that thing
 
 <br>
 
-## come up with
+## (COME) come up with
 
 > come up with
 >
@@ -54,9 +50,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-# GET
-
-## get away
+## (GET) get away
 
 > get away
 >
@@ -73,7 +67,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-## get into
+## (GET) get into
 
 > get into
 >
@@ -121,9 +115,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-# GIVE
-
-## give in 
+## (GIVE) give in 
 
 > give in
 >
@@ -140,7 +132,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-## give up
+## (GIVE) give up
 
 > give up
 >
@@ -162,7 +154,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
-## give one’s word
+## (GIVE) give one’s word
 
 > give one’s word
 >
@@ -174,9 +166,7 @@ to promise
 
 <br>
 
-# HAND
-
-## hand over
+## (HAND) hand over
 
 > hand over
 >
@@ -200,9 +190,37 @@ If you hand over to someone or hand something over to them, you give them the re
 
 <br>
 
-# LAY and LIE
+## (HESITATE) never hesitate to do something
 
-## Lay vs. Lie
+> never hesitate to do something (don’t hesitate to do something; have no hesitation in doing something)
+>
+> - [don’t hesitate to do something - LDOCE](https://www.ldoceonline.com/dictionary/don-t-hesitate-to-do-something).
+> - [HAVE NO HESITATION definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/have-no-hesitation).
+
+used to tell someone that it is correct or right for them to do something and they do not have to worry about offending anyone.
+
+- ***Don’t hesitate to*** contact me if you need any more information.
+
+If you say that you **have no hesitation in** doing something, you are emphasizing that you will do it immediately or willingly because you are certain that it is the right thing to do.
+
+- The board said it ***had no hesitation in*** unanimously rejecting the offer. 
+- Some of us had careers, but we ***had no hesitation in*** giving them up to work alongside our wives. 
+
+<br>
+
+## (HOOK) hook sb up (with sb/sth)
+
+> hook sb up (with sb/sth)
+>
+> - [HOOK UP (WITH SB/STH) - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/hook-up-with).
+
+to arrange for someone to meet or work with another person or organization.
+
+- We videotape applicants in practice interviews and ***hook them up with*** employers.
+
+<br>
+
+## (LAY and LIE) Lay vs. Lie
 
 > Lay vs. Lie
 >
@@ -224,7 +242,7 @@ If you hand over to someone or hand something over to them, you give them the re
 
 <br>
 
-## lie at the heart/centre/root of something
+## (LAY and LIE) lie at the heart/centre/root of something
 
 > lie at the heart/centre/root of something
 >
@@ -238,7 +256,7 @@ to be the most important part of something, especially the main cause of it.
 
 <br>
 
-## lay something on
+## (LAY and LIE) lay something on
 
 > lay something on
 >
@@ -262,9 +280,7 @@ to be the most important part of something, especially the main cause of it.
 
 <br>
 
-# LOOK
-
-## look into
+## (LOOK) look into
 
 > look into
 >
@@ -280,7 +296,7 @@ to be the most important part of something, especially the main cause of it.
 
 <br>
 
-## look up
+## (LOOK) look up
 
 > look up
 >
@@ -306,9 +322,7 @@ to be the most important part of something, especially the main cause of it.
 
 <br>
 
-# PUT
-
-## put it
+## (PUT) put it
 
 > put it
 >
@@ -324,7 +338,7 @@ When you put an idea or remark in a particular way, you express it in that way. 
 
 <br>
 
-## put someone to something
+## (PUT) put someone to something
 
 > put someone to something
 >
@@ -338,9 +352,7 @@ to cause someone to experience or do something.
 
 <br>
 
-# SIT
-
-## sit back
+## (SIT) sit back
 
 > sit back
 >
@@ -353,9 +365,7 @@ If you sit back while something is happening, you relax and do not become involv
 
 <br>
 
-# STAND
-
-## stand down
+## (STAND) stand down
 
 > stand down
 >
@@ -369,9 +379,7 @@ If someone stands down, they resign from an important job or position, often in 
 
 <br>
 
-# TAKE
-
-## take away
+## (TAKE) take away
 
 > take away
 >
@@ -395,9 +403,7 @@ If someone stands down, they resign from an important job or position, often in 
 
 <br>
 
-# THROW
-
-## throw oneself at sb.
+## (THROW) throw oneself at sb.
 
 > throw oneself at sb.
 >
@@ -412,9 +418,7 @@ If someone throws themselves at you, they make it very obvious that they want to
 
 <br>
 
-# TRIP
-
-## trip up
+## (TRIP) trip up
 
 > trip up
 >

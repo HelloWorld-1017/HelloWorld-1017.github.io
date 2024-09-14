@@ -1,9 +1,9 @@
 ---
-title: Some English Idioms and Phrases
+title: English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-08-09 10:51:30 +0800
+last_modified_at: 2024-09-14 11:37:51 +0800
 ---
 
 # A
@@ -315,6 +315,17 @@ said when you want to emphasize that both people involved in a difficult situati
 - She may want to argue, but ***it takes two to tango*** and I won't stoop to her level.
 
 <br>
+
+## it never hurt to do something
+
+> it never hurt to do something (it doesn't hurt to do something)
+>
+> - [IT DOESN'T HURT/NEVER HURTS TO DO SOMETHING - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/it-doesn-t-hurt-never-hurts-to-do).
+
+it is useful or helpful to do or have something.
+
+- ***It never hurts to*** check the flight departure time before you leave for the airport.
+- ***It doesn't hurt to*** have money when you want to run for office.
 
 # K
 

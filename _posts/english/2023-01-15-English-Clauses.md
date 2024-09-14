@@ -1,14 +1,11 @@
 ---
-title: Clauses in English Grammar
+title: English Clauses
 categories: 
  - English
 header:
   image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/20230115-clause.png?raw=true
 date: 2023-01-15 16:30:31 +0800
-last_modified_at: 2024-06-29 23:48:08 +0800
-modification_history:
- - 2023-01-15 16:30:31 +0800
- - 2024-06-29 23:48:08 +0800
+last_modified_at: 2024-09-14 11:50:46 +0800
 ---
 
 # Introduction
@@ -146,7 +143,7 @@ modification_history:
 
 <br>
 
-# References
+**References**
 
 [1] [Clauses: How Do We Use Them in English? - Grammarly Blog](https://www.grammarly.com/blog/clauses/?gclid=CjwKCAiAwomeBhBWEiwAM43YIOJX1u6_kaxc-ZyurHZghnf-K5U2bl0cyVkYtNHbs8RB5zMtDXiYdRoCztQQAvD_BwE&gclsrc=aw.ds).
 

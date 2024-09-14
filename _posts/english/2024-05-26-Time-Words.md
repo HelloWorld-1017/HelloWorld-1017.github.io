@@ -1,5 +1,5 @@
 ---
-title: Some English Time Words
+title: English Time Words
 categories:
  - English
 date: 2024-05-26 09:31:45 +0800

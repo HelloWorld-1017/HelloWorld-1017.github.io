@@ -1,5 +1,5 @@
 ---
-title: Some Latin Words that are Commonly Used in English
+title: Latin Words that are Commonly Used in English
 categories:
  - English
 date: 2024-06-28 23:49:22 +0800

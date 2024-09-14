@@ -1,5 +1,5 @@
 ---
-title: Some English Binomials
+title: English Binomials
 categories:
  - English
 date: 2024-05-27 15:24:32 +0800

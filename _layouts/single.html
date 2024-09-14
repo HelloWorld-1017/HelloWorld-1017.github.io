@@ -1,36 +1,8 @@
 ---
 layout: default
 ---
-<head>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('a[href^="#"][href!="#"]').click(function (e) {
-        e.preventDefault();
-        var hash = this.hash;
-        var target = document.getElementById(hash.slice(1));
-        if (!target) return;
-
-        history.pushState(null, null, hash);
-
-        var targetOffset = $(target).offset().top;
-        $('html,body').animate({ scrollTop: targetOffset }, 5);
-      });
-
-      window.addEventListener('popstate', function (event) {
-        if (location.hash) {
-          var target = document.getElementById(location.hash.slice(1));
-          if (target) {
-            var targetOffset = $(target).offset().top;
-            $('html,body').animate({ scrollTop: targetOffset }, 5);
-          }
-        }
-      });
-    });  
-  </script>
-</head>
+{% include head_scripts_single.html %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__widget/page__hero.html %}

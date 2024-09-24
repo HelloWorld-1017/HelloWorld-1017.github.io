@@ -2,7 +2,6 @@
 title: "LaTeX Loop Statement: `\\foreach`, `\\forloop`, and `\\multido`"
 categories:
  - LaTeX
- - Collections
 tags:
  - LaTeX TikZ
  - LaTeX calc

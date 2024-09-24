@@ -3,16 +3,14 @@ title: English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-09-14 11:37:51 +0800
+last_modified_at: 2024-09-24 18:25:37 +0800
 ---
-
-# A
 
 ## at any rate
 
 > at any rate
 >
-> - [AT ANY RATE \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/at-any-rate).
+> - [AT ANY RATE](https://dictionary.cambridge.org/dictionary/english/at-any-rate).
 
 (1) whatever happens
 
@@ -28,7 +26,7 @@ last_modified_at: 2024-09-14 11:37:51 +0800
 
 > against (all) the odds/against all odds
 >
-> - [AGAINST (ALL) THE ODDS/AGAINST ALL ODDS in Traditional Chinese - Cambridge](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/against-all-the-odds-against-all-odds).
+> - [AGAINST (ALL) THE ODDS/AGAINST ALL ODDS](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/against-all-the-odds-against-all-odds).
 
 If you do or achieve something against (all) the odds/against all odds, you do or achieve it although there were a lot of problems and you were not likely to succeed.
 
@@ -40,8 +38,8 @@ If you do or achieve something against (all) the odds/against all odds, you do o
 
 > all in all
 >
-> - [ALL IN ALL \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/all-in-all).
-> - [ALL IN ALL definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/all-in-all).
+> - [ALL IN ALL](https://dictionary.cambridge.org/dictionary/english/all-in-all).
+> - [ALL IN ALL definition and meaning](https://www.collinsdictionary.com/dictionary/english/all-in-all).
 
 (1) considering all the different parts of the situation together.
 
@@ -58,13 +56,11 @@ If you do or achieve something against (all) the odds/against all odds, you do o
 
 <br>
 
-# B
-
 ## be bound to 
 
 > be bound to
 >
-> - [be bound to - LDOCE](https://www.ldoceonline.com/dictionary/be-bound-to).
+> - [be bound to](https://www.ldoceonline.com/dictionary/be-bound-to).
 
 to be very likely to do or feel a particular thing.
 
@@ -78,7 +74,7 @@ to be very likely to do or feel a particular thing.
 
 > blend into/in
 >
-> - [BLEND IN definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/blend-in).
+> - [BLEND IN definition and meaning](https://www.collinsdictionary.com/dictionary/english/blend-in).
 
 (1) If something blends into the background, it is so similar to the background that it is difficult to see or hear it separately.
 
@@ -94,14 +90,12 @@ to be very likely to do or feel a particular thing.
 
 <br>
 
-# C
-
 ## cross the line
 
 > cross the line
 >
-> - [CROSS THE LINE \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/cross-the-line).
-> - [Cross the line Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/cross%20the%20line).
+> - [CROSS THE LINE](https://dictionary.cambridge.org/dictionary/english/cross-the-line).
+> - [Cross the line Definition & Meaning](https://www.merriam-webster.com/dictionary/cross%20the%20line).
 
 to start to behave in a way that is not socially acceptable; to go beyond what is proper or acceptable.
 
@@ -111,14 +105,24 @@ to start to behave in a way that is not socially acceptable; to go beyond what i
 
 <br>
 
-# D
+## déjà vu
+
+> déjà vu
+>
+> - [DÉJÀ VU](https://dictionary.cambridge.org/dictionary/english/deja-vu).
+
+the strange feeling that in some way you have already experienced what is happening now.
+
+- (feeling of déjà vu) When I met her, I had a strange ***feeling of déjà vu***.
+- (sense of déjà vu) She had a nagging ***sense of déjà vu***.
+- Memories seem to float up like fragments of a dream remembered or ***déjà vu***.
 
 ## dive into
 
 > dive into
 >
-> - [DIVE IN/DIVE INTO SOMETHING definition \| Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/dive-in-dive-into).
-> - [DIVING (INTO) Synonyms: 42 Similar and Opposite Words \| Merriam-Webster Thesaurus](https://www.merriam-webster.com/thesaurus/diving%20%28into%29).
+> - [DIVE IN/DIVE INTO SOMETHING definition](https://dictionary.cambridge.org/us/dictionary/english/dive-in-dive-into).
+> - [DIVING (INTO) Synonyms: 42 Similar and Opposite Words](https://www.merriam-webster.com/thesaurus/diving%20%28into%29).
 
 to start doing something suddenly and energetically, often without stopping to think; to start doing (something) with enthusiasm.
 
@@ -128,13 +132,11 @@ to start doing something suddenly and energetically, often without stopping to t
 
 <br>
 
-# E
-
 ## each to his/their own
 
 > each to his/their own
 >
-> [EACH TO HIS/THEIR OWN - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/each-to-his-their-own).
+> - [EACH TO HIS/THEIR OWN](https://dictionary.cambridge.org/dictionary/english/each-to-his-their-own).
 
 used to say that everyone likes different things
 
@@ -150,7 +152,7 @@ used to say that everyone likes different things
 
 > either way
 >
-> - [Either way Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/either%20way).
+> - [Either way Definition & Meaning](https://www.merriam-webster.com/dictionary/either%20way).
 
 used to say that whether one or the other of usually two possible decisions, actions, or results is chosen the result will be the same.
 
@@ -162,7 +164,7 @@ used to say that whether one or the other of usually two possible decisions, act
 
 > enough is enough
 >
-> - [ENOUGH IS ENOUGH \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/enough-is-enough)
+> - [ENOUGH IS ENOUGH](https://dictionary.cambridge.org/dictionary/english/enough-is-enough)
 
 something you say when you want something to stop.
 
@@ -178,8 +180,8 @@ something you say when you want something to stop.
 
 > Excuse/Pardon my French.
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [excuse/pardon my French! - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/excuse-pardon-my-french).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [excuse/pardon my French!](https://dictionary.cambridge.org/dictionary/english/excuse-pardon-my-french).
 
 said when you are pretending to be sorry for using a word that may be considered offensive.
 
@@ -187,22 +189,18 @@ said when you are pretending to be sorry for using a word that may be considered
 
 <br>
 
-# F
-
 ## for whatever reason
 
-*(skip over)*
+(skip over)
 
 <br>
-
-# G
 
 ## get ... off the ground
 
 > get ... off the ground
 >
-> - [GET (SOMETHING) OFF THE GROUND - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/get-off-the-ground).
-> - [get off the ground - LDOCE](https://www.ldoceonline.com/dictionary/get-off-the-ground).
+> - [GET (SOMETHING) OFF THE GROUND](https://dictionary.cambridge.org/dictionary/english/get-off-the-ground).
+> - [get off the ground](https://www.ldoceonline.com/dictionary/get-off-the-ground).
 
 If a plan or activity gets off the ground or you get it off the ground, it starts or succeeds; to start to be successful.
 
@@ -215,8 +213,8 @@ If a plan or activity gets off the ground or you get it off the ground, it start
 
 > get the idea
 >
-> - [GET THE IDEA definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/get-the-idea).
-> - [Get the idea Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/get%20the%20idea).
+> - [GET THE IDEA definition and meaning](https://www.collinsdictionary.com/dictionary/english/get-the-idea).
+> - [Get the idea Definition & Meaning](https://www.merriam-webster.com/dictionary/get%20the%20idea).
 
 If someone gets the idea, they understand how to do something or they understand what you are telling them.
 
@@ -230,8 +228,8 @@ If someone gets the idea, they understand how to do something or they understand
 
 > get the wrong end of the stick
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [GET THE WRONG END OF THE STICK - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/get-the-wrong-end-of-the-stick).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [GET THE WRONG END OF THE STICK](https://dictionary.cambridge.org/dictionary/english/get-the-wrong-end-of-the-stick).
 
 to not understand a situation correctly.
 
@@ -243,7 +241,7 @@ to not understand a situation correctly.
 
 > get your mind around sth. (also ‘get your head around sth’; US also ‘wrap your mind around sth.’)
 >
-> - [GET YOUR MIND AROUND STH - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/get-mind-around), [^24]
+> - [GET YOUR MIND AROUND STH](https://dictionary.cambridge.org/dictionary/english/get-mind-around).
 
 to succeed in understanding something difficult or strange.
 
@@ -260,11 +258,11 @@ to succeed in understanding something difficult or strange.
 >
 > take the matter further
 >
-> - [GO FURTHER/TAKE SOMETHING FURTHER - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/go-further-take-further).
-> - [take something further - LDOCE](https://www.ldoceonline.com/dictionary/take-something-further).
-> - [FURTHER definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/further).
+> - [GO FURTHER/TAKE SOMETHING FURTHER](https://dictionary.cambridge.org/dictionary/english/go-further-take-further).
+> - [take something further](https://www.ldoceonline.com/dictionary/take-something-further).
+> - [FURTHER definition and meaning](https://www.collinsdictionary.com/dictionary/english/further).
 
-If you go or take something further, you take it to a more advanced stage; to take action at a more serious or higher level, <mark>especially in order to get the result you want</mark>; If you go or get further with something, or take something further, you make some progress.
+If you go or take something further, you take it to a more advanced stage; to take action at a more serious or higher level, <i class="emphasize">especially in order to get the result you want</i>; If you go or get further with something, or take something further, you make some progress.
 
 - Before we ***go any further with*** the project, I think we should make sure that there's enough money to fund it.
 - If you wish to ***take the matter further***, you can file charges against him.
@@ -277,13 +275,11 @@ If you go or take something further, you take it to a more advanced stage; to ta
 
 <br>
 
-# I
-
 ## in a way & to some extent
 
 >in a way
 >
->- [IN A WAY definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/in-a-way).
+>- [IN A WAY definition and meaning](https://www.collinsdictionary.com/dictionary/english/in-a-way).
 
 If you say that something is true ‘in a way’, you mean that although it is not completely true, it is true to a limited extent or in certain respects. You use in a way to reduce the force of a statement.
 
@@ -292,7 +288,7 @@ If you say that something is true ‘in a way’, you mean that although it is n
 
 > to a large extent/to some extent/to a certain extent
 >
-> - [TO A LARGE EXTENT definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/to-a-large-extent).
+> - [TO A LARGE EXTENT definition and meaning](https://www.collinsdictionary.com/dictionary/english/to-a-large-extent).
 
 You use expressions such as ‘to a large extent’, ‘to some extent’, or ‘to a certain extent’ in order to indicate that something is partly true, but not entirely true.
 
@@ -307,8 +303,8 @@ You use expressions such as ‘to a large extent’, ‘to some extent’, or �
 
 > It takes two to tango
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [IT TAKES TWO TO TANGO - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/it-takes-two-to-tango).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [IT TAKES TWO TO TANGO](https://dictionary.cambridge.org/dictionary/english/it-takes-two-to-tango).
 
 said when you want to emphasize that both people involved in a difficult situation must accept the blame, or that an activity needs two people who are willing to take part for it to happen.
 
@@ -320,36 +316,44 @@ said when you want to emphasize that both people involved in a difficult situati
 
 > it never hurt to do something (it doesn't hurt to do something)
 >
-> - [IT DOESN'T HURT/NEVER HURTS TO DO SOMETHING - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/it-doesn-t-hurt-never-hurts-to-do).
+> - [IT DOESN'T HURT/NEVER HURTS TO DO SOMETHING](https://dictionary.cambridge.org/dictionary/english/it-doesn-t-hurt-never-hurts-to-do).
 
 it is useful or helpful to do or have something.
 
 - ***It never hurts to*** check the flight departure time before you leave for the airport.
 - ***It doesn't hurt to*** have money when you want to run for office.
 
-# K
+<br>
 
 ## keep a straight face
 
 > keep a straight face
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [KEEP A STRAIGHT FACE - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/keep-a-straight-face).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [KEEP A STRAIGHT FACE](https://dictionary.cambridge.org/dictionary/english/keep-a-straight-face).
 
 to manage to stop yourself from smiling or laughing.
 
 - She tried to ***keep a straight face*** but, unable to contain herself, burst into laughter.
 
-<br>
+## know your onions
 
-# L
+> know your onions
+>
+> - [KNOW YOUR ONIONS definition and meaning](https://www.collinsdictionary.com/dictionary/english/know-your-onions).
+
+to know a great deal about a particular subject.
+
+- It shows she really ***knows her onions*** in the historical field too.
+
+<br>
 
 ## leave/put/set something aside
 
 > leave/put/set something aside
 >
-> - [LEAVE/PUT/SET SOMETHING ASIDE - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/leave-put-set-aside).
-> - [Wrap one's mind around Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/wrap%20one%27s%20mind%20around).
+> - [LEAVE/PUT/SET SOMETHING ASIDE](https://dictionary.cambridge.org/dictionary/english/leave-put-set-aside).
+> - [Wrap one's mind around Definition & Meaning](https://www.merriam-webster.com/dictionary/wrap%20one%27s%20mind%20around).
 
 If you leave, put, or set something aside, you do not talk about or deal with it at the present time
 
@@ -361,13 +365,11 @@ If you leave, put, or set something aside, you do not talk about or deal with it
 
 <br>
 
-# M
-
 ## more of the same
 
 > more of the same
 >
-> - [more of the same \| meaning of more of the same in Longman Dictionary of Contemporary English \| LDOCE](https://www.ldoceonline.com/dictionary/more-of-the-same).
+> - [more of the same](https://www.ldoceonline.com/dictionary/more-of-the-same).
 
 another person, thing etc like the one just mentioned.
 
@@ -379,7 +381,7 @@ another person, thing etc like the one just mentioned.
 
 > move the needle:
 >
-> - [Moved the needle - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/moved+the+needle)
+> - [Moved the needle](https://idioms.thefreedictionary.com/moved+the+needle).
 
 To cause a noticeable change in something. The imagery refers to the pointer ("needle") on a measuring instrument, which moves to indicate the level that has been reached.
 
@@ -393,7 +395,7 @@ To cause a noticeable change in something. The imagery refers to the pointer ("n
 
 > and it’s not even close
 >
-> - [And it is not even close - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/and+it+is+not+even+close).
+> - [And it is not even close](https://idioms.thefreedictionary.com/and+it+is+not+even+close).
 
 Said to highlight a large disparity between someone or something and the other people or things concerned.
 
@@ -401,13 +403,11 @@ Said to highlight a large disparity between someone or something and the other p
 
 <br>
 
-# N
-
 ## not have the stomach for something
 
 > not have the stomach for something
 >
-> - [NOT HAVE THE STOMACH FOR SOMETHING definition \| Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/not-have-the-stomach-for).
+> - [NOT HAVE THE STOMACH FOR SOMETHING definition](https://dictionary.cambridge.org/us/dictionary/english/not-have-the-stomach-for).
 
 to not feel brave or determined enough to do something unpleasant.
 
@@ -415,14 +415,12 @@ to not feel brave or determined enough to do something unpleasant.
 
 <br>
 
-# O
-
 ## one and the same
 
 > one and the same
 >
-> - [ONE AND THE SAME \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/one-and-the-same).
-> - [ONE AND THE SAME definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/one-and-the-same).
+> - [ONE AND THE SAME](https://dictionary.cambridge.org/dictionary/english/one-and-the-same).
+> - [ONE AND THE SAME definition and meaning](https://www.collinsdictionary.com/dictionary/english/one-and-the-same).
 
 When two or more people or things are thought to be separate and you say that they are ‘one and the same’, you mean that they are in fact one single person or thing.
 
@@ -436,8 +434,8 @@ When two or more people or things are thought to be separate and you say that th
 
 > out of thin air
 >
-> - [Out of thin air Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/out%20of%20thin%20air).
-> - [OUT OF THIN AIR \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/out-of-thin-air).
+> - [Out of thin air Definition & Meaning](https://www.merriam-webster.com/dictionary/out%20of%20thin%20air).
+> - [OUT OF THIN AIR](https://dictionary.cambridge.org/dictionary/english/out-of-thin-air).
 
 (1) used to say that someone or something appears in a sudden and unexpected way.
 
@@ -454,8 +452,8 @@ When two or more people or things are thought to be separate and you say that th
 
 > over the top (O.T.T, OTT)
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [OVER THE TOP \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/over-the-top).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [OVER THE TOP](https://dictionary.cambridge.org/dictionary/english/over-the-top).
 
 a bit too much, extremely; too extreme and not suitable, or demanding to much attention or effort, especially in an uncontrolled way.
 
@@ -465,14 +463,12 @@ a bit too much, extremely; too extreme and not suitable, or demanding to much at
 
 <br>
 
-# P
-
 ## paint/draw a picture (of something)
 
 > paint/draw a picture (of something)
 >
-> - [PAINT A PICTURE (OF SOMETHING) - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/paint-a-picture-of-something).
-> - [Paint/draw a picture of Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/paint%2Fdraw%20a%20picture%20of).
+> - [PAINT A PICTURE (OF SOMETHING)](https://dictionary.cambridge.org/dictionary/english/paint-a-picture-of-something).
+> - [Paint/draw a picture of Definition & Meaning](https://www.merriam-webster.com/dictionary/paint%2Fdraw%20a%20picture%20of).
 
 to describe or show something in a particular way.
 
@@ -483,15 +479,23 @@ The author paints a disturbing picture of life in the camp.
 
 - These statistics ***draw a clear picture of*** how the population is aging.
 
-<br>
+## rack one’s brains
 
-# S
+> rack one’s brains
+>
+> - [RACK YOUR BRAINS](https://dictionary.cambridge.org/dictionary/english/rack-brains).
+
+to think very hard.
+
+- I've been ***racking my brains*** all day but I can't remember her name.
+
+<br>
 
 ## set (one's) hair on fire
 
 > set (one's) hair on fire
 >
-> - [Set hair on fire - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/set+hair+on+fire).
+> - [Set hair on fire](https://idioms.thefreedictionary.com/set+hair+on+fire).
 
 (1) To fill one with intense or overwhelming passion, often causing them to behave erratically or wildly.
 
@@ -509,9 +513,9 @@ The author paints a disturbing picture of life in the camp.
 
 > show your hand
 >
-> - [SHOW YOUR HAND \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/show-hand).
+> - [SHOW YOUR HAND](https://dictionary.cambridge.org/dictionary/english/show-hand).
 
-to allow people to know about intentions <mark>that you had previously kept secret</mark>.
+to allow people to know about intentions <i class="emphasize">that you had previously kept secret</i>.
 
 - Keep the names of the team secret - don't ***show your hand*** until the day of the game.
 
@@ -521,8 +525,8 @@ to allow people to know about intentions <mark>that you had previously kept secr
 
 > so much so
 >
-> - [SO MUCH SO definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/so-much-so).
-> - [SO MUCH SO \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/so-much-so).
+> - [SO MUCH SO definition and meaning](https://www.collinsdictionary.com/dictionary/english/so-much-so).
+> - [SO MUCH SO](https://dictionary.cambridge.org/dictionary/english/so-much-so).
 
 You use ‘so much so’ to indicate that your previous statement is true to a very great extent, and therefore it has the result mentioned; to such a great degree.
 
@@ -535,8 +539,8 @@ You use ‘so much so’ to indicate that your previous statement is true to a v
 
 > (the) status quo
 >
-> - [STATUS QUO definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/status-quo).
-> - [THE STATUS QUO \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/status-quo).
+> - [STATUS QUO definition and meaning](https://www.collinsdictionary.com/dictionary/english/status-quo).
+> - [THE STATUS QUO](https://dictionary.cambridge.org/dictionary/english/status-quo).
 
 The ‘status quo’ is the state of affairs that exists at a particular time, especially in contrast to a different possible state of affairs; 
 
@@ -550,14 +554,12 @@ the present situation.
 
 <br>
 
-# T
-
 ## take a rain check (on something).
 
 > take a rain check (on something)
 >
-> - [take a rain check (on something) - LDOCE](https://www.ldoceonline.com/dictionary/take-a-rain-check-on-something).
-> - [TAKE A RAIN CHECK (ON SOMETHING) - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/take-a-rain-check-on).
+> - [take a rain check (on something)](https://www.ldoceonline.com/dictionary/take-a-rain-check-on-something).
+> - [TAKE A RAIN CHECK (ON SOMETHING)](https://dictionary.cambridge.org/dictionary/english/take-a-rain-check-on).
 
 used to say that you will do something in the future but not now; used to tell someone that you cannot accept an invitation now, but would like to do so at a later time.
 
@@ -571,7 +573,7 @@ used to say that you will do something in the future but not now; used to tell s
 
 > take it or leave it
 >
-> - [TAKE IT OR LEAVE IT definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/take-it-or-leave-it).
+> - [TAKE IT OR LEAVE IT definition and meaning](https://www.collinsdictionary.com/dictionary/english/take-it-or-leave-it).
 
 If you say to someone ' take it or leave it', you are telling them that they can accept something or not accept it, but that you are not prepared to discuss any other alternatives.
 
@@ -583,7 +585,7 @@ If you say to someone ' take it or leave it', you are telling them that they can
 
 > take something with a grain of salt
 >
-> - [TAKE SOMETHING WITH A GRAIN OF SALT definition \| Cambridge English Dictionary](https://dictionary.cambridge.org/us/dictionary/english/take-with-a-grain-of-salt).
+> - [TAKE SOMETHING WITH A GRAIN OF SALT definition](https://dictionary.cambridge.org/us/dictionary/english/take-with-a-grain-of-salt).
 
 to not completely believe something that you are told, because you think it is unlikely to be true.
 
@@ -595,9 +597,9 @@ to not completely believe something that you are told, because you think it is u
 
 > take ... as it comes. / take it as it comes.
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [TAKE SOMETHING AS IT COMES - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/take-as-it-comes).
-> - [take something as it comes - LDOCE](https://www.ldoceonline.com/dictionary/take-something-as-it-comes).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [TAKE SOMETHING AS IT COMES](https://dictionary.cambridge.org/dictionary/english/take-as-it-comes).
+> - [take something as it comes](https://www.ldoceonline.com/dictionary/take-something-as-it-comes).
 
 to deal with something as it happens, without planning for it; to accept something as it happens, without trying to plan for it or change it.
 
@@ -607,7 +609,7 @@ to deal with something as it happens, without planning for it; to accept somethi
 
 > **Cross that bridge when we come to it.**; **I'll/we'll cross that bridge when I/we come/get to it**
 >
-> - [I'll/we'll cross that bridge when I/we come/get to it - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/i-ll-we-ll-cross-that-bridge-when-i-we-come-get-to-it).
+> - [I'll/we'll cross that bridge when I/we come/get to it](https://dictionary.cambridge.org/dictionary/english/i-ll-we-ll-cross-that-bridge-when-i-we-come-get-to-it).
 
 relaxed about it, and deal with the problems when it happens; an expression that means you will not worry about a possible future problem but will deal with it if it happens.
 
@@ -617,7 +619,7 @@ relaxed about it, and deal with the problems when it happens; an expression that
 
 > that’s that
 >
-> - [THAT'S THAT \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/that-s-that).
+> - [THAT'S THAT](https://dictionary.cambridge.org/dictionary/english/that-s-that).
 
 an expression that shows that something has ended.
 
@@ -629,16 +631,16 @@ an expression that shows that something has ended.
 
 > that said
 >
-> - [That said Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/that%20said).
+> - [That said Definition & Meaning](https://www.merriam-webster.com/dictionary/that%20said).
 >
 > having said that
 >
-> - [HAVING SAID THAT \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/having-said-that).
+> - [HAVING SAID THAT](https://dictionary.cambridge.org/dictionary/english/having-said-that).
 >
 > that being said/that said
 >
-> - [that being said - Wiktionary, the free dictionary](https://en.wiktionary.org/wiki/that_being_said).
-> - [that said - Wiktionary, the free dictionary](https://en.wiktionary.org/wiki/that_said#English).
+> - [that being said](https://en.wiktionary.org/wiki/that_being_said).
+> - [that said](https://en.wiktionary.org/wiki/that_said#English).
 
 despite what one just said.
 
@@ -649,7 +651,11 @@ despite what one just said.
 
 ## there’s always a bigger fish.
 
-*(skip over)*
+> there’s always a bigger fish.
+>
+> - [there's always a bigger fish](https://en.wiktionary.org/wiki/there%27s_always_a_bigger_fish).
+
+No matter how large or intimidating a person or thing is, there is likely to be an even larger or more intimidating person or thing somewhere.
 
 <br>
 
@@ -657,8 +663,8 @@ despite what one just said.
 
 > tie/tied the knot:
 >
-> - [9 Idioms Native Speakers Actually Use - YouTube](https://www.youtube.com/watch?v=H8vkfjVb8cM).
-> - [TIE THE KNOT \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/tie-the-knot).
+> - [9 Idioms Native Speakers Actually Use](https://www.youtube.com/watch?v=H8vkfjVb8cM).
+> - [TIE THE KNOT](https://dictionary.cambridge.org/dictionary/english/tie-the-knot).
 
 means "I'm married."; to get married.
 
@@ -670,8 +676,8 @@ means "I'm married."; to get married.
 
 > tighten one’s belts
 >
-> - [TIGHTEN YOUR BELT \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/tighten-belt).
-> - [TO TIGHTEN YOUR BELT definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/to-tighten-your-belt).
+> - [TIGHTEN YOUR BELT](https://dictionary.cambridge.org/dictionary/english/tighten-belt).
+> - [TO TIGHTEN YOUR BELT definition and meaning](https://www.collinsdictionary.com/dictionary/english/to-tighten-your-belt).
 
 to spend less money than you did before because you have less money; If you have to tighten your belt, you have to spend less money and manage without things because you have less money than you used to have.
 
@@ -684,7 +690,7 @@ to spend less money than you did before because you have less money; If you have
 
 > time and (time) again
 >
-> - [TIME AND TIME AGAIN definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/time-and-time-again).
+> - [TIME AND TIME AGAIN definition and meaning](https://www.collinsdictionary.com/dictionary/english/time-and-time-again).
 
 repeatedly; often.
 
@@ -697,8 +703,8 @@ repeatedly; often.
 
 > to add insult to injury
 >
-> - [TO ADD INSULT TO INJURY definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/to-add-insult-to-injury).
-> - [TO ADD INSULT TO INJURY - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/to-add-insult-to-injury).
+> - [TO ADD INSULT TO INJURY definition and meaning](https://www.collinsdictionary.com/dictionary/english/to-add-insult-to-injury).
+> - [TO ADD INSULT TO INJURY](https://dictionary.cambridge.org/dictionary/english/to-add-insult-to-injury).
 
 You say ‘to add insult to injury’ when mentioning an action or fact that makes an unfair or unacceptable situation even worse.
 
@@ -706,10 +712,10 @@ You say ‘to add insult to injury’ when mentioning an action or fact that mak
 
 > the icing on the case
 >
-> - [THE ICING ON THE CAKE definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/the-icing-on-the-cake).
-> - [THE ICING ON THE CAKE - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/icing-on-the-cake).
+> - [THE ICING ON THE CAKE definition and meaning](https://www.collinsdictionary.com/dictionary/english/the-icing-on-the-cake).
+> - [THE ICING ON THE CAKE](https://dictionary.cambridge.org/dictionary/english/icing-on-the-cake).
 
-If you describe something as the icing on the cake, you mean that it makes a good thing even better, <mark>but it is not essential</mark>; an <mark>extra</mark> good thing that happens and makes a situation or activity even better. In American English, you can also talk about the frosting on the cake.
+If you describe something as the icing on the cake, you mean that it makes a good thing even better, <i class="emphasize">but it is not essential</i>; an <i class="emphasize">extra</i> good thing that happens and makes a situation or activity even better. In American English, you can also talk about the frosting on the cake.
 
 - The third goal was ***the icing on the cake***.
 - I was just content to see my daughter in such a stable relationship but a grandchild, that really was ***the icing on the cake***.
@@ -721,8 +727,8 @@ If you describe something as the icing on the cake, you mean that it makes a goo
 
 > to date
 >
-> - [TO DATE definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/to-date).
-> - [TO DATE Synonyms \| Collins English Thesaurus](https://www.collinsdictionary.com/dictionary/english-thesaurus/to-date#to-date__1).
+> - [TO DATE definition and meaning](https://www.collinsdictionary.com/dictionary/english/to-date).
+> - [TO DATE Synonyms](https://www.collinsdictionary.com/dictionary/english-thesaurus/to-date#to-date__1).
 
 To date means up until the present time. (Synonyms: up to now, yet, so far, until now, thus far, up to this point, up to the present)
 
@@ -735,7 +741,7 @@ To date means up until the present time. (Synonyms: up to now, yet, so far, unti
 
 > turn to dust
 >
-> - [TURN TO DUST \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/turn-to-dust).
+> - [TURN TO DUST](https://dictionary.cambridge.org/dictionary/english/turn-to-dust).
 
 to become worth nothing.
 
@@ -743,13 +749,11 @@ to become worth nothing.
 
 <br>
 
-# V
-
 ## vice versa
 
 > vice versa
 >
-> - [VICE VERSA \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/vice-versa).
+> - [VICE VERSA](https://dictionary.cambridge.org/dictionary/english/vice-versa).
 
 used to say that what you have just said is also true in the opposite order.
 
@@ -757,13 +761,11 @@ used to say that what you have just said is also true in the opposite order.
 
 <br>
 
-# W
-
 ## wait for the other shoe to drop
 
 > wait for the other shoe to drop
 >
-> - [Wait for the other shoe to drop - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/wait+for+the+other+shoe+to+drop).
+> - [Wait for the other shoe to drop](https://idioms.thefreedictionary.com/wait+for+the+other+shoe+to+drop).
 
 To wait for the next, seemingly unavoidable (and typically negative) thing to happen.
 
@@ -771,11 +773,37 @@ To wait for the next, seemingly unavoidable (and typically negative) thing to ha
 
 <br>
 
+## (your) mileage may vary (YMLV)
+
+> (your) mileage may vary (YMLV)
+>
+> - [(YOUR) MILEAGE MAY VARY](https://dictionary.cambridge.org/dictionary/english/your-mileage-may-vary).
+> - [YMMV](https://dictionary.cambridge.org/dictionary/english/ymmv).
+
+used for saying that someone might have a different experience in a particular situation.
+
+- I actually love working from home, but ***your mileage may vary***.
+- I know ***mileage may vary*** but I did feel very tired and achy after my second shot.
+
+YMMV, written abbreviation for your mileage may vary, used, for example on social media and in text messages and emails, to mean that you understand people may have a different opinion or experience to yours.
+
+- Their first album is better, but of course ***YMMV***.
+- Remember, as they say, ***ymmv***, and this is just what I personally happen to like.
+
+## You shouldn't have.
+
+> You shouldn't have.
+>
+> - [YOU SHOULDN'T HAVE](https://dictionary.cambridge.org/dictionary/english/you-shouldn-t-have).
+
+said when thanking someone who has unexpectedly done something generous, such as given you a present, to mean that they did not need to do it for you.
+
+- Flowers! ***You shouldn't have***!
+
+<br>
 
 **References**
 
-[1] [Collins Online Dictionary \| Definitions, Thesaurus and Translations](https://www.collinsdictionary.com/).
-
-[2] [Longman Dictionary of Contemporary English](https://www.ldoceonline.com/).
-
-[3] [Merriam-Webster: America's Most Trusted Dictionary](https://www.merriam-webster.com/).
+- [Collins Online Dictionary](https://www.collinsdictionary.com/).
+- [Longman Dictionary of Contemporary English](https://www.ldoceonline.com/).
+- [Merriam-Webster: America's Most Trusted Dictionary](https://www.merriam-webster.com/).

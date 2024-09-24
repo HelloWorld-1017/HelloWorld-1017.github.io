@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-08-05 09:32:11 +0800
+last_modified_at: 2024-09-16 14:07:41 +0800
 ---
 
 ## Books
@@ -36,13 +36,14 @@ last_modified_at: 2024-08-05 09:32:11 +0800
 
 ## Blogs
 
-- [Collab Blog · Collab Fund](https://collabfund.com/blog/).
-- [FRED Blog \| Interesting graphs from the FRED library](https://fredblog.stlouisfed.org/).
+- [Collab Blog](https://collabfund.com/blog/).
+- [FRED Blog](https://fredblog.stlouisfed.org/).
 - [硅谷居士 - 博客 \| 文学城](https://blog.wenxuecity.com/myoverview/80634/).
-- [Introduction — Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html).
-  - GitHub Repository: [aeturrell/coding-for-economists: This repository hosts the code behind the online book, Coding for Economists.](https://github.com/aeturrell/coding-for-economists)
+- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html).
+  - GitHub Repository: [aeturrell/coding-for-economists](https://github.com/aeturrell/coding-for-economists).
 - [Causal Inference The Mixtape](https://mixtape.scunning.com/).
-- [Andrew Hallam - Personal Finance Journalist, Speaker, Author](https://andrewhallam.com/).
+- [Andrew Hallam](https://andrewhallam.com/).
+- [Financial Samurai](https://www.financialsamurai.com/).
 
 <br>
 

@@ -5,7 +5,7 @@ categories:
  - Economics & Finance
  - Collections
 date: 2024-07-29 17:05:25 +0800
-last_modified_at: 2024-07-29 17:05:25 +0800
+last_modified_at: 2024-09-18 23:48:23 +0800
 ---
 
 Today (29 July, 2024), SSE Composite Total Return Index (上证综合全收益指数; SSE TR; 000888)[^1][^2] is displayed *real-time* for the first time[^3].
@@ -19,6 +19,16 @@ Today (29 July, 2024), SSE Composite Total Return Index (上证综合全收益�
 To my understandings, previous SSE Composite Index (上证综合指数; SSE; 000001)[^4] is a *price index (PI)*, whereas this SSE TR is a *total return index (TRI)*. The relation between which resembles that of S&P 500[^5] and S&P 500 TR[^6], but not exactly the same, because SSE and SSE TR have different selection criteria and hence constituents.
 
 So. Let's see what’s going to happen in the future.
+
+<br>
+
+**Sept. 18, 2024**
+
+- Open: 3003.10
+- Close: 3016.35
+- High: 3023.93
+- **Low: 2985.73**
+- Volume: ￥213.1 billion
 
 <br>
 

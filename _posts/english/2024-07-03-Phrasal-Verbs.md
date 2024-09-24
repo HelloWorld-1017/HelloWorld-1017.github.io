@@ -3,7 +3,7 @@ title: English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2024-09-14 11:46:51 +0800
+last_modified_at: 2024-09-15 22:52:44 +0800
 ---
 
 ## (BRING) bring about
@@ -187,6 +187,19 @@ If you hand over to someone or hand something over to them, you give them the re
 - The present leaders have to decide whether to stand down and ***hand over*** to a younger generation.
 - I wouldn't dare ***hand*** this project ***over*** to anyone else.
 - They would like to ***hand over*** their financial affairs to another body.
+
+<br>
+
+## (HANG) hang out
+
+> hang out
+>
+> - [HANG OUT \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/hang-out).
+
+to spend a lot of time in a place or with someone.
+
+- (hang out at) You still ***hang out at*** the pool hall?
+- (hang out with) I've been ***hanging out*** backstage ***with*** the band.
 
 <br>
 
@@ -376,6 +389,21 @@ If someone stands down, they resign from an important job or position, often in 
 - Four days later, the despised leader finally ***stood down***, just 17 days after taking office.
 - Profits plunged and he ***stood down*** as chairman last January.
 - The present leaders have to decide whether to ***stand down*** and hand over to a younger generation.
+
+<br>
+
+## (STICK) stick around
+
+> stick around
+>
+> - [STICK AROUND \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/stick-around).
+> - [STICK AROUND definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/stick-around).
+
+to stay somewhere for a period of time; If you stick around, you stay where you are, often because you are waiting for something.
+
+- You go - I'll ***stick around*** here a bit longer.
+- ***Stick around*** a while and see what develops. 
+- I didn't ***stick around*** long enough to find out.
 
 <br>
 

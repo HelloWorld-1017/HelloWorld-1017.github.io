@@ -1,10 +1,10 @@
 ---
-title: "Test `notice` Division of Jekyll Theme \"minimal-mistakes\"" 
+title: "Test `notice` Division of Jekyll Theme Minimal Mistakes" 
 categories:
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
  - HTML
  - CSS
 date: 2022-08-12 17:03:13 +0800

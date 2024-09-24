@@ -3,7 +3,7 @@ title: Takeaways from *Understand Native English Speakers with this Advanced Lis
 categories:
  - English
 date: 2024-09-16 09:27:04 +0800
-last_modified_at: 2024-09-24 17:36:25 +0800
+last_modified_at: 2024-09-24 21:54:25 +0800
 ---
 
 <br>
@@ -27,13 +27,19 @@ We <i class="term">drop sounds</i> (vowels and consonants) when words come toget
 - Good day -> Goo\_ day (drop the 'd')
 - Excuse me! -> Scuse me! (drop the 'e')
 - Shall we go? -> Shwe go? (drop the 'all')
-- That's fine. -> sfine. (drop the 'that', Even drop whole words.)
+- That's fine. -> sfine. (drop the 'that'. Even drop whole words.)
 
-When we put words together, we also <i class="term">link sounds</i>, e.g. Have a -> hav\_a /Hævə/.
+When we put words together, we also <i class="term">link sounds</i>.
 
-Sometimes when we link words, we <i class="term">add another sound</i>, e.g. Go and -> go_w_an (also drop the 'd').
+- Have a -> hav\_a /Hævə/.
 
-A complicated example: Shall we go and have a good day? -> Shwe go\_w\_an hav\_a goo\_ day?
+Sometimes when we link words, we <i class="term">add another sound</i>.
+
+- Go and -> go_w_an (also drop the 'd').
+
+A complicated example:
+
+- Shall we go and have a good day? -> Shwe go\_w\_an hav\_a goo\_ day?
 
 Besides, we (1) <i class="term">stress certain words</i>, (2) <i class="term">reduce some words</i>, (3) <i class="term">add intonation</i>, (4) <i class="term">add rhythm</i>, and (5) <i class="term">add tone</i>. So, <i class="emphasize">start to focus on the SOUNDS rather than INDIVIDUAL WORDS</i>.
 
@@ -54,10 +60,10 @@ Besides, we (1) <i class="term">stress certain words</i>, (2) <i class="term">re
 
  **Two kinds of listening:**
 
-- Intensive: short clips you analyze
-  - **focus on stressed words**, underline them, listen for the main idea (the gist).
-  - **Don't need to be focusing on every words.**
-- Extensive: longer clips you enjoy, like films and podcasts.
+- <i class="term">Intensive listening</i>: short clips you analyze
+  - <i class="emphasize">Focus on stressed words</i>, underline them, listen for the main idea (the gist).
+  - <i class="emphasize">Don't need to be focusing on every words.</i>
+- <i class="term">Extensive listening</i>: longer clips to enjoy, like films and podcasts.
 
 </div>
 
@@ -98,16 +104,35 @@ A <i class="term">CHUNK</i> is a piece of language where we focus on the sound, 
 
 e.g.
 
-- <u>Do</u> <u>you</u> like pizza?
-- a ticket <u>to</u> London.
-- a table <u>for</u> two
+- <u>Do</u> /də/ <u>you</u> /jə/ like pizza?
+- a ticket <u>to</u> /tə/ London.
+- a table <u>for</u> /fə/ two
 
 Those words (small words) that have weak form.
 
-- Auxiliaries: was /wəz/, were /wə/, do /də/, have /həv/, can /kən/, ...
-- Personal pronouns: you /jə/, he /hi/, she /ʃə/, ...
-- Prepositions: to /tə/, at /ət/, of /əf/, for /fə/, ...
-- Conjunctions: and /ən/, but /bə/, than /ðə/, ...
+- Auxiliaries
+  - was /wəz/
+  - were /wə/
+  - do /də/
+  - have /həv/
+  - can /kən/, ...
+
+- Personal pronouns
+  - you /jə/
+  - he /hi/
+  - she /ʃə/, ...
+
+- Prepositions
+  - to /tə/
+  - at /ət/
+  - of /əf/
+  - for /fə/, ...
+
+- Conjunctions
+  - and /ən/
+  - but /bə/
+  - than /ðə/, ...
+
 
 By and large, <i class="emphasize">it's a <i class="term">schwa sound /ə/</i> that we're using in the weak form, not always, but usually</i>.
 
@@ -117,9 +142,15 @@ In spoken English <i class="emphasize">we normally use <i class="term">contracti
 
 - I will = I'll
 - I am = I'm
-- I would = I'd, e.g. I'd like to get a ticket to London.
-- I should have = I should've, e.g. I should've called you before coming.
-- I would have = I would've OR I'd've, e.g. You should've asked, I would've been happy to do it.
+- I would = I'd
+  - I'd like to get a ticket to London.
+
+- I should have = I should've
+  - I should've called you before coming.
+
+- I would have = I would've (or, I'd've)
+  - You should've asked, I would've been happy to do it.
+
 - It's fine = sfine.
 
 ### Connected speech
@@ -127,7 +158,7 @@ In spoken English <i class="emphasize">we normally use <i class="term">contracti
 <i class="term">Connected speech</i> is the big one that makes listening really difficult but once you get this, your listening skills are gonna rock it. <i class="emphasize">When a word ends with a consonant sound and the next word begins with a vowel sound, we usually connect the two words.</i> We can connect the sounds or we can add a sound to make the connection.
 
 - I’d like to ge<u>t a</u> ticke<u>t t</u>o London.
-- I should've <u>called you</u> /kɔːldjə/ before coming. /də/ -> /djə/
-- You should've\_asked. /væsd/ ( also drop the 'k')
-- to do it. /duːwit/
-- I didn't want to trouble you. /didnwɒntə/
+- I should've <u>called you</u> /kɔːldjə/ before coming. (/də/ -> /djə/)
+- You should'<u>ve asked</u> /væsd/. (also drop the 'k')
+- to do it /duːwit/.
+- I didn't want to /didnwɒntə/ trouble you. 

@@ -1,12 +1,12 @@
 ---
-title: "Test Sidebar with Navigation List of Jekyll Theme \"minimal-mistakes\""
+title: "Test Sidebar with Navigation List of Jekyll Theme Minimal Mistakes"
 toc: false
 classes: wide
 categories:
  - Web Development
 tags: 
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 sidebar:
   title: "Sample Title"
   nav: sidebar-sample

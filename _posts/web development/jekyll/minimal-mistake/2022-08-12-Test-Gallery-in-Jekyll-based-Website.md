@@ -1,11 +1,11 @@
 ---
-title: "Test Gallery of Jekyll Theme \"minimal-mistakes\""
+title: "Test Gallery of Jekyll Theme Minimal Mistakes"
 toc: false
 categories:
  - Web Development
 tags: 
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 classes: wide
 gallery:
  - url: /images/PeakyBlinders1.jpg

@@ -1,5 +1,5 @@
 ---
-title: "Test Header Image Overlay with Custom Tagline of Jekyll Theme \"minimal-mistakes\""
+title: "Test Header Image Overlay with Custom Tagline of Jekyll Theme Minimal Mistakes"
 toc: false
 classes: wide
 tagline: Peaky Blinders
@@ -10,7 +10,7 @@ categories:
  - Web Development
 tags: 
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 date: 2022-08-13 16:20:25 +0800
 last_modified_at: 2024-08-25 18:34:32 +0800
 ---

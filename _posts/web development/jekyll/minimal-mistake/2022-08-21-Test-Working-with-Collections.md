@@ -1,12 +1,12 @@
 ---
-title: "Test Working with Collections of Jekyll Theme \"minimal-mistakes\""
+title: "Test Working with Collections of Jekyll Theme Minimal Mistakes"
 toc: false
 classes: wide
 categories: 
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 date: 2022-08-21 13:25:23 +0800
 last_modified_at: 2024-08-25 18:36:21 +0800
 ---

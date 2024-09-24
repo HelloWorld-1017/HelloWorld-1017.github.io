@@ -1,5 +1,5 @@
 ---
-title: "The Source File Structure of Jekyll Theme \"minimal-mistakes\""
+title: "The Source File Structure of Jekyll Theme Minimal Mistakes"
 subtitle: Realize file tree in MATLAB
 categories:
  - Web Development
@@ -7,7 +7,7 @@ categories:
  - Windows
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
  - Regular Expression
  - Data Structure
  - MATLAB Language Fundamentals

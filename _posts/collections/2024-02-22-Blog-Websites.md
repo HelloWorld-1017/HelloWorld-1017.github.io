@@ -7,10 +7,17 @@ tags:
  - Jekyll
  - HTML
 date: 2024-02-22 22:37:33 +0800
-last_modified_at: 2024-09-08 09:53:35 +0800
+last_modified_at: 2024-09-24 22:36:39 +0800
 ---
 
-> In this post, I want to record some blog websites I’ve ever seen. They are basically static websites, and hosted in GitHub. All of these websites are found when I was searching information online. I think their website styles or certain elements are simple but beautiful. So, if I need to improve my personal website one day, they could be good references, because I could view their source codes in GitHub or inspect their elements in browser debug mode. Actually, I had been doing it.
+<br>
+
+<div class="notice--primary" markdown="1">
+In this post, I want to record some blog websites I’ve ever seen. They are basically static websites, and hosted in GitHub. All of these websites are found when I was searching information online. I think their website styles or certain elements are simple but beautiful. So, if I need to improve my personal website one day, they could be good references, because I could view their source codes in GitHub or inspect their elements in browser debug mode. Actually, I had been doing it.
+
+</div>
+
+<br>
 
 ## Jekyll websites
 
@@ -44,7 +51,7 @@ last_modified_at: 2024-09-08 09:53:35 +0800
   - GitHub repo: [alshedivat/al-folio](https://github.com/alshedivat/al-folio)
 
 
-## Jekyll theme "minimal-mistakes"
+## Jekyll theme Minimal Mistakes
 
 - Official sample website: [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
   - GitHub repo: [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes)

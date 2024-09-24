@@ -4,9 +4,9 @@ categories:
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 date: 2024-07-13 15:59:18 +0800
-last_modified_at: 2024-08-25 18:48:29 +0800
+last_modified_at: 2024-09-24 22:39:17 +0800
 ---
 
 # `site.categories` elements
@@ -102,4 +102,4 @@ last_modified_at: 2024-08-25 18:48:29 +0800
 
 **References**
 
-[1] [minimal-mistakes/\_includes/posts-taxonomy.html at master · mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/posts-taxonomy.html).
+[1] [minimal-mistakes/\_includes/posts-taxonomy.html](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/posts-taxonomy.html).

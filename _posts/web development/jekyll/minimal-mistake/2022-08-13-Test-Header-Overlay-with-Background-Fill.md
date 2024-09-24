@@ -1,5 +1,5 @@
 ---
-title: "Test Header Overlay with Background Fill of Jekyll Theme \"minimal-mistakes\""
+title: "Test Header Overlay with Background Fill of Jekyll Theme Minimal Mistakes"
 toc: false
 classes: wide
 tagline: 十六进制颜色填充
@@ -9,7 +9,7 @@ categories:
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 date: 2022-08-13 16:32:41 +0800
 last_modified_at: 2024-08-25 18:35:01 +0800
 ---

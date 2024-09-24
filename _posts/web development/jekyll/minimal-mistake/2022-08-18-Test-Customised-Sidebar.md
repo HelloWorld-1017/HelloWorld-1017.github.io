@@ -1,12 +1,12 @@
 ---
-title: "Test Customised Sidebar of Jekyll Theme \"minimal-mistakes\""
+title: "Test Customised Sidebar of Jekyll Theme Minimal Mistakes"
 toc: false
 classes: wide
 categories:
  - Web Development
 tags: 
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 sidebar:
   - title: "Title"
     image: "/images/PeakyBlinders1.jpg"

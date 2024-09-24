@@ -1,11 +1,11 @@
 ---
-title: "Test Webpage Layout `splash` of Jekyll Theme \"minimal-mistakes\""
+title: "Test Webpage Layout `splash` of Jekyll Theme Minimal Mistakes"
 layout: splash
 categories:
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
  - HTML
 
 header:

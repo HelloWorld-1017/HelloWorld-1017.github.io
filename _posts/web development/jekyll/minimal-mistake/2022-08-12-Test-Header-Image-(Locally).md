@@ -1,11 +1,11 @@
 ---
-title: "Test Header Image (Locally) of Jekyll Theme \"minimal-mistakes\""
+title: "Test Header Image (Locally) of Jekyll Theme Minimal Mistakes"
 toc: false
 categories:
  - Web Development
 tags: 
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 classes: wide
 header:
   image: /images/PeakyBlinders1.jpg

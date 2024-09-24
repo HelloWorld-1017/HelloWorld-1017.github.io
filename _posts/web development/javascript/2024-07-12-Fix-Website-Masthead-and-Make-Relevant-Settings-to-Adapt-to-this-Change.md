@@ -8,10 +8,10 @@ tags:
  - CSS
  - JavaScript
 date: 2024-07-12 23:12:20 +0800
-last_modified_at: 2024-07-13 18:25:03 +0800
+last_modified_at: 2024-09-24 22:38:44 +0800
 ---
 
-As shown in post title. Take Jekyll theme [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) as an example.
+As shown in post title. Take Jekyll theme [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) as an example.
 
 (1) Fix website masthead
 

@@ -1,10 +1,10 @@
 ---
-title: "CSS Buttons: CSS Button Classes in Jekyll Theme \"minimal-mistakes\" and Bootstrap Framework (including one way of installing Bootstrap to Jekyll website)"
+title: "CSS Buttons: CSS Button Classes in Jekyll Theme Minimal Mistakes and Bootstrap Framework (including one way of installing Bootstrap to Jekyll website)"
 categories:
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
  - HTML
  - CSS
  - Bootstrap

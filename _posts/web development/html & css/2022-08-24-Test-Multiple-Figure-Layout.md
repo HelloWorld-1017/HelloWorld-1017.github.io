@@ -6,12 +6,12 @@ tags:
  - HTML
  - Markdown
 date: 2022-08-24 10:07:19 +0800
-last_modified_at: 2024-08-25 18:36:34 +0800
+last_modified_at: 2024-09-24 22:34:37 +0800
 ---
 
 # 引用 COS 图像
 
-将图片复制到 .md 文件中时，地址为：
+将图片复制到Markdown文件中时，地址为：
 
 ```html
 ![image-20220824095532680](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220824095532680.png)
@@ -74,9 +74,11 @@ https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-202
     <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220824095532680.png?raw=true">
     <figcaption>Three figures.</figcaption>
 </figure>
+<br>
+
 # 图像插入超链接
 
-另外，图片和标题都可以插入超链接指向其他网址，以 Minimal Mistakes 官方 sample $^{[1]}$中的一张网络图片为例：
+另外，图片和标题都可以插入超链接指向其他网址，以 Minimal Mistakes 官方示例[^1]中的一张网络图片为例：
 
 ```html
 <figure>
@@ -93,4 +95,4 @@ https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-202
 
 **References**
 
-[1] [Markup: Another Post with Images - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/markup-more-images/).
+[^1]: [Markup: Another Post with Images - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/markup-more-images/).

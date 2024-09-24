@@ -1,10 +1,10 @@
 ---
-title: "Test External Video Links and Header Video of Jekyll Theme \"minimal-mistakes\""
+title: "Test External Video Links and Header Video of Jekyll Theme Minimal Mistakes"
 categories: 
  - Web Development
 tags:
  - Jekyll
- - Jekyll minimal-mistakes
+ - Jekyll Minimal Mistakes
 toc: false
 header:
   video:

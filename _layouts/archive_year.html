@@ -13,7 +13,9 @@ layout: default
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }} <font size="3" face="Comic Sans MS">{{ site.posts | size }} Posts</font></h1> 
+      <h1 id="page-title" class="page__title">
+        {{ page.title }} <font size="3">{{ site.posts | size }} Posts</font>
+      </h1> 
     {% endunless %}
     {{ content }}
   </div>

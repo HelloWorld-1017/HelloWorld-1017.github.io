@@ -558,16 +558,6 @@ $vine-color: #00bf8f !default;
 $youtube-color: #bb0000 !default;
 $xing-color: #006567 !default;
 
-/* links */
-$link-color: mix(#000, $info-color, 20%) !default;
-$link-color-hover: mix(#000, $link-color, 55%) !default;
-$link-color-visited: mix(#fff, $link-color, 15%) !default;
-$navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
-
-/* notices */
-$notice-background-mix: 80% !default;
-$code-notice-background-mix: 90% !default;
-
 /* syntax highlighting (base16) */
 $base00: #263238 !default;
 $base01: #2e3c43 !default;
@@ -585,3 +575,31 @@ $base0c: #89ddff !default;
 $base0d: #82aaff !default;
 $base0e: #c792ea !default;
 $base0f: #ff5370 !default;
+
+/* links */
+$link-color: mix(#000, $info-color, 20%) !default;
+$link-color-hover: mix(#000, $link-color, 55%) !default;
+$link-color-visited: mix(#fff, $link-color, 15%) !default;
+$navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
+
+/* notices */
+$notice-background-mix: 80% !default;
+$code-notice-background-mix: 90% !default;
+
+/* masthead */
+$masthead-color: black !default;
+$masthead-title-color: $masthead-color !default;
+$masthead-menu-item-color: $masthead-color !default;
+$masthead-background-color: white !default;
+
+/* pagination */
+$pagination-color: 1px solid mix(#000, $border-color, 25%);
+$pagination-current-background-color: black !default;
+
+/* footer */
+$footer-color: white !default;
+$footer-background-color: black !default;
+
+/* other colors */
+$term-color: #D63384;
+$emphasize-color: #244FE7; // $DodgerBlue4

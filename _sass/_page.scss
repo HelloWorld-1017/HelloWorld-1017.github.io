@@ -185,11 +185,11 @@ body {
   }
 
   .term {
-    color: #D63384;
+    color: $term-color;
   }
 
   .emphasize {
-    color: #244FE7; // $DodgerBlue4
+    color: $emphasize-color; 
   }
 }
 

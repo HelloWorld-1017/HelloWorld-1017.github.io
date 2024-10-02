@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-09-27 04:25:43 +0800
+last_modified_at: 2024-09-28 14:28:24 +0800
 ---
 
 ## Books
@@ -32,6 +32,11 @@ last_modified_at: 2024-09-27 04:25:43 +0800
 - [上海证券交易所 (Shanghai Stock Exchange, SSE)](https://www.sse.com.cn/).
 - [U.S. Department of Labor](https://www.dol.gov/): Employment status and nonfarm payrolls.
 - [National (Chinese) Institution for Finance & Development](http://www.nifd.cn/home/index): China’s macro leverage ratio.
+- [United Nations Databases](https://www.un.org/en/library/page/databases).
+- [Data.gov](https://data.gov/).
+- [Google Dataset Search](https://datasetsearch.research.google.com/).
+- [CEIC Global Economic Data, Indicators, Charts & Forecasts](https://www.ceicdata.com/en).
+- [World Bank Group](https://www.worldbank.org/en/home).
 
 <br>
 
@@ -39,7 +44,7 @@ last_modified_at: 2024-09-27 04:25:43 +0800
 
 - [Collab Blog](https://collabfund.com/blog/).
 - [FRED Blog](https://fredblog.stlouisfed.org/).
-- [硅谷居士 - 博客](https://blog.wenxuecity.com/myoverview/80634/).
+- [硅谷居士博客](https://blog.wenxuecity.com/myoverview/80634/).
 - [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html).
   - GitHub repo: [aeturrell/coding-for-economists](https://github.com/aeturrell/coding-for-economists).
 - [Causal Inference The Mixtape](https://mixtape.scunning.com/).

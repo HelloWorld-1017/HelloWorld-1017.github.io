@@ -3,7 +3,7 @@ title: English Binomials
 categories:
  - English
 date: 2024-05-27 15:24:32 +0800
-last_modified_at: 2024-08-14 15:33:40 +0800
+last_modified_at: 2024-10-01 14:57:13 +0800
 ---
 
 # What is English binomial?
@@ -16,7 +16,7 @@ Binomials are expressions (often idiomatic) where two words are joined by a conj
 
 > back and force
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 to move many times from one place to another and then back again
 
@@ -28,7 +28,7 @@ to move many times from one place to another and then back again
 
 > black and white
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 a) to describe when there are no colours, only black, white and grey.
 
@@ -44,7 +44,7 @@ b) to describe a situation which is clear to understand and is considered to be 
 
 > chalk and cheese
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 used to refer to two people or things as being completely different from each other
 
@@ -56,7 +56,7 @@ used to refer to two people or things as being completely different from each ot
 
 > ifs and buts
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 used to emphasize when you don’t want someone to argue about a situation
 
@@ -68,7 +68,7 @@ used to emphasize when you don’t want someone to argue about a situation
 
 >  (the) ins and outs
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 refers to the detailed information about a situation
 
@@ -81,7 +81,7 @@ refers to the detailed information about a situation
 > give and take
 >
 > - [English vocabulary in use: upper-intermediate.pdf](https://dl3.languagecentre.ir/vocabulary/English Vocabulary in Use Upper-Intermediate 4th Edition [www.languagecentre.ir].pdf).
-> - [GIVE AND TAKE  - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/give-and-take).
+> - [GIVE AND TAKE](https://dictionary.cambridge.org/dictionary/english/give-and-take).
 
 (1) willingness to accept suggestions from another person and give up some of your own; a spirit of compromise.
 
@@ -94,9 +94,23 @@ refers to the detailed information about a situation
 
 <br>
 
+## hustle and bustle
+
+> hustle and bustle
+>
+> - [HUSTLE AND BUSTLE](https://dictionary.cambridge.org/dictionary/english/hustle-and-bustle).
+
+noise and activity.
+
+- I love the ***hustle and bustle*** of the marketplace.
+- I come from New York, so I'm used to ***hustle and bustle***.
+- We wanted to get away from the ***hustle and bustle*** of the city.
+
+<br>
+
 ## more and more
 
-*(skip over)*
+(skip over)
 
 <br>
 
@@ -104,8 +118,8 @@ refers to the detailed information about a situation
 
 > nuts and bolts (of something)
 >
-> - [NUTS AND BOLTS definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/nuts-and-bolts).
-> - [the nuts and bolts of something - LDOCE](https://www.ldoceonline.com/dictionary/the-nuts-and-bolts-of-something).
+> - [NUTS AND BOLTS definition and meaning](https://www.collinsdictionary.com/dictionary/english/nuts-and-bolts).
+> - [the nuts and bolts of something](https://www.ldoceonline.com/dictionary/the-nuts-and-bolts-of-something).
 
 If you talk about the nuts and bolts of a subject or an activity, you are referring to the detailed practical aspects of it rather than abstract ideas about it.
 
@@ -123,7 +137,7 @@ Synonyms: essentials, basics, fundamentals, nitty-gritty.
 
 > odds and ends
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 a variety of small things that are not valuable or important.
 
@@ -136,7 +150,7 @@ a variety of small things that are not valuable or important.
 > on and off/off and on
 >
 > - [English vocabulary in use: upper-intermediate.pdf](https://dl3.languagecentre.ir/vocabulary/English Vocabulary in Use Upper-Intermediate 4th Edition [www.languagecentre.ir].pdf).
-> - [OFF AND ON - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/off-and-on).
+> - [OFF AND ON](https://dictionary.cambridge.org/dictionary/english/off-and-on).
 
 happening or existing only some of the time; occasionally.
 
@@ -149,7 +163,7 @@ happening or existing only some of the time; occasionally.
 
 > pros and cons
 >
-> - [THE PROS AND CONS - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/pros-and-cons).
+> - [THE PROS AND CONS](https://dictionary.cambridge.org/dictionary/english/pros-and-cons).
 
 the advantages and disadvantages of something, especially something that you are considering doing.
 
@@ -162,7 +176,7 @@ the advantages and disadvantages of something, especially something that you are
 
 > time and (time) again
 >
-> - [TIME AND (TIME) AGAIN - Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/time-and-time-again).
+> - [TIME AND (TIME) AGAIN](https://dictionary.cambridge.org/dictionary/english/time-and-time-again).
 
 very often.
 
@@ -176,7 +190,7 @@ very often.
 
 > ups and downs
 >
-> - [UPS AND DOWNS \| English meaning - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/ups-and-downs).
+> - [UPS AND DOWNS](https://dictionary.cambridge.org/dictionary/english/ups-and-downs).
 
 If someone or something experiences ups and downs, a mixture of good and bad things happens to him, her, or it.
 
@@ -188,7 +202,7 @@ If someone or something experiences ups and downs, a mixture of good and bad thi
 
 > wine and dine
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 to entertain someone by having drinks and eating together
 
@@ -203,7 +217,7 @@ We like to wine and dine potential clients when we're on business trips.
 > slowly but surely
 >
 > - [English vocabulary in use: upper-intermediate.pdf](https://dl3.languagecentre.ir/vocabulary/English Vocabulary in Use Upper-Intermediate 4th Edition [www.languagecentre.ir].pdf).
-> - [SLOWLY BUT SURELY - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/slowly-but-surely).
+> - [SLOWLY BUT SURELY](https://dictionary.cambridge.org/dictionary/english/slowly-but-surely).
 
 (1) gradually
 
@@ -222,7 +236,7 @@ We like to wine and dine potential clients when we're on business trips.
 
 > bit by bit
 >
-> - [BIT BY BIT definition in American English \| Collins English Dictionary](https://www.collinsdictionary.com/us/dictionary/english/bit-by-bit).
+> - [BIT BY BIT definition in American English](https://www.collinsdictionary.com/us/dictionary/english/bit-by-bit).
 
 If something happens bit by bit, it happens in stages. (**Synonyms:** little by little, slowly, progressively, steadily)
 
@@ -234,11 +248,11 @@ If something happens bit by bit, it happens in stages. (**Synonyms:** little by 
 
 > day by day
 >
-> - [DAY BY DAY definition in American English \| Collins English Dictionary](https://www.collinsdictionary.com/us/dictionary/english/day-by-day).
+> - [DAY BY DAY definition in American English](https://www.collinsdictionary.com/us/dictionary/english/day-by-day).
 
 gradually or progressively; daily.
 
-- He weakened ***day by day***
+- He weakened ***day by day***.
 
 <br>
 
@@ -246,7 +260,7 @@ gradually or progressively; daily.
 
 > little by little
 >
-> - [LITTLE BY LITTLE definition in American English \| Collins English Dictionary](https://www.collinsdictionary.com/us/dictionary/english/little-by-little).
+> - [LITTLE BY LITTLE definition in American English](https://www.collinsdictionary.com/us/dictionary/english/little-by-little).
 
 If something happens little by little, it happens very gradually.
 
@@ -259,7 +273,7 @@ If something happens little by little, it happens very gradually.
 
 > step by step
 >
-> - [STEP BY STEP definition in American English \| Collins English Dictionary](https://www.collinsdictionary.com/us/dictionary/english/step-by-step).
+> - [STEP BY STEP definition in American English](https://www.collinsdictionary.com/us/dictionary/english/step-by-step).
 
 If you do something step by step, you do it by progressing gradually from one stage to the next.
 
@@ -273,7 +287,7 @@ If you do something step by step, you do it by progressing gradually from one st
 
 > all in all
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 to summarize when you look at every aspect of a situation.
 
@@ -287,7 +301,7 @@ to summarize when you look at every aspect of a situation.
 
 > all or nothing
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 to describe when something must be done completely to be successful or not at all
 
@@ -299,7 +313,7 @@ to describe when something must be done completely to be successful or not at al
 
 > more or less
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 approximately, almost, to some degree
 
@@ -311,7 +325,7 @@ approximately, almost, to some degree
 
 > (it's) now or never
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 used to emphasize that if you don’t do something immediately, there will not be another opportunity in the future.
 
@@ -324,7 +338,7 @@ used to emphasize that if you don’t do something immediately, there will not b
 > sink or swim
 >
 > - [English vocabulary in use: upper-intermediate.pdf](https://dl3.languagecentre.ir/vocabulary/English Vocabulary in Use Upper-Intermediate 4th Edition [www.languagecentre.ir].pdf).
-> - [SINK OR SWIM - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/sink-or-swim).
+> - [SINK OR SWIM](https://dictionary.cambridge.org/dictionary/english/sink-or-swim).
 
 survive or fail; If you are left to sink or swim, you are given no help so that you succeed or fail completely by your own efforts.
 
@@ -340,7 +354,7 @@ survive or fail; If you are left to sink or swim, you are given no help so that 
 > back to front
 >
 > - [English vocabulary in use: upper-intermediate.pdf](https://dl3.languagecentre.ir/vocabulary/English Vocabulary in Use Upper-Intermediate 4th Edition [www.languagecentre.ir].pdf).
-> - [BACK TO FRONT - Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/back-to-front).
+> - [BACK TO FRONT](https://dictionary.cambridge.org/dictionary/english/back-to-front).
 
 the wrong way; with the back part of something where the front should be.
 
@@ -354,7 +368,7 @@ the wrong way; with the back part of something where the front should be.
 
 > heart to heart
 >
-> - [30 tried and tested English binomial expressions \| EnglishRadar](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
+> - [30 tried and tested English binomial expressions](https://www.englishradar.com/english-vocabulary/30-tried-and-tested-english-binomial-expressions/).
 
 used to describe an open and honest private conversation between friends.
 

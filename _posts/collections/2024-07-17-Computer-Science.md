@@ -4,14 +4,13 @@ toc: false
 categories:
  - Collections
 date: 2024-07-17 11:17:16 +0800
-last_modified_at: 2024-09-27 04:13:43 +0800
+last_modified_at: 2024-09-28 21:21:04 +0800
 ---
 
 **Books**
 
 - [But How Do It Know?](https://www.nipccd.nic.in/uploads/report/EBMIfKpdf-1bc3ceafe870f0bf95edccb7a38d63ee.pdf), J. Clark Scott.
-  - [But How Do It Know - the book. The basic principles of computers](https://www.buthowdoitknow.com/).
-  - [How a CPU Works? - YouTube](https://www.youtube.com/watch?v=cNN_tTXABUA). 
+  - [How a CPU Works?](https://www.youtube.com/watch?v=cNN_tTXABUA). 
 
 **Blogs & Websites**
 
@@ -19,6 +18,7 @@ last_modified_at: 2024-09-27 04:13:43 +0800
 - [Hacker News](https://news.ycombinator.com/).
 - [TIOBE (The Importance Of Being Earnest) Index](https://www.tiobe.com/tiobe-index/).
 - [HelloGitHub](https://hellogithub.com/).
+- [Codewars](https://www.codewars.com/).
 
 **Courses**
 

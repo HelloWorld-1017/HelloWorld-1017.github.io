@@ -3,7 +3,7 @@ title: English Acronyms
 categories:
  - English
 date: 2024-09-15 22:00:04 +0800
-last_modified_at: 2024-09-23 14:11:37 +0800
+last_modified_at: 2024-09-29 19:30:03 +0800
 ---
 
 <br>
@@ -12,7 +12,7 @@ last_modified_at: 2024-09-23 14:11:37 +0800
 
 **Resources**
 
-- [最常見的英語首字母縮略詞 - YouTube](https://www.youtube.com/watch?v=nRY4XJ9ch4Q).
+- [最常見的英語首字母縮略詞](https://www.youtube.com/watch?v=nRY4XJ9ch4Q).
 
 </div>
 
@@ -30,11 +30,27 @@ BTS is a term for parts of a show or production that the public can't see.
 
 -- I can't believe I'm gonna get a BTS tour of the theater.
 
+<div class="notice" markdown="1">
+
+[Behind-the-scenes](https://www.merriam-webster.com/dictionary/behind-the-scenes):
+
+(1) being or working out of public view or in secret
+
+- behind-the-scenes lobbying for more money
+- behind-the-scenes player
+
+(2) revealing or reporting the hidden workings
+
+- a behind-the-scenes account
+- a behind-the-scenes glimpse
+
+</div>
+
 <br>
 
 ## direct message (DM)
 
-> - [What is a Direct Message (DM)? \| Sprout Social](https://sproutsocial.com/glossary/direct-message-dm/).
+> - [What is a Direct Message (DM)?](https://sproutsocial.com/glossary/direct-message-dm/).
 
 In the digital world, “DM” usually stands for “Direct Message.” A DM is a private mode of communication between social media users. When you send a direct message, only you and the recipient can see the content.
 

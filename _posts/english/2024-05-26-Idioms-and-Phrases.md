@@ -3,7 +3,7 @@ title: English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-09-24 18:25:37 +0800
+last_modified_at: 2024-09-28 22:06:14 +0800
 ---
 
 ## at any rate
@@ -335,6 +335,19 @@ it is useful or helpful to do or have something.
 to manage to stop yourself from smiling or laughing.
 
 - She tried to ***keep a straight face*** but, unable to contain herself, burst into laughter.
+
+## (keep your) fingers crossed
+
+> (keep your) fingers crossed
+>
+> - [KEEP YOUR FINGERS CROSSED](https://dictionary.cambridge.org/dictionary/learner-english/keep-your-fingers-crossed).
+> - [Crossed fingers](https://en.wikipedia.org/wiki/Crossed_fingers).
+
+to hope that things will happen in the way that you want them to.
+
+- Let's ***keep our fingers crossed*** that it doesn't rain.
+
+<br>
 
 ## know your onions
 

@@ -1,0 +1,643 @@
+---
+title: "Python `conda list` vs. `pip list`, and Python Module Precedence Order"
+categories:
+ - Python
+tags:
+ - Python conda
+ - Python pip
+ - Python sys
+date: 2024-05-25 08:35:29 +0800
+last_modified_at: 2024-10-05 20:52:22 +0800
+---
+
+# `conda list` vs. `pip list`
+
+In the blog[^1], I used Python pip to update the Matplotlib package. However, I found that if I use command `conda list` and `pip list` to inspect the Matplotlib package version respectively, I will get different results.
+
+`conda list`:
+
+<div id="conda-list-result"></div>
+
+```
+In: conda list
+# packages in environment at D:\Softwares\anaconda3:
+#
+# Name                    Version                   Build  Channel
+...  
+matplotlib                3.5.2            py39haa95532_0  
+matplotlib-base           3.5.2            py39hd77b12b_0  
+matplotlib-inline         0.1.6            py39haa95532_0  
+... 
+
+Note: you may need to restart the kernel to use updated packages.
+```
+
+`pip list`:
+
+```
+[In]: pip list
+Package                       Version
+----------------------------- --------------------
+...
+matplotlib                    3.9.0
+matplotlib-inline             0.1.6
+...
+Note: you may need to restart the kernel to use updated packages.
+```
+
+NOTE: The full list of Conda packages and Pip packages are shown in [Appendix](#Appendix). 
+{: .notice--primary}
+
+This remind me of that Conda and Pip actually are different package management tools[^2][^3], although their functions overlap in a way, and many users use them, myself included, to manage packages simultaneously and don't mind their nuances. 
+
+As said in blog[^1], if I inspect the Matplotlib version after updating by `pip update matplotlib --user` command, I find the version is `3.9.0` and the script can work correctly. Which means that, although there are two-version Matplotlib packages, Python will first invoke that managed by Pip. So the next question is coming, what is the precedence order of those packages?
+
+<br>
+
+# Python module precedence order
+
+According to Python official documentation[^4] (and other reference[^5]), when a module is imported, Python interpreter will first search for the module in (1) the built-in module list given by `sys.builtin_module_names`, and then (2) the directories given by `sys.path` (in a descending order).
+
+```
+In: sys.builtin_module_names
+Out: 
+('_abc',
+ '_ast',
+ '_bisect',
+ '_blake2',
+ '_codecs',
+ '_codecs_cn',
+ '_codecs_hk',
+ '_codecs_iso2022',
+ '_codecs_jp',
+ '_codecs_kr',
+ '_codecs_tw',
+ '_collections',
+ '_contextvars',
+ '_csv',
+ '_datetime',
+ '_functools',
+ '_heapq',
+ '_imp',
+ '_io',
+ '_json',
+ '_locale',
+ '_lsprof',
+ '_md5',
+ '_multibytecodec',
+ '_opcode',
+ '_operator',
+ '_peg_parser',
+ '_pickle',
+ '_random',
+ '_sha1',
+ '_sha256',
+ '_sha3',
+ '_sha512',
+ '_signal',
+ '_sre',
+ '_stat',
+ '_statistics',
+ '_string',
+ '_struct',
+ '_symtable',
+ '_thread',
+ '_tracemalloc',
+ '_warnings',
+ '_weakref',
+ '_winapi',
+ '_xxsubinterpreters',
+ 'array',
+ 'atexit',
+ 'audioop',
+ 'binascii',
+ 'builtins',
+ 'cmath',
+ 'errno',
+ 'faulthandler',
+ 'gc',
+ 'itertools',
+ 'marshal',
+ 'math',
+ 'mmap',
+ 'msvcrt',
+ 'nt',
+ 'parser',
+ 'sys',
+ 'time',
+ 'winreg',
+ 'xxsubtype',
+ 'zlib')
+```
+
+```
+In: sys.path
+Out: 
+['D:\\Softwares\\anaconda3\\python39.zip',
+ 'D:\\Softwares\\anaconda3\\DLLs',
+ 'D:\\Softwares\\anaconda3\\lib',
+ 'D:\\Softwares\\anaconda3',
+ '',
+ 'C:\\Users\\<USER_NAME>\\AppData\\Roaming\\Python\\Python39\\site-packages',
+ 'D:\\Softwares\\anaconda3\\lib\\site-packages',
+ 'D:\\Softwares\\anaconda3\\lib\\site-packages\\win32',
+ 'D:\\Softwares\\anaconda3\\lib\\site-packages\\win32\\lib',
+ 'D:\\Softwares\\anaconda3\\lib\\site-packages\\Pythonwin',
+ 'D:\\Softwares\\anaconda3\\lib\\site-packages\\IPython\\extensions',
+ 'C:\\Users\\<USER_NAME>\\.ipython']
+```
+
+NOTE: `''` denotes the current folder.
+{: .notice--primary}
+
+Apparently, those installed Python packages are stored in those `sys.path` directories. If query the Pip-managed Matplotlib package location[^6]:
+
+```
+In: import matplotlib
+In: print(matplotlib.__file__)
+
+C:\Users\<USER_NAME>\AppData\Roaming\Python\Python39\site-packages\matplotlib\__init__.py
+```
+
+the result shows that the package is located at the 6th directory in `sys.path`. As for the Matplotlib managed by `conda`, I don't find an easy way to get the package installment location. So, I select an exclusive package `backports` (see [Appendix](#Appendix)), and print its location:
+
+```
+In: import backports
+In: print(backports.__file__)
+
+D:\Softwares\anaconda3\lib\site-packages\backports\__init__.py
+```
+
+As can be seen, those Conda packages are in `D:\Softwares\anaconda3\lib\site-packages`, which is the 7th search directory in `sys.path`.
+
+After, in the `D:\Softwares\anaconda3\lib\site-packages` directory, I find a `matplotlib` folder, and the `_version.py` file in it shows that this is version `3.5.2`:
+
+```python
+# D:\Softwares\anaconda3\Lib\site-packages\matplotlib\_version.py
+
+# coding: utf-8
+# file generated by setuptools_scm
+# don't change, don't track in version control
+__version__ = version = '3.5.2'
+__version_tuple__ = version_tuple = (3, 5, 2)
+```
+
+which is indeed consistent with [the `conda list` result](#conda-list-result).
+
+To sum up, Matplotlib 3.9.0 managed by Pip is stored in the 6th directory  in `sys.path`, while Matplotlib 3.5.2 managed by Conda is in the 7th directory in `sys.path`. Which is why the former is importing when executing `import matplotlib`. And it also means **Pip packages have a HIGHER calling order than Conda packages if both packages have the same name.** 
+
+<br>
+
+# Appendix
+
+About "Note" column in the following table:
+
+(1) SAME (262 packages): the package and whose version are the same in Conda and Pip managers;
+
+(2) <font color="red">CONDA</font> (88 packages): exclusive package in Conda;
+
+(3) <font color="blue">PIP</font> (8 packages): exclusive package in Pip;
+
+(4) <font color ="green">CASE DIFFERENCE</font> (33 packages): Conda package and Pip package have the same version, but there is a case difference between the both, such as: `bottleneck` (1.3.5, Conda package) vs. `Bottleneck` (1.3.5, Pip package), and `heapdict` (1.0.1, Conda package) vs. `HeapDict` (1.0.1, Pip package), and `markupsafe` (2.0.1, Conda package) vs. `MarkupSafe` (2.0.1, Pip package). 
+
+(5) <font color="pink">UNDERSCORE OR DASH</font> (17 packages): Conda package and Pip package have the same version, but it is kind of different in aspect of connection symbol (`_` of Conda package and `-` of Pip package) in package name, such as: `jupyter_console` (6.4.3, Conda package) vs. `jupyter-console` (6.4.3, Pip package), `ipython_genutils` (0.2.0, Conda package) vs. `ipython-genutils` (0.2.0, Pip package), and `conda-package-streaming` (0.7.0, Conda package) vs. `conda_package_streaming` (0.7.0, Pip package).
+
+(6) <font color="purple">DIFFERENT VERSION</font> (2 packages): Conda package and Pip package have the same name, but different versions, such as `matplotlib` (3.5.2, Conda package) vs. `matplotlib` (3.9.0, Pip package), `scikit-learn-intelex` (2021.6.0, Conda package) vs. `scikit-learn-intelex` (2021.20221004.171935, Pip package).
+
+(7) <font color="teal">DIFFERENT PACKAGE NAME</font> (1 packages): Conda package and Pip package have the same version, and seem represent the same package, like `ruamel_yaml` (0.15.100, Conda package) vs. `ruamel-yaml-conda`(0.15.0, Pip package).
+
+<br>
+
+| Conda (403 packages)            | Conda version       | Pip (323 packages)           | Pip Version          | Note      |
+| ------------------------------- | ------------------- | ------------------------------- | -------------------- | -------------------- |
+| (1) `_ipyw_jlab_nb_ext_conf`    | 0.1.0               |                                 |                      | <font color="red">CONDA</font> |
+| (2) `alabaster`                 | 0.7.12              | (1) `alabaster`                 | 0.7.12               | SAME |
+| (3) `anaconda`                  | 2022.10             |                                 |                      | <font color="red">CONDA</font> |
+| (4) `anaconda-client`           | 1.11.0              | (2) `anaconda-client`           | 1.11.0               | SAME     |
+| (5) `anaconda-navigator`        | 2.3.1               | (3) `anaconda-navigator`       | 2.3.1                | SAME            |
+| (6) `anaconda-project`          | 0.11.1              | (4) `anaconda-project`          | 0.11.1               | SAME           |
+| (7) `anyio`                     | 3.5.0               | (5) `anyio`                   | 3.5.0                | SAME            |
+| (8) `appdirs`                   | 1.4.4               | (6) `appdirs`                   | 1.4.4                | SAME            |
+| (9) `argon2-cffi`               | 21.3.0              | (7) `argon2-cffi`              | 21.3.0               | SAME           |
+| (10) `argon2-cffi-bindings`          | 21.2.0              | (8) `argon2-cffi-bindings`     | 21.2.0               | SAME           |
+| (11) `arrow`                 | 1.2.2               | (9) `arrow`                     | 1.2.2                | SAME            |
+| (12) `astroid`                  | 2.11.7              | (10) `astroid`                  | 2.11.7               | SAME           |
+| (13) `astropy`                  | 5.1                 | (11) `astropy`                  | 5.1                  | SAME              |
+| (14) `atomicwrites`             | 1.4.0               | (12) `atomicwrites`             | 1.4.0                | SAME            |
+| (15) `attrs`                    | 21.4.0              | (13) `attrs`                   | 21.4.0               | SAME           |
+| (16) `automat`                  | 20.2.0              | (14) `Automat`                  | 20.2.0               | <font color ="green">CASE DIFFERENCE</font> |
+| (17) `autopep8`                 | 1.6.0               | (15) `autopep8`                | 1.6.0                | SAME            |
+| (18) `babel`                    | 2.9.1               | (16) `Babel`                    | 2.9.1                | <font color ="green">CASE DIFFERENCE</font> |
+| (19) `backcall`                 | 0.2.0               | (17) `backcall`                | 0.2.0                | SAME            |
+| (20) `backports`                | 1.1                 |                                 |                      | <font color="red">CONDA</font> |
+| (21) `backports.functools_lru_cache` | 1.6.4               | (18) `backports.functools-lru-cache` | 1.6.4                | SAME            |
+| (22) `backports.tempfile`       | 1.0                 | (19) `backports.tempfile`      | 1.0                  | SAME              |
+| (23) `backports.weakref`        | 1.0.post1           | (20) `backports.weakref`        | 1.0.post1            | SAME        |
+| (24) `bcrypt`                   | 3.2.0               | (21) `bcrypt`                   | 3.2.0                | SAME            |
+| (25) `beautifulsoup4`           | 4.11.1              | (22) `beautifulsoup4`           | 4.11.1               | SAME           |
+| (26) `binaryornot`              | 0.4.4               | (23) `binaryornot`              | 0.4.4                | SAME            |
+| (27) `bitarray`                 | 2.5.1               | (24) `bitarray`                 | 2.5.1                | SAME            |
+| (28) `bkcharts`              | 0.2                 | (25) `bkcharts`                 | 0.2                  | SAME              |
+| (29) `black`                    | 22.6.0              | (26) `black`                    | 22.6.0               | SAME           |
+| (30) `blas`                     | 1.0                 |                                 |                      | <font color="red">CONDA</font> |
+| (31) `bleach`                   | 4.1.0               | (27) `bleach`                  | 4.1.0                | SAME            |
+| (32) `blosc`                  | 1.21.0              |                                 |                      | <font color="red">CONDA</font> |
+| (33) `bokeh`                    | 2.4.3               | (28) `bokeh`                   | 2.4.3                | SAME            |
+| (34) `boto3`                    | 1.24.28             | (29) `boto3`                   | 1.24.28              | SAME          |
+| (35) `botocore`                | 1.27.28             | (30) `botocore`                | 1.27.28              | SAME          |
+| (36) `bottleneck`              | 1.3.5               | (31) `Bottleneck`               | 1.3.5                | <font color ="green">CASE DIFFERENCE</font> |
+| (37) `brotli`                   | 1.0.9               |                                 |                      | <font color="red">CONDA</font> |
+| (38) `brotli-bin`             | 1.0.9               |                                 |                      | <font color="red">CONDA</font> |
+| (39) `brotlipy`                 | 0.7.0               | (32) `brotlipy`                 | 0.7.0                | SAME            |
+| (40) `bzip2`                    | 1.0.8               |                                 |                      | <font color="red">CONDA</font> |
+| (41) `ca-certificates`          | 2022.07.19          |                                 |                      | <font color="red">CONDA</font> |
+| (42) `certifi`                  | 2022.9.14           | (33) `certifi`                  | 2022.9.14            | SAME        |
+| (43) `cffi`                     | 1.15.1              | (34) `cffi`                     | 1.15.1               | SAME           |
+| (44) `cfitsio`                  | 3.470               |                                 |                      | <font color="red">CONDA</font> |
+| (45) `chardet`                | 4.0.0               | (35) `chardet`                  | 4.0.0                | SAME            |
+| (46) `charls`                   | 2.2.0               |                                 |                      | <font color="red">CONDA</font> |
+| (47) `charset-normalizer`       | 2.0.4               | (36) `charset-normalizer`      | 2.0.4                | SAME            |
+| (48) `click`                    | 8.0.4               | (37) `click`                   | 8.0.4                | SAME            |
+| (49) `cloudpickle`              | 2.0.0               | (38) `cloudpickle`             | 2.0.0                | SAME            |
+| (50) `clyent`                   | 1.2.2               | (39) `clyent`                  | 1.2.2                | SAME            |
+| (51) `colorama`                 | 0.4.5               | (40) `colorama`           | 0.4.5                | SAME            |
+| (52) `colorcet`                | 3.0.0               | (41) `colorcet`                 | 3.0.0                | SAME            |
+| (53) `comtypes`                | 1.1.10              | (42) `comtypes`                 | 1.1.10               | SAME           |
+| (54) `conda`                   | 22.9.0              | (43) `conda`                    | 22.9.0               | SAME           |
+| (55) `conda-build`             | 3.22.0              | (44) `conda-build`              | 3.22.0               | SAME           |
+| (56) `conda-content-trust`      | 0.1.3               | (45) `conda-content-trust`      | 0.1.3                | SAME            |
+| (57) `conda-env`              | 2.6.0               |                                 |                      | <font color="red">CONDA</font> |
+| (58) `conda-pack`               | 0.6.0               | (46) `conda-pack`               | 0.6.0                | SAME            |
+| (59) `conda-package-handling`   | 2.0.2               | (47) `conda-package-handling` | 2.0.2                | SAME            |
+| (60) `conda-package-streaming`  | 0.7.0               | (48) `conda_package_streaming` | 0.7.0                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (61) `conda-repo-cli`           | 1.0.41              | (49) `conda-repo-cli`          | 1.0.41               | SAME           |
+| (62) `conda-token`              | 0.4.0               | (50) `conda-token`           | 0.4.0                | SAME            |
+| (63) `conda-verify`            | 3.4.2               | (51) `conda-verify`             | 3.4.2                | SAME            |
+| (64) `console_shortcut`      | 0.1.1               |                                 |                      | <font color="red">CONDA</font> |
+| (65) `constantly`              | 15.1.0              | (52) `constantly`               | 15.1.0               | SAME           |
+|                                 |                     | (53) `contourpy`                | 1.2.1                | <font color="blue">PIP</font> |
+| (66) `cookiecutter`             | 1.7.3               | (54) `cookiecutter`             | 1.7.3                | SAME            |
+| (67) `cpuonly`                | 2.0                 |                                 |                      | <font color="red">CONDA</font> |
+| (68) `cryptography`             | 37.0.1              | (55) `cryptography`             | 37.0.1               | SAME           |
+| (69) `cssselect`                | 1.1.0               | (56) `cssselect`             | 1.1.0                | SAME            |
+| (70) `curl`                     | 7.84.0              |                                 |                      | <font color="red">CONDA</font> |
+| (71) `cycler`                   | 0.11.0              | (57) `cycler`                  | 0.11.0               | SAME           |
+| (72) `cython`                   | 0.29.32             | (58) `Cython`                  | 0.29.32              | <font color ="green">CASE DIFFERENCE</font> |
+| (73) `cytoolz`                 | 0.11.0              | (59) `cytoolz`                 | 0.11.0               | SAME           |
+| (74) `daal4py`                 | 2021.6.0            | (60) `daal4py`                | 2021.6.0             | SAME         |
+| (75) `dal`                     | 2021.6.0            |                                 |                      | <font color="red">CONDA</font> |
+| (76) `dask`               | 2022.7.0            | (61) `dask`               | 2022.7.0             | SAME         |
+| (77) `dask-core`                | 2022.7.0            |                                 |                      | <font color="red">CONDA</font> |
+| (78) `dataclasses`            | 0.8                 |                                 |                      | <font color="red">CONDA</font> |
+| (79) `datashader`               | 0.14.1              | (62) `datashader`               | 0.14.1               | SAME           |
+| (80) `datashape`                | 0.5.4               | (63) `datashape`                | 0.5.4                | SAME            |
+| (81) `debugpy`                  | 1.5.1               | (64) `debugpy`                  | 1.5.1                | SAME            |
+| (82) `decorator`               | 5.1.1               | (65) `decorator`                | 5.1.1                | SAME            |
+| (83) `defusedxml`               | 0.7.1               | (66) `defusedxml`               | 0.7.1                | SAME            |
+| (84) `diff-match-patch`         | 20200713            | (67) `diff-match-patch`        | 20200713             | SAME         |
+| (85) `dill`                     | 0.3.4               | (68) `dill`                    | 0.3.4                | SAME            |
+| (86) `distributed`              | 2022.7.0            | (69) `distributed`             | 2022.7.0             | SAME         |
+| (87) `docutils`                 | 0.18.1              | (70) `docutils`             | 0.18.1               | SAME           |
+| (88) `entrypoints`             | 0.4                 | (71) `entrypoints`            | 0.4                  | SAME              |
+| (89) `et_xmlfile`            | 1.1.0               | (72) `et-xmlfile`              | 1.1.0                | <font color="pink">UNDERSCORE OR DASH</font> |
+|                                 |                     | (73) `fastjsonschema`          | 2.16.2               | <font color="blue">PIP</font> |
+| (90) `fftw`                     | 3.3.9               |                                 |                      | <font color="red">CONDA</font> |
+| (91) `filelock`              | 3.6.0               | (74) `filelock`             | 3.6.0                | SAME            |
+| (92) `flake8`                   | 4.0.1               | (75) `flake8`                   | 4.0.1                | SAME            |
+| (93) `flask`                    | 1.1.2               | (76) `Flask`                    | 1.1.2                | <font color ="green">CASE DIFFERENCE</font> |
+| (94) `fonttools`                | 4.25.0              | (77) `fonttools`               | 4.25.0               | SAME           |
+| (95) `freetype`                | 2.10.4              |                                 |                      | <font color="red">CONDA</font> |
+| (96) `fsspec`                   | 2022.7.1            | (78) `fsspec`                  | 2022.7.1             | SAME         |
+| (97) `future`                  | 0.18.2              | (79) `future`                  | 0.18.2               | SAME           |
+| (98) `gensim`                  | 4.1.2               | (80) `gensim`                  | 4.1.2                | SAME            |
+| (99) `giflib`                  | 5.2.1               |                                 |                      | <font color="red">CONDA</font> |
+| (100) `glob2`                   | 0.7                 | (81) `glob2`                    | 0.7                  | SAME              |
+| (101) `greenlet`              | 1.1.1               | (82) `greenlet`                 | 1.1.1                | SAME            |
+| (102) `h5py`                    | 3.7.0               | (83) `h5py`                     | 3.7.0                | SAME            |
+| (103) `hdf5`                    | 1.10.6              |                                 |                      | <font color="red">CONDA</font> |
+| (104) `heapdict`                | 1.0.1               | (84) `HeapDict`                 | 1.0.1                | <font color ="green">CASE DIFFERENCE</font> |
+| (105) `holoviews`               | 1.15.0              | (85) `holoviews`                | 1.15.0               | SAME           |
+| (106) `hvplot`                | 0.8.0               | (86) `hvplot`                   | 0.8.0                | SAME            |
+| (107) `hyperlink`               | 21.0.0              | (87) `hyperlink`               | 21.0.0               | SAME           |
+| (108) `icc_rt`                 | 2022.1.0            |                                 |                      | <font color="red">CONDA</font> |
+| (109) `icu`                   | 58.2                |                                 |                      | <font color="red">CONDA</font> |
+| (110) `idna`                   | 3.3                 | (88) `idna`                    | 3.3                  | SAME              |
+| (111) `imagecodecs`             | 2021.8.26           | (89) `imagecodecs`             | 2021.8.26            | SAME        |
+| (112) `imageio`                 | 2.19.3              | (90) `imageio`                  | 2.19.3               | SAME           |
+| (113) `imagesize`               | 1.4.1               | (91) `imagesize`                | 1.4.1                | SAME            |
+| (114) `importlib-metadata`      | 4.11.3              | (92) `importlib-metadata`       | 4.11.3               | SAME           |
+|                                 |                     | (93) `importlib_resources`      | 6.4.0                | <font color="blue">PIP</font> |
+| (115) `importlib_metadata`      | 4.11.3              |                                 |                      | <font color="red">CONDA</font> |
+| (116) `incremental`           | 21.3.0              | (94) `incremental`              | 21.3.0               | SAME           |
+| (117) `inflection`             | 0.5.1               | (95) `inflection`               | 0.5.1                | SAME            |
+| (118) `iniconfig`              | 1.1.1               | (96) `iniconfig`                | 1.1.1                | SAME            |
+| (119) `intake`                 | 0.6.5               | (97) `intake`                  | 0.6.5                | SAME            |
+| (120) `intel-openmp`          | 2021.4.0            |                                 |                      | <font color="red">CONDA</font> |
+| (121) `intervaltree`          | 3.1.0               | (98) `intervaltree`            | 3.1.0                | SAME            |
+| (122) `ipykernel`              | 6.15.2              | (99) `ipykernel`               | 6.15.2               | SAME           |
+| (123) `ipython`                 | 7.31.1              | (100) `ipython`                 | 7.31.1               | SAME           |
+| (124) `ipython_genutils`        | 0.2.0               | (101) `ipython-genutils`        | 0.2.0                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (125) `ipywidgets`              | 7.6.5               | (102) `ipywidgets`              | 7.6.5                | SAME            |
+| (126) `isort`                   | 5.9.3               | (103) `isort`                   | 5.9.3                | SAME            |
+| (127) `itemadapter`             | 0.3.0               | (104) `itemadapter`             | 0.3.0                | SAME            |
+| (128) `itemloaders`            | 1.0.4               | (105) `itemloaders`             | 1.0.4                | SAME            |
+| (129) `itsdangerous`            | 2.0.1               | (106) `itsdangerous`            | 2.0.1                | SAME            |
+| (130) `jdcal`                 | 1.4.1               | (107) `jdcal`                 | 1.4.1                | SAME            |
+| (131) `jedi`                    | 0.18.1              | (108) `jedi`                  | 0.18.1               | SAME           |
+| (132) `jellyfish`               | 0.9.0               | (109) `jellyfish`              | 0.9.0                | SAME            |
+| (133) `jinja2`                  | 2.11.3              | (110) `Jinja2`               | 2.11.3               | <font color ="green">CASE DIFFERENCE</font> |
+| (134) `jinja2-time`             | 0.2.0               | (111) `jinja2-time`             | 0.2.0                | SAME            |
+| (135) `jmespath`                | 0.10.0              | (112) `jmespath`                | 0.10.0               | SAME           |
+| (136) `joblib`                 | 1.1.0               | (113) `joblib`                  | 1.1.0                | SAME            |
+| (137) `jpeg`                   | 9e                  |                                 |                      | <font color="red">CONDA</font> |
+| (138) `jq`                      | 1.6                 |                                 |                      | <font color="red">CONDA</font> |
+| (139) `json5`                  | 0.9.6               | (114) `json5`                   | 0.9.6                | SAME            |
+| (140) `jsonschema`             | 4.16.0              | (115) `jsonschema`              | 4.16.0               | SAME           |
+| (141) `jupyter`               | 1.0.0               | (116) `jupyter`                 | 1.0.0                | SAME            |
+| (142) `jupyter_client`          | 7.3.4               | (117) `jupyter_client`         | 7.3.4                | SAME            |
+| (143) `jupyter_console`         | 6.4.3               | (118) `jupyter-console`        | 6.4.3                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (144) `jupyter_core`            | 4.11.1              | (119) `jupyter_core`           | 4.11.1               | SAME           |
+| (145) `jupyter_server`         | 1.18.1              | (120) `jupyter-server`        | 1.18.1               | <font color="pink">UNDERSCORE OR DASH</font> |
+| (146) `jupyterlab`              | 3.4.4               | (121) `jupyterlab`             | 3.4.4                | SAME            |
+| (147) `jupyterlab_pygments`     | 0.1.2               | (122) `jupyterlab-pygments`     | 0.1.2                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (148) `jupyterlab_server`       | 2.10.3              | (123) `jupyterlab-server`       | 2.10.3               | <font color="pink">UNDERSCORE OR DASH</font> |
+| (149) `jupyterlab_widgets`    | 1.0.0               | (124) `jupyterlab-widgets`      | 1.0.0                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (150) `keyring`               | 23.4.0              | (125) `keyring`                | 23.4.0               | SAME           |
+| (151) `kiwisolver`              | 1.4.2               | (126) `kiwisolver`             | 1.4.2                | SAME            |
+| (152) `lazy-object-proxy`       | 1.6.0               | (127) `lazy-object-proxy`      | 1.6.0                | SAME            |
+| (153) `lcms2`                   | 2.12                |                                 |                      | <font color="red">CONDA</font> |
+| (154) `lerc`                    | 3.0                 |                                 |                      | <font color="red">CONDA</font> |
+| (155) `libaec`                  | 1.0.4               |                                 |                      | <font color="red">CONDA</font> |
+| (156) `libarchive`              | 3.6.1               |                                 |                      | <font color="red">CONDA</font> |
+|                                 |                     | (128) `libarchive-c`           | 2.9                  | <font color="blue">PIP</font> |
+| (157) `libbrotlicommon`         | 1.0.9               |                                 |                      | <font color="red">CONDA</font> |
+| (158) `libbrotlidec`         | 1.0.9               |                                 |                      | <font color="red">CONDA</font> |
+| (159) `libbrotlienc`            | 1.0.9               |                                 |                      | <font color="red">CONDA</font> |
+| (160) `libcurl`               | 7.84.0              |                                 |                      | <font color="red">CONDA</font> |
+| (161) `libdeflate`              | 1.8                 |                                 |                      | <font color="red">CONDA</font> |
+| (162) `libiconv`                | 1.16                |                                 |                      | <font color="red">CONDA</font> |
+| (163) `liblief`                 | 0.11.5              |                                 |                      | <font color="red">CONDA</font> |
+| (164) `libpng`                  | 1.6.37              |                                 |                      | <font color="red">CONDA</font> |
+| (165) `libsodium`               | 1.0.18              |                                 |                      | <font color="red">CONDA</font> |
+| (166) `libspatialindex`         | 1.9.3               |                                 |                      | <font color="red">CONDA</font> |
+| (167) `libssh2`                | 1.10.0              |                                 |                      | <font color="red">CONDA</font> |
+| (168) `libtiff`                 | 4.4.0               |                                 |                      | <font color="red">CONDA</font> |
+| (169) `libuv`                  | 1.44.2              |                                 |                      | <font color="red">CONDA</font> |
+| (170) `libwebp`                | 1.2.2               |                                 |                      | <font color="red">CONDA</font> |
+| (171) `libxml2`                 | 2.9.14              |                                 |                      | <font color="red">CONDA</font> |
+| (172) `libxslt`                 | 1.1.35              |                                 |                      | <font color="red">CONDA</font> |
+| (173) `libzopfli`               | 1.0.3               |                                 |                      | <font color="red">CONDA</font> |
+| (174) `llvmlite`                | 0.38.0              | (129) `llvmlite`                | 0.38.0               | SAME           |
+| (175) `locket`                | 1.0.0               | (130) `locket`                  | 1.0.0                | SAME            |
+| (176) `lxml`                    | 4.9.1               | (131) `lxml`                   | 4.9.1                | SAME            |
+| (177) `lz4`                    | 3.1.3               | (132) `lz4`                     | 3.1.3                | SAME            |
+| (178) `lz4-c`                   | 1.9.3               |                                 |                      | <font color="red">CONDA</font> |
+| (179) `lzo`                     | 2.10                |                                 |                      | <font color="red">CONDA</font> |
+| (180) `m2-msys2-runtime`       | 2.5.0.17080.65c939c |                                 |                      | <font color="red">CONDA</font> |
+| (181) `m2-patch`                | 2.7.5               |                                 |                      | <font color="red">CONDA</font> |
+| (182) `m2w64-libwinpthread-git` | 5.0.0.4634.697f757  |                                 |                      | <font color="red">CONDA</font> |
+| (183) `markdown`                | 3.3.4               | (133) `Markdown`                | 3.3.4                | <font color ="green">CASE DIFFERENCE</font> |
+| (184) `markupsafe`              | 2.0.1               | (134) `MarkupSafe`              | 2.0.1                | <font color ="green">CASE DIFFERENCE</font> |
+| (185) `matplotlib`             | 3.5.2               | (135) `matplotlib`              | 3.9.0                | <font color="purple">DIFFERENT VERSION</font> |
+| (186) `matplotlib-base`         | 3.5.2               |                                 |                      | <font color="red">CONDA</font> |
+| (187) `matplotlib-inline`       | 0.1.6               | (136) `matplotlib-inline`       | 0.1.6                | SAME            |
+| (188) `mccabe`                | 0.6.1               | (137) `mccabe`                 | 0.6.1                | SAME            |
+| (189) `menuinst`              | 1.4.19              | (138) `menuinst`               | 1.4.19               | SAME           |
+| (190) `mistune`                 | 0.8.4               | (139) `mistune`                | 0.8.4                | SAME            |
+| (191) `mkl`                     | 2021.4.0            |                                 |                      | <font color="red">CONDA</font> |
+| (192) `mkl-service`             | 2.4.0               |                                 |                      | <font color="red">CONDA</font> |
+| (193) `mkl_fft`                 | 1.3.1               | (140) `mkl-fft`                 | 1.3.1                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (194) `mkl_random`              | 1.2.2               | (141) `mkl-random`              | 1.2.2                | <font color="pink">UNDERSCORE OR DASH</font> |
+|                                 |                     | (142) `mkl-service`             | 2.4.0                | <font color="blue">PIP</font> |
+| (195) `mock`                   | 4.0.3               | (143) `mock`                    | 4.0.3                | SAME            |
+| (196) `mpmath`                 | 1.2.1               | (144) `mpmath`                  | 1.2.1                | SAME            |
+|                                 |                     | (145) `msgpack`                 | 1.0.3                | <font color="blue">PIP</font> |
+| (197) `msgpack-python`         | 1.0.3               |                                 |                      | <font color="red">CONDA</font> |
+| (198) `msys2-conda-epoch`      | 20160418            |                                 |                      | <font color="red">CONDA</font> |
+| (199) `multipledispatch`       | 0.6.0               | (146) `multipledispatch`        | 0.6.0                | SAME            |
+| (200) `munkres`             | 1.1.4               | (147) `munkres`                | 1.1.4                | SAME            |
+| (201) `mypy_extensions`         | 0.4.3               | (148) `mypy-extensions`        | 0.4.3                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (202) `navigator-updater`       | 0.3.0               | (149) `navigator-updater`      | 0.3.0                | SAME            |
+| (203) `nbclassic`               | 0.3.5               | (150) `nbclassic`             | 0.3.5                | SAME            |
+| (204) `nbclient`              | 0.5.13              | (151) `nbclient`                | 0.5.13               | SAME           |
+| (205) `nbconvert`               | 6.4.4               | (152) `nbconvert`               | 6.4.4                | SAME            |
+| (206) `nbformat`                | 5.5.0               | (153) `nbformat`                | 5.5.0                | SAME            |
+| (207) `nest-asyncio`           | 1.5.5               | (154) `nest-asyncio`            | 1.5.5                | SAME            |
+| (208) `networkx`             | 2.8.4               | (155) `networkx`               | 2.8.4                | SAME            |
+| (209) `nltk`                   | 3.7                 | (156) `nltk`                    | 3.7                  | SAME              |
+| (210) `nose`                    | 1.3.7               | (157) `nose`                 | 1.3.7                | SAME            |
+| (211) `notebook`                | 6.4.12              | (158) `notebook`               | 6.4.12               | SAME           |
+| (212) `numba`                   | 0.55.1              | (159) `numba`                  | 0.55.1               | SAME           |
+| (213) `numexpr`                 | 2.8.3               | (160) `numexpr`               | 2.8.3                | SAME            |
+| (214) `numpy`                   | 1.26.4              | (161) `numpy`                   | 1.26.4               | SAME           |
+| (215) `numpydoc`               | 1.4.0               | (162) `numpydoc`                | 1.4.0                | SAME            |
+| (216) `olefile`                 | 0.46                | (163) `olefile`                 | 0.46                 | SAME             |
+| (217) `openjpeg`               | 2.4.0               |                                 |                      | <font color="red">CONDA</font> |
+| (218) `openpyxl`               | 3.0.10              | (164) `openpyxl`                | 3.0.10               | SAME           |
+| (219) `openssl`                | 1.1.1q              |                                 |                      | <font color="red">CONDA</font> |
+| (220) `packaging`           | 21.3                | (165) `packaging`              | 21.3                 | SAME             |
+| (221) `pandas`               | 1.4.4               | (166) `pandas`                  | 1.4.4                | SAME            |
+| (222) `pandocfilters`           | 1.5.0               | (167) `pandocfilters`          | 1.5.0                | SAME            |
+| (223) `panel`                   | 0.13.1              | (168) `panel`                 | 0.13.1               | SAME           |
+| (224) `param`                   | 1.12.0              | (169) `param`                  | 1.12.0               | SAME           |
+| (225) `paramiko`                | 2.8.1               | (170) `paramiko`              | 2.8.1                | SAME            |
+| (226) `parsel`                  | 1.6.0               | (171) `parsel`                  | 1.6.0                | SAME            |
+| (227) `parso`                  | 0.8.3               | (172) `parso`                   | 0.8.3                | SAME            |
+| (228) `partd`                  | 1.2.0               | (173) `partd`                   | 1.2.0                | SAME            |
+| (229) `pathlib`                | 1.0.1               | (174) `pathlib`                 | 1.0.1                | SAME            |
+| (230) `pathspec`               | 0.9.0               | (175) `pathspec`               | 0.9.0                | SAME            |
+| (231) `patsy`                 | 0.5.2               | (176) `patsy`                   | 0.5.2                | SAME            |
+| (232) `pep8`                    | 1.7.1               | (177) `pep8`                   | 1.7.1                | SAME            |
+| (233) `pexpect`                 | 4.8.0               | (178) `pexpect`                | 4.8.0                | SAME            |
+| (234) `pickleshare`             | 0.7.5               | (179) `pickleshare`            | 0.7.5                | SAME            |
+| (235) `pillow`                 | 9.2.0               | (180) `Pillow`                | 9.2.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (236) `pip`                     | 22.2.2              | (181) `pip`                     | 22.2.2               | SAME           |
+| (237) `pkginfo`                 | 1.8.2               | (182) `pkginfo`                 | 1.8.2                | SAME            |
+| (238) `platformdirs`            | 2.5.2               | (183) `platformdirs`            | 2.5.2                | SAME            |
+| (239) `plotly`                  | 5.9.0               | (184) `plotly`                  | 5.9.0                | SAME            |
+| (240) `pluggy`                 | 1.0.0               | (185) `pluggy`                  | 1.0.0                | SAME            |
+| (241) `powershell_shortcut`    | 0.0.1               |                                 |                      | <font color="red">CONDA</font> |
+| (242) `poyo`                   | 0.5.0               | (186) `poyo`                    | 0.5.0                | SAME            |
+| (243) `prometheus_client`       | 0.14.1              | (187) `prometheus-client`      | 0.14.1               | <font color="pink">UNDERSCORE OR DASH</font> |
+| (244) `prompt-toolkit`          | 3.0.20              | (188) `prompt-toolkit`         | 3.0.20               | SAME           |
+| (245) `prompt_toolkit`          | 3.0.20              |                                 |                      | <font color="red">CONDA</font> |
+| (246) `protego`                | 0.1.16              | (189) `Protego`                | 0.1.16               | <font color ="green">CASE DIFFERENCE</font> |
+| (247) `psutil`                  | 5.9.0               | (190) `psutil`              | 5.9.0                | SAME            |
+| (248) `ptyprocess`              | 0.7.0               | (191) `ptyprocess`              | 0.7.0                | SAME            |
+| (249) `py`                      | 1.11.0              | (192) `py`                      | 1.11.0               | SAME           |
+| (250) `py-lief`               | 0.11.5              |                                 |                      | <font color="red">CONDA</font> |
+| (251) `pyasn1`                 | 0.4.8               | (193) `pyasn1`                  | 0.4.8                | SAME            |
+| (252) `pyasn1-modules`          | 0.2.8               | (194) `pyasn1-modules`          | 0.2.8                | SAME            |
+| (253) `pycodestyle`             | 2.8.0               | (195) `pycodestyle`             | 2.8.0                | SAME            |
+| (254) `pycosat`                 | 0.6.3               | (196) `pycosat`                 | 0.6.3                | SAME            |
+| (255) `pycparser`               | 2.21                | (197) `pycparser`              | 2.21                 | SAME             |
+| (256) `pyct`                    | 0.4.8               | (198) `pyct`                  | 0.4.8                | SAME            |
+| (257) `pycurl`                  | 7.45.1              | (199) `pycurl`                 | 7.45.1               | SAME           |
+| (258) `pydispatcher`            | 2.0.5               | (200) `PyDispatcher`          | 2.0.5                | <font color ="green">CASE DIFFERENCE</font> |
+| (259) `pydocstyle`            | 6.1.1               | (201) `pydocstyle`              | 6.1.1                | SAME            |
+| (260) `pyerfa`               | 2.0.0               | (202) `pyerfa`                  | 2.0.0                | SAME            |
+| (261) `pyflakes`                | 2.4.0               | (203) `pyflakes`                | 2.4.0                | SAME            |
+| (262) `pygments`                | 2.11.2              | (204) `Pygments`                | 2.11.2               | <font color ="green">CASE DIFFERENCE</font> |
+| (263) `pyhamcrest`              | 2.0.2               | (205) `PyHamcrest`              | 2.0.2                | <font color ="green">CASE DIFFERENCE</font> |
+| (264) `pyjwt`                   | 2.4.0               | (206) `PyJWT`                   | 2.4.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (265) `pylint`                 | 2.14.5              | (207) `pylint`                 | 2.14.5               | SAME           |
+| (266) `pyls-spyder`             | 0.4.0               | (208) `pyls-spyder`            | 0.4.0                | SAME            |
+| (267) `pynacl`                 | 1.5.0               | (209) `PyNaCl`                 | 1.5.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (268) `pyodbc`                 | 4.0.34              | (210) `pyodbc`                | 4.0.34               | SAME           |
+| (269) `pyopenssl`              | 22.0.0              | (211) `pyOpenSSL`             | 22.0.0               | <font color ="green">CASE DIFFERENCE</font> |
+| (270) `pyparsing`             | 3.0.9               | (212) `pyparsing`             | 3.0.9                | SAME            |
+| (271) `pyqt`                   | 5.9.2               |                                 |                      | <font color="red">CONDA</font> |
+| (272) `pyrsistent`              | 0.18.0              | (213) `pyrsistent`             | 0.18.0               | SAME           |
+| (273) `pysocks`                 | 1.7.1               | (214) `PySocks`                | 1.7.1                | <font color ="green">CASE DIFFERENCE</font> |
+| (274) `pytables`                | 3.6.1               |                                 |                      | <font color="red">CONDA</font> |
+| (275) `pytest`                  | 7.1.2               | (215) `pytest`                | 7.1.2                | SAME            |
+| (276) `python`                  | 3.9.13              |                                 |                      | <font color="red">CONDA</font> |
+| (277) `python-dateutil`        | 2.8.2               | (216) `python-dateutil`       | 2.8.2                | SAME            |
+| (278) `python-fastjsonschema` | 2.16.2              |                                 |                      | <font color="red">CONDA</font> |
+| (279) `python-libarchive-c`    | 2.9                 |                                 |                      | <font color="red">CONDA</font> |
+| (280) `python-lsp-black`      | 1.0.0               | (217) `python-lsp-black`      | 1.0.0                | SAME            |
+| (281) `python-lsp-jsonrpc`      | 1.0.0               | (218) `python-lsp-jsonrpc`    | 1.0.0                | SAME            |
+| (282) `python-lsp-server`       | 1.3.3               | (219) `python-lsp-server`     | 1.3.3                | SAME            |
+| (283) `python-slugify`          | 5.0.2               | (220) `python-slugify`     | 5.0.2                | SAME            |
+| (284) `python-snappy`           | 0.6.0               | (221) `python-snappy`          | 0.6.0                | SAME            |
+| (285) `pytorch`                 | 2.0.0               |                                 |                      | <font color="red">CONDA</font> |
+| (286) `pytorch-mutex`         | 1.0                 |                                 |                      | <font color="red">CONDA</font> |
+| (287) `pytz`                   | 2022.1              | (222) `pytz`                    | 2022.1               | SAME           |
+| (288) `pyviz_comms`            | 2.0.2               | (223) `pyviz-comms`           | 2.0.2                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (289) `pywavelets`             | 1.3.0               | (224) `PyWavelets`              | 1.3.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (290) `pywin32`               | 302                 | (225) `pywin32`                 | 302                  | SAME              |
+| (291) `pywin32-ctypes`         | 0.2.0               | (226) `pywin32-ctypes`          | 0.2.0                | SAME            |
+| (292) `pywinpty`                | 2.0.2               | (227) `pywinpty`               | 2.0.2                | SAME            |
+| (293) `pyyaml`                  | 6.0                 | (228) `PyYAML`                 | 6.0                  | <font color ="green">CASE DIFFERENCE</font> |
+| (294) `pyzmq`                   | 23.2.0              | (229) `pyzmq`                  | 23.2.0               | SAME           |
+| (295) `qdarkstyle`              | 3.0.2               | (230) `QDarkStyle`            | 3.0.2                | <font color ="green">CASE DIFFERENCE</font> |
+| (296) `qstylizer`               | 0.1.10              | (231) `qstylizer`               | 0.1.10               | SAME           |
+| (297) `qt`                     | 5.9.7               |                                 |                      | <font color="red">CONDA</font> |
+| (298) `qtawesome`              | 1.0.3               | (232) `QtAwesome`               | 1.0.3                | <font color ="green">CASE DIFFERENCE</font> |
+| (299) `qtconsole`              | 5.2.2               | (233) `qtconsole`               | 5.2.2                | SAME            |
+| (300) `qtpy`                    | 2.2.0               | (234) `QtPy`                    | 2.2.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (301) `queuelib`                | 1.5.0               | (235) `queuelib`                | 1.5.0                | SAME            |
+| (302) `regex`                   | 2022.7.9            | (236) `regex`                   | 2022.7.9             | SAME         |
+| (303) `requests`                | 2.28.1              | (237) `requests`               | 2.28.1               | SAME           |
+| (304) `requests-file`           | 1.5.1               | (238) `requests-file`          | 1.5.1                | SAME            |
+| (305) `rope`                    | 0.22.0              | (239) `rope`                   | 0.22.0               | SAME           |
+| (306) `rtree`                   | 0.9.7               | (240) `Rtree`                 | 0.9.7                | <font color ="green">CASE DIFFERENCE</font> |
+| (307) `ruamel_yaml`            | 0.15.100            | (241) `ruamel-yaml-conda`      | 0.15.100             | <font color="teal">DIFFERENT PACKAGE NAME</font> |
+| (308) `s3transfer`            | 0.6.0               | (242) `s3transfer`              | 0.6.0                | SAME            |
+| (309) `scikit-image`           | 0.19.2              | (243) `scikit-image`            | 0.19.2               | SAME           |
+| (310) `scikit-learn`          | 1.0.2               | (244) `scikit-learn`            | 1.0.2                | SAME            |
+| (311) `scikit-learn-intelex`    | 2021.6.0            | (245) `scikit-learn-intelex`    | 2021.20221004.171935 | <font color="purple">DIFFERENT VERSION</font> |
+| (312) `scipy`                   | 1.9.1               | (246) `scipy`                   | 1.9.1                | SAME            |
+| (313) `scrapy`                  | 2.6.2               | (247) `Scrapy`                | 2.6.2                | <font color ="green">CASE DIFFERENCE</font> |
+| (314) `seaborn`                 | 0.11.2              | (248) `seaborn`                | 0.11.2               | SAME           |
+| (315) `send2trash`             | 1.8.0               | (249) `Send2Trash`             | 1.8.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (316) `service_identity`        | 18.1.0              | (250) `service-identity`      | 18.1.0               | <font color="pink">UNDERSCORE OR DASH</font> |
+| (317) `setuptools`             | 63.4.1              | (251) `setuptools`              | 63.4.1               | SAME           |
+| (318) `sip`                    | 4.19.13             | (252) `sip`                     | 4.19.13              | SAME          |
+| (319) `six`                    | 1.16.0              | (253) `six`                     | 1.16.0               | SAME           |
+| (320) `smart_open`            | 5.2.1               | (254) `smart-open`              | 5.2.1                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (321) `snappy`                  | 1.1.9               |                                 |                      | <font color="red">CONDA</font> |
+| (322) `sniffio`                | 1.2.0               | (255) `sniffio`                 | 1.2.0                | SAME            |
+| (323) `snowballstemmer`         | 2.2.0               | (256) `snowballstemmer`         | 2.2.0                | SAME            |
+| (324) `sortedcollections`       | 2.1.0               | (257) `sortedcollections`      | 2.1.0                | SAME            |
+| (325) `sortedcontainers`        | 2.4.0               | (258) `sortedcontainers`       | 2.4.0                | SAME            |
+| (326) `soupsieve`              | 2.3.1               | (259) `soupsieve`              | 2.3.1                | SAME            |
+| (327) `sphinx`                 | 5.0.2               | (260) `Sphinx`                | 5.0.2                | <font color ="green">CASE DIFFERENCE</font> |
+| (328) `sphinxcontrib-applehelp` | 1.0.2               | (261) `sphinxcontrib-applehelp` | 1.0.2                | SAME            |
+| (329) `sphinxcontrib-devhelp`  | 1.0.2               | (262) `sphinxcontrib-devhelp`   | 1.0.2                | SAME            |
+| (330) `sphinxcontrib-htmlhelp` | 2.0.0               | (263) `sphinxcontrib-htmlhelp`  | 2.0.0                | SAME            |
+| (331) `sphinxcontrib-jsmath`    | 1.0.1               | (264) `sphinxcontrib-jsmath`    | 1.0.1                | SAME            |
+| (332) `sphinxcontrib-qthelp`    | 1.0.3               | (265) `sphinxcontrib-qthelp`    | 1.0.3                | SAME            |
+| (333) `sphinxcontrib-serializinghtml` | 1.1.5               | (266) `sphinxcontrib-serializinghtml` | 1.1.5                | SAME            |
+| (334) `spyder`                  | 5.2.2               | (267) `spyder`                 | 5.2.2                | SAME            |
+| (335) `spyder-kernels`          | 2.2.1               | (268) `spyder-kernels`        | 2.2.1                | SAME            |
+| (336) `sqlalchemy`              | 1.4.39              | (269) `SQLAlchemy`             | 1.4.39               | <font color ="green">CASE DIFFERENCE</font> |
+| (337) `sqlite`                 | 3.39.3              |                                 |                      | <font color="red">CONDA</font> |
+| (338) `statsmodels`           | 0.13.2              | (270) `statsmodels`            | 0.13.2               | SAME           |
+| (339) `sympy`                  | 1.10.1              | (271) `sympy`                   | 1.10.1               | SAME           |
+|                                 |                     | (272) `tables`                  | 3.6.1                | <font color="blue">PIP</font> |
+| (340) `tabulate`              | 0.8.10              | (273) `tabulate`                | 0.8.10               | SAME           |
+| (341) `tbb`                     | 2021.6.0            | (274) `TBB`                     | 0.2                  | <font color ="green">CASE DIFFERENCE</font> |
+| (342) `tbb4py`                  | 2021.6.0            |                                 |                      | <font color="red">CONDA</font> |
+| (343) `tblib`                   | 1.7.0               | (275) `tblib`                  | 1.7.0                | SAME            |
+| (344) `tenacity`               | 8.0.1               | (276) `tenacity`                | 8.0.1                | SAME            |
+| (345) `terminado`               | 0.13.1              | (277) `terminado`               | 0.13.1               | SAME           |
+| (346) `testpath`                | 0.6.0               | (278) `testpath`              | 0.6.0                | SAME            |
+| (347) `text-unidecode`       | 1.3                 | (279) `text-unidecode`         | 1.3                  | SAME              |
+| (348) `textdistance`           | 4.2.1               | (280) `textdistance`       | 4.2.1                | SAME            |
+| (349) `threadpoolctl`          | 2.2.0               | (281) `threadpoolctl`           | 2.2.0                | SAME            |
+| (350) `three-merge`         | 0.1.1               | (282) `three-merge`             | 0.1.1                | SAME            |
+| (351) `tifffile`               | 2021.7.2            | (283) `tifffile`                | 2021.7.2             | SAME         |
+| (352) `tinycss`                 | 0.4                 | (284) `tinycss`                 | 0.4                  | SAME              |
+| (353) `tk`                      | 8.6.12              |                                 |                      | <font color="red">CONDA</font> |
+| (354) `tldextract`              | 3.2.0               | (285) `tldextract`              | 3.2.0                | SAME            |
+| (355) `toml`                    | 0.10.2              | (286) `toml`                    | 0.10.2               | SAME           |
+| (356) `tomli`                   | 2.0.1               | (287) `tomli`                  | 2.0.1                | SAME            |
+| (357) `tomlkit`               | 0.11.1              | (288) `tomlkit`                 | 0.11.1               | SAME           |
+| (358) `toolz`                   | 0.11.2              | (289) `toolz`                  | 0.11.2               | SAME           |
+|                                 |                     | (290) `torch`                 | 2.0.0                | <font color="blue">PIP</font> |
+| (359) `torchaudio`             | 2.0.0               | (291) `torchaudio`              | 2.0.0                | SAME            |
+| (360) `torchsummary`            | 1.5.1               | (292) `torchsummary`            | 1.5.1                | SAME            |
+| (361) `torchvision`             | 0.15.0              | (293) `torchvision`             | 0.15.0               | SAME           |
+| (362) `tornado`                 | 6.1                 | (294) `tornado`                 | 6.1                  | SAME              |
+| (363) `tqdm`                    | 4.64.1              | (295) `tqdm`                    | 4.64.1               | SAME           |
+| (364) `traitlets`               | 5.1.1               | (296) `traitlets`               | 5.1.1                | SAME            |
+| (365) `twisted`                 | 22.2.0              | (297) `Twisted`                | 22.2.0               | <font color ="green">CASE DIFFERENCE</font> |
+| (366) `twisted-iocpsupport`     | 1.0.2               | (298) `twisted-iocpsupport`    | 1.0.2                | SAME            |
+| (367) `typing-extensions`      | 4.3.0               |                                 |                      | <font color="red">CONDA</font> |
+| (368) `typing_extensions`     | 4.3.0               | (299) `typing_extensions`      | 4.3.0                | SAME            |
+| (369) `tzdata`                 | 2022c               |                                 |                      | <font color="red">CONDA</font> |
+| (370) `ujson`                 | 5.4.0               | (300) `ujson`              | 5.4.0                | SAME            |
+| (371) `unidecode`               | 1.2.0               | (301) `Unidecode`               | 1.2.0                | <font color ="green">CASE DIFFERENCE</font> |
+| (372) `urllib3`                 | 1.26.11             | (302) `urllib3`                 | 1.26.11              | SAME          |
+| (373) `vc`                      | 14.2                |                                 |                      | <font color="red">CONDA</font> |
+| (374) `vs2015_runtime`          | 14.27.29016         |                                 |                      | <font color="red">CONDA</font> |
+| (375) `w3lib`                   | 1.21.0              | (303) `w3lib`                   | 1.21.0               | SAME           |
+| (376) `watchdog`                | 2.1.6               | (304) `watchdog`                | 2.1.6                | SAME            |
+| (377) `wcwidth`                | 0.2.5               | (305) `wcwidth`                 | 0.2.5                | SAME            |
+| (378) `webencodings`           | 0.5.1               | (306) `webencodings`            | 0.5.1                | SAME            |
+| (379) `websocket-client`       | 0.58.0              | (307) `websocket-client`       | 0.58.0               | SAME           |
+| (380) `werkzeug`              | 2.0.3               | (308) `Werkzeug`               | 2.0.3                | <font color ="green">CASE DIFFERENCE</font> |
+| (381) `wheel`                   | 0.37.1              | (309) `wheel`                  | 0.37.1               | SAME           |
+| (382) `widgetsnbextension`      | 3.5.2               | (310) `widgetsnbextension`    | 3.5.2                | SAME            |
+| (383) `win_inet_pton`           | 1.1.0               | (311) `win-inet-pton`           | 1.1.0                | <font color="pink">UNDERSCORE OR DASH</font> |
+| (384) `win_unicode_console`     | 0.5                 | (312) `win-unicode-console`     | 0.5                  | <font color="pink">UNDERSCORE OR DASH</font> |
+| (385) `wincertstore`           | 0.2                 | (313) `wincertstore`            | 0.2                  | SAME              |
+| (386) `winpty`                  | 0.4.3               |                                 |                      | <font color="red">CONDA</font> |
+| (387) `wrapt`                  | 1.14.1              | (314) `wrapt`                   | 1.14.1               | SAME           |
+| (388) `xarray`                  | 0.20.1              | (315) `xarray`                  | 0.20.1               | SAME           |
+| (389) `xlrd`                   | 2.0.1               | (316) `xlrd`                    | 2.0.1                | SAME            |
+| (390) `xlsxwriter`             | 3.0.3               | (317) `XlsxWriter`              | 3.0.3                | <font color ="green">CASE DIFFERENCE</font> |
+| (391) `xlwings`                 | 0.27.15             | (318) `xlwings`                | 0.27.15              | SAME          |
+| (392) `xz`                      | 5.2.6               |                                 |                      | <font color="red">CONDA</font> |
+| (393) `yaml`                    | 0.2.5               |                                 |                      | <font color="red">CONDA</font> |
+| (394) `yapf`                    | 0.31.0              | (319) `yapf`                   | 0.31.0               | SAME           |
+| (395) `zeromq`                  | 4.3.4               |                                 |                      | <font color="red">CONDA</font> |
+| (396) `zfp`                     | 0.5.5               |                                 |                      | <font color="red">CONDA</font> |
+| (397) `zict`                   | 2.1.0               | (320) `zict`                  | 2.1.0                | SAME            |
+| (398) `zipp`                  | 3.8.0               | (321) `zipp`                    | 3.8.0                | SAME            |
+| (399) `zlib`                    | 1.2.12              |                                 |                      | <font color="red">CONDA</font> |
+| (400) `zope`                    | 1.0                 |                                 |                      | <font color="red">CONDA</font> |
+| (401) `zope.interface`          | 5.4.0               | (322) `zope.interface`          | 5.4.0                | SAME            |
+| (402) `zstandard`               | 0.19.0              | (323) `zstandard`               | 0.19.0               | SAME           |
+| (403) `zstd`                    | 1.5.2               |                                 |                      | <font color="red">CONDA</font> |
+
+<br>
+
+**References**
+
+[^1]: [Update Python Package using Pip](https://helloworld-1017.github.io/2024-05-23/13-20-47.html).
+
+[^2]: [Python Packages Installation Tools: Conda vs. Pip](https://helloworld-1017.github.io/2023-04-02/14-40-39.html).
+[^3]: [Anaconda \| Understanding Conda and Pip](https://www.anaconda.com/blog/understanding-conda-and-pip).
+[^4]: [6. Modules](https://docs.python.org/3/tutorial/modules.html#the-module-search-path).
+[^5]: [Module Import Precedence in Python](https://trstringer.com/python-module-import-precedence/).
+
+[^6]: [python - How to retrieve a module's path?](https://stackoverflow.com/questions/247770/how-to-retrieve-a-modules-path).
+
+
+
+
+
+
+

@@ -1,14 +1,14 @@
 ---
-layout: single
-title: The Definition and Properties of Gamma and Beta Function
-date: 2022-07-07 07:49:51 +0800
+title: Gamma Function and Beta Function
 categories: 
  - Mathematics
 tags: 
  - Probability Theory and Mathematical Statistics
+date: 2022-07-07 07:49:51 +0800
+last_modified_at: 2024-10-05 22:37:50 +0800
 ---
 
-# Gamma Function
+# Gamma function
 
 $\Gamma$ 函数（读作Gamma函数）$\Gamma(x)$，通过积分
 
@@ -68,7 +68,7 @@ $$
 
 <br>
 
-# Beta Function
+# Beta function
 $\mathrm{B}$ 函数（读作Beta函数）$\mathrm{B}(x,y)$，通过积分
 
 $$
@@ -78,6 +78,8 @@ $$
 来定义。此积分在 $x\gt0$ 且 $y\gt0$ 时有意义。
 
 <br>
+
+# The relation between Gamma function and Beta function
 
 $\Gamma$ 函数与 $\mathrm{B}$ 函数之间有着重要的关系式：
 

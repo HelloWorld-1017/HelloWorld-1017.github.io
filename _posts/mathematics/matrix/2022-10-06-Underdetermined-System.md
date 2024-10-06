@@ -1,5 +1,5 @@
 ---
-title: Solve Under-determined Equations
+title: Solve Underdetermined System
 categories: 
  - Mathematics
 tags:

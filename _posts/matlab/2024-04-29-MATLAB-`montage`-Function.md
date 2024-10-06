@@ -1,5 +1,4 @@
 ---
-layout: single
 title: MATLAB `montage` Function
 categories:
  - MATLAB
@@ -8,11 +7,9 @@ tags:
  - MATLAB Image Processing and Computer Vision
  - MATLAB Image Processing Toolbox
  - MATLAB Data Import and Analysis
- - Medical Imaging Toolbox
-drafted_at: 2024-04-19 01:34:06 +0800
+ - MATLAB Medical Imaging Toolbox
 date: 2024-04-29 13:00:59 +0800
-last_modified_at0: 2024-04-29 13:00:59 +0800
-last_modified_at: 2024-04-29 13:00:59 +0800
+last_modified_at: 2024-10-05 22:13:13 +0800
 ---
 
 # Introduction

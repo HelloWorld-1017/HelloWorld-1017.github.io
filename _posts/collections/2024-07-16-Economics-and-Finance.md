@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-09-28 14:28:24 +0800
+last_modified_at: 2024-10-14 21:58:50 +0800
 ---
 
 ## Books
@@ -64,25 +64,31 @@ last_modified_at: 2024-09-28 14:28:24 +0800
 - PMI (Purchasing Managers' Index)
   - [Purchasing Managers' Index](https://en.wikipedia.org/wiki/Purchasing_Managers%27_Index).
   - [PMI, Purchasing Managers’ Index](https://www.pmi.spglobal.com/).
-  - U.S.A: [United States Manufacturing Purchasing Managers Index (PMI)](https://www.investing.com/economic-calendar/manufacturing-pmi-829).
+  - U.S.: [United States Manufacturing Purchasing Managers Index (PMI)](https://www.investing.com/economic-calendar/manufacturing-pmi-829).
   - China: [采购经理人指数(PMI)](https://data.eastmoney.com/cjsj/pmi.html).
 - LEI (Leading Economic Index)
   - [Conference Board Leading Economic Index](https://en.wikipedia.org/wiki/Conference_Board_Leading_Economic_Index).
-  - U.S.A: [US Leading Indicators](https://www.conference-board.org/topics/us-leading-indicators).
+  - U.S.: [US Leading Indicators](https://www.conference-board.org/topics/us-leading-indicators).
   - China: [LEI for China](https://www.conference-board.org/topics/business-cycle-indicators/press/china-global-lei-june-2023).
 - Inflation rate
   - [Inflation](https://en.wikipedia.org/wiki/Inflation).
-  - U.S.A: [美国通货膨胀率](https://zh.tradingeconomics.com/united-states/inflation-cpi).
+  - U.S.: [美国通货膨胀率](https://zh.tradingeconomics.com/united-states/inflation-cpi).
   - China: [中国通货膨胀率](https://zh.tradingeconomics.com/china/inflation-cpi).
   - Argentina: [阿根廷通货膨胀率](https://zh.tradingeconomics.com/argentina/inflation-cpi).
 - Sahm Rule Recession Indicator (Sahm rule)
-  - [Sahm rule - Wikipedia](https://en.wikipedia.org/wiki/Sahm_rule).
-  - U.S.A: [Real-time Sahm Rule Recession Indicator (SAHMREALTIME)](https://fred.stlouisfed.org/series/SAHMREALTIME).
+  - [Sahm rule](https://en.wikipedia.org/wiki/Sahm_rule).
+  - U.S.: [Real-time Sahm Rule Recession Indicator (SAHMREALTIME)](https://fred.stlouisfed.org/series/SAHMREALTIME).
 - VIX (Volatility Index)
   - [Volatility Index Methodology](https://cdn.cboe.com/api/global/us_indices/governance/Volatility_Index_Methodology_Cboe_Volatility_Index.pdf).
   - [VIX Methodology](https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf).
 - CNN Fear and Greed Index
   - [Fear and Greed Index](https://www.cnn.com/markets/fear-and-greed).
+  - [US - CNN Fear and Greed Index](https://en.macromicro.me/charts/50108/cnn-fear-and-greed).
+- Buffett Indicator
+  - [Buffett indicator](https://en.wikipedia.org/wiki/Buffett_indicator).
+  - [Buffett Indicator Valuation Model](https://www.currentmarketvaluation.com/models/buffett-indicator.php).
+  - [US - Buffett Indicator vs. S&P 500](https://en.macromicro.me/charts/406/us-buffet-index-gspc).
+  - [US - Buffett Indicator](https://en.macromicro.me/series/617/wilshire5000-to-gdp).
 - Li Keqiang Index
   - [Li Keqiang index](https://en.wikipedia.org/wiki/Li_Keqiang_index).
   - [Li Keqiang Index vs. CSI 300 Index](https://en.macromicro.me/charts/778/mm-cn-li-keqiang-index).

@@ -3,8 +3,9 @@ title: Copernican Principle
 toc: false
 categories:
  - Mathematics
- - Uncertainty
+ - Psychology
  - Quotes
+ - Uncertainty
 tags:
  - Probability Theory and Mathematical Statistics
 date: 2024-10-14 22:54:57 +0800

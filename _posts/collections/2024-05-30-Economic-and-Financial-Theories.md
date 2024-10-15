@@ -1,37 +1,16 @@
 ---
 title: Economic and Financial Theories
 categories:
- - Economics & Finance
  - Collections
+ - Economics & Finance
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-08-31 21:36:26 +0800
-notes:
- - Matthew effect
- - Minsky moment
+last_modified_at: 2024-10-15 19:01:35 +0800
 ---
-
-## Pareto efficiency (Pareto improvement)
-
-> [Pareto efficiency](https://en.wikipedia.org/wiki/Pareto_efficiency)
->
-> - The concept is named after Vilfredo Pareto (1848–1923), an Italian civil engineer and economist, who used the concept in his studies of economic efficiency and income distribution.
-
-In <i class="term">welfare economics</i>, a <i class="term">Pareto improvement</i> formalizes the idea of an outcome being "better in every possible way". A change is called a Pareto improvement <i class="emphasize">if it leaves everyone in a society better-off</i> (or at least as well-off as they were before). A situation is called <i class="term">Pareto efficient</i> or <i class="term">Pareto optimal</i> if <i class="emphasize">all possible Pareto improvements</i> have already been made; in other words, there are <i class="emphasize">no longer any ways left</i> to make one person better-off, without making some other person worse-off.
-
-In <i class="term">social choice theory</i>, the same concept is sometimes called the <i class="term">unanimity principle</i>, which says that if everyone in a society (non-strictly) prefers A to B, society <i class="emphasize">as a whole</i> also non-strictly prefers A to B.
-
-The <i class="term">Pareto front</i> consists of all Pareto-efficient situations.
-
-In addition to the context of efficiency in <i class="term">allocation</i>, the concept of Pareto efficiency also arises in the context of efficiency in <i class="term">production</i> vs. x-inefficiency: a set of outputs of goods is Pareto-efficient if there is no feasible re-allocation of productive inputs such that output of <i class="emphasize">one</i> product <i class="emphasize">increases</i> while the outputs of <i class="emphasize">all other</i> goods either <i class="emphasize">increase</i> or <i class="emphasize">remain the same</i>.
-
-Besides economics, the notion of Pareto efficiency has also been applied to <i class="emphasize">selecting alternatives</i> in engineering and biology. Each option is first assessed, under multiple criteria, and then a subset of options is identified with the property that no other option can categorically outperform the specified option. It is a statement of impossibility of improving one variable <i class="emphasize">without harming other variables</i> in the subject of <i class="term">multi-objective optimization</i> (also termed <i class="term">Pareto optimization</i>).
-
-<br>
 
 ## Dog walking theory (by Andre Kostolany)
 
-> - [First Steps to Trading - StocksToTrade](https://stockstotrade.com/trading-first-steps/).
-> - [André Kostolany - Wikipedia](https://en.wikipedia.org/wiki/Andr%C3%A9_Kostolany).
+> - [First Steps to Trading](https://stockstotrade.com/trading-first-steps/).
+> - [André Kostolany](https://en.wikipedia.org/wiki/Andr%C3%A9_Kostolany).
 > - The Dog Walking Theory in Federal Learning: [[2404.11888] The Dog Walking Theory: Rethinking Convergence in Federated Learning](https://arxiv.org/abs/2404.11888).
 
 ... As famous economist Andre Kostolany once said, the relationship between the <i class="emphasize">stock market</i> and the <i class="emphasize">economy</i> is like a man walking his dog. The dog follows his master, and yet is always ahead of him—just like the stock market is always ahead of the economy, because it’s role is to anticipate the future.
@@ -67,6 +46,69 @@ Historically in advanced economies, the periods pre-1914 and 1970–2014 were ch
 
 <br>
 
+## Lipstick effect
+
+> [Lipstick Effect: Definition, Theory, Value as Economic Indicator](https://www.investopedia.com/terms/l/lipstick-effect.asp).
+
+The <i class="term">lipstick effect</i> is when consumers <i class="emphasize">still</i> spend money on <i class="emphasize">small indulgences</i> during recessions, economic downturns, or when they personally have little cash. They do not have enough to spend on big-ticket luxury items; however, many still find the cash for purchases of small luxury items, such as premium lipstick. For this reason, companies that benefit from the lipstick effect tend to be resilient even during economic downturns.
+
+<br>
+
+## Matthew effect
+
+> [Matthew effect](https://en.wikipedia.org/wiki/Matthew_effect).
+>
+> - The term was coined by sociologists Robert K. Merton and Harriet Zuckerman in 1968 and takes its name from the Parable of the Talents in the biblical Gospel of Matthew.
+
+The <i class="term">Matthew effect</i> of accumulated advantage, sometimes called the <i class="term">Matthew principle</i>, is the tendency of individuals to accrue social or economic success in proportion to their initial level of popularity, friends, and wealth. It is sometimes summarized by the adage or platitude "the rich get richer and the poor get poorer". 
+
+The Matthew effect may largely be explained by <i class="term">preferential attachment</i>, whereby wealth or credit is distributed among individuals according to how much they already have. This has the net effect of making it increasingly difficult for low ranked individuals to increase their totals because <i class="emphasize">they have fewer resources to risk over time</i>, and increasingly easy for high rank individuals to preserve a large total because <i class="emphasize">they have a large amount to risk</i>.
+
+Early studies of Matthew effects were primarily concerned with the inequality in the way scientists were recognized for their work. However, Norman W. Storer, of Columbia University, led a new wave of research. He believed he discovered that <i class="emphasize">the inequality that existed in the social sciences also existed in other institutions</i>.
+
+<br>
+
+## Minsky moment
+
+> - [Minsky moment](https://en.wikipedia.org/wiki/Minsky_moment).
+> - [What Is a Minsky Moment? Definition, Causes, History, and Examples](https://www.investopedia.com/terms/m/minskymoment.asp)
+
+A <i class="term">Minsky moment</i> is a sudden, major collapse of asset values which <i class="emphasize">marks the end of the growth phase of a cycle</i> in credit markets or business activity.
+
+A Minsky moment is the onset of a market collapse brought on by <i class="emphasize">speculative activity</i> that defines an <i class="emphasize">unsustainable</i> bullish period.
+
+Minsky moments generally occur <i class="emphasize">after a long period of growth</i>, which ultimately leads to overleveraging once prices stop rising.
+
+<br>
+
+## Pareto efficiency (Pareto improvement)
+
+> [Pareto efficiency](https://en.wikipedia.org/wiki/Pareto_efficiency)
+>
+> - The concept is named after Vilfredo Pareto (1848–1923), an Italian civil engineer and economist, who used the concept in his studies of economic efficiency and income distribution.
+
+In <i class="term">welfare economics</i>, a <i class="term">Pareto improvement</i> formalizes the idea of an outcome being "better in every possible way". A change is called a Pareto improvement <i class="emphasize">if it leaves everyone in a society better-off</i> (or at least as well-off as they were before). A situation is called <i class="term">Pareto efficient</i> or <i class="term">Pareto optimal</i> if <i class="emphasize">all possible Pareto improvements</i> have already been made; in other words, there are <i class="emphasize">no longer any ways left</i> to make one person better-off, without making some other person worse-off.
+
+In <i class="term">social choice theory</i>, the same concept is sometimes called the <i class="term">unanimity principle</i>, which says that if everyone in a society (non-strictly) prefers A to B, society <i class="emphasize">as a whole</i> also non-strictly prefers A to B.
+
+The <i class="term">Pareto front</i> consists of all Pareto-efficient situations.
+
+In addition to the context of efficiency in <i class="term">allocation</i>, the concept of Pareto efficiency also arises in the context of efficiency in <i class="term">production</i> vs. x-inefficiency: a set of outputs of goods is Pareto-efficient if there is no feasible re-allocation of productive inputs such that output of <i class="emphasize">one</i> product <i class="emphasize">increases</i> while the outputs of <i class="emphasize">all other</i> goods either <i class="emphasize">increase</i> or <i class="emphasize">remain the same</i>.
+
+Besides economics, the notion of Pareto efficiency has also been applied to <i class="emphasize">selecting alternatives</i> in engineering and biology. Each option is first assessed, under multiple criteria, and then a subset of options is identified with the property that no other option can categorically outperform the specified option. It is a statement of impossibility of improving one variable <i class="emphasize">without harming other variables</i> in the subject of <i class="term">multi-objective optimization</i> (also termed <i class="term">Pareto optimization</i>).
+
+<br>
+
+## Paradox of thrift (Paradox of saving)
+
+> [Paradox of thrift](https://en.wikipedia.org/wiki/Paradox_of_thrift)
+>
+> - It had been stated as early as 1714 in [The Fable of the Bees](https://en.wikipedia.org/wiki/The_Fable_of_the_Bees), and similar sentiments date to antiquity. It was popularized by John Maynard Keynes and is a central component of Keynesian economics.
+
+The <i class="term">paradox of thrift</i> (or <i class="term">paradox of saving</i>) is a paradox of economics. The paradox states that <i class="emphasize">an increase in autonomous saving leads to a decrease in aggregate demand and thus a decrease in gross output which will in turn lower total saving</i>. The paradox is, narrowly speaking, that total saving may fall because of individuals' attempts to increase their saving, and, broadly speaking, that increase in saving may be harmful to an economy. The paradox of thrift is an example of the <i class="term">fallacy of composition</i>, the idea that <i class="emphasize">what is true of the parts must always be true of the whole</i>. The narrow claim transparently contradicts the fallacy, and the broad one does so by implication, because while individual thrift is generally averred to be good for the individual, the paradox of thrift holds that collective thrift may be bad for the economy.
+
+<br>
+
 ## Ratchet effect
 
 > [Ratchet Effect: Definition and Examples in Economics](https://www.investopedia.com/terms/r/ratchet-effect.asp).
@@ -76,9 +118,3 @@ The <i class="term">ratchet effect</i> is an economic process that is difficult 
 A ratchet effect is closely related to the idea of a <i class="term">positive feedback loop</i>. In addition, like releasing a mechanical ratchet used to compress a spring, the reversal of an economic process that involves a ratchet effect may be rapid, forceful, and difficult to control.
 
 <br>
-
-## Lipstick effect
-
-> [Lipstick Effect: Definition, Theory, Value as Economic Indicator](https://www.investopedia.com/terms/l/lipstick-effect.asp).
-
-The <i class="term">lipstick effect</i> is when consumers <i class="emphasize">still</i> spend money on <i class="emphasize">small indulgences</i> during recessions, economic downturns, or when they personally have little cash. They do not have enough to spend on big-ticket luxury items; however, many still find the cash for purchases of small luxury items, such as premium lipstick. For this reason, companies that benefit from the lipstick effect tend to be resilient even during economic downturns.

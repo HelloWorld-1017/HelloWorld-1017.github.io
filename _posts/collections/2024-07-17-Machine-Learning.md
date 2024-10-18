@@ -5,7 +5,7 @@ categories:
  - Collections
  - Machine Learning
 date: 2024-07-17 09:48:31 +0800
-last_modified_at: 2024-08-30 19:02:14 +0800
+last_modified_at: 2024-10-18 18:03:58 +0800
 ---
 
 **Books**
@@ -21,5 +21,17 @@ last_modified_at: 2024-08-30 19:02:14 +0800
 **Blogs**
 
 - [colah's blog](https://colah.github.io/).
-  - [Understanding LSTM Networks -- colah's blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/).
-- [Ahead of AI \| Sebastian Raschka, PhD \| Substack](https://magazine.sebastianraschka.com/).
+  - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/).
+- [Ahead of AI](https://magazine.sebastianraschka.com/).
+
+**Papers**
+
+- Advancing mathematics by guiding human intuition with AI.
+  - Davies, A., Veličković, P., Buesing, L. et al. Advancing mathematics by guiding human intuition with AI. Nature 600, 70–74 (2021), available at: [https://doi.org/10.1038/s41586-021-04086-x](https://doi.org/10.1038/s41586-021-04086-x).
+  - GitHub repo: [google-deepmind/mathematics\_conjectures](https://github.com/google-deepmind/mathematics_conjectures).
+- AI models collapse when trained on recursively generated data.
+  - Shumailov, I., Shumaylov, Z., Zhao, Y. et al. AI models collapse when trained on recursively generated data. Nature 631, 755–759 (2024), available at: [https://doi.org/10.1038/s41586-024-07566-y](https://doi.org/10.1038/s41586-024-07566-y).
+  - Shumailov, Ilia, et al. "The curse of recursion: Training on generated data makes models forget." arXiv preprint arXiv: 2305.17493 (2023), available at: [[2305.17493] The Curse of Recursion: Training on Generated Data Makes Models Forget](https://arxiv.org/abs/2305.17493).
+  - [Nature最新封面：AI 训练 AI？也许越来越笨](https://mp.weixin.qq.com/s/kC-33HNJ67EpjiijPiOilA).
+- AI can help humans find common ground in democratic deliberation.
+  - Michael Henry Tessler *et al.* AI can help humans find common ground in democratic deliberation. Science 386, eadq2852 (2024). DOI: [10.1126/science.adq2852](https://doi.org/10.1126/science.adq2852).

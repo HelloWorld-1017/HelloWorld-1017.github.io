@@ -5,7 +5,7 @@ categories:
  - Collections
  - Electrical Engineering
 date: 2024-07-17 11:28:36 +0800
-last_modified_at: 2024-10-14 22:13:01 +0800
+last_modified_at: 2024-10-16 11:16:13 +0800
 ---
 
 **Books**
@@ -16,6 +16,7 @@ last_modified_at: 2024-10-14 22:13:01 +0800
 **Articles**
 
 - [基于多目标优化和迁移学习的磁性材料功率损耗估算数据驱动模型](https://mp.weixin.qq.com/s/UY0S95A67-LCeZrJtph1CA).
+- [2024世界人工智能大会，看施耐德电气如何推动AI技术“落地”行业场景应用](https://zhuanlan.zhihu.com/p/708095894).
 
 **Finite Element Method**
 

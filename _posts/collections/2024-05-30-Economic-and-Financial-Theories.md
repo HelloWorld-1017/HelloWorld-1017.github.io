@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-10-15 19:01:35 +0800
+last_modified_at: 2024-10-18 20:43:15 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -14,6 +14,30 @@ last_modified_at: 2024-10-15 19:01:35 +0800
 > - The Dog Walking Theory in Federal Learning: [[2404.11888] The Dog Walking Theory: Rethinking Convergence in Federated Learning](https://arxiv.org/abs/2404.11888).
 
 ... As famous economist Andre Kostolany once said, the relationship between the <i class="emphasize">stock market</i> and the <i class="emphasize">economy</i> is like a man walking his dog. The dog follows his master, and yet is always ahead of him—just like the stock market is always ahead of the economy, because it’s role is to anticipate the future.
+
+<br>
+
+## Efficient-market hypothesis
+
+> [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis).
+
+The <i class="term">efficient-market hypothesis (EMH)</i> is a hypothesis in financial economics that states that <i class="emphasize">asset prices reflect all available information</i>. A direct implication is that it is impossible to "beat the market" consistently on a risk-adjusted basis since market prices should only react to new information.
+
+<br>
+
+## Reflexivity (in economics)
+
+> [Reflexivity (social theory)](https://en.wikipedia.org/wiki/Reflexivity_\(social_theory\)#In_economics).
+>
+> - Economic philosopher George Soros, influenced by ideas put forward by his tutor, Karl Popper (1957), has been an active promoter of the relevance of reflexivity to economics, first propounding it publicly in his 1987 book The alchemy of finance. He regards his insights into <i class="emphasize">market behaviour</i> from applying the principle as a major factor in the success of his financial career.
+
+<i class="term">Reflexivity</i> is inconsistent with <i class="term">general equilibrium theory</i>, which stipulates that markets move towards equilibrium and that <i class="emphasize">non-equilibrium fluctuations are merely random noise</i> that will soon be corrected. In equilibrium theory, prices in the long run at equilibrium reflect the underlying economic fundamentals, which are unaffected by prices. Reflexivity asserts that <i class="emphasize">prices do in fact influence the fundamentals and that these newly influenced sets of fundamentals then proceed to change expectations</i>, thus influencing prices; the process continues in a <i class="emphasize">self-reinforcing pattern</i>. Because the pattern is self-reinforcing, markets tend towards <i class="emphasize">disequilibrium</i>. Sooner or later they reach a point where the sentiment is reversed and negative expectations become self-reinforcing in the downward direction, thereby explaining the familiar pattern of <i class="emphasize">boom and bust cycles</i>.
+
+An example Soros cites is the <i class="term">procyclical nature of lending</i>, that is, the willingness of banks to ease lending standards for real estate loans when prices are rising, then raising standards when real estate prices are falling, reinforcing the boom and bust cycle. He further suggests that <i class="emphasize">property price inflation is essentially a reflexive phenomenon</i>: house prices are influenced by the sums that banks are prepared to advance for their purchase, and these sums are determined by the banks' estimation of the prices that the property would command.
+
+Soros has often claimed that his grasp of the principle of reflexivity is what has given him his "edge" and that it is the major factor contributing to his successes as a trader. For several decades there was little sign of the principle being accepted in mainstream economic circles, but there has been an increase of interest following the crash of 2008, with academic journals, economists, and investors discussing his theories.
+
+Economist and former columnist of the Financial Times, Anatole Kaletsky, argued that Soros' concept of reflexivity is useful in understanding China's economy and how the Chinese government manages it.
 
 <br>
 

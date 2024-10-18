@@ -1,13 +1,13 @@
 ---
 title: Terminologies and Methods in Object Detection
 categories:
- - Machine Learning
  - Collections
+ - Machine Learning
 tags:
  - Computer Vision
  - Object Detection
 date: 2024-05-23 09:39:02 +0800
-last_modified_at: 2024-09-06 08:20:44 +0800
+last_modified_at: 2024-10-16 15:08:44 +0800
 ---
 
 # Fundamentals
@@ -44,20 +44,20 @@ last_modified_at: 2024-09-06 08:20:44 +0800
   - "... Additionally, we used a linear warmup period over 1K iterations."[^9]
 - **Cross-dataset validations**[^10][^11]
 - **Synthetic data**
-  - AI.Reverie simulation platform[^9]: [AI.Reverie - YouTube](https://www.youtube.com/channel/UCpCBf7i5uxWZi4o9LgIyEcQ).
+  - AI.Reverie simulation platform[^9]: [AI.Reverie](https://www.youtube.com/channel/UCpCBf7i5uxWZi4o9LgIyEcQ).
 
 <br>
 
-# References
+**References**
 
-[^1]: [What Does Backbone Mean in Neural Networks? \| Baeldung on Computer Science](https://www.baeldung.com/cs/neural-network-backbone).
-[^2]: [deep learning - What does backbone mean in a neural network? - Stack Overflow](https://stackoverflow.com/questions/59868132/what-does-backbone-mean-in-a-neural-network#:~:text=Backbone%20is%20a%20term%20used,models%20to%20generate%20segmented%20masks.).
-[^3]: [A comprehensive and systematic review on classical and deep learning based region proposal algorithms - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0957417421014366).
-[^4]: [MachineVision_Chapter3.pdf](https://cse.usf.edu/~r1k/MachineVisionBook/MachineVision.files/MachineVision_Chapter3.pdf).
-[^5]: [Region Based Convolutional Neural Networks - Wikipedia](https://en.wikipedia.org/wiki/Region_Based_Convolutional_Neural_Networks).
-[^6]: Ding, Jian, et al. "Object detection in aerial images: A large-scale benchmark and challenges." *IEEE transactions on pattern analysis and machine intelligence* 44.11 (2021): 7778-7796, available at: [(PDF) Object Detection in Aerial Images: A Large-Scale Benchmark and Challenges](https://www.researchgate.net/publication/349583747_Object_Detection_in_Aerial_Images_A_Large-Scale_Benchmark_and_Challenges), or [Object Detection in Aerial Images: A Large-Scale Benchmark and Challenges \| IEEE Journals & Magazine \| IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9560031).
-[^7]: [What Is Few-Shot Learning? \| IBM](https://www.ibm.com/topics/few-shot-learning).
-[^8]: [Linear Warmup Explained \| Papers With Code](https://paperswithcode.com/method/linear-warmup).
+[^1]: [What Does Backbone Mean in Neural Networks?](https://www.baeldung.com/cs/neural-network-backbone).
+[^2]: [deep learning - What does backbone mean in a neural network?](https://stackoverflow.com/questions/59868132/what-does-backbone-mean-in-a-neural-network#:~:text=Backbone%20is%20a%20term%20used,models%20to%20generate%20segmented%20masks.).
+[^3]: [A comprehensive and systematic review on classical and deep learning based region proposal algorithms](https://www.sciencedirect.com/science/article/abs/pii/S0957417421014366).
+[^4]: [MachineVision\_Chapter3.pdf](https://cse.usf.edu/~r1k/MachineVisionBook/MachineVision.files/MachineVision_Chapter3.pdf).
+[^5]: [Region Based Convolutional Neural Networks](https://en.wikipedia.org/wiki/Region_Based_Convolutional_Neural_Networks).
+[^6]: Ding, Jian, et al. "Object detection in aerial images: A large-scale benchmark and challenges." *IEEE transactions on pattern analysis and machine intelligence* 44.11 (2021): 7778-7796, available at: [(PDF) Object Detection in Aerial Images: A Large-Scale Benchmark and Challenges](https://www.researchgate.net/publication/349583747_Object_Detection_in_Aerial_Images_A_Large-Scale_Benchmark_and_Challenges), or [Object Detection in Aerial Images: A Large-Scale Benchmark and Challenges](https://ieeexplore.ieee.org/abstract/document/9560031).
+[^7]: [What Is Few-Shot Learning?](https://www.ibm.com/topics/few-shot-learning).
+[^8]: [Linear Warmup Explained](https://paperswithcode.com/method/linear-warmup).
 [^9]: Shermeyer, Jacob, et al. "Rareplanes: Synthetic data takes flight." *Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision*. 2021, available at: [WACV 2021 Open Access Repository](https://openaccess.thecvf.com/content/WACV2021/html/Shermeyer_RarePlanes_Synthetic_Data_Takes_Flight_WACV_2021_paper.html).
 [^10]: Xia, Gui-Song, et al. "DOTA: A large-scale dataset for object detection in aerial images." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2018, available at: [CVPR 2018 Open Access Repository](https://openaccess.thecvf.com/content_cvpr_2018/html/Xia_DOTA_A_Large-Scale_CVPR_2018_paper.html).
-[^11]: Torralba, Antonio, and Alexei A. Efros. "Unbiased look at dataset bias." *CVPR 2011*. IEEE, 2011, available at: [Unbiased look at dataset bias \| IEEE Conference Publication \| IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/5995347), or [datasets_cvpr11.pdf](https://people.csail.mit.edu/torralba/publications/datasets_cvpr11.pdf).
+[^11]: Torralba, Antonio, and Alexei A. Efros. "Unbiased look at dataset bias." *CVPR 2011*. IEEE, 2011, available at: [Unbiased look at dataset bias](https://ieeexplore.ieee.org/abstract/document/5995347), or [datasets\_cvpr11.pdf](https://people.csail.mit.edu/torralba/publications/datasets_cvpr11.pdf).

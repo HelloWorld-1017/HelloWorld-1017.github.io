@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-10-14 21:58:50 +0800
+last_modified_at: 2024-10-17 17:12:50 +0800
 ---
 
 ## Books
@@ -84,9 +84,10 @@ last_modified_at: 2024-10-14 21:58:50 +0800
 - CNN Fear and Greed Index
   - [Fear and Greed Index](https://www.cnn.com/markets/fear-and-greed).
   - [US - CNN Fear and Greed Index](https://en.macromicro.me/charts/50108/cnn-fear-and-greed).
-- Buffett Indicator
+- Buffett Indicator (i.e. stock market capitalization to GDP ratio)
   - [Buffett indicator](https://en.wikipedia.org/wiki/Buffett_indicator).
   - [Buffett Indicator Valuation Model](https://www.currentmarketvaluation.com/models/buffett-indicator.php).
+  - [Stock Market Capitalization-to-GDP Ratio: Definition and Formula](https://www.investopedia.com/terms/m/marketcapgdp.asp).
   - [US - Buffett Indicator vs. S&P 500](https://en.macromicro.me/charts/406/us-buffet-index-gspc).
   - [US - Buffett Indicator](https://en.macromicro.me/series/617/wilshire5000-to-gdp).
 - Li Keqiang Index

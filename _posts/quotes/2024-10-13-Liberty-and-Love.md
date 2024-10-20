@@ -1,5 +1,5 @@
 ---
-title: Sandor Petofi, "Liberty and love..."
+title: Sandor Petofi, "Liberty and Love..."
 toc: false
 categories:
  - Quotes

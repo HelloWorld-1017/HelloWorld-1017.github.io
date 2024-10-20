@@ -7,10 +7,10 @@ categories:
  - Philosophy
  - Quotes
 tags:
- - Probability Theory and Mathematical Statistics
  - Experiment
+ - Probability Theory and Mathematical Statistics
 date: 2022-09-28 23:42:17 +0800
-last_modified_at: 2024-08-02 16:23:37 +0800
+last_modified_at: 2024-10-20 16:39:29 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -33,4 +33,4 @@ p-hacking主要发生在两个阶段，一是在**数据采集阶段**，实验�
 
 **References**
 
-[^1]: [Goodhart's law - Wikipedia](https://en.wikipedia.org/wiki/Goodhart%27s_law).
+[^1]: [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law).

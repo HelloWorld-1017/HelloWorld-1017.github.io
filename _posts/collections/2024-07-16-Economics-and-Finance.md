@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-10-17 17:12:50 +0800
+last_modified_at: 2024-10-19 12:12:30 +0800
 ---
 
 ## Books
@@ -97,3 +97,9 @@ last_modified_at: 2024-10-17 17:12:50 +0800
   - [挖掘机指数](https://wiki.mbalib.com/wiki/%E6%8C%96%E6%8E%98%E6%9C%BA%E6%8C%87%E6%95%B0).
   - [SANY “EXCAVATOR INDEX”: CRITICAL TO CHINA’S ECONOMY OUTLOOK](https://trends.directindustry.com/sany/project-52887-165936.html).
   - [CCTV Financial Excavator Index: China's various infrastructure construction is steady, moderate and positive in 2023](https://news.futunn.com/en/flash/16299949/cctv-financial-excavator-index-china-s-various-infrastructure-construction-is?level=1&data_ticket=1721034821442308).
+
+## Articles
+
+- [Put \$10,000 in the S&P 500 ETF and Wait 20 Years](https://www.investopedia.com/articles/personal-finance/022216/put-10000-sp-500-etf-and-wait-20-years.asp).
+- [Time, Not Timing, Is What Matters](https://www.capitalgroup.com/individual/planning/investing-fundamentals/time-not-timing-is-what-matters.html).
+- [Buffett's Lessons from Long Term Capital Management](https://novelinvestor.com/buffetts-lessons-long-term-capital-management/).

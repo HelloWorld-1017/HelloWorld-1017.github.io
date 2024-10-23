@@ -7,8 +7,6 @@ date: 2024-09-16 09:14:19 +0800
 last_modified_at: 2024-09-24 16:57:28 +0800
 ---
 
-<br>
-
 <div class="notice--primary" markdown="1">
 
 **Resources**
@@ -17,8 +15,6 @@ last_modified_at: 2024-09-24 16:57:28 +0800
 - [你真的了解咖啡么 \| 咖啡高级常识](https://www.youtube.com/watch?v=motxyzLrf4Y).
 
 </div>
-
-<br>
 
 **(Green) Coffee been**: a seed from a coffee plant.
 

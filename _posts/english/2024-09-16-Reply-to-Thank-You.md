@@ -1,13 +1,11 @@
 ---
-title: Various Replies to \"Thank You.\" in English
+title: Various Replies to \"Thank You\" in English
 toc: false
 categories:
  - English
 date: 2024-09-16 08:29:50 +0800
 last_modified_at: 2024-09-24 18:42:53 +0800
 ---
-
-<br>
 
 <div class="notice--primary" markdown="1">
 
@@ -17,8 +15,6 @@ last_modified_at: 2024-09-24 18:42:53 +0800
 - [DO NOT say "you're welcome"! Respond to "thank you" PROPERLY! - YouTube](https://www.youtube.com/watch?v=F99JNqsfxlQ&t=97s).
 
 </div>
-
-<br>
 
 - Any time.
 - Don’t mention it. (Somebody may don’t like it.)

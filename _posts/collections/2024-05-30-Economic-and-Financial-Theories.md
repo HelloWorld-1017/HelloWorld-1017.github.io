@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-10-18 20:43:15 +0800
+last_modified_at: 2024-10-20 23:33:02 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -67,6 +67,19 @@ The <i class="term">impossible trinity</i> (also known as the <i class="term">im
 It is both a hypothesis based on the <i class="term">uncovered interest rate parity</i> condition, and a finding from empirical studies where governments that have tried to simultaneously pursue all three goals have failed. 
 
 Historically in advanced economies, the periods pre-1914 and 1970–2014 were characterized by stable foreign exchange rates and free capital movement, whereas <i class="term">monetary autonomy</i> was limited. The periods 1914–1924 and 1950–1969 had restrictions on capital movement (e.g. capital controls), but exchange rate stability and monetary autonomy were present.
+
+<br>
+
+## Kondratiev wave
+
+> - [Kondratiev wave](https://en.wikipedia.org/wiki/Kondratiev_wave).
+> - [Kondratiev Wave: What it Means, How it Works](https://www.investopedia.com/terms/k/kondratiev.asp).
+
+In economics, <i class="term">Kondratiev waves</i> (also called <i class="term">supercycles</i>, <i class="term">great surges</i>, <i class="term">long waves</i>, <i class="term">K-waves</i> or the <i class="term">long economic cycle</i>) are hypothesized cycle-like phenomena in the modern world economy. The phenomenon is closely connected with the <i class="term">technology life cycle</i>.
+
+It is stated that the period of a wave <i class="emphasize">ranges from forty to sixty years</i>, the cycles consist of alternating intervals of high sectoral growth and intervals of relatively slow growth.
+
+Long wave theory is <i class="emphasize">not accepted by most academic economists</i>. Among economists who accept it, there is a lack of agreement about both the cause of the waves and the start and end years of particular waves. Among critics of the theory, the consensus is that it involves recognizing patterns that may not exist (apophenia).
 
 <br>
 

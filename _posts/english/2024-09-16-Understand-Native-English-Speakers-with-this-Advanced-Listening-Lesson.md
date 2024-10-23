@@ -6,8 +6,6 @@ date: 2024-09-16 09:27:04 +0800
 last_modified_at: 2024-09-24 21:54:25 +0800
 ---
 
-<br>
-
 <div class="notice--primary" markdown="1">
 
 **Resources**
@@ -15,8 +13,6 @@ last_modified_at: 2024-09-24 21:54:25 +0800
 - [Understand Native English Speakers with this Advanced Listening Lesson](https://www.youtube.com/watch?v=D6_qpaSxAQc&t=6s).
 
 </div>
-
-<br>
 
 ## The biggest mistake
 

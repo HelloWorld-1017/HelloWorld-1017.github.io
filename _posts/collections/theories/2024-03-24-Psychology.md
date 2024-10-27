@@ -4,7 +4,7 @@ categories:
  - Psychology
  - Collections
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-10-16 18:12:28 +0800
+last_modified_at: 2024-10-27 16:30:07 +0800
 ---
 
 ## Broken windows theory
@@ -28,6 +28,20 @@ The <i class="term">Dunning–Kruger effect</i> is a <i class="term">cognitive b
 
 <br>
 
+## Echo chamber (Information cocoon)
+
+> - [Echo chamber (media)](https://en.wikipedia.org/wiki/Echo_chamber_\(media\)).
+
+In news media and social media, an <i class="term">echo chamber</i> is an environment or ecosystem in which participants encounter beliefs that amplify or reinforce their preexisting beliefs by communication and repetition inside a closed system and insulated from rebuttal. An echo chamber circulates existing views without encountering opposing views, potentially resulting in confirmation bias. <i class="emphasize">Echo chambers may increase social and political polarization and extremism.</i> On social media, it is thought that echo chambers limit exposure to diverse perspectives, and favor and reinforce presupposed narratives and ideologies.
+
+An echo chamber is "an environment where a person only encounters information or opinions that reflect and reinforce their own."
+
+> - [What is Information Cocoon](https://www.igi-global.com/dictionary/research-on-social-media-advertising-in-china/111021).
+
+An <i class="term">information cocoon</i> occurs due to a user’s active choices and an algorithm passive choice. It is what the platforms chooses to expose you to user to based on expressed interests, tastes, and preferences. It is related to the idea that people see, hear, and seek what they like, pleases and comforts them and are closed to the idea of newness that challenges it. However, the downside of this phenomenon is non-exposure to opposing point of views, and non-awareness towards the things that exist outside our areas of interests.
+
+<br>
+
 ## Illusory superiority
 
 > [Illusory superiority](https://en.wikipedia.org/wiki/Illusory_superiority).
@@ -43,7 +57,7 @@ The phenomenon is also known as the <i class="term">above-average effect</i>, th
 
 ## Observer-expectancy effect
 
-> [Observer-expectancy effect](https://en.wikipedia.org/wiki/Observer-expectancy_effect).
+> - [Observer-expectancy effect](https://en.wikipedia.org/wiki/Observer-expectancy_effect).
 
 The <i class="term">observer-expectancy effect</i> (a.k.a. the <i class="term">experimenter-expectancy effect</i>, <i class="term">expectancy bias</i>, <i class="term">observer effect</i>, or <i class="term">experimenter effect</i>) is a form of reactivity in which a researcher's <i class="term">cognitive bias</i> causes them to <i class="emphasize">subconsciously</i> influence the participants of an experiment. Confirmation bias can lead to the experimenter interpreting results incorrectly because of the <i class="emphasize">tendency</i> to <i class="emphasize">look for</i> information <i class="emphasize">that conforms to their hypothesis</i>, and <i class="emphasize">overlook</i> information that argues <i class="emphasize">against</i> it. It is a significant threat to a study's internal validity, and is therefore typically controlled using a <i class="term">double-blind experimental design</i>. It may include conscious or unconscious influences on subject behavior including creation of demand characteristics that influence subjects, and altered or selective recording of experimental results themselves.
 
@@ -72,7 +86,7 @@ In a <i class="term">slippery slope argument</i>, a course of action is rejected
 
 ## Survivorship bias
 
-> [Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias).
+> - [Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias).
 
 <i class="term">Survivorship bias</i> or <i class="term">survival bias</i> is the <i class="term">logical error</i> of <i class="emphasize">concentrating</i> on entities that <i class="emphasize">passed a selection process</i> while <i class="emphasize">overlooking</i> those that <i class="emphasize">did not</i>. This can lead to <i class="emphasize">incorrect conclusions</i> because of <i class="emphasize">incomplete data</i>.
 

@@ -4,10 +4,31 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-10-19 12:12:30 +0800
+last_modified_at: 2024-10-25 11:52:33 +0800
 ---
 
-## Books
+**Articles**
+
+- [Put \$10,000 in the S&P 500 ETF and Wait 20 Years](https://www.investopedia.com/articles/personal-finance/022216/put-10000-sp-500-etf-and-wait-20-years.asp).
+- [Time, Not Timing, Is What Matters](https://www.capitalgroup.com/individual/planning/investing-fundamentals/time-not-timing-is-what-matters.html).
+- [Buffett's Lessons from Long Term Capital Management](https://novelinvestor.com/buffetts-lessons-long-term-capital-management/).
+
+<br>
+
+**Blogs**
+
+- [Collab Blog](https://collabfund.com/blog/).
+- [FRED Blog](https://fredblog.stlouisfed.org/).
+- [硅谷居士博客](https://blog.wenxuecity.com/myoverview/80634/).
+- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html).
+  - GitHub repo: [aeturrell/coding-for-economists](https://github.com/aeturrell/coding-for-economists).
+- [Causal Inference The Mixtape](https://mixtape.scunning.com/).
+- [Andrew Hallam](https://andrewhallam.com/).
+- [Financial Samurai](https://www.financialsamurai.com/).
+
+<br>
+
+**Books**
 
 - [Security Analysis (Sixth Edition)](https://glenbradford.com/files/Stocks/security-analysis-benjamin-graham-6th-edition-pdf-february-24-2010-12-08-am-3-0-meg.pdf), Benjamin Graham, David L. Dood.
 - [The Psychology of Money: Timeless lessons on wealth, greed, and happiness](https://pdflake.com/wp-content/uploads/2021/08/The-Psychology-of-Money-PDF-Book-By-Morgan-Housel.pdf), Morgan Housel.
@@ -17,7 +38,7 @@ last_modified_at: 2024-10-19 12:12:30 +0800
 
 <br>
 
-## Data source
+**Data source**
 
 - [Yahoo Finance](https://finance.yahoo.com/).
 - [Federal Reserve Economic Data (FRED)](https://fred.stlouisfed.org/).
@@ -40,20 +61,7 @@ last_modified_at: 2024-10-19 12:12:30 +0800
 
 <br>
 
-## Blogs
-
-- [Collab Blog](https://collabfund.com/blog/).
-- [FRED Blog](https://fredblog.stlouisfed.org/).
-- [硅谷居士博客](https://blog.wenxuecity.com/myoverview/80634/).
-- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html).
-  - GitHub repo: [aeturrell/coding-for-economists](https://github.com/aeturrell/coding-for-economists).
-- [Causal Inference The Mixtape](https://mixtape.scunning.com/).
-- [Andrew Hallam](https://andrewhallam.com/).
-- [Financial Samurai](https://www.financialsamurai.com/).
-
-<br>
-
-## Economic indicators and indexes
+**Economic indicators and indexes**
 
 - PPI (Producer Price Index)
   - [Producer price index](https://en.wikipedia.org/wiki/Producer_price_index).
@@ -78,9 +86,12 @@ last_modified_at: 2024-10-19 12:12:30 +0800
 - Sahm Rule Recession Indicator (Sahm rule)
   - [Sahm rule](https://en.wikipedia.org/wiki/Sahm_rule).
   - U.S.: [Real-time Sahm Rule Recession Indicator (SAHMREALTIME)](https://fred.stlouisfed.org/series/SAHMREALTIME).
-- VIX (Volatility Index)
+- VIX (CBOE Volatility Index)
   - [Volatility Index Methodology](https://cdn.cboe.com/api/global/us_indices/governance/Volatility_Index_Methodology_Cboe_Volatility_Index.pdf).
   - [VIX Methodology](https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf).
+- VXN (CBOE NASDAQ 100 Volatility Index)
+  - [Cboe Global Indices: VXN Index Dashboard](https://www.cboe.com/us/indices/dashboard/vxn/).
+
 - CNN Fear and Greed Index
   - [Fear and Greed Index](https://www.cnn.com/markets/fear-and-greed).
   - [US - CNN Fear and Greed Index](https://en.macromicro.me/charts/50108/cnn-fear-and-greed).
@@ -97,9 +108,3 @@ last_modified_at: 2024-10-19 12:12:30 +0800
   - [挖掘机指数](https://wiki.mbalib.com/wiki/%E6%8C%96%E6%8E%98%E6%9C%BA%E6%8C%87%E6%95%B0).
   - [SANY “EXCAVATOR INDEX”: CRITICAL TO CHINA’S ECONOMY OUTLOOK](https://trends.directindustry.com/sany/project-52887-165936.html).
   - [CCTV Financial Excavator Index: China's various infrastructure construction is steady, moderate and positive in 2023](https://news.futunn.com/en/flash/16299949/cctv-financial-excavator-index-china-s-various-infrastructure-construction-is?level=1&data_ticket=1721034821442308).
-
-## Articles
-
-- [Put \$10,000 in the S&P 500 ETF and Wait 20 Years](https://www.investopedia.com/articles/personal-finance/022216/put-10000-sp-500-etf-and-wait-20-years.asp).
-- [Time, Not Timing, Is What Matters](https://www.capitalgroup.com/individual/planning/investing-fundamentals/time-not-timing-is-what-matters.html).
-- [Buffett's Lessons from Long Term Capital Management](https://novelinvestor.com/buffetts-lessons-long-term-capital-management/).

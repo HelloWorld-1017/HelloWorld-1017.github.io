@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-10-20 23:33:02 +0800
+last_modified_at: 2024-10-27 16:17:45 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -19,7 +19,7 @@ last_modified_at: 2024-10-20 23:33:02 +0800
 
 ## Efficient-market hypothesis
 
-> [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis).
+> - [Efficient-market hypothesis](https://en.wikipedia.org/wiki/Efficient-market_hypothesis).
 
 The <i class="term">efficient-market hypothesis (EMH)</i> is a hypothesis in financial economics that states that <i class="emphasize">asset prices reflect all available information</i>. A direct implication is that it is impossible to "beat the market" consistently on a risk-adjusted basis since market prices should only react to new information.
 
@@ -85,7 +85,7 @@ Long wave theory is <i class="emphasize">not accepted by most academic economist
 
 ## Lipstick effect
 
-> [Lipstick Effect: Definition, Theory, Value as Economic Indicator](https://www.investopedia.com/terms/l/lipstick-effect.asp).
+> - [Lipstick Effect: Definition, Theory, Value as Economic Indicator](https://www.investopedia.com/terms/l/lipstick-effect.asp).
 
 The <i class="term">lipstick effect</i> is when consumers <i class="emphasize">still</i> spend money on <i class="emphasize">small indulgences</i> during recessions, economic downturns, or when they personally have little cash. They do not have enough to spend on big-ticket luxury items; however, many still find the cash for purchases of small luxury items, such as premium lipstick. For this reason, companies that benefit from the lipstick effect tend to be resilient even during economic downturns.
 
@@ -148,7 +148,7 @@ The <i class="term">paradox of thrift</i> (or <i class="term">paradox of saving<
 
 ## Ratchet effect
 
-> [Ratchet Effect: Definition and Examples in Economics](https://www.investopedia.com/terms/r/ratchet-effect.asp).
+> - [Ratchet Effect: Definition and Examples in Economics](https://www.investopedia.com/terms/r/ratchet-effect.asp).
 
 The <i class="term">ratchet effect</i> is an economic process that is difficult to reverse <i class="emphasize">once it is underway or has already occurred</i>. A ratchet is an analogy to a mechanical ratchet, which spins one way but not the other, in an economic process that tends to <i class="emphasize">only work one way</i>. The results or side effects of the process may reinforce the cause by creating or altering incentives and expectations among participants.
 

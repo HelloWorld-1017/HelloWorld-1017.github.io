@@ -5,7 +5,7 @@ categories:
  - Collections
  - Philosophy
 date: 2024-07-17 11:06:58 +0800
-last_modified_at: 2024-08-30 19:08:50 +0800
+last_modified_at: 2024-10-25 12:07:18 +0800
 ---
 
 **Books**
@@ -19,7 +19,9 @@ last_modified_at: 2024-08-30 19:08:50 +0800
 - [鲁迅文章合集](http://www.luxunmuseum.com.cn/cx/works.php)，鲁迅著，北京鲁迅博物馆(北京新文化运动纪念馆)编.
 - [坛经](https://zxyj.lcu.edu.cn/docs/20211210123211713978.pdf), 尚荣译注.
 
+<br>
+
 **Websites**
 
-- [智识@IdeoBook™ – 文章评论 · 读书随笔 · 文化资讯](http://www.ideobook.com/).
+- [智识@IdeoBook™](http://www.ideobook.com/).
 - [National Geographic](https://www.nationalgeographic.com/).

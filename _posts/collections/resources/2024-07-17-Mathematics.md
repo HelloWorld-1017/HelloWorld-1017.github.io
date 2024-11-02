@@ -5,7 +5,7 @@ categories:
  - Collections
  - Mathematics
 date: 2024-07-17 10:28:34 +0800
-last_modified_at: 2024-09-08 11:02:20 +0800
+last_modified_at: 2024-11-01 15:40:00 +0800
 ---
 
 **Books**
@@ -48,6 +48,14 @@ last_modified_at: 2024-09-08 11:02:20 +0800
 
   - [Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics](http://tomlr.free.fr/Math%E9matiques/Fichiers%20Claude/Nombres/Derbyshire%20-%20Prime%20Obsession%20-%20Bernhard%20Riemann%20and%20the%20Greatest%20Unsolved%20Problem%20in%20MathematicsAAA.pdf), John Derbyshire.
 
+<br>
+
 **Blogs**
 
 - [3Blue1Brown](https://www.3blue1brown.com/).
+
+<br>
+
+**Articles**
+
+- [高维空间中混乱的密铺](https://mp.weixin.qq.com/s/F8pDQqwrwRfcTIS_dUwbNA).

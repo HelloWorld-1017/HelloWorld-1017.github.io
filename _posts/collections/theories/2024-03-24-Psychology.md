@@ -4,7 +4,7 @@ categories:
  - Psychology
  - Collections
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-10-27 16:30:07 +0800
+last_modified_at: 2024-11-01 15:19:36 +0800
 ---
 
 ## Broken windows theory
@@ -52,6 +52,20 @@ An <i class="term">information cocoon</i> occurs due to a user’s active choice
 In <i class="term">social psychology</i>, <i class="term">illusory superiority</i> is a <i class="term">cognitive bias</i> wherein people <i class="emphasize">overestimate</i> their own qualities and abilities compared to others. Illusory superiority is one of many <i class="term">positive illusions</i>, relating to the <i class="term">self</i>, that are evident in the study of intelligence, the effective performance of tasks and tests, and the possession of desirable personal characteristics and personality traits. Overestimation of abilities compared to an objective measure is known as the <i class="term">overconfidence effect</i>.
 
 The phenomenon is also known as the <i class="term">above-average effect</i>, the <i class="term">superiority bias</i>, the <i class="term">leniency error</i>, the <i class="term">sense of relative superiority</i>, the <i class="term">primus inter pares effect</i>, and the <i class="term">Lake Wobegon effect</i>, named after the fictional town where all the children are above average. The <i class="term">Dunning-Kruger effect</i> is a form of illusory superiority shown by people on a task where their level of skill is low.
+
+<br>
+
+## Gaslighting
+
+[Gaslighting](https://en.wikipedia.org/wiki/Gaslighting): Gaslighting is a colloquialism, defined as manipulating someone into questioning their own perception of reality. The expression, which derives from the title of the 1944 film Gaslight, became popular in the mid-2010s. Merriam-Webster cites deception of one's memory, perception of reality, or mental stability.
+
+[Gaslighting](https://www.psychologytoday.com/intl/basics/gaslighting): Gaslighting is an insidious form of manipulation and psychological control. Victims of gaslighting are deliberately and systematically fed false information that leads them to question what they know to be true, often about themselves. They may end up doubting their memory, their perception, and even their sanity. Over time, a gaslighter’s manipulations can grow more complex and potent, making it increasingly difficult for the victim to see the truth.
+
+[The Sociology of Gaslighting](https://www.asanet.org/wp-content/uploads/attach/journals/oct19asrfeature.pdf), by Paige L. Sweet: Gaslighting---a type of psychological abuse aimed at making victims seem or feel “crazy,” creating a “surreal” interpersonal environment---has captured public attention. Despite the popularity of the term, sociologists have ignored gaslighting, leaving it to be theorized by psychologists. However, this article argues that gaslighting is primarily a sociological rather than a psychological phenomenon. Gaslighting should be understood as rooted in social inequalities, including gender, and executed in power-laden intimate relationships.
+
+**Other references**
+
+- [最胶着的美国总统选举](https://mp.weixin.qq.com/s/378zOWAwQyY_XLyiH3aQTg).
 
 <br>
 

@@ -4,6 +4,7 @@ toc: false
 categories:
  - Collections
  - Psychology
+ - Sociology
 date: 2024-07-17 11:01:44 +0800
 last_modified_at: 2024-10-14 22:07:06 +0800
 ---

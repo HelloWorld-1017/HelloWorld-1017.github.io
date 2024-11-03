@@ -1,17 +1,17 @@
 ---
 title: "Visualize Drawdown Distribution of Several Main Stock Market Indexes in MATLAB: S&P 500, NASDAQ 100, and Dow Jones Industrial Average"
 categories:
- - MATLAB
- - Mathematics
  - Economics & Finance
+ - Mathematics
+ - MATLAB
  - Time Series Analysis
 tags:
  - Computational Finance
  - MATLAB Computational Finance
- - Probability Theory and Mathematical Statistics
  - MATLAB Graphics
+ - Probability Theory and Mathematical Statistics
 date: 2024-06-11 11:10:48 +0800
-last_modified_at: 2024-07-28 17:06:30 +0800
+last_modified_at: 2024-11-03 11:59:27 +0800
 ---
 
 # Definition of drawdown, maximum drawdown, and maximum drawdown duration
@@ -228,12 +228,9 @@ There is a 100.00% possibility to reach a new high within 706 days.
 
 **References**
 
-[^1]: [Fetch S&P 500 Price Index (or Other Available Series) from FRED (Federal Reserve Economic Data) Server in MATLAB - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-04-17/13-58-11.html).
+[^1]: [Fetch S&P 500 Price Index (or Other Available Series) from FRED (Federal Reserve Economic Data) Server in MATLAB](https://helloworld-1017.github.io/2024-04-17/13-58-11.html).
 [^2]: Chan, Ernest P. *Quantitative trading: how to build your own algorithmic trading business*. John Wiley & Sons, 2021, available at: [Quantitative Trading: How to Build Your Own Algorithmic Trading Business (Wiley Trading)](https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf).
 
-- [Drawdown (economics) - Wikipedia](https://en.wikipedia.org/wiki/Drawdown_(economics)).
-- [Empirical distribution function - Wikipedia](https://en.wikipedia.org/wiki/Empirical_distribution_function).
-- [MATLAB `ecdf`: Empirical cumulative distribution function - MathWorks](https://ww2.mathworks.cn/help/stats/ecdf.html).
-
-
-
+- [Drawdown (economics)](https://en.wikipedia.org/wiki/Drawdown_(economics)).
+- [Empirical distribution function](https://en.wikipedia.org/wiki/Empirical_distribution_function).
+- [MATLAB `ecdf`: Empirical cumulative distribution function](https://ww2.mathworks.cn/help/stats/ecdf.html).

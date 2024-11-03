@@ -1,8 +1,9 @@
 ---
 title: Psychological Theories
 categories:
- - Psychology
  - Collections
+ - Psychology
+ - Sociology
 date: 2024-03-24 23:05:42 +0800
 last_modified_at: 2024-11-01 15:19:36 +0800
 ---

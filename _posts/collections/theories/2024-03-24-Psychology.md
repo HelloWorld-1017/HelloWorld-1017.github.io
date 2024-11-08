@@ -5,7 +5,7 @@ categories:
  - Psychology
  - Sociology
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-11-01 15:19:36 +0800
+last_modified_at: 2024-11-05 12:46:38 +0800
 ---
 
 ## Broken windows theory
@@ -96,6 +96,14 @@ Related theory in sociology, [self-fulfilling prophecy](https://en.wikipedia.org
 > - [Slippery Slope](https://www.txst.edu/philosophy/resources/fallacy-definitions/slippery-slope.html).
 
 In a <i class="term">slippery slope argument</i>, a course of action is rejected because the slippery slope advocate believes it will lead to a chain reaction resulting in an <i class="emphasize">undesirable</i> end or ends. The core of the slippery slope argument is that a specific decision under debate is likely to result in <i class="emphasize">unintended</i> consequences. The strength of such an argument depends on whether the small step really is likely to lead to the effect. This is quantified in terms of what is known as the warrant (in this case, a demonstration of the process that leads to the significant effect).
+
+<br>
+
+## Spiral of silence
+
+> - [Spiral of silence](https://en.wikipedia.org/wiki/Spiral_of_silence).
+
+The <i class="term">spiral of silence theory</i> is a political science and mass communication theory which states that an individual's perception of the distribution of public opinion influences that individual's willingness to express their own opinions. Also known as the theory of public opinion, the spiral of silence theory claims individuals will be more confident and outward with their opinion when they notice that their personal opinion is shared throughout a group. But if the individual notices that their opinion is unpopular with the group, they will be more inclined to be reserved and remain silent. In other words, from the individual's perspective, "<i class="emphasize">not isolating themself is more important than their own judgement</i>", meaning their perception of how others in the group perceive them is more important to themself than the need for their opinion to be heard.
 
 <br>
 

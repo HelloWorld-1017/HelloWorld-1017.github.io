@@ -1,6 +1,5 @@
 ---
-layout: single
-title: Customise Figure Caption Style in LaTeX System
+title: Customize Figure Caption Style in LaTeX System
 date: 2023-10-11 14:19:07 +0800
 categories:
  - LaTeX

@@ -1,12 +1,12 @@
 ---
-layout: single
 title: Add Superscripts and Subscripts for Arrows in LaTeX Equation Environment
-date: 2023-10-05 14:59:44 +0800
+toc: false
 categories:
  - LaTeX
 tags:
  - LaTeX Equation
-toc: false
+date: 2023-10-05 14:59:44 +0800
+last_modified_at: 2023-10-05 14:59:44 +0800
 ---
 
 In LaTeX, `amsmath` [1]  and `extarrows` (extensible arrows)  [2] macro package provide a set of control sequences to realize adding text over or under the arrows [3, p254]:

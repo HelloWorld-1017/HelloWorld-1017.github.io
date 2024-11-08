@@ -1,12 +1,11 @@
 ---
-layout: single
 title: Insert Figures and Set whose Style in LaTeX beamer
-date: 2023-10-20 23:34:45 +0800
 categories:
  - LaTeX
 tag: 
  - LaTeX beamer
  - LaTeX Figure
+date: 2023-10-20 23:34:45 +0800
 ---
 
 # Insert figures

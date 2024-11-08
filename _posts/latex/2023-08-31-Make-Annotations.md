@@ -1,13 +1,9 @@
 ---
-layout: single
 title: "Make Annotations in LaTeX for documents: `soul` package, `changes` package, `easyReview` package, and one user-defined method"
 categories:
  - LaTeX
 date: 2023-08-31 08:52:55 +0800
-last_modified_at0: 2023-08-31 08:52:55 +0800
-last_modified_at1: 2024-02-25 15:26:26 +0800
-last_modified_at2: 2024-06-10 18:42:03 +0800
-last_modified_at: 2024-06-10 18:42:03 +0800
+last_modified_at: 2024-11-08 22:45:44 +0800
 ---
 
 # `soul` package: highlight the text
@@ -256,12 +252,12 @@ The generated PDF is showed as follow:
 
 <br>
 
-# References
+**References**
 
 [^1]: [https://www.neusncp.com/user/blog?id=305#](https://www.neusncp.com/user/blog?id=305#).
-[^2]: [xkeyval error when using the changes package - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/618627/xkeyval-error-when-using-the-changes-package).
+[^2]: [xkeyval error when using the changes package](https://tex.stackexchange.com/questions/618627/xkeyval-error-when-using-the-changes-package).
 [^3]: [remark -- a simple command to add inline notes in LaTeX · GitHub](https://gist.github.com/nebil/4e114e433c193297c0f3802bc9c33ef4).
-[^4]: [texstudio commands \comment \alert and \add - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/619426/texstudio-commands-comment-alert-and-add).
+[^4]: [texstudio commands \comment \alert and \add](https://tex.stackexchange.com/questions/619426/texstudio-commands-comment-alert-and-add).
 [^5]: [CTAN: Package easyReview](https://ctan.org/pkg/easyreview?lang=en).
 
-[^6]: [From LaTeX lipsum Package to Cicero’s de Finibus Bonorum et Malorum (On the ends of good and evil) and Cato Maior de Senectute (Cato the Elder on Old Age) - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-05-11/22-05-01.html).
+[^6]: [From LaTeX lipsum Package to Cicero’s de Finibus Bonorum et Malorum (On the ends of good and evil) and Cato Maior de Senectute (Cato the Elder on Old Age)](https://helloworld-1017.github.io/2024-05-11/22-05-01.html).

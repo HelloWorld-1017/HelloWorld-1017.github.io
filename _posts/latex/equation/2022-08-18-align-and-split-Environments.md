@@ -1,17 +1,12 @@
 ---
-layout: single
-title: "Multi-line Equation Layout: `align` and `split` environment"
+title: "Multi-line Equation Layout: `align` and `split` Environments"
 categories:
  - LaTeX
 tags:
  - Markdown
  - LaTeX Equation
 date: 2022-08-18 19:01:37 +0800
-last_modified_at: 2024-06-20 13:00:34 +0800
-modification_history:
- - 2022-08-18 19:01:37 +0800
- - 2023-11-04 14:56:54 +0800
- - 2024-06-20 13:00:34 +0800
+last_modified_at: 2024-11-08 22:19:07 +0800
 ---
 
 # `align` environment

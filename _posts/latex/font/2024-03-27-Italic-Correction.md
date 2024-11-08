@@ -1,14 +1,10 @@
 ---
-layout: single
-title: "TeX Primitive Command `\\/`"
+title: "TeX Primitive Command (Italic Correction) `\\/`"
+toc: false
 categories:
  - LaTeX
-toc: false
-drafted_at: 2024-03-26 14:15:09 +0800
 date: 2024-03-27 08:25:49 +0800
-last_modified_at0: 2024-03-27 08:25:49 +0800
-last_modified_at1: 2024-04-01 05:24:04 +0800
-last_modified_at: 2024-04-01 05:24:04 +0800
+last_modified_at: 2024-11-08 22:36:37 +0800
 ---
 
 TeX primitive command `\/` can be used to add a small space after a letter[^1], so it can be used in some cases when typesetting in LaTeX system.

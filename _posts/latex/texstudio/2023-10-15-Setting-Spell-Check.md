@@ -1,10 +1,10 @@
 ---
-layout: single
-title: "Setting Spell Check in TeXstudio"
-date: 2023-10-15 22:05:55 +0800
+title: Setting Spell Check in TeXstudio
+toc: false
 categories:
  - LaTeX
-toc: false
+date: 2023-10-15 22:05:55 +0800
+last_modified_at: 2024-11-08 22:37:49 +0800
 ---
 
 Step 1: Add needed dictionary

@@ -1,13 +1,11 @@
 ---
-title: Specify Page Background Color in LaTeX Typesetting System
+title: Specify Page Background Color in LaTeX System
 categories:
  - LaTeX
 tags:
  - LaTeX Page Settings
  - LaTeX TikZ
-drafted_at: 2024-05-31 18:36:09 +0800
 date: 2024-06-01 13:16:55 +0800
-last_modified_at0: 2024-06-01 13:16:55 +0800
 last_modified_at: 2024-06-01 13:16:55 +0800
 ---
 

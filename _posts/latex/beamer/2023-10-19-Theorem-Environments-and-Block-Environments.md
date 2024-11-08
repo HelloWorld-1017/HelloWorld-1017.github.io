@@ -1,12 +1,12 @@
 ---
-layout: single
 title: Theorem Environments and Block Environments in LaTeX beamer
-date: 2023-10-19 19:53:29 +0800
+toc: false
 categories:
  - LaTeX
 tag: 
  - LaTeX beamer
-toc: false
+date: 2023-10-19 19:53:29 +0800
+last_modified_at: 2024-11-08 22:36:00 +0800
 ---
 
 ```latex

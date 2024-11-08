@@ -1,5 +1,4 @@
 ---
-layout: single
 title: Some Mathematical Symbols and Environments in LaTeX and MathJax
 categories:
  - LaTeX
@@ -7,15 +6,7 @@ tags:
  - Markdown
  - LaTeX Equation
 date: 2023-10-30 08:46:52 +0800
-last_modified_at: 2024-06-20 13:02:20 +0800
-modification_history:
- - 2023-10-30 08:46:52 +0800
- - 2023-11-02 20:29:09 +0800
- - 2023-11-03 20:34:50 +0800
- - 2023-11-04 13:10:45 +0800
- - 2023-11-04 15:01:15 +0800
- - 2023-11-09 22:03:13 +0800
- - 2024-06-20 13:02:20 +0800
+last_modified_at: 2024-11-08 22:32:07 +0800
 ---
 
 # Mathematical operators

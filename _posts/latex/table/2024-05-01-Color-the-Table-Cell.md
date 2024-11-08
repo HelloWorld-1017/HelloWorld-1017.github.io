@@ -1,14 +1,11 @@
 ---
-layout: single
 title: Color the Table Cell in LaTeX
 categories:
  - LaTeX
 tags:
  - LaTeX Table
 toc: false
-drafted_at: 2024-04-29 17:22:25 +0800
 date: 2024-05-01 22:04:11 +0800
-last_modified_at0: 2024-05-01 22:04:11 +0800
 last_modified_at: 2024-05-01 22:04:11 +0800
 ---
 

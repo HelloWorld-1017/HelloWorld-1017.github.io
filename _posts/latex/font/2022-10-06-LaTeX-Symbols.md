@@ -1,11 +1,11 @@
 ---
-layout: single
-title: LaTeX Symbol
-date: 2022-10-06 23:09:11 +0800
+title: LaTeX Symbols
 categories: 
  - LaTeX
 tags:
  - LaTeX Equation
+date: 2022-10-06 23:09:11 +0800
+last_modified_at: 2024-11-08 22:20:26 +0800
 ---
 
 # Mathematical Fonts
@@ -80,7 +80,5 @@ tags:
 
 **Reference**
 
-[1] [LaTex 常用的数学字体](https://blog.csdn.net/sdnuwjw/article/details/119920649).
-
-[2] 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
-
+- [LaTex 常用的数学字体](https://blog.csdn.net/sdnuwjw/article/details/119920649).
+- 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.

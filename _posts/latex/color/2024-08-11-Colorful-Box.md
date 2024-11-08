@@ -48,9 +48,6 @@ blue box with black-shadow round border
 
 **References**
 
-[1] [LaTeX入门](https://yun.weicheng.men/Book/LaTeX入门.pdf), 刘海洋编著, pp. 365.
-
-[2] [boxes - How to change options in the fcolorbox environment - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/327323/how-to-change-options-in-the-fcolorbox-environment).
-
-[3] [CTAN: Package `tcolorbox`](https://ctan.org/pkg/tcolorbox?lang=en), package documentation: [Manual for the tcolorbox package](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/tcolorbox/tcolorbox.pdf). This package is useful when making posters: [A Tutorial for Poster Creation with Tcolorbox](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/tcolorbox/tcolorbox-tutorial-poster.pdf).
-
+- [LaTeX入门](https://yun.weicheng.men/Book/LaTeX入门.pdf), 刘海洋编著, pp. 365.
+- [boxes - How to change options in the fcolorbox environment](https://tex.stackexchange.com/questions/327323/how-to-change-options-in-the-fcolorbox-environment).
+- [CTAN: Package `tcolorbox`](https://ctan.org/pkg/tcolorbox?lang=en), package documentation: [Manual for the tcolorbox package](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/tcolorbox/tcolorbox.pdf). This package is useful when making posters: [A Tutorial for Poster Creation with Tcolorbox](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/tcolorbox/tcolorbox-tutorial-poster.pdf).

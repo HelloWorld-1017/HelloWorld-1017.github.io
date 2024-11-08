@@ -6,7 +6,7 @@ categories:
 tags:
  - LaTeX Figure
 date: 2024-07-24 00:16:56 +0800
-last_modified_at: 2024-07-24 00:16:56 +0800
+last_modified_at: 2024-11-08 22:30:19 +0800
 ---
 
 ```latex
@@ -51,6 +51,5 @@ last_modified_at: 2024-07-24 00:16:56 +0800
 
 **References**
 
-[1] [LaTeX教学篇#2  图文混排 - 技术开发局局长的文章 - 知乎](https://zhuanlan.zhihu.com/p/455318449).
-
-[2] [Wrapping text around figures - Overleaf, Online LaTeX Editor](https://www.overleaf.com/learn/latex/Wrapping_text_around_figures).
+- [LaTeX教学篇#2  图文混排 - 技术开发局局长的文章](https://zhuanlan.zhihu.com/p/455318449).
+- [Wrapping text around figures - Overleaf, Online LaTeX Editor](https://www.overleaf.com/learn/latex/Wrapping_text_around_figures).

@@ -1,5 +1,5 @@
 ---
-title: Specify Page Background Color in LaTeX System
+title: Specify Page Background Color in LaTeX
 categories:
  - LaTeX
 tags:

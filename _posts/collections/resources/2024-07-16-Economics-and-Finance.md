@@ -1,5 +1,6 @@
 ---
 title: Economics and Finance Resources
+toc: false
 categories:
  - Collections
  - Economics & Finance

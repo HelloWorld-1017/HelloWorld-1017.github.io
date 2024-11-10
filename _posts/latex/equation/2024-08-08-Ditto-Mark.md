@@ -5,12 +5,13 @@ categories:
  - LaTeX
  - Web Development
 tags:
- - LaTeX Equation
- - LaTeX Warnings and Errors
  - HTML
+ - LaTeX Equation
+ - LaTeX Font
  - LaTeX fontenc
+ - LaTeX Warnings and Errors
 date: 2024-08-08 12:11:06 +0800
-last_modified_at: 2024-08-08 12:11:06 +0800
+last_modified_at: 2024-11-09 12:22:46 +0800
 ---
 
 **Ditto mark in LaTeX**[^1][^2]
@@ -68,11 +69,11 @@ It is convenient to use this mark, and (I guess) may be cost-saving when printin
 
 **References**
 
-[^1]: [fonts - Is there a ditto symbol? - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/53823/is-there-a-ditto-symbol).
+[^1]: [fonts - Is there a ditto symbol?](https://tex.stackexchange.com/questions/53823/is-there-a-ditto-symbol).
 [^2]: [The Comprehensive LaTeX Symbol List](https://faculty.bard.edu/bloch/symbols-letter.pdf), Scott Pakin, 2003.
-[^3]: [Command `\k` unavailable in encoding OT1 (error takes me to line which doesn't even have "`\k`" in it - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/392208/command-k-unavailable-in-encoding-ot1-error-takes-me-to-line-which-doesnt-eve).
-[^4]: [〃 - Ditto Mark - SYMBL (◕‿◕) ](https://symbl.cc/en/3003/).
-[^5]: [ditto \| meaning of ditto in Longman Dictionary of Contemporary English \| LDOCE](https://www.ldoceonline.com/dictionary/ditto).
-[^6]: [Ditto mark - Wikipedia](https://en.wikipedia.org/wiki/Ditto_mark).
-[^7]: [Cork encoding - Wikipedia](https://en.wikipedia.org/wiki/Cork_encoding).
+[^3]: [Command `\k` unavailable in encoding OT1 (error takes me to line which doesn't even have "`\k`" in it](https://tex.stackexchange.com/questions/392208/command-k-unavailable-in-encoding-ot1-error-takes-me-to-line-which-doesnt-eve).
+[^4]: [〃 - Ditto Mark ](https://symbl.cc/en/3003/).
+[^5]: [ditto](https://www.ldoceonline.com/dictionary/ditto).
+[^6]: [Ditto mark](https://en.wikipedia.org/wiki/Ditto_mark).
+[^7]: [Cork encoding](https://en.wikipedia.org/wiki/Cork_encoding).
 [^8]: [CTAN: Package fontenc](https://ctan.org/pkg/fontenc?lang=en).

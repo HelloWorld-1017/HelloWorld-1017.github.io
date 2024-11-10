@@ -1,5 +1,5 @@
 ---
-title: Center the Text in A Page in LaTeX
+title: Center Text in A Page in LaTeX
 toc: false
 categories:
  - LaTeX

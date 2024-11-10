@@ -328,9 +328,8 @@ figure.highlight {
 }
 
 // Settings for inline code block
-p>code,
 a>code,
-li>code,
+em>code,
 figcaption>code,
 h1>code,
 h2>code,
@@ -338,10 +337,11 @@ h3>code,
 h4>code,
 h5>code,
 h6>code,
-td>code,
+i>code,
+li>code,
+p>code,
 strong>code,
-em>code,
-i>code {
+td>code {
   padding: 0.1rem;
   font-size: 0.8em;
   border-radius: 4px;

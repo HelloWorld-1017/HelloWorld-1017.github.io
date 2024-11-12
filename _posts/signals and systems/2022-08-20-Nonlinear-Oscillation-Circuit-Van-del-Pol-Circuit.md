@@ -1,20 +1,18 @@
 ---
-layout: single
 title: "Nonlinear Oscillation Circuit: Van del Pol Circuit"
-date: 2022-08-20 14:03:49 +0800
 categories: 
- - Uncertainty
- - Signals and Systems
  - MATLAB
+ - Signals and Systems
+ - Uncertainty
 tags:
  - MATLAB Animation
-modified_at1: 2023-11-14 14:09:36 +0800
-last_modified_at: 2023-11-15 09:04:07 +0800
+date: 2022-08-20 14:03:49 +0800
+last_modified_at: 2024-11-11 19:19:24 +0800
 ---
 
-# 非线性振荡电路
+# Nonlinear oscillation circuit
 
-电子振荡电路一般至少含有两个储能元件和一个非线性元件。本文所介绍的范德坡(Van del Pol)电路是一种典型的非线性振荡电路，它是由一个线性电感、一个线性电容和一个非线性电阻构成，如下图所示。
+电子振荡电路一般至少含有两个储能元件和一个非线性元件。本文所介绍的<i class="term">范德坡(Van del Pol)电路</i>是一种典型的非线性振荡电路，它是由一个线性电感、一个线性电容和一个非线性电阻构成，如下图所示。
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220819181910505.png?raw=true" alt="image-20220819181910505" style="zoom: 33%;" />
 
@@ -81,13 +79,15 @@ $$
 
 方程 $\eqref{simplified}$ 中仅有一个参数 $\varepsilon=\sqrt{\dfrac C L}$。根据不同的 $\varepsilon$ 值和初始值，可以画出该方程不同的相轨迹，就可以了解该电子振荡电路的定性性质。
 
-# 不同初始条件下的相轨迹
+<br>
+
+# Phase trajectories under different initial conditions
 
 下图展示了当 $\varepsilon=0.1$ ，初始条件分别为 $(0,1)$ $(0, 5)$ $(0,9) $ 时的相轨迹。
 
-![PhaceTractories](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/PhaceTractories.gif?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/PhaceTractories.gif?raw=true" alt="PhaceTractories" style="zoom:67%;" />
 
-![image-20220820133239047](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820133239047.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820133239047.png?raw=true" alt="image-20220820133239047" style="zoom:67%;" />
 
 ```matlab
 clc, clear, close
@@ -189,13 +189,15 @@ dydt = [y(2); epsilon*(1-y(1)^2)*y(2)-y(1)];
 end
 ```
 
-从上面的相图可以看出，无论选取什么样的初始值，都可以看到有单一的闭合曲线存在，这种单一的或孤立的闭合曲线成为**极限环(Limit cycle)**。无论相点初值是在极限环外还是在极限环内，最终都将沿着极限环运动。这说明，**不论初始条件如何**，在该电路中最终将建立起周期性振荡。这种在非线性自治电路中产生的持续振荡是一种自激振荡（自治，没有外施激励）。这与[二阶 RLC 电路振荡过程](http://whatastarrynight.com/uncertainty/signals%20and%20systems/state-function-and-phase-trajectory-linear-RLC/)（无阻尼的情况）是有所不同的，后者的振荡振幅是与初始条件有关的。
+从上面的相图可以看出，无论选取什么样的初始值，都可以看到有单一的闭合曲线存在，这种单一的或孤立的闭合曲线成为<i class="term">极限环(Limit cycle)</i>。<i class="emphasize">无论相点初值是在极限环外还是在极限环内，最终都将沿着极限环运动</i>。这说明，<i class="emphasize">**不论初始条件如何**，在该电路中最终将建立起周期性振荡</i>。这种在非线性自治电路中产生的持续振荡是一种自激振荡（自治[^2]，没有外施激励）。这与二阶RLC电路振荡过程[^1]（无阻尼的情况）是有所不同的，后者的振荡振幅是与初始条件有关的。
 
-# 不同 $\varepsilon$ 取值对应的相轨迹
+<br>
+
+# Phase trajectories under different $\varepsilon$ values
 
 当初始值固定为 $(0,5)$ 时，不同的 $\varepsilon$ 取值（0.1，0.7，3.5）所对应的相轨迹：
 
-![image-20220820141247247](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820141247247.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820141247247.png?raw=true" alt="image-20220820141247247" style="zoom:67%;" />
 
 ```matlab
 clc, clear, close
@@ -299,7 +301,7 @@ end
 
 我们可以再观察一下 $\varepsilon=3.5$ 时，不同初值条件，即$(0,1)$，$(1, 5)$ ，$(5,9) $ 对应的相图：
 
-![image-20220820143647878](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820143647878.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220820143647878.png?raw=true" alt="image-20220820143647878" style="zoom:67%;" />
 
 ```matlab
 clc, clear, close
@@ -408,6 +410,8 @@ end
 
 **References**
 
-[1] 邱关源. 电路（第5版）.
+- 邱关源. 电路（第5版）.
+- [Limit cycle](https://en.wikipedia.org/wiki/Limit_cycle).
 
-[2] [Limit cycle - Wikipedia](https://en.wikipedia.org/wiki/Limit_cycle)
+[^1]: [State Function and Phase Portrait of Second-order Linear RLC Circuits](/2022-08-19/09-17-37.html).
+[^2]: [Chaotic Circuit: Chua’s Circuit](/2022-08-19/15-07-21.html).

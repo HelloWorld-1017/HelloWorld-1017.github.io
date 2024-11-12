@@ -1,33 +1,32 @@
 ---
-title: Solve Dynamical System Using Neural ODE in MATLAB
-toc: false
-categories: 
- - MATLAB
- - Uncertainty
- - Signals and Systems
+title: Solve Dynamical System using Neural ODE in MATLAB
+categories:
  - Machine Learning
+ - MATLAB
+ - Signals and Systems
+ - Uncertainty
 tags:
  - MATLAB Deep Learning Toolbox
 date: 2022-08-23 16:48:25 +0800
-last_modified_at: 2024-10-23 19:32:07 +0800
+last_modified_at: 2024-11-11 19:36:22 +0800
 ---
 
-# 动态系统
+# Dynamical system
 
-## 背景
+## Introduction
 
-在数学中，动态系统(dynamical system)是指可以用方程来描述系统的状态变量随时间变化关系的系统。这个最普遍的定义通过允许不同的空间选择(choices of the space)和时间测量方式(how time is measured)，统一了数学中的几个概念，如常微分方程(ordinary differential equations, ODEs)和遍历论(ergodic theory)。时间可以通过整数、实数、复数来测量，也可以用更普遍的代数对象(algebraic object)，该代数对象不具有物理原点的记忆(losing the memory of its physical origin)；空间也可以用流形(manifold)或者简单的集合，而不需要在其上定义的平滑的时空结构(smooth space-time structure)。
+在数学中，动态系统(dynamical system)[^1]是指可以用方程来描述系统的状态变量随时间变化关系的系统。这个最普遍的定义通过允许不同的空间选择(choices of the space)和时间测量方式(how time is measured)，统一了数学中的几个概念，如常微分方程(ordinary differential equations, ODEs)和遍历论(ergodic theory)。时间可以通过整数、实数、复数来测量，也可以用更普遍的代数对象(algebraic object)，该代数对象不具有物理原点的记忆(losing the memory of its physical origin)；空间也可以用流形(manifold)或者简单的集合，而不需要在其上定义的平滑的时空结构(smooth space-time structure)。
 
 在给定的时间，状态空间中都有一个状态(state)，该状态表征状态空间中的一个点。这个状态经常由实数元组(tuple of real numbers)或几何流形中的向量(vector in a geometrical manifold)给出。动态系统的演化规则是一个描述从当前状态到未来状态的方程。这个方程通常是**确定性的(deterministic)**，也就是说，对于给定的时间间隔，当前状态只对应一种未来状态。然而，有一些系统是随机的(stochastic)，随机时间会影响状态变量的演化。
 
-**确定系统的不确定性行为**：尽管是确定性系统，在实践中，由当前状态根据演化规则推出的未来状态仍然有可能是不确定性的，因为极小的误差也会导致结果的巨大差异性。类似于解在朱利亚集上。
+关于“确定系统的不确定性行为”：尽管是确定性系统，在实践中，由当前状态根据演化规则推出的未来状态仍然有可能是不确定性的，因为极小的误差也会导致结果的巨大差异性。类似于解在朱利亚集上。
 {: .notice--primary}
 
 在物理学中，动态系统被描述为状态随时间变化的粒子(particle)或粒子系综(ensemble of particles)，其状态变量服从包含时间导数的微分方程。可以通过求出微分方程的解析解，或者随时间变化的数值解来预测系统未来的行为。
 
 动态系统的研究聚焦于动态系统理论(dynamical systems theory)，该理论广泛应用于数学、物理学、生物学、化学、工程、经济学、历史和医学领域。**动态系统是混沌理论(chaos theory)，逻辑图动力学(logistic map dynamics)、分叉理论(bifurcation theory)、自组装和自组织过程(self-assembly and self-organization processes)，以及混沌概念的边缘(the edge of chaos concept)**。
 
-## 线性动力系统
+## Linear dynamical system
 
 对于线性动力系统(linear dynamical systems)，可以使用一些简单的方程和分类的所有轨道的行为进行求解。在线性动力系统中，相空间是一个N维欧式空间(N-dimensional Euclidean space)，所有相空间内的任意一个点都可以有一个N维向量来表示。线性动力系统之所以能够很好地求解是因为它满足叠加定理(superposition principle)。
 
@@ -49,9 +48,7 @@ $$
 x\label{eg}
 $$
 
-初始条件为 $x_0=[2;\ 0]$。
-
-我们可以用 MATLAB 求解这个方程的数值解以及迭代过程，画出相轨迹。
+初始条件为 $x_0=[2;\ 0]$。我们可以使用 MATLAB 求解这个方程的数值解以及迭代过程，绘制出相轨迹。
 
 ![pic1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/pic1.svg?raw=true)
 
@@ -187,7 +184,7 @@ title('Phase plain')
 
 # Neural ODE
 
-## 基于第一原理的模型和数据驱动模型之间的权衡
+## Trade-off between first principle model and surrogate model (data-driven model)
 
 在工程上，单从系统建模来说，通常有两个方向：基于第一原理建模和基于数据驱动建模。
 
@@ -200,11 +197,11 @@ title('Phase plain')
 
 数据代理模型，也可以说是数据驱动模型，可以用神经网络模型来做。
 
-## 二阶线性动力系统的数据代理模型
+## Surrogate model for second-order linear dynamical system
 
 仍然以式 $\eqref{eg}$ 所代表的二阶线性动力系统为例，使用 Neural ODE 为该线性动态系统建模。
 
-### Step1: 利用状态方程生成真值数据
+### Step 1: Generate real data based on state functions
 
 ```matlab
 x0 = [2; 0];
@@ -219,9 +216,9 @@ t = linspace(0, T, numTimeSteps);
 xTrain = xTrain';
 ```
 
-### Step2: 编写并初始化初始化神经网络及其 $F(t,x(t),\theta)$ 的参数 $\theta$ 
+### Step 2: Build and initialize neural network and $\theta$ in $F(t,x(t),\theta)$
 
-#### （1）设置训练集中单条数据的长度
+**(1) Specify data length**
 
 单条数据的长度为40，但是需要41个数据点传到 `dlode45` 方程中，经过神经网络计算出40个点的预测值。
 
@@ -231,7 +228,7 @@ dt = t(2); % time interval
 timesteps = (0:neuralOdeTimesteps)*dt; % Select the first 41 points, ie 40 time steps, of the variable 't' to pass to 'dlode45'.
 ```
 
-#### （2）初始化神经网络参数
+**(2) Initialize parameters of neural network**
 
 这里用到的神经网络有两个全连接层，其中第一个全连接层后连接一个激活函数层。
 
@@ -256,7 +253,7 @@ neuralOdeParameters.fc2.Weights = initializeGlorot(sz, stateSize, hiddenSize);
 neuralOdeParameters.fc2.Bias = initializeZeros([stateSize 1]);
 ```
 
-上述代码在初始化权重和偏置的时候，分别使用了 `initializeGlorot` 和 `initializeZeors` 两个函数，这两个函数是自建函数：
+上述代码在初始化权重和偏置的时候，分别使用了 `initializeGlorot` 和 `initializeZeors` 两个自定义函数：
 
 ```matlab
 function weights = initializeGlorot(sz,numOut,numIn,className)
@@ -295,7 +292,7 @@ end
 
 偏置的初始化参数则均为0。
 
-#### （3）定义 Neural ODE 模型 $F(t,x(t),\theta)$ 函数
+**(3) Define neural ODE model $F(t,x(t),\theta)$**
 
 ```matlab
 function y = odeModel(~,y,theta)
@@ -310,7 +307,7 @@ y = theta.fc2.Weights*y + theta.fc2.Bias;
 end
 ```
 
-#### （4）通过 `dlode45` 函数定义模型函数
+**(4) Define model function using `dlode45`**
 
 将上面所定义好的 Neural ODE 模型作为 `dlode45` 的输入来构建代理模型函数：
 
@@ -329,11 +326,11 @@ X = dlode45(@odeModel,tspan,X0,neuralOdeParameters,DataFormat="CB");
 end
 ```
 
-以 mini batch 中单条数据为例，分析一下这行代码所做的工作。变量 `tspan` 的形状是 1x41，它定义41个时间点。`dlode` 函数通过调用用户所定义的 `odeModel` ，基于前一个时间点的状态变量来计算后一个时间点的状态变量，因此最终可以预测出 40 个时间节点的状态变量的值。下方的示意图就展示了这个过程。
+以 mini batch 中单条数据为例，分析一下这行代码所做的工作。变量 `tspan` 的形状是 $1\times41$，它定义41个时间点。`dlode` 函数通过调用用户所定义的 `odeModel` ，基于前一个时间点的状态变量来计算后一个时间点的状态变量，因此最终可以预测出 40 个时间节点的状态变量的值。下图展示了这一过程：
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220823151953356.png?raw=true" style="zoom: 50%;" />
 
-#### （5）定义模型的损失函数
+**(5) Define loss function**
 
 ```matlab
 function [loss,gradients] = modelLoss(tspan,X0,neuralOdeParameters,targets)
@@ -363,9 +360,9 @@ gradients = dlgradient(loss,neuralOdeParameters);
 end
 ```
 
-### Step3：模型训练过程
+### Step 3: Neural network training
 
-#### （1）设置 Adam 优化器参数
+**(1) Specify parameters of Adam optimizer**
 
 ```matlab
 gradDecay = 0.9;
@@ -377,7 +374,7 @@ averageGrad = [];
 averageSqGrad = [];
 ```
 
-#### （2）展示训练动态过程的图像设置
+**(2) Image settings**
 
 ```matlab
 % Every 50 iterations, solve the learned dynamics and 
@@ -396,7 +393,7 @@ ylabel("Loss")
 grid on
 ```
 
-#### （3）定义 `createMiniBatch` 函数
+**(3) Define `createMiniBatch` function**
 
 ```matlab
 function [x0, targets] = createMiniBatch(numTimesteps,numTimesPerObs,miniBatchSize,X)
@@ -425,15 +422,9 @@ end
 end
 ```
 
- `createMiniBatch` 函数从初始值为 $[2;0]$ 的相轨迹中随机截取一些连续数据片段（数量为200个，数据片段长度为40）作为神经网络每轮训练的训练集。截取的方式是随机寻找初始点，之后选取后面的 40 个数据点作为一个片段：
+`createMiniBatch` 函数从初始值为 $[2;0]$ 的相轨迹中随机截取一些连续数据片段（数量为200个，数据片段长度为40）作为神经网络每轮训练的训练集。截取的方式是随机寻找初始点，之后选取后面的 40 个数据点作为一个片段。
 
-```matlab
-...
-    targets(:, i, 1:numTimesPerObs) = X(:, s(i) + 1:(s(i) + numTimesPerObs));
-...
-```
-
-⚠ 注意，这个数据片段是不包括随机选取的初始点的。这么做是为了和 `dlode45` 的处理方式相同，这一点很重要。
+注意，这个数据片段是不包括随机选取的初始点的。这么做是为了和 `dlode45` 的处理方式相同，这一点很重要。
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220823151953356.png?raw=true" alt="image-20220823151953356" style="zoom:50%;" />
 
@@ -449,7 +440,7 @@ s = randperm(numTimesteps - numTimesPerObs, miniBatchSize); % s, 1-by-200, rando
 
 这是随机生成初始点索引的步骤，这里删去了最后的40个数据。如果不这么做，那么后面选取数据片段的时候可能因为超出序列最大索引而报错。
 
-#### （4）进行迭代训练
+**(4) Model training**
 
 ```matlab
 numTrainingTimesteps = numTimeSteps;
@@ -530,11 +521,7 @@ plottingTimesteps = 2:numTimeSteps; % 2:2000
 
 在展示真实相轨迹与模型输出相轨迹之间的对比时，作者有意没有绘制第一个点，因为在上一步骤创建 mini batch 中，无论如何选取，第一个点都不会进入训练集，因而在绘制真实数据时，也不体现初始点。
 
-最终得到模型动态训练的过程：
-
-![gif1](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/gif1.gif?raw=true)
-
-### Step4：模型测试（效果仍有待改进）
+### Step 4: Neural network test
 
 在模型训练好后，需要对模型进行测试。测试的方式是将不同的初始点分别传入到 `ode45` 函数和训练好的 Neural ODE 中，观察两者的相轨迹是否吻合，以及它们之间的误差：
 
@@ -569,34 +556,7 @@ xPred5 = dlode45(@odeModel,tPred,dlarray(x0Pred5),neuralOdeParameters,DataFormat
 xPred6 = dlode45(@odeModel,tPred,dlarray(x0Pred6),neuralOdeParameters,DataFormat="CB");
 xPred7 = dlode45(@odeModel,tPred,dlarray(x0Pred7),neuralOdeParameters,DataFormat="CB");
 xPred8 = dlode45(@odeModel,tPred,dlarray(x0Pred8),neuralOdeParameters,DataFormat="CB");
-```
 
-定义绘图函数：
-
-```matlab
-function plotTrueAndPredictedSolutions(xTrue,xPred)
-
-xPred = squeeze(xPred)';
-
-err = mean(abs(xTrue(2:end,:) - xPred), "all");
-
-plot(xTrue(:,1),xTrue(:,2),"r--",xPred(:,1),xPred(:,2),"b-",LineWidth=1)
-
-title("Absolute Error = " + num2str(err,"%.4f"))
-xlabel("x(1)")
-ylabel("x(2)")
-
-xlim([-2 3])
-ylim([-2 3])
-
-legend("Ground Truth","Predicted")
-
-end
-```
-
-之后进行绘图：
-
-```matlab
 figure
 subplot(4,2,1)
 plotTrueAndPredictedSolutions(xTrue1, xPred1);
@@ -614,6 +574,19 @@ subplot(4,2,7)
 plotTrueAndPredictedSolutions(xTrue7, xPred7);
 subplot(4,2,8)
 plotTrueAndPredictedSolutions(xTrue8, xPred8);
+
+
+function plotTrueAndPredictedSolutions(xTrue,xPred)
+xPred = squeeze(xPred)';
+err = mean(abs(xTrue(2:end,:) - xPred), "all");
+plot(xTrue(:,1),xTrue(:,2),"r--",xPred(:,1),xPred(:,2),"b-",LineWidth=1)
+title("Absolute Error = " + num2str(err,"%.4f"))
+xlabel("x(1)")
+ylabel("x(2)")
+xlim([-2 3])
+ylim([-2 3])
+legend("Ground Truth","Predicted")
+end
 ```
 
 可以看到 Neural ODE 的求解效果：
@@ -629,35 +602,26 @@ plotTrueAndPredictedSolutions(xTrue8, xPred8);
 
 虽然有一些瑕疵，但是它仍然为我们求解状态方程提供了新的思路，它有它自己的优势，这个训练好的 Neural ODE 模型可以替代 `ode45` 求解器对微分方程进行求解，它不需要准确的状态方程，只需要输入状态变量的初始值就可以得到一条相轨迹。
 
-另外还有一点，上述状态方程只是很简单很简单的一个双变量线性状态方程，除此之外，还存在许多很复杂的状态方程。很多状态方程的解对于不同初始点的选取非常敏感，比如蔡氏电路[^4]和二阶非线性电路的状态方程和相图[^5]，Neural ODE 能否解决这样的问题？我觉得有极大的困难。使用数据驱动模型也需要对所解决的问题本身有深刻的理解，才能最大程度避免这样的风险。
+另外还有一点，上述状态方程只是一个很简单很简单的双变量线性状态方程，除此之外，还存在许多很复杂的状态方程。很多状态方程的解对于不同初始点的选取非常敏感，比如蔡氏电路[^4]和二阶非线性电路的状态方程和相图[^5]，Neural ODE 能否解决这样的问题？我觉得有极大的困难。使用数据驱动模型也需要对所解决的问题本身有深刻的理解，才能最大程度避免这样的风险。
 {: .notice--danger}
 
 <br>
 
-# 总结
+# In closing
 
 总结上述过程：
 
-（1）首先需要获得真实数据，这里的真实数据是由通过数值求解状态方程得到的，除此之外还可以通过其他方式，比如开展实验、进行仿真；
-
-（2）从真实数据集中随机截取数据片段集合作为训练集；
-
-（3）在训练过程中，将 Neural ODE 的数据片段输出与训练集对应的训练数据的差异作为损失函数，并以此来降低损失函数从而达到训练 Neural ODE 模型。
+1. 首先需要获得真实数据，这里的真实数据是由通过数值求解状态方程得到的，除此之外还可以通过其他方式，比如开展实验、进行仿真；
+2. 从真实数据集中随机截取数据片段集合作为训练集；
+3. 在训练过程中，将 Neural ODE 的数据片段输出与训练集对应的训练数据的差异作为损失函数，并以此来降低损失函数从而达到训练 Neural ODE 模型。
 
 <br>
 
 **References**
 
-[1] [Dynamical system - Wikipedia](https://en.wikipedia.org/wiki/Dynamical_system).
+- [刘海伟：数据驱动的动态系统（Dynamical System）建模(一)：深度学习](https://mp.weixin.qq.com/s/ITxBE6SkzgMsZ5J0mwezuw).
+- [Dynamical System Modeling Using Neural ODE](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ug/dynamical-system-modeling-using-neural-ode.html).
 
-[2] [刘海伟：数据驱动的动态系统（Dynamical System）建模(一)：深度学习](https://mp.weixin.qq.com/s/ITxBE6SkzgMsZ5J0mwezuw).
-
-[3] [Dynamical System Modeling Using Neural ODE - MATLAB & Simulink - MathWorks China](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ug/dynamical-system-modeling-using-neural-ode.html).
-
-[^4]: [Chaotic Circuit: Chua’s Circuit - What a starry night~](https://helloworld-1017.github.io/2022-08-19/15-07-21.html).
-[^5]: [State Function and Phase Portrait of Second-order Linear RLC Circuits - What a starry night~](https://helloworld-1017.github.io/2022-08-19/09-17-37.html).
-
-
-
-
-
+[^1]: [Dynamical system](https://en.wikipedia.org/wiki/Dynamical_system).
+[^4]: [Chaotic Circuit: Chua’s Circuit](https://helloworld-1017.github.io/2022-08-19/15-07-21.html).
+[^5]: [State Function and Phase Portrait of Second-order Linear RLC Circuits](https://helloworld-1017.github.io/2022-08-19/09-17-37.html).

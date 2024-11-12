@@ -1,10 +1,10 @@
 ---
-layout: single
 title: State Function and Phase Portrait of Second-order Linear RLC Circuits
-date: 2022-08-19 09:17:37 +0800
 categories: 
- - Uncertainty
  - Signals and Systems
+ - Uncertainty
+date: 2022-08-19 09:17:37 +0800
+last_modified_at: 2024-11-11 19:17:58 +0800
 ---
 
 # 状态方程、状态平面、相轨迹
@@ -470,4 +470,4 @@ end
 
 **References**
 
-[1] 邱关源. 电路（第5版）. 
+- 邱关源. 电路（第5版）. 

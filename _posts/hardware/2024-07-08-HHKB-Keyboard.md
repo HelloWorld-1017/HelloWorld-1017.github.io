@@ -1,15 +1,12 @@
 ---
-title: "Re-know My ‘Saddle’: HHKB Professional Hybrid Type-S Keyboard"
+title: "Re-know My \"Saddle\": HHKB Professional Hybrid Type-S Keyboard"
 toc: false
 categories:
  - Hardware
  - Philosophy
  - Quotes
-drafted_at: 2024-06-25 16:20:34 +0800
 date: 2024-07-08 10:31:40 +0800
-last_modified_at: 2024-07-08 10:31:40 +0800
-modification_history: 
- - 2024-07-08 10:31:40 +0800
+last_modified_at: 2024-11-16 22:51:47 +0800
 ---
 
 In 2022, I bought an HHKB keyboard, i.e. HHKB Professional Hybrid Type-S (white color; blank keycaps)[^1], showing below:
@@ -85,12 +82,12 @@ I can get this kind of feeling. Definitely right. And this is a more persuasive 
 
 <br>
 
-# References
+**References**
 
-[^1]: [HHKB Professional Hybrid Type-S (White / Blank Key Caps) - 60% Silent & Wireless Mechanical Topre Keyboard - HHKB & REALFORCE](https://hhkeyboard.us/hhkb/pro-hybrid-type-s/sku/cg01000-297101).
-[^2]: [Switching Between Devices to Be Connected \| Happy Hacking Keyboard Studio (US Layout) User's Guide](https://happyhackingkb.com/manual/studio/ug-us/en/ug/topic/connect_device_switch.html).
-[^3]: [AA battery - Wikipedia](https://en.wikipedia.org/wiki/AA_battery).
-[^4]: [USB Connection \| Happy Hacking Keyboard Studio (US Layout) User's Guide](https://happyhackingkb.com/manual/studio/ug-us/en/ug/topic/connect_usbcable.html).
-[^5]: [Happy Hacking Keyboard Microsite \| PFU](https://happyhackingkb.com/).
-[^6]: [Eiiti Wada - Wikipedia](https://en.wikipedia.org/wiki/Eiiti_Wada).
+[^1]: [HHKB Professional Hybrid Type-S (White / Blank Key Caps) - 60% Silent & Wireless Mechanical Topre Keyboard](https://hhkeyboard.us/hhkb/pro-hybrid-type-s/sku/cg01000-297101).
+[^2]: [Switching Between Devices to Be Connected](https://happyhackingkb.com/manual/studio/ug-us/en/ug/topic/connect_device_switch.html).
+[^3]: [AA battery](https://en.wikipedia.org/wiki/AA_battery).
+[^4]: [USB Connection](https://happyhackingkb.com/manual/studio/ug-us/en/ug/topic/connect_usbcable.html).
+[^5]: [Happy Hacking Keyboard Microsite](https://happyhackingkb.com/).
+[^6]: [Eiiti Wada](https://en.wikipedia.org/wiki/Eiiti_Wada).
 

@@ -1,14 +1,14 @@
 ---
 title: From LaTeX `lipsum` Package to Cicero's *de Finibus Bonorum et Malorum* (*On the ends of good and evil*) and *Cato Maior de Senectute* (*Cato the Elder on Old Age*)
 categories:
- - LaTeX
  - Design
- - Psychology
+ - LaTeX
  - Philosophy
+ - Psychology
 tags:
  - LaTeX Page Settings
 date: 2024-05-11 22:05:01 +0800
-last_modified_at: 2024-08-04 23:29:17 +0800
+last_modified_at: 2024-11-12 17:26:07 +0800
 ---
 
 # LaTeX `lipsum` package
@@ -146,23 +146,23 @@ Actually, the reason why I have a strong impression of Cicero is that Charlie pr
 
 <br>
 
-# References
+**References**
 
 [^1]: [CTAN: Package lipsum](https://ctan.org/pkg/lipsum?lang=en), package documentation: [lipsum.pdf](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/lipsum/lipsum.pdf).
 [^2]: [PhelypeOleinik/lipsum: 150 paragraphs of Lorem ipsum dummy text for LaTeX](https://github.com/PhelypeOleinik/lipsum).
 [^3]: [Lorem Ipsum - All the facts - Lipsum generator](https://lipsum.com/).
-[^4]: [Lorem ipsum - Wikipedia](https://en.wikipedia.org/wiki/Lorem_ipsum).
-[^5]: [De finibus bonorum et malorum - Wikipedia](https://en.wikipedia.org/wiki/De_finibus_bonorum_et_malorum).
+[^4]: [Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum).
+[^5]: [De finibus bonorum et malorum](https://en.wikipedia.org/wiki/De_finibus_bonorum_et_malorum).
 [^6]: [De finibus bonorum et malorum Documentation](https://readthedocs.org/projects/de-finibus-bonorum-et-malorum/downloads/pdf/latest/).
-[^7]: [Cicero - Wikipedia](https://en.wikipedia.org/wiki/Cicero).
-[^8]: [Epicurus - Wikipedia](https://en.wikipedia.org/wiki/Epicurus).
+[^7]: [Cicero](https://en.wikipedia.org/wiki/Cicero).
+[^8]: [Epicurus](https://en.wikipedia.org/wiki/Epicurus).
 
-[^9]: [Charlie Munger - Wikipedia](https://en.wikipedia.org/wiki/Charlie_Munger).
-[^10]: [Poor Charlie's Almanack - Wikipedia](https://en.wikipedia.org/wiki/Poor_Charlie%27s_Almanack).
-[^11]: [Cato Maior de Senectute - Wikipedia](https://en.wikipedia.org/wiki/Cato_Maior_de_Senectute).
-[^12]: [On Old Age (De Senectute) \| Online Library of Liberty](https://oll.libertyfund.org/titles/cicero-on-old-age-de-senectute).
+[^9]: [Charlie Munger](https://en.wikipedia.org/wiki/Charlie_Munger).
+[^10]: [Poor Charlie's Almanack](https://en.wikipedia.org/wiki/Poor_Charlie%27s_Almanack).
+[^11]: [Cato Maior de Senectute](https://en.wikipedia.org/wiki/Cato_Maior_de_Senectute).
+[^12]: [On Old Age (De Senectute)](https://oll.libertyfund.org/titles/cicero-on-old-age-de-senectute).
 
 [^13]: [Poor Charlie’s Almanack - The Wit And Wisdom Of Charles T. Munger ( PDFDrive ) : Free Download, Borrow, and Streaming : Internet Archive](https://archive.org/details/poor-charlies-almanack-the-wit-and-wisdom-of-charles-t.-munger-pdfdrive/page/n27/mode/2up).
 
-[^14]: [The Intern (2015 film) - Wikipedia](https://en.wikipedia.org/wiki/The_Intern_(2015_film)).
-[^15]: [Benjamin Franklin - Wikipedia](https://en.wikipedia.org/wiki/Benjamin_Franklin).
+[^14]: [The Intern (2015 film)](https://en.wikipedia.org/wiki/The_Intern_(2015_film)).
+[^15]: [Benjamin Franklin](https://en.wikipedia.org/wiki/Benjamin_Franklin).

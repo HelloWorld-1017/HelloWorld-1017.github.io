@@ -1,10 +1,12 @@
 ---
 title: Built-in Colors in LaTeX `xcolor` Package
 categories:
- - LaTeX
  - Design
- - R
  - MATLAB
+ - LaTeX
+ - R
+tags:
+ - LaTeX Box
 date: 2023-10-17 18:16:22 +0800
 last_modified_at: 2024-09-06 07:43:45 +0800
 ---

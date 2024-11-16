@@ -5,8 +5,11 @@ categories:
  - LaTeX
 tags:
  - LaTeX Warnings and Errors
+ - pdfLaTeX
+ - TeXstudio
+ - XeLaTeX
 date: 2024-07-24 16:47:47 +0800
-last_modified_at: 2024-07-24 16:47:47 +0800
+last_modified_at: 2024-11-12 16:09:07 +0800
 ---
 
 Today, when I compile a `.tex` file (which I created on another computer before) in TeXstudio, some errors like `Undefined control sequence. \pdfglyphtounicode` are printed in `Log` box:
@@ -40,6 +43,6 @@ So, I think for this reason I added xelatex as a default compiler before.
 **References**
 
 [^1]: [LaTeX入门](https://yun.weicheng.men/Book/LaTeX%E5%85%A5%E9%97%A8.pdf)，刘海洋编著, pp. 31.
-[^2]: [pdfTeX - Wikipedia](https://en.wikipedia.org/wiki/PdfTeX)
-[^3]: [XeTeX - Wikipedia](https://en.wikipedia.org/wiki/XeTeX)
-[^4]: [dvips - Wikipedia](https://en.wikipedia.org/wiki/Dvips).
+[^2]: [pdfTeX](https://en.wikipedia.org/wiki/PdfTeX)
+[^3]: [XeTeX](https://en.wikipedia.org/wiki/XeTeX)
+[^4]: [dvips](https://en.wikipedia.org/wiki/Dvips).

@@ -2,6 +2,8 @@
 title: "Make Annotations in LaTeX for documents: `soul` package, `changes` package, `easyReview` package, and one user-defined method"
 categories:
  - LaTeX
+tags:
+ - TeXstudio
 date: 2023-08-31 08:52:55 +0800
 last_modified_at: 2024-11-08 22:45:44 +0800
 ---

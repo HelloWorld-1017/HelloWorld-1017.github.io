@@ -1,10 +1,9 @@
 ---
 title: FLUKE Digital Multimeters 18B+ Users Manual
-toc: false
 categories:
  - Hardware
 date: 2024-11-16 22:16:29 +0800
-last_modified_at: 2024-11-16 22:16:29 +0800
+last_modified_at: 2024-11-17 16:05:32 +0800
 gallery:
  - image_path: /images/2024-11-16/fig-01.png
  - image_path: /images/2024-11-16/fig-02.png
@@ -30,7 +29,18 @@ gallery:
 
 I ever bought a FLUKE Digital Multimeters 18B+, and today I find a users manual on Internet[^1] and show it in this post.
 
+## Users manual
+
 {% include gallery id="gallery" layout="half" %}
+
+## Digests
+
+### Active the continuity beeper
+
+- See "Test for Continuity" in p. 7.
+- Note the terminal that red test lead is connected, i.e. No. 4 terminal in p. 2.
+
+<br>
 
 **References**
 

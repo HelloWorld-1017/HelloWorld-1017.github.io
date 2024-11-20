@@ -7,7 +7,7 @@ tags:
  - HTML
  - Markdown
 date: 2024-04-21 19:08:48 +0800
-last_modified_at: 2024-08-25 18:50:03 +0800
+last_modified_at: 2024-11-17 15:41:45 +0800
 ---
 
 In Markdown files and web page, we can use `<p>` element and its `style` attribute to realize aligning the text, center, left, and right. For example, 
@@ -146,7 +146,5 @@ by John Donne <br>
 
 **References**
 
-[1] [html段落居中命令-掘金](https://juejin.cn/s/html%E6%AE%B5%E8%90%BD%E5%B1%85%E4%B8%AD%E5%91%BD%E4%BB%A4).
-
-[2] [No Man Is an Island by John Donne - Famous poems, famous poets. - All Poetry](https://allpoetry.com/No-man-is-an-island).
-
+- [html段落居中命令](https://juejin.cn/s/html%E6%AE%B5%E8%90%BD%E5%B1%85%E4%B8%AD%E5%91%BD%E4%BB%A4).
+- [No Man Is an Island by John Donne - Famous poems, famous poets.](https://allpoetry.com/No-man-is-an-island).

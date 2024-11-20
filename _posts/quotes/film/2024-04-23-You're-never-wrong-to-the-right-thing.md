@@ -1,11 +1,11 @@
 ---
-title: \"You're never wrong to the right thing.\"
+title: 🎞️ \"You're never wrong to the right thing.\"
 toc: false
 categories:
- - Quotes
  - Economics & Finance
+ - Quotes
 date: 2024-04-23 22:51:17 +0800
-last_modified_at: 2024-09-23 13:36:01 +0800
+last_modified_at: 2024-11-17 19:03:21 +0800
 ---
 
 <p style="text-align:center;"><font face="Comic Sans MS" size=5>"You're never wrong to the right thing."<br>From "The Intern"</font></p>
@@ -34,11 +34,6 @@ Interesting anyway. Feel them in the life.
 
 **References**
 
-[1] [The Intern (2015 film) - Wikipedia](https://en.wikipedia.org/wiki/The_Intern_(2015_film)).
-
-[2] [Warren Buffett’s Most Iconic Interview Ever - YouTube](https://www.youtube.com/watch?v=8OcegOGAGIs).
-
-[3] [Quote by Leonardo da Vinci: “Simplicity is the ultimate sophistication. When...”](https://www.goodreads.com/quotes/9010638-simplicity-is-the-ultimate-sophistication-when-once-you-have-tasted).
-
-
-
+- [The Intern (2015 film)](https://en.wikipedia.org/wiki/The_Intern_(2015_film)).
+- [Warren Buffett’s Most Iconic Interview Ever](https://www.youtube.com/watch?v=8OcegOGAGIs).
+- [Quote by Leonardo da Vinci: “Simplicity is the ultimate sophistication. When...”](https://www.goodreads.com/quotes/9010638-simplicity-is-the-ultimate-sophistication-when-once-you-have-tasted).

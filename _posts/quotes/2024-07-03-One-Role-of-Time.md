@@ -2,15 +2,12 @@
 title: One Role of Time
 toc: false
 categories:
- - Uncertainty
+ - Ideas
  - Philosophy
  - Quotes
- - Ideas
-drafted_at: 2024-07-01 21:03:51 +0800
+ - Uncertainty
 date: 2024-07-03 21:24:35 +0800
-last_modified_at: 2024-07-03 21:24:35 +0800
-modification_history:
- - 2024-07-03 21:24:35 +0800
+last_modified_at: 2024-11-17 19:30:37 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -26,11 +23,8 @@ What is the role of time? ... Time prevents everything from being given at once 
 
 <br>
 
-# References
+**References**
 
-[^1]: [Henri Bergson - Wikipedia](https://en.wikipedia.org/wiki/Henri_Bergson).
+[^1]: [Henri Bergson](https://en.wikipedia.org/wiki/Henri_Bergson).
 [^2]: Prigogine, Ilya, and Isabelle Stengers. *The end of certainty: Time Chaos, and the New Laws of Nature*. Simon and Schuster, 1997.
-[^3]: [Ilya Prigogine - Wikipedia](https://en.wikipedia.org/wiki/Ilya_Prigogine).
-
-
-
+[^3]: [Ilya Prigogine](https://en.wikipedia.org/wiki/Ilya_Prigogine).

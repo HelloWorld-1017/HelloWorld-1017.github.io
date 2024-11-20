@@ -6,7 +6,7 @@ categories:
  - Philosophy
  - Quotes
 date: 2024-06-27 16:18:31 +0800
-last_modified_at: 2024-08-04 14:55:07 +0800
+last_modified_at: 2024-11-17 19:01:58 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -34,8 +34,6 @@ The more the state ‘plans’ the more difficult planning becomes for the indiv
 
 **References**
 
-[1] [Friedrich Hayek - Wikipedia](https://en.wikipedia.org/wiki/Friedrich_Hayek).
-
-[2] [Freidrich Hayek Quotes](https://www.goodreads.com/author/quotes/16458953.Freidrich_Hayek).
-
-[3] [Friedrich A. Hayek Quotes (Author of The Road to Serfdom)](https://www.goodreads.com/author/quotes/670307.Friedrich_A_Hayek).
+- [Friedrich Hayek](https://en.wikipedia.org/wiki/Friedrich_Hayek).
+- [Freidrich Hayek Quotes](https://www.goodreads.com/author/quotes/16458953.Freidrich_Hayek).
+- [Friedrich A. Hayek Quotes (Author of The Road to Serfdom)](https://www.goodreads.com/author/quotes/670307.Friedrich_A_Hayek).

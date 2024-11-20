@@ -6,7 +6,7 @@ categories:
  - Electrical Engineering
  - MATLAB
 date: 2024-07-17 11:28:36 +0800
-last_modified_at: 2024-11-15 00:37:47 +0800
+last_modified_at: 2024-11-20 23:59:53 +0800
 ---
 
 **Articles**
@@ -35,6 +35,14 @@ last_modified_at: 2024-11-15 00:37:47 +0800
   - D: if you’re getting close to where you want to be, slow down.
 - [PID Controller Explained](https://www.youtube.com/watch?v=fv6dLTEvl74).
 
+<br>
+
+**Corps**
+
+- [General Electric](https://www.ge.com/).
+- [Siemens](https://www.siemens.com/global/en.html).
+- [Schneider Electric](https://www.se.com/us/en/).
+- [SIMON](https://www.simonelectric.com/intl).
 
 <br>
 
@@ -50,3 +58,9 @@ last_modified_at: 2024-11-15 00:37:47 +0800
 - [MATLAB Simulink Design Optimization Toolbox](https://www.mathworks.com/products/sl-design-optimization.html): Create a Digital Twin by tuning the simulation model parameters based on real data using Simulink Design Optimization™. The simulated asset will now act as Digital Twin of the real system in operation, allowing for machine-specific predictions and various what-if scenarios.
 - [MATLAB-Simulink-Challenge-Project-Hub/projects/Digital Twin and Predictive Maintenance of Pneumatic Systems](https://github.com/mathworks/MATLAB-Simulink-Challenge-Project-Hub/tree/main/projects/Digital%20Twin%20and%20Predictive%20Maintenance%20of%20Pneumatic%20Systems).
 - [Renewable Energy Integration Design with Simscape](https://www.mathworks.com/matlabcentral/fileexchange/123870-renewable-energy-integration-design-with-simscape?s_eid=PSM_wechat&requestedDomain=) ([simscape/Renewable-Energy-Integration-Simscape](https://github.com/simscape/Renewable-Energy-Integration-Simscape)).
+
+<br>
+
+**Power system**
+
+- [Energy demand management](https://en.wikipedia.org/wiki/Energy_demand_management), a.k.a demand-side management (DSM) or demand-side response (DSR).

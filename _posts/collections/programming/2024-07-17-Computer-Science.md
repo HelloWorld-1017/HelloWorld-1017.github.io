@@ -4,7 +4,7 @@ toc: false
 categories:
  - Collections
 date: 2024-07-17 11:17:16 +0800
-last_modified_at: 2024-09-28 21:21:04 +0800
+last_modified_at: 2024-11-20 16:57:05 +0800
 ---
 
 **Books**
@@ -14,7 +14,6 @@ last_modified_at: 2024-09-28 21:21:04 +0800
 
 **Blogs & Websites**
 
-- [Tesla News](https://www.tesla.com/blog).
 - [Hacker News](https://news.ycombinator.com/).
 - [TIOBE (The Importance Of Being Earnest) Index](https://www.tiobe.com/tiobe-index/).
 - [HelloGitHub](https://hellogithub.com/).

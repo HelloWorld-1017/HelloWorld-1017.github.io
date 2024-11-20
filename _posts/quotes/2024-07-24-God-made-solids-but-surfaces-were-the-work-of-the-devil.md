@@ -1,13 +1,13 @@
 ---
-title: Wolfgang Pauli, \"God made solids, but surfaces were the work of the devil.\"
+title: \"God made solids, but surfaces were the work of the devil.\"
 toc: false
 categories:
+ - Electrical Engineering
  - Physics
  - Philosophy
  - Quotes
- - Electrical Engineering
 date: 2024-07-24 19:43:42 +0800
-last_modified_at: 2024-07-24 19:43:42 +0800
+last_modified_at: 2024-11-17 19:32:14 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -24,15 +24,10 @@ Once I heard a Professor quoted this Wolfgang Pauli’s saying in a lesson. This
 
 **References**
 
-- [Electrical breakdown - Wikipedia](https://en.wikipedia.org/wiki/Electrical_breakdown).
-- [What is the flashover in the power system? - Knowledge - Jiangshan Scotech Electrical Co., Ltd](https://www.scotech-electrical.com/info/what-is-the-flashover-in-the-power-system-65633806.html).
+- [Electrical breakdown](https://en.wikipedia.org/wiki/Electrical_breakdown).
+- [What is the flashover in the power system?](https://www.scotech-electrical.com/info/what-is-the-flashover-in-the-power-system-65633806.html).
 - [Electrical breakdown and flashover of short spark gaps in atmospheric air at transient voltages](https://www.db-thueringen.de/servlets/MCRFileNodeServlet/dbt_derivate_00019524/54_IWK_2009_6_5_07.pdf).
-- [The Volume Effect \| Team Bone](https://teambone.com/education-basic/the-volume-effect/).
+- [The Volume Effect](https://teambone.com/education-basic/the-volume-effect/).
 
-[^1]: [Basic Surfaces and their Analysis - NASA/ADS](https://ui.adsabs.harvard.edu/abs/2018bsa..book.....G/abstract).
-[^2]: [Wolfgang Pauli - Wikipedia](https://en.wikipedia.org/wiki/Wolfgang_Pauli).
-
-
-
-
-
+[^1]: [Basic Surfaces and their Analysis](https://ui.adsabs.harvard.edu/abs/2018bsa..book.....G/abstract).
+[^2]: [Wolfgang Pauli](https://en.wikipedia.org/wiki/Wolfgang_Pauli).

@@ -1,5 +1,5 @@
 ---
-title: George E. P. Box, \"All models are wrong, but some are useful.\"
+title: \"All models are wrong, but some are useful.\"
 toc: false
 categories:
  - Quotes

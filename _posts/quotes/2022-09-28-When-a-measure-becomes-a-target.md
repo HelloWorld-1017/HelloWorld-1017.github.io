@@ -1,5 +1,5 @@
 ---
-title: "Goodhart's law, \"When a measure becomes a target, it cease to be a good measure.\""
+title: \"When a measure becomes a target, it cease to be a good measure.\"
 toc: false
 categories:
  - Mathematics

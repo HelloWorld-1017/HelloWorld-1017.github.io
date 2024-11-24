@@ -3,9 +3,10 @@ title: Time Python Script File by PowerShell Commands `Measure-Command` and Pyth
 toc: false
 categories:
  - Python
- - PowerShell
+ - Windows
 tags:
  - <i>Python Cookbook</i>
+ - PowerShell
 date: 2024-07-23 11:48:09 +0800
 last_modified_at: 2024-07-23 11:48:09 +0800
 ---

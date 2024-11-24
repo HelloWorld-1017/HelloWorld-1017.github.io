@@ -4,10 +4,10 @@ categories:
  - MATLAB
  - Finite Element Simulation
  - Physics
- - VBScript
 tags:
  - Electromagnetism
  - MATLAB External Language Interfaces
+ - VBScript
 date: 2023-08-26 06:10:11 +0800
 last_modified_at: 2024-07-17 15:02:48 +0800
 ---

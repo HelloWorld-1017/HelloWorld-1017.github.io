@@ -5,8 +5,18 @@ categories:
  - Psychology
  - Sociology
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-11-05 12:46:38 +0800
+last_modified_at: 2024-11-24 11:02:36 +0800
 ---
+
+## Anchoring effect
+
+> - [Anchoring effect](https://en.wikipedia.org/wiki/Anchoring_effect).
+
+The <i class="term">anchoring effect</i> is a psychological phenomenon in which an individual's judgments or decisions are influenced by a reference point or "anchor" <i class="emphasize">which can be completely irrelevant</i>. Both numeric and non-numeric anchoring have been reported in research. In numeric anchoring, <i class="emphasize">once the value of the anchor is set, subsequent arguments, estimates, etc. made by an individual may change from what they would have otherwise been without the anchor</i>. For example, an individual may be more likely to purchase a car if it is placed alongside a more expensive model (the anchor). Prices discussed in negotiations that are lower than the anchor may seem reasonable, perhaps even cheap to the buyer, even if said prices are still relatively higher than the actual market value of the car. Another example may be when estimating the orbit of Mars, one might start with the Earth's orbit (365 days) and then adjust upward until they reach a value that seems reasonable (usually less than 687 days, the correct answer).
+
+The original description of the anchoring effect came from psychophysics. When judging stimuli along a continuum, it was noticed that the first and last stimuli were used to compare the other stimuli (this is also referred to as "end anchoring"). This was applied to attitudes by Sherif et al. in their 1958 article "Assimilation and effects of anchoring stimuli on judgments".
+
+<br>
 
 ## Broken windows theory
 

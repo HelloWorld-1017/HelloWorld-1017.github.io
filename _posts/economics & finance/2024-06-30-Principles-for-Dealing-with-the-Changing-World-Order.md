@@ -3,11 +3,11 @@ title: Transcript of *Principles for Dealing with the Changing World Order* by R
 toc: false
 categories:
  - Economics & Finance
- - Uncertainty
  - History
  - Quotes
+ - Uncertainty
 date: 2024-06-30 16:15:21 +0800
-last_modified_at: 2024-09-18 21:23:05 +0800
+last_modified_at: 2024-11-21 15:22:32 +0800
 ---
 
 <br>
@@ -38,7 +38,7 @@ The strength of a nation’s currency is based on the strength of that nation’
 
 </div>
 
-I watched in awe realizing that money as we understood it was ending. What a crisis! I expected the stock market to plunge the next day, so I got on the exchange floor early to prepare. When the opening bell rang, pandemonium broke out, but not the kind I expected. The market was up, way up, and went on to rise nearly 25%. That surprised me because I never experienced a **currency devaluation** before. When I dug into history, I discovered that the exact same thing happened in 1933 and had the exact same effect. Then, paper dollars were also linked to gold, which the US was running out of because it was spending more paper money checks that it had gold to exchange for them. And President Roosevelt announced on the radio that he would break the country’s promise to exchange dollars for gold.
+I watched in awe realizing that money as we understood it was ending[^21]. What a crisis! I expected the stock market to plunge the next day, so I got on the exchange floor early to prepare. When the opening bell rang, pandemonium broke out, but not the kind I expected. The market was up, way up, and went on to rise nearly 25%. That surprised me because I never experienced a **currency devaluation** before. When I dug into history, I discovered that the exact same thing happened in 1933 and had the exact same effect. Then, paper dollars were also linked to gold, which the US was running out of because it was spending more paper money checks that it had gold to exchange for them. And President Roosevelt announced on the radio that he would break the country’s promise to exchange dollars for gold.
 
 <div class="quote--left" markdown="1">
 
@@ -81,7 +81,7 @@ Over the last few years, three big things that hadn’t happened in my lifetime 
 
 So, I look back. I saw that all these had happened together before many times and **nearly always led to changing domestic and world orders**. The last time this sequence happened was from 1930 to 1945. What exactly is an order? You might ask. **It’s a governing system for people dealing with each other.** There are internal orders for governing within countries, typically laid out in constitutions. **And there is a world order for governing between countries, typically laid out in treaties.** Internal orders change at different times than world orders, **though whether within or between countries, these orders typically change after wars**. Civil wars within countries, international wars between countries. **They happen when revolutionary new forces defeat weak old orders.** For example, the US internal order was laid out in the constitution in 1789 after the American Revolution[^9], and it is still operating today, even after the American Civil War[^10]. Russia got rid of its old order and established a new one with the Russian revolution[^11] in 1917, which ended in 1991 with a relatively bloodless revolution. China began its current internal order in 1949 when the Chinese Communist Party won the civil war[^14]. You got the idea. 
 
-The current world order commonly called the American world order, formed after the allied victory in World War II when the US emerged as the dominant world power. It was set out in agreements and treaties (Paris Peace Treaties 1947[^12], Potsdam Conference 1945[^13]) for how global governance and monetary systems work. In 1944, the new world monetary system was laid out in the Bretton Woods Agreement[^15] and established the dollar as the world’s leaning reserve currency.
+The current world order commonly called the American world order, formed after the allied victory in World War II when the US emerged as the dominant world power. It was set out in agreements and treaties (Paris Peace Treaties 1947[^12], Potsdam Conference 1945[^13]) for how global governance and monetary systems work. In 1944, the new world monetary system was laid out in the Bretton Woods Agreement[^15][^21] and established the dollar as the world’s leaning reserve currency.
 
 **A reserve currency[^16] is a currency that is commonly accepted around the world, and having one is a key factor in a country becoming the richest and most powerful empire**. With a new dominant power and monetary system established, a new world order begins. These changes take place in a timeless and universal cycle that I call **THE BIG CYCLE**. I’ll start with a quick overview, then give you a more complete version, and then direct you to my book if you want more.
 
@@ -190,28 +190,25 @@ Thank you, and may the force of evolution be with you.
 
 **References**
 
-[^1]: [Principles for Dealing with the Changing World Order by Ray Dalio - YouTube](https://www.youtube.com/watch?v=xguam0TKMw8).
+[^1]: [Principles for Dealing with the Changing World Order by Ray Dalio](https://www.youtube.com/watch?v=xguam0TKMw8).
 [^2]: [Quote by Mark Twain: “History doesn't repeat itself, but it does rhyme.”](https://www.goodreads.com/quotes/5382-history-doesn-t-repeat-itself-but-it-does-rhyme).
-[^3]: [Nixon Ends Bretton Woods International Monetary System - YouTube](https://www.youtube.com/watch?v=iRzr1QU6K1o).
-[^4]: [Milestones in the History of U.S. Foreign Relations - Office of the Historian](https://history.state.gov/milestones/1969-1976/nixon-shock).
-[^5]: [Roaring Twenties - Wikipedia](https://en.wikipedia.org/wiki/Roaring_Twenties).
-[^6]: [Great Depression in the United States - Wikipedia](https://en.wikipedia.org/wiki/Great_Depression_in_the_United_States).
-[^7]: [Populism - Wikipedia](https://en.wikipedia.org/wiki/Populism).
-[^8]: [Political polarization - Wikipedia](https://en.wikipedia.org/wiki/Political_polarization).
-[^9]: [American Revolution - Wikipedia](https://en.wikipedia.org/wiki/American_Revolution).
-[^10]: [American Civil War - Wikipedia](https://en.wikipedia.org/wiki/American_Civil_War).
-[^11]: [Russian Revolution - Wikipedia](https://en.wikipedia.org/wiki/Russian_Revolution).
-[^12]: [Paris Peace Treaties, 1947 - Wikipedia](https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947).
-[^13]: [Potsdam Conference - Wikipedia](https://en.wikipedia.org/wiki/Potsdam_Conference).
-[^14]: [Chinese Civil War - Wikipedia](https://en.wikipedia.org/wiki/Chinese_Civil_War).
-[^15]: [Bretton Woods system - Wikipedia](https://en.wikipedia.org/wiki/Bretton_Woods_system).
-[^16]: [Reserve currency - Wikipedia](https://en.wikipedia.org/wiki/Reserve_currency).
-[^17]: [Guilder - Wikipedia](https://en.wikipedia.org/wiki/Guilder).
-[^18]: [Dutch East India Company - Wikipedia](https://en.wikipedia.org/wiki/Dutch_East_India_Company).
-[^19]: [East India Company - Wikipedia](https://en.wikipedia.org/wiki/East_India_Company).
-[^20]: [New Deal - Wikipedia](https://en.wikipedia.org/wiki/New_Deal).
+[^3]: [Nixon Ends Bretton Woods International Monetary System](https://www.youtube.com/watch?v=iRzr1QU6K1o).
+[^4]: [Milestones in the History of U.S. Foreign Relations](https://history.state.gov/milestones/1969-1976/nixon-shock).
+[^5]: [Roaring Twenties](https://en.wikipedia.org/wiki/Roaring_Twenties).
+[^6]: [Great Depression in the United States](https://en.wikipedia.org/wiki/Great_Depression_in_the_United_States).
+[^7]: [Populism](https://en.wikipedia.org/wiki/Populism).
+[^8]: [Political polarization](https://en.wikipedia.org/wiki/Political_polarization).
+[^9]: [American Revolution](https://en.wikipedia.org/wiki/American_Revolution).
+[^10]: [American Civil War](https://en.wikipedia.org/wiki/American_Civil_War).
+[^11]: [Russian Revolution](https://en.wikipedia.org/wiki/Russian_Revolution).
+[^12]: [Paris Peace Treaties, 1947](https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947).
+[^13]: [Potsdam Conference](https://en.wikipedia.org/wiki/Potsdam_Conference).
+[^14]: [Chinese Civil War](https://en.wikipedia.org/wiki/Chinese_Civil_War).
+[^15]: [Bretton Woods system](https://en.wikipedia.org/wiki/Bretton_Woods_system).
+[^16]: [Reserve currency](https://en.wikipedia.org/wiki/Reserve_currency).
+[^17]: [Guilder](https://en.wikipedia.org/wiki/Guilder).
+[^18]: [Dutch East India Company](https://en.wikipedia.org/wiki/Dutch_East_India_Company).
+[^19]: [East India Company](https://en.wikipedia.org/wiki/East_India_Company).
+[^20]: [New Deal](https://en.wikipedia.org/wiki/New_Deal).
 
-
-
-
-
+[^21]: The **Jamaica Accords** were a set of international agreements that ratified the end of the Bretton Woods monetary system. They took the form of recommendations to change the "articles of agreement" that the International Monetary Fund (IMF) was founded upon. The agreement was concluded after meetings 7–8 January 1976 at Kingston, Jamaica by a committee of the board of governors of the IMF. The accords allowed the price of gold to float with respect to the U.S. dollar and other currencies, albeit within a set of agreed constraints. In practice the dollar had been floating in this way, in contravention of the articles of an agreement of the IMF, since the Nixon shock in 1971. The accords also made provisions for financial assistance to developing countries representing the Group of 77 member countries to compensate for lost earnings from the export of primary commodities. An amendment was made in 1978 to allow for the creation of Special Drawing Rights, described as a low-cost line of credit for developing countries. [Jamaica Accords](https://en.wikipedia.org/wiki/Jamaica_Accords).

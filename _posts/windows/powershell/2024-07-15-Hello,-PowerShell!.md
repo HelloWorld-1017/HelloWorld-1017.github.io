@@ -2,8 +2,9 @@
 title: "Hello, PowerShell!"
 toc: false
 categories:
- - PowerShell
  - Windows
+tags:
+ - PowerShell
 date: 2024-07-15 14:38:37 +0800
 last_modified_at: 2024-07-15 14:38:37 +0800
 ---

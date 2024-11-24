@@ -2,6 +2,7 @@
 title: 🎞️ Good Will Hunting
 toc: false
 categories:
+ - Entertainment
  - Quotes
 header:
  image: https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202407301159369.jpg

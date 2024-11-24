@@ -3,6 +3,7 @@ title: 🎞️ \"You're never wrong to the right thing.\"
 toc: false
 categories:
  - Economics & Finance
+ - Entertainment
  - Quotes
 date: 2024-04-23 22:51:17 +0800
 last_modified_at: 2024-11-17 19:03:21 +0800

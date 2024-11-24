@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-10-27 16:17:45 +0800
+last_modified_at: 2024-11-21 10:55:49 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -88,6 +88,15 @@ Long wave theory is <i class="emphasize">not accepted by most academic economist
 > - [Lipstick Effect: Definition, Theory, Value as Economic Indicator](https://www.investopedia.com/terms/l/lipstick-effect.asp).
 
 The <i class="term">lipstick effect</i> is when consumers <i class="emphasize">still</i> spend money on <i class="emphasize">small indulgences</i> during recessions, economic downturns, or when they personally have little cash. They do not have enough to spend on big-ticket luxury items; however, many still find the cash for purchases of small luxury items, such as premium lipstick. For this reason, companies that benefit from the lipstick effect tend to be resilient even during economic downturns.
+
+<br>
+
+## Malthusian trap
+
+> - [Malthusianism](https://en.wikipedia.org/wiki/Malthusianism).
+> - [Malthusian growth model](https://en.wikipedia.org/wiki/Malthusian_growth_model).
+
+<i class="term">Malthusianism</i> is a theory that <i class="emphasize">population growth is potentially exponential</i>, according to the Malthusian growth model, while <i class="emphasize">the growth of the food supply or other resources is linear</i>, which eventually reduces living standards to the point of triggering a population decline. This event, called a <i class="term">Malthusian catastrophe</i> (also known as a <i class="term">Malthusian trap</i>, <i class="term">population trap</i>, <i class="term">Malthusian check</i>, <i class="term">Malthusian crisis</i>, <i class="term">Point of Crisis</i>, or <i class="term">Malthusian crunch</i>) has been predicted to occur if population growth outpaces agricultural production, thereby causing famine or war. According to this theory, poverty and inequality will increase as the price of assets and scarce commodities goes up due to fierce competition for these dwindling resources. This increased level of poverty eventually causes depopulation by decreasing birth rates. If asset prices keep increasing, social unrest would occur, which would likely cause a major war, revolution, or a famine. Societal collapse is an extreme but possible outcome from this process. The theory posits that <i class="emphasize">such a catastrophe would force the population to "correct" back to a lower, more easily sustainable level</i> (quite rapidly, due to the potential severity and unpredictable results of the mitigating factors involved, as compared to the relatively slow time scales and well-understood processes governing unchecked growth or growth affected by preventive checks). Malthusianism has been linked to a variety of political and social movements, but almost always refers to advocates of population control.
 
 <br>
 

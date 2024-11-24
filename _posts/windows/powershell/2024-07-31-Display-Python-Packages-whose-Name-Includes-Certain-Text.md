@@ -3,10 +3,10 @@ title: "Display Python Packages whose Name Includes Certain Text: PowerShell com
 toc: false
 categories:
  - Windows
- - PowerShell
  - Python
 tags:
  - Python pip
+ - PowerShell
 date: 2024-07-31 11:07:11 +0800
 last_modified_at: 2024-07-31 11:07:11 +0800
 ---

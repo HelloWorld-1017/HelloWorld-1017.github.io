@@ -1,10 +1,11 @@
 ---
-title: 📷 Bye, XJTU iHarbour!
+title: 📷🎶 Bye, XJTU iHarbour!
 toc: false
 categories:
+ - Entertainment
  - Moments
 date: 2024-06-24 10:34:35 +0800
-last_modified_at: 2024-11-17 19:58:35 +0800
+last_modified_at: 2024-11-25 00:01:05 +0800
 gallery:
  - image_path: /images/2024-06-24/fig1.jpg
  - image_path: /images/2024-06-24/fig2.jpg
@@ -19,3 +20,13 @@ gallery:
 Anyway，这是一段很温暖的旅程。
 
 拜拜创新港\~ 拜拜三号巨构👋
+
+<br>
+
+- [凤凰花开的路口](https://www.youtube.com/watch?v=2eQf4LIPkII), 林志炫
+- [红日](https://www.youtube.com/watch?v=CvmlXN8Im3s), 李克勤
+- [Go Solo](https://www.youtube.com/watch?v=VePaI3jX4Sk), Tom Rosenthal
+- [童年](https://www.youtube.com/watch?v=534LRELoxJs), 罗大佑
+- [New Boy](https://www.youtube.com/watch?v=e51JUlvjUEI), 房东的猫、陈婧霏
+- [再回首](https://www.youtube.com/watch?v=iktzaPPXX28), 姜育恒
+- [无声的告别是对往事的礼赞](https://www.youtube.com/watch?v=ofJw6Ppv5us), 鱼翅

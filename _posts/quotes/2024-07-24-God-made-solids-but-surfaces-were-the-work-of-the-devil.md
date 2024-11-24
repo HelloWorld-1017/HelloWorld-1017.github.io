@@ -3,7 +3,7 @@ title: \"God made solids, but surfaces were the work of the devil.\"
 toc: false
 categories:
  - Electrical Engineering
- - Physics
+ - Materials
  - Philosophy
  - Quotes
 date: 2024-07-24 19:43:42 +0800

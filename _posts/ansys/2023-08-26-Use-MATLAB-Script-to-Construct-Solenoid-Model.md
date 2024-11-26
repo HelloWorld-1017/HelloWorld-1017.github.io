@@ -1,8 +1,9 @@
 ---
 title: Use MATLAB Script to Construct Solenoid Model in Ansys Electronics Desktop
 categories:
- - MATLAB
  - Finite Element Simulation
+ - Materials
+ - MATLAB
  - Physics
 tags:
  - Electromagnetism
@@ -16,13 +17,13 @@ last_modified_at: 2024-07-17 15:02:48 +0800
 
 About two months ago, I studied a simple-but-complete FEM example from Ansys Electronics Desktop (AEDT) about how to use AEDT to simulate a solenoid model and obtain the corresponding simulation results, mainly including magnetic flux and electromagnetic force. This example helped me to understand the basic operation in AEDT software and push on my personal research. However, in the past period of time, I spent most time and energy to learn English for IELTS examination, thereby forgetting some details of this example when I looking back right now. So I would write this blog to put these contents together. 
 
-This FEM example is called *Getting Started with Maxwell: A 2D Magnetostatic Solenoid Problem* [1]. The introduction in PDF version is available in `Help` tab if you have installed AEDT and inserted a Maxwell 2D (or 3D) Design (in `Project` Tab):
+This FEM example is called *Getting Started with Maxwell: A 2D Magnetostatic Solenoid Problem*[^1]. The introduction in PDF version is available in `Help` tab if you have installed AEDT and inserted a Maxwell 2D (or 3D) Design (in `Project` Tab):
 
 ![image-20230826204855555](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230826204855555.png?raw=true)
 
 This 92-page introduction is rather detailed and freshman-friendly, illustrating how to build and analyse Solenoid model from scratch. Almost everyone could get the same results if follow this tech booklet step by step. So, this blog is not intent to repeat or copy its contents, but try to cope with an issue associated with efficiency: How to construct and simulate solenoid model in scripting way (specifically using MATLAB) ?
 
-To begin with, the AEDT supported scripting, and the relative documentation (called *Maxwell Scripting Guide*) could also be found in `Help` tab as shown in the above figure. This documentation gives the information about how to build an FEM model using two alternative scripting ways, by either **VBscript** or **IronPython**. The usage of each function looks the same no mater which scripting language we choose as I reckon they are both belonging to the object-oriented programming. However, my favourite scripting software is MATLAB, so I spent some time to find an approach to use MATLAB to realise my objective. Luckily, it works, by creating COM server [2] and then calling VBscript object in MATLAB.
+To begin with, the AEDT supported scripting, and the relative documentation (called *Maxwell Scripting Guide*) could also be found in `Help` tab as shown in the above figure. This documentation gives the information about how to build an FEM model using two alternative scripting ways, by either **VBscript** or **IronPython**. The usage of each function looks the same no mater which scripting language we choose as I reckon they are both belonging to the object-oriented programming. However, my favourite scripting software is MATLAB, so I spent some time to find an approach to use MATLAB to realise my objective. Luckily, it works, by creating COM server[^2] and then calling VBscript object in MATLAB.
 
 ```matlab
 % Define the activex scripting engine
@@ -1138,7 +1139,6 @@ Matrix data of $F(i,x)$, $L(i,x)$, and $\Phi(i,x)$:
 
 **References**
 
-[1] ANSYS Inc, Getting Started with Maxwell: A 2D Magnetostatic Solenoid Problem.
-
-[2] [MATLAB actxserver - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/actxserver.html).
+[^1]: ANSYS Inc, Getting Started with Maxwell: A 2D Magnetostatic Solenoid Problem.
+[^2]: [MATLAB `actxserver`](https://ww2.mathworks.cn/help/matlab/ref/actxserver.html).
 

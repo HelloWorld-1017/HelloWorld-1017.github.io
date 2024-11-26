@@ -3,8 +3,10 @@ title: Theories in Economic and Finance
 categories:
  - Collections
  - Economics & Finance
+ - Sociology
+ - Uncertainty
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-11-21 10:55:49 +0800
+last_modified_at: 2024-11-26 14:29:02 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -164,3 +166,13 @@ The <i class="term">ratchet effect</i> is an economic process that is difficult 
 A ratchet effect is closely related to the idea of a <i class="term">positive feedback loop</i>. In addition, like releasing a mechanical ratchet used to compress a spring, the reversal of an economic process that involves a ratchet effect may be rapid, forceful, and difficult to control.
 
 <br>
+
+## Spontaneous order
+
+> - [Spontaneous order](https://en.wikipedia.org/wiki/Spontaneous_order).
+
+<i class="term">Spontaneous order</i>, also named <i class="term">self-organization</i> in the hard sciences, is the spontaneous emergence of order out of <i class="emphasize">seeming chaos</i>. The term "self-organization" is more often used for physical changes and biological processes, while "spontaneous order" is typically used to describe the emergence of various kinds of social orders in human social networks from the behavior of a combination of self-interested individuals who are <i class="emphasize">not intentionally trying to create order through planning</i>. Proposed examples of systems which evolved through spontaneous order or self-organization include the evolution of life on Earth, language, crystal structure, the Internet, Wikipedia, and free market economy.
+
+In economics and the social sciences, spontaneous order has been defined by Hayek as "the result of <i class="emphasize">human actions</i>, not of <i class="emphasize">human design</i>".
+
+In economics, spontaneous order has been defined as an equilibrium behavior among self-interested individuals, which is most likely to evolve and survive, obeying the natural selection process "survival of the likeliest".

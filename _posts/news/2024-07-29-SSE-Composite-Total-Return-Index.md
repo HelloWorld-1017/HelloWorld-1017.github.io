@@ -1,5 +1,5 @@
 ---
-title: (July 29, 2024) The First Day of Displaying SSE Composite Total Return Index Real-Time
+title: 📰 (July 29, 2024) The First Day of Displaying SSE Composite Total Return Index Real-Time
 toc: false
 categories:
  - Economics & Finance

@@ -3,7 +3,7 @@ title: Commonly Used Latin Words
 categories:
  - English
 date: 2024-06-28 23:49:22 +0800
-last_modified_at: 2024-11-08 18:40:37 +0800
+last_modified_at: 2024-11-27 14:58:40 +0800
 ---
 
 ## carpe diem
@@ -17,6 +17,16 @@ a Latin expression meaning "seize the day", used for saying that people should e
 
 - I may as well have dessert - ***carpe diem***, right?
 - the ***carpe diem*** spirit that prevails during wartime
+
+<br>
+
+## De novo
+
+> - [De novo](https://en.wikipedia.org/wiki/De_novo).
+
+used in English to mean 'from the beginning', 'anew'.
+
+- As in other machine learning application domains, benchmarks in Scientific ML may serve as a source of readily-available training data for algorithm development and testing without the overhead of generating data ***de novo***. (from [PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182)).
 
 <br>
 

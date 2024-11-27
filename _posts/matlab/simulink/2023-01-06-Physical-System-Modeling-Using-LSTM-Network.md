@@ -1,31 +1,31 @@
 ---
-layout: single
-title:  Physical System Modeling Using LSTM Network in MATLAB Simulink
-categories: 
- - MATLAB
+title:  Physical System Modeling using LSTM Network in MATLAB Simulink
+categories:
  - Machine Learning
+ - MATLAB
 tags:
- - MATLAB Simulink
  - MATLAB Deep Learning Toolbox
+ - MATLAB Simulink
  - MATLAB Warnings and Errors
 date: 2023-01-06 23:57:51 +0800
-last_modified_at0: 2023-01-06 23:57:51 +0800
-last_modified_at1: 2023-12-11 11:35:47 +0800
-last_modified_at2: 2024-02-20 10:04:01 +0800
-last_modified_at: 2024-02-20 10:04:01 +0800
+last_modified_at: 2024-11-27 11:08:23 +0800
 ---
 
 # Introduction
 
-MATLAB官方提供了一个使用LSTM神经网络实现物理仿真模型降阶的示例 [^1]：
+MATLAB官方提供了一个使用LSTM神经网络实现物理仿真模型降阶的示例[^1]：
 
 ![image-20221229185223493](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20221229185223493.png?raw=true)
 
-> This example shows how to create a reduced order model (ROM) to replace a Simscape component in a Simulink® model by training a long short-term memory (LSTM) neural network.
->
-> A ROM is a surrogate for a physical model that allows you to reduce the computation required without compromising the accuracy of the original physical model. For workflows that require heavy computations, such as design exploration, you can use the ROM in place of the original physical system. While there is a variety of techniques for building a ROM, this example builds an LSTM-ROM (a type of ROM that leverages an LSTM network) and uses it in a Simulink model as part of a Deep Learning Stateful Predict block.
->
-> To train the LSTM network, the example uses the original model to generate the training data. The trained LSTM in the ROM takes the **B and F signals of the load shaft** and **the control pressure** as input and **predicts the next value of the B and F signals of the load shaft**. After the model is trained, the example creates an LSTM-ROM component and replaces the physical component in the Simulink model with it. 
+<div class="quote--left" markdown="1">
+
+This example shows how to create a reduced order model (ROM) to replace a Simscape component in a Simulink® model by training a long short-term memory (LSTM) neural network.
+
+A ROM is a surrogate for a physical model that allows you to reduce the computation required without compromising the accuracy of the original physical model. For workflows that require heavy computations, such as design exploration, you can use the ROM in place of the original physical system. While there is a variety of techniques for building a ROM, this example builds an LSTM-ROM (a type of ROM that leverages an LSTM network) and uses it in a Simulink model as part of a Deep Learning Stateful Predict block.
+
+To train the LSTM network, the example uses the original model to generate the training data. The trained LSTM in the ROM takes the **B and F signals of the load shaft** and **the control pressure** as input and **predicts the next value of the B and F signals of the load shaft**. After the model is trained, the example creates an LSTM-ROM component and replaces the physical component in the Simulink model with it.
+
+</div>
 
 <br>
 
@@ -179,7 +179,7 @@ save("data.mat", "data")
 
 ## Prepare data for training (downsample signals)
 
-**如果使用非常长的数据序列训练LSTM，每一个时间步长所计算的梯度的累积可能会导致梯度消失，使得训练过程收敛到次优的(suboptimal)结果。为了避免梯度消失，我们对训练数据进行下采样(downsample)，在不损失太多信息的情况下压缩序列的长度。**
+<i class="emphasize">如果使用非常长的数据序列训练LSTM，每一个时间步长所计算的梯度的累积可能会导致梯度消失，使得训练过程收敛到次优的(suboptimal)结果。为了避免梯度消失，我们对训练数据进行下采样(downsample)，在不损失太多信息的情况下压缩序列的长度。</i>
 
 ```matlab
 clc, clear, close all
@@ -374,7 +374,7 @@ save("test.mat", "dataTest", "maxPressuresTest")
 
 ![image-20221229190704192](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20221229190704192.png?raw=true)
 
-这个子模块Stateful Predict [^5] 是MATLAB Simulink提供的模块，来自`Deep Learning Toolbox / Deep Neural Networks`库。这个库中还具有以下几类模块：
+这个子模块Stateful Predict[^5] 是MATLAB Simulink提供的模块，来自`Deep Learning Toolbox / Deep Neural Networks`库。这个库中还具有以下几类模块：
 
 ![image-20221229191521914](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20221229191521914.png?raw=true)
 
@@ -384,7 +384,11 @@ save("test.mat", "dataTest", "maxPressuresTest")
 
 首先，我们从test data中提取targets。
 
->  The test targets are simulated F signals of the motor shaft using the original model, shifted by one time step.
+<div class="quote--left" markdown="1">
+
+The test targets are simulated F signals of the motor shaft using the original model, shifted by one time step.
+
+</div>
 
 ```matlab
 numObservationsTest = numel(dataTest);
@@ -410,37 +414,41 @@ end
 注：运行包含LSTM的Simulink模型遇到了各种各样的讲稿和错误，调试的具体过程放在文末的Appendix中。
 {: .notice--warning}
 
-> 另外需要注意的是，为了学习方便，我将整个示例的代码分割成三部分，因此在测试模型之前需要再加载一下前面的数据和参数。比如前面保存的测试集数据：
->
-> ```matlab
-> load test.mat
-> ```
->
-> 和Simulink模型运行所需的参数：
->
-> ```matlab
-> stopTime = 0.2;
-> sampleTime = 1e-3;
-> ```
->
-> 以及物理仿真模型`ex_sdl_flexible_shaft.slx`中预加载的模型参数：
->
-> ```matlab
-> % Shaft properties
-> fShaft.Material = 'Aluminum Alloy';
-> fShaft.ShearModulus = 26E9;
-> fShaft.Diameter = 0.025;
-> fShaft.Length = 5;
-> fShaft.Density = 2.7E3;
-> fShaft.DampingCoeff = 0.02;
-> 
-> % Derived properties
-> fShaft.Stiffness = pi/32 * (fShaft.Diameter)^4 ...
->     * fShaft.ShearModulus / fShaft.Length;
-> 
-> fShaft.Inertia = pi/32 * (fShaft.Diameter)^4 ...
->     * fShaft.Density * fShaft.Length ;
-> ```
+<div class="notice--primary" markdown="1">
+
+另外需要注意的是，为了学习方便，我将整个示例的代码分割成三部分，因此在测试模型之前需要再加载一下前面的数据和参数。比如前面保存的测试集数据：
+
+```matlab
+load test.mat
+```
+
+和Simulink模型运行所需的参数：
+
+```matlab
+stopTime = 0.2;
+sampleTime = 1e-3;
+```
+
+以及物理仿真模型`ex_sdl_flexible_shaft.slx`中预加载的模型参数：
+
+```matlab
+% Shaft properties
+fShaft.Material = 'Aluminum Alloy';
+fShaft.ShearModulus = 26E9;
+fShaft.Diameter = 0.025;
+fShaft.Length = 5;
+fShaft.Density = 2.7E3;
+fShaft.DampingCoeff = 0.02;
+
+% Derived properties
+fShaft.Stiffness = pi/32 * (fShaft.Diameter)^4 ...
+    * fShaft.ShearModulus / fShaft.Length;
+
+fShaft.Inertia = pi/32 * (fShaft.Diameter)^4 ...
+    * fShaft.Density * fShaft.Length ;
+```
+
+</div>
 
 最终，可视化：
 
@@ -496,13 +504,21 @@ ylabel("Frequency")
 
 在整个过程中我们可以看到，用于测试模型性能所采用的信号（信号4）与训练LSTM所采用的信号（信号1~3）是不一致的，我个人认为这一点是可以理解的，因为文档原文中有提到：
 
-> To test the accuracy of the full model, not just the LSTM network, compare the outputs with the simulated F signals of the motor shaft generated by the original Simulink model.
+<div class="quote--left" markdown="1">
+
+To test the accuracy of the full model, not just the LSTM network, compare the outputs with the simulated F signals of the motor shaft generated by the original Simulink model.
+
+</div>
 
 也就是说，我们在这里并不是主要关心LSTM模型的性能是怎样的（是否过拟合等等），而是关注整个模型的性能。我们当然也可以考察一下LSTM模型信号1~2的输出，但是信号4可能是这个模型最为关心的输出信号。
 
 另外，我们还可以看到我们用于对比的真实信号`TTest`和模型输出的信号`YTest`差了一个步长，这一点也是代码编写人员有意而为之的：
 
-> Extract the targets from the test data. The test targets are simulated F signals of the motor shaft using the original model, **shifted by one time step**.
+<div class="quote--left" markdown="1">
+
+Extract the targets from the test data. The test targets are simulated F signals of the motor shaft using the original model, **shifted by one time step**.
+
+</div>
 
 因为新的Simulink使用了`LSTM-ROM`模块：
 
@@ -510,7 +526,11 @@ ylabel("Frequency")
 
 文档中提到说，该模块：
 
-> The block uses the predictions for the next time step through a feedback loop.
+<div class="quote--left" markdown="1">
+
+The block uses the predictions for the next time step through a feedback loop.
+
+</div>
 
 对于仿真中步长级别的差异我不是很清楚，我感觉可能是因为这个原因。
 
@@ -547,7 +567,7 @@ Selected MEX compiler 'mingw64-g++' is not supported for GPU code generation. Re
 compilers.
 ```
 
-报错的原因是电脑所使用的编译器不在supported GPU MEX的名单中。MATLAB Answers中一则Q&A提到了类似的问题 [^2]，Roberson的建议是需要将Visual Sutio作为GPU coder的编译器。于是我就下载了2022版本的Microsoft Visual Studio。再次运行时，则出现了另一个报错：
+报错的原因是电脑所使用的编译器不在supported GPU MEX的名单中。MATLAB Answers中一则Q&A提到了类似的问题[^2]，Roberson的建议是需要将Visual Sutio作为GPU coder的编译器。于是我就下载了2022版本的Microsoft Visual Studio。再次运行时，则出现了另一个报错：
 
 ```
 Error using script3_test_model
@@ -558,7 +578,7 @@ nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' an
 ex_sdl_flexible_shaft_lstm_sfun.cu 
 ```
 
-错误的原因是：Microsoft Visual Studio 2022并不是所支持的版本，需要使用2017至2019年之间的版本 于是，我就2022的版本删除，又下载了2019版。再次运行后，又出现了新的报错：
+错误的原因是：Microsoft Visual Studio 2022并不是所支持的版本，需要使用2017至2019年之间的版本。于是，我就删除了2022的版本，又下载了2019版。再次运行后，又出现了新的报错：
 
 ```
 Warning: The file containing block diagram 'ex_sdl_flexible_shaft_lstm' is shadowed by a file of the same name higher on the MATLAB
@@ -653,7 +673,7 @@ driver to version 11.2 or greater. For more information on GPU
 support, see GPU Support by Release.
 ```
 
-所以，升级驱动可能会解决这一问题 [^4]。
+所以，升级驱动可能会解决这一问题[^4]。
 
 在桌面右键点击`NVIDIA 控制面板`，再点击软件左下角的系统信息，可以看到GPU的详细信息：
 
@@ -661,7 +681,7 @@ support, see GPU Support by Release.
 
 可以看到GPU型号是GeForce GTX 1050，此时的驱动程序版本是：398.36。
 
-我们到NVIDIA官网 [^3]，选择合适的驱动程序并下载：
+我们到NVIDIA官网[^3]，选择合适的驱动程序并下载：
 
 ![image-20230102211754675](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230102211754675.png?raw=true)
 
@@ -709,14 +729,14 @@ ans =
             DeviceSelected: 1
 ```
 
-bingo~ 之后就可以运行啦~~
+bingo\~ 之后就可以运行啦\~\~
 
 <br>
 
 **Reference**
 
-[^1]: [Physical System Modeling Using LSTM Network in Simulink - MathWorks](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ug/physical-system-modeling-using-lstm-network.html).
+[^1]: [Physical System Modeling Using LSTM Network in Simulink](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ug/physical-system-modeling-using-lstm-network.html).
 [^2]: [Why am I getting this error?](https://ww2.mathworks.cn/matlabcentral/answers/422014-why-am-i-getting-this-error#answer_339593).
 [^3]: [官方驱动 - NVIDIA](https://www.nvidia.cn/Download/index.aspx?lang=cn).
-[^4]: [matlab报错：graphics driver version 9.1 is not supported. update graphics driver to version 11or greate_耳东哇的博客-CSDN博客](https://blog.csdn.net/weixin_43930851/article/details/123296435).
-[^5]: [Stateful Predict: Predict responses using a trained recurrent neural network - MathWorks](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ref/statefulpredict.html).
+[^4]: [matlab报错：graphics driver version 9.1 is not supported. update graphics driver to version 11or greate\_耳东哇的博客](https://blog.csdn.net/weixin_43930851/article/details/123296435).
+[^5]: [Stateful Predict: Predict responses using a trained recurrent neural network](https://ww2.mathworks.cn/help/releases/R2022a/deeplearning/ref/statefulpredict.html).

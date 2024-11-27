@@ -6,7 +6,7 @@ categories:
  - Electrical Engineering
  - MATLAB
 date: 2024-07-17 11:28:36 +0800
-last_modified_at: 2024-11-20 23:59:53 +0800
+last_modified_at: 2024-11-27 12:52:11 +0800
 ---
 
 **Articles**
@@ -50,6 +50,9 @@ last_modified_at: 2024-11-20 23:59:53 +0800
 
 - [Modeling Electromagnetic Coils](https://www.comsol.com/support/learning-center/article/Introduction-to-Modeling-Electromagnetic-Coils-8251/112), COMSOL.
 - [CFD-Navier-Stokes](https://www.mathworks.com/matlabcentral/fileexchange/69661-cfd-navier-stokes?s_tid=srchtitle_CFD_7), MATLAB.
+- [PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182).
+  - GitHub repo: [pdebench/PDEBench](https://github.com/pdebench/PDEBench).
+
 
 <br>
 

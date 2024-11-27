@@ -1,5 +1,5 @@
 ---
-title: (Sept. 18, 2024) Fed Cut Interest Rates by 50 Basis Points
+title: 📰 (Sept. 18, 2024) Fed Cut Interest Rates by 50 Basis Points
 toc: false
 categories:
  - Economics & Finance

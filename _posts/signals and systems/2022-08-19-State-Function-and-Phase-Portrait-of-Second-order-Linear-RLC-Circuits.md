@@ -4,10 +4,10 @@ categories:
  - Signals and Systems
  - Uncertainty
 date: 2022-08-19 09:17:37 +0800
-last_modified_at: 2024-11-11 19:17:58 +0800
+last_modified_at: 2024-11-28 17:36:07 +0800
 ---
 
-# 状态方程、状态平面、相轨迹
+# State function, state plane, phase trajectory
 
 二阶非线性电路方程的一般形式可以写作
 
@@ -53,7 +53,7 @@ $$
 
 <br>
 
-# 二阶 RLC 串联电路放电的动态过程（线性元件）
+# Dynamic process of discharge in second-order RLC series circuit (with linear elements)
 
 下面用状态平面讨论二阶 RLC 串联电路放电的动态过程，其电路图如下图所示。为了简化假设，假设电阻 R、电感 L 和电容 C 都是线性元件。
 
@@ -115,11 +115,11 @@ $$
 在下面的讨论中，均假设 $L=1\ \mathrm{H}$，$C=1\ \mathrm{F}$ ，使用 MATLAB 的 `ode45` 函数求状态方程的数值解，以观察不同的初始条件 $U_0$ 对于相轨迹的影响，以及通过改变电阻 $R$ 讨论不同阻尼程度对于相轨迹的影响。
 {: .notice--primary}
 
-## 当 $\delta^2<\omega_0^2$ 时：衰减振荡放电（欠阻尼）
+## If $\delta^2<\omega_0^2$ (underdamped): decaying oscillation discharge 
 
 当 $\delta^2<\omega_0^2$ 时，即当 $R<2\sqrt{\dfrac{L}{C}}=2$ 时，电路中的放电过程为衰减振荡过程。
 
-### 不同初值对于相轨迹的影响（相图）
+### Different initials
 
 ```matlab
 clc, clear, close
@@ -168,7 +168,7 @@ end
 
 上图展现了在衰减振荡状态的情况下不同初值的相轨迹，这组相轨迹就是一个相图。
 
-### 不同元件参数对于相轨迹的影响
+### Different parameters
 
 上图中所展示的衰减振荡状态，其参数为 $R=1\ \Omega$，$L=1\ \mathrm{H}$，$C=1\ \mathrm{F}$，此时在仍满足衰减振荡的条件下，改变不同的元件参数（为了简化分析，这里只改变电阻 $R$ 的大小），观察相轨迹的差异。
 
@@ -267,11 +267,11 @@ end
 
 无论是初值不同还是元件参数不同，电路状态方程所对应的相轨迹都表现为螺旋线，并且以原点为其渐近点，该原点就是方程 $\eqref{eqs4}$ 的“平衡点”。
 
-## 当 $\delta^2>\omega_0^2$ 时：非周期衰减放电（过阻尼）
+## If $\delta^2>\omega_0^2$ (overdamped): non-periodic decaying discharge
 
 当 $\delta^2>\omega_0^2$ 即当 $R>2\sqrt{\dfrac{L}{C}}=2$ 时，电路中的放电过程为非周期衰减性质。
 
-### 不同初值的对于相轨迹的影响（相图）
+### Different initials
 
 ```matlab
 clc, clear, close
@@ -336,7 +336,7 @@ end
 
 对应于不同的初始条件，相图是一组变形的抛物线，原点是它们的渐近点，相点的运动是趋于原点的。
 
-### 不同元件参数对于相轨迹的影响
+### Different parameters
 
 类比衰减振荡放电情形的分析，在非周期衰减震荡放电的情况下，令电阻 $R$ 取不同的值，而初值相同，观察相轨迹的差异。
 
@@ -415,11 +415,11 @@ end
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220818232101598.png?raw=true" alt="image-20220818232101598" style="zoom:50%;" />
 
-## 当 $\delta=0$ 时：不衰减的正弦振荡
+## If $\delta=0$ (critically damped): non-decaying sinusoidal oscillation
 
 当 $\delta=0$ ，即 $R=0$ 时。
 
-### 不同初值的对于相轨迹的影响（相图）
+### Different initials
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220819090011968.png?raw=true" alt="image-20220819090011968" style="zoom:50%;" />
 

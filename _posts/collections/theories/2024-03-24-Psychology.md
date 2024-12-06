@@ -5,7 +5,7 @@ categories:
  - Psychology
  - Sociology
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-11-24 11:02:36 +0800
+last_modified_at: 2024-11-29 15:29:49 +0800
 ---
 
 ## Anchoring effect
@@ -53,6 +53,20 @@ An <i class="term">information cocoon</i> occurs due to a user’s active choice
 
 <br>
 
+## Gaslighting
+
+[Gaslighting](https://en.wikipedia.org/wiki/Gaslighting): Gaslighting is a colloquialism, defined as manipulating someone into questioning their own perception of reality. The expression, which derives from the title of the 1944 film Gaslight, became popular in the mid-2010s. Merriam-Webster cites deception of one's memory, perception of reality, or mental stability.
+
+[Gaslighting](https://www.psychologytoday.com/intl/basics/gaslighting): Gaslighting is an insidious form of manipulation and psychological control. Victims of gaslighting are deliberately and systematically fed false information that leads them to question what they know to be true, often about themselves. They may end up doubting their memory, their perception, and even their sanity. Over time, a gaslighter’s manipulations can grow more complex and potent, making it increasingly difficult for the victim to see the truth.
+
+[The Sociology of Gaslighting](https://www.asanet.org/wp-content/uploads/attach/journals/oct19asrfeature.pdf), by Paige L. Sweet: Gaslighting---a type of psychological abuse aimed at making victims seem or feel “crazy,” creating a “surreal” interpersonal environment---has captured public attention. Despite the popularity of the term, sociologists have ignored gaslighting, leaving it to be theorized by psychologists. However, this article argues that gaslighting is primarily a sociological rather than a psychological phenomenon. Gaslighting should be understood as rooted in social inequalities, including gender, and executed in power-laden intimate relationships.
+
+**Other references**
+
+- [最胶着的美国总统选举](https://mp.weixin.qq.com/s/378zOWAwQyY_XLyiH3aQTg).
+
+<br>
+
 ## Illusory superiority
 
 > [Illusory superiority](https://en.wikipedia.org/wiki/Illusory_superiority).
@@ -66,17 +80,15 @@ The phenomenon is also known as the <i class="term">above-average effect</i>, th
 
 <br>
 
-## Gaslighting
+## Misattribution of arousal
 
-[Gaslighting](https://en.wikipedia.org/wiki/Gaslighting): Gaslighting is a colloquialism, defined as manipulating someone into questioning their own perception of reality. The expression, which derives from the title of the 1944 film Gaslight, became popular in the mid-2010s. Merriam-Webster cites deception of one's memory, perception of reality, or mental stability.
+> - [Misattribution of arousal](https://en.wikipedia.org/wiki/Misattribution_of_arousal).
 
-[Gaslighting](https://www.psychologytoday.com/intl/basics/gaslighting): Gaslighting is an insidious form of manipulation and psychological control. Victims of gaslighting are deliberately and systematically fed false information that leads them to question what they know to be true, often about themselves. They may end up doubting their memory, their perception, and even their sanity. Over time, a gaslighter’s manipulations can grow more complex and potent, making it increasingly difficult for the victim to see the truth.
+In psychology, <i class="term">misattribution of arousal</i> is the process whereby people make a mistake in assuming what is causing them to feel aroused. For example, when actually experiencing <i class="emphasize">physiological responses related to fear</i>, people mislabel those responses as <i class="emphasize">romantic arousal</i>. The reason physiological symptoms may be attributed to incorrect stimuli is because many stimuli have similar physiological symptoms such as increased blood pressure or shortness of breath.
 
-[The Sociology of Gaslighting](https://www.asanet.org/wp-content/uploads/attach/journals/oct19asrfeature.pdf), by Paige L. Sweet: Gaslighting---a type of psychological abuse aimed at making victims seem or feel “crazy,” creating a “surreal” interpersonal environment---has captured public attention. Despite the popularity of the term, sociologists have ignored gaslighting, leaving it to be theorized by psychologists. However, this article argues that gaslighting is primarily a sociological rather than a psychological phenomenon. Gaslighting should be understood as rooted in social inequalities, including gender, and executed in power-laden intimate relationships.
+One of the initial studies looking into this phenomenon conducted by Schachter and Singer (1962) was based on the idea that the experience of arousal could be ambiguous and therefore misattributed to an incorrect stimulus. Operating under this assumption, the researchers developed the <i class="term">two factor theory of emotion</i>. Misattribution of arousal, which is an influence on emotion processing, can be found in multiple situations, such as romantic situations and physiological responses from exercise.
 
-**Other references**
-
-- [最胶着的美国总统选举](https://mp.weixin.qq.com/s/378zOWAwQyY_XLyiH3aQTg).
+An example of the possible effects of misattribution of arousal is <i class="emphasize">perceiving a potential partner as more attractive because of a heightened state of physiological stress</i>. A study done by White et al. (1981) investigated this phenomenon and found that those in an unrelated aroused state will rate an attractive confederate more highly than a rater without arousal. The researchers also found that aroused raters would dislike an unattractive confederate more than those without arousal.
 
 <br>
 

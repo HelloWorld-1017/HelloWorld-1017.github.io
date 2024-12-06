@@ -5,7 +5,7 @@ categories:
  - Collections
  - Machine Learning
 date: 2024-07-17 09:48:31 +0800
-last_modified_at: 2024-10-22 16:34:19 +0800
+last_modified_at: 2024-11-30 23:50:07 +0800
 ---
 
 **Books**
@@ -18,15 +18,11 @@ last_modified_at: 2024-10-22 16:34:19 +0800
 - [Computing Machinery and Intelligence](https://courses.cs.umbc.edu/471/papers/turing.pdf), A. M. Turing, 1950.
 - [The Essential Turing: Seminal Writings in Computing, Logic, Philosophy, Artificial Intelligence, and Artificial Life: Plus The Secrets of Enigma](https://www.cse.chalmers.se/~aikmitr/papers/Turing.pdf), B. Jack Copeland, Editor.
 
-<br>
-
 **Blogs**
 
 - [colah's blog](https://colah.github.io/).
   - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/).
 - [Ahead of AI](https://magazine.sebastianraschka.com/).
-
-<br>
 
 **Papers**
 
@@ -42,3 +38,9 @@ last_modified_at: 2024-10-22 16:34:19 +0800
 - Neural general circulation models for weather and climate.
   - Kochkov, D., Yuval, J., Langmore, I. *et al.* Neural general circulation models for weather and climate. Nature 632, 1060–1066 (2024). [https://doi.org/10.1038/s41586-024-07744-y](https://doi.org/10.1038/s41586-024-07744-y).
   - [Google AI predicts long-term climate trends and weather — in minutes](https://www.nature.com/articles/d41586-024-02391-9).
+- Why ‘open’ AI systems are actually closed, and why this matters
+  - Widder, D.G., Whittaker, M. & West, S.M. Why ‘open’ AI systems are actually closed, and why this matters. Nature 635, 827–833 (2024). [https://doi.org/10.1038/s41586-024-08141-1](https://doi.org/10.1038/s41586-024-08141-1).
+  - [Nature刊文：“open”AI的实际作用非常有限](https://mp.weixin.qq.com/s/WYF4tNzA9FddFi5eh0TLgQ).
+- Physics-informed learning of governing equations from scarce data.
+  - Chen, Z., Liu, Y. & Sun, H. Physics-informed learning of governing equations from scarce data. Nat Commun 12, 6136 (2021). [https://doi.org/10.1038/s41467-021-26434-1](https://doi.org/10.1038/s41467-021-26434-1).
+  - [Nature子刊 \|\| 物理知识驱动的神经网络：从稀疏数据中发现偏微分方程](https://mp.weixin.qq.com/s/wEPN8OaSOWI7tGIDD9apbQ).

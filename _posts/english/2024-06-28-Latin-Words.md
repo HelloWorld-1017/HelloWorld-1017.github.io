@@ -3,7 +3,7 @@ title: Commonly Used Latin Words
 categories:
  - English
 date: 2024-06-28 23:49:22 +0800
-last_modified_at: 2024-11-27 14:58:40 +0800
+last_modified_at: 2024-11-28 14:27:57 +0800
 ---
 
 ## carpe diem
@@ -120,6 +120,14 @@ by or of itself.
 "If you want peace, prepare for war."
 
 The main clause of the adage was used as a motto by German arms maker Deutsche Waffen und Munitionsfabriken (DWM), and is the source of the term Parabellum as applied to firearms and ammunition (especially the [7.65mm Parabellum](https://en.wikipedia.org/wiki/7.65%C3%9721mm_Parabellum) and the [9mm Parabellum](https://en.wikipedia.org/wiki/9%C3%9719mm_Parabellum) cartridges). "Parabellum" was the telegraphic address of DWM.
+
+<br>
+
+## Veni, vidi, vici
+
+> - [Veni, vidi, vici](https://en.wikipedia.org/wiki/Veni,_vidi,_vici).
+
+Veni, vidi, vici, "I came; I saw; I conquered", is a Latin phrase used to refer to a swift, conclusive victory. The phrase is popularly attributed to Julius Caesar who, according to Appian, used the phrase in a letter to the Roman Senate around 47 BC after he had achieved a quick victory in his short war against Pharnaces II of Pontus at the Battle of Zela (modern-day Zile, Turkey).
 
 <br>
 

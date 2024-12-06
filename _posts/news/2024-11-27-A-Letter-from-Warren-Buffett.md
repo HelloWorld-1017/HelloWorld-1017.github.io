@@ -2,8 +2,9 @@
 title: 📰 (Nov. 25, 2024) A Letter from Warren Buffett
 toc: false
 categories:
- - Philosophy
+ - Business
  - News
+ - Philosophy
 date: 2024-11-27 21:59:23 +0800
 last_modified_at: 2024-11-27 21:59:23 +0800
 ---

@@ -1,5 +1,5 @@
 ---
-title: 🎶 Something I Don't Need
+title: 🎶 Something I Don't Need 🌊🏖️🌴🌞
 toc: false
 categories:
  - Entertainment

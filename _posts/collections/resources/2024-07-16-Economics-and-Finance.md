@@ -7,7 +7,7 @@ categories:
 tags:
  - Game Theory
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-11-20 12:37:12 +0800
+last_modified_at: 2024-12-07 16:29:19 +0800
 ---
 
 **Articles**
@@ -15,8 +15,6 @@ last_modified_at: 2024-11-20 12:37:12 +0800
 - [Put \$10,000 in the S&P 500 ETF and Wait 20 Years](https://www.investopedia.com/articles/personal-finance/022216/put-10000-sp-500-etf-and-wait-20-years.asp).
 - [Time, Not Timing, Is What Matters](https://www.capitalgroup.com/individual/planning/investing-fundamentals/time-not-timing-is-what-matters.html).
 - [Buffett's Lessons from Long Term Capital Management](https://novelinvestor.com/buffetts-lessons-long-term-capital-management/).
-
-<br>
 
 **Blogs**
 
@@ -30,8 +28,6 @@ last_modified_at: 2024-11-20 12:37:12 +0800
 - [Financial Samurai](https://www.financialsamurai.com/).
 - [小Lin说](https://www.youtube.com/@xiao_lin_shuo).
 
-<br>
-
 **Books**
 
 - [Security Analysis (Sixth Edition)](https://glenbradford.com/files/Stocks/security-analysis-benjamin-graham-6th-edition-pdf-february-24-2010-12-08-am-3-0-meg.pdf), Benjamin Graham, David L. Dood.
@@ -41,20 +37,18 @@ last_modified_at: 2024-11-20 12:37:12 +0800
 - [Quantitative trading: how to build your own algorithmic trading business](https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf), Ernest P. Chan, 2021.
 - [Game Theory](https://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/game-theory/index.html), Janet Chen, Su-I Lu, and Dan Vekhter.
 
-<br>
-
 **Data source**
 
 - [Yahoo Finance](https://finance.yahoo.com/).
 - [Federal Reserve Economic Data (FRED)](https://fred.stlouisfed.org/).
-- [Securities and Exchange Commission (SEC)](https://www.sec.gov/)
-  - [Form 10-Q](https://www.sec.gov/files/form10-q.pdf): [quarterly report](https://www.investopedia.com/terms/1/10q.asp)
-  - [Form 10-K](https://www.sec.gov/files/form10-k.pdf): [annual report](https://www.investopedia.com/terms/1/10-k.asp)
-  - [Form 8-K](https://www.sec.gov/files/form8-k.pdf): [to announce significant events](https://www.investopedia.com/terms/1/8-k.asp)
-  - [How to Read a 10-K/10-Q](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/how-read)
-  - EDGAR Search Results
-    - [Apple Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&owner=include&count=40) (see also in Apple Newsroom, e.g. [Apple reports third quarter results](https://www.apple.com/newsroom/2024/08/apple-reports-third-quarter-results/))
-    - [Berkshire Hathaway Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001067983&type=&dateb=&owner=include&count=40) ([BERKSHIRE HATHAWAY ANNUAL & INTERIM REPORTS](https://www.berkshirehathaway.com/reports.html))
+- [Securities and Exchange Commission (SEC)](https://www.sec.gov/).
+  - [Form 10-Q](https://www.sec.gov/files/form10-q.pdf): [quarterly report](https://www.investopedia.com/terms/1/10q.asp).
+  - [Form 10-K](https://www.sec.gov/files/form10-k.pdf): [annual report](https://www.investopedia.com/terms/1/10-k.asp).
+  - [Form 8-K](https://www.sec.gov/files/form8-k.pdf): [to announce significant events](https://www.investopedia.com/terms/1/8-k.asp).
+  - [How to Read a 10-K/10-Q](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/how-read).
+  - EDGAR Search Results.
+    - [Apple Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&owner=include&count=40) (see also in Apple Newsroom, e.g. [Apple reports third quarter results](https://www.apple.com/newsroom/2024/08/apple-reports-third-quarter-results/)).
+    - [Berkshire Hathaway Inc.](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001067983&type=&dateb=&owner=include&count=40) ([BERKSHIRE HATHAWAY ANNUAL & INTERIM REPORTS](https://www.berkshirehathaway.com/reports.html)).
 - [上海证券交易所 (Shanghai Stock Exchange, SSE)](https://www.sse.com.cn/).
 - [U.S. Department of Labor](https://www.dol.gov/): Employment status and nonfarm payrolls.
 - [National (Chinese) Institution for Finance & Development](http://www.nifd.cn/home/index): China’s macro leverage ratio.
@@ -63,8 +57,6 @@ last_modified_at: 2024-11-20 12:37:12 +0800
 - [Google Dataset Search](https://datasetsearch.research.google.com/).
 - [CEIC Global Economic Data, Indicators, Charts & Forecasts](https://www.ceicdata.com/en).
 - [World Bank Group](https://www.worldbank.org/en/home).
-
-<br>
 
 **Economic indicators and indexes**
 

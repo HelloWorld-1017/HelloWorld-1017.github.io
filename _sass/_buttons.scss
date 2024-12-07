@@ -116,7 +116,7 @@
   right: 30px;
   color: black;
   z-index: 1000;
-  background-color: white;
+  background-color: $AliceBlue;
   padding: auto;
   border-radius: 3px;
   font-weight: bold;
@@ -124,4 +124,5 @@
   border-color: $behance-color;
   border-width: 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
 }

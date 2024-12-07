@@ -9,10 +9,10 @@ tags:
  - Python Graphics
  - Python Matplotlib
 date: 2024-12-06 13:19:45 +0800
-last_modified_at: 2024-12-06 13:19:45 +0800
+last_modified_at: 2024-12-07 15:49:02 +0800
 ---
 
-The 17th page in 2023 Berkshire Hathaway annual report[^1] shows a comparison between Berkshire Hathaway's Performance and dividends included S&P 500 index from 1965 to 2023, in total 59 years (see [Appendix](#appendix)). I want to visualize it using Python in this post. Here is it.
+The 17th page in 2023 Berkshire Hathaway annual report[^1] shows a comparison between Berkshire Hathaway's Performance and dividends included S&P 500 index from 1965 to 2023, in total 59 years. (See [Appendix](#appendix). BTW, it’s actually a tradition of Berkshire to compare with S&P 500 in annual reports[^2].) I want to visualize it using Python in this post. Here is it.
 
 ```python
 import matplotlib.pyplot as plt
@@ -99,7 +99,7 @@ Compounded annual gain (SP500): 10.20%
 
 We can intuitively feel the staggering power of compound rate and how great Berkshire is under Buffett's control.
 
-Then, we have a detailed look at performance comparison in the past 20 years
+Then, we have a detailed look at performance comparison in the past 20 years:
 
 ```python
 # ...
@@ -151,3 +151,5 @@ Note: In the annual report, the time period adopted when calculating "Compound A
 **References**
 
 [^1]: [Berkshire Hathaway Inc. 2023 Annual Report](https://www.berkshirehathaway.com/2023ar/2023ar.pdf).
+[^2]: [BERKSHIRE HATHAWAY ANNUAL & INTERIM REPORTS](https://www.berkshirehathaway.com/reports.html).
+

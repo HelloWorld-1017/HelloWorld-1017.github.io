@@ -6,7 +6,7 @@ categories:
  - Electrical Engineering
  - MATLAB
 date: 2024-07-17 11:28:36 +0800
-last_modified_at: 2024-11-27 12:52:11 +0800
+last_modified_at: 2024-12-07 22:23:22 +0800
 ---
 
 **Articles**
@@ -17,14 +17,10 @@ last_modified_at: 2024-11-27 12:52:11 +0800
 - [利用 MATLAB 通过模型预测控制优化风力发电机的效率](https://mp.weixin.qq.com/s/HdPbPeX7lgghKR9vUK2MQw).
   - Control-oriented wind turbine load estimation based on local linear neuro-fuzzy models, doi: [10.1088/1742-6596/2767/3/032016](https://iopscience.iop.org/article/10.1088/1742-6596/2767/3/032016).
 
-<br>
-
 **Books**
 
 - [Fundamentals of Power Electronics (Second Edition)](https://www.researchgate.net/profile/Punit_Kumar19/post/How_to_Design_a_boost_Converter_parameter/attachment/59d6365a79197b8077993c36/AS:388309265207298@1469591552366/download/Fundamentals+of+Power+Electronics+(Robert+W.Erickson,+Dragan+Maksimovic,+2e,+2001)+-+Book.pdf), Robert W. Erickson *et al.*.
 - [Fundamentals of Aerodynamics (Sixth Edition)](https://aviationdose.com/wp-content/uploads/2020/01/Fundamentals-of-aerodynamics-6-Edition.pdf), John D. Anderson.
-
-<br>
 
 **Courses**
 
@@ -35,8 +31,6 @@ last_modified_at: 2024-11-27 12:52:11 +0800
   - D: if you’re getting close to where you want to be, slow down.
 - [PID Controller Explained](https://www.youtube.com/watch?v=fv6dLTEvl74).
 
-<br>
-
 **Corps**
 
 - [General Electric](https://www.ge.com/).
@@ -44,17 +38,10 @@ last_modified_at: 2024-11-27 12:52:11 +0800
 - [Schneider Electric](https://www.se.com/us/en/).
 - [SIMON](https://www.simonelectric.com/intl).
 
-<br>
-
 **Finite Element Method**
 
 - [Modeling Electromagnetic Coils](https://www.comsol.com/support/learning-center/article/Introduction-to-Modeling-Electromagnetic-Coils-8251/112), COMSOL.
 - [CFD-Navier-Stokes](https://www.mathworks.com/matlabcentral/fileexchange/69661-cfd-navier-stokes?s_tid=srchtitle_CFD_7), MATLAB.
-- [PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182).
-  - GitHub repo: [pdebench/PDEBench](https://github.com/pdebench/PDEBench).
-
-
-<br>
 
 **MATLAB Tools**
 
@@ -62,8 +49,7 @@ last_modified_at: 2024-11-27 12:52:11 +0800
 - [MATLAB-Simulink-Challenge-Project-Hub/projects/Digital Twin and Predictive Maintenance of Pneumatic Systems](https://github.com/mathworks/MATLAB-Simulink-Challenge-Project-Hub/tree/main/projects/Digital%20Twin%20and%20Predictive%20Maintenance%20of%20Pneumatic%20Systems).
 - [Renewable Energy Integration Design with Simscape](https://www.mathworks.com/matlabcentral/fileexchange/123870-renewable-energy-integration-design-with-simscape?s_eid=PSM_wechat&requestedDomain=) ([simscape/Renewable-Energy-Integration-Simscape](https://github.com/simscape/Renewable-Energy-Integration-Simscape)).
 
-<br>
-
 **Power system**
 
 - [Energy demand management](https://en.wikipedia.org/wiki/Energy_demand_management), a.k.a demand-side management (DSM) or demand-side response (DSR).
+- Dec. 07, 2024, [【学术前沿】徐政：新型电力系统的五大动态特性概述](https://mp.weixin.qq.com/s/NPIyhIHxH7ZXf6U7e6ap9A).

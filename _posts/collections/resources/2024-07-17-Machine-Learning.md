@@ -5,8 +5,12 @@ categories:
  - Collections
  - Machine Learning
 date: 2024-07-17 09:48:31 +0800
-last_modified_at: 2024-11-30 23:50:07 +0800
+last_modified_at: 2024-12-07 22:22:57 +0800
 ---
+
+**Articles**
+
+- Mar. 18, 2024, [NVIDIA and Siemens Bring Immersive Visualization and Generative AI to Industrial Design and Manufacturing](https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/).
 
 **Books**
 
@@ -26,6 +30,8 @@ last_modified_at: 2024-11-30 23:50:07 +0800
 
 **Papers**
 
+- [PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182).
+  - GitHub repo: [pdebench/PDEBench](https://github.com/pdebench/PDEBench).
 - Advancing mathematics by guiding human intuition with AI.
   - Davies, A., Veličković, P., Buesing, L. et al. Advancing mathematics by guiding human intuition with AI. Nature 600, 70–74 (2021). [https://doi.org/10.1038/s41586-021-04086-x](https://doi.org/10.1038/s41586-021-04086-x).
   - GitHub repo: [google-deepmind/mathematics\_conjectures](https://github.com/google-deepmind/mathematics_conjectures).
@@ -44,3 +50,5 @@ last_modified_at: 2024-11-30 23:50:07 +0800
 - Physics-informed learning of governing equations from scarce data.
   - Chen, Z., Liu, Y. & Sun, H. Physics-informed learning of governing equations from scarce data. Nat Commun 12, 6136 (2021). [https://doi.org/10.1038/s41467-021-26434-1](https://doi.org/10.1038/s41467-021-26434-1).
   - [Nature子刊 \|\| 物理知识驱动的神经网络：从稀疏数据中发现偏微分方程](https://mp.weixin.qq.com/s/wEPN8OaSOWI7tGIDD9apbQ).
+- [DiffPhyCon: A Generative Approach to Control Complex Physical Systems](https://arxiv.org/abs/2407.06494).
+  - [前沿进展：复杂物理系统的生成式控制方法｜NeurIPS 2024](https://mp.weixin.qq.com/s/xV8GydA51Jc3OruWSUSRmA).

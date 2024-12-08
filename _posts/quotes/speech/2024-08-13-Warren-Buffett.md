@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:30:49 +0800
-last_modified_at: 2024-12-07 18:59:07 +0800
+last_modified_at: 2024-12-08 11:53:30 +0800
 ---
 
 
@@ -49,7 +49,7 @@ Our favourite holding period is forever.
 
 <div class="quote--left" markdown="1">
 
-I often recommend low-cost S&P 500 index funds, but only a few humble friends would believe me. Hardly any of the extremely wealthy investors, fund managers, and pension funds actually followed my advice, and they politely thanked me. But the turnaround was persuaded by asset management managers who charged high management fees to choose another way of investing[^3].
+I often recommend low-cost S&P 500 index funds, but only a few humble friends would believe me. Hardly any of the extremely wealthy investors, fund managers, and pension funds actually followed my advice, and they politely thanked me. But the turnaround was persuaded by asset management managers who charged high management fees to choose another way of investing.[^3]
 
 </div>
 

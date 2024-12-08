@@ -3,7 +3,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('a[href^="#"][href!="#"]').click(function (e) {
+        $('a[href^="#"][href!="#"][href!="#bottom"]').click(function (e) {
             e.preventDefault();
             var hash = this.hash;
             var target = document.getElementById(hash.slice(1));

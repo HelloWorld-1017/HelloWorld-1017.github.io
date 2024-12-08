@@ -7,6 +7,10 @@
     text-align: center;
     padding: 2em;
     color: $Ivory4;
+
+    u {
+        text-decoration: $Ivory4 solid underline;
+    }
 }
 
 .quote--left {
@@ -17,6 +21,10 @@
     color: $Ivory4;
     quotes: "\201C" "\201C";
     // text-align: justify;
+
+    u {
+        text-decoration: $Ivory4 solid underline;
+    }
 }
 
 // Add quote mark

@@ -3,7 +3,7 @@ title: Commonly Used Latin Words
 categories:
  - English
 date: 2024-06-28 23:49:22 +0800
-last_modified_at: 2024-11-28 14:27:57 +0800
+last_modified_at: 2024-12-08 12:07:06 +0800
 ---
 
 ## carpe diem
@@ -24,7 +24,7 @@ a Latin expression meaning "seize the day", used for saying that people should e
 
 > - [De novo](https://en.wikipedia.org/wiki/De_novo).
 
-used in English to mean 'from the beginning', 'anew'.
+used in English to mean "from the beginning", "anew".
 
 - As in other machine learning application domains, benchmarks in Scientific ML may serve as a source of readily-available training data for algorithm development and testing without the overhead of generating data ***de novo***. (from [PDEBENCH: An Extensive Benchmark for Scientific Machine Learning](https://arxiv.org/abs/2210.07182)).
 
@@ -37,19 +37,19 @@ used in English to mean 'from the beginning', 'anew'.
 > - [E.G.](https://dictionary.cambridge.org/dictionary/english/eg?q=e.g.).
 > - [Eg](https://youglish.com/pronounce/e.g./english).
 
-abbreviation for **exempli gratia**: a Latin phrase that means "for example". It can be pronounced as "e.g." or "for example".
+abbreviation for **exempli gratia**, a Latin phrase that means "for example". It can be pronounced as "e.g." or "for example".
 
 - You should eat more food that contains a lot of fibre, ***e.g.*** fruit, vegetables, and bread.
 
 <br>
 
-## et al.
+## et al. (et alia)
 
 > et al.
 >
 > - [ET AL.](https://dictionary.cambridge.org/dictionary/english/et-al).
 
-(skip over)
+abbreviation for **et alia**, meaning "and others". It is used in formal writing to avoid a long list of names of people who have written something together.
 
 <br>
 
@@ -60,7 +60,7 @@ abbreviation for **exempli gratia**: a Latin phrase that means "for example". It
 > - [ETC.](https://dictionary.cambridge.org/dictionary/english/etc).
 > - [Etc](https://youglish.com/pronounce/etc/english).
 
-abbreviation for **et cetera**: and other similar things. It is used to avoid giving a complete list.
+abbreviation for **et cetera**, meaning "and other similar things". It is used to avoid giving a complete list.
 
 - We saw lots of lions, tigers, elephants, ***etc***.
 

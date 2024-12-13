@@ -1,7 +1,8 @@
 ---
-title: 📰 (Nov. 19, 2024) Coca-Cola Ad \"The Holiday Magic is coming\"
+title: 📰 [Nov. 19, 2024] Coca-Cola Ad \"The Holiday Magic is coming\"
 toc: false
 categories:
+ - Business
  - News
 date: 2024-11-25 18:32:59 +0800
 last_modified_at: 2024-11-26 18:34:50 +0800

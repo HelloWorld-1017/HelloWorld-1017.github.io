@@ -7,8 +7,9 @@ categories:
 tags:
  - Python Graphics
  - Python Matplotlib
+ - Python Pandas
 date: 2024-12-06 13:19:45 +0800
-last_modified_at: 2024-12-10 10:56:58 +0800
+last_modified_at: 2024-12-13 13:37:35 +0800
 ---
 
 # Berkshire Hathaway's performance vs. S&P 500
@@ -209,6 +210,8 @@ plt.savefig("fig.png", dpi=900, bbox_inches='tight')
 plt.show()
 ```
 
+<div id="results-1"></div>
+
 ```
 1986-2023
 Total gain (Berkshire): 219.65 
@@ -256,6 +259,45 @@ Compounded annual gain (NASDAQ 100): 16.70%
 ```
 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202412101056383.png" alt="fig" style="width:67%;" />
+
+<br>
+
+# The power of each compound interest
+
+At last, take compounded annual gain of [Berkshire and S&P 500](#results) (19.86% and 10.20% respectively) and [NASDAQ 100](#results-1) (13.60%), we can calculate how \\$1 compounds every 5 years with each compound interest.
+
+```python
+import numpy as np
+from pandas import DataFrame
+
+years = np.array(range(5,65,5))
+berkshire, sp500, nasdaq100 = (1+0.1986) ** years, (1+0.1020) ** years, (1+0.1360) ** years
+
+data = DataFrame({'Years': years,
+       'Berkshire': berkshire,
+       'S&P 500': sp500,
+       'NASDAQ 100': nasdaq100})
+data = data.set_index('Years')
+
+print(data)
+```
+
+```
+          Berkshire     S&P 500   NASDAQ 100
+Years                                       
+5          2.473839    1.625204     1.891872
+10         6.119878    2.641289     3.579178
+15        15.139590    4.292635     6.771345
+20        37.452901    6.976408    12.810516
+25        92.652434   11.338089    24.235852
+30       229.207171   18.426711    45.851119
+35       567.021554   29.947171    86.744430
+40      1402.719823   48.670273   164.109323
+45      3470.102484   79.099138   310.473768
+50      8584.473573  128.552263   587.376502
+55     21236.602338  208.923695  1111.240921
+60     52535.927219  339.543695  2102.325134
+```
 
 <br>
 

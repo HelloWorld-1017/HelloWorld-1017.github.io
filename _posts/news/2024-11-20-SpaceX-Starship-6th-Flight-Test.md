@@ -1,8 +1,9 @@
 ---
-title: 📰 (Nov. 19, 2024) SpaceX Starship 6th Flight Test
+title: 📰 [Nov. 19, 2024] SpaceX Starship 6th Flight Test
 toc: false
 categories:
  - News
+ - Universe
 date: 2024-11-20 18:38:13 +0800
 last_modified_at: 2024-11-26 18:38:19 +0800
 ---

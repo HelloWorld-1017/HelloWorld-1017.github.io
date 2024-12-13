@@ -1,5 +1,5 @@
 ---
-title: 📰 (Nov. 25, 2024) A Letter from Warren Buffett
+title: 📰 [Nov. 25, 2024] A Letter from Warren Buffett
 toc: false
 categories:
  - Business

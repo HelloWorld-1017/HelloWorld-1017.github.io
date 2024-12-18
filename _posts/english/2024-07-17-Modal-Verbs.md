@@ -3,13 +3,13 @@ title: English Modal Verbs
 categories:
  - English
 date: 2024-07-17 21:30:17 +0800
-last_modified_at: 2024-07-17 21:30:17 +0800
+last_modified_at: 2024-12-15 23:45:10 +0800
 published: false
 ---
 
 # Could
 
-> - [COULD definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/could)
+> - [COULD definition and meaning](https://www.collinsdictionary.com/dictionary/english/could)
 
 - You use could to indicate that someone had the ability to do something. You use could not or couldn't to say that someone was unable to do something.
   - For my return journey, I felt I ***could*** afford the extra and travel first class. 
@@ -85,7 +85,7 @@ published: false
 
 # May
 
-> - [MAY definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/may).
+> - [MAY definition and meaning](https://www.collinsdictionary.com/dictionary/english/may).
 
 - You use may to indicate that something will possibly happen or be true in the future, but you cannot be certain.
   - We may have some rain today. 
@@ -153,7 +153,7 @@ published: false
 
 # Might
 
-> - [MIGHT definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/might).
+> - [MIGHT definition and meaning](https://www.collinsdictionary.com/dictionary/english/might).
 
 - You use might to indicate that something will possibly happen or be true in the future, but you cannot be certain.
   - Smoking might be banned totally in most buildings. 
@@ -214,7 +214,7 @@ published: false
 
 # Should
 
-> - [SHOULD definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/should).
+> - [SHOULD definition and meaning](https://www.collinsdictionary.com/dictionary/english/should).
 
 - You use should when you are saying what would be the right thing to do or the right state for something to be in.
   - I should exercise more. 
@@ -283,13 +283,13 @@ published: false
 
 # Used to
 
-> - [When do you use 'used to' in English? \| Learning English Grammar \| Collins Education](https://grammar.collinsdictionary.com/easy-learning/when-do-you-use-used-to-in-english).
+> - [When do you use 'used to' in English?](https://grammar.collinsdictionary.com/easy-learning/when-do-you-use-used-to-in-english).
 
 <br>
 
 # Will
 
-> - [WILL definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/will).
+> - [WILL definition and meaning](https://www.collinsdictionary.com/dictionary/english/will).
 
 - You use will to indicate that you hope, think, or have evidence that something is going to happen or be the case in the future.
   - The Prime Minister is now 64 years old and in all probability this will be the last election that he is likely to contest.
@@ -356,7 +356,7 @@ published: false
 
 # Would
 
-> - [WOULD definition and meaning \| Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/would).
+> - [WOULD definition and meaning](https://www.collinsdictionary.com/dictionary/english/would).
 
 - You use would when you are saying what someone believed, hoped, or expected to happen or be the case.
   - No one believed he would actually kill himself. 
@@ -457,4 +457,4 @@ published: false
 
 **References**
 
-[1] A modal verb is a type of verb that contextually indicates a modality such as a likelihood, ability, permission, request, capacity, suggestion, order, obligation, necessity, possibility or advice. Modal verbs generally accompany the base (infinitive) form of another verb having semantic content. In English, the modal verbs commonly used are *can*, *could*, *may*, *might*, *shall*, *should*, *will*, *would*, *ought to*, *used to* and *dare*. [Modal verb - Wikipedia](https://en.wikipedia.org/wiki/Modal_verb).
+- [Modal verb](https://en.wikipedia.org/wiki/Modal_verb): A modal verb is a type of verb that contextually indicates a modality such as a likelihood, ability, permission, request, capacity, suggestion, order, obligation, necessity, possibility or advice. Modal verbs generally accompany the base (infinitive) form of another verb having semantic content. In English, the modal verbs commonly used are *can*, *could*, *may*, *might*, *shall*, *should*, *will*, *would*, *ought to*, *used to* and *dare*. 

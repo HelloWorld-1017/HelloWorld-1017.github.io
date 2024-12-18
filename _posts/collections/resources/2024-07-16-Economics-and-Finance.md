@@ -7,7 +7,7 @@ categories:
 tags:
  - Game Theory
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-12-07 16:29:19 +0800
+last_modified_at: 2024-12-15 18:19:37 +0800
 ---
 
 **Articles**
@@ -88,7 +88,6 @@ last_modified_at: 2024-12-07 16:29:19 +0800
   - [VIX Methodology](https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf).
 - VXN (CBOE NASDAQ 100 Volatility Index)
   - [Cboe Global Indices: VXN Index Dashboard](https://www.cboe.com/us/indices/dashboard/vxn/).
-
 - CNN Fear and Greed Index
   - [Fear and Greed Index](https://www.cnn.com/markets/fear-and-greed).
   - [US - CNN Fear and Greed Index](https://en.macromicro.me/charts/50108/cnn-fear-and-greed).
@@ -105,3 +104,5 @@ last_modified_at: 2024-12-07 16:29:19 +0800
   - [挖掘机指数](https://wiki.mbalib.com/wiki/%E6%8C%96%E6%8E%98%E6%9C%BA%E6%8C%87%E6%95%B0).
   - [SANY “EXCAVATOR INDEX”: CRITICAL TO CHINA’S ECONOMY OUTLOOK](https://trends.directindustry.com/sany/project-52887-165936.html).
   - [CCTV Financial Excavator Index: China's various infrastructure construction is steady, moderate and positive in 2023](https://news.futunn.com/en/flash/16299949/cctv-financial-excavator-index-china-s-various-infrastructure-construction-is?level=1&data_ticket=1721034821442308).
+- [10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity (T10Y2Y)](https://fred.stlouisfed.org/series/T10Y2Y).
+- [10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity (T10Y3M)](https://fred.stlouisfed.org/series/T10Y3M).

@@ -4,7 +4,7 @@ categories:
  - Business
  - Economics & Finance
 date: 2024-12-07 23:16:52 +0800
-last_modified_at: 2024-12-08 13:59:22 +0800
+last_modified_at: 2024-12-15 18:08:58 +0800
 ---
 
 # Treasury securities
@@ -141,6 +141,8 @@ While an inverted yield curve has often preceded recessions in recent decades, i
   - Dec. 08, 2024, 4.098%
 - [US3M](https://www.cnbc.com/quotes/US3M).
   - Dec. 08, 2024, 4.408%
+- [10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity (T10Y2Y)](https://fred.stlouisfed.org/series/T10Y2Y).
+- [10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity (T10Y3M)](https://fred.stlouisfed.org/series/T10Y3M).
 
 **China**
 

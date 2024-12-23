@@ -5,14 +5,13 @@ categories:
  - Collections
  - Mathematics
 date: 2024-07-17 10:28:34 +0800
-last_modified_at: 2024-11-24 01:56:44 +0800
+last_modified_at: 2024-12-19 17:03:47 +0800
 ---
 
 **Articles**
 
 - [高维空间中混乱的密铺](https://mp.weixin.qq.com/s/F8pDQqwrwRfcTIS_dUwbNA).
-
-<br>
+- [Why I Will Never Have a Girlfriend](https://logological.org/girlfriend) by [Tristan Miller](https://logological.org/).
 
 **Blogs**
 
@@ -24,8 +23,6 @@ last_modified_at: 2024-11-24 01:56:44 +0800
   - [低秩近似之路（四）：ID](https://kexue.fm/archives/10501).
 - [The Map of Mathematics](https://mathmap.quantamagazine.org/map/).
 - [Math News, Interviews and Columns From Quanta Magazine](https://www.quantamagazine.org/mathematics/).
-
-<br>
 
 **Books**
 

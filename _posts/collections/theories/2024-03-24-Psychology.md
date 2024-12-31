@@ -5,7 +5,7 @@ categories:
  - Psychology
  - Sociology
 date: 2024-03-24 23:05:42 +0800
-last_modified_at: 2024-11-29 15:29:49 +0800
+last_modified_at: 2024-12-27 11:19:35 +0800
 ---
 
 ## Anchoring effect
@@ -61,7 +61,7 @@ An <i class="term">information cocoon</i> occurs due to a user’s active choice
 
 [The Sociology of Gaslighting](https://www.asanet.org/wp-content/uploads/attach/journals/oct19asrfeature.pdf), by Paige L. Sweet: Gaslighting---a type of psychological abuse aimed at making victims seem or feel “crazy,” creating a “surreal” interpersonal environment---has captured public attention. Despite the popularity of the term, sociologists have ignored gaslighting, leaving it to be theorized by psychologists. However, this article argues that gaslighting is primarily a sociological rather than a psychological phenomenon. Gaslighting should be understood as rooted in social inequalities, including gender, and executed in power-laden intimate relationships.
 
-**Other references**
+**References**
 
 - [最胶着的美国总统选举](https://mp.weixin.qq.com/s/378zOWAwQyY_XLyiH3aQTg).
 
@@ -114,27 +114,59 @@ Related theory in sociology, [self-fulfilling prophecy](https://en.wikipedia.org
 
 ## Slippery slope
 
-> - [Slippery slope](https://en.wikipedia.org/wiki/Slippery_slope).
-> - [Slippery Slope](https://www.txst.edu/philosophy/resources/fallacy-definitions/slippery-slope.html).
+<div class="quote--left" markdown="1">
+
+- [Slippery slope](https://en.wikipedia.org/wiki/Slippery_slope).
+- [Slippery Slope](https://www.txst.edu/philosophy/resources/fallacy-definitions/slippery-slope.html).
 
 In a <i class="term">slippery slope argument</i>, a course of action is rejected because the slippery slope advocate believes it will lead to a chain reaction resulting in an <i class="emphasize">undesirable</i> end or ends. The core of the slippery slope argument is that a specific decision under debate is likely to result in <i class="emphasize">unintended</i> consequences. The strength of such an argument depends on whether the small step really is likely to lead to the effect. This is quantified in terms of what is known as the warrant (in this case, a demonstration of the process that leads to the significant effect).
 
-<br>
+</div>
 
 ## Spiral of silence
 
-> - [Spiral of silence](https://en.wikipedia.org/wiki/Spiral_of_silence).
+<div class="quote--left" markdown="1">
+
+- [Spiral of silence](https://en.wikipedia.org/wiki/Spiral_of_silence).
 
 The <i class="term">spiral of silence theory</i> is a political science and mass communication theory which states that an individual's perception of the distribution of public opinion influences that individual's willingness to express their own opinions. Also known as the theory of public opinion, the spiral of silence theory claims individuals will be more confident and outward with their opinion when they notice that their personal opinion is shared throughout a group. But if the individual notices that their opinion is unpopular with the group, they will be more inclined to be reserved and remain silent. In other words, from the individual's perspective, "<i class="emphasize">not isolating themself is more important than their own judgement</i>", meaning their perception of how others in the group perceive them is more important to themself than the need for their opinion to be heard.
+
+</div>
+
+## Stockholm syndrome
+
+<div class="quote--left" markdown="1">
+
+- [Spiral of silence](https://en.wikipedia.org/wiki/Spiral_of_silence).
+
+Stockholm syndrome is a proposed condition or theory that tries to explain why hostages sometimes develop a psychological bond with their captors.
+
+Stockholm syndrome is a "contested illness" due to doubts about the legitimacy of the condition.
+
+Emotional bonds can possibly form between captors and captives, during intimate time together, but these are considered irrational by some in light of the danger or risk endured by the victims. Stockholm syndrome has never been included in the *Diagnostic and Statistical Manual of Mental Disorders (DSM)*, the standard tool for diagnosis of psychiatric illnesses and disorders in the United States, mainly due to the lack of a consistent body of academic research.
 
 <br>
 
 ## Survivorship bias
 
-> - [Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias).
+<div class="quote--left" markdown="1">
+
+- [Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias).
 
 <i class="term">Survivorship bias</i> or <i class="term">survival bias</i> is the <i class="term">logical error</i> of <i class="emphasize">concentrating</i> on entities that <i class="emphasize">passed a selection process</i> while <i class="emphasize">overlooking</i> those that <i class="emphasize">did not</i>. This can lead to <i class="emphasize">incorrect conclusions</i> because of <i class="emphasize">incomplete data</i>.
 
 Survivorship bias is a form of <i class="term">selection bias</i> that can lead to <i class="emphasize">overly optimistic beliefs</i> because multiple failures are overlooked, such as when companies that no longer exist are excluded from analyses of financial performance. It can also lead to the false belief that the <i class="emphasize">successes in a group have some special property</i>, rather than just coincidence as in <i class="emphasize">correlation "proves" causality</i>.
 
 Another kind of survivorship bias would involve thinking that an incident happened in a particular way because the only people who were <i class="emphasize">involved</i> in the incident who can <i class="emphasize">speak about</i> it are those who <i class="emphasize">survived</i> it. Even if one knew that some people are dead, they would not have their voice to add to the conversation, making it biased.
+
+</div>
+
+## Westermarck effect
+
+<div class="quote--left" markdown="1">
+
+- [Westermarck effect](https://en.wikipedia.org/wiki/Westermarck_effect).
+
+The <i class="term">Westermarck effect</i>, also known as <i class="term">reverse sexual imprinting</i>, is a psychological hypothesis that states that people tend not to be attracted to peers with whom they lived like siblings before the age of six. This hypothesis was first proposed by Finnish anthropologist Edvard Westermarck in his book The History of Human Marriage (1891) as one explanation for the incest taboo.
+
+</div>

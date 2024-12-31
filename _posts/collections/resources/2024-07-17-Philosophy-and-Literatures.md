@@ -5,7 +5,7 @@ categories:
  - Collections
  - Philosophy
 date: 2024-07-17 11:06:58 +0800
-last_modified_at: 2024-10-25 12:07:18 +0800
+last_modified_at: 2024-12-28 10:40:54 +0800
 ---
 
 **Books**
@@ -18,8 +18,6 @@ last_modified_at: 2024-10-25 12:07:18 +0800
 - [The Art of War](https://sites.ualberta.ca/~enoch/Readings/The_Art_Of_War.pdf), Sun Tzu.
 - [鲁迅文章合集](http://www.luxunmuseum.com.cn/cx/works.php)，鲁迅著，北京鲁迅博物馆(北京新文化运动纪念馆)编.
 - [坛经](https://zxyj.lcu.edu.cn/docs/20211210123211713978.pdf), 尚荣译注.
-
-<br>
 
 **Websites**
 

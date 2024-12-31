@@ -6,7 +6,7 @@ categories:
  - Electrical Engineering
  - MATLAB
 date: 2024-07-17 11:28:36 +0800
-last_modified_at: 2024-12-12 22:06:00 +0800
+last_modified_at: 2024-12-29 21:54:46 +0800
 ---
 
 **Articles**
@@ -16,6 +16,7 @@ last_modified_at: 2024-12-12 22:06:00 +0800
 - [2024世界人工智能大会，看施耐德电气如何推动AI技术“落地”行业场景应用](https://zhuanlan.zhihu.com/p/708095894).
 - [利用 MATLAB 通过模型预测控制优化风力发电机的效率](https://mp.weixin.qq.com/s/HdPbPeX7lgghKR9vUK2MQw).
   - Control-oriented wind turbine load estimation based on local linear neuro-fuzzy models, doi: [10.1088/1742-6596/2767/3/032016](https://iopscience.iop.org/article/10.1088/1742-6596/2767/3/032016).
+- [2024年十大气候科技新闻：碳捕获、太阳能电池板回收和清洁能源发电](https://mp.weixin.qq.com/s/FzAU2aJW9VdgtArOhTKVmw).
 
 **Books**
 

@@ -3,8 +3,9 @@ title: Specify Page Background Color in LaTeX
 categories:
  - LaTeX
 tags:
- - LaTeX Page Settings
+ - LaTeX Layout
  - LaTeX TikZ
+ - LaTeX xcolor
 date: 2024-06-01 13:16:55 +0800
 last_modified_at: 2024-06-01 13:16:55 +0800
 ---

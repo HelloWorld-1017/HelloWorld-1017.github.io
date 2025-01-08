@@ -1,12 +1,13 @@
 ---
 title: Make Diagrams by Mermaid (A Diagramming and Charting Tool) in Typora and Jekyll Website
 categories:
- - Web Development
  - Design
+ - Web Development
 tags:
- - Markdown
  - Jekyll
+ - Markdown
  - Mermaid
+ - Typora
 date: 2024-07-16 09:33:41 +0800
 last_modified_at: 2024-08-04 23:31:33 +0800
 ---

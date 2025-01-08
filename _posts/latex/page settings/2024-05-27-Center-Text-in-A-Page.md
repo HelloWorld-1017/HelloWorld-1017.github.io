@@ -4,7 +4,7 @@ toc: false
 categories:
  - LaTeX
 tags:
- - LaTeX Page Settings
+ - LaTeX Layout
 date: 2024-05-27 21:22:43 +0800
 last_modified_at: 2024-11-08 21:32:48 +0800
 ---

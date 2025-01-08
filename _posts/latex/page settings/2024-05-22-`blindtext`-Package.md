@@ -4,7 +4,7 @@ categories:
  - Design
  - LaTeX
 tags:
- - LaTeX Page Settings
+ - LaTeX Layout
 date: 2024-05-22 22:26:44 +0800
 last_modified_at: 2024-08-04 23:29:41 +0800
 ---

@@ -3,13 +3,14 @@ title: LaTeX `standalone` Class
 categories:
  - LaTeX
 tags:
- - LaTeX TikZ
  - LaTeX Figure
- - LaTeX Page Settings
  - LaTeX Package Clash
+ - LaTeX Layout
+ - LaTeX TikZ
  - LaTeX Warnings and Errors
+ - LaTeX xcolor
 date: 2024-08-12 15:54:42 +0800
-last_modified_at: 2024-08-12 15:54:42 +0800
+last_modified_at: 2025-01-05 10:25:35 +0800
 ---
 
 # LaTeX `standalone` class

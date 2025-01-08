@@ -5,7 +5,7 @@ categories:
  - English
  - Collections
 date: 2023-10-01 20:33:53 +0800
-last_modified_at: 2024-12-28 10:40:19 +0800
+last_modified_at: 2025-01-04 09:46:22 +0800
 ---
 
 **Books**
@@ -31,7 +31,7 @@ last_modified_at: 2024-12-28 10:40:19 +0800
 
 **Methods**
 
-- Listen, Echo, Repeat: [如何用「回音法」學好英文口說 \| 史嘉琳 Karen Chung \| TEDxNTUST](https://www.youtube.com/watch?v=sQEWEPIHLzQ).
+- Listen, Echo, Repeat: [如何用「回音法」學好英文口說](https://www.youtube.com/watch?v=sQEWEPIHLzQ).
 
 
 **Paraphrase**
@@ -41,8 +41,9 @@ last_modified_at: 2024-12-28 10:40:19 +0800
 - [English-Corpora: BNC (British National Corpus)](https://www.english-corpora.org/bnc/).
 - [English-Corpora: COCA (Corpus of Contemporary American English)](https://www.english-corpora.org//coca/).
 
-**Pronunciation**
+**Websites**
 
+- [Title Case Converter – A Smart Title Capitalization Tool](https://titlecaseconverter.com/).
 - [Youglish: Improve your English pronunciation using YouTube](https://youglish.com/).
 
 **YouTube Channels**

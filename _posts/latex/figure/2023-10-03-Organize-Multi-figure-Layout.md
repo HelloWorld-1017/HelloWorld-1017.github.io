@@ -1,10 +1,13 @@
 ---
 title: Organize Multi-figure Layout in LaTeX System
-date: 2023-10-03 22:38:49 +0800
 categories:
  - LaTeX
 tags:
  - LaTeX Figure
+ - LaTeX graphicx
+ - LaTeX subfig
+date: 2023-10-03 22:38:49 +0800
+last_modified_at: 2025-01-07 14:44:29 +0800
 ---
 
 #  `\subfloat` and `\includegraphics` control sequence

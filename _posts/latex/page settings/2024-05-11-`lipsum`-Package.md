@@ -6,7 +6,8 @@ categories:
  - Philosophy
  - Psychology
 tags:
- - LaTeX Page Settings
+ - LaTeX Layout
+ - Typora
 date: 2024-05-11 22:05:01 +0800
 last_modified_at: 2024-11-12 17:26:07 +0800
 ---

@@ -3,10 +3,10 @@ title: Font Family Definition in HTML and CSS(/SCSS)
 toc: false
 categories:
  - Design
- - HTML
  - Web Development
 tags:
  - CSS
+ - HTML
  - SCSS
 date: 2024-09-26 21:36:49 +0800
 last_modified_at: 2025-01-07 14:16:13 +0800

@@ -7,7 +7,7 @@ tags:
  - Markdown
  - Typora
 date: 2025-01-05 10:57:33 +0800
-last_modified_at: 2025-01-06 11:08:41 +0800
+last_modified_at: 2025-01-09 15:23:38 +0800
 ---
 
 Few days ago, I found the C drive storage space of my computer (Windows system) suddenly lost over 60 GB. The first thing came to my mind was that there were too many temporary files generated during use. So, I cleaned the C drive using built-in system tool[^1], but it didn’t work.
@@ -21,7 +21,7 @@ Although it’s not caused by Typora, the direction was correct. So next, I sort
 
 I feel very comfortable after deleting this mega file 😁 And it doesn’t affect the subsequent image uploading.
 
-By the way, in the last two or three months, my computer at times encountered the blue screen of death, and then it would restart instantly. This process always happened so fast that I couldn’t write down the error code. Right now, I guess probably this problem is also attributed to the above PicGo bug. I’ll see in future if the guess is right.
+By the way, in the last two or three months, my computer at times encountered the blue screen of death, and then it would restart instantly. This process always happened so fast that I couldn’t write down the error code. Right now, I guess probably this problem is also attributed to the above PicGo bug. I’ll see in future if the guess is right. (Jan. 09, 2025: Regretfully, the answer is not 😑)
 
 <br>
 

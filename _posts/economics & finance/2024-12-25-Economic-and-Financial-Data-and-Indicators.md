@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-12-25 15:27:18 +0800
-last_modified_at: 2024-12-30 10:58:00 +0800
+last_modified_at: 2025-01-11 22:32:38 +0800
 ---
 
 ## Websites
@@ -165,6 +165,7 @@ Stock exchange
 - [CSRC (China Securities Regulatory Commission)](http://www.csrc.gov.cn/csrc_en/index.shtml) ([中国证券监督管理委员会](http://www.csrc.gov.cn/))
 - [Shanghai Stock Exchange](https://english.sse.com.cn/) ([上海证券交易所](https://www.sse.com.cn/)).
 - [Shenzhen Stock Exchange](https://www.szse.cn/English/) ([深圳证券交易所](https://www.szse.cn/index/index.html)).
+- [China Securities Index Co.,Ltd](https://www.csindex.com.cn/#/) ([中证指数有限公司](https://www.csindex.com.cn/#/)).
 
 Treasury
 

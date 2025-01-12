@@ -1,5 +1,5 @@
 ---
-title: Annotate Coordinate Axis when Plotting in MATLAB
+title: Annotate Coordinate Axis When Plotting in MATLAB by LaTeX `\raisebox` Command
 toc: false
 categories:
  - LaTeX
@@ -8,7 +8,7 @@ tags:
  - MATLAB Graphics
  - LaTeX Box
 date: 2024-12-17 21:05:34 +0800
-last_modified_at: 2024-12-18 09:59:38 +0800
+last_modified_at: 2025-01-11 17:54:38 +0800
 ---
 
 {% raw %}

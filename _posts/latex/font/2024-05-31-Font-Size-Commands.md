@@ -2,6 +2,7 @@
 title: LaTeX Font Size Commands
 toc: false
 categories:
+ - Design
  - LaTeX
 tags:
  - LaTeX beamer

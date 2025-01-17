@@ -577,7 +577,7 @@ The results show that, (1) basically, changing `DelayTime` doesn’t influence t
 
 Actually, the second item is commonsensible, because `.gif` format itself isn’t designed for presenting high-FPS animation, and commonly, the FPS of a `.gif` file is between 15  and 24 [^16]:
 
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142354778.png" alt="image-20231114235303980" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311142354778.png" alt="image-20231114235303980" style="zoom:67%;" />
 
 If we want to present high frame rate, video file is a better choice, and some concerned content will be discussed in the next section.
 

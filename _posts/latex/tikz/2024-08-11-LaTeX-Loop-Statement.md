@@ -3,10 +3,13 @@ title: "LaTeX Loop Statement: `\\foreach`, `\\forloop`, and `\\multido`"
 categories:
  - LaTeX
 tags:
- - LaTeX TikZ
  - LaTeX calc
+ - LaTeX forloop
+ - LaTeX pgffor
+ - LaTeX siunitx
+ - LaTeX TikZ
 date: 2024-08-11 10:38:04 +0800
-last_modified_at: 2024-08-11 10:38:04 +0800
+last_modified_at: 2025-01-16 20:06:37 +0800
 ---
 
 # `\foreach` command
@@ -17,7 +20,7 @@ Code source[^1]
 
 ```latex
 \documentclass{standalone}
-\usepackage{tikz, siunitx}
+\usepackage{tikz,siunitx}
 
 \begin{document}
 
@@ -42,7 +45,7 @@ And a more complete version[^1]
 
 ```latex
 \documentclass{standalone}
-\usepackage{tikz, siunitx}
+\usepackage{tikz,siunitx}
 
 \begin{document}
 
@@ -318,7 +321,7 @@ Code source[^4]
 **References**
 
 [^1]: [LaTeX入门](https://yun.weicheng.men/Book/LaTeX入门.pdf), 刘海洋编著, pp. 394-396.
-[^2]: [Defining Loops in a LaTeX Document \| Baeldung on Computer Science](https://www.baeldung.com/cs/latex-loops).
+[^2]: [Defining Loops in a LaTeX Document](https://www.baeldung.com/cs/latex-loops).
 [^3]: [CTAN: Package `forloop`](https://ctan.org/pkg/forloop?lang=en), documentation: [forloop.pdf](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/forloop/forloop.pdf).
 [^4]: [CTAN: Package `multido`](https://ctan.org/pkg/multido?lang=en), documentation: [multido-doc.dvi](https://mirror-hk.koddos.net/CTAN/macros/generic/multido/multido-doc.pdf).
 [^5]: [CTAN: Package `siunitx`](https://ctan.org/pkg/siunitx?lang=en), documentation: [siunitx – A comprehensive (SI) units package](https://mirror-hk.koddos.net/CTAN/macros/latex/contrib/siunitx/siunitx.pdf).

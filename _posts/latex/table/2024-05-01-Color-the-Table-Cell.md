@@ -1,12 +1,14 @@
 ---
-title: Color the Table Cell in LaTeX
+title: Color the Table Cell in LaTeX Using `colortbl` Package
 categories:
  - LaTeX
 tags:
+ - LaTeX babel
+ - LaTeX colortbl
  - LaTeX Table
 toc: false
 date: 2024-05-01 22:04:11 +0800
-last_modified_at: 2024-05-01 22:04:11 +0800
+last_modified_at: 2025-01-16 20:48:12 +0800
 ---
 
 Few days ago, when I was writing my blog[^1], I found Hosang's paper[^2], *What makes for effective detection proposals?*, which proposed the evaluation metric AR (Average Recall) for assessing the object detector performance. 
@@ -162,10 +164,10 @@ So, anyway, Hosang's method is more preferable.
 
 <br>
 
-# References
+**References**
 
-[^1]: [The Metrics of Average Precision (AP) and Average Recall (AR) in Object Detection Tasks - What a starry night~](https://helloworld-1017.github.io/2024-05-01/17-40-09.html).
+[^1]: [The Metrics of Average Precision (AP) and Average Recall (AR) in Object Detection Tasks](/2024-05-01/17-40-09.html).
 [^2]: Hosang, Jan, et al. "What makes for effective detection proposals?." *IEEE transactions on pattern analysis and machine intelligence* 38.4 (2015): 814-830, available at: [[1502.05082] What makes for effective detection proposals?](https://arxiv.org/abs/1502.05082).
-[^3]: [CTAN: Package colortbl](https://ctan.org/pkg/colortbl?lang=en).
+[^3]: [CTAN: Package `colortbl`](https://ctan.org/pkg/colortbl?lang=en).
 [^4]: [Jan Hosang](https://janhosang.com/).
-[^5]: [CTAN: Package babel](https://ctan.org/pkg/babel?lang=en).
+[^5]: [CTAN: Package `babel`](https://ctan.org/pkg/babel?lang=en).

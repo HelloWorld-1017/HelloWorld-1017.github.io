@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:30:49 +0800
-last_modified_at: 2024-12-10 20:17:48 +0800
+last_modified_at: 2025-01-16 20:40:00 +0800
 ---
 
 
@@ -65,6 +65,14 @@ Warren Buffett: **Nobody can take away from you the talent you have.** And the t
 
 </div>
 
+<div class="quote--left" markdown="1">
+
+Jeff Bezos: Your style of investing is so simple. Why doesn’t everyone just copy you?
+
+Warren Buffett: Because nobody wants to get rich slowly.[^9]
+
+</div>
+
 **References**
 
 [^1]: [🎞️ "You’re never wrong to the right thing."](/2024-04-23/22-51-17.html).
@@ -73,6 +81,6 @@ Warren Buffett: **Nobody can take away from you the talent you have.** And the t
 [^4]: [Warren Buffett is Right: I Wouldn't Bet Against America Either](https://president.asu.edu/read/warren-buffett-is-right-i-wouldnt-bet-against-america-either).
 [^5]: [Rebecca Quick](https://en.wikipedia.org/wiki/Rebecca_Quick).
 [^6]: [Malcolm Gladwell](https://en.wikipedia.org/wiki/Malcolm_Gladwell).
-[^7]: [Warren Buffett's Life-Changing Advice for Investing in Yourself! 💡💰 \| Berkshire 2022](https://www.youtube.com/watch?v=xSHPQk5SHzg).
+[^7]: [Warren Buffett's Life-Changing Advice for Investing in Yourself! 💡💰](https://www.youtube.com/watch?v=xSHPQk5SHzg).
 [^8]: [Charlie Munger says people shouldn't put their retirement savings into bitcoin](https://www.youtube.com/watch?v=NaX-bjJn-AE).
-
+[^9]: [Nobody wants to get rich slowly: Understanding Warren Buffett's Quote](https://www.learnstockmarket.in/quote/nobody-wants-to-get-rich-slowly-warren-buffett/).

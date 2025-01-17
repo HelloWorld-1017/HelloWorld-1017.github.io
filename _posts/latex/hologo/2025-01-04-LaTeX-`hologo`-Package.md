@@ -8,7 +8,10 @@ tags:
  - LaTeX longtable
  - LaTeX Table
 date: 2025-01-04 12:32:02 +0800
-last_modified_at: 2025-01-04 12:32:02 +0800
+last_modified_at: 2025-01-15 15:39:55 +0800
+gallery:
+ - image_path: https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501041233272.png
+ - image_path: https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501041233727.png
 ---
 
 ```latex
@@ -105,9 +108,7 @@ last_modified_at: 2025-01-04 12:32:02 +0800
 \end{document}
 ```
 
-![img-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501041233272.png)
-
-![img-2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501041233727.png)
+{% include gallery id="gallery" %}
 
 <br>
 

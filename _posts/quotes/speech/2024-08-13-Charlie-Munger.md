@@ -6,12 +6,12 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:33:27 +0800
-last_modified_at: 2024-12-12 10:34:52 +0800
+last_modified_at: 2025-01-18 20:56:31 +0800
 ---
 
 <div class="quote--left" markdown="1">
 
-The big money is not in the buying and the selling, but in the waiting.
+The big money is not in the buying and the selling, but in the waiting.[^9]
 
 </div>
 
@@ -125,3 +125,4 @@ Charlie Munger: Well, you have to be optimistic about the competency of our tech
 [^6]: [Steven Pinker](https://en.wikipedia.org/wiki/Steven_Pinker).
 [^7]: [Charlie Munger on Why Are People So Unhappy? \| Daily Journal 2022 【YAPSS Highlight】](https://www.youtube.com/watch?v=u5TI8mPImPk).
 [^8]: [The Tao of Charlie Munger](https://www.amazon.com/gp/product/150115334X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=farnamstreet-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=150115334X&linkId=8a45f464460000d9b2b7e9a6a0275735), David Clark.
+[^9]: [Even Warren Buffett Thinks Picking Stocks Is Hard](https://www.morningstar.com/stocks/even-warren-buffett-thinks-stock-picking-is-hard).

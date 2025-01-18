@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:30:49 +0800
-last_modified_at: 2025-01-16 20:40:00 +0800
+last_modified_at: 2025-01-18 20:55:20 +0800
 ---
 
 
@@ -73,6 +73,16 @@ Warren Buffett: Because nobody wants to get rich slowly.[^9]
 
 </div>
 
+<div class="quote--left" markdown="1">
+
+At this point, a report card from me is appropriate: In 58 years of Berkshire management, most of my capital-allocation decisions have been no better than so-so. In some cases, also, bad moves by me have been rescued by very large doses of luck. (Remember our escapes from near-disasters at USAir and Salomon? I certainly do.) Our satisfactory results have been the product of about a dozen truly good decisions—that would be about one every five years—and a sometimes-forgotten advantage that favors long-term investors such as Berkshire.
+
+...
+
+The weeds wither away in significance as the flowers bloom. Over time, it takes just a few winners to work wonders.[^10]
+
+</div>
+
 **References**
 
 [^1]: [🎞️ "You’re never wrong to the right thing."](/2024-04-23/22-51-17.html).
@@ -84,3 +94,4 @@ Warren Buffett: Because nobody wants to get rich slowly.[^9]
 [^7]: [Warren Buffett's Life-Changing Advice for Investing in Yourself! 💡💰](https://www.youtube.com/watch?v=xSHPQk5SHzg).
 [^8]: [Charlie Munger says people shouldn't put their retirement savings into bitcoin](https://www.youtube.com/watch?v=NaX-bjJn-AE).
 [^9]: [Nobody wants to get rich slowly: Understanding Warren Buffett's Quote](https://www.learnstockmarket.in/quote/nobody-wants-to-get-rich-slowly-warren-buffett/).
+[^10]: [Even Warren Buffett Thinks Picking Stocks Is Hard](https://www.morningstar.com/stocks/even-warren-buffett-thinks-stock-picking-is-hard).

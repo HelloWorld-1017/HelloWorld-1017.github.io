@@ -4,8 +4,11 @@ categories:
  - LaTeX
 tags:
  - LaTeX TikZ
+ - LaTeX TikZ arrows.meta
+ - LaTeX TikZ bending
+ - LaTeX TikZ backgrounds
 date: 2023-09-23 16:09:23 +0800
-last_modified_at: 2024-08-04 23:27:53 +0800
+last_modified_at: 2025-01-17 23:42:08 +0800
 ---
 
 While using LaTeX TikZ to draw diagrams, users maybe confused with determining the coordinate of each object. A background grid of drawing area could visually help user draw the figure.
@@ -126,6 +129,5 @@ where `(-5,-5)` is coordinate of lower left corner point, and `(20,20)` is the c
 
 **References**
 
-[1] [Background Library - PGF/TikZ Manual](https://tikz.dev/library-backgrounds).
-
-[2] [Tutorial: A Picture for Karl’s Students - PGF/TikZ Manual](https://tikz.dev/tutorial#autosec-69).
+- [Background Library](https://tikz.dev/library-backgrounds).
+- [Tutorial: A Picture for Karl’s Students](https://tikz.dev/tutorial#autosec-69).

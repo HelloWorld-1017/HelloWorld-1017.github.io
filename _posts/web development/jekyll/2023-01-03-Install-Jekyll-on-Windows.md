@@ -6,10 +6,10 @@ categories:
 tags: 
  - Jekyll
 date: 2023-01-03 09:55:32 +0800
-last_modified_at: 2024-08-25 18:52:02 +0800
+last_modified_at: 2025-01-18 15:19:23 +0800
 ---
 
-前两天我给现在使用的这台笔记本电脑换了一块固态硬盘，重装了系统，电脑上的Jekyll也没有了，没有办法在本地预览Github pages上的内容，因此需要重装一下Jekyll，本博客就简单记录一下安装的过程。主要的流程参考了博客 [^1]。
+前两天我给现在使用的这台笔记本电脑换了一块固态硬盘，重装了系统，电脑上的Jekyll也没有了，没有办法在本地预览GitHub Pages上的内容，因此需要重装一下Jekyll，本博客就简单记录一下安装的过程。主要的流程参考了博客 [^1]。
 
 **Step 1：安装Ruby环境**
 
@@ -17,19 +17,19 @@ last_modified_at: 2024-08-25 18:52:02 +0800
 
 ![image-20230103090630806](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20230103090630806.png?raw=true)
 
-**Step 2：安装RubyGems**
+**Step 2 (seemingly optional)：安装RubyGems**
 
 下载地址：[https://rubygems.org/pages/download](https://rubygems.org/pages/download)
 
 下载`.zip`版本的压缩包，下载完成后解压缩到电脑的任意一个位置中。
 
-注：我是将该文件夹放在了C盘的某一个位置，这导致在后面步骤中，需要以管理员的身份打开Git Bash再运行命令。
+注：我是将该文件夹放在了C盘的某一个位置，这导致在后面步骤中，需要以管理员身份在终端中运行命令。
 {: .notice--warning}
 
 **Step 3：安装Jekyll**
 
 ```bash
-gem install jekyll
+gem install jekyll -v '3.7'
 ```
 
 **Step 4: 安装Bundler**
@@ -88,4 +88,4 @@ Configuration file: C:/Users/Tsing/Desktop/QinghuaMa.github.io/_config.yml
 
 **Reference**
 
-[^1]: [Windows 系统上安装 Jekyll（简单详细教程） - pergrand - 博客园](https://www.cnblogs.com/pergrand/p/12875597.html).
+[^1]: [Windows 系统上安装 Jekyll（简单详细教程）](https://www.cnblogs.com/pergrand/p/12875597.html).

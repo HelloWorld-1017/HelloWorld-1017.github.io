@@ -1,8 +1,8 @@
 ---
 title: Some Caveats for Creating a Figure from TikZ Macro Package Documentation
-categories: 
- - LaTeX
+categories:
  - Design
+ - LaTeX
  - Philosophy
 tags:
  - LaTeX TikZ

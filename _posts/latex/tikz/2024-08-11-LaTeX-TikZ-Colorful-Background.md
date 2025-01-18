@@ -3,9 +3,16 @@ title: LaTeX TikZ Colorful Background Layer
 categories:
  - LaTeX
 tags:
+ - LaTeX inputenc
  - LaTeX TikZ
+ - LaTeX TikZ arrows
+ - LaTeX TikZ backgrounds
+ - LaTeX TikZ automata
+ - LaTeX TikZ snakes
+ - LaTeX TikZ shapes
+ - LaTeX TikZ petri
 date: 2024-08-11 11:03:53 +0800
-last_modified_at: 2024-08-11 11:03:53 +0800
+last_modified_at: 2025-01-17 23:45:11 +0800
 ---
 
 # `pgfonlayer` environment
@@ -442,12 +449,11 @@ Which way is more elegant. One point should be particularly noted that how to us
 
 **References**
 
-[^1]: [A Petri-net for Hagen \| TikZ example](https://texample.net/tikz/examples/nodetutorial/).
+[^1]: [A Petri-net for Hagen](https://texample.net/tikz/examples/nodetutorial/).
 [^2]: [pgfmanual.pdf](https://mirror-hk.koddos.net/CTAN/graphics/pgf/base/doc/pgfmanual.pdf), pp. 50-61.
-[^3]: [Hierarchical Structures: Package, Environments, Scopes, and Styles: The Scope Environment - PGF/TikZ Manual](https://tikz.dev/tikz-scopes#sec-12.3.1).
-[^4]: [Layered Graphics - PGF/TikZ Manual](https://tikz.dev/base-layers#sec-113.3).
-[^5]: [LaTeX TikZ Commands `-|` and `|-` - WHAT A STARRY NIGHT~](https://helloworld-1017.github.io/2024-08-10/16-28-12.html).
-[^6]: [Background Library - PGF/TikZ Manual](https://tikz.dev/library-backgrounds).
-[^7]: [Background Library: `framed` - PGF/TikZ Manual](https://tikz.dev/library-backgrounds#pgf./tikz/framed).
-[^8]: [Actions on Paths: `\filldraw` - PGF/TikZ Manual](https://tikz.dev/tikz-actions#pgf.back/filldraw).
-
+[^3]: [Hierarchical Structures: Package, Environments, Scopes, and Styles: The Scope Environment](https://tikz.dev/tikz-scopes#sec-12.3.1).
+[^4]: [Layered Graphics](https://tikz.dev/base-layers#sec-113.3).
+[^5]: [LaTeX TikZ Commands `-|` and `|-`](/2024-08-10/16-28-12.html).
+[^6]: [Background Library](https://tikz.dev/library-backgrounds).
+[^7]: [Background Library: `framed`](https://tikz.dev/library-backgrounds#pgf./tikz/framed).
+[^8]: [Actions on Paths: `\filldraw`](https://tikz.dev/tikz-actions#pgf.back/filldraw).

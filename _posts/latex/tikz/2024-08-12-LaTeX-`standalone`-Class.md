@@ -4,13 +4,16 @@ categories:
  - LaTeX
 tags:
  - LaTeX Figure
- - LaTeX Package Clash
+ - LaTeX graphicx
  - LaTeX Layout
+ - LaTeX Package Clash
+ - LaTeX siunitx
+ - LaTeX standalone
  - LaTeX TikZ
  - LaTeX Warnings and Errors
  - LaTeX xcolor
 date: 2024-08-12 15:54:42 +0800
-last_modified_at: 2025-01-05 10:25:35 +0800
+last_modified_at: 2025-01-17 23:48:02 +0800
 ---
 
 # LaTeX `standalone` class

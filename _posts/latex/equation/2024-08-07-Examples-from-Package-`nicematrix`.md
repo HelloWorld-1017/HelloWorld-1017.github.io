@@ -1,17 +1,20 @@
 ---
-title: Table and Matrix Examples from LaTeX Package `nicematrix`
+title: Table and Matrix Examples Using LaTeX `nicematrix` Package
 categories:
  - LaTeX
 tags:
  - LaTeX Equation
  - LaTeX Table
  - LaTeX TikZ
+ - LaTeX TikZ fit
  - LaTeX nicematrix
 date: 2024-08-07 12:11:38 +0800
-last_modified_at: 2024-08-07 12:11:38 +0800
+last_modified_at: 2025-01-17 21:18:20 +0800
 ---
 
-Here are some examples from LaTeX package `nicematrix` documentation[^1] in this post.
+# Examples from the official `nicematrix` documentation
+
+Here are some examples from the official documentation of LaTeX package `nicematrix` [^1].
 
 ## pp. 4
 
@@ -344,8 +347,35 @@ A more complicated case:
 
 </div>
 
+# Examples from other references
+
+Example 1[^2]:
+
+```latex
+\documentclass{article}
+\usepackage{nicematrix}
+
+\begin{document}
+
+$\begin{pNiceMatrix}[margin]
+	a & b & c & d \\
+	\Block[fill=red!15,rounded-corners]{1-4}{}
+	a & b & c & d \\
+	a & b & c & d \\
+	a & b & \Block[draw,fill=blue!15,rounded-corners]{2-2}{}
+	        c & d \\
+	a & b & c & d \\
+\end{pNiceMatrix}$
+
+\end{document}
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501172116935.png" alt="image-20250117211644838" style="width:50%;" />
+
 <br>
 
 **References**
 
 [^1]: [CTAN: Package `nicematrix`](https://ctan.org/pkg/nicematrix?lang=en).
+[^2]: [https://tex.stackexchange.com/a/588227/306224](https://tex.stackexchange.com/a/588227/306224).
+

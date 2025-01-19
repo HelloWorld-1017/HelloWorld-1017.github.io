@@ -3,7 +3,7 @@ title: English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2024-09-28 22:06:14 +0800
+last_modified_at: 2025-01-19 22:24:23 +0800
 ---
 
 ## at any rate
@@ -564,6 +564,16 @@ The ‘status quo’ is the state of affairs that exists at a particular time, e
 the present situation.
 
 - Certain people always want to maintain ***the status quo***. 
+
+<br>
+
+## stay tuned
+
+> - [stay tuned](https://www.ldoceonline.com/dictionary/stay-tuned).
+
+a) to continue watching or listening to the same television channel or radio station; b) used to say that you should look or listen for more information about a particular subject at a later time.
+
+- The project is still under discussion, so ***stay tuned***.
 
 <br>
 

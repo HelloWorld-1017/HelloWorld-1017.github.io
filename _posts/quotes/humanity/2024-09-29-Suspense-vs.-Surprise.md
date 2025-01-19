@@ -2,8 +2,9 @@
 title: Alfred Hitchcock Talked about \"Suspense\" vs. \"Surprise\"
 toc: false
 categories:
- - Quotes
+ - Aesthetics
  - Psychology
+ - Quotes
 date: 2024-09-29 19:03:52 +0800
 last_modified_at: 2024-09-29 19:03:52 +0800
 ---

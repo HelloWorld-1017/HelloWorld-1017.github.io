@@ -1,9 +1,8 @@
 ---
-layout: single
 title: C code, Header files
-date: 2022-09-26 19:04:03 +0800
 categories:
  - C
+date: 2022-09-26 19:04:03 +0800
 ---
 
 # Introduction

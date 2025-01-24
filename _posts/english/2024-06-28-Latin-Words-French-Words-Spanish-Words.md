@@ -3,10 +3,44 @@ title: Latin Words, French Words, and Spanish Words
 categories:
  - English
 date: 2024-06-28 23:49:22 +0800
-last_modified_at: 2025-01-19 00:01:31 +0800
+last_modified_at: 2025-01-23 10:47:41 +0800
 ---
 
 # Latin words
+
+## ab initio
+
+> - [Ab initio](https://en.wikipedia.org/wiki/Ab_initio).
+> - [AB INITIO](https://dictionary.cambridge.org/dictionary/english/ab-initio).
+> - [Ab initio](https://www.merriam-webster.com/dictionary/ab%20initio).
+
+Ab initio (/ˌæb ɪˈnɪʃioʊ/) is a Latin term meaning "from the beginning" and is derived from the Latin ab ("from") + initio, ablative singular of initium ("beginning").
+
+- In view of these omissions, the proceedings to recover possession fail ***ab initio***.
+
+## a priori & a posteriori
+
+> - [a priori](https://www.ldoceonline.com/dictionary/a-priori).
+> - [A priori](https://www.merriam-webster.com/dictionary/a%20priori).
+> - [A PRIORI](https://dictionary.cambridge.org/dictionary/english/a-priori).
+> - [a posteriori](https://www.ldoceonline.com/dictionary/a-posteriori).
+> - [A posteriori](https://www.merriam-webster.com/dictionary/a%20posteriori).
+> - [A POSTERIORI](https://dictionary.cambridge.org/dictionary/english/a-posteriori).
+> - [A priori and a posteriori](https://en.wikipedia.org/wiki/A_priori_and_a_posteriori).
+
+a priori: using previous experiences or facts to decide what the likely result or effect of something will be. (“from the earlier”)
+
+- a ruling made on ***a priori*** grounds.
+- There's ***no a priori*** reason to think your expenses will remain the same in a new city.
+- an ***a priori*** argument for the defendant's innocence.
+- "It's freezing outside; you must be cold" is an example of ***a priori*** reasoning.
+
+a posteriori: using facts that you know now to form a judgment about what must have happened before. (“from the later”)
+
+- This assumption will be verified ***a posteriori***.
+- The only feasible way to do this is to study the evolution of the system ***a posteriori***.
+
+<br>
 
 ## carpe diem
 

@@ -2,6 +2,7 @@
 title: The Beauty of Euler's Formula
 toc: false
 categories:
+ - Aesthetics
  - Ideas
  - Mathematics
 date: 2024-06-17 08:10:24 +0800

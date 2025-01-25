@@ -13,20 +13,21 @@
     }
 }
 
-.quote--left {
+.quote--left--basic {
     display: block;
-    width: 97%;
     margin: auto auto;
     padding: 2em;
     color: $Ivory4;
     quotes: "\201C" "\201C";
     // text-align: justify;
-
     u {
         text-decoration: $Ivory4 solid underline;
     }
 }
-
+.quote--left {
+    @extend .quote--left--basic;
+    width: 97%;
+}
 // Add quote mark
 .quote--left:before {
     content: open-quote;
@@ -38,7 +39,10 @@
     margin-top: 0.20em;
     vertical-align: top;
 }
-
+.quote--left--inside {
+    @extend .quote--left--basic;
+    width: 93%;
+}
 
 :root {
     --lyrics-color: $DodgerBlue;

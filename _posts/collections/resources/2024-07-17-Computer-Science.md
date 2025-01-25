@@ -4,13 +4,13 @@ toc: false
 categories:
  - Collections
 date: 2024-07-17 11:17:16 +0800
-last_modified_at: 2024-11-20 16:57:05 +0800
+last_modified_at: 2025-01-24 16:28:35 +0800
 ---
 
 **Books**
 
-- [But How Do It Know?](https://www.nipccd.nic.in/uploads/report/EBMIfKpdf-1bc3ceafe870f0bf95edccb7a38d63ee.pdf), J. Clark Scott.
-  - [How a CPU Works?](https://www.youtube.com/watch?v=cNN_tTXABUA). 
+- [But How Do It Know?](https://www.nipccd.nic.in/uploads/report/EBMIfKpdf-1bc3ceafe870f0bf95edccb7a38d63ee.pdf), J. Clark Scott. ([How a CPU Works?](https://www.youtube.com/watch?v=cNN_tTXABUA))
+- [The Fourth Paradigm: Data-Intensive Scientific Discovery](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Fourth_Paradigm.pdf), Edited by Tony Hey, Stewart Tansley, and Kristin Tolle. ([Jim Gray](https://en.wikipedia.org/wiki/Jim_Gray_\(computer_scientist\)); [Jim Gray Talks and Meetings](https://jimgray.azurewebsites.net/jimgraytalks.htm))
 
 **Blogs & Websites**
 

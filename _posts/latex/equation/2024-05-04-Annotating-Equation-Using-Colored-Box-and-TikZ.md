@@ -9,7 +9,7 @@ tags:
  - LaTeX TikZ
  - LaTeX TikZ tikzmark
 date: 2024-05-04 20:29:57 +0800
-last_modified_at: 2025-01-09 20:49:09 +0800
+last_modified_at: 2025-01-25 21:13:27 +0800
 ---
 
 Few days ago, I read Quan *et al.*'s paper, *Centralized Feature Pyramid for Object Detection*[^1], and found an elegant example of annotating equation by using LaTeX colored box and TikZ package.
@@ -34,15 +34,20 @@ For learning, I pick out the minimal code to generate it from the source file th
 \begin{equation}
 	\vspace{\baselineskip}
 	\label{eq2}
-	\textbf{X} = \textrm{cat}\left(\tikzmarknode{x}{\highlight{red}{$\textrm{MLP}(\textbf{X}_{\textrm{in}})$}}; \tikzmarknode{s}{\highlight{blue}{$\textrm{LVC}(\textbf{X}_{\textrm{in}})$}}\right),
+	\textbf{X} = \textrm{cat}\left(
+	\tikzmarknode{x}{\highlight{red}{$\textrm{MLP}(\textbf{X}_{\textrm{in}})$}};
+	\tikzmarknode{s}{\highlight{blue}{$\textrm{LVC}(\textbf{X}_{\textrm{in}})$}}\right),
 \end{equation}
 \begin{tikzpicture}[overlay,remember picture,>=stealth,nodes={align=left,inner ysep=1pt},<-]
 	% For node "x"
-	\path (x.north) ++ (0,2em) node[anchor=south east,color=red!67] (scalep){\textbf{\small long-range dependencies}};
-	\draw [color=red!87](x.north) |- ([xshift=-0.3ex,color=red]scalep.south west);
+	\path (x.north)++(0,2em) node[anchor=south east,color=red!67] (scalep) 
+		{\textbf{\small long-range dependencies}};
+	\draw [color=red!87] (x.north) |- ([xshift=-0.3ex,color=red] scalep.south west);
+	
 	% For node "s"
-	\path (s.south) ++ (0,-.2em) node[anchor=north west,color=blue!67] (mean){\textbf{\small local corner regions}};
-	\draw [color=blue!87](s.south) |- ([xshift=-0.3ex,color=blue]mean.south east);
+	\path (s.south)++(0,-.2em) node[anchor=north west,color=blue!67] (mean) 
+		{\textbf{\small local corner regions}};
+	\draw [color=blue!87] (s.south) |- ([xshift=-0.3ex,color=blue] mean.south east);
 \end{tikzpicture}
 ... ${\highlight{red}{$\textrm{MLP}(\textbf{X}_{\textrm{in}})$}}$ and ${\highlight{blue}{$\textrm{LVC}(\textbf{X}_{\textrm{in}})$}}$ denotes ...
 \vspace*{\fill}

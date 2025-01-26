@@ -4,10 +4,11 @@ categories:
  - LaTeX
 tags:
  - LaTeX Box
+ - LaTeX calc
  - LaTeX Fundamentals
  - LaTeX Layout
 date: 2025-01-09 16:12:35 +0800
-last_modified_at: 2025-01-09 18:27:26 +0800
+last_modified_at: 2025-01-26 15:43:47 +0800
 ---
 
 # `\mbox` and `\makebox`
@@ -61,6 +62,34 @@ Here are some examples:
 ```
 
 ![image-20250109170102775](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501091701911.png)
+
+Besides, we can also use `\widthof{<text>}`, provided by `calc` package, to set the box width, which is a very convenient way when we want to create some text boxes which have the same width as a certain piece of text[^7]:
+
+```latex
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[x11names]{xcolor}
+\pagecolor{AntiqueWhite1}
+\setlength\parindent{0pt}
+
+\usepackage{calc}
+
+\begin{document}
+\makebox[\widthof{long long text}][l]{text}\\
+\makebox[\widthof{long long text}][l]{long text}\\
+\makebox[\widthof{long long text}][l]{long long text}\\
+
+\makebox[\widthof{long long text}][c]{text}\\
+\makebox[\widthof{long long text}][c]{long text}\\
+\makebox[\widthof{long long text}][c]{long long text}\\
+
+\makebox[\widthof{long long text}][r]{text}\\
+\makebox[\widthof{long long text}][r]{long text}\\
+\makebox[\widthof{long long text}][r]{long long text}\\
+\end{document}
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501261540691.png" alt="image-20250126154040616" style="width:50%;" />
 
 <br>
 
@@ -242,3 +271,4 @@ For example,
 [^4]: [`\parbox`](http://herbert.the-little-red-haired-girl.org/html/latex2e/$5cparbox.html).
 [^5]: [LaTeX help 1.1 - `\parbox`](https://emerson.emory.edu/services/latex/latex_147.html).
 [^6]: [Modes (LaTeX2e unofficial reference manual (December 2024))](https://latexref.xyz/Modes.html).
+[^7]: [spacing - Fill space created by `\phantom` with other text](https://tex.stackexchange.com/questions/212710/fill-space-created-by-phantom-with-other-text).

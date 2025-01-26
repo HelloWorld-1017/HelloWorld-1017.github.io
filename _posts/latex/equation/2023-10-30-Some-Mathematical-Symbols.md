@@ -3,8 +3,8 @@ title: Some Mathematical Symbols and Environments in LaTeX and MathJax
 categories:
  - LaTeX
 tags:
- - Markdown
  - LaTeX Equation
+ - Markdown
 date: 2023-10-30 08:46:52 +0800
 last_modified_at: 2024-11-08 22:32:07 +0800
 ---

@@ -1,6 +1,8 @@
 ---
 title: "Realize Inline Code Block in LaTeX: `\\verb`, `\\verb*`, `\\texttt`, vs. `\\lstinline` of `listings` Package"
 toc: false
+categories:
+ - LaTeX
 tags:
  - LaTeX Font
  - LaTeX listings

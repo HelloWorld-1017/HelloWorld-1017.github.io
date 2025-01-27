@@ -7,9 +7,9 @@ tags:
  - LaTeX Font
  - LaTeX fontspec
  - LaTeX Warnings and Errors
- - LuaLaTeX
+ - LuaTeX
  - TeXstudio
- - XeLaTeX
+ - XeTeX
 date: 2024-11-12 15:59:38 +0800
 last_modified_at: 2024-11-12 15:59:38 +0800
 ---

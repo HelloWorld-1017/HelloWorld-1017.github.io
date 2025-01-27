@@ -6,9 +6,9 @@ categories:
 tags:
  - dvips
  - LaTeX Warnings and Errors
- - pdfLaTeX
+ - pdfTeX
  - TeXstudio
- - XeLaTeX
+ - XeTeX
  - LuaTeX
 date: 2024-07-24 16:47:47 +0800
 last_modified_at: 2024-11-12 16:09:07 +0800

@@ -160,7 +160,7 @@ Besides, in this method, the position of annotation content isn’t easily contr
 
 [^1]: [An XeLaTeX Compilation Error: `Undefined control sequence. \pdfglyphtounicode`](/2024-07-24/16-47-47.html).
 [^2]: [Compile LaTeX File Using Command Line](/2025-01-16/16-40-21.html).
-[^3]: [LaTeX入门](https://yun.weicheng.men/Book/LaTeX入门.pdf), 刘海洋编著, pp. 31.
+[^3]: [LaTeX入门](https://yun.weicheng.men/Book/LaTeX入门.pdf), 刘海洋编著, p. 31.
 [^4]: [An Example of Annotating Equation in LaTeX Using Colored Box and TikZ Package](/2024-05-04/20-29-57.html).
 [^5]: [Making Curly Braces with Tikz](https://tex.stackexchange.com/questions/230566/making-curly-braces-with-tikz).
 [^6]: [TiKz dash dash plus plus](https://tex.stackexchange.com/questions/66094/tikz-dash-dash-plus-plus).

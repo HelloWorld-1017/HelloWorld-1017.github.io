@@ -3,8 +3,10 @@ title: Romantic Acknowledgements
 toc: false
 categories:
  - Collections
+ - Philosophy
+ - Quotes
 date: 2023-11-27 23:56:05 +0800
-last_modified_at: 2024-08-07 15:35:27 +0800
+last_modified_at: 2025-01-31 18:26:03 +0800
 ---
 
 ***Computer vision: models, learning and inference* by Simon J. D. Prince.**
@@ -100,5 +102,23 @@ answer my questions about programming,
 and for Ever, who is just beginning to ask me
 
 his questions
+
+</div>
+
+<br>
+
+***Common Stocks and Uncommon Profits* by Philip Arthur Fisher**
+
+<div class="quote--center" markdown="1">
+
+This book is dedicated
+
+to all investors, large and small,
+
+who do NOT adhere to the philosophy:
+
+“I have already made up my mind,
+
+don’t confuse me with facts.”
 
 </div>

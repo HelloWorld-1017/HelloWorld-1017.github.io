@@ -7,7 +7,7 @@ categories:
 tags:
  - Game Theory
 date: 2024-07-16 23:16:52 +0800
-last_modified_at: 2024-12-25 15:53:04 +0800
+last_modified_at: 2025-01-30 19:55:58 +0800
 ---
 
 **Articles**
@@ -36,3 +36,4 @@ last_modified_at: 2024-12-25 15:53:04 +0800
 - [Reminiscences of a Stock Operator: to Jesse Lauriston Livermore](https://www.trendfollowing.com/whitepaper/Edwin_LeFevre_Reminiscences_of_a_Stock_Operator.pdf), Edwin LeFevre.
 - [Quantitative trading: how to build your own algorithmic trading business](https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf), Ernest P. Chan, 2021.
 - [Game Theory](https://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/game-theory/index.html), Janet Chen, Su-I Lu, and Dan Vekhter.
+- [Common Stocks and Uncommon Profits and Other Writings](https://www.academia.edu/43313981/Common_Stocks_and_Uncommon_Profits), [Philip Arthur Fisher](https://en.wikipedia.org/wiki/Philip_Arthur_Fisher).

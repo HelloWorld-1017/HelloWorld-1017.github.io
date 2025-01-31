@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:30:49 +0800
-last_modified_at: 2025-01-18 20:55:20 +0800
+last_modified_at: 2025-01-29 20:00:51 +0800
 ---
 
 
@@ -83,6 +83,24 @@ The weeds wither away in significance as the flowers bloom. Over time, it takes 
 
 </div>
 
+<div class="quote--left" markdown="1">
+
+Q: ... I have a question, it’s not really related to intrinsic value or any of that stock stuff, but more on houses. I’m still quite young, I don’t have a house yet, and I’m thinking about buying a house someday soon. And in order to do that, I’m going to have to put a down payment, which means I might have to sell my shares. And I was wondering if you can provide some insight on when is the best time to buy a house, and how much down payment you should be putting down, in relation to interest rates, and also in relation to available cash in the stock market.[^11]
+
+Warren Buffett: Well, Charlie’s gonna give you an answer to that in a second. I’ll just relay one story which was when I got married we did have about \\$ 10,000 starting off and I told Susie, I said now, you know there’s two choices, it’s up to you. We can either buy a house which will use up all my capital and clean me out, and it’ll be like a carpenter who’s had his tools taken away from him. Or what you can let me work on this and someday, who knows, maybe I’ll even buy a little bit larger house it would otherwise be the case. So she was very understanding on that point and we waited until 1956, we got married 1952, and I decided to buy a house when it was about when the down payment was about 10% or so my net worth because I really felt I want to use the capital for other purposes. But that was a way different environment in terms of what was available to buy. In effect, if you have the house you want to buy, you know, I definitely believe in just going out and probably getting the job done. But I, in effect, probably making something in the area of a 7 or 8% investment implicitly when you do it so, you know, you’ll have to figure out your own equation from that. Charlie probably has better advice on that. He’s a big homeowner. In both senses of the word.
+
+Charlie Munger: I think the time to buy a house is when you need one.
+
+Warren Buffett: And when you need one?
+
+Charlie Munger: Well, I have a very old fashioned ideas on that too. The single people I don’t care if they ever get a house.
+
+Warren Buffett: Why when do you need one of you’re married, Charlie, I’ll follow up here for this. You need one when your wife wants one.
+
+Charlie Munger: Yeah, yeah. I think you’ve got that exactly right.
+
+</div>
+
 **References**
 
 [^1]: [🎞️ "You’re never wrong to the right thing."](/2024-04-23/22-51-17.html).
@@ -95,3 +113,4 @@ The weeds wither away in significance as the flowers bloom. Over time, it takes 
 [^8]: [Charlie Munger says people shouldn't put their retirement savings into bitcoin](https://www.youtube.com/watch?v=NaX-bjJn-AE).
 [^9]: [Nobody wants to get rich slowly: Understanding Warren Buffett's Quote](https://www.learnstockmarket.in/quote/nobody-wants-to-get-rich-slowly-warren-buffett/).
 [^10]: [Even Warren Buffett Thinks Picking Stocks Is Hard](https://www.morningstar.com/stocks/even-warren-buffett-thinks-stock-picking-is-hard).
+[^11]: [Warren Buffett: Why Buying a House is a LOUSY Investment](https://www.youtube.com/watch?v=lXqmozVYsZA).

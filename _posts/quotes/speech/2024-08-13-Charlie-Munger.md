@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:33:27 +0800
-last_modified_at: 2025-01-18 20:56:31 +0800
+last_modified_at: 2025-01-31 17:21:41 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -69,6 +69,16 @@ Charlie Munger: Well, you have to be optimistic about the competency of our tech
 
 </div>
 
+<div class="quote--left" markdown="1">
+
+When people use the word “common sense”, what they mean is uncommon sense.[^11]
+
+...
+
+The standard human condition is ignorance and stupidity.
+
+</div>
+
 **The Tao of Charlie Munger by David Clark**[^8]
 
 <div class="quote--left" markdown="1">
@@ -87,9 +97,11 @@ Charlie Munger: Well, you have to be optimistic about the competency of our tech
 
 \[No. 019\] You have to be very patient, you have to wait until something comes along, which, at the price you're paying, is easy. That's contrary to human nature, just to sit there all day long doing nothing, waiting. It's easy for us, we have a lot of other things to do. But for an ordinary person, can you imagine just sitting for five years doing nothing? You don't feel active, you don't feel useful, so you do something stupid.
 
-</div>
+<br>
 
-<div class="quote--left" markdown="1">
+\[No. 078\] After the South Sea Bubble[^10], Britain outlawed public corporations--only private ones allowed. And they led the world for 100 years. A modest amount of liquidity will serve the situation. Too much liquidity will hurt human nature. I would never be tenured if I said that. But I’m right and they are wrong.
+
+<br>
 
 \[No. 089\] It’s been my experience in life, if you just keep thinking and reading, you don’t have to work.
 
@@ -101,9 +113,7 @@ Charlie Munger: Well, you have to be optimistic about the competency of our tech
 
 \[No. 102\] I constantly see people rise in life who are not the smartest, sometimes not even the most diligent, but they are learning machines. They go to bed every night a little wiser than they were when they got up, and boy, does that help, particularly when you have a long run ahead of you.
 
-</div>
-
-<div class="quote--left" markdown="1">
+<br>
 
 \[No. 112\] The best way to get a good spouse is to deserve a good spouse.
 
@@ -126,3 +136,5 @@ Charlie Munger: Well, you have to be optimistic about the competency of our tech
 [^7]: [Charlie Munger on Why Are People So Unhappy? \| Daily Journal 2022 【YAPSS Highlight】](https://www.youtube.com/watch?v=u5TI8mPImPk).
 [^8]: [The Tao of Charlie Munger](https://www.amazon.com/gp/product/150115334X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=farnamstreet-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=150115334X&linkId=8a45f464460000d9b2b7e9a6a0275735), David Clark.
 [^9]: [Even Warren Buffett Thinks Picking Stocks Is Hard](https://www.morningstar.com/stocks/even-warren-buffett-thinks-stock-picking-is-hard).
+[^10]: [South Sea Company](https://en.wikipedia.org/wiki/South_Sea_Company).
+[^11]: ['Common Sense' Is Actually Uncommon: Charlie Munger Said 'Standard Human Condition Is Ignorance And Stupidity'](https://www.benzinga.com/general/education/24/07/39716106/common-sense-is-actually-uncommon-charlie-munger-said-standard-human-condition-is-ignorance-and).

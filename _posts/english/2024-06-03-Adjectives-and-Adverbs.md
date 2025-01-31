@@ -4,7 +4,7 @@ toc: false
 categories:
  - English
 date: 2024-06-03 16:24:45 +0800
-last_modified_at: 2025-01-23 16:03:59 +0800
+last_modified_at: 2025-01-31 16:50:28 +0800
 ---
 
 **collective** (collectively) [[1]](https://www.ldoceonline.com/dictionary/collective)
@@ -37,6 +37,13 @@ last_modified_at: 2025-01-23 16:03:59 +0800
 
 - The region was extremely beautiful. Nonetheless Gerard could not imagine spending the rest of his life there.
 - The paintings are complex, but have plenty of appeal nonetheless.
+
+**susceptible** [[1]](https://www.ldoceonline.com/dictionary/susceptible)
+
+- Older people are more susceptible to infections.
+- Soil on the mountain slopes is very susceptible to erosion.
+- A lot of TV advertising is aimed at susceptible young children.
+- She was very susceptible to flattery.
 
 **thereafter** [[1]](https://www.ldoceonline.com/dictionary/thereafter)
 

@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:33:27 +0800
-last_modified_at: 2025-01-31 17:21:41 +0800
+last_modified_at: 2025-02-03 22:06:29 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -70,14 +70,30 @@ Charlie Munger: Well, you have to be optimistic about the competency of our tech
 </div>
 
 <div class="quote--left" markdown="1">
+When people use the word "common sense," what they mean is uncommon sense. Because the standard human condition is ignorance and stupidity. And when they say, old Joe has common sense, what they mean is he has uncommon sense.[^11][^12]
+</div>
 
-When people use the word “common sense”, what they mean is uncommon sense.[^11]
+<div class="quote--left" markdown="1">
 
-...
+**Influencers Transcript: Charlie Munger, May 9, 2019**[^12]
 
-The standard human condition is ignorance and stupidity.
+I tend to avoid the whole subject, just as I ignore-- tide with me, tide against, and just keep swimming. But both parties are so partisan now that they're blinded by their anger. And I don't want to be blinded by my anger, so I control it. And I would recommend it to both parties. I think they should all cool it.
+
+<br>
+
+I can't think of a single example in my whole life where keeping it simple has worked against us. We made mistakes, but they weren't because we kept it simple. ... I would say that the chief advantage that Berkshire's had in accumulating a good record is that we have avoided the pompous bureaucratic systems. We've tried to give power to very talented people and let them make very quick decisions.
+
+<br>
+
+Well, I don't think we have a master plan of knowing where the opportunities are. We're trying to find intelligent things to do with a torrent of surplus cash. And we've always had a torrent of surplus cash. And we're always looking for intelligent things to do with it. And if we find things that are intelligent to do, we do it. And if we don't find anything, we'll let the cash build up. What the hell's wrong with that?
+
+<br>
+
+Well, I have to be interested when they're that important and sweep the world and change practice. But I don't have to invest in everything I'm interested in. I'm looking for things where I think I can predict what's going to happen with a high degree of accuracy. And I have no feeling that I have the ability to do that with Uber.
 
 </div>
+
+<br>
 
 **The Tao of Charlie Munger by David Clark**[^8]
 
@@ -138,3 +154,5 @@ The standard human condition is ignorance and stupidity.
 [^9]: [Even Warren Buffett Thinks Picking Stocks Is Hard](https://www.morningstar.com/stocks/even-warren-buffett-thinks-stock-picking-is-hard).
 [^10]: [South Sea Company](https://en.wikipedia.org/wiki/South_Sea_Company).
 [^11]: ['Common Sense' Is Actually Uncommon: Charlie Munger Said 'Standard Human Condition Is Ignorance And Stupidity'](https://www.benzinga.com/general/education/24/07/39716106/common-sense-is-actually-uncommon-charlie-munger-said-standard-human-condition-is-ignorance-and).
+[^12]: [Influencers Transcript: Charlie Munger, May 9, 2019](https://finance.yahoo.com/news/influencers-transcript-charlie-munger-105001910.html).
+

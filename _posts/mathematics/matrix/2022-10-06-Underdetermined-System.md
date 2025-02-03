@@ -7,12 +7,12 @@ tags:
  - Numerical Analysis
  - Optimization
 date: 2022-10-06 12:57:41 +0800
-last_modified_at: 2024-10-06 21:14:35 +0800
+last_modified_at: 2025-02-02 08:59:42 +0800
 ---
 
 # The least norm solution of underdetermined system
 
-假设$A$是一个$n\times m$的矩阵，若（1）$n<m$（即$Ax=b$为<i class="term">欠定方程组</i>，Underdetermined system），并且（2） $\mathrm{rank}(A)=n$（保证了有无穷多解，而不会出现无解的情况），则方程组$Ax=b$有无穷多解，其中的<i class="term">最小范数解(the least norm solution)</i>为：
+假设$A$是一个$n\times m$的矩阵，若（1）$n<m$（即$Ax=b$为<i class="term">欠定方程组</i>，Underdetermined system），并且（2） $\mathrm{rank}(A)=n$（保证了有无穷多解，而不会出现无解的情况），则方程组$Ax=b$有无穷多解，其中的<i class="term">最小范数解(the least norm solution)</i>为[^1]：
 
 $$
 x_{min}=A^T(AA^T)^{-1}b\label{eq1}
@@ -193,4 +193,4 @@ legend
 
 **Reference**
 
-[1] [Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf).
+[^1]: [Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf), p. 29.

@@ -3,7 +3,7 @@ title: English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2025-02-02 22:34:42 +0800
+last_modified_at: 2025-02-04 10:20:42 +0800
 ---
 
 ## at any rate
@@ -58,6 +58,18 @@ to be very likely to do or feel a particular thing.
 - Don’t lie to her. She***’s bound to*** find out.
 - ‘It’s hot!’ ‘Well, ***it was bound to be*** --- I just took it out of the oven.’ (***it is bound to be*** (=used to say that something should have been expected))
 - When you are dealing with so many patients, mistakes ***are bound to*** happen.
+
+<br>
+
+## better late than never
+
+better late than never [[1]](https://www.ldoceonline.com/dictionary/better-late-than-never) [[2]](https://dictionary.cambridge.org/dictionary/english/better-late-than-never)
+
+used to say that it is better for someone or something to be late than never to arrive or happen at all.
+
+- "The pictures have finally arrived.'' "Well, ***better late than never***.''
+- While ongoing self-monitoring is urged, it is always ***better late than never***.
+- "Dan finally paid me the money he owed me." "Well, ***better late than never***."
 
 <br>
 
@@ -434,6 +446,16 @@ set (one's) hair on fire [[1]](https://idioms.thefreedictionary.com/set+hair+on+
 
 - Sure, I used to party and really ***set my hair on fire*** as a teenager. But those days are long gone now that I'm a mom.
 - Leiningen, for automating Clojure projects without ***setting your hair on fire***. (From [Leiningen](https://leiningen.org/))
+
+<br>
+
+## shift gears
+
+shift gears [[1]](https://dictionary.cambridge.org/dictionary/english/shift-gears)
+
+to suddenly change what you are doing.
+
+- The first half is a comedy, but then the movie ***shifts gears***.
 
 <br>
 

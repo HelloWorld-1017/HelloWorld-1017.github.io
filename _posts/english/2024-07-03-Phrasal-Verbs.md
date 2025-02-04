@@ -3,14 +3,12 @@ title: English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2024-11-01 22:08:03 +0800
+last_modified_at: 2025-02-04 13:04:09 +0800
 ---
 
 ## (BRING) bring about
 
-> bring about
->
-> - [BRING SOMETHING ABOUT](https://dictionary.cambridge.org/dictionary/english/bring-about).
+bring about [[1]](https://dictionary.cambridge.org/dictionary/english/bring-about)
 
 to cause something to happen.
 
@@ -21,9 +19,7 @@ to cause something to happen.
 
 ## (COME) come down to
 
-> come down to
->
-> - [COME DOWN TO](https://www.collinsdictionary.com/dictionary/english/come-down-to).
+come down to [[1]](https://www.collinsdictionary.com/dictionary/english/come-down-to)
 
 If a problem, decision, or question comes down to a particular thing, that thing is the most important factor involved.
 
@@ -35,9 +31,7 @@ If a problem, decision, or question comes down to a particular thing, that thing
 
 ## (COME) come up with
 
-> come up with
->
-> - [COME UP WITH](https://www.collinsdictionary.com/dictionary/english/come-up-with).
+come up with [[1]](https://www.collinsdictionary.com/dictionary/english/come-up-with)
 
 If you come up with a plan or idea, you think of it and suggest it.
 
@@ -52,9 +46,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 ## (GET) get away
 
-> get away
->
-> - [GET AWAY](https://dictionary.cambridge.org/us/dictionary/english/get-away).
+get away [[1]](https://dictionary.cambridge.org/us/dictionary/english/get-away)
 
 (1) to leave or escape from a person or place, often when it is difficult to do this.
 
@@ -67,11 +59,21 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 <br>
 
+## (GET) get by
+
+get by [[1]](https://www.ldoceonline.com/dictionary/get-by) [[2]](https://www.collinsdictionary.com/dictionary/english/get-by)
+
+- I don’t earn a huge salary, but we ***get by***.
+- Sometimes they had to ***get by*** on very little.
+- I can ***get by*** with little money.
+- that book will never ***get by*** the authorities.
+- Are you just getting by? Tell me, are you just getting by, by, by? [[3]](https://genius.com/P-nk-try-lyrics)
+
+<br>
+
 ## (GET) get into
 
-> get into
->
-> - [get into something](https://www.ldoceonline.com/dictionary/get-into).
+get into [[1]](https://www.ldoceonline.com/dictionary/get-into)
 
 (1) to enter a place, especially when this is difficult
 
@@ -117,9 +119,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 ## (GIVE) give in 
 
-> give in
->
-> - [give in](https://www.ldoceonline.com/dictionary/give-in).
+give in [[1]](https://www.ldoceonline.com/dictionary/give-in)
 
 (1) to finally agree to do or accept something that you had at first opposed, especially because someone has forced or persuaded you to.
 
@@ -134,9 +134,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 ## (GIVE) give up
 
-> give up
->
-> - [give up](https://www.ldoceonline.com/dictionary/give-up).
+give up [[1]](https://www.ldoceonline.com/dictionary/give-up)
 
 (1) to stop doing something, especially something that you do regularly
 
@@ -156,9 +154,7 @@ If you come up with a sum of money, you manage to produce it when it is needed.
 
 ## (GIVE) give one’s word
 
-> give one’s word
->
-> - [GIVE YOUR WORD](https://dictionary.cambridge.org/dictionary/english/give-word).
+give one’s word [[1]](https://dictionary.cambridge.org/dictionary/english/give-word)
 
 to promise
 
@@ -168,9 +164,7 @@ to promise
 
 ## (HAND) hand over
 
-> hand over
->
-> - [HAND OVER](https://www.collinsdictionary.com/dictionary/english/hand-over).
+hand over [[1]](https://www.collinsdictionary.com/dictionary/english/hand-over)
 
 If you hand something over to someone, you pass it to them.
 
@@ -192,9 +186,7 @@ If you hand over to someone or hand something over to them, you give them the re
 
 ## (HANG) hang out
 
-> hang out
->
-> - [HANG OUT](https://dictionary.cambridge.org/dictionary/english/hang-out).
+hang out [[1]](https://dictionary.cambridge.org/dictionary/english/hang-out)
 
 to spend a lot of time in a place or with someone.
 
@@ -205,10 +197,7 @@ to spend a lot of time in a place or with someone.
 
 ## (HESITATE) never hesitate to do something
 
-> never hesitate to do something (don’t hesitate to do something; have no hesitation in doing something)
->
-> - [don’t hesitate to do something](https://www.ldoceonline.com/dictionary/don-t-hesitate-to-do-something).
-> - [HAVE NO HESITATION](https://www.collinsdictionary.com/dictionary/english/have-no-hesitation).
+never hesitate to do something (don’t hesitate to do something; have no hesitation in doing something) [[1]](https://www.ldoceonline.com/dictionary/don-t-hesitate-to-do-something) [[2]](https://www.collinsdictionary.com/dictionary/english/have-no-hesitation)
 
 used to tell someone that it is correct or right for them to do something and they do not have to worry about offending anyone.
 
@@ -223,9 +212,7 @@ If you say that you **have no hesitation in** doing something, you are emphasizi
 
 ## (HOOK) hook sb up (with sb/sth)
 
-> hook sb up (with sb/sth)
->
-> - [HOOK UP (WITH SB/STH)](https://dictionary.cambridge.org/dictionary/english/hook-up-with).
+hook sb up (with sb/sth) [[1]](https://dictionary.cambridge.org/dictionary/english/hook-up-with)
 
 to arrange for someone to meet or work with another person or organization.
 
@@ -235,9 +222,7 @@ to arrange for someone to meet or work with another person or organization.
 
 ## (LAY and LIE) Lay vs. Lie
 
-> Lay vs. Lie
->
-> - ['Lay' vs. 'Lie': Which is Right?](https://www.merriam-webster.com/grammar/how-to-use-lay-and-lie).
+Lay vs. Lie [[1]](https://www.merriam-webster.com/grammar/how-to-use-lay-and-lie)
 
 - LAY
   - to place (something or someone) down in a flat position.
@@ -257,9 +242,7 @@ to arrange for someone to meet or work with another person or organization.
 
 ## (LAY and LIE) lie at the heart/centre/root of something
 
-> lie at the heart/centre/root of something
->
-> - [lie at the heart/centre/root of something](https://www.ldoceonline.com/dictionary/lie-at-the-heart-centre-root-of-something).
+lie at the heart/centre/root of something [[1]](https://www.ldoceonline.com/dictionary/lie-at-the-heart-centre-root-of-something)
 
 to be the most important part of something, especially the main cause of it.
 
@@ -271,10 +254,7 @@ to be the most important part of something, especially the main cause of it.
 
 ## (LAY and LIE) lay something on
 
-> lay something on
->
-> - [lay something on](https://www.ldoceonline.com/dictionary/lay-on).
-> - [Lie on/upon](https://www.merriam-webster.com/dictionary/lie%20on%2Fupon).
+lay something on [[1]](https://www.ldoceonline.com/dictionary/lay-on) [[2]](https://www.merriam-webster.com/dictionary/lie%20on%2Fupon)
 
 (1) to provide something such as food, entertainment, or transport for a group of people.
 
@@ -295,9 +275,7 @@ to be the most important part of something, especially the main cause of it.
 
 ## (LOOK) look into
 
-> look into
->
-> - [LOOK INTO SOMETHING](https://dictionary.cambridge.org/dictionary/english/look-into).
+look into [[1]](https://dictionary.cambridge.org/dictionary/english/look-into)
 
 (1) to examine the facts about a problem or situation:
 
@@ -311,10 +289,7 @@ to be the most important part of something, especially the main cause of it.
 
 ## (LOOK) look up
 
-> look up
->
-> - [LOOK UP](https://dictionary.cambridge.org/dictionary/english/look-up).
-> - [look up](https://www.ldoceonline.com/dictionary/look-up).
+look up [[1]](https://dictionary.cambridge.org/dictionary/english/look-up) [[2]](https://www.ldoceonline.com/dictionary/look-up)
 
 (1) to become better:
 
@@ -337,9 +312,7 @@ to be the most important part of something, especially the main cause of it.
 
 ## (PUT) put it
 
-> put it
->
-> - [PUT](https://www.collinsdictionary.com/dictionary/english/put).
+put it [[1]](https://www.collinsdictionary.com/dictionary/english/put)
 
 When you put an idea or remark in a particular way, you express it in that way. You can use expressions like to ‘*put it simply*’ and to ‘*put it bluntly*’ before saying something when you want to explain how you are going to express it. (Synonyms: express, say, state, word.)
 
@@ -353,9 +326,7 @@ When you put an idea or remark in a particular way, you express it in that way. 
 
 ## (PUT) put someone to something
 
-> put someone to something
->
-> - [PUT SOMEONE TO SOMETHING](https://dictionary.cambridge.org/dictionary/english/put-to).
+put someone to something [[1]](https://dictionary.cambridge.org/dictionary/english/put-to)
 
 to cause someone to experience or do something.
 
@@ -367,9 +338,7 @@ to cause someone to experience or do something.
 
 ## (SIT) sit back
 
-> sit back
->
-> - [SIT BACK](https://www.collinsdictionary.com/dictionary/english/sit-back).
+sit back [[1]](https://www.collinsdictionary.com/dictionary/english/sit-back)
 
 If you sit back while something is happening, you relax and do not become involved in it.
 
@@ -380,9 +349,7 @@ If you sit back while something is happening, you relax and do not become involv
 
 ## (STAND) stand down
 
-> stand down
->
-> - [STAND DOWN](https://www.collinsdictionary.com/dictionary/english/stand-down).
+stand down [[1]](https://www.collinsdictionary.com/dictionary/english/stand-down)
 
 If someone stands down, they resign from an important job or position, often in order to let someone else take their place.
 
@@ -394,9 +361,7 @@ If someone stands down, they resign from an important job or position, often in 
 
 ## (STAND) stand sb. up
 
-> stand sb. up
->
-> - [STAND SB UP](https://dictionary.cambridge.org/dictionary/learner-english/stand-sb-up).
+stand sb. up [[1]](https://dictionary.cambridge.org/dictionary/learner-english/stand-sb-up)
 
 to fail to meet someone when you said you would.
 
@@ -406,10 +371,7 @@ to fail to meet someone when you said you would.
 
 ## (STICK) stick around
 
-> stick around
->
-> - [STICK AROUND](https://dictionary.cambridge.org/dictionary/english/stick-around).
-> - [STICK AROUND](https://www.collinsdictionary.com/dictionary/english/stick-around).
+stick around [[1]](https://dictionary.cambridge.org/dictionary/english/stick-around) [[2]](https://www.collinsdictionary.com/dictionary/english/stick-around)
 
 to stay somewhere for a period of time; If you stick around, you stay where you are, often because you are waiting for something.
 
@@ -421,9 +383,7 @@ to stay somewhere for a period of time; If you stick around, you stay where you 
 
 ## (TAKE) take away
 
-> take away
->
-> - [TAKE AWAY](https://www.collinsdictionary.com/dictionary/english/take-away).
+take away [[1]](https://www.collinsdictionary.com/dictionary/english/take-away)
 
 (1) If you take something away from someone, you remove it from them, so that they no longer possess it or have it with them.
 
@@ -445,11 +405,7 @@ to stay somewhere for a period of time; If you stick around, you stay where you 
 
 ## (THROW) throw oneself at sb.
 
-> throw oneself at sb.
->
-> - [THROW ONESELF AT SB](https://www.collinsdictionary.com/dictionary/english/throw-yourself-at-someone_1).
-> - [throw yourself at somebody](https://www.ldoceonline.com/dictionary/throw-yourself-at-somebody).
-> - [THROW YOURSELF AT SOMEONE](https://dictionary.cambridge.org/dictionary/english/throw-at).
+throw oneself at sb. [[1]](https://www.collinsdictionary.com/dictionary/english/throw-yourself-at-someone_1) [[2]](https://www.ldoceonline.com/dictionary/throw-yourself-at-somebody) [[3]](https://dictionary.cambridge.org/dictionary/english/throw-at)
 
 If someone throws themselves at you, they make it very obvious that they want to begin a relationship with you, by behaving as though they are sexually attracted to you. (to try very hard to attract someone’s attention because you want to have a sexual relationship with them)
 
@@ -460,10 +416,7 @@ If someone throws themselves at you, they make it very obvious that they want to
 
 ## (TRIP) trip up
 
-> trip up
->
-> - [TRIP UP](https://www.collinsdictionary.com/us/dictionary/english/trip-up).
-> - [TRIP](https://www.collinsdictionary.com/us/dictionary/english/trip).
+trip up [[1]](https://www.collinsdictionary.com/us/dictionary/english/trip-up) [[2]](https://www.collinsdictionary.com/us/dictionary/english/trip)
 
 <div class="notice--primary" markdown="1">
 

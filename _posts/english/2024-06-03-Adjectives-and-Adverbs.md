@@ -4,7 +4,7 @@ toc: false
 categories:
  - English
 date: 2024-06-03 16:24:45 +0800
-last_modified_at: 2025-01-31 16:50:28 +0800
+last_modified_at: 2025-02-04 10:01:23 +0800
 ---
 
 **collective** (collectively) [[1]](https://www.ldoceonline.com/dictionary/collective)
@@ -23,6 +23,10 @@ last_modified_at: 2025-01-31 16:50:28 +0800
 - He led a remarkably frugal existence.
 - a frugal breakfast.
 
+**gigantic** [[1]](https://www.ldoceonline.com/dictionary/gigantic)
+
+- a gigantic skyscraper.
+
 **nearby** [[1]](https://dictionary.cambridge.org/dictionary/english/nearby)
 
 - If there's a café nearby, we could stop for a snack.
@@ -37,6 +41,19 @@ last_modified_at: 2025-01-31 16:50:28 +0800
 
 - The region was extremely beautiful. Nonetheless Gerard could not imagine spending the rest of his life there.
 - The paintings are complex, but have plenty of appeal nonetheless.
+
+**plausible** [[1]](https://www.ldoceonline.com/dictionary/plausible)
+
+- His story certainly sounds plausible.
+- a plausible explanation.
+- a plausible liar.
+
+**skeptical (sceptical)** [[1]](https://www.ldoceonline.com/dictionary/skeptical) [[2]](https://www.ldoceonline.com/dictionary/sceptical)
+
+- I’m extremely sceptical about what I read in the press.
+- Environmental groups are sceptical of the government’s claims.
+- He is highly sceptical of the reforms.
+- ‘You can trust me, ’ he said. Jane looked sceptical.
 
 **susceptible** [[1]](https://www.ldoceonline.com/dictionary/susceptible)
 

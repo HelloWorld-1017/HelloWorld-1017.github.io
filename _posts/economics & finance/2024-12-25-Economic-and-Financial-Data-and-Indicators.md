@@ -4,7 +4,7 @@ categories:
  - Collections
  - Economics & Finance
 date: 2024-12-25 15:27:18 +0800
-last_modified_at: 2025-01-11 22:32:38 +0800
+last_modified_at: 2025-02-06 14:24:51 +0800
 ---
 
 ## Websites
@@ -51,6 +51,11 @@ CNN Fear and Greed Index
 Fed Funds Interest Rate
 
 - [United States Fed Funds Interest Rate](https://tradingeconomics.com/united-states/interest-rate).
+
+Federal Surplus or Deficit
+
+- [Federal Surplus or Deficit [-] (FYFSD)](https://fred.stlouisfed.org/series/FYFSD).
+- [Federal Surplus or Deficit [-] as Percent of Gross Domestic Product (FYFSGDA188S)](https://fred.stlouisfed.org/series/FYFSGDA188S).
 
 Forex
 

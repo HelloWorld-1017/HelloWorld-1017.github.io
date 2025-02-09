@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:33:27 +0800
-last_modified_at: 2025-02-03 22:06:29 +0800
+last_modified_at: 2025-02-07 14:26:12 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -116,6 +116,10 @@ Well, I have to be interested when they're that important and sweep the world an
 <br>
 
 \[No. 078\] After the South Sea Bubble[^10], Britain outlawed public corporations--only private ones allowed. And they led the world for 100 years. A modest amount of liquidity will serve the situation. Too much liquidity will hurt human nature. I would never be tenured if I said that. But I’m right and they are wrong.
+
+<br>
+
+\[No. 080\] Koreans came up from nothing in the auto business. They worked 84 hours a week with no overtime for more than a decade. At the same time every Korean child came home from grade school, and worked with a tutor for four full hours in the afternoon and the evening, driven by these Tiger Moms. Are you surprised when you lose to people like that? Only if you’re a total idiot.
 
 <br>
 

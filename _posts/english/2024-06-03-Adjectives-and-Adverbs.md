@@ -4,7 +4,7 @@ toc: false
 categories:
  - English
 date: 2024-06-03 16:24:45 +0800
-last_modified_at: 2025-02-04 10:01:23 +0800
+last_modified_at: 2025-02-08 14:53:36 +0800
 ---
 
 **collective** (collectively) [[1]](https://www.ldoceonline.com/dictionary/collective)
@@ -48,12 +48,24 @@ last_modified_at: 2025-02-04 10:01:23 +0800
 - a plausible explanation.
 - a plausible liar.
 
+**resilient** [[1]](https://www.ldoceonline.com/dictionary/resilient)
+
+- Children are often very resilient.
+- The company proved remarkably resilient during the recession.
+- boots with tough resilient soles.
+- Any chemical treatment will leave hair less resilient than before.
+
 **skeptical (sceptical)** [[1]](https://www.ldoceonline.com/dictionary/skeptical) [[2]](https://www.ldoceonline.com/dictionary/sceptical)
 
 - I’m extremely sceptical about what I read in the press.
 - Environmental groups are sceptical of the government’s claims.
 - He is highly sceptical of the reforms.
 - ‘You can trust me, ’ he said. Jane looked sceptical.
+
+**surplus** [[1]](https://www.ldoceonline.com/dictionary/surplus)
+
+- Ethiopia has no surplus food.
+- Surplus cash can be invested.
 
 **susceptible** [[1]](https://www.ldoceonline.com/dictionary/susceptible)
 

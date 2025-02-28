@@ -4,13 +4,25 @@ toc: false
 categories:
  - English
 date: 2024-06-03 16:24:45 +0800
-last_modified_at: 2025-02-08 14:53:36 +0800
+last_modified_at: 2025-02-28 14:13:35 +0800
 ---
 
 **collective** (collectively) [[1]](https://www.ldoceonline.com/dictionary/collective)
 
 - a collective decision made by all board members.
 - our collective responsibility for the environment.
+
+**concurrent** (concurrently) [[1]](https://www.ldoceonline.com/dictionary/concurrent)
+
+- The exhibition reflected concurrent developments abroad.
+- My opinions are concurrent with yours.
+- Because his prison sentences run concurrently, he could be free in two years.
+
+**deficient** [[1]](https://www.ldoceonline.com/dictionary/deficient)
+
+- Women who are dieting can become iron deficient.
+- patients who were deficient in vitamin C
+- Our prisons are our most deficient social service.
 
 **feasible** [[1]](https://www.ldoceonline.com/dictionary/feasible)
 
@@ -47,6 +59,12 @@ last_modified_at: 2025-02-08 14:53:36 +0800
 - His story certainly sounds plausible.
 - a plausible explanation.
 - a plausible liar.
+
+**quasi-** [[1]](https://www.ldoceonline.com/dictionary/quasi)
+
+- a quasi-scientific approach
+- a quasi-governmental organization
+- quasi-Newton methods
 
 **resilient** [[1]](https://www.ldoceonline.com/dictionary/resilient)
 
@@ -86,3 +104,5 @@ last_modified_at: 2025-02-08 14:53:36 +0800
 **tractable** [[1]](https://www.ldoceonline.com/dictionary/tractable)
 
 - The issues have proved to be less tractable than expected.
+
+**yet** [[1]](https://www.ldoceonline.com/dictionary/yet)

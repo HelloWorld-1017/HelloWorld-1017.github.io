@@ -3,7 +3,7 @@ title: Latin Words, French Words, and Spanish Words
 categories:
  - English
 date: 2024-06-28 23:49:22 +0800
-last_modified_at: 2025-01-31 18:36:31 +0800
+last_modified_at: 2025-02-28 14:18:39 +0800
 ---
 
 # Latin words
@@ -29,6 +29,15 @@ a posteriori: using facts that you know now to form a judgment about what must h
 
 - This assumption will be verified *a posteriori*.
 - The only feasible way to do this is to study the evolution of the system *a posteriori*.
+
+<br>
+
+## a.m. & p.m.
+
+a.m. & p.m. [[1]](https://en.wikipedia.org/wiki/12-hour_clock)
+
+- a.m., “ante meridiem”, translating to “before midday”;
+- p.m., “post meridiem”, translating to “after midday”.
 
 <br>
 

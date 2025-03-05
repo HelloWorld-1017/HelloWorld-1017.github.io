@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - Quotes
 date: 2024-08-13 23:30:49 +0800
-last_modified_at: 2025-02-08 19:40:39 +0800
+last_modified_at: 2025-03-05 20:41:51 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -151,6 +151,12 @@ Charlie Munger: Yeah, yeah. I think you’ve got that exactly right.
 
 </div>
 
+<div class="quote--left" markdown="1">
+
+Tariffs are actually, we’ve had a lot of experience with them. They’re an act of war, to some degree ... Over time, they are a tax on goods. I mean, the tooth fairy doesn’t pay ’em! And then what? You always have to ask that question in economics. You always say, ‘And then what?’[^17][^18]
+
+</div>
+
 **References**
 
 [^1]: [🎞️ "You’re never wrong to the right thing."](/2024-04-23/22-51-17.html).
@@ -169,3 +175,5 @@ Charlie Munger: Yeah, yeah. I think you’ve got that exactly right.
 [^14]: [Warren Buffett’s 7 Rules for Saving Money on Everyday Expenses Without Sacrificing Comfort](https://finance.yahoo.com/news/warren-buffett-7-rules-saving-120237375.html).
 [^15]: [Warren Buffett: 6 Ways To Invest Tiny Sums of Money](https://finance.yahoo.com/news/warren-buffett-6-ways-invest-165909085.html).
 [^16]: [Why Warren Buffett writes his annual letter like it is for his sisters](https://www.cnbc.com/2019/02/25/why-warren-buffett-writes-his-annual-letter-like-it-is-for-his-sisters.html).
+[^17]: [Warren Buffett calls Trump's tariffs a tax on goods, says 'the tooth fairy doesn't pay 'em'](https://www.cnbc.com/2025/03/02/warren-buffett-calls-trumps-tariffs-a-tax-on-goods-says-the-tooth-fairy-doesnt-pay-em.html).
+[^18]: [Warren Buffett on Trump tariffs: 'The Tooth Fairy doesn't pay 'em!'](https://qz.com/warren-buffett-donald-trump-tariffs-tax-consumers-1851767285).

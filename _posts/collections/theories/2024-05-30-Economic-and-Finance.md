@@ -6,7 +6,7 @@ categories:
  - Sociology
  - Uncertainty
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2024-11-26 14:29:02 +0800
+last_modified_at: 2025-03-03 16:54:41 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -164,6 +164,17 @@ The <i class="term">paradox of thrift</i> (or <i class="term">paradox of saving<
 The <i class="term">ratchet effect</i> is an economic process that is difficult to reverse <i class="emphasize">once it is underway or has already occurred</i>. A ratchet is an analogy to a mechanical ratchet, which spins one way but not the other, in an economic process that tends to <i class="emphasize">only work one way</i>. The results or side effects of the process may reinforce the cause by creating or altering incentives and expectations among participants.
 
 A ratchet effect is closely related to the idea of a <i class="term">positive feedback loop</i>. In addition, like releasing a mechanical ratchet used to compress a spring, the reversal of an economic process that involves a ratchet effect may be rapid, forceful, and difficult to control.
+
+<br>
+
+## Scarring effects
+
+> - [What is Economic Scarring?](https://www.tutor2u.net/economics/reference/what-is-economic-scarring).
+> - [Scarring Effects of Unemployment](https://docs.iza.org/dp6198.pdf).
+> - [Understanding the scarring effect of recessions](https://economics.yale.edu/sites/default/files/utseor.pdf).
+> - [The scarring effect of recessions](https://www.economics.uci.edu/files/docs/workingpapers/2005-06/Ouyang-09.pdf).
+
+Economic scarring refers to the medium-long term damage done to the economies of one or more countries following a severe economic shock which then leads to a recession.
 
 <br>
 

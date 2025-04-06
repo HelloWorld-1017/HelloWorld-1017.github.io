@@ -4,7 +4,7 @@ toc: false
 categories:
  - English
 date: 2024-06-03 16:24:45 +0800
-last_modified_at: 2025-02-28 14:13:35 +0800
+last_modified_at: 2025-04-04 20:20:20 +0800
 ---
 
 **collective** (collectively) [[1]](https://www.ldoceonline.com/dictionary/collective)
@@ -38,6 +38,8 @@ last_modified_at: 2025-02-28 14:13:35 +0800
 **gigantic** [[1]](https://www.ldoceonline.com/dictionary/gigantic)
 
 - a gigantic skyscraper.
+
+**immediately** [[1]](https://www.ldoceonline.com/dictionary/immediately)
 
 **nearby** [[1]](https://dictionary.cambridge.org/dictionary/english/nearby)
 

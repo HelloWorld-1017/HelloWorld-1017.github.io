@@ -3,7 +3,7 @@ title: English Idioms and Phrases
 categories:
  - English
 date: 2024-05-26 08:37:07 +0800
-last_modified_at: 2025-02-04 10:20:42 +0800
+last_modified_at: 2025-04-04 19:39:47 +0800
 ---
 
 ## at any rate
@@ -300,6 +300,16 @@ to manage to stop yourself from smiling or laughing.
 to hope that things will happen in the way that you want them to.
 
 - Let's ***keep our fingers crossed*** that it doesn't rain.
+
+<br>
+
+## know the drill
+
+know the drill [[1]](https://www.merriam-webster.com/dictionary/know%20the%20drill)
+
+to know how something is done; to be familiar with a regular process, procedure, etc.
+
+- You don't have to tell us what to do. We all ***know the drill*** by now.
 
 <br>
 

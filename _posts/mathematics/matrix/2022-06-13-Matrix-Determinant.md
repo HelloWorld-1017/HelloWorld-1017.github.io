@@ -1,16 +1,13 @@
 ---
-layout: single
-title: Matrix Determinant
-date: 2022-06-13 19:57:32 +0800
+title: The Geometric Meaning of the Determinant of A Matrix
+toc: false
 categories: 
  - Mathematics
 tags: 
  - Matrix
-last_modified_at: 2023-12-02 20:46:28 +0800
+date: 2022-06-13 19:57:32 +0800
+last_modified_at: 2025-04-06 14:53:22 +0800
 ---
-
-
-# Definition of matrix determinant
 
 有的线性变换会将空间向外拉伸，有的则将空间内挤压，那么**如何测量某特定线性变换对一块给定区域的缩放比例呢？**[^1]
 
@@ -36,9 +33,6 @@ last_modified_at: 2023-12-02 20:46:28 +0800
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220707175459078.png?raw=true" alt="image-20220707175459078" style="zoom:67%;" />
 
-<br>
-
-# Calculation of matrix determinant
 以二维空间中的线性变换为例，设矩阵
 
 $$
@@ -77,4 +71,4 @@ $$
 **Reference**
 
 [^1]: [3Blue1Brown线性代数系列视频](https://www.bilibili.com/video/BV1ys411472E?p=1&vd_source=f209f402a13cd84c99ed077bf0b9afb9).
-[^2]: [Matrix and its Relation to Linear Transformation - What a starry night~](https://helloworld-1017.github.io/2022-06-11/17-06-09.html).
+[^2]: [Matrix and its Relation to Linear Transformation](/2022-06-11/17-06-09.html).

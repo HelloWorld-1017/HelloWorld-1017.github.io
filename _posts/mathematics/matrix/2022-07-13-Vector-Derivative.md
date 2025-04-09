@@ -1,17 +1,15 @@
 ---
-layout: single
 title: Vector Derivative
-date: 2022-07-14 17:45:25 +0800
 categories: 
  - Mathematics
 tags: 
  - Matrix
  - Mathematical Analysis
+date: 2022-07-14 17:45:25 +0800
+last_modified_at: 2025-04-08 21:54:51 +0800
 ---
 
 # 标量对向量求导
-
-
 
 ## 标量对向量求导
 
@@ -159,17 +157,17 @@ $$
 $$
 \begin{equation}
 DF(\boldsymbol{x}) = 
-	\begin{bmatrix}
-		\dfrac{\partial f_1}{\partial x_1} & \dfrac{\partial f_1}{\partial x_2}  & \cdots & \dfrac{\partial f_1}{\partial x_n}\\ 
-		\dfrac{\partial f_2}{\partial x_1} & \dfrac{\partial f_2}{\partial x_2}  & \cdots & \dfrac{\partial f_2}{\partial x_n}\\
-		\vdots                             & \vdots                              & \vdots & \vdots                            \\
-		\dfrac{\partial f_m}{\partial x_1} & \dfrac{\partial f_m}{\partial x_2}  & \cdots & \dfrac{\partial f_m}{\partial x_n}
-	\end{bmatrix}
-	=\begin{bmatrix}
-	\nabla f_1\\
-	\vdots\\
-	\nabla f_m
-	\end{bmatrix}\label{jacobianmatrix}
+\begin{bmatrix}
+\dfrac{\partial f_1}{\partial x_1} & \dfrac{\partial f_1}{\partial x_2}  & \cdots & \dfrac{\partial f_1}{\partial x_n} \\ 
+\dfrac{\partial f_2}{\partial x_1} & \dfrac{\partial f_2}{\partial x_2}  & \cdots & \dfrac{\partial f_2}{\partial x_n} \\
+\vdots & \vdots & \vdots & \vdots \\
+\dfrac{\partial f_m}{\partial x_1} & \dfrac{\partial f_m}{\partial x_2}  & \cdots & \dfrac{\partial f_m}{\partial x_n}
+\end{bmatrix}
+=\begin{bmatrix}
+\nabla f_1\\
+\vdots\\
+\nabla f_m
+\end{bmatrix}\label{jacobianmatrix}
 \end{equation}
 $$
 

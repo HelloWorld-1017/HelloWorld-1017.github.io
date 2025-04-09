@@ -7,7 +7,7 @@ tags:
  - Matrix
  - Geometry
 date: 2023-05-09 13:36:31 +0800
-last_modified_at: 2024-10-05 21:26:35 +0800
+last_modified_at: 2025-04-07 18:32:07 +0800
 ---
 
 # Definitions based on angle $\theta$
@@ -150,6 +150,6 @@ legend('Interpreter','latex')
 
 **References**
 
-[^1]: [Vector projection - Wikipedia](https://en.wikipedia.org/wiki/Vector_projection).
-[^2]: [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
-[^3]: [Gram-Schmidt Process - What a starry night~](https://helloworld-1017.github.io/2023-11-01/22-00-27.html).
+[^1]: [Vector projection](https://en.wikipedia.org/wiki/Vector_projection).
+[^2]: [Geometric and Algebraic Definition of Dot Product (Inner Product)](/2022-06-09/21-07-09.html).
+[^3]: [Gram-Schmidt Process](/2023-11-01/22-00-27.html).

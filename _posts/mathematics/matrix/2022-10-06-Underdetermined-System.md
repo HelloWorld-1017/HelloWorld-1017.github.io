@@ -7,7 +7,7 @@ tags:
  - Numerical Analysis
  - Optimization
 date: 2022-10-06 12:57:41 +0800
-last_modified_at: 2025-02-02 08:59:42 +0800
+last_modified_at: 2025-04-09 14:49:13 +0800
 ---
 
 # The least norm solution of underdetermined system
@@ -27,7 +27,7 @@ $$
 $$
 \begin{split}
 \min&\  \vert\vert x\vert\vert^2\\
-\mathrm{subject\ to.}&\ Ax-b=0
+\text{s.t.}&\ Ax-b=0
 \end{split}\notag
 $$
 

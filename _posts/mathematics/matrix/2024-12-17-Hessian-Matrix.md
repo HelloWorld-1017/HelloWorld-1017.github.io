@@ -6,7 +6,7 @@ categories:
 tags:
  - Matrix
 date: 2024-12-17 20:21:18 +0800
-last_modified_at: 2024-12-17 20:21:18 +0800
+last_modified_at: 2025-04-09 18:21:10 +0800
 ---
 
 The Hessian matrix describes the local curvature of a multivariate function[^1]:
@@ -49,13 +49,19 @@ Here are some properties of it[^1]:
 (2) The determinant of the Hessian matrix is called the Hessian determinant.
 
 (3) The Hessian matrix of a function $f$ is the transpose of the Jacobian matrix of the gradient of the function $f$:
-
 $$
 \mathrm{\boldsymbol{H}}(f(\mathrm{\boldsymbol{x}}))=\mathrm{\boldsymbol{J}}(\nabla f(\mathrm{\boldsymbol{x}}))^T\notag
 $$
+
+<div class="notice--primary" markdown="1">
+
+Note: The transpose seems not necessary, because the Hessian matrix is symmetric. See[^2].
+
+</div>
 
 </div>
 
 **References**
 
 [^1]: [Hessian matrix](https://en.wikipedia.org/wiki/Hessian_matrix).
+[^2]: [Matrix Calculus](/2025-04-08/16-08-26.html).

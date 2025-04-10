@@ -5,7 +5,7 @@ categories:
 tags:
  - Matrix
 date: 2025-04-08 16:08:26 +0800
-last_modified_at: 2025-04-09 18:18:37 +0800
+last_modified_at: 2025-04-10 12:44:08 +0800
 ---
 
 # Fundamentals
@@ -341,7 +341,7 @@ So, to conclude,
 
 **References**
 
-[^1]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), pp. 16-20.
+[^1]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), chapter 1: Linear Algebra Review and Reference, pp. 16-20.
 [^2]: [Jacobian matrix and determinant](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant).
 [^3]: [Solve Nonlinear Equation (System) using Iterative Method](/2022-07-12/13-45-17.html).
 [^4]: [Vector Derivative](/2022-07-14/17-45-25.html).

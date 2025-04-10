@@ -6,7 +6,7 @@ categories:
 tags:
  - Matrix
 date: 2025-04-08 15:52:28 +0800
-last_modified_at: 2025-04-09 18:03:56 +0800
+last_modified_at: 2025-04-10 12:44:15 +0800
 ---
 
 # Cofactor, matrix of cofactors, adjoint, and determinant
@@ -402,4 +402,4 @@ $$
 [^6]: [matrices - Cofactor multiplied with another row](https://math.stackexchange.com/questions/1563742/cofactor-multiplied-with-another-row).
 [^7]: [Prove that the sum of product of any row or column with corresponding co-factors of some other row or column in a matrix is zero.](https://www.vedantu.com/question-answer/prove-that-the-sum-of-product-of-any-row-or-class-10-maths-cbse-5f37c156df4e9873eee4e7b1)
 [^8]: [The Geometric Meaning of the Determinant of A Matrix](/2022-06-13/19-57-32.html).
-[^9]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), p. 11.
+[^9]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), chapter 1: Linear Algebra Review and Reference, p. 11.

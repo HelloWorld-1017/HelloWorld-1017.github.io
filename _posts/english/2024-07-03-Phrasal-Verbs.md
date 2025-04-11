@@ -3,7 +3,7 @@ title: English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2025-02-04 13:04:09 +0800
+last_modified_at: 2025-04-10 21:06:09 +0800
 ---
 
 ## (BRING) bring about
@@ -333,6 +333,29 @@ to cause someone to experience or do something.
 - Your generosity ***puts me to shame***.
 - I've ***put the children to work*** clearing the snow from the path.
 - I hope we're not ***putting you to any inconvenience***.
+
+<br>
+
+## (RUN) run into
+
+run into [[1]](https://www.collinsdictionary.com/dictionary/english/run-into)
+
+If you run into problems or difficulties, you unexpectedly begin to experience them.
+
+- They agreed to sell last year after they ***ran into*** financial problems.
+- But the government's plans have ***run into*** strong opposition from civil rights campaigners. 
+
+If you run into someone, you meet them unexpectedly.
+
+- He ***ran into*** Krettner in the corridor a few minutes later.
+
+If a vehicle or its driver runs into something, it accidentally hits it.
+
+- The driver failed to negotiate a bend and ***ran into*** a tree.
+
+You use run into when indicating that the cost or amount of something is very great.
+
+- He said companies should face punitive civil penalties ***running into*** millions of pounds.
 
 <br>
 

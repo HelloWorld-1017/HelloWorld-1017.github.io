@@ -1,18 +1,17 @@
 ---
-layout: single
 title: Monte Carlo Simulation to Estimate $\pi$
-date: 2023-11-18 17:40:37 +0800
+toc: false
 categories:
+ - Mathematics
  - MATLAB
  - Uncertainty
- - Mathematics
 tags:
  - MATLAB Animation
  - MATLAB Graphics
  - Number Theory
-toc: false
 header: 
   image: https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202311181442343.gif
+date: 2023-11-18 17:40:37 +0800
 last_modified_at: 2023-11-19 02:10:17 +0800
 ---
 

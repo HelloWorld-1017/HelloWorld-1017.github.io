@@ -9,7 +9,7 @@ tags:
  - Markdown
  - Matrix
 date: 2025-04-11 13:04:11 +0800
-last_modified_at: 2025-04-11 13:04:11 +0800
+last_modified_at: 2025-04-11 20:26:41 +0800
 ---
 
 In reference[^1], when talking about “polyhedron (polyhedra)”, the mathematical symbol $\preceq$ is used to denote <i class="term">component-wise inequality</i>. Specifically, for two vectors $\boldsymbol{\mathrm{x}},\boldsymbol{\mathrm{y}}\in\mathbb{R}^n$,
@@ -46,6 +46,8 @@ and other similar ones[^4]:
 
 Of course, these symbols can be used in Markdown files as well.
 
+Besides, sometimes the symbol $\preceq$ (resp. $\succeq$) also can be used to denote that the symmetric matrix $\boldsymbol{\mathrm{A}}$ is negative (resp. positive) semidefinite by $\boldsymbol{\mathrm{A}}\preceq0$ (resp. $\boldsymbol{\mathrm{A}}\succeq0$). See blog[^5].
+
 <br>
 
 **References**
@@ -54,3 +56,4 @@ Of course, these symbols can be used in Markdown files as well.
 [^2]: [LaTeX Math Symbols](https://www.math.uci.edu/~xiangwen/pdf/LaTeX-Math-Symbols.pdf), p.2.
 [^3]: [preceq (LaTeX symbol)](https://latex-programming.fandom.com/wiki/Preceq_\(LaTeX_symbol\)).
 [^4]: [List of LaTeX mathematical symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols).
+[^5]: [Jensen’s Inequality, Convex Function, Concave Function, and Non-convex Function](/2025-04-10/14-17-44.html).

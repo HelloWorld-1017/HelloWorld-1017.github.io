@@ -7,7 +7,7 @@ tags:
  - Matrix
  - Optimization
 date: 2025-04-11 10:01:29 +0800
-last_modified_at: 2025-04-11 14:55:17 +0800
+last_modified_at: 2025-04-12 12:01:44 +0800
 ---
 
 The convex set is[^1]:
@@ -151,7 +151,7 @@ In the same way, we can prove that, the sets of all positive definite (PD) $\mat
 [^1]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), Convex Optimization Overview, pp. 1-3.
 [^2]: [Convex set](https://en.wikipedia.org/wiki/Convex_set).
 [^3]: [Convex Sets](https://byjus.com/maths/convex-sets/).
-[^4]: [Norm (mathematics)](https://en.wikipedia.org/wiki/Norm_\(mathematics\)).
+[^4]: [Norm (mathematics)](https://en.wikipedia.org/wiki/Norm_(mathematics)).
 [^5]: [p-norm ball](https://www.geogebra.org/m/pyxfvyyk).
 [^6]: [LaTeX Component-wise Inequality Symbols: $\preceq$ and $\succeq$ etc.](/2025-04-11/13-04-11.html)
 [^7]: In general, $\mathbb{S}^n\subset\mathbb{R}^{n\times n}$ denotes the set of $n\times n$ symmetric matrices.

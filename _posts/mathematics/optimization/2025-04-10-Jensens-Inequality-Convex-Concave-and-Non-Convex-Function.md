@@ -4,10 +4,11 @@ categories:
  - Machine Learning
  - Mathematics
 tags:
+ - Matrix
  - Optimization
  - Probability Theory and Mathematical Statistics
 date: 2025-04-10 14:17:44 +0800
-last_modified_at: 2025-04-11 20:24:28 +0800
+last_modified_at: 2025-04-12 13:30:26 +0800
 ---
 
 # Jensen's Inequality
@@ -156,7 +157,7 @@ This means that if we try to optimize a non-convex function, we may get stuck in
 
 </div>
 
-# Conditions for convexity
+# Conditions for convexity and some example of convex functions
 
 ## First order condition for convexity
 
@@ -196,6 +197,106 @@ Again analogous to both the definition and first order conditions for convexity,
 
 </div>
 
+## Examples of convex functions
+
+Here are some example of convex functions[^7].
+
+### (1) Exponential functions
+
+Let $f:\mathbb{R}\rightarrow\mathbb{R}$, $f(x)=\mathrm{e}^{ax}$ for any $a\in\mathbb{R}$. Because
+
+$$
+f^{\prime\prime}(x)=a^2\mathrm{e}^{ax}\ge0\quad\text{for }x\in\mathbb{R}\notag
+$$
+
+and according to $\eqref{eq3}$, exponential functions $f(x)$ are convex.
+
+### (2) Negative logarithm
+
+Let $f:\mathbb{R}\rightarrow\mathbb{R}$, $f(x)=-\log x$ with domain $$\mathscr{D}(f)=\mathbb{R}_{++}$$, where $$\mathbb{R}_{++}$$ denotes the set of strictly positive real numbers. So we have
+
+$$
+f^{\prime\prime} = \dfrac1{x^2}>0\quad\text{for }x\in\mathbb{R}_{++}\notag
+$$
+
+### (3) Affine functions
+
+Let $f:\mathbb{R}^n\rightarrow\mathbb{R}$, $f(\boldsymbol{\mathrm{x}})=\boldsymbol{\mathrm{b}}^T\boldsymbol{\mathrm{x}}+c$, where $\boldsymbol{\mathrm{b}}\in\mathbb{R}^n$ and $c\in\mathbb{R}$. For this case, the Hessian matrix is:
+
+$$
+\nabla_{\boldsymbol{\mathrm{x}}}^2f(\boldsymbol{\mathrm{x}})=\boldsymbol{0}\quad\text{for }\boldsymbol{\mathrm{x}}\in\mathbb{R}^n\notag
+$$
+
+The zero matrix $\boldsymbol{0}$ is both positive semidefinite and negative semidefinite, so $f$ is both convex and concave. It’s easily to understand. For example, intuitively speaking, a one-dimensional affine function
+
+$$
+f(x) = bx+c\notag
+$$
+
+corresponds a line, and a two-dimensional affine function
+
+$$
+f(x_1,x_2) = b_1x_1+b_2x_2+c\notag
+$$
+
+corresponds to a plane. <i class="emphasize">In fact, affine functions of this form are the ONLY functions that are both convex and concave.</i>
+
+### (4) Quadratic functions
+
+Let $f:\mathbb{R}^n\rightarrow\mathbb{R}$, $f(\boldsymbol{\mathrm{x}})=\frac12\boldsymbol{\mathrm{x}}^T\boldsymbol{\mathrm{A}}\boldsymbol{\mathrm{x}}+\boldsymbol{\mathrm{b}}^T\boldsymbol{\mathrm{x}}+c$, where $\boldsymbol{\mathrm{A}}\in\mathbb{S}^n$, $\boldsymbol{\mathrm{b}}\in\mathbb{R}^n$ and $c\in\mathbb{R}$. The Hessian matrix for the quadratic functions is[^9]:
+
+$$
+\nabla_{\boldsymbol{\mathrm{x}}}^2f(\boldsymbol{\mathrm{x}})=\boldsymbol{\mathrm{A}}\notag
+$$
+
+Therefore, if the symmetric matrix $\boldsymbol{\mathrm{A}}$ is positive semidefinite (resp. negative semidefinite, positive definite, and negative definite), then the quadratic function is convex (resp. concave, strictly convex, and strictly concave). And, <i class="emphasize">if $\boldsymbol{\mathrm{A}}$ is indefinite then $f$ is neither convex nor concave</i>.
+
+Here is a very classic quadratic function, the squared Euclidean:
+
+$$
+f(\boldsymbol{\mathrm{x}})=\vert\vert\boldsymbol{\mathrm{x}}\vert\vert_2^2=\boldsymbol{\mathrm{x}}^T\boldsymbol{\mathrm{x}}\notag
+$$
+
+where $\boldsymbol{\mathrm{A}}$ is an identity matrix, and hence the function is a <i class="emphasize">strictly convex function</i>.
+
+### (5) Norms
+
+Let $f:\mathbb{R}^n\rightarrow\mathbb{R}$ be some norm on $\mathbb{R}^n$. According to the properties “triangle inequality” and “absolute homogeneity” of the norm, we have:
+
+$$
+f(\theta\boldsymbol{\mathrm{x}}+(1-\theta)\boldsymbol{\mathrm{y}})\le f(\theta\boldsymbol{\mathrm{x}})+f((1-\theta)\boldsymbol{\mathrm{y}})=\theta f(\boldsymbol{\mathrm{x}})+(1-\theta)f(\boldsymbol{\mathrm{y}})\notag
+$$
+
+Therefore we can conclude that, <i class="emphasize">norms are all convex functions</i>.
+
+It should highlight that, here the convexity of norms is proved by the definition of convex function, rather than by the first order condition or second order condition. The reason is that norms aren’t always differentiable everywhere in the domain $\mathscr{D}(f)$, for example, the $1$-norm
+
+$$
+\vert\vert\boldsymbol{\mathrm{x}}\vert\vert_1=\sum_{i=1}^n\vert x_i\vert\notag
+$$
+
+is non-differentiable at all points where any $x_i$ is equal to zero.
+
+### (6) Nonnegative weighted sums of convex functions
+
+Let $f_1,f_2,\cdots,f_k$ be convex functions and $w_1,w_2,\cdots,w_k$ be nonnegative real numbers, then the function
+
+$$
+f(\boldsymbol{\mathrm{x}})=\sum_{i=1}^kw_if_i(\boldsymbol{\mathrm{x}})\notag
+$$
+
+is convex, because
+
+$$
+\begin{split}
+f(\theta\boldsymbol{\mathrm{x}}+(1-\theta)\boldsymbol{\mathrm{y}})
+&=\sum_{i=1}^kw_if_i(\theta\boldsymbol{\mathrm{x}}+(1-\theta)\boldsymbol{\mathrm{y}})\\
+&\le\sum_{i=1}^kw_i\big(\theta f_i(\boldsymbol{\mathrm{x}})+(1-\theta)f_i(\boldsymbol{\mathrm{y}})\big)\\
+&=\theta\sum_{i=1}^kw_if_i(\boldsymbol{\mathrm{x}})+(1-\theta)\sum_{i=1}^kw_if_i(\boldsymbol{\mathrm{y}})\\
+&=\theta f(\boldsymbol{\mathrm{x}})+(1-\theta)f(\boldsymbol{\mathrm{y}})
+\end{split}\notag
+$$
+
 <br>
 
 **References**
@@ -206,8 +307,9 @@ Again analogous to both the definition and first order conditions for convexity,
 [^4]: [Convex function](https://en.wikipedia.org/wiki/Convex_function).
 [^5]: [Convex vs. Not-convex - Convex function](https://en.wikipedia.org/wiki/Convex_function#/media/File:Convex_vs._Not-convex.jpg).
 [^6]: [Convex vs. Non-Convex Functions: Why it Matters in Optimization for Machine Learning](https://rumn.medium.com/convex-vs-non-convex-functions-why-it-matters-in-optimization-for-machine-learning-39cd9427dfcc).
-[^7]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), Convex Optimization Overview, pp. 3-5.
+[^7]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), Convex Optimization Overview, pp. 3-7.
 [^8]: [Convex Set](/2025-04-11/10-01-29.html).
 [^9]: [Matrix Calculus](/2025-04-08/16-08-26.html).
 [^10]: [LaTeX Component-wise Inequality Symbols: $\preceq$ and $\succeq$ etc.](/2025-04-11/13-04-11.html)
-[^11]: “Similarly, for a symmetric matrix $\boldsymbol{\mathrm{X}}\in\mathbb{S}^n$, $\boldsymbol{\mathrm{X}}\preceq0$ denotes that $\boldsymbol{\mathrm{X}}$ is negative semidefinite. As with vector inequalities, ‘$\le$’ and ‘$\ge$’ are sometimes used in place of ‘$\preceq$’ and ‘$\succeq$’.  Despite their notational similarity to vector inequalities, these concepts are very different; in particular, $\boldsymbol{\mathrm{X}}\succeq0$ does not imply that $X_{ij}\ge0$ for all $i$ and $j$.”  
+[^11]: “Similarly, for a symmetric matrix $\boldsymbol{\mathrm{X}}\in\mathbb{S}^n$, $\boldsymbol{\mathrm{X}}\preceq0$ denotes that $\boldsymbol{\mathrm{X}}$ is negative semidefinite. As with vector inequalities, ‘$\le$’ and ‘$\ge$’ are sometimes used in place of ‘$\preceq$’ and ‘$\succeq$’.  Despite their notational similarity to vector inequalities, these concepts are very different; in particular, $\boldsymbol{\mathrm{X}}\succeq0$ does not imply that $X_{ij}\ge0$ for all $i$ and $j$.” 
+[^12]:  [Norm (mathematics)](https://en.wikipedia.org/wiki/Norm_(mathematics)).

@@ -3,7 +3,7 @@ title: English Phrasal Verbs
 categories:
  - English
 date: 2024-07-03 19:33:49 +0800
-last_modified_at: 2025-04-10 21:06:09 +0800
+last_modified_at: 2025-04-21 09:18:49 +0800
 ---
 
 ## (BRING) bring about
@@ -159,6 +159,17 @@ give one’s word [[1]](https://dictionary.cambridge.org/dictionary/english/give
 to promise
 
 - He ***gave his word*** that he would marry her and she had no cause to doubt him.
+
+<br>
+
+## (GIVE) give rise to
+
+give rise to [[1]](https://www.ldoceonline.com/dictionary/give-rise-to-something)
+
+to be the reason why something happens, especially something bad or unpleasant.
+
+- His speech ***gave rise to*** a bitter argument.
+- The president’s absence has ***given rise to*** speculation about his health.
 
 <br>
 

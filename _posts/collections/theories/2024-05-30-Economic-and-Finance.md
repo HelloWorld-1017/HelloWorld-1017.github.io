@@ -6,7 +6,7 @@ categories:
  - Sociology
  - Uncertainty
 date: 2024-05-30 21:03:45 +0800
-last_modified_at: 2025-03-03 16:54:41 +0800
+last_modified_at: 2025-04-21 09:28:55 +0800
 ---
 
 ## Dog walking theory (by Andre Kostolany)
@@ -187,3 +187,13 @@ Economic scarring refers to the medium-long term damage done to the economies of
 In economics and the social sciences, spontaneous order has been defined by Hayek as "the result of <i class="emphasize">human actions</i>, not of <i class="emphasize">human design</i>".
 
 In economics, spontaneous order has been defined as an equilibrium behavior among self-interested individuals, which is most likely to evolve and survive, obeying the natural selection process "survival of the likeliest".
+
+<br>
+
+## Triffin dilemma
+
+> - [Triffin dilemma](https://en.wikipedia.org/wiki/Triffin_dilemma).
+
+In international finance, the <i class="term">Triffin dilemma</i> (sometimes the <i class="term">Triffin paradox</i>) is the conflict of economic interests that arises between short-term domestic and long-term international objectives for countries whose currencies serve as global reserve currencies. This dilemma was identified in the 1960s by Belgian-American economist Robert Triffin. He noted that a country whose currency is the global reserve currency, held by other nations as foreign exchange (FX) reserves to support international trade, <i class="emphasize">must somehow supply the world with its currency in order to fulfill world demand for these FX reserves</i>. This supply function is nominally accomplished by international trade, <i class="emphasize">with the country holding reserve currency status being required to run an inevitable trade deficit</i>. After going off of the gold standard in 1971 and setting up the petrodollar system later in the 1970s, the United States accepted the burden of such an ongoing trade deficit in 1985 <i class="emphasize">with its permanent transformation from a creditor to a debtor nation</i>. The U.S. goods trade deficit is currently on the order of one trillion dollars per year. Such a continuing drain to the United States in its balance of trade leads to ongoing tension between its national trade policies and its global monetary policy to maintain the U.S. dollar as the current global reserve currency. Alternatives to international trade that address this tension include direct transfer of dollars via foreign aid and swap lines.
+
+<br>

@@ -3,6 +3,7 @@ title: Matrix Calculus
 categories:
  - Mathematics
 tags:
+ - Calculus
  - Matrix
 date: 2025-04-08 16:08:26 +0800
 last_modified_at: 2025-04-10 12:44:08 +0800

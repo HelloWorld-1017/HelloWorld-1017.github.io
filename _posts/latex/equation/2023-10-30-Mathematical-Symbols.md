@@ -6,7 +6,7 @@ tags:
  - LaTeX Equation
  - Markdown
 date: 2023-10-30 08:46:52 +0800
-last_modified_at: 2024-11-08 22:32:07 +0800
+last_modified_at: 2025-04-22 17:15:58 +0800
 ---
 
 # Mathematical operators
@@ -121,7 +121,9 @@ $$
 
 <br>
 
-# Matrix environments [^3]
+# Matrix environments
+
+Here are some matrix environments [^3].
 
 ## `matrix` environment
 
@@ -195,7 +197,7 @@ g&h&i\\
 \end{pmatrix}\notag
 $$
 
-## `Bmatrix` envrionment
+## `Bmatrix` environment
 
 ```latex
 \begin{Bmatrix}
@@ -304,6 +306,6 @@ Note that here, `bordermatrix` environment is not available in Markdown MathJax.
 
 **References**
 
-[^1]: [Cross product - Wikipedia](https://en.wikipedia.org/wiki/Cross_product).
-[^2]: [【Latex】数学符号-代码对照表 - 爱吃猫的小鱼干的 Blog](https://su-lemon.gitee.io/post/73a19565.html).
-[^3]: 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6, **pages 234-236**, available at: [Microsoft Word - 扉页.doc](https://yun.weicheng.men/Book/LaTeX%E5%85%A5%E9%97%A8.pdf) 
+[^1]: [Cross product](https://en.wikipedia.org/wiki/Cross_product).
+[^2]: [【Latex】数学符号-代码对照表](https://su-lemon.gitee.io/post/73a19565.html).
+[^3]: 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6, pp. 234-236, available at: [Microsoft Word - 扉页.doc](https://yun.weicheng.men/Book/LaTeX%E5%85%A5%E9%97%A8.pdf) 

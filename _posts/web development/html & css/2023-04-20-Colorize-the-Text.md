@@ -1,10 +1,11 @@
 ---
 title: Colorize Text in Markdown Files and Web Pages
 categories:
- - Web Development
  - LaTeX
+ - Web Development
 tags: 
  - HTML
+ - LaTeX Equation
  - Markdown
 date: 2023-04-20 10:49:37 +0800
 last_modified_at: 2024-08-25 18:37:23 +0800

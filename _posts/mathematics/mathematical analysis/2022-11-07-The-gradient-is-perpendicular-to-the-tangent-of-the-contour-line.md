@@ -1,17 +1,18 @@
 ---
-layout: single
 title: The Gradient is Perpendicular to the Tangent of the Contour Line
-date: 2022-11-07 11:12:11 +0800
+toc: false
 categories: 
  - Mathematics
  - MATLAB
 tags:
+ - Calculus
  - Mathematical Analysis
  - MATLAB Graphics
-toc: false
+date: 2022-11-07 11:12:11 +0800
+last_modified_at: 2025-04-22 15:50:58 +0800
 ---
 
-假设有一个二元函数$F(x,y)$，从几何上看，它表示一个曲面，该平面被平面$c$($c$为常数)所截的曲线$l$的方程为：
+假设有一个二元函数$F(x,y)$，从几何上看，它表示一个曲面，该平面被平面$c$($c$为常数)所截的曲线$l$的方程为[^1]：
 
 $$
 \left\{\begin{split}
@@ -34,29 +35,33 @@ $$
 \dfrac{\mathrm{d}y}{\mathrm{d}x}=-\dfrac{F_x}{F_y}\notag
 $$
 
-> 这里用到了隐函数的求导公式$^{[2]}$。
->
-> 如果$R(x,y)=0$，则隐函数$y(x)$的导数可以通过下面的公式进行计算：
-> 
-> $$
-> \dfrac{\mathrm{d}y}{\mathrm{d}x}=-\dfrac{\partial R/\partial x}{\partial R/\partial y}=-\dfrac{R_x}{R_y}\label{eq1}
-> $$
-> 
-> 其中，$R_x$和$R_y$分别表示$R$关于$x$和$y$的偏微分。
->
-> 这个公式是通过链法则推导出隐函数$R(x,y)=0$关于变量$x$的全微分(total derivative)：
-> 
-> $$
-> \dfrac{\partial R}{\partial x}\dfrac{\mathrm{d}x}{\mathrm{d}x}+\dfrac{\partial R}{\partial y}\dfrac{\mathrm{d}y}{\mathrm{d}x}=0\notag
-> $$
-> 
-> 因此有：
-> 
-> $$
-> \dfrac{\partial R}{\partial x}+\dfrac{\partial R}{\partial y}\dfrac{\mathrm{d}y}{\mathrm{d}x}=0\notag
-> $$
-> 
-> 假设$\dfrac{\partial R}{\partial y}\ne0$，化简后得到式$\eqref{eq1}$。
+<div class="notice--primary" markdown="1">
+
+这里用到了隐函数的求导公式[^2]。
+
+如果$R(x,y)=0$，则隐函数$y(x)$的导数可以通过下面的公式进行计算：
+
+$$
+\dfrac{\mathrm{d}y}{\mathrm{d}x}=-\dfrac{\partial R/\partial x}{\partial R/\partial y}=-\dfrac{R_x}{R_y}\label{eq1}
+$$
+
+其中，$R_x$和$R_y$分别表示$R$关于$x$和$y$的偏微分。
+
+这个公式是通过链法则推导出隐函数$R(x,y)=0$关于变量$x$的全微分(total derivative)：
+
+$$
+\dfrac{\partial R}{\partial x}\dfrac{\mathrm{d}x}{\mathrm{d}x}+\dfrac{\partial R}{\partial y}\dfrac{\mathrm{d}y}{\mathrm{d}x}=0\notag
+$$
+
+因此有：
+
+$$
+\dfrac{\partial R}{\partial x}+\dfrac{\partial R}{\partial y}\dfrac{\mathrm{d}y}{\mathrm{d}x}=0\notag
+$$
+
+假设$\dfrac{\partial R}{\partial y}\ne0$，化简后得到式$\eqref{eq1}$。
+
+</div>
 
 于是，等高线上点$(x,y)$处的法线斜率为：
 
@@ -157,7 +162,5 @@ quiver(x(1:interval:end), y(1:interval:end), ...
 
 **Reference**
 
-[1] [为什么梯度的方向与等高线切线方向垂直？- 知乎](https://zhuanlan.zhihu.com/p/27731819)
-
-[2] [Implicit function - Wikipedia](https://en.wikipedia.org/wiki/Implicit_function).
-
+[^1]: [为什么梯度的方向与等高线切线方向垂直？](https://zhuanlan.zhihu.com/p/27731819).
+[^2]: [Implicit function](https://en.wikipedia.org/wiki/Implicit_function).

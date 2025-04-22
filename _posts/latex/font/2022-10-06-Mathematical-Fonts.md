@@ -1,81 +1,66 @@
 ---
-title: LaTeX Symbols
+title: Mathematical Fonts in LaTeX
+toc: false
 categories: 
  - LaTeX
 tags:
  - LaTeX Equation
  - LaTeX Font
 date: 2022-10-06 23:09:11 +0800
-last_modified_at: 2024-11-08 22:20:26 +0800
+last_modified_at: 2025-04-22 17:01:05 +0800
 ---
 
-# Mathematical Fonts
-
-## Normal
-
-正常字体（Normal）`\mathnormal`：
+**Normal, `\mathnormal`**
 
 ![image-20221006233711187](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006233711187.png?raw=true)
 
-## Roman
+<br>
 
-罗马体（Roman，ie 正体）`\mathrm`：
+**Roman, `\mathrm`**
 
 ![image-20221006232600311](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006232600311.png?raw=true)
 
-## Italic
+<br>
 
-意大利体（Italic，ie 斜体）`\mathit`：
+**Italic, `\mathit`**
 
 ![image-20221006233918076](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006233918076.png?raw=true)
 
-## Script
+<br>
 
-书写体（Script，ie 花体）`\mathscr`：
+**Script, `\mathscr`**
 
 ![image-20221006232433346](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006232433346.png?raw=true)
 
-## Blackboard
+<br>
 
-黑板体（Blackboard）`\mathbb`：
+**Blackboard, `\mathbb`**
 
 ![image-20221006232745862](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006232745862.png?raw=true)
 
-## Gothic
+<br>
 
-哥特体（Gothic）`\mathfrak`
+**Gothic, `\mathfrak`**
 
 ![image-20221006233024510](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006233024510.png?raw=true)
 
-## Sans serif
+<br>
 
-无衬线体（sans serif）`\mathsf`：
+**Sans serif, `\mathsf`**
 
 ![image-20221006233141799](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006233141799.png?raw=true)
 
-## Typewriter type
+<br>
 
-打字机体（typewriter type）`\mathtt`：
+**Typewriter type, `\mathtt`**
 
 ![image-20221006233305998](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006233305998.png?raw=true)
 
-## Calligraphy
-
-美术体（Calligraphy）`\mathcal`：
-
-![image-20221006234108969](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006234108969.png?raw=true)
-
 <br>
 
-# Greek Alphabet
+**Calligraphy, `\mathcal`**
 
-## Lowercase
-
-![image-20221009143801381](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221009143801381.png?raw=true)
-
-## Capital
-
-![image-20221009143814222](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221009143814222.png?raw=true)
+![image-20221006234108969](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221006234108969.png?raw=true)
 
 <br>
 

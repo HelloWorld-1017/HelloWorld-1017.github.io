@@ -6,7 +6,6 @@ categories:
 tags:
  - Matrix
  - Prime Obsession
- - Mathematical Proofs and Derivations
 date: 2023-04-20 09:35:32 +0800
 last_modified_at: 2024-10-05 21:12:22 +0800
 ---

@@ -4,7 +4,6 @@ categories:
  - Mathematics
 tags:
  - Matrix
- - Mathematical Proofs and Derivations
 date: 2023-10-31 11:19:07 +0800
 last_modified_at: 2025-04-07 11:37:36 +0800
 ---

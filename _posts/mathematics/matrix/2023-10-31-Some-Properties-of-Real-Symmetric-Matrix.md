@@ -3,7 +3,6 @@ title: Some Properties of Real Symmetric Matrix
 categories:
  - Mathematics
 tags:
- - Mathematical Proofs and Derivations
  - Matrix
 date: 2023-10-31 11:36:28 +0800
 last_modified_at: 2025-04-26 15:04:05 +0800

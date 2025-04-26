@@ -1,12 +1,12 @@
 ---
-layout: single
 title: Some Properties of Real Symmetric Matrix
-date: 2023-10-31 11:36:28 +0800
 categories:
  - Mathematics
 tags:
- - Matrix
  - Mathematical Proofs and Derivations
+ - Matrix
+date: 2023-10-31 11:36:28 +0800
+last_modified_at: 2025-04-26 15:04:05 +0800
 ---
 
 # Basic Properties
@@ -15,7 +15,7 @@ tags:
 
 ### An $n\times n$ matrix $A$ is symmetric if and only if $A\boldsymbol{x}\cdot\boldsymbol{y}=\boldsymbol{x}\cdot A\boldsymbol{y}$ for all vectors $\boldsymbol{x}$ and $\boldsymbol{y}$ in $\mathbb{R}^n$.
 
-***Theorem-3***: An $n\times n$ matrix $A$ is symmetric if and only if $A\boldsymbol{x}\cdot\boldsymbol{y}=\boldsymbol{x}\cdot A\boldsymbol{y}$ for all vectors $\boldsymbol{x}$ and $\boldsymbol{y}$ in $\mathbb{R}^n$ [[5](#ref-5)].
+***Theorem-3***: An $n\times n$ matrix $A$ is symmetric if and only if $A\boldsymbol{x}\cdot\boldsymbol{y}=\boldsymbol{x}\cdot A\boldsymbol{y}$ for all vectors $\boldsymbol{x}$ and $\boldsymbol{y}$ in $\mathbb{R}^n$[^5].
 
 *Proof*:
 
@@ -69,7 +69,7 @@ ans =
 
 <div id="theorem-1"></div>
 
-***Theorem-1***: All eigenvalues of real symmetric matrix are real (could refer [[3](#ref-3), [4](#ref-4)]).
+***Theorem-1***: All eigenvalues of real symmetric matrix are real (see[^3][^4]).
 
 ***Corollary-1-1***: All coefficients of the characteristic polynomial of real symmetric matrix are real.
 
@@ -83,9 +83,9 @@ ans =
 
 <div id="theorem-4"></div>
 
-***Theorem-4***: If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it [[5](#ref-5)]. 
+***Theorem-4***: If $A$ is a real $n\times n$ symmetric matrix, the $A$ has $n$ real eigenvalues (counted by their multiplicities). And for each eigenvalue, we can find a real eigenvector associated with it[^5]. 
 
-*Proof*: [Theorem-1](#theorem-1) says that all the eigenvalues of real symmetric matrix are real (p.s., reference [[5](#ref-5)] provides another way to prove [Theorem-1](#theorem-1), and is kind of complicated than proof in blog [[4](#ref-4)]). And on another hand, fundamental theorem of algebra [[6](#ref-6), [7](#ref-7)] tell us "*every non-zero, single-variable, degree $n$ polynomial with complex coefficients has, counted with multiplicity, exactly $n $complex roots*". So, the $n$-order characteristic polynomial $\vert A-\lambda I\vert=0$ has $n$ real roots, i.e., $A$ has $n$ real eigenvalues (counted by their multiplicities) .
+*Proof*: [Theorem-1](#theorem-1) says that all the eigenvalues of real symmetric matrix are real (p.s., reference[^5] provides another way to prove [Theorem-1](#theorem-1), and is kind of complicated than proof in blog[^4]). And on another hand, fundamental theorem of algebra[^6][^7] tell us "*every non-zero, single-variable, degree $n$ polynomial with complex coefficients has, counted with multiplicity, exactly $n $complex roots*". So, the $n$-order characteristic polynomial $\vert A-\lambda I\vert=0$ has $n$ real roots, i.e., $A$ has $n$ real eigenvalues (counted by their multiplicities) .
 
 Since each $\lambda_i$ is real, $A-\lambda_iI$ is a real matrix and $\vert A-\lambda_iI\vert=0$ cause $\lambda_i$ is an eigenvalue. So, the real matrix equation
 
@@ -93,15 +93,16 @@ $$
 (A-\lambda_iI)\boldsymbol{x} = \boldsymbol{0}
 $$
 
-has nonzero real solutions $\boldsymbol{x}$ [[8](#ref-8)], i.e., there are **real eigenvectors** for eigenvalue $\lambda_i$.
+has nonzero real solutions $\boldsymbol{x}$[^8], i.e., there are **real eigenvectors** for eigenvalue $\lambda_i$.
 
 ## Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal.
 
 <div id="theorem-2"></div>
 
-***Theorem-2***: Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal [[1](#ref-1), [2](#ref-2)].
+***Theorem-2***: Eigenvectors corresponding to different eigenvalues of a real symmetric matrix are orthogonal[^1][^2].
 
 *Proof*: Supposed that $x_1$ and $x_2$ is two eigenvectors of a real symmetric matrix, and corresponding *different* eigenvalues are $\lambda_1$ and $\lambda_2$, i.e.,
+
 $$
 \begin{split}
 Ax_1=\lambda_1x_1\\
@@ -150,29 +151,11 @@ Q.E.D.
 
 **References**
 
-<div id="ref-1"></div>
-[1] [对称矩阵 特征向量正交 - 知乎](https://zhuanlan.zhihu.com/p/83669028).
-
-<div id="ref-2"></div>
-[2] [46 Symmetric Matrices](https://staff.imsa.edu/~fogel/LinAlg/PDF/46%20Symmetric%20Matrices.pdf).
-
-<div id="ref-3"></div>
-[3] [Some Properties of Eigenvalues and Eigenvectors - What a starry night~](https://helloworld-1017.github.io/2023-10-31/11-19-07.html).
-
-<div id="ref-4"></div>
-[4] [Hermitian Matrix - What a starry night~](https://helloworld-1017.github.io/2023-04-20/09-35-32.html).
-
-<div id="ref-5"></div>
-[5] [Orthogonally Diagonalizable Matrices](https://www.math.wustl.edu/~freiwald/309orthogdiag.pdf).
-
-<div id="ref-6"></div>
-[6] [Fundamental theorem of algebra - Wikipedia](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra).
-
-<div id="ref-7"></div>
-[7] [Fundamental Theorem of Algebra - What a starry night~](https://helloworld-1017.github.io/2022-07-21/11-17-55.html).
-
-<div id="ref-8"></div>
-[8] [Determination of Solutions for Linear Equations - What a starry night~](https://helloworld-1017.github.io/2022-07-10/21-21-26.html).
-
-
-
+[^1]: [对称矩阵 特征向量正交](https://zhuanlan.zhihu.com/p/83669028).
+[^2]: [46 Symmetric Matrices](https://staff.imsa.edu/~fogel/LinAlg/PDF/46%20Symmetric%20Matrices.pdf).
+[^3]: [Some Properties of Eigenvalues and Eigenvectors](/2023-10-31/11-19-07.html).
+[^4]: [Hermitian Matrix](/2023-04-20/09-35-32.html).
+[^5]: [Orthogonally Diagonalizable Matrices](https://www.math.wustl.edu/~freiwald/309orthogdiag.pdf).
+[^6]: [Fundamental theorem of algebra](https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra).
+[^7]: [Fundamental Theorem of Algebra](/2022-07-21/11-17-55.html).
+[^8]: [Determination of Solutions for Linear Equations](/2022-07-10/21-21-26.html).

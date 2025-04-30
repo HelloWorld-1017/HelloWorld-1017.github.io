@@ -1,5 +1,5 @@
 ---
-title: "An Example of Manually Calculating Eigenvalues and Eigenvectors of the Square Matrix: Take A Symmetric Matrix"
+title: An Example of Manually Calculating Eigenvalues and Eigenvectors of the Square Matrix
 toc: false
 categories:
  - Mathematics

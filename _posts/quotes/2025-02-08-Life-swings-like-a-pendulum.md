@@ -1,5 +1,5 @@
 ---
-title: "\"There are only two tragedies in life: one is not getting what one wants, and the other is getting it.\""
+title: "\"Life swings like a pendulum ...\""
 toc: false
 categories:
  - Philosophy

@@ -1,19 +1,20 @@
 ---
-title: Solve Nonlinear Equation (System) using Iterative Method
+title: "Solve Non-linear Equation and Equations System by Iterative Methods --- Bisection Method, Fixed Point Iteration, Newton's Method, Secant Method, Multivariate Newton's Method, and Broyden's Method" 
 categories: 
  - Mathematics
  - Python
 tags: 
  - Matrix
  - Numerical Analysis
+ - Optimization
 date: 2022-07-12 13:45:17 +0800
-last_modified_at: 2024-10-05 20:49:37 +0800
+last_modified_at: 2025-05-02 18:17:06 +0800
 ---
 
-# 迭代法原理
-## 迭代法求解非线性方程
+# Iterative methods
+## Solve non-linear equation
 
-###  二分法
+###  Bisection method
 
 求解方程的第一步是确定根是否存在。
 
@@ -34,7 +35,7 @@ $$
 式 $\eqref{errorthreshold}$ 表明二分法迭代次数和精度之间的关系，并且表明二分法可以保证线性收敛。但是由于收敛速度较慢，运算量较大。因此，二分法常用于求根的大体范围，即进行根的隔离。
 
 
-### 不动点迭代
+### Fixed point iteration
 
 方程 $f(r)=0$ 根的求解问题，都可以转换为求解不动点方程的问题
 
@@ -43,7 +44,6 @@ g(r)=f(r)+r=r
 $$
 
 <div class="notice--primary" markdown="1">
-
 **不动点(fixed point)**：当$f(r)=r$时，称实数$r$为函数$f$的不动点。
 
 </div>
@@ -61,7 +61,7 @@ $$
 
 
 
-### 牛顿法
+### Newton's method
 **牛顿法**，也称为**牛顿-拉夫逊法(Newton's method, AKA Newton-Raphson method)**，它的收敛速度通常比二分法和不动点迭代收敛快很多。牛顿法所对应的几何图如下图所示。
 
 <img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/img/image-20220712125213291.png?raw=true" alt="image-20220712125213291" style="zoom: 67%;" />
@@ -102,7 +102,7 @@ $$
 
 **牛顿法收敛的条件是在真实解 $r$ 处满足$f'(r)\neq 0$**（这是一个后验）。牛顿法若收敛，则在单根位置上二次收敛；在重根位置上线性收敛。因此，除了重根位置，牛顿方法比二分法和不动点迭代的收敛速度都更快，它达到了这种更快的速度的原因是因为使用了更多的信息，尤其是通过函数导数得到的函数切线方向的信息。
 
-### 割线法
+### Secant method
 
 但在某些情况下，可能很难计算函数的导数。在这种情况下，割线法就是牛顿方法一个很好的替代，它使用割线来近似替代函数切线，它能够以超线性的速度收敛到一个单根，即收敛速度在线性和二次收敛方法之间。割线法的一般迭代形式为：
 
@@ -113,8 +113,8 @@ x_{i+1} &= x_i - \dfrac{f(x_i)(x_i-x_{i-1})}{f(x_i)-f(x_{i-1})},\ i=1,2,3,\dots 
 \end{align}
 $$
 
-## 非线性方程组的求解
-### 多元牛顿法
+## Solve non-linear equations system
+### Multivariate Newton's method
 
 式 $\eqref{singlevariable}$ 是单变量的牛顿迭代法，对于具有$n$个变量$n$个方程的非线性方程组$F(\boldsymbol{x})$：
 
@@ -161,7 +161,6 @@ $$
 \end{equation}
 $$
 
-
 即：
 
 $$
@@ -169,7 +168,6 @@ $$
 -DF(\boldsymbol{x}_0)^{-1}F(\boldsymbol{x}_0)\approx \boldsymbol{r} - \boldsymbol{x}_0
 \end{equation}
 $$
-
 
 于是可以得到多变量牛顿法的一般迭代形式：
 
@@ -180,8 +178,7 @@ $$
 \end{align}
 $$
 
-
-### 布罗伊登法
+### Broyden's method
 
 牛顿法求解单变量的方程需要知道导数，如果导数难以计算，则可以使用割线法进行替代。同样地，在使用多元牛顿法求解多元非线性方程组时也面临着无法求出雅可比矩阵 $DF$ 的情况。但在多元的情况下，无法将牛顿方法推广至割线方法，而布罗伊登法就是一个良好的近似。
 
@@ -202,11 +199,11 @@ $$
 令 
 
 $$
-\boldsymbol{\delta}_i = \boldsymbol{x}_{i+1} - \boldsymbol{x}_i\notag
-$$，
+\begin{split}
+&\boldsymbol{\delta}_i = \boldsymbol{x}_{i+1} - \boldsymbol{x}_i\\
+&\boldsymbol{\Delta}_i = F(\boldsymbol{x}_{i+1})-F(\boldsymbol{x}_i)
+\end{split}\notag
 $$
-\boldsymbol{\Delta}_i = F(\boldsymbol{x}_{i+1})-F(\boldsymbol{x}_i) \notag
-$$，
 
 可以得到：
 
@@ -222,7 +219,6 @@ $$
 &= \boldsymbol{A}_{i-1} + \boldsymbol{\omega}(\boldsymbol{\delta}_{i})^T\label{eq3}
 \end{align}
 $$
-
 
 式 $\eqref{equa1}$ 中 
 
@@ -279,9 +275,9 @@ $$
 
 <br>
 
-# 算例
+# Examples
 
-## 非线性方程的求解
+## Solve non-linear equation
 
 求解方程：
 
@@ -327,7 +323,7 @@ plt.show()
 
 从图中可以看出，在给定的 $[-1, 5]$ 区间内仅有一个根。
 
-### 二分法
+### Bisection method
 
 ![image-20220712210528013](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712210528013.png?raw=true)
 
@@ -413,13 +409,16 @@ plt.show()
 
 从图中可以看出，二分法求解该方程可以收敛，近似解收敛至$4.3337$，误差上限为$4.58\times 10^{-5}$，近似解的函数值为$-1.01\times 10^{-2}$。
 
-### 不动点迭代
+### Fixed point interation
 
 使用不动点迭代法求解非线性方程的关键是找到一个合适的对应的不动点方程 $g(x)=x$，并且初值选取合适才能够保证算法收敛。比如算例1所对应的不动点方程：
+
 $$
 g_1(x) = x^6-5x^5+ 3x^4 + x^3 -7x^2 + 8x - 20
 $$
+
 就不收敛，因为在不动点处函数的导数值$g'(r)>1$。于是选取式 $\eqref{fixed2}$ 为不动点方程。
+
 $$
 g_2(x) = \dfrac{\dfrac{20}{x^4} - \dfrac{7}{x^3} + \dfrac{7}{x^2} - \dfrac{1}{x}-3 + 1005x}{x+1000}\label{fixed2}
 $$
@@ -474,11 +473,9 @@ fig.savefig('fig.eps')
 plt.show()
 ```
 
-
-
 可以看到，为了保证得到的函数在不动点处的导数为0而构造出的不动点函数 $g_2(x)$，虽然可以收敛至不动点，但是由于在不动点附近的函数的导数也比较小，因此收敛较慢，需要迭代很多次。并且由于不动点迭代的收敛为局部收敛，因此必须要找到一个距离不动点比较近的初值。
 
-### 牛顿法
+### Newton’s method
 
 根据式 $\eqref{singlevariable}$ 编写牛顿法求解程序。初值设置为$10$，算法最终得到近似值收敛到$4.3338$，误差小于$1\times 10^{-3}$，迭代图像如下图所示。
 
@@ -531,11 +528,9 @@ axes[1].set_ylabel(r'$f(x_i)$')
 fig.savefig('fig.eps')
 ```
 
-
-
 可以看到，使用牛顿法仅通过10次迭代，误差就能够小于$1\times 10^{-4}$，收敛效果很好。
 
-### 割线法
+### Secant method
 
 根据式 $\eqref{SM}$ 编写割线法求解程序。初值$x_0$、$x_0$分别设置为3和4。经过11次迭代，得到近似值收敛到$4.3338$，误为于$6.90\times 10^{-8}$，迭代图像如下图所示，收敛效果与牛顿法近似。
 
@@ -599,13 +594,14 @@ axes[1].set_ylabel(r'$f(x_i)$')
 fig.savefig('fig.eps')
 ```
 
-## 线性方程组的求解
+## Solve non-linear equations system
 
 算例
 
 用牛顿法、弦割法、布罗伊登法求以下方程组的解：
 
-(1)
+Example 1:
+
 $$
 \begin{equation}
 \left\{ 
@@ -620,7 +616,8 @@ $$
 
 给定初始向量 $x^{(0)}=(1.0, 1.0, 1.0)^T$ ;
 
-(2) 
+Example 2:
+
 $$
 \begin{equation}
 \left\{ 
@@ -634,7 +631,7 @@ $$
 
 给定初始向量 $x^{(0)}=(1.04, 0.47)^T$;
 
-### 多元牛顿法
+### Multivariate Newton’s method
 
 使用多元牛顿法分别对算例2的方程组 $\eqref{nonlinearsystem1}$ 、$\eqref{nonlinearsystem2}$ 分别进行求解，得到的收敛图像如下图所示。代码中使用PyTorch框架完成了对雅可比矩阵的构建。可以看到，多元牛顿法应用于这两个方程组都有非常好的收敛效果。
 
@@ -766,10 +763,9 @@ axes[1].legend()
 fig.savefig('fig2.eps')
 ```
 
-### 布罗伊登法
+### Broyden’s method
 
 使用多元牛顿法分别对算例2的（1）、（2）方程组进行求解，得到的收敛图像如下图所示。
-
 
 ![image-20220712215712154](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220712215712154.png?raw=true)
 

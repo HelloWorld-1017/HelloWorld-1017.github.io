@@ -78,7 +78,7 @@ $$
 
 In this two-dimensional case, the objective function $f(x,y)$ represents a surface, and the constraint $g(x,y)=0$ represents a curve (in another words, the feasible region of this case is a curve).
 
-Then, if a point is a maximum of optimization $\eqref{eq1}$, it will have either characteristic of following two.
+Then, if a point is a maximum (or a minimum, or using “optimality” to incorporate these two cases) of optimization $\eqref{eq1}$, it will have either characteristic of following two.
 
 **Case 1**: We can view the process of finding the maximum of $\eqref{eq1}$ as such: the point $(x,y)$ move along the constraint curve $g(x,y)=0$ (<i class="emphasize">along the tangent line for each point on the curve</i>), and for each point $(x,y)$ on the curve we can calculate the corresponding function value $f(x,y)$, and finally find the maximum $f(x,y)$ and hence whose variable values $(x,y)$. 
 

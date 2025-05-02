@@ -1,11 +1,12 @@
 ---
-title: The Chord Length Method(Chord-length Parameterization) from MTU
-date: 2022-11-22 20:31 +0800
+title: The Chord Length Method (Chord-length Parameterization) from MTU
 categories: 
  - Mathematics
 tags:
  - Geometry
  - Numerical Analysis
+date: 2022-11-22 20:31 +0800
+last_modified_at: 2025-05-02 17:58:54 +0800
 ---
 
 # Introduction

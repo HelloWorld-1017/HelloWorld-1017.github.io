@@ -1,15 +1,14 @@
 ---
-layout: single
-title: Bernstein polynomial and Bézier curve
-date: 2022-11-19 13:26:23 +0800
+title: Bernstein Polynomial and Bézier Curve
 categories: 
  - Mathematics
  - MATLAB
 tags:
- - Numerical Analysis
- - MATLAB Graphics
  - MATLAB Animation
-last_modified_at: 2023-11-14 14:12:50 +0800
+ - MATLAB Graphics
+ - Numerical Analysis
+date: 2022-11-19 13:26:23 +0800
+last_modified_at: 2025-05-02 17:57:20 +0800
 ---
 
 # Bernstein polynomial

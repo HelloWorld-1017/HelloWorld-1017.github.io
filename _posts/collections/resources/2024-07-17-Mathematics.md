@@ -5,7 +5,7 @@ categories:
  - Collections
  - Mathematics
 date: 2024-07-17 10:28:34 +0800
-last_modified_at: 2024-12-19 17:03:47 +0800
+last_modified_at: 2025-05-02 16:55:12 +0800
 ---
 
 **Articles**
@@ -42,6 +42,7 @@ last_modified_at: 2024-12-19 17:03:47 +0800
   - [Numerical Analysis (Ninth Edition)](https://faculty.ksu.edu.sa/sites/default/files/numerical_analysis_9th.pdf), R. L. Burden.
 - Optimization theory (Operation research)
   - [Optimization In Operations Research (Second Edition)](https://industri.fatek.unpatti.ac.id/wp-content/uploads/2019/03/173-Optimization-in-Operations-Research-Ronald-L.-Rardin-Edisi-2-2015.pdf), Ronald L. Rardin.
+  - [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), Stephen Boyd and Lieven Vandenberghe.
 - Popular science
   - [Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics](http://tomlr.free.fr/Math%E9matiques/Fichiers%20Claude/Nombres/Derbyshire%20-%20Prime%20Obsession%20-%20Bernhard%20Riemann%20and%20the%20Greatest%20Unsolved%20Problem%20in%20MathematicsAAA.pdf), John Derbyshire.
 - Statistics

@@ -1,6 +1,5 @@
 ---
-title: The processing methods for ill-conditioned SCM in MATLAB `fitgimdist`, `mahal` and `mvnrnd` functions in case of extremely small sample
-date: 2022-11-22 19:27:21 +0800
+title: The Processing Methods for Ill-conditioned SCM in MATLAB `fitgimdist`, `mahal` and `mvnrnd` Functions in Extremely Small-Sample Cases
 categories: 
  - MATLAB
  - Mathematics
@@ -8,6 +7,8 @@ tags:
  - MATLAB Warnings and Errors
  - Matrix
  - Numerical Analysis
+date: 2022-11-22 19:27:21 +0800
+last_modified_at: 2025-05-02 17:58:24 +0800
 ---
 
 # "X must have more rows than columns." error in `fitgmdist` function 

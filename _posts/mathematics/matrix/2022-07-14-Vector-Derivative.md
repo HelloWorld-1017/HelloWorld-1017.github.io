@@ -2,11 +2,12 @@
 title: Vector Derivative
 categories: 
  - Mathematics
-tags: 
+tags:
+ - Calculus
  - Matrix
  - Mathematical Analysis
 date: 2022-07-14 17:45:25 +0800
-last_modified_at: 2025-04-08 21:54:51 +0800
+last_modified_at: 2025-05-12 16:56:52 +0800
 ---
 
 # 标量对向量求导
@@ -22,7 +23,6 @@ $$
 其中，$f_{x_i}$ 表示标量函数 $f$ 对变量 $x_i$ 的偏导数。
 
 
-
 ## 向量点积法则
 
 设有 $u(x_1,\cdots, x_n)$，$v(x_1,\cdots,x_n)$ 均为包含 $n$ 个变量 $(x_1,\cdots,x_n)$ 的**标量函数**，并且都具有 $m$ 个分量，分别为$u_1,\cdots,u_n$ 和 $v_1,\cdots,v_n$ 。则有向量点积法则 
@@ -32,7 +32,6 @@ $$
 $$
 
 其中，$ D(\cdot)$ 表示向量函数 $(\cdot)$ 的雅可比矩阵，见公式 $\eqref{jacobianmatrix}$。 
-
 
 
 **证明**
@@ -136,9 +135,7 @@ u_1&u_2&u_3
 \end{align*}
 $$
 
-与公式 $\eqref{eq1}$ 一致。将该结果推广至具有 $m$ 个分量，$n$ 个自变量的情形，就可以推导出公式 $\eqref{eq1}$ 。
-
-> 可以看到，**标量对自变量向量求导，求导结果的维度与自变量向量的维度一致**。
+与公式 $\eqref{eq1}$ 一致。将该结果推广至具有 $m$ 个分量，$n$ 个自变量的情形，就可以推导出公式 $\eqref{eq1}$ 。另外可以看到，**标量对自变量向量求导，求导结果的维度与自变量向量的维度一致**。
 
 <br>
 
@@ -173,8 +170,6 @@ $$
 
 
 ## 矩阵向量乘积法则
-
-
 
 设 $A(x_1,\cdots,x_n)$ 为一个 $l\times m$ 的矩阵函数， $v(x_1,\cdots,x_n)$ 是一个 $m\times 1$ 的向量函数，则
 

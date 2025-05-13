@@ -6,6 +6,7 @@ categories:
 tags:
  - LaTeX beamer
  - LaTeX Box
+ - LaTeX tcolorbox
 date: 2024-08-11 14:26:46 +0800
 last_modified_at: 2024-08-11 14:26:46 +0800
 ---

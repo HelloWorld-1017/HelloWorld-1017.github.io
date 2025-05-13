@@ -6,7 +6,7 @@ categories:
  - Economics & Finance
  - News
 date: 2025-05-03 21:24:22 +0800
-last_modified_at: 2025-05-12 16:57:56 +0800
+last_modified_at: 2025-05-12 20:42:12 +0800
 ---
 
 <br>
@@ -18,3 +18,4 @@ last_modified_at: 2025-05-12 16:57:56 +0800
 **References**
 
 - [巴菲特 94 岁告别秀：2025 伯克希尔股东大会完整翻译版-Part 1/3](https://www.youtube.com/watch?v=2kqr19XZ7ak).
+- [Warren Buffett will step down as CEO from Berkshire Hathaway at end of year](https://www.youtube.com/watch?v=A3edQG2GEoQ).

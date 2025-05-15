@@ -6,7 +6,7 @@ tags:
  - Calculus
  - Matrix
 date: 2025-04-08 16:08:26 +0800
-last_modified_at: 2025-04-10 12:44:08 +0800
+last_modified_at: 2025-05-15 11:26:04 +0800
 ---
 
 # Fundamentals
@@ -338,6 +338,95 @@ So, to conclude,
 
 </div>
 
+## Chain rule
+
+Suppose that, $\boldsymbol{\mathrm{x}}$ is an $m\times1$ vector:
+
+$$
+\boldsymbol{\mathrm{x}}=\begin{bmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_m\\
+\end{bmatrix}\notag
+$$
+
+$\boldsymbol{\mathrm{y}}$ is an $n\times1$ vector-valued function of $\boldsymbol{\mathrm{x}}$:
+
+$$
+\boldsymbol{\mathrm{y}}=\begin{bmatrix}
+y_1(\boldsymbol{\mathrm{x}})\\
+y_2(\boldsymbol{\mathrm{x}})\\
+\vdots\\
+y_n(\boldsymbol{\mathrm{x}})\\
+\end{bmatrix}\notag
+$$
+
+and $z$ is a scalar-valued function of $\boldsymbol{\mathrm{y}}$:
+
+$$
+z=z(\boldsymbol{\mathrm{y}})\notag
+$$
+
+then we’ll have[^10]:
+
+$$
+\dfrac{\partial z}{\partial\boldsymbol{\mathrm{x}}}=(\dfrac{\partial\boldsymbol{\mathrm{y}}}{\partial\boldsymbol{\mathrm{x}}})^T\dfrac{\partial z}{\partial\boldsymbol{\mathrm{y}}}\label{eq10}
+$$
+
+or, 
+
+$$
+(\dfrac{\partial z}{\partial\boldsymbol{\mathrm{x}}})^T=(\dfrac{\partial z}{\partial\boldsymbol{\mathrm{y}}})^T\dfrac{\partial\boldsymbol{\mathrm{y}}}{\partial\boldsymbol{\mathrm{x}}}
+$$
+
+We can simply verify Eq. $\eqref{eq10}$:
+
+$$
+\begin{split}
+(\dfrac{\partial\boldsymbol{\mathrm{y}}}{\partial\boldsymbol{\mathrm{x}}})^T\dfrac{\partial z}{\partial\boldsymbol{\mathrm{y}}}=&\begin{bmatrix}
+\dfrac{\partial y_1}{\partial x_1} & \dfrac{\partial y_1}{\partial x_2} & \cdots & \dfrac{\partial y_1}{\partial x_m}\\
+\dfrac{\partial y_2}{\partial x_1} & \dfrac{\partial y_2}{\partial x_2} & \cdots & \dfrac{\partial y_2}{\partial x_m}\\
+\vdots & \vdots & \vdots & \vdots\\
+\dfrac{\partial y_n}{\partial x_1} & \dfrac{\partial y_n}{\partial x_2} & \cdots & \dfrac{\partial y_n}{\partial x_m}\\
+\end{bmatrix}^T\begin{bmatrix}
+\dfrac{\partial z}{\partial y_1}\\
+\dfrac{\partial z}{\partial y_2}\\
+\cdots\\
+\dfrac{\partial z}{\partial y_n}\\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+\dfrac{\partial y_1}{\partial x_1} & \dfrac{\partial y_2}{\partial x_1} & \cdots & \dfrac{\partial y_n}{\partial x_1}\\
+\dfrac{\partial y_1}{\partial x_2} & \dfrac{\partial y_2}{\partial x_2} & \cdots & \dfrac{\partial y_n}{\partial x_2}\\
+\vdots & \vdots & \vdots & \vdots\\
+\dfrac{\partial y_1}{\partial x_m} & \dfrac{\partial y_2}{\partial x_m} & \cdots & \dfrac{\partial y_n}{\partial x_m}
+\end{bmatrix}\begin{bmatrix}
+\dfrac{\partial z}{\partial y_1}\\
+\dfrac{\partial z}{\partial y_2}\\
+\cdots\\
+\dfrac{\partial z}{\partial y_n}\\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+\dfrac{\partial y_1}{\partial x_1}\dfrac{\partial z}{\partial y_1}+\dfrac{\partial y_2}{\partial x_1}\dfrac{\partial z}{\partial y_2}+\cdots+\dfrac{\partial y_n}{\partial x_1}\dfrac{\partial z}{\partial y_n}\\
+\dfrac{\partial y_1}{\partial x_2}\dfrac{\partial z}{\partial y_1}+\dfrac{\partial y_2}{\partial x_2}\dfrac{\partial z}{\partial y_2}+\cdots+\dfrac{\partial y_n}{\partial x_2}\dfrac{\partial z}{\partial y_n}\\
+\vdots\\
+\dfrac{\partial y_1}{\partial x_m}\dfrac{\partial z}{\partial y_1}+\dfrac{\partial y_2}{\partial x_m}\dfrac{\partial z}{\partial y_2}+\cdots+\dfrac{\partial y_n}{\partial x_m}\dfrac{\partial z}{\partial y_n}
+\end{bmatrix}\\
+&=\begin{bmatrix}
+\dfrac{\partial z}{\partial x_1}\\
+\dfrac{\partial z}{\partial x_2}\\
+\vdots\\
+\dfrac{\partial z}{\partial x_m}\\
+\end{bmatrix}=\dfrac{\partial z}{\partial\boldsymbol{\mathrm{x}}}
+\end{split}\notag
+$$
+
+More generally, for $\boldsymbol{\mathrm{y}}_1\rightarrow\boldsymbol{\mathrm{y}}_2\rightarrow\cdots\rightarrow\boldsymbol{\mathrm{y}}_n\rightarrow z$, then the chain rule can be expressed as:
+
+$$
+\dfrac{\partial z}{\partial\boldsymbol{\mathrm{y}}_1}=(\dfrac{\partial\boldsymbol{\mathrm{y}}_n}{\partial\boldsymbol{\mathrm{y}}_{n-1}}\dfrac{\partial\boldsymbol{\mathrm{y}}_{n-1}}{\partial\boldsymbol{\mathrm{y}}_{n-2}}\cdots\dfrac{\partial\boldsymbol{\mathrm{y}}_2}{\partial\boldsymbol{\mathrm{y}}_1})^T\dfrac{\partial z}{\partial\boldsymbol{\mathrm{y}}_n}
+$$
+
 <br>
 
 **References**
@@ -351,3 +440,5 @@ So, to conclude,
 [^7]: [Solve Overdetermined System](/2022-07-10/15-29-33.html).
 [^8]: [Cofactor, Matrix of Cofactors, Adjoint, and Determinant of A Matrix](/2025-04-08/15-52-28.html).
 [^9]: [Hessian matrix](/2024-12-17/20-21-18.html).
+[^10]: [机器学习中的矩阵向量求导(四) 矩阵向量求导链式法则 - 刘建平Pinard](https://www.cnblogs.com/pinard/p/10825264.html).
+

@@ -4,9 +4,8 @@ toc: false
 categories:
  - English
  - Web Development
-drafted_at: 2024-07-01 21:53:49 +0800
 date: 2024-07-03 22:01:23 +0800
-last_modified_at: 2024-08-02 16:30:54 +0800
+last_modified_at: 2025-05-15 22:12:45 +0800
 ---
 
 During the process of transcribing some English texts, I find ‘dash’ is actually often used when someone wants to make an explanation within a sentence. However, I rarely use ‘dash’; leaving aside the grammar, there is one point always confusing me. That is, the dash length seem different at different cases, and I don’t know how to type them correctly. Specifically, in English typing mode, when I type `[hyphen/minus]` key[^4] on the keyboard, I have ‘-’, which looks kind of short; while in Chinese typing mode, if I type `[Shift]` + `[hyphen/minus]`, I have ‘——’, and after deleting one of them I’ll get ‘—’. It indeed looks like those dashes I ever saw to connect two parts of a sentence, but this method of typing an ‘English’ dash sounds ugly.
@@ -59,10 +58,10 @@ From this table, we can conclude that:
     - `[hyphen/minus]` $\times$3
     - `&mdash;`
 
-# References
+**References**
 
-[^2]: [How to type an em dash symbol on a Mac or Windows \| Zapier](https://zapier.com/blog/em-dash-on-keyboard/).
+[^2]: [How to type an em dash symbol on a Mac or Windows](https://zapier.com/blog/em-dash-on-keyboard/).
 [^3]: [Punctuation ALT Codes « “•” »](https://www.i2symbol.com/punctuation-alt-codes).
-[^4]: [Hyphen-minus - Wikipedia](https://en.wikipedia.org/wiki/Hyphen-minus).
-[^5]: [Wikipedia:How to make dashes - Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:How_to_make_dashes).
-[^6]: [Em Dash (—) vs. En Dash (–) \| How to Use in Sentences](https://www.scribbr.com/language-rules/dashes/).
+[^4]: [Hyphen-minus](https://en.wikipedia.org/wiki/Hyphen-minus).
+[^5]: [Wikipedia:How to make dashes](https://en.wikipedia.org/wiki/Wikipedia:How_to_make_dashes).
+[^6]: [Em Dash (—) vs. En Dash (–)](https://www.scribbr.com/language-rules/dashes/).

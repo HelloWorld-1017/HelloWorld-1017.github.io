@@ -1,5 +1,5 @@
 ---
-title: "Multi-line Equation Layout: `align` and `split` Environments"
+title: "Multi-line Equation Layout in Markdown Files: `align` and `split` Environments"
 categories:
  - LaTeX
 tags:

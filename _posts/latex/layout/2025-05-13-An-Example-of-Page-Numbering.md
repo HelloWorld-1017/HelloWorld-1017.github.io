@@ -6,6 +6,7 @@ categories:
 tags:
  - LaTeX fancyhdr
  - LaTeX Layout
+ - LaTeX TOC
 date: 2025-05-13 14:20:50 +0800
 last_modified_at: 2025-05-13 14:20:50 +0800
 gallery:

@@ -5,6 +5,7 @@ categories:
  - LaTeX
 tags:
  - LaTeX cleveref
+ - LaTeX Cross Reference
  - LaTeX hyperref
 date: 2023-11-28 19:12:32 +0800
 last_modified_at: 2025-01-06 19:13:04 +0800

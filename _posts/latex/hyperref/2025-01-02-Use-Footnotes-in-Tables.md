@@ -4,6 +4,7 @@ toc: false
 categories:
  - LaTeX
 tags:
+ - LaTeX Cross Reference
  - LaTeX hyperref
  - LaTeX Table
 date: 2025-01-02 21:41:01 +0800

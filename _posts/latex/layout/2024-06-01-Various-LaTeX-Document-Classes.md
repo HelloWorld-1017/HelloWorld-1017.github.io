@@ -1,17 +1,18 @@
 ---
-title: Various LaTeX Document Classes
+title: Various LaTeX Document Classes --- `article`, `IEEEtran`, and `beamer`
 categories:
  - Design
  - LaTeX
 tags:
  - LaTeX Beamer
+ - LaTeX changes
  - LaTeX eso-pic
  - LaTex fgruler
  - LaTeX Layout
  - LaTeX showframe
  - Microsoft Word
 date: 2024-06-01 13:20:33 +0800
-last_modified_at: 2025-01-11 21:13:20 +0800
+last_modified_at: 2025-05-25 19:37:12 +0800
 ---
 
 # article
@@ -284,6 +285,54 @@ When your document is set to A4 paper, Microsoft Word sets the TOP and BOTTOM ma
 ![img-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501112052525.png)
 
 ![img-2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501112052965.png)
+
+## b4paper
+
+```latex
+\documentclass[b4paper]{article}
+\usepackage[x11names]{xcolor}
+\pagecolor{AntiqueWhite1}
+\usepackage[type=upperleft]{fgruler}
+\usepackage{layout}
+\usepackage{lipsum}
+
+\begin{document}
+	\layout
+\end{document}
+```
+
+![img-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202505251934074.png)
+
+```latex
+\documentclass[b4paper]{article}
+\usepackage[x11names]{xcolor}
+\pagecolor{AntiqueWhite1}
+\usepackage[grid,
+	gridcolor=black!20,
+	subgridcolor=black!20,
+	gridunit=cm]{eso-pic}
+\usepackage[type=upperleft]{fgruler}
+\usepackage{showframe,lipsum}
+\usepackage{changes}
+\definechangesauthor[name={coauthor1},color=orange]{Ma}
+\definechangesauthor[name={coauthor2},color=red]{Tommy}
+
+\begin{document}
+	\lipsum[1-3] 
+	
+	This is \added[id=Ma,comment={This is added by Ma.}]{added} text.
+	
+	This is \added[comment={This is added by Tommy.}]{added} text.
+	
+	This is \deleted[id=Tommy,comment={This is deleted by Tommy.}]{deleted} text.
+	
+	This is a \replaced{replacement}{replace}.
+	
+	\listofchanges
+\end{document}
+```
+
+![img-1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202505251936926.png)
 
 ## b5paper
 

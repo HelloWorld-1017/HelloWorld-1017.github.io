@@ -1,11 +1,14 @@
 ---
-title: "Make Annotations in LaTeX for documents: `soul` package, `changes` package, `easyReview` package, and one user-defined method"
+title: Make Annotations in LaTeX for documents --- `soul` package, `changes` package, `easyReview` package, and one user-defined method
 categories:
  - LaTeX
 tags:
  - TeXstudio
+ - LaTeX changes
+ - LaTeX easyReview
+ - LaTeX soul
 date: 2023-08-31 08:52:55 +0800
-last_modified_at: 2024-11-08 22:45:44 +0800
+last_modified_at: 2025-05-25 19:58:16 +0800
 ---
 
 # `soul` package: highlight the text

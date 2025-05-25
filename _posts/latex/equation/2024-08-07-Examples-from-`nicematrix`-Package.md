@@ -9,7 +9,7 @@ tags:
  - LaTeX TikZ fit
  - LaTeX nicematrix
 date: 2024-08-07 12:11:38 +0800
-last_modified_at: 2025-01-17 21:18:20 +0800
+last_modified_at: 2025-05-25 22:50:12 +0800
 ---
 
 # Examples from the official `nicematrix` documentation
@@ -346,6 +346,83 @@ A more complicated case:
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202408071226236.png" alt="image-20240807122533648" style="zoom:67%;" />
 
 </div>
+
+## Keys `cell-space-limits`, `cell-space-bottom-limit`, and `cell-space-top-limit`
+
+Based on the above example, we’ll show the function of the keys `cell-space-limits`, `cell-space-bottom-limit`, and `cell-space-top-limit`, respectively (see p. 2 and p. 26):
+
+```latex
+\documentclass{article}
+\usepackage{nicematrix}
+\usepackage{tikz}
+\usetikzlibrary{fit}
+ 
+\begin{document}
+\tikzset{highlight/.style={rectangle,
+	fill=red!15,
+	rounded corners = 0.5 mm,
+	inner sep=1pt,
+	fit=#1}}
+\begin{equation*}
+\begin{pNiceArray}{ccc}[last-col, margin = 2pt, create-medium-nodes]
+	\CodeBefore [create-cell-nodes]
+	 \begin{tikzpicture} [name suffix = -medium]
+		 \node [highlight = (1-2) (1-3)] {} ;
+		 \node [highlight = (2-1) (2-3)] {} ;
+		 \node [highlight = (3-1) (3-3)] {} ;
+	 \end{tikzpicture}
+	 \Body
+	 a & a + b & a + b + c & L_1 \\
+	 a & a & a + b & L_2 \\
+	 a & a & a & L_3
+\end{pNiceArray}
+\begin{pNiceArray}{ccc}[last-col, margin = 2pt, create-medium-nodes,
+	cell-space-limits=20pt]
+	\CodeBefore [create-cell-nodes]
+	\begin{tikzpicture} [name suffix = -medium]
+		\node [highlight = (1-2) (1-3)] {} ;
+		\node [highlight = (2-1) (2-3)] {} ;
+		\node [highlight = (3-1) (3-3)] {} ;
+\end{tikzpicture}
+\Body
+	a & a + b & a + b + c & L_1 \\
+	a & a & a + b & L_2 \\
+	a & a & a & L_3
+\end{pNiceArray}
+\begin{pNiceArray}{ccc}[last-col, margin = 2pt, create-medium-nodes,
+	cell-space-bottom-limit=20pt]
+	\CodeBefore [create-cell-nodes]
+	\begin{tikzpicture} [name suffix = -medium]
+		\node [highlight = (1-2) (1-3)] {} ;
+		\node [highlight = (2-1) (2-3)] {} ;
+		\node [highlight = (3-1) (3-3)] {} ;
+\end{tikzpicture}
+\Body
+	a & a + b & a + b + c & L_1 \\
+	a & a & a + b & L_2 \\
+	a & a & a & L_3
+\end{pNiceArray}
+\begin{pNiceArray}{ccc}[last-col, margin = 2pt, create-medium-nodes,
+	cell-space-top-limit=20pt]
+	\CodeBefore [create-cell-nodes]
+	\begin{tikzpicture} [name suffix = -medium]
+		\node [highlight = (1-2) (1-3)] {} ;
+		\node [highlight = (2-1) (2-3)] {} ;
+		\node [highlight = (3-1) (3-3)] {} ;
+\end{tikzpicture}
+\Body
+	a & a + b & a + b + c & L_1 \\
+	a & a & a + b & L_2 \\
+	a & a & a & L_3
+\end{pNiceArray}
+\end{equation*}
+
+\end{document}
+```
+
+![image-20250525224801677](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202505252248930.png)
+
+<br>
 
 # Examples from other references
 

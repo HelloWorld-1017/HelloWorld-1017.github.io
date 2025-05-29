@@ -6,7 +6,7 @@ tags:
  - LaTeX Equation
  - Markdown
 date: 2023-10-30 08:46:52 +0800
-last_modified_at: 2025-04-22 17:15:58 +0800
+last_modified_at: 2025-05-29 20:10:59 +0800
 ---
 
 # Mathematical operators
@@ -306,6 +306,8 @@ Note that here, `bordermatrix` environment is not available in Markdown MathJax.
 
 **References**
 
+- [LaTeX Mathematical Symbols](https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf).
+
 [^1]: [Cross product](https://en.wikipedia.org/wiki/Cross_product).
 [^2]: [【Latex】数学符号-代码对照表](https://su-lemon.gitee.io/post/73a19565.html).
-[^3]: 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6, pp. 234-236, available at: [Microsoft Word - 扉页.doc](https://yun.weicheng.men/Book/LaTeX%E5%85%A5%E9%97%A8.pdf) 
+[^3]: [LaTeX入门](https://yun.weicheng.men/Book/LaTeX%E5%85%A5%E9%97%A8.pdf), 刘海洋编著, pp. 234-236.

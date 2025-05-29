@@ -1,13 +1,14 @@
 ---
-title: Greek Alphabet in LaTeX
+title: Greek Alphabet in LaTeX and Markdown Files
 toc: false
 categories: 
  - LaTeX
 tags:
  - LaTeX Equation
  - LaTeX Font
+ - Markdown
 date: 2022-10-06 23:09:13 +0800
-last_modified_at: 2025-04-22 16:56:13 +0800
+last_modified_at: 2025-05-29 20:07:52 +0800
 ---
 
 **Greek alphabet (Lowercase)**
@@ -25,3 +26,4 @@ last_modified_at: 2025-04-22 16:56:13 +0800
 **References**
 
 - 刘海洋编著. LaTeX入门. 北京: 电子工业出版社, 2013.6.
+- [LaTeX Mathematical Symbols](https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf).

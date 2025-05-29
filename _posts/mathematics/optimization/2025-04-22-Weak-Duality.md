@@ -5,7 +5,7 @@ categories:
 tags:
  - Optimization
 date: 2025-04-22 10:13:58 +0800
-last_modified_at: 2025-04-30 10:49:20 +0800
+last_modified_at: 2025-05-26 22:16:22 +0800
 ---
 
 # Primal optimization problem vs. dual optimization problem
@@ -188,7 +188,7 @@ $$
 \end{split}\label{eq11}
 $$
 
-we can defined the <i class="term">generalized Lagrangian</i> as:
+we can defined the <i class="term">generalized Lagrangian</i> as[^3]:
 
 $$
 \mathcal{L}(\boldsymbol{\mathrm{x}},\boldsymbol{\mathrm{\lambda}},\boldsymbol{\mathrm{\nu}})=f(\boldsymbol{\mathrm{x}})+\sum_{i=1}^m\lambda_ig_i(\boldsymbol{\mathrm{x}})+\sum_{i=1}^p\nu_ih_i(\boldsymbol{\mathrm{x}})
@@ -382,3 +382,4 @@ In practice, <i class="emphasize">the dual objective $\theta_D(\boldsymbol{\math
 
 [^1]: [Review Notes and Supplementary Notes CS229 Course Machine Learning Standford University](https://www.ctanujit.org/uploads/2/5/3/9/25393293/mathematics_for_machine_learning__cs229__1.pdf), Convex Optimization Overview (cnt’d), Chuong B. Do, October 26, 2007, pp. 1-5.
 [^2]: [Duality (optimization)](https://en.wikipedia.org/wiki/Duality_(optimization)).
+[^3]: [Karush–Kuhn–Tucker Conditions (KKT Conditions)](/2025-04-26/22-28-08.html).

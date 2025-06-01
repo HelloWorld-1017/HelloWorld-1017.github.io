@@ -1,17 +1,17 @@
 ---
-title: Make Annotations in LaTeX for documents --- `soul` package, `changes` package, `easyReview` package, and one user-defined method
+title: Make Annotations in LaTeX Documents --- The `soul` package, `changes` package, `easyReview` package, and one user-defined method
 categories:
  - LaTeX
 tags:
- - TeXstudio
  - LaTeX changes
  - LaTeX easyReview
  - LaTeX soul
+ - TeXstudio
 date: 2023-08-31 08:52:55 +0800
-last_modified_at: 2025-05-25 19:58:16 +0800
+last_modified_at: 2025-05-31 18:17:03 +0800
 ---
 
-# `soul` package: highlight the text
+# The `soul` package: highlight the text
 
 Highlighting text in LaTeX can be realized by `soul` package [^1]. And, bear in mind that do import `color` package, otherwise the color cannot display normally. In addition, we could use `\sethlcolor` defined in `soul` package to change highlight color, but this setting will influence the whole following context unless we reset color setting using `\sethlcolor` again. For example: 
 
@@ -35,7 +35,7 @@ We test \hl{highlight} here.
 
 <br>
 
-# `changes` package: record modifications and make comments
+# The `changes` package: record modifications and make comments
 
 If we want to record what have changed in the documentation, `changes` package is a good choice [^1], and by which we could make some necessary comments for it, like:
 
@@ -65,7 +65,7 @@ Note: In hxy's blog [^1], the remark is added by keyword `remark`, like `This is
 
 <br>
 
-# `easyReview` package: help to mark in the review and editorial process
+# The `easyReview` package: help to mark in the review and editorial process
 
 ## Basic commands
 

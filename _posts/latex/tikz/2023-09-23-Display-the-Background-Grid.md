@@ -1,5 +1,5 @@
 ---
-title: Display the Background Grid while Drawing Graphics by LaTeX TikZ
+title: Display the Background Grid while Drawing Graphics in LaTeX TikZ
 categories: 
  - LaTeX
 tags:
@@ -8,12 +8,12 @@ tags:
  - LaTeX TikZ bending
  - LaTeX TikZ backgrounds
 date: 2023-09-23 16:09:23 +0800
-last_modified_at: 2025-01-17 23:42:08 +0800
+last_modified_at: 2025-06-01 19:46:20 +0800
 ---
 
 While using LaTeX TikZ to draw diagrams, users maybe confused with determining the coordinate of each object. A background grid of drawing area could visually help user draw the figure.
 
-# TikZ `backgrounds ` library
+# TikZ `backgrounds` library
 
 One choice is utilising the TikZ `backgrounds` library:
 
@@ -125,9 +125,59 @@ This grid area is fixed and completely determined by the diagonal points setting
 
 where `(-5,-5)` is coordinate of lower left corner point, and `(20,20)` is the coordinate of top right-hand corner point. So, this method has a better application while drawing objects in the local area, but not appropriate to determine the coordinate of the whole area of `tikzpicture` environment. 
 
+Besides, we can also display the x- and y-coordinate by using the `\foreach` command[^1]:
+
+```latex
+\documentclass{article}
+\usepackage{geometry} 
+\geometry{a2paper}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending}
+
+\begin{document}
+
+\begin{tikzpicture}
+	%Grid
+	\def\length{10}
+	\draw[thin, dotted] (-\length,-\length) grid (\length,\length);
+	\foreach \i in {1,...,\length}
+	{
+		\node at (\i,-2ex) {\i};
+		\node at (-\i,-2ex) {-\i};	
+	}
+	\foreach \i in {1,...,\length}
+	{
+		\node at (-2ex,\i) {\i};	
+		\node at (-2ex,-\i) {-\i};	
+	}
+	\node at (-2ex,-2ex) {0};
+
+	\draw[line width=1.5pt] (0,0) ellipse [x radius=2cm, y radius=1.5cm];
+	\draw[line width=1.5pt] (20,20) circle [radius=1cm];
+	\draw[line width=1.5pt,color=red] (0,0) rectangle (20,20);
+	\draw[line width=1.5pt,color=red] (-5,-5) rectangle (0,0);
+	\draw[line width=1.5pt] (-5,-5) circle [radius=1cm];
+	\draw[tips, -{Latex[open,length=10pt,bend]},line width=2pt,color=blue] (0,0) to [bend left] (-5,20);
+	\draw[tips, -{Latex[open,length=10pt,bend]},line width=2pt,color=green] (0,0) to [bend left] (20,-5);
+	\draw[tips, -{Latex[open,length=10pt,bend]},line width=2pt,color=blue] (0,0) to [bend left] (-5,20);
+	\fill (0,0) circle (3pt); 
+	\fill (20,20) circle (3pt); 
+	\fill (-5,-5) circle (3pt);
+	\fill (-5,20) circle (3pt);
+	\fill (20,-5) circle (3pt); 
+\end{tikzpicture}
+
+\end{document}
+```
+
+![image-20250601194531850](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202506011945030.png)
+
 <br>
 
 **References**
 
 - [Background Library](https://tikz.dev/library-backgrounds).
 - [Tutorial: A Picture for Karl’s Students](https://tikz.dev/tutorial#autosec-69).
+
+[^1]: [LED – Diode Circuit](https://tikz.net/led-diode-circuit/).

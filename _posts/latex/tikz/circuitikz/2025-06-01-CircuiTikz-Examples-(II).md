@@ -3,13 +3,17 @@ title: LaTeX CircuiTikz Examples (II)
 categories:
  - Electrical Engineering
  - LaTeX
-toc:
+tags:
  - LaTeX calc
  - LaTeX circuitikz
  - LaTeX contour
+ - LaTeX pgfplots
+ - LaTeX physics
+ - LaTeX siunitx
  - LaTeX standalone
+ - LaTeX TikZ
 date: 2025-06-01 19:50:19 +0800
-last_modified_at: 2025-06-06 12:20:10 +0800
+last_modified_at: 2025-06-06 12:25:29 +0800
 ---
 
 # Example 1: RLC Circuit
@@ -112,7 +116,7 @@ Example 2-1: Buck Converter[^2]
 
 % Designed by: Amir Ostadrahimi
 
-\documentclass [border=5pt]{standalone}
+\documentclass[border=5pt]{standalone}
 \usepackage{tikz}
 \usepackage[american,cuteinductors,smartlabels]{circuitikz} % A package to draw electrical networks with TikZ
 
@@ -188,7 +192,7 @@ Here is an annotated version:
 % Buck Converter
 % This DC-DC converter decreases the voltage level from input to output
 % Designed by: Amir Ostadrahimi
-\documentclass [border=5pt]{standalone}
+\documentclass[border=5pt]{standalone}
 \usepackage{tikz}
 \usepackage[american,cuteinductors,smartlabels]{circuitikz} % A package to draw electrical networks with TikZ
 

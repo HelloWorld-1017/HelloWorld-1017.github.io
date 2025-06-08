@@ -2,7 +2,7 @@
 title: Design and Use Slide Master in Microsoft PowerPoint
 toc: false
 categories:
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft PowerPoint
 date: 2025-01-01 14:01:27 +0800

@@ -2,7 +2,7 @@
 title: Adjust Drawing Page Size in Microsoft Visio
 toc: false
 categories:
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft Visio
 date: 2025-01-01 13:41:35 +0800

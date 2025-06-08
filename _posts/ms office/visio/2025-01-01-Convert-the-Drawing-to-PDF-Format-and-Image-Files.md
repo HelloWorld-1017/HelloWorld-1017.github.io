@@ -2,7 +2,7 @@
 title: Save the Drawing as PDF(/PNG/JPG/SVG/EMF) File in Microsoft Visio
 toc: false
 categories:
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft Visio
 date: 2025-01-01 13:43:50 +0800

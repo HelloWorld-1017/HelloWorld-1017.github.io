@@ -3,7 +3,7 @@ title: Change Color Theme in Microsoft Word
 toc: false
 categories:
  - Design
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft Word
 date: 2024-11-12 20:27:00 +0800

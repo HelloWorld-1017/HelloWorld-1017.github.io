@@ -1,7 +1,7 @@
 ---
 title: Various View Modes in Microsoft Word
 categories:
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft Word
 date: 2024-11-19 20:55:31 +0800

@@ -2,7 +2,7 @@
 title: Specify Background Color in Microsoft Word
 toc: false
 categories:
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft Word
 date: 2024-11-12 19:45:52 +0800

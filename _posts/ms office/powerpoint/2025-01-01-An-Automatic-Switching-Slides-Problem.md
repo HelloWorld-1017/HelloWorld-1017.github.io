@@ -2,7 +2,7 @@
 title: An \"Automatic-Switching-Slides\" Problem in Microsoft PowerPoint
 toc: false
 categories:
- - Windows
+ - Microsoft Office
 tags:
  - Microsoft PowerPoint
 date: 2025-01-01 13:58:12 +0800

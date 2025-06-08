@@ -4,7 +4,7 @@ categories:
  - LaTeX
 tags:
  - LaTeX TikZ
- - LaTeX TikZ arrows.meta
+ - LaTeX TikZ arrows
  - LaTeX TikZ bending
  - LaTeX TikZ backgrounds
 date: 2023-09-23 16:09:23 +0800

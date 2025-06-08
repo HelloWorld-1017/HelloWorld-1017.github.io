@@ -12,7 +12,7 @@ tags:
  - LaTeX nicematrix
  - LaTeX Table
  - LaTeX TikZ
- - LaTeX TikZ decorations.pathreplacing
+ - LaTeX TikZ decorations
  - LaTeX TikZ positioning
  - LaTeX TikZ tikzmark
  - LuaTeX

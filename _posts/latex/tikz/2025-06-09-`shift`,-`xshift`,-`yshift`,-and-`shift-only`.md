@@ -1,9 +1,9 @@
 ---
 title: Use `shift`, `xshift`, `yshift`, and `shift only` Key in LaTeX TikZ to Reduce the Workload of Calculating Coordinates
 toc: false
-tags:
- - LaTeX
 categories:
+ - LaTeX
+tags:
  - LaTeX TikZ
 date: 2025-06-09 14:23:36 +0800
 last_modified_at: 2025-06-09 14:23:36 +0800

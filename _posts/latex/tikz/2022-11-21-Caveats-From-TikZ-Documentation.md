@@ -1,5 +1,5 @@
 ---
-title: Some Caveats for Creating a Figure from TikZ Macro Package Documentation
+title: Some Caveats for Creating a Figure from LaTeX TikZ Documentation
 categories:
  - Design
  - LaTeX
@@ -7,7 +7,7 @@ categories:
 tags:
  - LaTeX TikZ
 date: 2022-11-21 10:43:41 +0800
-last_modified_at: 2024-05-25 09:52:48 +0800
+last_modified_at: 2025-06-09 14:13:02 +0800
 ---
 
 # Introduction

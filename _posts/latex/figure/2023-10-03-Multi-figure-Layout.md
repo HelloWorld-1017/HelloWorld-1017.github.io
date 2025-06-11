@@ -1,18 +1,20 @@
 ---
-title: Organize Multi-figure Layout in LaTeX System
+title: LaTeX Multi-figure Layout
 categories:
  - LaTeX
 tags:
+ - LaTeX Cross Reference
  - LaTeX Figure
  - LaTeX graphicx
+ - LaTeX subcaption
  - LaTeX subfig
 date: 2023-10-03 22:38:49 +0800
-last_modified_at: 2025-01-07 14:44:29 +0800
+last_modified_at: 2025-06-11 10:54:04 +0800
 ---
 
-#  `\subfloat` and `\includegraphics` control sequence
+#  `\subfloat` (`subfig` package) + `\includegraphics`
 
-In LaTeX system, the multi-figure layout could be organised by `\includegraphics`  and `\subfloat` control sequence. The `\includegraphics` is from `graphicx` macro package, and `\subfloat` is from `subfig` package.
+In LaTeX, multiple figures can be organized by combining using `\subfloat` and `\includegraphics` commands. The `\includegraphics` is from `graphicx` package, and `\subfloat` is from `subfig` package. Here is an example.
 
 ```latex
 \documentclass{article}
@@ -145,7 +147,7 @@ This is Fig. \ref{fig}, and this is subfigure Fig. \subref*{fig-a}.
 
 ![image-20230927201859291](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20230927201859291.png)
 
-It should be noted that here, we should use `\subref*` to refer the label of sub-figure, and do not forget the `*` mark [1]. 
+It should be noted that here, we should use `\subref*` to refer the label of sub-figure, and do not forget the `*` mark[^1]. 
 
 (5) Multiple figures could be put into one `\subfloat` environment to share a sub-figure title:
 
@@ -186,9 +188,9 @@ It can be seen from this example that the `\fill` doesn’t work in `\subfloat` 
 
 <br>
 
-# `minipage` environment
+# `minipage` + `\includegraphics`
 
-Using `minipage` environment is another way to organise figures, and I think this is a better approach as it is convenient for sub-figures to share a label horizontally or vertically:
+Using `minipage` environment is another way to organize figures, and I think this is a better approach as it is convenient for sub-figures to share a label horizontally or vertically:
 
 ```latex
 \documentclass{article}
@@ -276,70 +278,157 @@ Using `minipage` environment is another way to organise figures, and I think thi
 
 ![image-20231003221109667](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231003221109667.png)
 
-> Note well here that the `minipage` environment must be include in `\subfloat` as well, otherwise the sub-figure won’t appear:
->
-> ```latex
-> \documentclass{article}
-> \usepackage{graphicx,subfig}
-> \usepackage{geometry}
-> \geometry{a4paper}
-> 
-> \begin{document}
-> 
-> \begin{figure}
-> 	\def\CE{0.20}
-> 	\centering
-> 	\begin{minipage}{\linewidth}
-> 	\centering
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}
-> 	\end{minipage}\\
-> 	\begin{minipage}{\linewidth}
-> 	\centering
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-5.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-6.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-7.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-7.pdf}
-> 	\end{minipage}
-> 	\caption{This is caption.}
-> 	\label{fig}
-> \end{figure}
-> 
-> \end{document}
-> ```
->
-> ![image-20231003220042444](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231003220042444.png)
->
-> Actually, in the previous part, the reason why we put `\includegraphics` in `\subfloat` is the same, if we just use `\includegraphics` control sequence:
->
-> ```latex
-> \documentclass{article}
-> \usepackage{graphicx,subfig}
-> \usepackage{geometry}
-> \geometry{a4paper}
-> 
-> \begin{document}
-> 
-> \begin{figure}
-> 	\def\CE{0.20}
-> 	\centering
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}\hfill
-> 	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}\hfill
-> 	\caption{This is caption.}
-> 	\label{fig}
-> \end{figure}
-> 
-> \end{document}
-> ```
->
-> ![image-20231003223254443](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231003223254443.png)
+<div class="notice--primary" markdown="1">
+
+Note well here that the `minipage` environment must be include in `\subfloat` as well, otherwise the sub-figure won’t appear:
+
+```latex
+\documentclass{article}
+\usepackage{graphicx,subfig}
+\usepackage{geometry}
+\geometry{a4paper}
+
+\begin{document}
+
+\begin{figure}
+	\def\CE{0.20}
+	\centering
+	\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}
+	\end{minipage}\\
+	\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-5.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-6.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-7.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-7.pdf}
+	\end{minipage}
+	\caption{This is caption.}
+	\label{fig}
+\end{figure}
+
+\end{document}
+```
+
+![image-20231003220042444](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231003220042444.png)
+
+Actually, in the previous part, the reason why we put `\includegraphics` in `\subfloat` is the same, if we just use `\includegraphics` control sequence:
+
+```latex
+\documentclass{article}
+\usepackage{graphicx,subfig}
+\usepackage{geometry}
+\geometry{a4paper}
+
+\begin{document}
+
+\begin{figure}
+	\def\CE{0.20}
+	\centering
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-1.pdf}\label{fig-a}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-2.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-3.pdf}\hfill
+	\includegraphics[height=\CE\textwidth, width=\CE\textwidth]{pic-4.pdf}\hfill
+	\caption{This is caption.}
+	\label{fig}
+\end{figure}
+
+\end{document}
+```
+
+![image-20231003223254443](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/image-20231003223254443.png)
+
+</div>
+
+<br>
+
+# `subfigure` (`subcaption` package) + `\includegraphics`
+
+Besides, we can also put `\includegraphics` command in the `subfigure` environment provided by the `subcaption` package[^2]:
+
+```latex
+\documentclass[a4paper]{article}
+\usepackage{lipsum}
+\usepackage{graphicx,subcaption}
+
+\begin{document}
+\lipsum[1]
+
+\begin{figure}[h!]
+\def\CE{0.24}
+\centering
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-1.pdf}
+    \caption{Data series A.}
+    \label{fig-a}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-2.pdf}
+    \caption{Data series B.}
+    \label{fig-b}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-3.pdf}
+    \caption{Data series C.}
+    \label{fig-c}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-4.pdf}
+    \caption{Data series D.}
+    \label{fig-d}
+\end{subfigure}\\
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-5.pdf}
+    \caption{Data series E.}
+    \label{fig-e}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-6.pdf}
+    \caption{Data series F.}
+    \label{fig-f}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-7.pdf}
+    \caption{Data series G.}
+    \label{fig-G}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{\CE\textwidth}
+    \includegraphics[width=\textwidth]{pic-8.pdf}
+    \caption{Data series H.}
+    \label{fig-H}
+\end{subfigure}
+\caption{This is caption.}
+\label{fig}
+\end{figure}
+
+This is Fig. \ref{fig}, and this is subfigure Fig. \ref{fig-a}.
+
+\end{document}
+```
+
+![image-20250611102930916](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202506111029068.png)
+
+However, the `subcaption` package is sometimes not compatible with some templates, most importantly IEEETran for me, and the `subfig` package, i.e., using `\subfloat` command as introduced above, can be used instead[^2]:
+
+<div class="quote--left" markdown="1">
+
+A useful extension is the `subcaption` package, which uses subfloats within a single float. The `subfig` package (`subfigure` package is deprecated) is a useful alternative when used in conjunction with LaTeX templates (i.e. templates for journals from Springer and IOP, IEEETran and ACM SIG) that are not compatible with `subcaption`.
+
+ </div>
 
 <br>
 
 **References**
 
-[1] [The Subfig Package v1.3, last revised 2025/06/28](https://texdoc.org/serve/subfig/0).
+[^1]: [The Subfig Package v1.3, last revised 2025/06/28](https://texdoc.org/serve/subfig/0).
+[^2]: [LaTeX/Floats, Figures and Captions: Subfloats](https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Subfloats).

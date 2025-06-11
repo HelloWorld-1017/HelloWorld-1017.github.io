@@ -1,19 +1,18 @@
-{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-<!-- {% assign date_format = site.date_format | default: "%B %-d, %Y, %H:%M:%S" %} -->
-{% if page.last_modified_at %}
+<!-- {% assign date_format = site.date_format | default: "%B %-d, %Y" %} --> <!-- "%B %-d, %Y, %H:%M:%S" -->
+<!-- {% if page.last_modified_at %}
   <p class="page__date">
     <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
     Last modified on
       <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">
-        {{ page.last_modified_at | date: "%b. %d, %Y" }} <!-- "%B %d, %Y" -->
+        {{ page.last_modified_at | date: "%b. %d, %Y" }} 
       </time>
   </p>
 {% elsif page.date %}
   <p class="page__date"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i>
     <i>Last modified on
       <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%b. %d, %Y" }} <!-- "%B %d, %Y" -->
+        {{ page.date | date: "%b. %d, %Y" }}
       </time>
     </i>
   </p>
-{% endif %}
+{% endif %} -->

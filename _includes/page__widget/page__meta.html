@@ -2,11 +2,20 @@
 {% if document.show_date %}
   {% assign date = document.date %}
   {% assign date_format = site.date_format | default: "%b. %d, %Y" %}
-    <p class="page__meta">
-      {% if document.show_date and document.date %}
-        <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;">
-          {{ date | date: date_format }}
-        </div>
-      {% endif %}
-    </p>
+  <p class="page__meta">
+    {% if document.show_date and document.date and page.last_modified_at %}
+      <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
+        Posted on {{ date | date: date_format }} • Updated on {{ page.last_modified_at | date: date_format }}
+      </div>
+    {% elsif document.show_date and document.date %}
+      <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
+        Posted on {{date | date: date_format }} • Updated on {{ date | date: date_format }}
+      </div>
+    {% endif %}
+    <!-- {% if document.show_date and document.date %}
+    <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;">
+      {{ date | date: date_format }}
+    </div>
+    {% endif %} -->
+  </p>
 {% endif %}

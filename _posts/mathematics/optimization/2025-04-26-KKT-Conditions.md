@@ -7,7 +7,7 @@ tags:
  - MATLAB Graphics
  - Optimization
 date: 2025-04-26 22:28:08 +0800
-last_modified_at: 2025-05-29 20:00:55 +0800
+last_modified_at: 2025-06-11 14:46:32 +0800
 ---
 
 # KKT conditions
@@ -385,7 +385,6 @@ zlabel("$f$", "Interpreter", "latex", "FontSize", 20)
 xlim([min(x), max(x)])
 ylim([min(y), max(y)])
 end
-
 ```
 
 ![fig1](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202505261915598.jpg)
@@ -704,7 +703,6 @@ xlim([min(x), max(x)])
 ylim([min(y), max(y)])
 zlim([level, max(f,[],"all")])
 end
-
 ```
 
 ![fig2](https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202505261919808.jpg)

@@ -71,6 +71,9 @@
     margin-top: 1em;
     margin-bottom: 1em;
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+
+    user-select: auto;
+    -webkit-user-select: text;
   }
 
   .code-block-wrapper h6 {
@@ -85,6 +88,7 @@
     user-select: none; /* Standard syntax */
   }
 </style>
+
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function () {
     const codeBlocks = document.querySelectorAll('div[class*="language-"]');
@@ -124,6 +128,39 @@
     }
   });
 </script>
+
+<!-- Add a copy button for the code block -->
+<script type="text/javascript">
+  function InitCopyPaste() {
+      const codeBlocks = document.querySelectorAll("div.highlighter-rouge .rouge-code");
+
+      codeBlocks.forEach((codeblock, index) => {
+        const code = codeBlocks[index].innerText;
+        const copyCodeButton = document.createElement("button");
+        copyCodeButton.innerHTML = "Copy";
+        copyCodeButton.classList = "btn btn--copycode";
+
+        // insert a copy button
+        copyCodeButton.onclick = function () {
+          window.navigator.clipboard.writeText(code.trim());
+          copyCodeButton.innerHTML = "Copied!";
+          copyCodeButton.classList.add("btn--copycode-success");
+          copyCodeButton.classList.remove("btn--copycode");
+
+          setTimeout(() => {
+            copyCodeButton.innerHTML = "Copy";
+            copyCodeButton.classList.remove("btn--copycode-success");
+            copyCodeButton.classList.add("btn--copycode");
+          }, 2000);
+        };
+
+        // make the button
+        codeblock.appendChild(copyCodeButton);
+      });
+    }
+    document.addEventListener("DOMContentLoaded", InitCopyPaste);
+</script>
+
 
 <!-- https://github.com/mattgemmell/footnotes-popover?tab=readme-ov-file -->
 <link href="/assets/footnotes/footnotes.css" rel="stylesheet" />

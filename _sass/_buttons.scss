@@ -136,3 +136,28 @@
   background-color: AntiqueWhite;
   bottom: 10px;
 }
+
+// Copy-button style for the code block
+@mixin button-copycode-style {
+  background-color: #575757;
+  color: white;
+  font-weight: bold;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  position: absolute;
+  top: -7px;
+  right: 10px;
+  outline: none;
+
+  @extend %deactive-user-selection;
+}
+
+.btn.btn--copycode {
+  @include button-copycode-style;
+  color: white;
+}
+
+.btn.btn--copycode-success {
+  @include button-copycode-style;
+  color: white;
+}

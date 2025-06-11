@@ -5,11 +5,11 @@
   <p class="page__meta">
     {% if document.show_date and document.date and page.last_modified_at %}
       <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
-        Posted on {{ date | date: date_format }} • Updated on {{ page.last_modified_at | date: date_format }}
+        {{ date | date: date_format }} • Updated {{ page.last_modified_at | date: date_format }}
       </div>
     {% elsif document.show_date and document.date %}
       <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
-        Posted on {{date | date: date_format }} • Updated on {{ date | date: date_format }}
+        {{ date | date: date_format }} • Updated {{ date | date: date_format }}
       </div>
     {% endif %}
     <!-- {% if document.show_date and document.date %}

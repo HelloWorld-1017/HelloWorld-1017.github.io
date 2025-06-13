@@ -1,14 +1,11 @@
 ---
-layout: single
 title: MATLAB Private Functions and Function Precedence Order
 categories:
  - MATLAB
 tags:
  - MATLAB Programming
  - MATLAB Language Fundamentals
-drafted_at: 2024-04-19 15:18:07 +0800
 date: 2024-04-20 22:17:17 +0800
-last_modified_at0: 2024-04-20 22:17:17 +0800
 last_modified_at: 2024-04-20 22:17:17 +0800
 ---
 

@@ -1,15 +1,12 @@
 ---
-layout: single
 title: Linear Estimation for Loop Running Time in MATLAB
+toc: false
 categories:
  - MATLAB
 tags:
  - MATLAB Software Development Tools
  - MATLAB Language Fundamentals
-toc: false
 date: 2024-03-25 17:20:09 +0800
-last_modified_at0: 2024-03-25 17:20:09 +0800
-last_modified_at1: 2024-03-26 09:40:29 +0800
 last_modified_at: 2024-03-26 09:40:29 +0800
 ---
 

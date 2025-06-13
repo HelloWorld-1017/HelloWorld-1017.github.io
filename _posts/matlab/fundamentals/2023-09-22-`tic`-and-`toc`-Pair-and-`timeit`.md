@@ -1,11 +1,11 @@
 ---
-layout: single
 title: MATLAB `tic` and `toc` Pair and `timeit` Function
-date: 2023-09-22 13:46:17 +0800
 categories:
  - MATLAB
 tags:
  - MATLAB Software Development Tools
+date: 2023-09-22 13:46:17 +0800
+last_modified_at: 2023-09-22 13:46:17 +0800
 ---
 
 # `tic` and `toc` pair

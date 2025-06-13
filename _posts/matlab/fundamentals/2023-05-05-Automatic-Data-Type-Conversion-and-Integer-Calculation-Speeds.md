@@ -1,13 +1,13 @@
 ---
-layout: single
 title: Automatic Data Type Conversion and Integer Calculation Speeds in MATLAB
-date: 2023-05-05 17:23:27 +0800
 categories: 
  - MATLAB
  - Mathematics
 tags:
  - Numerical Analysis
  - MATLAB Language Fundamentals
+date: 2023-05-05 17:23:27 +0800
+last_modified_at: 2023-05-05 17:23:27 +0800
 ---
 
 # Introduction

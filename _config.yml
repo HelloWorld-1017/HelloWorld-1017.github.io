@@ -24,7 +24,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jemoji
+# - jemoji # https://github.com/jekyll/jekyll/issues/9733
   - jekyll-algolia
 
 # mimic GitHub Pages with --safe

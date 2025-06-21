@@ -1,16 +1,13 @@
 ---
-layout: single
-title: "One-Hot Encoding and Decoding in MATLAB"
-date: 2024-02-08 16:34:49 +0800
+title: One-Hot Encoding and Decoding in MATLAB
 categories:
  - MATLAB
  - Machine Learning
 tags:
  - MATLAB Deep Learning Toolbox
  - Image Semantic Segmentation
-last_modified_at0: 2024-02-08 16:34:49 +0800
-last_modified_at1: 2024-02-10 19:19:29 +0800
-last_modified_at: 2024-02-10 19:19:29 +0800
+date: 2024-02-08 16:34:49 +0800
+last_modified_at: 2025-06-15 16:16:50 +0800
 ---
 
 # Introduction
@@ -385,9 +382,9 @@ indConverted =
 
 **References**
 
-[^1]: [MATLAB `onehotencode`: Encode data labels into one-hot vectors - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/onehotencode.html).
+[^1]: [MATLAB `onehotencode`: Encode data labels into one-hot vectors](https://ww2.mathworks.cn/help/deeplearning/ref/onehotencode.html).
 
-[^2]: [MATLAB `onehotdecode`: Decode probability vectors into class labels - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/onehotdecode.html).
-[^3]: [Calculate and Visualize Confusion Matrix in MATLAB: MATLAB `confusionmat`, `confusionchart`, `confusion`, and `plotconfusion` Functions - What a starry night~](https://helloworld-1017.github.io/2023-11-07/15-39-17.html).
-[^4]: [MATLAB `ind2vec`: Convert indices to vectors - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/ind2vec.html).
-[^5]: [MATLAB `vec2ind`: Convert vectors to indices - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/vec2ind.html).
+[^2]: [MATLAB `onehotdecode`: Decode probability vectors into class labels](https://ww2.mathworks.cn/help/deeplearning/ref/onehotdecode.html).
+[^3]: [Calculate and Visualize Confusion Matrix in MATLAB: MATLAB `confusionmat`, `confusionchart`, `confusion`, and `plotconfusion` Functions](/2023-11-07/15-39-17.html).
+[^4]: [MATLAB `ind2vec`: Convert indices to vectors](https://ww2.mathworks.cn/help/deeplearning/ref/ind2vec.html).
+[^5]: [MATLAB `vec2ind`: Convert vectors to indices](https://ww2.mathworks.cn/help/deeplearning/ref/vec2ind.html).

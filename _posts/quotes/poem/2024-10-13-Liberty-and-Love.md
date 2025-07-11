@@ -1,10 +1,10 @@
 ---
-title: Sandor Petofi, "Liberty and Love..."
+title: \"Liberty and Love...\"
 toc: false
 categories:
  - Quotes
 date: 2024-10-13 17:19:23 +0800
-last_modified_at: 2024-10-14 22:53:30 +0800
+last_modified_at: 2025-07-11 11:27:59 +0800
 ---
 
 <div class="quote--left" markdown="1">

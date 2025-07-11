@@ -5,12 +5,12 @@ categories:
 tags:
  - MATLAB Software Development Tools
 date: 2023-09-22 13:46:17 +0800
-last_modified_at: 2023-09-22 13:46:17 +0800
+last_modified_at: 2025-07-08 17:15:01 +0800
 ---
 
 # `tic` and `toc` pair
 
-I often use the `tic` (*Start stopwatch timer* [1]) and `toc` (*Read elapsed time from stopwatch* [2] ) function to record the running time of a certain piece of code, and thereby make a rough prediction for time complexity. But when I try to record the elapsed time of each times in the loops and that of the whole code at the same time, something happens out of my expectation. For instance, run the following code:
+I often use the `tic` (*Start stopwatch timer*[^1]) and `toc` (*Read elapsed time from stopwatch*[^2] ) function to record the running time of a certain piece of code, and thereby make a rough prediction for time complexity. But when I try to record the elapsed time of each loop and that of the whole loop at the same time, something happens out of my expectation. For instance, run the following code:
 
 ```matlab
 clc,clear,close all
@@ -39,7 +39,7 @@ It can be seen that, actually, the second `toc` also reads the elapsed time from
 
 That means that the action of reading time from timer by the `toc` function dose not interrupt or stop timer. 
 
-So, if I want to realise what I expect, the code should be like this [2]:
+So, if I want to realize what I expect, the code should be like this[^2]:
 
 ```matlab
 clc,clear,close all
@@ -70,7 +70,7 @@ tStart =
    159631328433
 ```
 
-Note that this is a integer that has meaning ONLY for the `toc` function [1]: 
+Note that this is a integer that has meaning ONLY for the `toc` function[^1]: 
 
 <img src="https://raw.githubusercontent.com/Ma1017/blog-images/main/imgs/image-20230921210923497.png" alt="image-20230921210923497"  />
 
@@ -103,7 +103,7 @@ disp(tEnd)
 
 # `timeit` function
 
-While learning the `tic` and `toc` function, I found a new function `timeit` [3], which is used to measure time required to run function. An official example provide by MATLAB documentation (i.e., Compare Time to Execute Custom Preallocation to Calling `zeros`) is like:
+While learning the `tic` and `toc` function, I found a new function `timeit`[^3], which is used to measure time required to run function. An official example provide by MATLAB documentation (i.e., Compare Time to Execute Custom Preallocation to Calling `zeros`) is like:
 
 ```matlab
 clc,clear,close all
@@ -220,8 +220,6 @@ end
 
 **References**
 
-[1] [tic - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/tic.html).
-
-[2] [toc - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/toc.html).
-
-[3] [timeit - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/timeit.html).
+[^1]: [`tic`](https://ww2.mathworks.cn/help/matlab/ref/tic.html).
+[^2]: [`toc`](https://ww2.mathworks.cn/help/matlab/ref/toc.html).
+[^3]: [`timeit`](https://ww2.mathworks.cn/help/matlab/ref/timeit.html).

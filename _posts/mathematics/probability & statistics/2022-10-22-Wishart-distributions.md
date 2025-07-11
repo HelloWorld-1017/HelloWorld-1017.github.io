@@ -1,14 +1,14 @@
 ---
-layout: single
 title: Wishart Distribution, Inverse-Wishart Distribution, Normal-Inverse-Wishart Distribution
-date: 2022-10-22 14:29:56 +0800
 categories: 
  - Mathematics
  - MATLAB
 tags:
- - Probability Theory and Mathematical Statistics
  - Bayesian probability
  - MATLAB Statistics and Machine Learning Toolbox
+ - Probability Theory and Mathematical Statistics
+date: 2022-10-22 14:29:56 +0800
+last_modified_at: 2025-07-11 15:44:39 +0800
 ---
 
 # Wishart Distribution
@@ -71,25 +71,27 @@ $$
 
 在贝叶斯统计中，Wishart分布是(均值已知的)MVN分布的精度矩阵$\Omega$($\Omega=\Sigma^{-1}$，$\Sigma$是协方差矩阵)的共轭先验：
 
-![image-20221022215519013](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022215519013.png)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022215519013.png?raw=true" alt="image-20221022215519013" style="width:80%;" />
 
 没有足够的信息时，自由度$n=p$的Wishart先验是一个合适的选择。由于Wishart先验的均值为$W_p(\mathrm{V},n)$为$n\mathrm{V}$，这表明矩阵$\mathrm{V}$的一个合理的选择是$n^{-1}\Sigma_0^{-1}$，其中$\Sigma_0$是协方差矩阵的猜测($\Sigma_0$is some prior guess for the covariance matrix)。
 
 ## `wishrnd` Function in MATLAB
 
-在MATLAB的官方文档中，也提供了关于Wishart分布的一些概括和功能：[Wishart Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/wishart-distribution.html)，其中的描述和PDF定义和Wikipedia中时一致的：
+在MATLAB的官方文档中，也提供了关于Wishart分布的一些概括和功能[^2]，其中的描述和PDF定义和Wikipedia中时一致的：
 
-![image-20221022214757974](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022214757974.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022214757974.png?raw=true" alt="image-20221022214757974" style="width:80%;" />
 
 只是记号有所差异。我们这里仍然沿用式$\eqref{Wishart}$中的记号，即$n$表示Wishart分布的自由度，$\Sigma$表示对称正定矩阵，这是两个Wishart分布的参数。
 
-在MATLAB产生随机矩阵的函数是`wishrnd`：[wishrnd - MathWorks](https://ww2.mathworks.cn/help/stats/wishrnd.html)。在[Wishart Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/wishart-distribution.html)中提供了两个使用`wishrnd`的示例：
+在MATLAB产生随机矩阵的函数是`wishrnd`[^3]。在[^2]中提供了两个使用`wishrnd`的示例：
 
 ```matlab
 Sigma = [1 .5; .5 2];
 df = 10; 
 S1 = wishrnd(Sigma,df)/df
+```
 
+```
 S1 =
        1.7959      0.64107
       0.64107       1.5496
@@ -99,7 +101,9 @@ S1 =
 Sigma = [1 .5; .5 2];
 df = 1000; 
 S2 = wishrnd(Sigma,df)/df
+```
 
+```
 S2 =
        0.9842      0.50158
       0.50158       2.1682
@@ -107,7 +111,7 @@ S2 =
 
 在这两个示例中，`wishrnd`所生成的随机矩阵都除以了自由度`df`，其原因是：This function defines the parameter `Sigma` so that the mean of the output matrix is `Sigma*df`。
 
-上面这种形式看不出自由度对于随机矩阵有什么影响，因此下面参考文献[4]提供的一种可视化的方式：
+上面这种形式看不出自由度对于随机矩阵有什么影响，因此下面参考文献[^1]提供的一种可视化的方式：
 
 ```matlab
 clc, clear, close all
@@ -165,13 +169,13 @@ $$
 $$
 在贝叶斯统计中，Inverse Wishart分布常作为(均值未知的)MVN函数的协方差矩阵的共轭先验：
 
-![image-20221022224948742](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022224948742.png)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022224948742.png?raw=true" alt="image-20221022224948742" style="width:80%;" />
 
 ## `iwishrnd`  Function in MALTAB
 
-和Wishart分布一样，MATLAB同样提供了相关的内容：[Inverse Wishart Distribution - MathWorks](https://ww2.mathworks.cn/help/stats/inverse-wishart-distribution.html)，[iwishrnd - MathWorks](https://ww2.mathworks.cn/help/stats/iwishrnd.html)。其PDF：
+和Wishart分布一样，MATLAB同样提供了相关的内容[^4][^5]，其PDF：
 
-![image-20221022223732781](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022223732781.png?raw=true)
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20221022223732781.png?raw=true" alt="image-20221022223732781" style="width:80%;" />
 
 与式$\eqref{inverseWishart}$是等价的。
 
@@ -180,7 +184,9 @@ $$
 ```matlab
 Tau = [1 .5; .5 2];
 df = 10; S1 = iwishrnd(Tau,df)*(df-2-1)
+```
 
+```
 S1 =
        1.7959      0.64107
       0.64107       1.5496
@@ -190,7 +196,9 @@ S1 =
 Tau = [1 .5; .5 2];
 df = 1000; 
 S2 = iwishrnd(Tau,df)*(df-2-1)
+```
 
+```
 S2 =
        0.9842      0.50158
       0.50158       2.1682
@@ -217,7 +225,6 @@ for i = 1:numel(dfs)
 end
 
 exportgraphics(gcf, 'pic3.jpg?raw=true', Resolution=300)
-
 ```
 
 ![pic3](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/pic3.jpg?raw=true)
@@ -308,10 +315,12 @@ $$
 
 **Reference**
 
-[1] [Wishart distribution - Wikipedia](https://en.wikipedia.org/wiki/Wishart_distribution).
+- [Wishart distribution](https://en.wikipedia.org/wiki/Wishart_distribution).
+- [Inverse-Wishart distribution](https://en.wikipedia.org/wiki/Inverse-Wishart_distribution).
+- [Normal-inverse-Wishart distribution](https://en.wikipedia.org/wiki/Normal-inverse-Wishart_distribution).
 
-[2] [Inverse-Wishart distribution - Wikipedia](https://en.wikipedia.org/wiki/Inverse-Wishart_distribution).
-
-[3] [Normal-inverse-Wishart distribution - Wikipedia](https://en.wikipedia.org/wiki/Normal-inverse-Wishart_distribution).
-
-[4] Cameron Davidson-Pilon. 贝叶斯方法: 概率编程与贝叶斯推断. 北京: 人民邮电出版社, 2017.1.
+[^1]: Cameron Davidson-Pilon. 贝叶斯方法: 概率编程与贝叶斯推断. 北京: 人民邮电出版社, 2017.1.
+[^2]: [Wishart Distribution](https://ww2.mathworks.cn/help/stats/wishart-distribution.html).
+[^3]: [MATLAB `wishrnd`: Wishart random numbers](https://ww2.mathworks.cn/help/stats/wishrnd.html).
+[^4]: [Inverse Wishart Distribution](https://ww2.mathworks.cn/help/stats/inverse-wishart-distribution.html).
+[^5]: [MATLAB `iwishrnd`: Inverse Wishart random numbers](https://ww2.mathworks.cn/help/stats/iwishrnd.html).

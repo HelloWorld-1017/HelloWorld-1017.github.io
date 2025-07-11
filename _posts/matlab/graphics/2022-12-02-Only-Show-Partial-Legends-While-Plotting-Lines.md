@@ -1,12 +1,11 @@
 ---
-layout: single
 title: Only Show Partial Legends When Plotting Lines in MATLAB
-date: 2022-12-02 12:50:47 +0800
 categories: 
  - MATLAB
 tags:
  - MATLAB Graphics
-last_modified_at: 2023-11-14 18:33:16 +0800
+date: 2022-12-02 12:50:47 +0800
+last_modified_at: 2025-07-08 23:34:46 +0800
 ---
 
 # `"HandleVisibility"` property of `Line` object
@@ -188,6 +187,6 @@ to determine the color for representing $i$-th group, cause we don't need to con
 
 **References**
 
-[^1]: [`andrewsplot`: Andrews plot - MathWorks](https://ww2.mathworks.cn/help/stats/andrewsplot.html).
-[^2]: [`gobjects`: Initialize array for graphics objects - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/gobjects.html).
-[^3]: [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo).
+[^1]: [`andrewsplot`: Andrews plot](https://ww2.mathworks.cn/help/stats/andrewsplot.html).
+[^2]: [`gobjects`: Initialize array for graphics objects](https://ww2.mathworks.cn/help/matlab/ref/gobjects.html).
+[^3]: [Modulo](https://en.wikipedia.org/wiki/Modulo).

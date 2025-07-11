@@ -5,10 +5,10 @@ categories:
  - Entertainment
  - Moments
 date: 2024-06-24 10:34:35 +0800
-last_modified_at: 2024-11-25 00:01:05 +0800
+last_modified_at: 2025-07-11 16:24:20 +0800
 gallery:
- - image_path: /images/2024-06-24/fig1.jpg
- - image_path: /images/2024-06-24/fig2.jpg
+ - image_path: https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202507111623354.jpg
+ - image_path: https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202507111623860.jpg
 ---
 
 {% include gallery id="gallery" %}
@@ -22,6 +22,8 @@ Anyway，这是一段很温暖的旅程。
 拜拜创新港\~ 拜拜三号巨构👋
 
 <br>
+
+🎶🎶🎶
 
 - [凤凰花开的路口](https://www.youtube.com/watch?v=2eQf4LIPkII), 林志炫
 - [红日](https://www.youtube.com/watch?v=CvmlXN8Im3s), 李克勤

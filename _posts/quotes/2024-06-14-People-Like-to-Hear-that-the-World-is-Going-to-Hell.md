@@ -6,7 +6,7 @@ categories:
  - Psychology
  - Quotes
 date: 2024-06-14 10:04:58 +0800
-last_modified_at: 2025-02-03 17:04:45 +0800
+last_modified_at: 2025-07-11 17:05:03 +0800
 ---
 
 <div class="quote--left" markdown="1">
@@ -37,6 +37,13 @@ A third is that progress happens too slowly to notice, but setbacks happen too q
 
 There is another psychological reason that, I guess, may increase people’s special obsession for bad news. Human desire is infinite, which naturally brings about, more or less, dissatisfaction with their current status and envy with others’ life. At this time when they hear about bad news and pessimistic statements, these kinds of negative emotions may be relieved by the feeling of “walking to destruction together”.
 
+<div class="quote--left" markdown="1">
+Everyone, deep in their hearts, is waiting for the end of the world to come.[^4]
+
+--- Haruki Murakami, 1Q84
+
+</div>
+
 <br>
 
 **References**
@@ -44,3 +51,4 @@ There is another psychological reason that, I guess, may increase people’s spe
 [^1]: [For Reasons I Have Never Understood, People Like To Hear That the World Is Going To Hell](https://quoteinvestigator.com/2022/04/03/world-going/).
 [^2]: The Psychology of Money: Timeless lessons on wealth, greed, and happiness (Chapter 17: The Seduction of Pessimism), Morgan Housel.
 [^3]: [Deirdre McCloskey](https://en.wikipedia.org/wiki/Deirdre_McCloskey).
+[^4]: [Quote by Haruki Murakami: “Everyone, deep in their hearts, is waiting for ...”](https://www.goodreads.com/quotes/903606-everyone-deep-in-their-hearts-is-waiting-for-the-end)

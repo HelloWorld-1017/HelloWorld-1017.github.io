@@ -1,12 +1,12 @@
 ---
-title: MATLAB `inputname` Function
+title: MATLAB `inputname` Function --- Get variable name of function input
 toc: false
 categories:
  - MATLAB
 tags:
  - MATLAB Programming
 date: 2025-08-04 12:52:33 +0800
-last_modified_at: 2025-08-04 12:52:33 +0800
+last_modified_at: 2025-08-04 15:17:51 +0800
 ---
 
 MATLAB `inputname` function is to return variable names of function input, and here is an example from the official documentation[^1]:

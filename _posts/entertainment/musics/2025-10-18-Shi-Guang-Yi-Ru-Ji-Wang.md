@@ -1,10 +1,10 @@
 ---
-title: 🎶 Shi Guang, Yi Ru Ji Wang.
+title: 🎶 Shi Guang, Yi Ru Ji Wang
 toc: false
 categories:
  - Entertainment
 date: 2025-10-18 01:32:24 -0400
-last_modified_at: 2025-10-18 01:32:24 -0400
+last_modified_at: 2025-10-18 01:37:44 -0400
 ---
 
 <br>

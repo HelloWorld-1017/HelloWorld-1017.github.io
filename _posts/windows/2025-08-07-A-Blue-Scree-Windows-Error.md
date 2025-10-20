@@ -4,7 +4,7 @@ toc: false
 categories:
  - Windows
 date: 2025-08-07 12:34:34 +0800
-last_modified_at: 2025-10-18 16:44:15 -0400
+last_modified_at: 2025-10-19 15:04:34 -0400
 ---
 
 Days ago, I bought a new laptop[^1], but these days I found a Windows blue-screen error occurs from time to time, which leads the laptop re-start instantly. So, I decide to solve this problem today.
@@ -422,6 +422,12 @@ From this type of error message, some references point out that this is because 
 <img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/20250807205132476.png" alt="image-20250807205125333" style="width:80%;" />
 
 After update, re-start the computer. I hope it works!
+
+<br>
+
+**Updated Oct. 19, 2025**
+
+Recently, the same error occurred multiple times recently. Really annoying, because one time it made my TeXStudio project collapse, and all TeX-related files, including PDF file, were all rewritten as NULL characters, although I saved the `.tex` file before shut-down for sure. I had to rewrite my homework AGAIN 😡 So today, I deleted the VPN software in my computer to try to address this issue. This is one of methods provided by ChatGPT.
 
 <br>
 

@@ -2,15 +2,28 @@
 {% if document.show_date %}
   {% assign date = document.date %}
   {% assign date_format = site.date_format | default: "%b. %d, %Y" %}
+  {% assign location = document.location %}
   <p class="page__meta">
     {% if document.show_date and document.date and page.last_modified_at %}
-      <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
-        {{ date | date: date_format }} • Updated {{ page.last_modified_at | date: date_format }}
-      </div>
+      {% if location != nil %}
+        <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
+          {{ date | date: date_format }} in {{ location }} • Updated {{ page.last_modified_at | date: date_format }}
+        </div>
+      {% else %}
+        <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
+          {{ date | date: date_format }} • Updated {{ page.last_modified_at | date: date_format }}
+        </div>
+      {% endif %}
     {% elsif document.show_date and document.date %}
-      <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
-        {{ date | date: date_format }} • Updated {{ date | date: date_format }}
-      </div>
+      {% if location != nil %}
+        <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
+          {{ date | date: date_format }} in {{ location }} • Updated {{ date | date: date_format }}
+        </div>
+      {% else %}
+        <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;color:#575757;">
+          {{ date | date: date_format }} • Updated {{ date | date: date_format }}
+        </div>
+      {% endif %}
     {% endif %}
     <!-- {% if document.show_date and document.date %}
     <div style="width:100%;margin-top:3px;margin-bottom:10px;font-size:x-large;">

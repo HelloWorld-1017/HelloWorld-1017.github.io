@@ -1,8 +1,9 @@
 ---
-title: A Blue Scree Windows Error Because of Old Network Driver
+title: A Blue Scree Windows Error Because of Old Network Driver --- `NETIO!StreamInvokeCalloutAndNormalizeAction+0x5c`
 toc: false
 categories:
  - Windows
+location: China
 date: 2025-08-07 12:34:34 +0800
 last_modified_at: 2025-10-19 15:04:34 -0400
 ---

@@ -6,7 +6,7 @@ categories:
  - Electrical Engineering
  - MATLAB
 date: 2024-07-17 11:28:36 +0800
-last_modified_at: 2024-12-29 21:54:46 +0800
+last_modified_at: 2025-10-23 01:39:43 -0400
 ---
 
 **Articles**
@@ -55,3 +55,4 @@ last_modified_at: 2024-12-29 21:54:46 +0800
 
 - [Energy demand management](https://en.wikipedia.org/wiki/Energy_demand_management), a.k.a demand-side management (DSM) or demand-side response (DSR).
 - Dec. 07, 2024, [【学术前沿】徐政：新型电力系统的五大动态特性概述](https://mp.weixin.qq.com/s/NPIyhIHxH7ZXf6U7e6ap9A).
+- [A Gentle Introduction to Power Flow](https://invenia.github.io/blog/2020/12/04/pf-intro/); [A Gentle Introduction to Optimal Power Flow](https://invenia.github.io/blog/2021/06/18/opf-intro/).

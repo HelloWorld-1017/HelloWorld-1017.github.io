@@ -8,7 +8,7 @@ tags:
  - LaTeX hyperref
  - LaTeX Table
 date: 2025-01-02 21:41:01 +0800
-last_modified_at: 2025-01-04 12:29:47 +0800
+last_modified_at: 2025-10-28 13:39:05 -0400
 ---
 
 LaTeX `hyperref` package[^3] provides the `footnote` command to create a footnote, but the footnote can’t be displayed normally when we use it in the tables[^4]. For example,
@@ -46,7 +46,7 @@ Footnote\footnote{This is FOOTNOTE.}.
 \end{document}
 ```
 
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031200114.png" alt="img-1" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031200114.png" alt="img-1" style="width:75%;" />
 
 this is because it is more commonly to use table notes rather than table footnotes[^1]:
 
@@ -91,7 +91,71 @@ Footnote\footnote{This is FOOTNOTE.}.
 \end{document}
 ```
 
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031201692.png" alt="img-1" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031201692.png" alt="img-1" style="width:75%;" />
+
+<div class="notice--primary" markdown="1">
+**Oct. 28, 2025**: By the way, at this time, the table is actually not in the center of the page width (this point is more obvious when using two-column layout). To solve this problem, we can put the whole `minipage` in the `center` environment[^5]:
+
+```latex
+\documentclass[twocolumn]{article}
+\usepackage[margin=1in]{geometry}
+\geometry{a4paper}
+\usepackage[x11names]{xcolor}
+\pagecolor{AntiqueWhite1}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{caption}
+\usepackage{lipsum}
+
+\begin{document}
+\textcolor{gray}{\lipsum[1][1-7]}
+
+\begin{minipage}[c]{0.5\textwidth}
+	\centering
+	\captionof{table}{This is the table caption.}
+	\begin{tabular}{|l|l|}
+		\hline
+		Footnote & Footnote\footnote{This is footnote.}\\
+		\hline
+		Footnote & Footnote\footnote{This is footnote.}\\
+		\hline
+		Footnote & Footnote\footnote{This is footnote.}\\
+		\hline
+		Footnote & Footnote\footnote{This is footnote.}\\
+		\hline
+		Footnote & Footnote\footnote{This is footnote.}\\
+		\hline
+	\end{tabular}
+\end{minipage}
+
+Footnote\footnote{This is FOOTNOTE.}. \textcolor{gray}{\lipsum[1][1-7]}
+
+\begin{center}
+	\begin{minipage}[c]{0.5\textwidth}
+		\centering
+		\captionof{table}{This is the table caption.}
+		\begin{tabular}{|l|l|}
+			\hline
+			Footnote & Footnote\footnote{This is footnote.}\\
+			\hline
+			Footnote & Footnote\footnote{This is footnote.}\\
+			\hline
+			Footnote & Footnote\footnote{This is footnote.}\\
+			\hline
+			Footnote & Footnote\footnote{This is footnote.}\\
+			\hline
+			Footnote & Footnote\footnote{This is footnote.}\\
+			\hline
+		\end{tabular}
+	\end{minipage}
+\end{center}
+
+Footnote\footnote{This is FOOTNOTE.}. \textcolor{gray}{\lipsum[1][1-7]}
+\end{document}
+```
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/20251028133756093.png" alt="png-1" style="width:75%;" />
+
+</div>
 
 and we can use `\renewcommand{\thempfootnote}{\arabic{mpfootnote}}` in the preamble to change footnote markers to Arabic digits:
 
@@ -106,7 +170,7 @@ and we can use `\renewcommand{\thempfootnote}{\arabic{mpfootnote}}` in the pream
 \end{document}
 ```
 
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031202215.png" alt="img-1" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031202215.png" alt="img-1" style="width:75%;" />
 
 On the other hand, to realize the effect of “table footnotes”, reference[^1] also provides two methods: the first one is a manual approach:
 
@@ -180,7 +244,7 @@ Footnote\footnote{This is FOOTNOTE.}.
 
 {% endraw %}
 
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031236600.png" alt="img-1" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031236600.png" alt="img-1" style="width:75%;" />
 
 and another one is by `\tablefootnote` command of `tablefootnote` package:
 
@@ -222,7 +286,7 @@ Footnote\footnote{This is FOOTNOTE.}.
 \end{document}
 ```
 
-<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031239937.png" alt="img-1" style="width:100%;" />
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/202501031239937.png" alt="img-1" style="width:75%;" />
 
 <br>
 
@@ -231,5 +295,5 @@ Footnote\footnote{This is FOOTNOTE.}.
 [^1]: [Footnotes: Footnotes in tables](https://www.overleaf.com/learn/latex/Footnotes#Footnotes_in_tables).
 [^2]: [Footnotes in a table (LaTeX2e unofficial reference manual (December 2024))](https://latexref.xyz/Footnotes-in-a-table.html).
 [^3]: [CTAN: Package `hyperref`](https://ctan.org/pkg/hyperref?lang=en).
-[^4]: [Specify Link Color Using LaTeX hyperref Package](/2024-06-02/21-22-07.html).
-
+[^4]: [Specify Link Color Using LaTeX `hyperref` Package](/2024-06-02/21-22-07.html).
+[^5]: [Align Contents in LaTeX — Environments `center`, `Center`, `flushleft`, `FlushLeft`, `flushright`, `FlushRight`, and commands `\centering`, `\Centering`, `\raggedleft`, `\RaggedLeft`, `\raggedright`, `\RaggedRight`](/2025-10-28/12-16-33.html).

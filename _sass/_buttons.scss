@@ -100,6 +100,14 @@
   margin: 0.3em;
 }
 
+.btn.btn--option {
+  background: $WhiteSmoke;
+  border: none;
+  color: black;
+  font-weight: bold;
+  margin: 0.3em;
+}
+
 .label-panel {
   @extend %deactive-user-selection;
 }

@@ -1,40 +1,50 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
+<div id="main" role="main">
+  {% include sidebar.html %}
 
-{% assign tags_max = 0 %}
-{% for tag in site.tags %}
-  {% if tag[1].size > tags_max %}
-    {% assign tags_max = tag[1].size %}
-  {% endif %}
-{% endfor %}
+    <div class="archive">
+    <h1 id="page-title" class="page__title">
+      {{ page.title }} <font size="3"><a class="btn btn--option" href="/tags_alpha/">Sort by Count</a></font>
+    </h1> 
 
-<div class="label-panel">
-  {% for i in (1..tags_max) reversed %}
+    {{ content }}
+
+    {% assign tags_max = 0 %}
     {% for tag in site.tags %}
-      {% if tag[1].size == i %}
-      <a class = "btn btn--label" href="#{{ tag[0] | slugify }}"">
-        <i class="fa fa-tags" aria-hidden="true"></i> {{ tag[0] }} ({{ i }})
-      </a>
+      {% if tag[1].size > tags_max %}
+        {% assign tags_max = tag[1].size %}
       {% endif %}
     {% endfor %}
-  {% endfor %}
-</div>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..tags_max) reversed %}
-  {% for tag in site.tags %}
-    {% if tag[1].size == i %}
-      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle"><i class="fa fa-tags" aria-hidden="true" style="margin-right:0.3em;"></i>{{ tag[0] }} ({{ i }})</h2>
-        <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
-            {% include archive-single.html type=entries_layout %}
-          {% endfor %}
-        </div>
-      </section>
-    {% endif %}
-  {% endfor %}
-{% endfor %}
+    <div class="label-panel">
+      {% for i in (1..tags_max) reversed %}
+        {% for tag in site.tags %}
+          {% if tag[1].size == i %}
+          <a class = "btn btn--label" href="#{{ tag[0] | slugify }}"">
+            <i class="fa fa-tags" aria-hidden="true"></i> {{ tag[0] }} ({{ i }})
+          </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    {% for i in (1..tags_max) reversed %}
+      {% for tag in site.tags %}
+        {% if tag[1].size == i %}
+          <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
+            <h2 class="archive__subtitle"><i class="fa fa-tags" aria-hidden="true" style="margin-right:0.3em;"></i>{{ tag[0] }} ({{ i }})</h2>
+            <div class="entries-{{ entries_layout }}">
+              {% for post in tag.last %}
+                {% include archive-single.html type=entries_layout %}
+              {% endfor %}
+            </div>
+          </section>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

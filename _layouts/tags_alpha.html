@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+  
+  <div class="archive">
+  <h1 id="page-title" class="page__title">
+    {{ page.title }} <font size="3"><a class="btn btn--option" href="/tags/">Sort A to Z</a></font>
+  </h1> 
+
+  {{ content }}
+
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    <a class="btn btn--label" href="#{{ tag[0] | slugify }}"">
+      <i class=" fa fa-tags" aria-hidden="true"></i> {{ tag[0] }} ({{ tag[1].size }})
+    </a>
+  {% endfor %}
+
+  {% assign entries_layout = page.entries_layout | default: 'list' %}
+  {% for tag in sorted_tags %}
+    <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
+    <h2 class="archive__subtitle"><i class="fa fa-tags" aria-hidden="true" style="margin-right:0.3em;"></i>{{ tag[0] }}({{ tag[1].size }})</h2>
+    <div class="entries-{{ entries_layout }}">
+      {% for post in tag.last %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+    </section>
+  {% endfor %}
+  </div>
+</div>

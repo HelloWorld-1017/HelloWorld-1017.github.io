@@ -7,16 +7,16 @@ tags:
  - HTML
 location: Buffalo, United States
 date: 2025-10-31 20:32:56 -0400
-last_modified_at: 2025-11-02 22:28:58 -0500
+last_modified_at: 2025-11-02 22:34:23 -0500
 ---
 
 When using embed code to share YouTube videos, we can set `autoplay` option as `1` to make it autoplay[^1]. Here is an example:
 
 ```html
-<iframe class="iframe--video" width="560" height="315" src="https://www.youtube.com/embed/8eg__nN-CtQ?si=izinjWYnk7GKgCaU" title="YouTube video player" frameborder="0" autoplay="1" mute="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="iframe--video" width="560" height="315" src="https://www.youtube.com/embed/8eg__nN-CtQ?si=tLx-GQpPw2pKCOOt&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
-<iframe class="iframe--video" width="560" height="315" src="https://www.youtube.com/embed/8eg__nN-CtQ?si=izinjWYnk7GKgCaU" title="YouTube video player" frameborder="0" autoplay="1" mute="1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="iframe--video" width="560" height="315" src="https://www.youtube.com/embed/8eg__nN-CtQ?si=tLx-GQpPw2pKCOOt&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br>
 

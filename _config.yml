@@ -77,7 +77,7 @@ defaults:
 permalink: /:year-:month-:day/:hour-:minute-:second:output_ext
 paginate_path: /page:num/
 paginate: 31
-timezone: America/New_York # Asia/Shanghai; See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 category_archive:
   type: liquid

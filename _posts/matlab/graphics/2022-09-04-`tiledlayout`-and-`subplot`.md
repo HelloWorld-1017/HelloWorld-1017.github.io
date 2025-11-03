@@ -5,7 +5,7 @@ categories:
 tags:
  - MATLAB Graphics
 date: 2022-09-04 20:02:01 +0800
-last_modified_at: 2024-10-23 18:55:46 +0800
+last_modified_at: 2025-11-02 22:03:34 -0500
 ---
 
 # `tiledlayout` Function
@@ -72,7 +72,7 @@ title(t, 'April Bowling League Data')
 
 其中`nexttile`函数的参数所代表的含义：
 
-<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904194910212.png" alt="image-20220904194910212" style="zoom:80%;" />
+<img src="https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20220904194910212.png?raw=true" alt="image-20220904194910212" style="width:80%;" />
 
 <br>
 
@@ -151,11 +151,9 @@ sgtitle('Subplot Grid Title')
 
 <br>
 
-**参考**
+**References**
 
-[1] [tiledlayout - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/tiledlayout.html).
-
-[2] [subplot - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/subplot.html).
-
-[3] [sgtitle - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/sgtitle.html).
-
+- [tiledlayout - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/tiledlayout.html).
+- [subplot - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/subplot.html).
+- [sgtitle - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/sgtitle.html).
+- [A Warning of Using `boxplot` on `tiledlayout` in MATLAB; Comparison between `boxchart` and `boxplot`](/2025-10-31/23-54-10.html).

@@ -8,7 +8,7 @@ tag:
  - LaTeX subfig
 location: Buffalo, United States
 date: 2025-10-23 15:24:36 -0400
-last_modified_at: 2025-10-23 15:24:36 -0400
+last_modified_at: 2025-11-02 22:13:28 -0500
 ---
 
 In LaTeX, we can use command `\captionsetup[subfigure]{labelformat=empty}` to hide the subfigure caption label, and meanwhile use `\addtocounter{subfigure}{-1}` to make subfigure counter not count the current subfigure. Next, don't forget using `\captionsetup[subfigure]{labelformat=parens}` to reactive subfigure caption label. Here is an example (the source code is basically from blog [^1]):
@@ -67,4 +67,4 @@ Note that command `\captionsetup[subfigure]{labelformat=empty}` can only cancel 
 
 **References**
 
-[^1]: [Organize Multiple Subfigures Like MATLAB `tiledlayout` Function in LaTeX](/2025-10-21/22-36-42.html).
+[^1]: [Organize Multiple Subfigures Like MATLAB `tiledlayout` Function in LaTeX](/2025-10-22/10-36-42.html).

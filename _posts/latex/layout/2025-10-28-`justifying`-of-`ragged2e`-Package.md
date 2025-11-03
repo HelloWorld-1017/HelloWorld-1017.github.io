@@ -8,7 +8,7 @@ tags:
  - LaTeX ragged2e
 location: Buffalo, United States
 date: 2025-10-28 13:20:05 -0400
-last_modified_at: 2025-10-28 13:20:05 -0400
+last_modified_at: 2025-11-02 22:17:44 -0500
 ---
 
 ```latex
@@ -63,4 +63,4 @@ last_modified_at: 2025-10-28 13:20:05 -0400
 **References**
 
 - [ragged2e.pdf](https://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/ragged2e/ragged2e.pdf).
-- [Align Contents in LaTeX — Environments `center`, `Center`, `flushleft`, `FlushLeft`, `flushright`, `FlushRight`, and commands `\centering`, `\Centering`, `\raggedleft`, `\RaggedLeft`, `\raggedright`, `\RaggedRight`](/2025-10-28/12-16-33.html).
+- [Align Contents in LaTeX — Environments `center`, `Center`, `flushleft`, `FlushLeft`, `flushright`, `FlushRight`, and commands `\centering`, `\Centering`, `\raggedleft`, `\RaggedLeft`, `\raggedright`, `\RaggedRight`](/2025-10-29/00-16-33.html).

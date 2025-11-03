@@ -13,7 +13,7 @@ tags:
  - MATLAB Graphics
 location: United States
 date: 2025-10-21 22:36:42 -0400
-last_modified_at: 2025-10-21 22:36:42 -0400
+last_modified_at: 2025-11-02 22:16:00 -0500
 ---
 
 In MALTAB, we can use the function `tiledlayout`[^1] to organize multiple subplots in one layout. In LaTeX, we can realize a similar effect using `minipage` environment and `\subfloat` command (package `subfig` is needed. See blog[^2]): 
@@ -180,4 +180,4 @@ Furthermore, we can put them in one `tabular` environment and use commands `\mul
 **References**
 
 [^1]: [MATLAB `tiledlayout`: Create tiled chart layout for displaying subplots](https://www.mathworks.com/help/matlab/ref/tiledlayout.html).
-[^2]: [LaTeX Multi-figure Layout](/2023-10-03/10-38-49.html).
+[^2]: [LaTeX Multi-figure Layout](/2023-10-03/22-38-49.html).

@@ -10,7 +10,7 @@ tags:
  - LaTeX Warnings and Errors
 location: Buffalo, United States
 date: 2025-10-21 23:27:37 -0400
-last_modified_at: 2025-10-21 23:27:37 -0400
+last_modified_at: 2025-11-02 22:18:50 -0500
 ---
 
 When writing blog[^1], I found an error caused by the LaTeX `graphics` package:
@@ -29,6 +29,6 @@ and I imported the `graphicx` package instead to solve this problem. These two p
 
 **References**
 
-[^1]: [Organize Multiple Subfigures Like MATLAB `tiledlayout` Function in LaTeX](/2025-10-21/22-36-42.html).
+[^1]: [Organize Multiple Subfigures Like MATLAB `tiledlayout` Function in LaTeX](/2025-10-22/10-36-42.html).
 [^2]: [https://tex.stackexchange.com/a/23076/306224](https://tex.stackexchange.com/a/23076/306224).
 

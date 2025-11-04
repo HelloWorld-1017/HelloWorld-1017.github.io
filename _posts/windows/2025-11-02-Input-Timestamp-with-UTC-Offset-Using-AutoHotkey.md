@@ -8,7 +8,7 @@ tags:
  - Jekyll
 location: Buffalo, United States
 date: 2025-11-02 10:51:48 -0500
-last_modified_at: 2025-11-02 21:39:48 -0500
+last_modified_at: 2025-11-03 18:24:02 -0500
 ---
 
 Due to that when I writing a blog (hosted on Jekyll website), I need to input a `date` information in Front Matter block, to quickly input current time (i.e., timestamp), before I defined an Chinese Pinyin phrase `ct` as `%yyyy%-%MM%-%dd% %HH%:%mm%:%ss% -0400` in Microsoft Pinyin Input Methods[^2] according to walterlv's blog[^1]. However, this method has two problems:
@@ -58,6 +58,8 @@ Return
 
 which uses current local time `time` minus UTC time `A_NowUTC` to obtain the offset (and return it to) `time` in format `Hours`, and then display it using text after some post-procession. Next, I used ChatGPT to simplify it as:
 
+<div id="script"></div>
+
 ```
 #;::
 FormatTime, CurrentDateTime,, yyyy-MM-dd HH:mm:ss
@@ -92,6 +94,16 @@ There are two points should be noted:
 
 <br>
 
+**Nov. 3, 2025**
+
+By the way, to make above script, [`ct.ahk`](#script), automatic startup when turning on computer, we should convert it into a `.exe` program:
+
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images-1/main/imgs/20251103181926567.png" alt="image-20251103181926503" style="width:67%;" />
+
+and move it to the folder `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`.[^9]
+
+<br>
+
 **References**
 
 [^1]: [用微软拼音快速输入自定义格式的时间和日期](https://blog.walterlv.com/ime/2017/09/18/date-time-format-using-microsoft-pinyin.html).
@@ -102,3 +114,4 @@ There are two points should be noted:
 [^6]: [https://www.reddit.com/r/Windows11/comments/1c10ij0/comment/kz0tjgh/?utm\_source=share&utm\_medium=web3x&utm\_name=web3xcss&utm\_term=1&utm\_content=share\_button](https://www.reddit.com/r/Windows11/comments/1c10ij0/comment/kz0tjgh/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button).
 [^7]: [FormatTime](https://www.autohotkey.com/docs/v2/lib/FormatTime.htm).
 [^8]: [https://superuser.com/a/93576](https://superuser.com/a/93576).
+[^9]: [win10自定义快捷键 &开机自启动—autohotkey实现快捷键上下左右（60键小键盘福利）\_autohotkey设置wasd为上下左右](https://blog.csdn.net/qq_43555917/article/details/106523588).

@@ -23,7 +23,7 @@ layout: default
       {% for i in (1..tags_max) reversed %}
         {% for tag in site.tags %}
           {% if tag[1].size == i %}
-          <a class = "btn btn--label" href="#{{ tag[0] | slugify }}"">
+          <a class = "btn btn--label" href="#{{ tag[0] | slugify }}">
             <i class="fa fa-tags" aria-hidden="true"></i> {{ tag[0] }} ({{ i }})
           </a>
           {% endif %}

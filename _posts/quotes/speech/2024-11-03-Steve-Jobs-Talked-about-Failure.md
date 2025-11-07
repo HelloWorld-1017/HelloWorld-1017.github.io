@@ -2,9 +2,10 @@
 title: Steve Jobs Talked about Failure
 toc: false
 categories:
+ - Biography & Anecdote
  - Quotes
 date: 2024-11-03 00:09:17 +0800
-last_modified_at: 2025-01-01 16:28:41 +0800
+last_modified_at: 2025-11-07 09:55:02 -0500
 ---
 
 <br>

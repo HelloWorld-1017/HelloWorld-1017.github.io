@@ -2,10 +2,10 @@
 title: Steve Jobs' Speech in 2005 Stanford Commencement
 toc: false
 categories:
+ - Biography & Anecdote
  - Quotes
-drafted_at: 2024-05-12 05:29:37 +0800
 date: 2024-05-20 02:31:12 +0800
-last_modified_at: 2024-09-03 05:16:02 +0800
+last_modified_at: 2025-11-07 09:59:14 -0500
 ---
 
 <br>

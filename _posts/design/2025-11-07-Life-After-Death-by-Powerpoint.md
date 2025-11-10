@@ -4,10 +4,11 @@ toc: false
 categories:
  - Design
 tags:
+ - LaTeX Font
  - Microsoft PowerPoint
 location: Buffalo, United States
 date: 2025-11-07 19:15:08 -0500
-last_modified_at: 2025-11-07 19:15:08 -0500
+last_modified_at: 2025-11-10 13:34:04 -0500
 ---
 
 <br>

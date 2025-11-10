@@ -4,9 +4,10 @@ categories:
  - LaTeX
 tags:
  - LaTeX TikZ
+ - LaTeX TikZ arrows
  - LaTeX TikZ shapes
 date: 2025-06-08 17:53:36 +0800
-last_modified_at: 2025-06-09 12:35:54 +0800
+last_modified_at: 2025-11-08 15:19:41 -0500
 ---
 
 # The `shape` option

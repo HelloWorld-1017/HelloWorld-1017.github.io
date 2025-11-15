@@ -2,9 +2,29 @@
 layout: archive
 ---
 
+<style>
+  .home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  }
+
+  .timezoneinfo {
+    font-size: 0.75em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    min-width: 100px;
+  }
+</style>
+
 {{ content }}
 
-<h1 class="page__title">RECENT POSTS</h1>
+<div class="home-header">
+  <h1 class="page__title">RECENT POSTS</h1>
+  <span class="timezoneinfo"
+    title="The site uses timestamps as permalinks. To remain consistent with early blogs, all post dates are converted to UTC+08:00.">
+    UTC+08:00</span>
+</div>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}

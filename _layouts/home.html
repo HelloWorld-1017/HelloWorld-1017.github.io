@@ -14,6 +14,7 @@ layout: archive
     font-family: Arial, Helvetica, sans-serif;
     color: #666;
     min-width: 100px;
+    cursor:help;
   }
 </style>
 
@@ -21,14 +22,15 @@ layout: archive
 
 <div class="home-header">
   <h1 class="page__title">RECENT POSTS</h1>
-  <span class="timezoneinfo">
-    UTC+08:00 
-    <sup aria-hidden="true">
-      <i class="fa-regular fa-circle-question hover-icon" style="cursor:help;"
-        title="The site uses timestamps as permalinks. To remain consistent with early blogs, all post dates are converted to UTC+08:00.">
-      </i>
-    </sup>
-  </span>
+    <span class="timezoneinfo"
+      title="The site uses timestamps as permalinks. To remain consistent with early blogs, all post dates are converted to UTC+08:00.">
+        <a href="/posts-date-note.html" style="text-decoration:none;color:#666;">
+        UTC+08:00 
+        <sup aria-hidden="true">
+          <i class="fa-regular fa-circle-question hover-icon"></i>
+        </sup>
+        </a>
+    </span>
 </div>
 
 {% if paginator %}

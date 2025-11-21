@@ -1,5 +1,5 @@
 ---
-title: Standard Newton's Method, Newton's Method with Backtracking line-search, vs. Gradient Descent Algorithm
+title: Standard Newton's Method, Newton's Method with Backtracking Line-Search, vs. Gradient Descent Algorithm
 categories:
  - Mathematics
  - MATLAB
@@ -7,7 +7,7 @@ tags:
  - Optimization
 location: Buffalo, United States
 date: 2025-11-10 16:04:08 -0500
-last_modified_at: 2025-11-20 16:49:37 -0500
+last_modified_at: 2025-11-20 16:52:17 -0500
 ---
 
 # Standard Newton's method

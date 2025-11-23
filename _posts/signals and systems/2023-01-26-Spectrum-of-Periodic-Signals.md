@@ -1,12 +1,13 @@
 ---
-layout: single
-title:  Spectrum of Periodic Signals
-date: 2023-01-26 17:10:11 +0800
+title: Spectrum of Periodic Signals
 categories: 
  - Signals and Systems
  - MATLAB
 tags:
+ - MATLAB Object-Oriented Programming
  - MATLAB Signal Processing Toolbox
+date: 2023-01-26 17:10:11 +0800
+last_modified_at: 2025-11-23 16:58:14 -0500
 ---
 
 # Unilateral Spectrum and Bilateral Spectrum of Periodic Signals

@@ -1,12 +1,13 @@
 ---
-layout: single
 title:  Fourier Series of Periodic Signals
-date: 2023-01-25 17:25:27 +0800
 categories: 
  - Signals and Systems
  - MATLAB
 tags:
+ - MATLAB Object-Oriented Programming
  - MATLAB Signal Processing Toolbox
+date: 2023-01-25 17:25:27 +0800
+last_modified_at: 2025-11-23 16:57:45 -0500
 ---
 
 # Introduction

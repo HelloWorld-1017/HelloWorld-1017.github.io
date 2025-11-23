@@ -1,11 +1,12 @@
 ---
-layout: single
-title: Dependent Property and Its `get` Method and `set` Method of MATLAB Handle Class
-date: 2023-01-26 18:33:31 +0800
+title: Dependent Property and Its `get` Method and `set` Method of MATLAB `handle` Class
 categories: 
  - MATLAB
 tags: 
+ - MATLAB Object-Oriented Programming
  - MATLAB Programming
+date: 2023-01-26 18:33:31 +0800
+last_modified_at: 2025-11-23 16:39:43 -0500
 ---
 
 # Dynamic Calculation Properties

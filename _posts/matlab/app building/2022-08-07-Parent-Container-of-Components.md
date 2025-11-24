@@ -1,23 +1,23 @@
 ---
-title: Parent Container of Components
+title: Parent Container of MATLAB GUI Components
 toc: false
 categories:
  - MATLAB
 tags: 
  - MATLAB App Building
 date: 2022-08-07 13:59:01 +0800
-last_modified_at: 2024-10-23 19:01:33 +0800
+last_modified_at: 2025-11-24 12:01:30 -0500
 ---
 
 之前想要在 MATLAB App Designer 中实现混淆矩阵的绘制，但是使用 Axes 组件和 Image 组件都无法承载混淆矩阵，会出现报错。
 
-后来看到一篇官方文档 [Display Graphics in App Designer - Mathworks](https://ww2.mathworks.cn/help/matlab/creating_guis/graphics-support-in-app-designer.html)，其中提到：
+后来看到一篇官方文档[^1]，其中提到：
 
 ![image-20220807140952787](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220807140952787.png?raw=true)
 
 也就是说，不同的 graphics function 的 parent container 是不同的。
 
-对于混淆矩阵而言，可以在 [ConfusionMatrixChart Properties - Mathworks](https://ww2.mathworks.cn/help/stats/mlearnlib.graphics.chart.confusionmatrixchart-properties.html) 中查看它所支持的 Parent container：
+对于混淆矩阵而言，可以在[^2]中查看它所支持的 Parent container：
 
 ![image-20220807141552129](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220807141552129.png?raw=true)
 
@@ -44,6 +44,14 @@ cm1.ColumnSummary = 'column-normalized';
 
 ![image-20220807142407059](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220807142407059.png?raw=true)
 
-也需要放在规定的 Parent container 中，见 [Control grid layout manager behavior - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/matlab.ui.container.gridlayout-properties.html) 
+也需要放在规定的 Parent container 中，见[^3]：
 
 ![image-20220807142723289](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/DeLLLaptop/image-20220807142723289.png?raw=true)
+
+<br>
+
+**References**
+
+[^1]: [Display Graphics in App Designer](https://ww2.mathworks.cn/help/matlab/creating_guis/graphics-support-in-app-designer.html).
+[^2]: [`ConfusionMatrixChart` Properties](https://ww2.mathworks.cn/help/stats/mlearnlib.graphics.chart.confusionmatrixchart-properties.html).
+[^3]: [Control grid layout manager behavior](https://ww2.mathworks.cn/help/matlab/ref/matlab.ui.container.gridlayout-properties.html).

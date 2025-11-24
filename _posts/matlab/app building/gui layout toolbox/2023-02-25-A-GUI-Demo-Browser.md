@@ -1,18 +1,18 @@
 ---
-layout: single
 title: A GUI Demo Browser from MATLAB GUI Layout Toolbox
-date: 2023-02-25 14:39:25 +0800
 categories: 
  - MATLAB
 tags:
  - MATLAB App Building
+date: 2023-02-25 14:39:25 +0800
+last_modified_at: 2025-11-24 11:58:28 -0500
 header:
   image: https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230224183310721.png?raw=true
 ---
 
 # Introduction
 
-博客[Hello, MATLAB GUI Layout Toolbox!](http://whatastarrynight.com/matlab/Hello-MATLAB-GUI-Layout-Toolbox/)中提到，MATLAB GUI Layout Toolbox提供了一个很漂亮的创建GUI的完整示例：
+博客[^1]中提到，MATLAB GUI Layout Toolbox提供了一个很漂亮的创建GUI的完整示例：
 
 ![image-20230225141945003](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225141945003.png?raw=true)
 
@@ -93,7 +93,7 @@ data = createData();
 
 此时得到的`data`是一个结构体：
 
-```matlab
+```
 data = 
   struct with fields:
         DemoNames: {1×10 cell}
@@ -111,7 +111,7 @@ data =
 
   并且会在工作空间中加载相应的变量：
 
-  ```matlab
+  ```
   >> whos
     Name          Size            Bytes  Class                                        Attributes
     L            51x51            20808  double                                                 
@@ -238,7 +238,7 @@ gui = createInterface(data.DemoNames);
 
 这可能是因为在某个版本中，开发者重新编写了一个`vix`库，并且完全覆盖了`uiextras`库的内容。可以看到`vix`库的类是更多的：
 
-```matlab
+```
 % For +uix folder
 >> ls
 +mixin            Node.m            
@@ -687,25 +687,8 @@ displayEndOfDemoMessage('')
 end
 ```
 
+<br>
 
+**References**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[^1]: [Hello, MATLAB GUI Layout Toolbox!](/2023-02-24/09-25-21.html).

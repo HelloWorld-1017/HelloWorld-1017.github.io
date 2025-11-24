@@ -1,11 +1,12 @@
 ---
-title: Share Data between Multi-window MATLAB Apps
+title: Share Data between Multi-Window MATLAB Apps
 categories: 
  - MATLAB
 tags:
  - MATLAB App Building
+ - MATLAB Object-Oriented Programming
 date: 2022-07-31 22:04:04 +0800
-last_modified_at: 2024-10-23 19:05:16 +0800
+last_modified_at: 2025-11-24 12:06:04 -0500
 ---
 
 # Introduction
@@ -126,7 +127,7 @@ MainAppExample 类主要以下几部分属性和方法：
 
 ### startupFcn
 
-在启动 MainAppExample 时，App 会首先调用 `startupFcn(app)` 函数，根据 `app.CurrentSize` 和 `app.CurrentColormap` 的初始化值，调用 `updateplot(app, sz, c)` 函数绘制图像。
+在启动 `MainAppExample` 时，App 会首先调用 `startupFcn(app)` 函数，根据 `app.CurrentSize` 和 `app.CurrentColormap` 的初始化值，调用 `updateplot(app, sz, c)` 函数绘制图像。
 
 
 

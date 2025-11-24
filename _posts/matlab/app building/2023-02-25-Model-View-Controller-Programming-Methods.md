@@ -1,15 +1,16 @@
 ---
 title: An Example Creating MATLAB GUI with Object-oriented and Model-View-Controller Programming Methods
+toc: false
 categories: 
  - MATLAB
 tags:
  - MATLAB Object-Oriented Programming
  - MATLAB App Building
 date: 2023-02-25 15:52:53 +0800
-last_modified_at: 2023-02-25 15:52:53 +0800
+last_modified_at: 2025-11-24 12:03:28 -0500
 ---
 
-《MATLAB面向对象编程：从入门到设计模式（第2版）》这本书中介绍了一个使用“面向对象+MVC（Model-View-Controller）模式”创建GUI的示例：
+《MATLAB面向对象编程：从入门到设计模式（第2版）》[^1]这本书中介绍了一个使用“面向对象+MVC（Model-View-Controller）模式”创建GUI的示例：
 
 ![image-20230225151658839](https://github.com/HelloWorld-1017/blog-images/blob/main/migration/imgpersonal/image-20230225151658839.png?raw=true)
 
@@ -159,4 +160,4 @@ viewObj = View(modelObj);
 
 **References**
 
-[1] 徐潇. MATLAB 面向对象编程: 从入门到设计模式. 北京航空航天大学出版社, 2017.
+[^1]: 徐潇. MATLAB 面向对象编程: 从入门到设计模式. 北京航空航天大学出版社, 2017.

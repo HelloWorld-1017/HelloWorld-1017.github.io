@@ -1,5 +1,5 @@
 ---
-title: 🎶 Cha Bu Duo Gu Niang 👧
+title: 🎶 Cha Bu Duo Gu Niang (差不多姑娘) 👧
 toc: false
 categories:
  - 🎶Music

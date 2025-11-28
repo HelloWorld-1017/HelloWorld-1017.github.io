@@ -5,7 +5,7 @@ categories:
 tags:
  - Matrix
 date: 2023-10-31 11:19:07 +0800
-last_modified_at: 2025-04-07 11:37:36 +0800
+last_modified_at: 2025-11-26 15:35:41 -0500
 ---
 
 # Any matrix
@@ -70,7 +70,7 @@ And actually at some special cases, the probability that $A$ and $A^T$ have *no*
 
 ## All eigenvalues of Hermitian matrix are real.
 
-Theorem-2: All eigenvalues of Hermitian matrix are real.
+Theorem-2: All eigenvalues of Hermitian matrix[^6] are real.
 
 Proof: The proof of this theorem could be found in[^6].
 

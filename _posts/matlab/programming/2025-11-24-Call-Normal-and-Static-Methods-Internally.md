@@ -8,6 +8,7 @@ tags:
 location: Buffalo, United States
 date: 2025-11-24 17:34:32 -0500
 last_modified_at: 2025-11-28 19:29:17 -0500
+published: false
 ---
 
 # Call ordinary (nonstatic) methods
